@@ -14,7 +14,7 @@ Taskapp
 `source /path/bin/activate`
 
 ### Clone dev branch ###
-The dev branch has changes suitable for devolpment, which includes using a local database. 
+The master branch has changes suitable for devolpment, which includes using a local database. 
 
 ### Install dependencies ###
 `pip install -r requirements.txt`
