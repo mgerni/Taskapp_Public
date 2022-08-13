@@ -13,7 +13,7 @@ Taskapp
 ### Activate virtualenv ###
 `source /path/bin/activate`
 
-### Clone dev branch ###
+### Clone master branch ###
 The master branch has changes suitable for devolpment, which includes using a local database. 
 
 ### Install dependencies ###
