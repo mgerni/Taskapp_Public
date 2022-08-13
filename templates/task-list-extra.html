@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+<title>{% block title %}Task App Task List{%endblock %}</title> 
+{% block context %}
+
+<div class="container mt-5"> {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+	<div class="alert alert-warning alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> {{message}} 
+    </div> {% endfor %} {% endif %} {% endwith %} {% block body %}{% endblock %} 
+</div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="taskHelpModal"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+                <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Task Help</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white" id="taskHelpModalBody">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+<div class="container d-flex flex min-vh-100 py-2 mt-5" style="z-index: 1;">
+	<div class="container d-flex flex justify-content-center" style="z-index: 1;" >
+		<div class="card scrollable" id="tasklist">
+			<div class="card-header bg-dark sticky-top ">
+                <div class="flex-row d-flex justify-content-between align-items-center">
+                    <h3 class="card-title text-white">Extra Task List</h5>
+                        <a class="text-white topButton link_hover" aria-current="true">Back to Top</a>
+                </div>
+				
+                <h6 class="text-white card-subtitle ">If LMS is disabled, uncompleted tasks will not count against tier completion.</h6>
+                <hr>
+
+                <div class=" flex-row d-flex justify-content-between align-self-center" id="scrollAnchor">
+
+                    <button type="button" class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#completed-task-extra">
+                        <i class="bi bi-filter fw-bold">
+
+                    </i>
+                    Toggle Completed
+                </button>
+                
+
+                <button type="button" class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#incomplete-task-extra">
+                    <i class="bi bi-filter fw-bold">
+
+                </i>
+                Toggle Incomplete
+            </button>
+
+            </div>
+            </div>
+            <div class="card-body tab-content bg-dark text-white"> 
+
+            <hr class="text-white">
+            
+            {% for item in items_extra %}
+            {% if item[2] == 'Complete'%}
+            <div id="task{{item[3]}}_extra" >
+                <div class="flex-row d-flex bg-success align-items-center "name="task">
+                    <div class="col-2 justify-content-center collapse show" id="completed-task-extra">
+                        <button type="button" class="btn btn-lg taskHelpModal" tip="None"  link="{{item[5]}}">
+                            <i class="bi bi-info-circle text-white fw-bold"></i>
+                        </button>
+                    </div>
+                    <div class="col-6 collapse show mt-3" id="completed-task-extra" name="task" >
+                        <p class="text-white" value="{{item[0]}}" name="task">{{item[0]}}</p>
+                    </div>
+                    
+                    <div class="col-2 collapse show  " id="completed-task-extra">
+                        <img  src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                    </div>
+                    <div class="col-2 collapse show " id="completed-task-extra">
+                        <form>
+                            <button class="btn btn-default revertButton" task_id="{{item[3]}}" type="button" name="extraTasks">
+                                <img  src="/static/assets/placeholder_complete.png" data-src="/static/Remove_button.png" alt="check image" class="lazyload">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% elif item[4] == True %}
+            <div class="flex-row d-flex bg-warning align-items-center ">
+                <div class="col-2 justify-content-center collapse show">
+                    <button type="button" class="btn btn-lg taskHelpModal" tip="None"  link="{{item[5]}}">
+                        <i class="bi bi-info-circle text-success fw-bold"></i>
+                    </button>
+                </div>
+                <div class="col-6 mt-3">
+                    <p class="text-white fw-bold">{{item[0]}}</p>
+                    
+                </div>
+                <div class="col-2 ">
+                    <img data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                </div>
+                <div>
+                </div>
+
+            </div>
+
+            {% else %}
+            <div id="task{{item[3]}}_extra" >
+            <div class="flex-row d-flex align-items-center">
+                <div class="col-2 justify-content-center collapse show" id="incomplete-task-extra">
+                    <button type="button" class="btn btn-lg taskHelpModal" tip="None"  link="{{item[5]}}">
+                        <i class="bi bi-info-circle text-success fw-bold"></i>
+                    </button>
+                </div>
+                <div class="col-6 collapse show" id="incomplete-task-extra">
+                    <span class="text-white" >{{item[0]}}</span>
+                </div>
+                <div class="col-2 collapse show" id="incomplete-task-extra">
+                    <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                </div>
+                <div>
+
+                </div>
+                <div class="col-2 collapse show justify-content-right" id="incomplete-task-extra">
+
+                    <form>
+
+                    <button class="btn btn-default updateButton" task_id="{{item[3]}}" type="button" name="extraTasks">
+                        <img src="/static/assets/placeholder_incomplete.png" data-src="/static/check_button.png" alt="check image" class="lazyload">
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+            {% endif %}
+            {% endfor %}
+            </div>
+
+
+            <script>
+                $(document).ready(function() {
+                    $(".active").removeClass("active");
+                    $("#task-list").addClass("active");
+                });
+            </script>
+
+{% endblock %}
+
+
+
+<script>
+    function toggler(Id){
+        $("#" + Id).toggle();
+    }
+</script>

@@ -1,0 +1,15 @@
+<div class="flex-row d-flex align-items-center">
+	<div class="col-2 justify-content-center collapse show" id="incomplete-task-{{task_type}}">
+		<button type="button" class="btn btn-lg taskHelpModal" tip="{{tip}}" link="{{link}}">
+			<i class="bi bi-info-circle text-success fw-bold"></i>
+		</button>
+	</div>
+	<div class="col-6 collapse show " id="incomplete-task-{{task_type}}"> <span class="text-white">{{task}}</span> </div>
+	<div class="col-2 collapse show" id="incomplete-task-{{task_type}}"> <img src="/static/assets/{{image}}" width="40" height="40" alt="task_image"> </div>
+	<div> </div>
+	<div class="col-2 collapse show justify-content-right" id="incomplete-task-{{task_type}}">
+		<form>
+			<button class="btn btn-default updateButton" task_id="{{task_id}}" type="button" name="{{tier}}"> <img src="/static/check_button.png" alt="check image"> </button>
+		</form>
+	</div>
+</div>

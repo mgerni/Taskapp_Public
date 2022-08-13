@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% block context %}
+
+<h1 class="text-white conainter d-flex justify-content-center mt-5">{{username}}'s Profile</h1>
+	<section>
+		<div class="container h-100 mt-5">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-lg-12 col-xl-11">
+					<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+						<div class="card-body p-xl-1">
+                            <div class="flex-row d-flex justify-content-center">
+                                <h3> Account Settings</h3>
+                            </div>
+                            <form>
+                                <div class="flex-row d-flex justify-content-center mb-3" id="changeEmail">
+                                    <div class="col-3" >
+                                        <div class="row align-items-center mt-5">
+                                                <div class="col-10">
+                                                    <div class="form text-white">
+                                                        <label for="emailLabel">Change Email Address</label>
+                                                        <input type="email" id=emailLabel name="changeEmailField" email_value="{{email_value}}"class="form-control" required="required" placeholder="{{email_val}}" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-1 mt-4">
+                                                    <button class="btn btn-outline-success emailChange">
+                                                        <i class="bi bi-pencil" ></i>
+                                                    </button>
+                                                </div>
+                                            
+    
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+    
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="row align-items-center mt-5">
+                                            <div class="col-10">
+                                                <div class="form text-white" id=changeUsername>
+                                                    <label for="usernameLabel">Change Username</label>
+                                                    <input type="username" id=usernameLabel name="changeUsernameField" username_value="{{username_value}}"class="form-control" required="required" placeholder="{{username}}" readonly>
+                                                </div>
+                                            </div>
+                                                <div class="col-1 mt-4">
+                                                    <button class="btn btn-outline-success usernameChange">
+                                                        <i class="bi bi-pencil" ></i>
+                                                    </button>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            
+
+                            
+                            <div class="flex-row d-flex justify-content-center mt-5 mb-3">
+                                <div class="col-3">
+                                    <div class="row align-items-center mt-5">
+                                        {%if lms_status == True%}
+                                        <div class="col-6">
+                                            <div class="form-check form-switch" id="changeLMS">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">LMS Status</label>
+                                                <input class="form-check-input" type="checkbox" name=lmsstatus id="flexSwitchCheckDefault" checked>
+                                            </div>
+                                        </div>
+                                        {%else%}
+                                        <div class="col-6">
+                                            <div class="form-check form-switch" id="changeLMS">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">LMS Status</label>
+                                                <input class="form-check-input" type="checkbox" name=lmsstatus id="flexSwitchCheckDefault" >
+                                            </div>
+                                        </div>
+                                        {%endif%}
+
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row align-items-center mt-5">
+                                        {%if official == True%}
+                                        <div class="form-check form-switch" id="changeOfficial">
+                                            <label class="form-check-label" for="officialSwitch">Official Status</label>
+                                            <input class="form-check-input" type="checkbox" name=officialstatus id="officialSwitch" checked>
+                                        </div>
+                                        {%endif%}
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        
+                                                        <label for="passwordChange">New Password</label>
+                                                        <input type="password" id="passwordChange"class="form-control"  name="passwordChangeField" required >
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="passwordChangeConfirm">Confirm Password</label>
+                                                        <input type="password" id="passwordChangeConfirm"class="form-control" name="passwordChangeConfirmField" required>
+                                                    </div>
+                                                
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col">
+                                                        <button class="btn btn-small btn-success changePasswordButton">Change</button>
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                            
+                                        
+                                        
+                                    
+
+                                </div>
+                            </div>
+                            {% if error != None %}
+                            <div class="flex-row d-flex justify-content-center mt-5 mb-3" id="error">
+                                
+                                <p class="text-danger" >{{error}}</p>
+                                
+                                <ul>
+                                    <li>Password must have at least one number.</li>
+                                    <li>Password must have at least one uppercase and one lowercase character.</li>
+                                    <li>Password must have at least one special symbol @!%*#?&</li>
+                                    <li>Password must be between 8 to 20 characters long.</li>
+                                </ul>
+                            </div>
+                                {% endif %}
+                                
+
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="modal fade" id="changeOfficalStatusModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content bg-dark">
+				<div class="modal-header text-center">
+					<h5 class="modal-title text-white w-100" id="changeOfficalStatusModal_label">Migrate Unofficial status</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-danger">
+					<div class="row mt-3">
+						<p class="fw-bold">WARNING: You will not be able to change back to an Official Tasker!</p>
+                        <p class="fw-bold">If you are sure that you will like to go Unofficial, click the CONFIRM button, if not close this window.</p>
+					</div>
+				</div>
+
+				<div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-danger mr-auto changeOfficialButton" >CONFIRM</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</section>
+
+<script>
+    $('#changeOfficial').on('change.bootstrapSwitch', function(e) {
+    var official = e.target.checked
+    if (official == false) {
+        $('#changeOfficalStatusModal').modal('show');
+    }
+        
+});
+</script>
+{% endblock %}
