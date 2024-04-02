@@ -24,7 +24,7 @@ MONGO_URI="mongodb://localhost:27017"
 TASKAPP_DEV="True"
 
 ### Clone dev branch ###
-The dev branch has changes suitable for devolpment, which includes using a local database. 
+The dev branch has changes suitable for development, which includes using a local database. 
 
 ### Install dependencies ###
 `pip install -r requirements.txt`
