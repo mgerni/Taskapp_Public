@@ -13,6 +13,16 @@ Taskapp
 ### Activate virtualenv ###
 `source /path/bin/activate`
 
+### Create a sendgrind API account for free ###
+https://sendgrid.com/en-us
+
+### Create enviroment variables ###
+SECRET_KEY="RandomStringForFlask"
+TASKAPP_EMAIL="taskapp@taskapp-334809.iam.gserviceaccount.com"
+SENDGRID_API_KEY="YOURSENDGRIDAPIKEY"
+MONGO_URI="mongodb://localhost:27017"
+TASKAPP_DEV="True"
+
 ### Clone dev branch ###
 The dev branch has changes suitable for devolpment, which includes using a local database. 
 

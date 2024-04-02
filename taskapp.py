@@ -22,12 +22,16 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ["SECRET_KEY"]
 
 
-# Keys for Google reCAPTCHA.
-app.config['RECAPTCHA_SITE_KEY'] = os.environ["SECRET_KEY"]
-app.config['RECAPTCHA_SECRET_KEY'] = os.environ["SECRET_KEY"]
 
-# initialize reCAPTCHA
-recaptcha = ReCaptcha(app)
+if os.environ["TASKAPP_DEV"] == "True":
+    # Keys for Google reCAPTCHA.
+    app.config['RECAPTCHA_SITE_KEY'] = os.environ["SECRET_KEY"]
+    app.config['RECAPTCHA_SECRET_KEY'] = os.environ["SECRET_KEY"]
+    # initialize reCAPTCHA
+    recaptcha = ReCaptcha(app)
+else:
+    recaptcha = "Disabled for DEV"
+
 
 # email service account.
 taskapp_email = os.environ["SECRET_KEY"]
