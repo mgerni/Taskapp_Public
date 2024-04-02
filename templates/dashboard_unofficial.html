@@ -1,0 +1,468 @@
+{% extends "base.html" %}
+<title>{% block title %}Task App Unofficial Dashboard{%endblock %}</title> 
+{% block context %}
+        
+
+{% if easy_first == True %}
+<div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+
+{% elif medium_first == True %}
+<div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+
+
+{% elif hard_first == True %}
+
+<div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+
+{% elif elite_first == True %}
+<div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+
+{% endif %}
+
+        {% if easy_progress != 100 %}
+        <div class="flex-row d-flex justify-content-between p-3 mt-3">
+            <div class="container w-50">
+                <div class="card bg-dark border-light text-white">
+                    <div class="flex-row d-flex justify-content-center align-items-center mt-3">
+                        <div class="col-1 col-sm-1">
+                            
+                        </div>
+                        <div class="col-lg-10 col-sm-9  d-flex justify-content-center">
+                            {% if easy_progress == 0 %}
+                            <h5 class="percent_red">Easy Task - {{easy_progress}}%</h5>
+                            {% elif easy_progress <=24 %}
+                            <h5 class="percent_orange_red">Easy Task - {{easy_progress}}%</h5>
+                            {% elif easy_progress <= 49 %}
+                            <h5 class="percent_orange">Easy Task - {{easy_progress}}%</h5>
+                            {% elif easy_progress <= 74 %}
+                            <h5 class="percent_yellow">Easy Task - {{easy_progress}}%</h5>
+                            {% elif easy_progress <= 99 %}
+                            <h5 class="percent_green_yellow">Easy Task - {{easy_progress}}%</h5>
+                            {% elif easy_progress == 100 %}
+                            <h5 class="percent_green">Easy Task - {{easy_progress}}%</h5>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-1 col-sm-2">
+                            <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#taskHelpModal_easy">
+                                <i class="bi bi-info-circle text-success"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">{{task_easy}}</h5>
+                        </div>
+                        {% if image_easy != none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/{{image_easy}}"width= "60" height="60" alt="task_image">
+                        </div>
+                        {% elif image_easy == none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/blank.png"width= "60" height="60" alt="task_image" class="hide_img">
+                            <!-- <p class="text-white">{{task}}</p> -->
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex-row d-flex mb-3">
+                        <div class="col d-flex justify-content-center">
+                            <form action="/generate_unofficial_easy/" method="POST">
+                                <button class="btn btn-default">
+                                    <img src="/static/generate_task_button_easy.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                </button>
+                            </form>
+                        </div>
+                        
+                            <div class="col d-flex justify-content-center ">
+                                <form action="/complete_unofficial_easy/" method="POST">
+                                    <button class="btn btn-default">
+                                        <img src="/static/complete_task_button_easy.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                    </button>
+                                </form>
+                            </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if medium_progress != 100 %}
+
+        <div class="flex-row d-flex justify-content-between p-3">
+            <div class="container w-50">
+                <div class="card bg-dark border-light text-white">
+                    <div class="flex-row d-flex justify-content-center align-items-center mt-3">
+                        <div class="col-1">
+                
+                        </div>
+                        <div class="col-lg-10 col-sm-9  d-flex justify-content-center">
+                            {% if medium_progress == 0 %}
+                            <h5 class="percent_red">Medium Task - {{medium_progress}}%</h5>
+                            {% elif medium_progress <=24 %}
+                            <h5 class="percent_orange_red">Medium Task - {{medium_progress}}%</h5>
+                            {% elif medium_progress <= 49 %}
+                            <h5 class="percent_orange">Medium Task - {{medium_progress}}%</h5>
+                            {% elif medium_progress <= 74 %}
+                            <h5 class="percent_yellow">Medium Task - {{medium_progress}}%</h5>
+                            {% elif medium_progress <= 99 %}
+                            <h5 class="percent_green_yellow">Medium Task - {{medium_progress}}%</h5>
+                            {% elif medium_progress == 100 %}
+                            <h5 class="percent_green">Medium Task - {{medium_progress}}%</h5>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-1 col-sm-2">
+                            <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#taskHelpModal_medium">
+                                <i class="bi bi-info-circle text-success"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">{{task_medium}}</h5>
+                        </div>
+                        {% if image_medium != none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/{{image_medium}}"width= "60" height="60" alt="task_image">
+                        </div>
+                        {% elif image_medium == none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/blank.png"width= "60" height="60" alt="task_image" class="hide_img">
+                            <!-- <p class="text-white">{{task}}</p> -->
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex-row d-flex mb-3">
+                        <div class="col d-flex justify-content-center">
+                            <form action="/generate_unofficial_medium/" method="POST">
+                                <button class="btn btn-default">
+                                    <img src="/static/generate_task_button_medium.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                </button>
+                            </form>
+                        </div>
+                        
+                            <div class="col d-flex justify-content-center ">
+                                <form action="/complete_unofficial_medium/" method="POST">
+                                    <button class="btn btn-default">
+                                        <img src="/static/complete_task_button_medium.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                    </button>
+                                </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if hard_progress != 100 %}
+
+        <div class="flex-row d-flex justify-content-between p-3">
+            <div class="container w-50">
+                <div class="card bg-dark border-light text-white">
+                    <div class="flex-row d-flex justify-content-center align-items-center mt-3">
+                        <div class="col-1">
+                
+                        </div>
+                        <div class="col-lg-10 col-sm-9  d-flex justify-content-center">
+                            {% if hard_progress == 0 %}
+                            <h5 class="percent_red">Hard Task - {{hard_progress}}%</h5>
+                            {% elif hard_progress <=24 %}
+                            <h5 class="percent_orange_red">Hard Task - {{hard_progress}}%</h5>
+                            {% elif hard_progress <= 49 %}
+                            <h5 class="percent_orange">Hard Task - {{hard_progress}}%</h5>
+                            {% elif hard_progress <= 74 %}
+                            <h5 class="percent_yellow">Hard Task - {{hard_progress}}%</h5>
+                            {% elif hard_progress <= 99 %}
+                            <h5 class="percent_green_yellow">Hard Task - {{hard_progress}}%</h5>
+                            {% elif hard_progress == 100 %}
+                            <h5 class="percent_green">Hard Task - {{hard_progress}}%</h5>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-1 col-sm-2">
+                            <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#taskHelpModal_hard">
+                                <i class="bi bi-info-circle text-success"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">{{task_hard}}</h5>
+                        </div>
+                        {% if image_hard != none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/{{image_hard}}"width= "60" height="60" alt="task_image">
+                        </div>
+                        {% elif image_hard == none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/blank.png"width= "60" height="60" alt="task_image" class="hide_img">
+                            <!-- <p class="text-white">{{task}}</p> -->
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex-row d-flex mb-3">
+                        <div class="col d-flex justify-content-center">
+                            <form action="/generate_unofficial_hard/" method="POST">
+                                <button class="btn btn-default">
+                                    <img src="/static/generate_task_button_hard.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                </button>
+                            </form>
+                        </div>
+                        
+                            <div class="col d-flex justify-content-center ">
+                                <form action="/complete_unofficial_hard/" method="POST">
+                                    <button class="btn btn-default">
+                                        <img src="/static/complete_task_button_hard.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                    </button>
+                                </form>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if elite_progress != 100 %}
+
+        <div class="flex-row d-flex justify-content-between p-3">
+            <div class="container w-50">
+                <div class="card bg-dark border-light text-white">
+                    <div class="flex-row d-flex justify-content-center align-items-center mt-3">
+                        <div class="col-1">
+                
+                        </div>
+                        <div class="col-lg-10 col-sm-9  d-flex justify-content-center">
+                            {% if elite_progress == 0 %}
+                            <h5 class="percent_red">Elite Task - {{elite_progress}}%</h5>
+                            {% elif elite_progress <=24 %}
+                            <h5 class="percent_orange_red">Elite Task - {{elite_progress}}%</h5>
+                            {% elif elite_progress <= 49 %}
+                            <h5 class="percent_orange">Elite Task - {{elite_progress}}%</h5>
+                            {% elif elite_progress <= 74 %}
+                            <h5 class="percent_yellow">Elite Task - {{elite_progress}}%</h5>
+                            {% elif elite_progress <= 99 %}
+                            <h5 class="percent_green_yellow">Elite Task - {{elite_progress}}%</h5>
+                            {% elif elite_progress == 100 %}
+                            <h5 class="percent_green">Elite Task - {{elite_progress}}%</h5>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-1 col-sm-2">
+                            <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#taskHelpModal_elite">
+                                <i class="bi bi-info-circle text-success"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-5 d-flex justify-content-center align-items-center">
+                            <h5 class="text-white">{{task_elite}}</h5>
+                        </div>
+                        {% if image_elite != none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/{{image_elite}}"width= "60" height="60" alt="task_image">
+                        </div>
+                        {% elif image_elite == none %}
+                        <div class="col d-flex m-5  justify-content-center">
+                            <img src="/static/assets/blank.png"width= "60" height="60" alt="task_image" class="hide_img">
+                            <!-- <p class="text-white">{{task}}</p> -->
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex-row d-flex mb-3">
+                        <div class="col d-flex justify-content-center">
+                            <form action="/generate_unofficial_elite/" method="POST">
+                                <button class="btn btn-default">
+                                    <img src="/static/generate_task_button_elite.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                </button>
+                            </form>
+                        </div>
+                        
+                            <div class="col d-flex justify-content-center ">
+                                <form action="/complete_unofficial_elite/" method="POST">
+                                    <button class="btn btn-default">
+                                        <img src="/static/complete_task_button_elite.png" alt="button to generate a new task." class="img-fluid" width= "250" height="100">
+                                    </button>
+                                </form>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+
+        {% if easy_progress == 100 and medium_progress == 100 and hard_progress == 100 and elite_progress == 100 %}
+        <div class="flex-row d-flex justify-content-between p-5">
+            <div class="container w-50">
+                <div class="card bg-dark border-light text-white">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3>You have completed all tasks in Easy, Medium, Hard and Elite tiers!</h3>
+                            <hr>
+                            <h3>You are the GREATEST OF ALL TIME!</h3>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <h6>This means I don't have a task for you to generate :( </h6>
+                            <h6>But have some fireworks!</h6>
+                            <div class="pyro">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        {% endif %}
+
+
+
+
+
+
+    <div class="modal fade" id="taskHelpModal_easy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+                <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Task Help</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                {% if tip_easy != None %}
+                <p>{{tip_easy}}</p>
+                <p>Link to the wiki for this task: <a href="{{link_easy}}" target="_blank">Wiki Page</a></p>
+                {% else %}
+                <p>You do not have a easy task currently. You can generate a task and then click me!</p>
+                {% endif %}
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="taskHelpModal_medium" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content bg-dark">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Task Help</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-white">
+                    {% if tip_medium != None %}
+                    <p>{{tip_medium}}</p>
+                    <p>Link to the wiki for this task: <a href="{{link_medium}}" target="_blank">Wiki Page</a></p>
+                    {% else %}
+                    <p>You do not have a medium task currently. You can generate a task and then click me!</p>
+                    {% endif %}
+    
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                </div>
+                </div>
+            </div>
+            </div>
+
+            
+
+
+            <div class="modal fade" id="taskHelpModal_hard" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content bg-dark">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Task Help</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-white">
+                        {% if tip_hard != None %}
+                        <p>{{tip_hard}}</p>
+                        <p>Link to the wiki for this task: <a href="{{link_hard}}" target="_blank">Wiki Page</a></p>
+                        {% else %}
+                        <p>You do not have a hard task currently. You can generate a task and then click me!</p>
+                        {% endif %}
+        
+        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                
+
+
+                <div class="modal fade" id="taskHelpModal_elite" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content bg-dark">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Task Help</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-white">
+                            {% if tip_elite != None %}
+                            <p>{{tip_elite}}</p>
+                            <p>Link to the wiki for this task: <a href="{{link_elite}}" target="_blank">Wiki Page</a></p>
+                            {% else %}
+                            <p>You do not have a elite task currently. You can generate a task and then click me!</p>
+                            {% endif %}
+            
+            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            
+
+
+        <script>
+            $(document).ready(function() {
+                $(".active").removeClass("active");
+                $("#dashboard").addClass("active");
+            });
+        </script>
+        <script>
+            function toggler(Id){
+                $("#" + Id).toggle();
+            }
+        </script>
+
+
+{% endblock %}

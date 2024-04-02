@@ -1,0 +1,44 @@
+<div class="col">
+    <div class="col d-flex m-5 justify-content-center pt-3">
+        <h5 class="text-white">{{task_easy}}</h5>
+    </div>
+</div>
+
+<div class="col">
+    {% if image_easy != none %}
+    <div class="col d-flex m-5  justify-content-center">
+        <img src="/static/assets/{{image_easy}}"width= "60" height="60" alt="task_image">
+    </div>
+    {% elif image_easy == none %}
+    <div class="col d-flex m-5  justify-content-center">
+        <img src="/static/assets/blank.png"width= "60" height="60" alt="task_image" class="hide_img">
+        <!-- <p class="text-white">{{task}}</p> -->
+    </div>
+    {% endif %}
+</div>
+
+
+<div class="modal fade" id="taskHelpModal_easy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-dark">
+        <div class="modal-header text-center">
+            <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Task Help</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-white">
+            {% if tip_easy != None %}
+            <p>{{tip_easy}}</p>
+            <p>Link to the wiki for this task: <a href="{{link_easy}}" target="_blank">Wiki Page</a></p>
+            {% else %}
+            <p>You do not have a easy task currently. You can generate a task and then click me!</p>
+            {% endif %}
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            
+        </div>
+        </div>
+    </div>
+    </div>

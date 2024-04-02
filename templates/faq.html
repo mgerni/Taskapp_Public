@@ -1,0 +1,1690 @@
+{% extends "base.html" %}
+<title>{% block title %}Task App FAQ/Rules{%endblock %}</title> {% block context %}
+<h1 class="text-white container d-flex justify-content-center mt-5">FAQ</h1>
+<section class="vh-100">
+	<div class="row mt-5 justify-content-center">
+		<div class="col-lg-8 col-sm-12">
+			<div class="accordion" id="accordionFaq">
+				<div class="accordion-item accordion_bg text-white border-bottom">
+					<h2 class="accordion-header" id="headingQuests">
+                            <button class="accordion-button collapsed bg-dark text-white fw-bold border-top border-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuests" aria-expanded="false" aria-controls="collapseQuests">
+                            Quests
+                            </button>
+                        </h2>
+					<div id="collapseQuests" class="accordion-collapse collapse" aria-labelledby="headingQuests" data-bs-parent="#accordionFaq">
+						<div class="accordion-body">
+							<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+								<div class="card-body p-xl-1">
+									<div class="scrollable">
+										<div class="row align-items-center">
+											<div class="col-lg-12 col-md-12 col-sm-xl-12">
+												<div class="accordion" id="accordionQuests">
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingQuest1">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuest1" aria-expanded="false" aria-controls="collapseQuest1">
+                                                            Can I complete a certain quest for the XP reward in a certain skill?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseQuest1" class="accordion-collapse collapse" aria-labelledby="headingQuest1" data-bs-parent="#accordionQuests">
+															<div class="accordion-body  border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>If your task only requires you to level up certain skills, you can't start and complete quests to train them.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingQuest2">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuest2" aria-expanded="false" aria-controls="collapseQuest2">
+                                                            When can I finish a quest?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseQuest2" class="accordion-collapse collapse" aria-labelledby="headingQuest2" data-bs-parent="#accordionQuests">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>When your active task requires you to start a quest, AND you have all the requirements for the quest, you are allowed to complete it.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingQuest3">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuest3" aria-expanded="false" aria-controls="collapseQuest3">
+                                                            I need a certain amount of Quest Points to complete a requirement, what should I do?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseQuest3" class="accordion-collapse collapse" aria-labelledby="headingQuest3" data-bs-parent="#accordionQuests">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Check out <a class="text-white" href="#questlistmodal" role="button" data-bs-toggle="modal" data-bs-target="#questlistmodal">Quest List</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item  accordion_bg text-white border-bottom">
+					<h2 class="accordion-header" id="headingClues">
+                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues" aria-expanded="false" aria-controls="collapseClues">
+                    Clues
+                    </button>
+                </h2>
+					<div id="collapseClues" class="accordion-collapse collapse" aria-labelledby="headingClues" data-bs-parent="#accordionFaq">
+						<div class="accordion-body">
+							<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+								<div class="card-body p-xl-1">
+									<div class="scrollable">
+										<div class="row align-items-center">
+											<div class="col-lg-12 col-md-12 col-sm-xl-12">
+												<div class="accordion" id="accordionClues">
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues1">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues1" aria-expanded="false" aria-controls="collapseClues1">
+                                                    What is the best way to get each tier of clue scroll?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues1" class="accordion-collapse collapse" aria-labelledby="headingClues1" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Beginner -> Goblins by lumbridge or Minotaurs (Stronghold) if you’ve completed the full sceptre.</li>
+																			<li>Easy -> Pickpocket Female HAM Members</li>
+																			<li>Medium -> Kill Guards (Varrock or Falador) if you’re below 50 Hunter (Aerial Fishing task) otherwise catch Eclectic Implings.</li>
+																			<li>Hard -> Hellhounds in Witchhaven Dungeon (See Family Crest Quest Guide for how to unlock door). If you have all 3 Totem Pieces and an Ancient Shard you can kill them in Catacombs.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues2">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues2" aria-expanded="false" aria-controls="collapseClues2">
+                                                    What clue steps can you drop?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues2" class="accordion-collapse collapse" aria-labelledby="headingClues2" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>In Easy Tier you must drop: Fairy Queen, Rune Boots, Regal Pomp (soundtrack). Dropping the Amulet of Glory clue is not required but is highly recommended. Any clue scroll which requires a clue reward you do not have i.e. headband / crozier must be dropped.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues3">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues3" aria-expanded="false" aria-controls="collapseClues3">
+                                                    I got an Easy Clue Uniques task but I’m only level 1 thieving?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues3" class="accordion-collapse collapse" aria-labelledby="headingClues3" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You’re allowed to train to 15 thieving to begin this task.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues4">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues4" aria-expanded="false" aria-controls="collapseClues4">
+                                                    Can I build stash units for Uri Clues?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues4" class="accordion-collapse collapse" aria-labelledby="headingClues4" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Provided you ALREADY have the required construction level, you can build STASH units as you receive the clue steps. NOT all at once.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues5">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues5" aria-expanded="false" aria-controls="collapseClues5">
+                                                    Can I complete Regicide when I get a clue in Zul-Andra?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues5" class="accordion-collapse collapse" aria-labelledby="headingClues5" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No, the only reason to complete regicide is for the La Mort Hard Clue Step.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues6">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues6" aria-expanded="false" aria-controls="collapseClues6">
+                                                    Do I need to complete Troll Romance for the Hells Bells song?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues6" class="accordion-collapse collapse" aria-labelledby="headingClues6" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No, you can walk the back way to the bottom of the snow which unlocks the track.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues7">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues7" aria-expanded="false" aria-controls="collapseClues7">
+                                                    I need to unlock the Chaos Altar sound track but don’t have a chaos talisman.
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues7" class="accordion-collapse collapse" aria-labelledby="headingClues7" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You are allowed to complete the Enter The Abyss miniquest for this step.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues8">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues8" aria-expanded="false" aria-controls="collapseClues8">
+                                                    I need a gold bar for my clue step how do I get one?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues8" class="accordion-collapse collapse" aria-labelledby="headingClues8" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Get 33 magic and telegrab one from under Varrock West Bank</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues9">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues9" aria-expanded="false" aria-controls="collapseClues9">
+                                                    I need a diamond to craft a ring/amulet for a clue, how do I get one?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues9" class="accordion-collapse collapse" aria-labelledby="headingClues9" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Ogresses</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues10">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues10" aria-expanded="false" aria-controls="collapseClues10">
+                                                    I need an Addy Square Shield for a clue, what is the best thing to kill for it?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues10" class="accordion-collapse collapse" aria-labelledby="headingClues10" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Named trolls at Death Plateau (no quest req) or Ice Giants in the Rev Caves.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues11">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues11" aria-expanded="false" aria-controls="collapseClues11">
+                                                    Can I get 37 prayer for Sara Wizards?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues11" class="accordion-collapse collapse" aria-labelledby="headingClues11" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>no, they can be out distanced by using a shortbow on long range and using a body blocker.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingClues12">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClues12" aria-expanded="false" aria-controls="collapseClues12">
+                                                    I need Lava/Mist runes for Swan song, how do I get them?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseClues12" class="accordion-collapse collapse" aria-labelledby="headingClues12" data-bs-parent="#accordionClues">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Purchase from Mage Training Arena – total cost is 20 Telekentic, Alch, Grave and 300 enchant pts.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item accordion_bg text-white border-bottom">
+					<h2 class="accordion-header" id="headingMinigames">
+                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames" aria-expanded="false" aria-controls="collapseMinigames">
+                    Minigames
+                    </button>
+                </h2>
+					<div id="collapseMinigames" class="accordion-collapse collapse" aria-labelledby="headingMinigames" data-bs-parent="#accordionFaq">
+						<div class="accordion-body">
+							<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+								<div class="card-body p-xl-1">
+									<div class="scrollable">
+										<div class="row align-items-center">
+											<div class="col-lg-12 col-md-12 col-sm-xl-12">
+												<div class="accordion" id="accordionMinigames">
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames1">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames1" aria-expanded="false" aria-controls="collapseMinigames1">
+                                                    I need to buy a piece of this skilling outfit, which one do I buy?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames1" class="accordion-collapse collapse" aria-labelledby="headingMinigames1" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Always go cheapest first. Examples of this are Graceful and the Farmer's Set.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames2">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames2" aria-expanded="false" aria-controls="collapseMinigames2">
+                                                    I need to do castle wars but I only have 1 account.
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames2" class="accordion-collapse collapse" aria-labelledby="headingMinigames2" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Castle wars is F2P, so you can just make another account. You just play against yourself and catch the flag once per game with your task account.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames3">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames3" aria-expanded="false" aria-controls="collapseMinigames3">
+                                                    Can I sell back Castle Wars armour?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames3" class="accordion-collapse collapse" aria-labelledby="headingMinigames3" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No, we keep all Castle Wars armour.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames4">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames4" aria-expanded="false" aria-controls="collapseMinigames4">
+                                                    For the red decorative set which pieces do I have to purchase?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames4" class="accordion-collapse collapse" aria-labelledby="headingMinigames4" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>All pieces including both the platelegs/skirt.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames5">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames5" aria-expanded="false" aria-controls="collapseMinigames5">
+                                                    Am I allowed to play LMS to get Rune arrows for gp?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames5" class="accordion-collapse collapse" aria-labelledby="headingMinigames5" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No, the only things you are allowed to purchase from LMS are the Ring of Wealth and Magic Shortbow Scrolls provided you have the items.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames6">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames6" aria-expanded="false" aria-controls="collapseMinigames6">
+                                                    When doing a pest control task I struggle to maintain %, what can I do?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames6" class="accordion-collapse collapse" aria-labelledby="headingMinigames6" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Bring an axe to cut the trees and repair barricades for easy %.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames7">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames7" aria-expanded="false" aria-controls="collapseMinigames7">
+                                                    When on a task which requires farming, can I do Tithe?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames7" class="accordion-collapse collapse" aria-labelledby="headingMinigames7" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, provided you don’t spend the pts from your runs on any item in the collection log.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames8">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames8" aria-expanded="false" aria-controls="collapseMinigames8">
+                                                    I got a black satchel task, how do I get a raw swordfish?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames8" class="accordion-collapse collapse" aria-labelledby="headingMinigames8" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Train to 30 crafting and complete 100% Piscarillius favour to unlock the shop.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames9">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames9" aria-expanded="false" aria-controls="collapseMinigames9">
+                                                    I need to get two ancient pages how can I do this safetly?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames9" class="accordion-collapse collapse" aria-labelledby="headingMinigames9" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Check out <a class="text-white" href="#ancientpagemodal" role="button" data-bs-toggle="modal" data-bs-target="#ancientpagemodal">Ancient page guide</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames10">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames10" aria-expanded="false" aria-controls="collapseMinigames10">
+                                                    I need bolt racks, can I kill all barrows brothers?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames10" class="accordion-collapse collapse" aria-labelledby="headingMinigames10" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, you're allowed to kill all brothers and get 100% for increased odds if you're able to</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames11">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames11" aria-expanded="false" aria-controls="collapseMinigames11">
+                                                    I don’t want to participate in Last Man Standing, can I choose to not do these tasks?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames11" class="accordion-collapse collapse" aria-labelledby="headingMinigames11" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, you’re allowed to manually complete all LMS tasks while staying an official task only.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingMinigames12">
+                                                    <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinigames12" aria-expanded="false" aria-controls="collapseMinigames1">
+                                                    Can I smelt bars for Giants Foundry?
+                                                    </button>
+                                                    </h3>
+														<div id="collapseMinigames12" class="accordion-collapse collapse" aria-labelledby="headingMinigames1" data-bs-parent="#accordionMinigames">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, you are allowed to smelt the ores you have into bars. You can also buy platebodies from various shops.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item accordion_bg text-white border-bottom">
+					<h2 class="accordion-header" id="headingCombatSlayer">
+                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer" aria-expanded="false" aria-controls="collapseCombatSlayer">
+                        Combat/Slayer
+                        </button>
+                    </h2>
+					<div id="collapseCombatSlayer" class="accordion-collapse collapse" aria-labelledby="headingCombatSlayer" data-bs-parent="#accordionFaq">
+						<div class="accordion-body">
+							<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+								<div class="card-body p-xl-1">
+									<div class="scrollable">
+										<div class="row align-items-center">
+											<div class="col-lg-12 col-md-12 col-sm-xl-12">
+												<div class="accordion" id="accordionCombatSlayer">
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat1">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer1" aria-expanded="false" aria-controls="collapseCombatSlayer1">
+                                                        Can I bury bones on task?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer1" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat1" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, as long as you don't go out of your way to use them on an altar or at the ectophial.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat2">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer2" aria-expanded="false" aria-controls="collapseCombatSlayer2">
+                                                        Can I pick up Numulite/Tokkul/Coins?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer2" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat2" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, you can pick this up and store it.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat3">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer3" aria-expanded="false" aria-controls="collapseCombatSlayer3">
+                                                        Can I fish and cook food?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer3" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat3" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You cannot fish for food. You can however cook raw food if you have the level already (in moderation)</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat4">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer4" aria-expanded="false" aria-controls="collapseCombatSlayer4">
+                                                        I just started, what can I use for food?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer4" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat4" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Three good possibilities are wines from Draynor (recommended if not using melee), kebabs or gnome food from the Grand Tree.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat5">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer5" aria-expanded="false" aria-controls="collapseCombatSlayer5">
+                                                        What kind of upgrades are you allowed to buy?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer5" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat5" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Anything that is sold. Think about rune sword once you have access to Champion's Guild and green dragonhide in Nardah.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat6">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer6" aria-expanded="false" aria-controls="collapseCombatSlayer6">
+                                                        I need to train magic, what is the best monster to train on?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer6" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat6" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Start with training on zamorak warriors so you can get a rune scimitar for melee training. After that, it doesn't really matter.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat7">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer7" aria-expanded="false" aria-controls="collapseCombatSlayer7">
+                                                        I need to get an Ancient Shard / Dark Totem Piece, what is the best monster to kill?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer7" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat7" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Skeletons unless you have received both the Long Bone and Giant key then you may kill Hill Giants.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat8">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer8" aria-expanded="false" aria-controls="collapseCombatSlayer8">
+                                                        I need to kill the Mole for its Skin/Claw, how will I do this?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer8" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat8" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Train to 30 range (chickens, cows) and purchase some Adamant Arrows + Maple bow from Lowe (Varrock), this kill may take ~2hours, having an alt with Fally Hard+ may help.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat9">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer9" aria-expanded="false" aria-controls="collapseCombatSlayer9">
+                                                        I need to complete Fremmenik Trials / BA / In Aid of the Myreque but my combat is too low, can I train it?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer9" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat9" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes you can train your levels to base 30s to assist you in completing this task.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat10">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer10" aria-expanded="false" aria-controls="collapseCombatSlayer10">
+                                                        I need to start my slayer grind. Can I do the history quiz in the museum for the first 9 levels?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer10" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat10" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat11">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer11" aria-expanded="false" aria-controls="collapseCombatSlayer11">
+                                                        Can I do wilderness slayer if I must train slayer for my task?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer11" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat11" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat12">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer12" aria-expanded="false" aria-controls="collapseCombatSlayer12">
+                                                        I have a Dark Mystic Gloves task but have not completed Priest in Peril, what do I do?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer12" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat12" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You kill Twisted Banshees in the catacombs.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat13">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer13" aria-expanded="false" aria-controls="collapseCombatSlayer13">
+                                                        I have a Mystic Hat Light task and need to get the slayer requirement, what do I kill?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer13" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat13" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Train slayer till 35 and then kill Wall Beasts</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat14">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer14" aria-expanded="false" aria-controls="collapseCombatSlayer14">
+                                                        What do I kill Turoths with?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer14" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat14" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>If you have a magic shortbow, use broad arrows with that. Otherwise buy a leafbladed spear from a slayer master.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat15">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer15" aria-expanded="false" aria-controls="collapseCombatSlayer15">
+                                                        I have the Obor task, what is the best location to farm keys?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer15" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat15" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>In the Wilderness, in a dungeon a bit west of Mage Bank. The droprate for keys in wilderness is twice as good as outside of it.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat16">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer16" aria-expanded="false" aria-controls="collapseCombatSlayer16">
+                                                        I need to get a specific slayer task (for example, granite dust task), can I do 9 Turael tasks and then the 10th task at Konar for points?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer16" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat16" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No. If you need a specific slayer task, use your points for skips to get it, and otherwise use Turael skips until you get it. Turael skipping means you get a task, and if it isn't the task you need, you cancel it by doing a Turael task. Make sure to block Kalphites before doing so!</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSlayerCombat17">
+                                                        <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatSlayer17" aria-expanded="false" aria-controls="collapseCombatSlayer17">
+                                                        Can I kill boss variants on a regular slayer task?
+                                                        </button>
+                                                        </h3>
+														<div id="collapseCombatSlayer17" class="accordion-collapse collapse" aria-labelledby="headingSlayerCombat17" data-bs-parent="#accordionCombatSlayer">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>When receiving a slayer task with a boss variant (such as gargoyles / kalphites) you are allowed to do a max. of 35 of the boss variant. (This does not apply when receiving a unique from that certain boss is your active task, or when the task is Kraken.)</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item accordion_bg text-white border-bottom">
+					<h2 class="accordion-header" id="headingSkillingMisc">
+                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc" aria-expanded="false" aria-controls="collapseSkillingMisc">
+                            Skilling/Misc.
+                            </button>
+                        </h2>
+					<div id="collapseSkillingMisc" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc" data-bs-parent="#accordionFaq">
+						<div class="accordion-body">
+							<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+								<div class="card-body p-xl-1">
+									<div class="scrollable">
+										<div class="row align-items-center">
+											<div class="col-lg-12 col-md-12 col-sm-xl-12">
+												<div class="accordion" id="accordionSkillingMisc">
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc1">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc1" aria-expanded="false" aria-controls="collapseSkillingMisc1">
+                                                            What is the link to the RS3 Task Discord?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc1" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc1" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li><a class="text-white" href="https://discord.com/invite/XEYFDrc">RS3 Task Discord</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc2">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc2" aria-expanded="false" aria-controls="collapseSkillingMisc2">
+                                                            Are the rules the same for UIM?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc2" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc2" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>There currently are 3 exceptions: </li>
+																			<li>When on a clue task, UIM can train their construction to the stash unit from that clue tier when they get an emote clue step</li>
+																			<li>UIM can finish horror from the deep when they have to enter the lighthouse for a clue step.</li>
+																			<li>UIM can make potions after herb runs until the max herb level needed in their current tier (medium = 58, hard = 70, elite = 90).</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc3">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc3" aria-expanded="false" aria-controls="collapseSkillingMisc3">
+                                                            What random events am I allowed to complete?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc3" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc3" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You can complete any random event you receive EXCEPT the evil bob fishing random.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc4">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc4" aria-expanded="false" aria-controls="collapseSkillingMisc4">
+                                                            Am I allowed to get Zeah Favour?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc4" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc4" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Zeah favour is free to get whenever it is beneficial to your task.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc5">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc5" aria-expanded="false" aria-controls="collapseSkillingMisc5">
+                                                            I need money for my task (runes, arrows, granite body, gear upgrades)
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc5" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc5" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You CAN do the Stronghold of Security for the initial 10K Gp.</li>
+																			<li>You can then collect Steel Platebodies / Platelegs (safer) from the wilderness with a looting bag and bank at ferox enclave / edgeville.</li>
+																			<li>If you do NOT wish to enter the wilderness you can buy silk in Al Kharid and sell it to the NPC in Ardougne but this is significantly slower.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc6">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc6" aria-expanded="false" aria-controls="collapseSkillingMisc6">
+                                                            I need a Crafting Level for my clue/diary, what is the best method to train?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc6" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc6" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Purchasing Sand + Soda Ash from Charterships and Glassblowing.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc7">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc7" aria-expanded="false" aria-controls="collapseSkillingMisc7">
+                                                            I need the crafting level for a glory, can I do sand mining and seaweed farming in medium tier?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc7" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc7" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, you can!</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc8">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc8" aria-expanded="false" aria-controls="collapseSkillingMisc8">
+                                                            I need to get this smithing level, but I don't have any ores yet, can I mine for them?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc8" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc8" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No, to get to 50 smithing, you can do 1-35 buying bronze bars (either at Shantay or at Tai Bwo Wannai general store), and then go to 35 fixing motherlode mine struts.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc9">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc9" aria-expanded="false" aria-controls="collapseSkillingMisc9">
+                                                            I need to train agility for my task, can I pickup Marks of Grace?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc9" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc9" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes but they cannot be spent on graceful. You can use them on amylase or recolours.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc10">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc10" aria-expanded="false" aria-controls="collapseSkillingMisc10">
+                                                            I got a wintertodt unique task, do burnt pages count?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc10" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc10" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc11">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc11" aria-expanded="false" aria-controls="collapseSkillingMisc11">
+                                                            I got a wintertodt unique task, am I allowed to woodcut to get to 50fm?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc11" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc11" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes but if you’d prefer to light logs in lumbridge you can.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc12">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc12" aria-expanded="false" aria-controls="collapseSkillingMisc12">
+                                                            Am I allowed to do solo wintertodt when on task?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc12" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc12" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, and you can purchase a house to receive xp from repairing braziers. However you are NOT allowed to complete druidic ritual.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc13">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc13" aria-expanded="false" aria-controls="collapseSkillingMisc13">
+                                                            Am I allowed to fletch on a wintertodt task?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc13" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc13" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc14">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc14" aria-expanded="false" aria-controls="collapseSkillingMisc14">
+                                                            I need to train farming for my task, what is the best way from level 1?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc14" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc14" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Check out <a class="text-white" href="#farmingguidemodal" role="button" data-bs-toggle="modal" data-bs-target="#farmingguidemodal">This</a> Guide by Smitty.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc15">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc15" aria-expanded="false" aria-controls="collapseSkillingMisc15">
+                                                            What is the best way to get Numulite for a Fossil Island Note?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc15" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc15" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Killing hoop snakes or ammonite crabs will be the two best ways early. If you have the construction level you can repair the camp and claim the 5 free fossils to exchange for numulite.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc16">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc16" aria-expanded="false" aria-controls="collapseSkillingMisc16">
+                                                            Can I unlock Keldagrim for Gnome Restaurant?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc16" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc16" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No. The only two reasons to unlock Keldagrim are the Drunken Dwarf Hard Clue and the Fremennik Diary.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc17">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc17" aria-expanded="false" aria-controls="collapseSkillingMisc17">
+                                                            Can I complete Fishing Contest for Gnome Restaurant?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc17" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc17" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>No.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc18">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc18" aria-expanded="false" aria-controls="collapseSkillingMisc18">
+                                                            I have a herblore requirement, but I don't have enough herbs. What do I do?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc18" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc18" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>In easy tier, you can kill chaos druids and collect their herbs. The highest herblore requirement you'll need in easy tier is 31 for Eadgar's Ruse.</li>
+																			<li>In medium tier, you can do herb runs and secondary runs if you need herb supplies. You can do farming contracts for seeds, and also thieve them if you are out of seeds and have a herblore requirement.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc19">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc19" aria-expanded="false" aria-controls="collapseSkillingMisc19">
+                                                            I got a golden tench during aerial fishing, can I exchange it for pearls?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc19" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc19" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You keep the first tench you receive, any tenches after that should be sold.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc20">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc20" aria-expanded="false" aria-controls="collapseSkillingMisc20">
+                                                            Can I thieve Master Farmers for a seed I need for a Farming Contract?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc20" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc20" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc21">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc21" aria-expanded="false" aria-controls="collapseSkillingMisc21">
+                                                            What exactly can I farm once in medium tier?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc21" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc21" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>You can farm herbs, herb secondaries (limpwurt root, whiteberries, snape grass, potato cacti), farming contracts and do Hespori.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item accordion_bg text-white">
+														<h3 class="accordion-header" id="headingSkillingMisc22">
+                                                            <button class="accordion-button collapsed bg-dark text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkillingMisc22" aria-expanded="false" aria-controls="collapseSkillingMisc22">
+                                                            Can I mine gems for teleports / slayer bracelets?
+                                                            </button>
+                                                            </h3>
+														<div id="collapseSkillingMisc22" class="accordion-collapse collapse" aria-labelledby="headingSkillingMisc22" data-bs-parent="#accordionSkillingMisc">
+															<div class="accordion-body border-bottom border-top">
+																<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+																	<div class="card-body p-xl-1">
+																		<ul>
+																			<li>Yes, much like other utility items, you can do this in moderation.</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="questlistmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content bg-dark">
+			<div class="modal-header text-center">
+				<h5 class="modal-title text-white w-100" id="questlistmodal">Quest List</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body justify-content-center">
+				<div class="accordion" id="accordionQuestPointList">
+					<div class="scrollable">
+						<div class="accordion-item accordion_bg text-white border-bottom">
+							<h2 class="accordion-header" id="headingChampScroll">
+                <button class="accordion-button collapsed bg-dark text-white fw-bold border-top border-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChampScroll" aria-expanded="false" aria-controls="collapseChampScroll">
+                Champion Scroll Quest Order
+                </button>
+                </h2>
+							<div id="collapseChampScroll" class="accordion-collapse collapse" aria-labelledby="headingChampScroll" data-bs-parent="#accordionQuestPointList">
+								<div class="accordion-body">
+									<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+										<div class="card-body p-xl-1">
+											<ol class="text-white mb-4">
+												<li>Romeo & Juliet +5 Quest Points</li>
+												<li>Ernest the Chicken +4 Quest Points</li>
+												<li>Sheep Herder +4 Quest Points</li>
+												<li>Black Knights’ Fortress +3 Quest Points</li>
+												<li>Pirate’s Treasure +2 Quest Points</li>
+												<li> Shield of Arrav +1 Quest Points</li>
+												<li>Clock Tower +1 Quest Points</li>
+												<li>X Marks the Spot +1 Quest Points</li>
+												<li>Client of Kourend +1 Quest Points</li>
+												<li> Cook’s Assistant +1 Quest Points</li>
+												<li>Witch’s Potion +1 Quest Points</li>
+												<li>Goblin Diplomacy +5 Quest Points</li>
+												<li> Misthalin Mystery +1 Quest Points</li>
+												<li>Sheep Shearer +1 Quest Points</li>
+												<li>Rune Mysteries +1 Quest Points</li>
+											</ol>
+											<p class="text-white mt-1">Total: 32 Quest Points, 7510gp, 300xp Lamp, 2x 500 xp Lamp, 9 Crafting, 3 Magic, 3 Cooking </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="scrollable">
+						<div class="accordion-item accordion_bg text-white border-bottom">
+							<h2 class="accordion-header" id="headingKharazi">
+                <button class="accordion-button collapsed bg-dark text-white fw-bold border-top border-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKharazi" aria-expanded="false" aria-controls="collapseKharazi">
+                Kharazi Jungle Clue (Legends Quest)
+                </button>
+                </h2>
+							<div id="collapseKharazi" class="accordion-collapse collapse" aria-labelledby="headingKharazi" data-bs-parent="#accordionQuestPointList">
+								<div class="accordion-body">
+									<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+										<div class="card-body p-xl-1">
+											<p class="text-white mb-4 fw-bold">NOTE: YOU MUST COMPLETE ALL PRE-REQ QUESTS BEFORE BEGINNING TO GET THE 107 QUEST POINTS REQUIREMENT</p>
+											<ol class="text-white mb-4">
+												<li> Shield of Arrav +1 Quest Points</li>
+												<li> Plague City +1 Quest Points</li>
+												<li> Biohazard +3 Quest Points</li>
+												<li> Waterfall Quest +1 Quest Points</li>
+												<li> Druidic Ritual +4 Quest Points</li>
+												<li> Jungle Potion +1 Quest Points</li>
+												<li> Merlin’s Crystal +6 Quest Points</li>
+												<li> Lost City +3 Quest Points</li>
+												<li> Shilo Village +2 Quest Points</li>
+												<li> Underground Pass +5 Quest Points</li>
+												<li> Family Crest +1 Quest Points</li>
+												<li> Dragon Slayer +2 Quest Points</li>
+												<li> Only 30/55 Quest Points for Heroes so complete:</li>
+												<li> Romeo & Juliet +5 Quest Points</li>
+												<li> Ernest the Chicken +4 Quest Points</li>
+												<li> Black Knights’ Fortress +3 Quest Points</li>
+												<li> Goblin Diplomacy +5 Quest Points</li>
+												<li> Pirate’s Treasure +2 Quest Points</li>
+												<li> X Marks the Spot +1 Quest Points</li>
+												<li> Sheep Herder +4 Quest Points</li>
+												<li> Client of Kourend +1 Quest Points</li>
+											</ol>
+											<p class="text-white mb-4 fw-bold">Now at 55 Quest Points, complete Heroes Quest (+1 Quest Points) and then continue the list below (IN ORDER) to achieve 107 Quest Points. </p>
+											<ol class="text-white mb-4">
+												<li>Witch’s Potion +1 Quest Points </li>
+												<li>Sheep Shearer +1 Quest Points </li>
+												<li>Misthalin Mystery +1 Quest Points </li>
+												<li>Cook’s Assistant +1 Quest Points </li>
+												<li>Doric’s Quest +1 Quest Points </li>
+												<li>Rune Mysteries +1 Quest Points </li>
+												<li>Restless Ghost +1 Quest Points </li>
+												<li>Imp Catcher +1 Quest Points </li>
+												<li>Demon Slayer +3 Quest Points </li>
+												<li>Corsair Curse +2 Quest Points </li>
+												<li>Vampyre Slayer +3 Quest Points </li>
+												<li>Prince Ali Rescue +3 Quest Points </li>
+												<li>Knight’s Sword +1 (All F2P Quests Complete – 76 Quest Points) </li>
+												<li>Clock Tower +1 Quest Points </li>
+												<li>Hazeel Cult +1 Quest Points </li>
+												<li>Monk’s Friend +1 Quest Points </li>
+												<li>Tribal Totem +1 Quest Points </li>
+												<li>Dwarf Cannon +1 Quest Points </li>
+												<li>Murder Mystery +3 Quest Points </li>
+												<li>Witch’s House +4 Quest Points </li>
+												<li>Fight Arena +2 Quest Points </li>
+												<li>Golem +1 Quest Points </li>
+												<li>Ascent of Arceuus +1 Quest Points </li>
+												<li>Depths of Despair +1 Quest Points </li>
+												<li>Forsaken Tower +1 Quest Points </li>
+												<li>Tale of Righteous +1 Quest Points </li>
+												<li>Queen of Thieves +1 Quest Points </li>
+												<li>Sea Slug +1 Quest Points </li>
+												<li>RFD Cook P2 +1 Quest Points </li>
+												<li>Gertrude’s Cat +1 Quest Points </li>
+												<li>Tower of Life +2 Quest Points </li>
+												<li>Observatory Quest +2 Quest Points </li>
+												<li>Mountain Daughter +2 Quest Points </li>
+												<li>Fishing Contest +1 Quest Points </li>
+												<li>Scorpion Catcher +1 Quest Points </li>
+											</ol>
+											<p class="text-white mb-4 fw-bold">The above quest completions = 107 Quest Points.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="scrollable">
+						<div class="accordion-item accordion_bg text-white border-bottom">
+							<h2 class="accordion-header" id="headingPiscatoris">
+                <button class="accordion-button collapsed bg-dark text-white fw-bold border-top border-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePiscatoris" aria-expanded="false" aria-controls="collapsePiscatoris">
+                Piscatoris Fishing Colony (Swan Song)
+                </button>
+                </h2>
+							<div id="collapsePiscatoris" class="accordion-collapse collapse" aria-labelledby="headingPiscatoris" data-bs-parent="#accordionQuestPointList">
+								<div class="accordion-body">
+									<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+										<div class="card-body p-xl-1">
+											<p class="text-white mb-4 fw-bold">NOTE: YOU MUST COMPLETE ALL PRE-REQ QUESTS BEFORE BEGINNING TO GET THE 100 QUEST POINTS REQUIREMENT</p>
+											<ol class="text-white mb-4">
+												<li>Rune Mysteries +1 Quest Points </li>
+												<li>Restless Ghost +1 Quest Points </li>
+												<li>Druidic Ritual +4 Quest Points </li>
+												<li>Jungle Potion +1 Quest Points </li>
+												<li>Priest in Peril +1 Quest Points </li>
+												<li>Creature of Fenkenstrain +2 Quest Points </li>
+												<li>Garden of Tranquillity +2 Quest Points </li>
+												<li>Shilo Village +2 Quest Points </li>
+												<li>One Small Favour +2 Quest Points </li>
+											</ol>
+											<p class="text-white mb-4 fw-bold">NOW ALL PRE-REQ QUESTS (16QP) ARE COMPLETED THE FOLLOWING QUESTS IN ORDER:</p>
+											<ol class="text-white mb-4">
+												<li>Romeo & Juliet +5 Quest Points </li>
+												<li>Goblin Diplomacy +5 Quest Points </li>
+												<li>Ernest the Chicken +4 Quest Points </li>
+												<li>Black Knights’ Fortress +3 Quest Points </li>
+												<li>Demon Slayer +3 Quest Points </li>
+												<li>Vampyre Slayer +3 Quest Points </li>
+												<li>Prince Ali Rescue +3 Quest Points </li>
+												<li>Corsair Curse +2 Quest Points </li>
+												<li>Priate’s Treasure +2 Quest Points </li>
+												<li>Shield of Arrav +1 Quest Points </li>
+												<li>X Marks the Spot +1 Quest Points </li>
+												<li>Sheep Shearer +1 Quest Points </li>
+												<li>Witch’s Potion +1 Quest Points </li>
+												<li>Cook’s Assistant +1 Quest Points </li>
+												<li>Doric’s Quest +1 Quest Points </li>
+												<li>Imp Catcher +1 Quest Points </li>
+												<li>Misthalin Mystery +1 Quest Points </li>
+												<li>Knight’s Sword +1 Quest Points (ALL F2P Quests Done (-Dragon Slayer) AT 55 Quest Points) </li>
+												<li>Merlin’s Crystal +6 Quest Points </li>
+												<li>Sheep Herder +4 Quest Points </li>
+												<li>Clock Tower +1 Quest Points </li>
+												<li>Hazeel Cult +1 Quest Points </li>
+												<li>Client of Kourend +1 Quest Points </li>
+												<li>Dwarf Cannon +1 Quest Points </li>
+												<li>Monk’s Friend +1 Quest Points </li>
+												<li>Tribal Totem +1 Quest Points </li>
+												<li>Murder Mystery +3 Quest Points </li>
+												<li>Witch’s House +4 Quest Points </li>
+												<li>Golem +1 Quest Points </li>
+												<li>Fight Arena +2 Quest Points </li>
+												<li>Plague City +1 Quest Points </li>
+												<li>Biohazard +3 Quest Points </li>
+												<li>Making History +3 Quest Points </li>
+												<li>Ascent of Arceuus +1 Quest Points </li>
+												<li>Depths of Despair +1 Quest Points </li>
+												<li>Forsaken Tower +1 Quest Points </li>
+												<li>Tale of the Righteous +1 Quest Points </li>
+												<li>Queen of Thieves +1 Quest Points </li>
+												<li>Sea Slug +1 Quest Points </li>
+												<li>RFD COOK P2 +1 Quest Points </li>
+												<li>Tower of Life +2 Quest Points </li>
+												<li>Gertrude’s Cat +1 Quest Points </li>
+												<li>Fishing Contest +1 Quest Points </li>
+												<li>Scorpion Catcher +1 Quest Points </li>
+											</ol>
+											<p class="text-white mb-4">Above quest completions = 100 Quest Points</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="scrollable">
+						<div class="accordion-item accordion_bg text-white border-bottom">
+							<h2 class="accordion-header" id="headingKudos">
+                <button class="accordion-button collapsed bg-dark text-white fw-bold border-top border-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKudos" aria-expanded="false" aria-controls="collapseKudos">
+                Kudos for Fossil Island Note / Varrock Diary
+                </button>
+                </h2>
+							<div id="collapseKudos" class="accordion-collapse collapse" aria-labelledby="headingKudos" data-bs-parent="#accordionQuestPointList">
+								<div class="accordion-body">
+									<div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+										<div class="card-body p-xl-1">
+											<p class="text-white mb-4 fw-bold">Varrock Diary:</p>
+											<ol class="text-white mb-4">
+												<li>Answering Orlando Smith's Natural History Quiz</li>
+												<li>Demon Slayer</li>
+												<li>Hazeel Cult</li>
+												<li>Rune Mysteries</li>
+												<li>Shield of Arrav</li>
+												<li>Merlin's Crystal</li>
+												<p class="text-white">(Justification is SoA + Merlins reward you w/ an XP Lamp)</p>
+											</ol>
+											<p class="text-white mb-4 fw-bold">Fossil Island:</p>
+											<ol class="text-white">
+												<li>Answering Orlando Smith's Natural History Quiz</li>
+												<li>Complete Digsite Quest -</li>
+												<p class="text-white">Clean artifacts to find:</p>
+												<ol class="text-white mb-4">
+													<li>Pottery</li>
+													<li>Old Symbol</li>
+													<li>Ancient Symbol</li>
+													<li>Ancient Coin</li>
+													<li>Old Coin</li>
+												</ol>
+												<li>Demon Slayer</li>
+												<li>Hazeel Cult</li>
+												<li>Rune Mysteries</li>
+												<li>Shield of Arrav</li>
+												<li>Merlin's Crystal</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="farmingguidemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content bg-dark">
+			<div class="modal-header text-center">
+				<h5 class="modal-title text-white w-100" id="questlistmodal">Low agility/magic farming guide for Task Accounts</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h5 class="text-white">Overview</h5>
+				<p class="text-white mb-4">This guide is for task accounts that need early farming levels, especially levels 1-34, and have few available teleports. Once you hit 34 Farming, if you still need more levels, you’re allowed (and advised) to get 100% Hosidius favor and do the rest of your training at Tithe Farm.</p>
+				<h6 class="text-white mb-4 text-decoration-underline">General Strategy</h6>
+				<p class="text-white mb-4">The bulk of your experience will come from making supercompost by buying pineapples from charter ships and using the supercompost on your plants. The other xp will come from planting and harvesting crops.</p>
+				<p class="text-white mb-4"> *Note: This guide does not include farming hops during your farm runs. While doing early-level farming myself, I found I didn’t have enough time for them, so I’m skipping their inclusion.</p>
+				<h6 class="text-white mb-4 text-decoration-underline">Initial Preparation</h6>
+				<ul class="text-white mb-4">
+					<li>Before starting your farm runs, you’ll want to do some preparation.</li>
+					<ul class="text-white mb-4">
+						<li>Buy a boatload of pineapples from charter ships or the Grand Tree food store. Catherby or Port Khazard charter stores are both good options because they’re close to a bank. 200-300 is a good starting amount.</li>
+						<li>Get some allotment and flower seeds (instructions below). A hundred or so are good to start with.</li>
+						<li>Buy 4 or 5 bucket packs from Sarah in the Falador farming store (in the house west of the farming patches) and deposit the buckets into a tool leprechaun at any farming spot. These are for holding supercompost.</li>
+						<li>Get some cash. Charters are not cheap, but they’re the best way to get around with no teles. Getting an inventory of steel plates in the wilderness with a looting bag is the most straightforward way to do this.</li>
+					</ul>
+				</ul>
+				<h6 class="text-white mb-4 text-decoration-underline">Obtaining Seeds</h6>
+				<ol class="text-white mb-4">
+					<li>Do you have 38 thieving?</li>
+					<ul class="text-white mb-4">
+						<li>Pickpocket Master Farmers</li>
+					</ul>
+					<li>Otherwise, buy seeds from Olivia in Draynor Village. The best type of allotment seed she stocks is cabbage, and the best flower seed she stocks is rosemary.</li>
+				</ol>
+				<h6 class="text-white mb-4 text-decoration-underline">What to do at the farms</h6>
+				<p class="text-white mb-4">Time to actually gain xp. Do this by running to any number of allotment patches and doing the following actions:</p>
+				<ul class="text-white mb-4">
+					<li>Withdraw buckets from the leprechaun, grab the 15 supercompost you made last run, then deposit the super compost into the leprechaun.</li>
+					<li>Use 15 more pineapples on the compost bin to start making more super compost.</li>
+					<li>Harvest your completed crops, and use them on the leprechaun to turn them into notes and save inventory space.</li>
+					<li>Plant your allotment and flower seeds. Use your supercompost on them. Not only does this keep the plants alive, but you get xp for using the compost.</li>
+					<li>Head to the next patch!</li>
+				</ul>
+				<h6 class="text-white mb-4 text-decoration-underline">Which patches should I use?</h6>
+				<p class="text-white mb-4">There are 4 patches you can consider using for early game training:</p>
+				<ul class="text-white mb-4">
+					<li>Falador farm</li>
+					<li>Catherby</li>
+					<li>Ardy farm</li>
+					<li>Hosidius farm</li>
+				</ul>
+				<p class="text-white mb-4">You don’t have to do all of them. Maybe you only have the time/run energy to do three of the patches. That’s fine. Or you might find it too annoying to run all the way to Hosidius. That’s cool too.</p>
+				<h6 class="text-white mb-4 text-decoration-underline">With zero teleports, one possible rotation can look like:</h6>
+				<ol class="text-white mb-4">
+					<li>Home teleport to Lumbridge</li>
+					<li>Run to the Falador Farm.</li>
+					<li class="fw-bold">Farm in Falador.</li>
+					<li>Run to Port Sarim, and take the charter to Catherby.</li>
+					<li class="fw-bold">Farm in Catherby.</li>
+					<li>Take the charter back to Port Sarim</li>
+					<li>Run west to the boat in Rimmington that takes you to the Ardougne/Brimhaven. Take it to Ardougne. Run to the Ardougne farming patch.</li>
+					<li class="fw-bold">Farm in Ardougne.</li>
+					<li>Minigame tele to Pest Control, then take the boat back to Port Sarim</li>
+					<li>Run to Veos in the northernmost boat section, and take the boat to Zeah.</li>
+					<li>Run to the Hosidius farming patch.</li>
+					<li class="fw-bold"> Farm in Hosidius.</li>
+					<li>Repeat!</li>
+				</ol>
+				<p class="text-white mb-4">Once you get some teleports, this can be shortened dramatically. Falador and Camelot teleports really help out, as does the Xeric’s Talisman teleport. Also, once you go into Tithe Farm one time, you can start using the Tithe Farm minigame tele for future farm runs.</p>
+				<p class="text-white mb-4"> Tip: If you get a Garden Pie from Young or Gourmet implings or the Cooking Guild, you can boost to get into Tithe Farm at 31 Farming to unlock the teleport 3 levels early.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="ancientpagemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content bg-dark">
+			<div class="modal-header text-center">
+				<h5 class="modal-title text-white w-100" id="ancientpagemodal">Ancient Page Guide</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="d-flex justify-content-center flex-row mb-4">
+					<ol class="text-white">
+						<li>Enter Ancient Cavern.</li>
+						<li>Wait 10 minutes to lose aggro. Runelite's "NPC Aggression Timer" plugin can show you how long you need to wait. (You don't have to, but you risk getting slapped by a dragon on the way down)</li>
+						<li>Step on the marked tile. That tile is inconveniently one step outside the aggro range.</li> <img class="mb-4 mt-4" src="/static/assets/ancient_page_safespot_guide.png" alt="ancient page guide" width="300" height="300">
+						<li>Run back up to the entrance immediately after. You can try to take the aggro of a waterfiend to save a dragon slap.</li>
+						<li>Wait another 10 minutes.</li>
+						<li>Go back on that tile.</li>
+						<li>You can now loot the skeleton from that tile without getting attacked from spawning skeletons. Hop and repeat.</li>
+						<li>???</li>
+						<li>Profit!</li>
+						<li>PS: The rummage damage scales slightly with your current hitpoints. If you only eat when below 10 hp, you can't die and get more rummages per inventory of food.</li>
+					</ol>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(document).ready(function() {
+	$(".active").removeClass("active");
+	$("#faq").addClass("active");
+});
+</script> {% endblock %}

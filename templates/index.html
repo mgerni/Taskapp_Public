@@ -1,0 +1,562 @@
+{% extends "base.html" %}
+<title>{% block title %}Task App Dashboard{%endblock %}</title>
+{% block context %}
+
+<html>
+<body>
+<header>
+    <div class="container mt-5">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+    </div>
+    <!-- <div class="row">
+        <div class="col-12  d-flex justify-content-center">
+            <h1 class="text-white">Dashboard</h1>
+        </div>
+    </div> -->
+
+</header>
+<main>
+        <section class="vh-80">
+            <div class="container h-100 mt-5">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                  <div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+                    <div class="card-body p-xl-1">
+                      <div class="row justify-content-center">
+
+
+        <div class="row">
+            <div class="col-1">
+                
+            </div>
+            <div class="col-10  d-flex justify-content-center">
+                <h2 class="text-white">Current Task</h2>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#taskHelpModal">
+                    <i class="bi bi-info-circle text-success"></i>
+                </button>
+            </div>
+        </div>
+        {% if easy_first == True %}
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+
+        {% if official == True %}
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                setTimeout(() => $('#easycompletemodal').modal('show'), 1000);
+            });
+        </script>
+        {% endif %}
+
+        {% elif medium_first == True %}
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+        
+        {% if official == True %}
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                setTimeout(() => $('#mediumcompletemodal').modal('show'), 1000);
+            });
+        </script>
+        {% endif %}
+        {% elif hard_first == True %}
+
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+
+        {% if official == True %}
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                setTimeout(() => $('#hardcompletemodal').modal('show'), 1000);
+            });
+        </script>
+        {% endif %}
+        {% elif elite_first == True %}
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+        {% if official == True %}
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                setTimeout(() => $('#elitecompletemodal').modal('show'), 1000);
+            });
+        </script>
+        {% endif %}
+        {% endif %}
+
+        <div class="flex-row d-flex">
+            <div class="col m-5 d-flex justify-content-center align-items-center">
+                <h5 class="text-white">{{task}}</h5>
+            </div>
+            {% if image != none %}
+            <div class="col d-flex m-5  justify-content-center">
+                <img src="/static/assets/{{image}}"width= "90" height="90" alt="task_image">
+            </div>
+            {% elif image == none %}
+            <div class="col d-flex m-5  justify-content-center">
+                <img src="/static/assets/blank.png"width= "90" height="90" alt="task_image" class="hide_img">
+                <!-- <p class="text-white">{{task}}</p> -->
+            </div>
+            {% endif %}
+        </div>
+            
+
+        <div class="flex-row d-flex mb-3">
+            <div class="col d-flex justify-content-center">
+                <form action="/generate/" method="POST">
+                    <button class="btn btn-default">
+                        <img src="/static/generate_task_button.png" alt="button to generate a new task." class="img-fluid">
+                    </button>
+                </form>
+            </div>
+            
+                <div class="col d-flex justify-content-center ">
+                    <form action="/complete/" method="POST">
+                        <button class="btn btn-default">
+                            <img src="/static/complete_task_button.png" alt="button to generate a new task." class="img-fluid">
+                        </button>
+                    </form>
+                </div>
+        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    {% if official == True %}
+    <div class="box2 container flex rounded-3 border border-light mt-5 mb-3">
+
+        <div class="row">
+            <div class="col mb-2 d-flex justify-content-center alight-items-center">
+                <h2 class="text-white">
+                    Account Progress
+                </h2>
+            </div>
+
+        </div>
+        
+
+        <div class="row">
+            <div class="col mt-3 d-flex justify-content-center">
+                <button type="button" class="btn-sm btn-secondary text-white" data-bs-toggle="modal" data-bs-target="#tiercompletionmodal">Tier Completion Unlocks</button>
+
+            </div>
+            
+        </div>
+        
+        <div class="row gx-3 mt-4">
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Easy Tier</p>
+            </div>
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Medium Tier</p>
+            </div>
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Hard Tier</p>
+            </div>
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Elite Tier</p>
+            </div>
+        </div>
+        <div class="row gx-2">
+            <div class="col-3 mb-3 d-flex justify-content-center align-items-center">
+                {% if easy == 0 %}
+                <h5 class="percent_red">{{easy}}%</h5>
+                {% elif easy <=24 %}
+                <h5 class="percent_orange_red">{{easy}}%</h5>
+                {% elif easy <= 49 %}
+                <h5 class="percent_orange">{{easy}}%</h5>
+                {% elif easy <= 74 %}
+                <h5 class="percent_yellow">{{easy}}%</h5>
+                {% elif easy <= 99 %}
+                <h5 class="percent_green_yellow">{{easy}}%</h5>
+                {% elif easy == 100 %}
+                <h5 class="percent_green">{{easy}}%</h5>
+                {% endif %}
+            </div>
+            <div class="col-3 mb-3 d-flex justify-content-center align-items-center">
+                {% if medium == 0 %}
+                <h5 class="percent_red">{{medium}}%</h5>
+                {% elif medium <=24 %}
+                <h5 class="percent_orange_red">{{medium}}%</h5>
+                {% elif medium <= 49 %}
+                <h5 class="percent_orange">{{medium}}%</h5>
+                {% elif medium <= 74 %}
+                <h5 class="percent_yellow">{{medium}}%</h5>
+                {% elif medium <= 99 %}
+                <h5 class="percent_green_yellow">{{medium}}%</h5>
+                {% elif medium == 100 %}
+                <h5 class="percent_green">{{medium}}%</h5>
+                {% endif %}
+            </div>
+            <div class="col-3 mb-3 d-flex justify-content-center align-items-center">
+                {% if hard == 0 %}
+                <h5 class="percent_red">{{hard}}%</h5>
+                {% elif hard <=24 %}
+                <h5 class="percent_orange_red">{{hard}}%</h5>
+                {% elif hard <= 49 %}
+                <h5 class="percent_orange">{{hard}}%</h5>
+                {% elif hard <= 74 %}
+                <h5 class="percent_yellow">{{hard}}%</h5>
+                {% elif hard <= 99 %}
+                <h5 class="percent_green_yellow">{{hard}}%</h5>
+                {% elif hard == 100 %}
+                <h5 class="percent_green">{{hard}}%</h5>
+                {% endif %}
+            </div>
+            <div class="col-3 mb-3 d-flex justify-content-center align-items-center">
+                {% if elite == 0 %}
+                <h5 class="percent_red">{{elite}}%</h5>
+                {% elif elite <=24 %}
+                <h5 class="percent_orange_red">{{elite}}%</h5>
+                {% elif elite <= 49 %}
+                <h5 class="percent_orange">{{elite}}%</h5>
+                {% elif elite <= 74 %}
+                <h5 class="percent_yellow">{{elite}}%</h5>
+                {% elif elite <= 99 %}
+                <h5 class="percent_green_yellow">{{elite}}%</h5>
+                {% elif elite == 100 %}
+                <h5 class="percent_green">{{elite}}%</h5>
+                {% endif %}
+            
+            </div>
+            
+        </div>
+
+    </div>
+    {% elif official == False %}
+    <div class="box3 container flex rounded-3 border border-light mt-5">
+
+        <div class="row">
+            <div class="col mb-2 d-flex justify-content-center alight-items-center">
+                <h2 class="text-white">
+                    Account Progress
+                </h2>
+            </div>
+
+        </div>
+        
+        <div class="row gx-3 mt-4">
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Easy Tier</p>
+            </div>
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Medium Tier</p>
+            </div>
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Hard Tier</p>
+            </div>
+            <div class="col-3 mb-1 d-flex justify-content-center align-items-center">
+                <p class="text-white">Elite Tier</p>
+            </div>
+        </div>
+        <div class="row gx-2">
+            <div class="col-3 mb-5 d-flex justify-content-center align-items-center">
+                {% if easy == 0 %}
+                <h5 class="percent_red">{{easy}}%</h5>
+                {% elif easy <=24 %}
+                <h5 class="percent_orange_red">{{easy}}%</h5>
+                {% elif easy <= 49 %}
+                <h5 class="percent_orange">{{easy}}%</h5>
+                {% elif easy <= 74 %}
+                <h5 class="percent_yellow">{{easy}}%</h5>
+                {% elif easy <= 99 %}
+                <h5 class="percent_green_yellow">{{easy}}%</h5>
+                {% elif easy == 100 %}
+                <h5 class="percent_green">{{easy}}%</h5>
+                {% endif %}
+            </div>
+            <div class="col-3 mb-5 d-flex justify-content-center align-items-center">
+                {% if medium == 0 %}
+                <h5 class="percent_red">{{medium}}%</h5>
+                {% elif medium <=24 %}
+                <h5 class="percent_orange_red">{{medium}}%</h5>
+                {% elif medium <= 49 %}
+                <h5 class="percent_orange">{{medium}}%</h5>
+                {% elif medium <= 74 %}
+                <h5 class="percent_yellow">{{medium}}%</h5>
+                {% elif medium <= 99 %}
+                <h5 class="percent_green_yellow">{{medium}}%</h5>
+                {% elif medium == 100 %}
+                <h5 class="percent_green">{{medium}}%</h5>
+                {% endif %}
+            </div>
+            <div class="col-3 mb-5 d-flex justify-content-center align-items-center">
+                {% if hard == 0 %}
+                <h5 class="percent_red">{{hard}}%</h5>
+                {% elif hard <=24 %}
+                <h5 class="percent_orange_red">{{hard}}%</h5>
+                {% elif hard <= 49 %}
+                <h5 class="percent_orange">{{hard}}%</h5>
+                {% elif hard <= 74 %}
+                <h5 class="percent_yellow">{{hard}}%</h5>
+                {% elif hard <= 99 %}
+                <h5 class="percent_green_yellow">{{hard}}%</h5>
+                {% elif hard == 100 %}
+                <h5 class="percent_green">{{hard}}%</h5>
+                {% endif %}
+            </div>
+            <div class="col-3 mb-5 d-flex justify-content-center align-items-center">
+                {% if elite == 0 %}
+                <h5 class="percent_red">{{elite}}%</h5>
+                {% elif elite <=24 %}
+                <h5 class="percent_orange_red">{{elite}}%</h5>
+                {% elif elite <= 49 %}
+                <h5 class="percent_orange">{{elite}}%</h5>
+                {% elif elite <= 74 %}
+                <h5 class="percent_yellow">{{elite}}%</h5>
+                {% elif elite <= 99 %}
+                <h5 class="percent_green_yellow">{{elite}}%</h5>
+                {% elif elite == 100 %}
+                <h5 class="percent_green">{{elite}}%</h5>
+                {% endif %}
+            
+            </div>
+            
+        </div>
+
+    </div>
+            {% endif %}
+
+            
+</main>
+
+      <!-- Modal -->
+      <div class="modal fade" id="tiercompletionmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+              <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Unlocks</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {% if easy == 100 %}
+                <h5 class="text-white">100% Easy Tier Completion:</h5>
+                <ul class="unstyled-list text-white">
+                    <li>Ability to do passive farm runs to collect herblore supplies</li>
+
+                </ul>
+                {% endif %}
+                {% if medium == 100 %}
+                <h5 class="text-white">100% Medium Tier Completion:</h5>
+                <ul class="unstyled-list text-white">
+                    <li>Ability to imbue items in NMZ & to get the imbued mage arena 2 cape. </li>
+                    <li>You're allowed to complete elite/master clues as you get them to stack up the caskets for those clue tasks granted you don't have to get extra requirements for them.</li>
+                </ul>
+                {% endif %}
+                {% if hard == 100 %}
+                <h5 class="text-white">100% Hard Tier Completion:</h5>
+                <ul class="unstyled-list text-white">
+                    <li>Food and potions - You can fish karambwan, minnows and anglers for food. You can make potions for training herblore to make a pool, or when a level is needed for raids. You can also freely do bird house runs.</li>
+                    <li>Slayer: - You can gather slayer points when being on task helps, without needing to Turael skip (unless you want to)</li>
+                    <li>Prayer: - You can train prayer to unlock Rigour/Augury when you've unlocked the prayer through a Raids task.</li>
+                    <li>Weapon upkeep - You can kill Abyssal demons when needing whips, Zulrah when needing scales and monsters in catacombs when needing shards, hunt chins to help with Armadyl kills etc...</li>
+                    <li>Zenyte jewelry - Allowed to get the crafting level for (in this order):</li>
+                        <ul class="unstyled-list text-white">
+                            <li>Ring of Suffering</li>
+                            <li>Necklance of Anguish</li>
+                            <li>Tormented Bracelet</li>
+                            <li>Amulet of Torture</li>
+                            <li>You can get the level by passively seaweed farming.</li>
+                        </ul>
+                    <li>Castle wars - Allowed to sell back items for tickets to unlock other items. </li>
+                    <li>Passive raids - Allowed to passively partake in a specific raid after you've actively completed a task there. e.g. after actively getting a purple from CoX you are allowed to passively do CoX raids</li>
+                </ul>
+                {% endif %}
+                {% if elite == 100 %}
+                <h5 class="text-white">100% Elite Tier Completion:</h5>
+                <ul class="unstyled-list text-white">
+                    <li>Not yet defiend by the Generate Task Community. </li>
+                    <li>You win the game I suppose.</li>
+                </ul>
+                {% endif %}
+
+                {% if elite != 100 %}
+                <p class="text-white fw-bold mt-3">Complete all tasks in a tier to unlock perks!</p>
+                {% endif %}
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="easycompletemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+              <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Congratulations!</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                <p>You have completed 100% of the easy tier!</p>
+                <p>This unlocks the following perk!</p>
+                <ul class="unstyled-list">
+                    <li>Ability to do passive farm runs to collect herblore supplies</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="mediumcompletemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+              <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Congratulations!</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                <p>You have completed 100% of the medium tier!</p>
+                <p>This unlocks the following perks!</p>
+                <ul class="unstyled-list">
+                    <li>Ability to imbue items in NMZ & to get the imbued mage arena 2 cape. </li>
+                    <li>You're allowed to complete elite/master clues as you get them to stack up the caskets for those clue tasks granted you don't have to get extra requirements for them.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="hardcompletemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+              <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Congratulations!</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                <p>You have completed 100% of the hard tier!</p>
+                <p>This unlocks the following perks!</p>
+                <ul class="unstyled-list text-white">
+                    <li>Food and potions - You can fish karambwan, minnows and anglers for food. You can make potions for training herblore to make a pool, or when a level is needed for raids. You can also freely do bird house runs.</li>
+                    <li>Slayer: - You can gather slayer points when being on task helps, without needing to Turael skip (unless you want to)</li>
+                    <li>Prayer: - You can train prayer to unlock Rigour/Augury when you've unlocked the prayer through a Raids task.</li>
+                    <li>Weapon upkeep - You can kill Abyssal demons when needing whips, Zulrah when needing scales and monsters in catacombs when needing shards, hunt chins to help with Armadyl kills etc...</li>
+                    <li>Zenyte jewelry - Allowed to get the crafting level for (in this order):</li>
+                        <ul class="unstyled-list">
+                            <li>Ring of Suffering</li>
+                            <li>Necklance of Anguish</li>
+                            <li>Tormented Bracelet</li>
+                            <li>Amulet of Torture</li>
+                            <li>You can get the level by passively seaweed farming.</li>
+                        </ul>
+                    <li>Castle wars - Allowed to sell back items for tickets to unlock other items. </li>
+                    <li>Passive raids - Allowed to passively partake in a specific raid after you've actively completed a task there. e.g. after actively getting a purple from CoX you are allowed to passively do CoX raids</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="elitecompletemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+              <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Congratulations!</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                <p>You have completed 100% of the elite tier!</p>
+                <p>This unlocks the following perk!</p>
+                <ul class="unstyled-list">
+                    <li>Not yet defiend by the Generate Task Community. </li>
+                    <li>You win the game I suppose.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="taskHelpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+                <h4 class="modal-title text-white w-100 fw-bold" id="staticBackdropLabel">Task Help</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white">
+                {% if tip != None %}
+                <p>{{tip}}</p>
+                <p>Link to the wiki for this task: <a href="{{link}}" target="_blank">Wiki Page</a></p>
+                {% else %}
+                <p>You do not have a task currently. You can generate a task and then click me!</p>
+                {% endif %}
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+            </div>
+            </div>
+        </div>
+        </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $(".active").removeClass("active");
+        $("#dashboard").addClass("active");
+    });
+</script>
+<script>
+    function toggler(Id){
+        $("#" + Id).toggle();
+    }
+</script>
+</html>
+{% endblock %}

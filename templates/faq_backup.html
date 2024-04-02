@@ -1,0 +1,1098 @@
+{% extends "base.html" %}
+<title>{% block title %}Task App FAQ/Rules{%endblock %}</title>
+{% block context %}
+
+
+
+
+<h1 class="text-white container d-flex justify-content-center mt-5">FAQ</h1>
+<section class="vh-100">
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-xl-6">
+                <div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+                    <div class="card-body p-xl-1">
+                        <div class="scrollable">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                <div class="d-flex flex-row justify-content-center mb-4">
+                                    <h5 class="text-white">Quests</h5>
+                                </div>
+                            
+                                    <div class="d-flex flex-row justify-content-center mb-4">
+                                        <ul>
+                                            <li>Q: Can I complete a certain quest for the XP reward in a certain skill?</li>
+                                            <ul>
+                                                <li>A: If your task only requires you to level up certain skills, you can't start and complete quests to train them.</li>
+                                            </ul>
+                                        </ul>
+                                        
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-center mb-4">
+                                        <ul>
+                                            <li>Q: When can I finish a quest?</li>
+                                            <ul>
+                                                <li>A: When your active task requires you to start a quest, AND you have all the requirements for the quest, you are allowed to complete it.</li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-center mb-4">
+                                        <ul>
+                                            <li>Q: I need a certain amount of Quest Points to complete a requirement, what should I do?</li>
+                                            <ul>
+                                                <li>Check out <a class="text-white" href="#questlistmodal" role="button" data-bs-toggle="modal" data-bs-target="#questlistmodal">Quest List</a></li>
+                                            </ul>
+                                        </ul>
+                                        
+                                    </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-xl-6">
+                <div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+                    <div class="card-body p-xl-1">
+                        <div class="scrollable">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                    <div class="d-flex flex-row justify-content-center mb-4">
+                                        <h5 class="text-white">Clues</h5>
+                                    </div>
+                                
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: What is the best way to get each tier of clue scroll?</li>
+                                                <ul>
+                                                    <li>A: Beginner -> Goblins by lumbridge or Minotaurs (Stronghold) if you’ve completed the full sceptre.</li>
+                                                    <li>A: Easy -> Pickpocket Female HAM Members </li>
+                                                    <li>A: Medium -> Kill Guards (Varrock or Falador) if you’re below 50 Hunter (Aerial Fishing task) otherwise catch Eclectic Implings.</li>
+                                                    <li>A: Hard -> Hellhounds in Witchhaven Dungeon (See Family Crest Quest Guide for how to unlock door). If you have all 3 Totem Pieces and an Ancient Shard you can kill them in Catacombs.</li>
+                                                
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: What clue steps can you drop?</li>
+                                                <ul>
+                                                    <li>A: In Easy Tier you must drop: Fairy Queen, Rune Boots, Regal Pomp (soundtrack). Dropping the Amulet of Glory clue is not required but is highly recommended.</li>
+                                                    <li>A: Any clue scroll which requires a clue reward you do not have i.e. headband / crozier must be dropped.</li>
+                                                    
+                                                </ul>
+                                            </ul>
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I got an Easy Clue Uniques task but I’m only level 1 thieving?</li>
+                                                <ul>
+                                                    <li>A: You’re allowed to train to 15 thieving to begin this task.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I build stash units for Uri Clues?</li>
+                                                <ul>
+                                                    <li>A: Provided you ALREADY have the required construction level, you can build STASH units as you receive the clue steps. NOT all at once.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I complete Regicide when I get a clue in Zul-Andra?</li>
+                                                <ul>
+                                                    <li>A: No, the only reason to complete regicide is for the La Mort Hard Clue Step.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Do I need to complete Troll Romance for the Hells Bells song?</li>
+                                                <ul>
+                                                    <li>A: No, you can walk the back way to the bottom of the snow which unlocks the track.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to unlock the Chaos Altar sound track but don’t have a chaos talisman.</li>
+                                                <ul>
+                                                    <li>A: You are allowed to complete the Enter The Abyss miniquest for this step.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need a gold bar for my clue step how do I get one?</li>
+                                                <ul>
+                                                    <li>A: Get 33 magic and telegrab one from under Varrock West Bank</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need a diamond to craft a ring/amulet for a clue, how do I get one?</li>
+                                                <ul>
+                                                    <li>A: Ogresses</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need an Addy Square Shield for a clue, what is the best thing to kill for it?</li>
+                                                <ul>
+                                                    <li>A: Named trolls at Death Plateau (no quest req) or Ice Giants in the Rev Caves.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I get 37 prayer for Sara Wizards?</li>
+                                                <ul>
+                                                    <li>A: no, they can be out distanced by using a shortbow on long range and using a body blocker.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need Lava/Mist runes for Swan song, how do I get them?</li>
+                                                <ul>
+                                                    <li>A: Purchase from Mage Training Arena – total cost is 20 Telekentic, Alch, Grave and 300 enchant points.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-xl-6">
+                <div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+                    <div class="card-body p-xl-1">
+                        <div class="scrollable">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                    <div class="d-flex flex-row justify-content-center mb-4">
+                                        <h5 class="text-white">Minigames</h5>
+                                    </div>
+                                
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to buy a piece of this skilling outfit, which one do I buy?</li>
+                                                <ul>
+                                                    <li>A: Always go cheapest first. Examples of this are Graceful and the Farmer's Set.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to do castle wars but I only have 1 account.</li>
+                                                <ul>
+                                                    <li>A: Castle wars is F2P, so you can just make another account. You just play against yourself and catch the flag once per game with your task account.</li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="d-flex flex-row mb-4">
+                                            <ul>
+                                                <li>Q: Can I sell back Castle Wars armour?</li>
+                                                <ul>
+                                                    <li>A: No, we keep all Castle Wars armour.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: For the red decorative set which pieces do I have to purchase?</li>
+                                                <ul>
+                                                    <li>A: All pieces including both the platelegs/skirt.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Am I allowed to play LMS to get Rune arrows for gp?</li>
+                                                <ul>
+                                                    <li>A: No, the only things you are allowed to purchase from LMS are the Ring of Wealth and Magic Shortbow Scrolls provided you have the items.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: When doing a pest control task I struggle to maintain %, what can I do?</li>
+                                                <ul>
+                                                    <li>A: Bring an axe to cut the trees and repair barricades for easy %.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: When on a task which requires farming, can I do Tithe?</li>
+                                                <ul>
+                                                    <li>A: Yes, provided you don’t spend the pts from your runs on any item in the collection log.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I got a black satchel task, how do I get a raw swordfish?</li>
+                                                <ul>
+                                                    <li>A: Train to 30 crafting and complete 100% Piscarillius favour to unlock the shop.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex justify-content-center flex-row mb-4">
+                                            <ul>
+                                                <li>Q: I need to get two ancient pages how can I do this safetly?</li>
+                                                <ul>
+                                                    <li>A: Ancient page safespot guide:</li>
+                                                    <ol>
+                                                        <li>Enter Ancient Cavern.</li>
+                                                        <li>Wait 10 minutes to lose aggro. Runelite's "NPC Aggression Timer" plugin can show you how long you need to wait. (You don't have to, but you risk getting slapped by a dragon on the way down)</li>
+                                                        <li>Step on the marked tile. That tile is inconveniently one step outside the aggro range.</li>
+                                                        <img  class="mb-4 mt-4"src="/static/assets/ancient_page_safespot_guide.png" alt="ancient page guide" width= "300" height="300">
+                                                        <li>Run back up to the entrance immediately after. You can try to take the aggro of a waterfiend to save a dragon slap.</li>
+                                                        <li>Wait another 10 minutes.</li>
+                                                        <li>Go back on that tile.</li>
+                                                        <li>You can now loot the skeleton from that tile without getting attacked from spawning skeletons. Hop and repeat.</li>
+                                                        <li>???</li>
+                                                        <li>Profit!</li>
+                                                        <li>PS: The rummage damage scales slightly with your current hitpoints. If you only eat when below 10 hp, you can't die and get more rummages per inventory of food.</li>
+                                                    </ol>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need bolt racks, can I kill all barrows brothers?</li>
+                                                <ul>
+                                                    <li>A: Yes, you're allowed to kill all brothers and get 100% for increased odds if you're able to</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I don’t want to participate in Last Man Standing, can I choose to not do these tasks?</li>
+                                                <ul>
+                                                    <li>A: Yes, you’re allowed to manually complete all LMS tasks while staying an official task only.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-xl-6">
+                <div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+                    <div class="card-body p-xl-1">
+                        <div class="scrollable">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                    <div class="d-flex flex-row justify-content-center mb-4">
+                                        <h5 class="text-white">Combat/Slayer</h5>
+                                    </div>
+                                
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I bury bones on task?</li>
+                                                <ul>
+                                                    <li>A: Yes, as long as you don't go out of your way to use them on an altar or at the ectophial.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row mb-4">
+                                            <ul>
+                                                <li>Q: Can I pick up Numulite/Tokkul/Coins?</li>
+                                                <ul>
+                                                    <li>A: Yes, you can pick this up and store it.</li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I fish and cook food?</li>
+                                                <ul>
+                                                    <li>A: You cannot fish for food. You can however cook raw food if you have the level already (in moderation)</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I just started, what can I use for food?</li>
+                                                <ul>
+                                                    <li>A: Three good possibilities are wines from Draynor (recommended if not using melee), kebabs or gnome food from the Grand Tree.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: What kind of upgrades are you allowed to buy?</li>
+                                                <ul>
+                                                    <li>A: Anything that is sold. Think about rune sword once you have access to Champion's Guild and green dragonhide in Nardah.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to train magic, what is the best monster to train on?</li>
+                                                <ul>
+                                                    <li>A: Start with training on zamorak warriors so you can get a rune scimitar for melee training. After that, it doesn't really matter.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to get an Ancient Shard / Dark Totem Piece, what is the best monster to kill?</li>
+                                                <ul>
+                                                    <li>A: Skeletons unless you have received both the Long Bone and Giant key then you may kill Hill Giants.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to kill the Mole for its Skin/Claw, how will I do this?</li>
+                                                <ul>
+                                                    <li>A: Train to 30 range (chickens, cows) and purchase some Adamant Arrows + Maple bow from Lowe (Varrock), this kill may take ~2hours, having an alt with Fally Hard+ may help.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to complete Fremmenik Trials / BA / In Aid of the Myreque but my combat is too low, can I train it?</li>
+                                                <ul>
+                                                    <li>A: Yes you can train your levels to base 30s to assist you in completing this task.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to start my slayer grind. Can I do the history quiz in the museum for the first 9 levels?</li>
+                                                <ul>
+                                                    <li>A: Yes</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I do wilderness slayer if I must train slayer for my task?</li>
+                                                <ul>
+                                                    <li>A: Yes</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I have a Dark Mystic Gloves task but have not completed Priest in Peril, what do I do?</li>
+                                                <ul>
+                                                    <li>A: You kill Twisted Banshees in the catacombs.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I have a Mystic Hat Light task and need to get the slayer requirement, what do I kill?</li>
+                                                <ul>
+                                                    <li>A: Train slayer till 35 and then kill Wall Beasts</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: What do I kill Turoths with?</li>
+                                                <ul>
+                                                    <li>A: If you have a magic shortbow, use broad arrows with that. Otherwise buy a leafbladed spear from a slayer master.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I have the Obor task, what is the best location to farm keys?
+                                                </li>
+                                                <ul>
+                                                    <li>A: In the Wilderness, in a dungeon a bit west of Mage Bank. The droprate for keys in wilderness is twice as good as outside of it.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to get a specific slayer task (for example, granite dust task), can I do 9 Turael tasks and then the 10th task at Konar for points?</li>
+                                                <ul>
+                                                    <li>A: No. If you need a specific slayer task, use your points for skips to get it, and otherwise use Turael skips until you get it. Turael skipping means you get a task, and if it isn't the task you need, you cancel it by doing a Turael task. Make sure to block Kalphites before doing so!</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I kill boss variants on a regular slayer task?</li>
+                                                <ul>
+                                                    <li>A: When receiving a slayer task with a boss variant (such as gargoyles / kalphites) you are allowed to do a max. of 35 of the boss variant. (This does not apply when receiving a unique from that certain boss is your active task, or when the task is Kraken.)</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-xl-6">
+                <div class="card text-white bg-dark border-light rounded-3" style="border-radius: 25px;">
+                    <div class="card-body p-xl-1">
+                        <div class="scrollable">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                    <div class="d-flex flex-row justify-content-center mb-4">
+                                        <h5 class="text-white">Skilling/Misc</h5>
+                                    </div>
+                                
+                                        <div class="d-flex flex-row mb-4">
+                                            <ul>
+                                                <li>Q: What is the link to the RS3 Task Discord?</li>
+                                                <ul>
+                                                    <li>A: <a class="text-white" href="https://discord.com/invite/XEYFDrc">RS3 Task Discord</a></li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Are the rules the same for UIM?</li>
+                                                <ul>
+                                                    <li>A: There currently are 3 exceptions:</li>
+                                                        <ol>
+                                                            <li>When on a clue task, UIM can train their construction to the stash unit from that clue tier when they get an emote clue step</li>
+                                                            <li>UIM can finish horror from the deep when they have to enter the lighthouse for a clue step.</li>
+                                                            <li>UIM can make potions after herb runs until the max herb level needed in their current tier (medium = 58, hard = 70, elite = 90).</li>
+                                                        </ol>
+                                                </ul>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: What random events am I allowed to complete?</li>
+                                                <ul>
+                                                    <li>A: You can complete any random event you receive EXCEPT the evil bob fishing random.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Am I allowed to get Zeah Favour?</li>
+                                                <ul>
+                                                    <li>A: Zeah favour is free to get whenever it is beneficial to your task.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need money for my task (runes, arrows, granite body, gear upgrades)</li>
+                                                <ul>
+                                                    <li>A: 	You CAN do the Stronghold of Security for the initial 10K Gp.</li>
+                                                    <li>A:You can then collect Steel Platebodies / Platelegs (safer) from the wilderness with a looting bag and bank at ferox enclave / edgeville.</li>
+                                                    <li>If you do NOT wish to enter the wilderness you can buy silk in Al Kharid and sell it to the NPC in Ardougne but this is significantly slower.</li>
+                                                        
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need a Crafting Level for my clue/diary, what is the best method to train?</li>
+                                                <ul>
+                                                    <li>A: Purchasing Sand + Soda Ash from Charterships and Glassblowing.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need the crafting level for a glory, can I do sand mining and seaweed farming in medium tier?</li>
+                                                <ul>
+                                                    <li>A: Yes, you can!</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to get this smithing level, but I don't have any ores yet, can I mine for them?</li>
+                                                <ul>
+                                                    <li>A: No, to get to 50 smithing, you can do 1-35 buying bronze bars (either at Shantay or at Tai Bwo Wannai general store), and then go to 35 fixing motherlode mine struts.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to train agility for my task, can I pickup Marks of Grace?</li>
+                                                <ul>
+                                                    <li>A: Yes but they cannot be spent on graceful. You can use them on amylase or recolours.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I got a wintertodt unique task, do burnt pages count?</li>
+                                                <ul>
+                                                    <li>A: Yes</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I got a wintertodt unique task, am I allowed to woodcut to get to 50fm?</li>
+                                                <ul>
+                                                    <li>A: Yes but if you’d prefer to light logs in lumbridge, you can.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Am I allowed to do solo wintertodt when on task?</li>
+                                                <ul>
+                                                    <li>A: Yes, and you can purchase a house to receive xp from repairing braziers. However you are NOT allowed to complete druidic ritual.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row mb-4">
+                                            <ul>
+                                                <li>Q: Am I allowed to fletch on a wintertodt task?</li>
+                                                <ul>
+                                                    <li>A: Yes</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I need to train farming for my task, what is the best way from level 1?</li>
+                                                <ul>
+                                                    <li>A:  Check out <a class="text-white" href="#farmingguidemodal" role="button" data-bs-toggle="modal" data-bs-target="#farmingguidemodal">This</a> Guide by Smitty.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: What is the best way to get Numulite for a Fossil Island Note?</li>
+                                                <ul>
+                                                    <li>A: Killing hoop snakes or ammonite crabs will be the two best ways early. If you have the construction level you can repair the camp and claim the 5 free fossils to exchange for numulite.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I unlock Keldagrim for Gnome Restaurant?</li>
+                                                <ul>
+                                                    <li>A: No. The only two reasons to unlock Keldagrim are the Drunken Dwarf Hard Clue and the Fremennik Diary.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I complete Fishing Contest for Gnome Restaurant?</li>
+                                                <ul>
+                                                    <li>A: No.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I have a herblore requirement, but I don't have enough herbs. What do I do?</li>
+                                                <ul>
+                                                    <li>A: In easy tier, you can kill chaos druids and collect their herbs. The highest herblore requirement you'll need in easy tier is 31 for Eadgar's Ruse.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I have a herblore requirement, but I don't have enough herbs. What do I do?</li>
+                                                <ul>
+                                                    <li>A: In medium tier, you can do herb runs and secondary runs if you need herb supplies. You can do farming contracts for seeds, and also thieve them if you are out of seeds and have a herblore requirement.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: I got a golden tench during aerial fishing, can I exchange it for pearls?</li>
+                                                <ul>
+                                                    <li>A: You keep the first tench you receive, any tenches after that should be sold.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I thieve Master Farmers for a seed I need for a Farming Contract?</li>
+                                                <ul>
+                                                    <li>A: Yes</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: What exactly can I farm once in medium tier?</li>
+                                                <ul>
+                                                    <li>A: You can farm herbs, herb secondaries (limpwurt root, whiteberries, snape grass, potato cacti), farming contracts and do Hespori.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+    
+    
+                                        <div class="d-flex flex-row justify-content-center mb-4">
+                                            <ul>
+                                                <li>Q: Can I mine gems for teleports / slayer bracelets?</li>
+                                                <ul>
+                                                    <li>A: Yes, much like other utility items, you can do this in moderation.</li>
+                                                </ul>
+                                            </ul>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="questlistmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+              <h5 class="modal-title text-white w-100" id="questlistmodal">Quest List</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body justify-content-center">
+                <h6 class="text-white mb-4 text-decoration-underline">Champion Scroll Quest Order</h6>
+                <ol class="text-white mb-4">
+                    <li>Romeo & Juliet +5 Quest Points</li>
+                    <li>Ernest the Chicken +4 Quest Points</li>
+                    <li>Sheep Herder +4 Quest Points</li>
+                    <li>Black Knights’ Fortress +3 Quest Points</li>
+                    <li>Pirate’s Treasure +2 Quest Points</li>
+                    <li> Shield of Arrav +1 Quest Points</li>
+                    <li>Clock Tower +1 Quest Points</li>
+                    <li>X Marks the Spot +1 Quest Points</li>
+                    <li>Client of Kourend +1 Quest Points</li>
+                    <li> Cook’s Assistant +1 Quest Points</li>
+                    <li>Witch’s Potion +1 Quest Points</li>
+                    <li>Goblin Diplomacy +5 Quest Points</li>
+                    <li> Misthalin Mystery +1 Quest Points</li>
+                    <li>Sheep Shearer +1 Quest Points</li>
+                    <li>Rune Mysteries +1 Quest Points</li>
+                </ol>
+                <p class="text-white mt-1">Total: 32 Quest Points, 7510gp, 300xp Lamp, 2x 500 xp Lamp, 9 Crafting, 3 Magic, 3 Cooking </p>
+                
+                <h6 class="text-white mt-5 text-decoration-underline">Kharazi Jungle Clue (Legends Quest) </h6>
+                <p class="text-white mb-4 fw-bold">NOTE: YOU MUST COMPLETE ALL PRE-REQ QUESTS BEFORE BEGINNING TO GET THE 107 QUEST POINTS REQUIREMENT</p>
+                <ol class="text-white mb-4">
+                    <li> Shield of Arrav +1 Quest Points</li>
+                    <li> Plague City +1 Quest Points</li>
+                    <li> Biohazard +3 Quest Points</li>
+                    <li> Waterfall Quest +1 Quest Points</li>
+                    <li> Druidic Ritual +4 Quest Points</li>
+                    <li> Jungle Potion +1 Quest Points</li>
+                    <li> Merlin’s Crystal +6 Quest Points</li>
+                    <li> Lost City +3 Quest Points</li>
+                    <li> Shilo Village +2 Quest Points</li>
+                    <li> Underground Pass +5 Quest Points</li>
+                    <li> Family Crest +1 Quest Points</li>
+                    <li> Dragon Slayer +2 Quest Points</li>
+                    <li> Only 30/55 Quest Points for Heroes so complete:</li>
+                    <li> Romeo & Juliet +5 Quest Points</li>
+                    <li> Ernest the Chicken +4 Quest Points</li>
+                    <li> Black Knights’ Fortress +3 Quest Points</li>
+                    <li> Goblin Diplomacy +5 Quest Points</li>
+                    <li> Pirate’s Treasure +2 Quest Points</li>
+                    <li> X Marks the Spot +1 Quest Points</li>
+                    <li> Sheep Herder +4 Quest Points</li>
+                    <li> Client of Kourend +1 Quest Points</li>
+                </ol> 
+                <p class="text-white mb-4 fw-bold">Now at 55 Quest Points, complete Heroes Quest (+1 Quest Points) and then continue the list below (IN ORDER) to achieve 107 Quest Points. </p>
+
+            <ol class="text-white mb-4">
+                <li>Witch’s Potion +1 Quest Points </li>
+                <li>Sheep Shearer +1 Quest Points </li>
+                <li>Misthalin Mystery +1 Quest Points </li>
+                <li>Cook’s Assistant +1 Quest Points </li>
+                <li>Doric’s Quest +1 Quest Points </li>
+                <li>Rune Mysteries +1 Quest Points </li>
+                <li>Restless Ghost +1 Quest Points </li>
+                <li>Imp Catcher +1 Quest Points </li>
+                <li>Demon Slayer +3 Quest Points </li>
+                <li>Corsair Curse +2 Quest Points </li>
+                <li>Vampyre Slayer +3 Quest Points </li>
+                <li>Prince Ali Rescue +3 Quest Points </li>
+                <li>Knight’s Sword +1 (All F2P Quests Complete – 76 Quest Points) </li>
+                <li>Clock Tower +1 Quest Points </li>
+                <li>Hazeel Cult +1 Quest Points </li>
+                <li>Monk’s Friend +1 Quest Points </li>
+                <li>Tribal Totem +1 Quest Points </li>
+                <li>Dwarf Cannon +1 Quest Points </li>
+                <li>Murder Mystery +3 Quest Points </li>
+                <li>Witch’s House +4 Quest Points </li>
+                <li>Fight Arena +2 Quest Points </li>
+                <li>Golem +1 Quest Points </li>
+                <li>Ascent of Arceuus +1 Quest Points </li>
+                <li>Depths of Despair +1 Quest Points </li>
+                <li>Forsaken Tower +1 Quest Points </li>
+                <li>Tale of Righteous +1 Quest Points </li>
+                <li>Queen of Thieves +1 Quest Points </li>
+                <li>Sea Slug +1 Quest Points </li>
+                <li>RFD Cook P2 +1 Quest Points </li>
+                <li>Gertrude’s Cat +1 Quest Points </li>
+                <li>Tower of Life +2 Quest Points </li>
+                <li>Observatory Quest +2 Quest Points </li>
+                <li>Mountain Daughter +2 Quest Points </li>
+                <li>Fishing Contest +1 Quest Points </li>
+                <li>Scorpion Catcher +1  Quest Points </li>
+            </ol>  
+            <p class="text-white mb-4">The above quest completions = 107 Quest Points.</p>
+
+            <h6 class="text-white mt-5 text-decoration-underline">Piscatoris Fishing Colony (Swan Song)</h6>
+
+            <p class="text-white mb-4 fw-bold">NOTE: YOU MUST COMPLETE ALL PRE-REQ QUESTS BEFORE BEGINNING TO GET THE 100 QUEST POINTS REQUIREMENT</p>
+            
+            <ol class="text-white mb-4">
+                <li>Rune Mysteries +1 Quest Points </li>
+                <li>Restless Ghost +1 Quest Points </li>
+                <li>Druidic Ritual +4 Quest Points </li>
+                <li>Jungle Potion +1 Quest Points </li>
+                <li>Priest in Peril +1 Quest Points </li>
+                <li>Creature of Fenkenstrain +2 Quest Points </li>
+                <li>Garden of Tranquillity +2 Quest Points </li>
+                <li>Shilo Village +2 Quest Points </li>
+                <li>One Small Favour +2 Quest Points </li>               
+            </ol>
+
+            <p class="text-white mb-4 fw-bold">NOW ALL PRE-REQ QUESTS (16QP) ARE COMPLETED THE FOLLOWING QUESTS IN ORDER:</p>
+            <ol class="text-white mb-4">
+                <li>Romeo & Juliet +5 Quest Points </li>
+                <li>Goblin Diplomacy +5 Quest Points </li>
+                <li>Ernest the Chicken +4 Quest Points </li>
+                <li>Black Knights’ Fortress +3 Quest Points </li>
+                <li>Demon Slayer +3 Quest Points </li>
+                <li>Vampyre Slayer +3 Quest Points </li>
+                <li>Prince Ali Rescue +3 Quest Points </li>
+                <li>Corsair Curse +2 Quest Points </li>
+                <li>Priate’s Treasure +2 Quest Points </li>
+                <li>Shield of Arrav +1 Quest Points </li>
+                <li>X Marks the Spot +1 Quest Points </li>
+                <li>Sheep Shearer +1 Quest Points </li>
+                <li>Witch’s Potion +1 Quest Points </li>
+                <li>Cook’s Assistant +1 Quest Points </li>
+                <li>Doric’s Quest +1 Quest Points </li>
+                <li>Imp Catcher +1 Quest Points </li>
+                <li>Misthalin Mystery +1 Quest Points </li>
+                <li>Knight’s Sword +1 Quest Points (ALL F2P Quests Done (-Dragon Slayer) AT 55  Quest Points) </li>
+                <li>Merlin’s Crystal +6 Quest Points </li>
+                <li>Sheep Herder +4 Quest Points </li>
+                <li>Clock Tower +1 Quest Points </li>
+                <li>Hazeel Cult +1 Quest Points </li>
+                <li>Client of Kourend +1 Quest Points </li>
+                <li>Dwarf Cannon +1 Quest Points </li>
+                <li>Monk’s Friend +1 Quest Points </li>
+                <li>Tribal Totem +1 Quest Points </li>
+                <li>Murder Mystery +3 Quest Points </li>
+                <li>Witch’s House +4 Quest Points </li>
+                <li>Golem +1 Quest Points </li>
+                <li>Fight Arena +2 Quest Points </li>
+                <li>Plague City +1 Quest Points </li>
+                <li>Biohazard +3 Quest Points </li>
+                <li>Making History +3 Quest Points </li>
+                <li>Ascent of Arceuus +1 Quest Points </li>
+                <li>Depths of Despair +1 Quest Points </li>
+                <li>Forsaken Tower +1 Quest Points </li>
+                <li>Tale of the Righteous +1 Quest Points </li>
+                <li>Queen of Thieves +1 Quest Points </li>
+                <li>Sea Slug +1 Quest Points </li>
+                <li>RFD COOK P2 +1 Quest Points </li>
+                <li>Tower of Life +2 Quest Points </li>
+                <li>Gertrude’s Cat +1 Quest Points </li>
+                <li>Fishing Contest +1 Quest Points </li>
+                <li>Scorpion Catcher +1  Quest Points </li>
+            </ol>
+
+            <p class="text-white mb-4">Above quest completions = 100 Quest Points</p>
+
+            <h6 class="text-white mt-5 text-decoration-underline">Kudos for Fossil Island Note / Varrock Diary</h6>
+
+            <p class="text-white mb-4 fw-bold">Varrock Diary:</p>
+
+            <ol class="text-white mb-4">
+                <li>Answering Orlando Smith's Natural History Quiz</li>
+                <li>Demon Slayer</li>
+                <li>Hazeel Cult</li>
+                <li>Rune Mysteries</li>
+                <li>Shield of Arrav</li>
+                <li>Merlin's Crystal</li>
+                <p class="text-white">(Justification is SoA + Merlins reward you w/ an XP Lamp)</p>
+               </ol>
+
+            <p class="text-white mb-4 fw-bold">Fossil Island:</p>
+
+                <ol class="text-white">
+                    <li>Answering Orlando Smith's Natural History Quiz</li>
+                    <li>Complete Digsite Quest -</li>
+                <p class="text-white">Clean artifacts to find:</p>
+                    <ol class="text-white mb-4">
+                        <li>Pottery</li>
+                        <li>Old Symbol</li>
+                        <li>Ancient Symbol</li>
+                        <li>Ancient Coin</li>
+                        <li>Old Coin</li>
+                    </ol>
+                    <li>Demon Slayer</li>
+                    <li>Hazeel Cult</li>
+                    <li>Rune Mysteries</li>
+                    <li>Shield of Arrav</li>
+                    <li>Merlin's Crystal</li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+          <!-- Modal -->
+    <div class="modal fade" id="farmingguidemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-center">
+              <h5 class="modal-title text-white w-100" id="questlistmodal">Low agility/magic farming guide for Task Accounts</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5 class="text-white">Overview</h5>
+              <p class="text-white mb-4">This guide is for task accounts that need early farming levels, especially levels 1-34, and have few available teleports. Once you hit 34 Farming, if you still need more levels, you’re allowed (and advised) to get 100% Hosidius favor and do the rest of your training at Tithe Farm.</p>
+              <h6 class="text-white mb-4 text-decoration-underline">General Strategy</h6>
+              <p class="text-white mb-4">The bulk of your experience will come from making supercompost by buying pineapples from charter ships and using the supercompost on your plants. The other xp will come from planting and harvesting crops.</p>
+              <p class="text-white mb-4">
+                    *Note: This guide does not include farming hops during your farm runs. While doing early-level farming myself, I found I didn’t have enough time for them, so I’m skipping their inclusion.</p>
+                <h6 class="text-white mb-4 text-decoration-underline">Initial Preparation</h6>
+                
+                    <ul class="text-white mb-4">
+                        <li >Before starting your farm runs, you’ll want to do some preparation.</li>
+                        <ul class="text-white mb-4">
+                            <li>Buy a boatload of pineapples from charter ships or the Grand Tree food store. Catherby or Port Khazard charter stores are both good options because they’re close to a bank. 200-300 is a good starting amount.</li>
+                            <li>Get some allotment and flower seeds (instructions below). A hundred or so are good to start with.</li>
+                            <li>Buy 4 or 5 bucket packs from Sarah in the Falador farming store (in the house west of the farming patches) and deposit the buckets into a tool leprechaun at any farming spot. These are for holding supercompost.</li>
+                            <li>Get some cash. Charters are not cheap, but they’re the best way to get around with no teles. Getting an inventory of steel plates in the wilderness with a looting bag is the most straightforward way to do this.</li>
+                        </ul>
+                    </ul >
+                    <h6 class="text-white mb-4 text-decoration-underline">Obtaining Seeds</h6>
+                    <ol class="text-white mb-4">
+                        <li>Do you have 38 thieving?</li>
+                            <ul class="text-white mb-4">
+                                <li>Pickpocket Master Farmers</li>
+                            </ul>
+                        <li>Otherwise, buy seeds from Olivia in Draynor Village. The best type of allotment seed she stocks is cabbage, and the best flower seed she stocks is rosemary.</li>
+                    </ol>
+                    <h6 class="text-white mb-4 text-decoration-underline">What to do at the farms</h6>
+                    <p class="text-white mb-4">Time to actually gain xp. Do this by running to any number of allotment patches and doing the following actions:</p>
+                    <ul class="text-white mb-4">
+                        <li>Withdraw buckets from the leprechaun, grab the 15 supercompost you made last run, then deposit the super compost into the leprechaun.</li>
+                        <li>Use 15 more pineapples on the compost bin to start making more super compost.</li>
+                        <li>Harvest your completed crops, and use them on the leprechaun to turn them into notes and save inventory space.</li>
+                        <li>Plant your allotment and flower seeds. Use your supercompost on them. Not only does this keep the plants alive, but you get xp for using the compost.</li>
+                        <li>Head to the next patch!</li>
+                    </ul>
+                    <h6 class="text-white mb-4 text-decoration-underline">Which patches should I use?</h6>
+                    <p class="text-white mb-4">There are 4 patches you can consider using for early game training:</p>
+                    <ul class="text-white mb-4">
+                        <li>Falador farm</li>
+                        <li>Catherby</li>
+                        <li>Ardy farm</li>
+                        <li>Hosidius farm</li>
+                    </ul>
+                    <p class="text-white mb-4">You don’t have to do all of them. Maybe you only have the time/run energy to do three of the patches. That’s fine. Or you might find it too annoying to run all the way to Hosidius. That’s cool too.</p>
+
+                    <h6 class="text-white mb-4 text-decoration-underline">With zero teleports, one possible rotation can look like:</h6>
+                    <ol class="text-white mb-4">
+                        <li>Home teleport to Lumbridge</li>
+                        <li>Run to the Falador Farm.</li>
+                        <li class="fw-bold">Farm in Falador.</li>
+                        <li>Run to Port Sarim, and take the charter to Catherby.</li>
+                        <li class="fw-bold">Farm in Catherby.</li>
+                        <li>Take the charter back to Port Sarim</li>
+                        <li>Run west to the boat in Rimmington that takes you to the Ardougne/Brimhaven. Take it to Ardougne. Run to the Ardougne farming patch.</li>
+                        <li class="fw-bold">Farm in Ardougne.</li>
+                        <li>Minigame tele to Pest Control, then take the boat back to Port Sarim</li>
+                        <li>Run to Veos in the northernmost boat section, and take the boat to Zeah.</li>
+                        <li>Run to the Hosidius farming patch.</li>
+                        <li class="fw-bold"> Farm in Hosidius.</li>
+                        <li>Repeat!</li>
+                    </ol>
+                    <p class="text-white mb-4">Once you get some teleports, this can be shortened dramatically. Falador and Camelot teleports really help out, as does the Xeric’s Talisman teleport. Also, once you go into Tithe Farm one time, you can start using the Tithe Farm minigame tele for future farm runs.</p>
+
+                        <p class="text-white mb-4"> Tip: If you get a Garden Pie from Young or Gourmet implings or the Cooking Guild, you can boost to get into Tithe Farm at 31 Farming to unlock the teleport 3 levels early.</p>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script>
+    $(document).ready(function() {
+        $(".active").removeClass("active");
+        $("#faq").addClass("active");
+    });
+</script>
+{% endblock %}

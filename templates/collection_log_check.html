@@ -1,0 +1,76 @@
+<div class="row text-center">
+    <h3 class="fw-bold">Rank-up results for: {{rs_username}}</h2>
+    <br>
+    <br>
+</div>
+<div class="row ms-3 me-3">
+    <div class="col border-light border">
+        <h3>Easy Tier:</h3>
+    </div>
+    <div class="col border-light border">
+        {% if easy_check[0] == true %}
+        <h3 class="text-success fw-bold">Passed</h3>
+        {% else %}
+        <h3 class="text-danger fw-bold">Failed</h3>
+        <button class="btn btn-danger btn-sm mb-2" data-bs-toggle="collapse" data-bs-target="#easy_failed_tasks">Missing Easy Tasks</button>
+        <div id="easy_failed_tasks" class="collapse">
+            <ul>
+                {% for task in easy_check[1] %}
+                <li><p>{{task}}</p></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row  ms-3 me-3">
+    <div class="col border-light border">
+        <h3>Medium Tier:</h3>
+    </div>
+    <div class="col border-light border">
+        {% if medium_check[0] == true %}
+        <h3 class="text-success fw-bold">Passed</h3>
+        {% else %}
+        <h3 class="text-danger fw-bold">Failed</h3>
+        <button class="btn btn-danger btn-sm mb-2" data-bs-toggle="collapse" data-bs-target="#medium_failed_tasks">Missing Medium Tasks</button>
+        <div id="medium_failed_tasks" class="collapse">
+            <ul>
+                {% for task in medium_check[1] %}
+                <li><p>{{task}}</p></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row ms-3 me-3">
+    <div class="col border-light border">
+        <h3>Hard Tier:</h3>
+    </div>
+    <div class="col border-light border">
+        {% if hard_check[0] == true %}
+        <h3 class="text-success fw-bold">Passed</h3>
+        {% else %}
+        <h3 class="text-danger fw-bold">Failed</h3>
+        <button class="btn btn-danger btn-sm mb-2" data-bs-toggle="collapse" data-bs-target="#hard_failed_tasks">Missing Hard Tasks</button>
+        <div id="hard_failed_tasks" class="collapse">
+            <ul>
+                {% for task in hard_check[1] %}
+                <li><p>{{task}}</p></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<br>
+<div class="row text-center">
+    {% if easy_check[0] == false or medium_check[0] == false or hard_check[0] == false %}
+    <p>If you believe that you have completed a task that is showing failed, ensure that your <a href="https://collectionlog.net" target="_blank" rel="noopener noreferrer">Collectionlog Data</a> is updated/sync'd. Refresh the page to try and check again.</p>
+    
+    {% else %}
+    <p>Screenshot this window and provide in #rank-up-request Channel on Discord.</p>
+    {% endif %}
+</div>

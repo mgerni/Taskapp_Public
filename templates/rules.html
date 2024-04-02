@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+<title>{% block title %}Task App Rules{%endblock %}</title>
+{% block context %}
+
+
+
+<script>
+    $(document).ready(function() {
+        $(".active").removeClass("active");
+        $("#rules").addClass("active");
+    });
+</script>
+
+{% endblock %}

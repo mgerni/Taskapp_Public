@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %} {% endblock %} </title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    </script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script> -->
+	 <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+	 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+	 <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+	 <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+	 <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
+	 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	<script src="/static/js/lazysizes.min.js" async=""></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="/static/style.css"> 
+</head>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container-fluid">
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mb-2 mb-lg-0">
+			<li class="nav-item"> <a class="nav-link" aria-current="page" id="dashboard" href="/dashboard/">Dashboard</a> </li>
+			<!-- <li class="nav-item"> <a class="nav-link" id="task-list" href="/task-list">Task List</a> </li> -->
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="task-list" role="button" data-bs-toggle="dropdown" aria-expanded="false">Task List</a>
+				
+				
+				<ul class="dropdown-menu border-light rounded-3 p-3 bg-dark" style="z-index: 1000;" aria-labelledby="navbarDropdown">
+						<li> <a class="dropdown-item text-white" href="/task-list-easy/">Easy</a></li>
+						<li> <a class="dropdown-item text-white" href="/task-list-medium/">Medium</a></li>
+						<li> <a class="dropdown-item text-white" href="/task-list-hard/">Hard</a></li>
+						<li> <a class="dropdown-item text-white" href="/task-list-elite/">Elite</a></li>
+						<li> <a class="dropdown-item text-white" href="/task-list-pets/">Pets</a></li>
+						<li> <a class="dropdown-item text-white" href="/task-list-passive/">Passive</a></li>
+						<li> <a class="dropdown-item text-white" href="/task-list-extra/">Extra</a></li>
+						<!-- <li> <a class="dropdown-item text-white" href="/task-list/">All Tasks</a></li> -->
+				</ul>
+			</li>
+
+
+
+			<li class="nav-item"> <a class="nav-item nav-link" id="faq" href="/faq/">FAQ/Rules</a> </li>
+			<li class="nav-item"> <a class="nav-item nav-link" id="wall-of-pain" href="/wall-of-pain/">Wall Of Pain</a> </li>
+			<!-- <li class="nav-item"> <a class="nav-item nav-link" id="highscores" href="/test_page/">Test</a> </li> -->
+		</ul>
+		<ul class="navbar-nav ms-auto">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{rank_icon}}" width="20" height="20">{{username}}</a>
+				
+				<ul class="dropdown-menu dropdown-menu-end border-light rounded-3 p-3 bg-dark" aria-labelledby="navbarDropdown">
+						<li> <a class="dropdown-item text-white" href="/profile/">Profile</a></li>
+						<li>
+							<hr class="dropdown-divider ">
+						</li>
+						<li><a class="dropdown-item text-white" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop-import">Spreadsheet Import</a></li>
+						<li>
+							<hr class="dropdown-divider ">
+						</li>
+						<li><a class="dropdown-item text-white" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop-export">Rank-Up Checker</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li> <a class="dropdown-item text-white" href="/logout/">Logout</a></li>
+		
+				</ul>
+			</li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+
+
+<body>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop-import" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content bg-dark">
+				<div class="modal-header text-center">
+					<h5 class="modal-title text-white w-100" id="staticBackdropLabel">Import from spreadsheet</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-white">To import your Google Spreadsheet, you will need to provoide read access to the below email.</p>
+					<div class="conainter align-items-center justify-content-center">
+						<div class="row d-flex gx-4 justify-content-center align-items-center">
+							<div class="col">
+								<input type="text" class="form-control" placeholder="{{taskapp_email}}" id="myInput" value="{{taskapp_email}}" readonly> </div>
+							<div class="col-4">
+								<button type="button" class="btn btn-secondary btn-sm" onclick="copyFunc()" onmouseout="outFunc()"> <span class="tooltiptext text-white" id="myTooltip"> Copy</span> </button>
+							</div>
+						</div>
+					</div>
+					<p class="text-white mt-4"> After sharing with the above email address. Enter the URL for your spreadsheet below.</p>
+					<form class="mx-1 mx-md-4" method='POST' action="/import/">
+						<div class="d-flex flex-row justify-content-center mb-4"> <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+							<div class="form-outline flex-fill">
+								<input type="text" name="spreadsheet_url" class="form-control" required="required" placeholder="Google Sheets URL" /> 
+							</div>
+						</div>
+						<div>
+							<p class="text-white mt-4">If the spreadsheet URL is valid, Task App will read data from the spreadsheet and update our records with your current progress and current task if you have one.</p>
+						</div>
+						<div>
+							<p class="text-white mt-4">If you are new to the Generate Task gamemode, you do not need to import a spreadsheet.</p>
+						</div>
+						<div>
+							<p class="text-white mt-4 fw-bold">By importing from a spreadsheet, your current Task and any completed tasks on Task App, will be reset!</p>
+						</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success">Import</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop-export" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content bg-dark">
+				<div class="modal-header text-center">
+					<h5 class="modal-title text-white w-100" id="staticBackdropLabel">Rank-Up Checker</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-white" id="modal_export_body">
+					<div class="row">
+						<p>Official accounts are required to submit a Rank Up request in the Generate Task Discord.</p>
+					</div>
+					<div class="row">
+						<p>You can Rank-Up when reaching the following milestones:</p>
+					</div>
+					<div class="row ms-3">
+						<ul>
+							<li>Reaching 100% Easy Completion</li>
+							<li>Reaching 100% Medium Completion</li>
+							<li>Reaching 100% Hard Completion</li>
+						</ul>
+					</div>
+					<div class="row">
+						<p>You must "Link" your account to <a href="https://collectionlog.net/" target="_blank" rel="noopener noreferrer">Collectionlog.net</a></p>
+						<p>You should ensure that all collection log data is updated before submitting the request on Discord.</p>
+
+					</div>
+					<div class="row ms-3">
+						<p>If you have not linked your account, you can follow the steps below to do so:</p>
+						<ol>
+							<li>Install the "Collection Log" Runelite plugin from the Pluginhub.</li>
+							<li>In the settings/configuration option for the "Collection Log" plugin, ensure "Allow collectionlog.net connection" is enabled.</li>
+							<li>Ingame, open your collection log and click each individual page.</li>
+							<li>Logout of the game which should sync your collection log data.</li>
+						</ol>
+					</div>
+					<div class="row">
+						<p>Once you have ensured your Collectionlog.net data is updated/sync'd, enter your Runescape Username and click calculate.</p>
+					</div>
+					<div class="col-8 ms-5">
+						<form>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Runescape Username" aria-label="Runescape Username" name="username" required="required" id="usernameVal">
+								<div class="input-group-append">
+								  <button class="btn btn-success collectionlogChecker" type="button">Calculate</button>
+								</div>
+							  </div>
+						</form>
+					</div>
+
+					<div class="row">
+						<p>Taskapp will check a list of tasks for each  tier (Easy, Medium, Hard) comparing those tasks to your data on Collectionlog.net</p>
+					</div>
+				
+				</div>
+				<div class="modal-footer" id="modal_export_footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+ {% if email_val == 'N/A' %}
+ <div class="modal fade" id="emailverificationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	  <div class="modal-content bg-dark">
+		<div class="modal-header text-center">
+		  <h5 class="modal-title text-white w-100" id="betaModal">Email Verification</h5>
+		  
+		</div>
+		<div class="modal-body">
+		  <p class="text-white">Please enter an email address that will be registered to your account.</p>
+
+		  
+		  <form class="mx-1 mx-md-4">
+			<div class="row"> <i class="fas fa-user fa-md me-3 fa-fw"></i>
+				<div class="form-outline ">
+					<input type="text" id="email" class="form-control" required="required" placeholder="Email Address" /> 
+				</div>
+			</div>
+
+
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-success emailButton">Update</button>
+	</div>
+	</form>
+		</div>
+	  </div>
+	  
+	</div>
+{% elif email_verify == False %}
+
+<div class="modal fade" id="emailverificationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	 <div class="modal-content bg-dark">
+	   <div class="modal-header text-center">
+		 <h5 class="modal-title text-white w-100" id="betaModal">Email Verification</h5>
+		 
+	   </div>
+	   <div class="modal-body">
+		 <p class="text-white">Click Update to send a verification email address to your registered email address.</p>
+		 <form>
+			<div class="form-outline ">
+				<input type="text" id="email" class="form-control" required="required" placeholder="Email Address" disabled value="{{email_val}}"/> 
+			</div>
+			
+		 </form>
+		 
+   </div>
+   <div class="modal-footer">
+	   <button class="btn btn-success emailButton2">Update</button>
+   </div>
+   
+	   </div>
+	 </div>
+	 
+   </div>
+	{% endif %}
+
+
+
+</body>
+
+{% if email_val == 'N/A' %}
+<script type="text/javascript">
+	$(window).on('load', function() {
+		$('#emailverificationModal').modal('show');
+	});
+</script>
+{% endif %}
+
+
+{% if email_verify == False %}
+<script type="text/javascript">
+	$(window).on('load', function() {
+		$('#emailverificationModal').modal('show');
+	});
+</script>
+{% endif %}
+
+
+
+
+	<button type="button" class="btn btn-secondary btn-floating" id="btn-back-to-top"> <i class="bi bi-arrow-up"></i> </button> 
+	
+
+
+	
+	<script>
+	function copyFunc() {
+		var copyText = document.getElementById("myInput");
+		copyText.select();
+		copyText.setSelectionRange(0, 99999);
+		navigator.clipboard.writeText(copyText.value);
+		var tooltip = document.getElementById("myTooltip");
+		tooltip.innerHTML = "Copied!";
+	}
+
+	function outFunc() {
+		var tooltip = document.getElementById("myTooltip");
+		tooltip.innerHTML = "Copy";
+	}
+	</script>
+
+
+
+	<script>
+	let mybutton = document.getElementById("btn-back-to-top");
+	window.onscroll = function() {
+		scrollFunction();
+	};
+
+	function scrollFunction() {
+		if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+	mybutton.addEventListener("click", backToTop);
+
+	function backToTop() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
+	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+	{% block context %}{% endblock %}
+
+
+</html>
