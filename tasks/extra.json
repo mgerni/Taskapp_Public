@@ -1,0 +1,877 @@
+[
+    {
+        "_id": 1,
+        "name": "Get a Jar of chemicals",
+        "isLms": false,
+        "assetImage": "Jar_of_chemicals.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_chemicals"
+    },
+    {
+        "_id": 2,
+        "name": "Get a Jar of souls",
+        "isLms": false,
+        "assetImage": "Jar_of_souls.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_souls"
+    },
+    {
+        "_id": 3,
+        "name": "Get a Jar of sand",
+        "isLms": false,
+        "assetImage": "Jar_of_sand.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_sand"
+    },
+    {
+        "_id": 4,
+        "name": "Get a Jar of decay",
+        "isLms": false,
+        "assetImage": "Jar_of_decay.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_decay"
+    },
+    {
+        "_id": 5,
+        "name": "Get a Jar of swamp",
+        "isLms": false,
+        "assetImage": "Jar_of_swamp.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_swamp"
+    },
+    {
+        "_id": 6,
+        "name": "Get a Jar of eyes",
+        "isLms": false,
+        "assetImage": "90px-Jar_of_eyes_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_eyes"
+    },
+    {
+        "_id": 7,
+        "name": "Get a Jar of stone",
+        "isLms": false,
+        "assetImage": "Jar_of_stone.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_stone"
+    },
+    {
+        "_id": 8,
+        "name": "Get a Jar of darkness",
+        "isLms": false,
+        "assetImage": "Jar_of_darkness.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_darkness"
+    },
+    {
+        "_id": 9,
+        "name": "Get a Jar of dreams",
+        "isLms": false,
+        "assetImage": "Jar_of_dreams.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_dreams"
+    },
+    {
+        "_id": 10,
+        "name": "Get a Jar of dirt",
+        "isLms": false,
+        "assetImage": "90px-Jar_of_dirt_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_dirt"
+    },
+    {
+        "_id": 11,
+        "name": "Get a Jar of miasma",
+        "isLms": false,
+        "assetImage": "90px-Jar_of_miasma_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_miasma"
+    },
+    {
+        "_id": 12,
+        "name": "Get a Jar of spirits",
+        "isLms": false,
+        "assetImage": "90px-Jar_of_spirits_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_spirits"
+    },
+    {
+        "_id": 13,
+        "name": "Get a Jar of smoke",
+        "isLms": false,
+        "assetImage": "90px-Jar_of_smoke_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Corp"
+    },
+    {
+        "_id": 14,
+        "name": "Get 1 unique sigil from Corp",
+        "isLms": false,
+        "assetImage": "Arcane_sigil.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Corp"
+    },
+    {
+        "_id": 15,
+        "name": "Get 1 unique sigil from Corp",
+        "isLms": false,
+        "assetImage": "Arcane_sigil.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Corp"
+    },
+    {
+        "_id": 16,
+        "name": "Get 1 unique sigil from Corp",
+        "isLms": false,
+        "assetImage": "Arcane_sigil.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Corp"
+    },
+    {
+        "_id": 17,
+        "name": "Get an Infernal cape",
+        "isLms": false,
+        "assetImage": "Infernal_cape.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Inferno"
+    },
+    {
+        "_id": 18,
+        "name": "Get a Skeletal visage",
+        "isLms": false,
+        "assetImage": "Skeletal_visage.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_visage"
+    },
+    {
+        "_id": 19,
+        "name": "Get a Wyvern visage",
+        "isLms": false,
+        "assetImage": "Wyvern_visage.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wyvern_visage"
+    },
+    {
+        "_id": 20,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 21,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 22,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 23,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 24,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 25,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 26,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 27,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 28,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 29,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 30,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 31,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 32,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 33,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 34,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "isLms": false,
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 35,
+        "name": "Finish all shared clue rewards ",
+        "isLms": false,
+        "assetImage": "Clue_scroll.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 36,
+        "name": "Finish all easy clue uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_easy.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 37,
+        "name": "Finish all medium clue uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_medium.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 38,
+        "name": "Finish all hard clue uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_hard.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 39,
+        "name": "Finish all elite clue uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_elite.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 40,
+        "name": "Finish all master clue uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_master.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 41,
+        "name": "Finish all hard clue rare uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_hard.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 42,
+        "name": "Finish all elite clue rare uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_elite.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 43,
+        "name": "Finish all master rare clue uniques",
+        "isLms": false,
+        "assetImage": "Clue_scroll_master.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
+    },
+    {
+        "_id": 44,
+        "name": "Complete the Gold decorative set",
+        "isLms": false,
+        "assetImage": "130px-Decorative_armour_gold_platebody_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Castle_Wars"
+    },
+    {
+        "_id": 45,
+        "name": "Get 1 unique from Revenants",
+        "isLms": false,
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
+    },
+    {
+        "_id": 46,
+        "name": "Get 1 unique from Revenants",
+        "isLms": false,
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
+    },
+    {
+        "_id": 47,
+        "name": "Get 1 unique from Revenants",
+        "isLms": false,
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
+    },
+    {
+        "_id": 48,
+        "name": "Get 1 unique from Revenants",
+        "isLms": false,
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
+    },
+    {
+        "_id": 49,
+        "name": "Get 1 unique from Revenants",
+        "isLms": false,
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
+    },
+    {
+        "_id": 50,
+        "name": "Get 1 unique from Revenants",
+        "isLms": false,
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
+    },
+    {
+        "_id": 51,
+        "name": "Get 1 unique from Revenants",
+        "isLms": false,
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
+    },
+    {
+        "_id": 52,
+        "name": "Get an Amulet of eternal glory",
+        "isLms": false,
+        "assetImage": "150px-Amulet_of_eternal_glory_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_eternal_glory"
+    },
+    {
+        "_id": 53,
+        "name": "Get 1 unique Dragonstone armour piece",
+        "isLms": false,
+        "assetImage": "Dragonstone_full_helm.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Enhanced_crystal_chest"
+    },
+    {
+        "_id": 54,
+        "name": "Get 1 unique Dragonstone armour piece",
+        "isLms": false,
+        "assetImage": "Dragonstone_full_helm.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Enhanced_crystal_chest"
+    },
+    {
+        "_id": 55,
+        "name": "Get 1 unique Dragonstone armour piece",
+        "isLms": false,
+        "assetImage": "Dragonstone_full_helm.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Enhanced_crystal_chest"
+    },
+    {
+        "_id": 56,
+        "name": "Get 1 unique Dragonstone armour piece",
+        "isLms": false,
+        "assetImage": "Dragonstone_full_helm.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Enhanced_crystal_chest"
+    },
+    {
+        "_id": 57,
+        "name": "Get 1 unique Dragonstone armour piece",
+        "isLms": false,
+        "assetImage": "Dragonstone_full_helm.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Enhanced_crystal_chest"
+    },
+    {
+        "_id": 58,
+        "name": "Get a full Dark totem drop from Skotizo",
+        "isLms": false,
+        "assetImage": "Dark_totem.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skotizo"
+    },
+    {
+        "_id": 59,
+        "name": "Get 1 unique piece of the Dagon'hai robes",
+        "isLms": false,
+        "assetImage": "130px-Dagonhai_robe_top_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_robes"
+    },
+    {
+        "_id": 60,
+        "name": "Get 1 unique from the Zalcano",
+        "isLms": false,
+        "assetImage": "Zalcano_shard.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano"
+    },
+    {
+        "_id": 61,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 62,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 63,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 64,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 65,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 66,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 67,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 68,
+        "name": "Get 1 unique from The Nightmare",
+        "isLms": false,
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
+    },
+    {
+        "_id": 69,
+        "name": "Get 1 unique mutagen",
+        "isLms": false,
+        "assetImage": "Tanzanite_mutagen.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Zulrah"
+    },
+    {
+        "_id": 70,
+        "name": "Get 1 unique mutagen",
+        "isLms": false,
+        "assetImage": "Tanzanite_mutagen.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Zulrah"
+    },
+    {
+        "_id": 71,
+        "name": "Get an Imbued heart or Eternal gem",
+        "isLms": false,
+        "assetImage": "Imbued_heart.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Superior_slayer_monster"
+    },
+    {
+        "_id": 72,
+        "name": "Get an Imbued heart or Eternal gem",
+        "isLms": false,
+        "assetImage": "Imbued_heart.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Superior_slayer_monster"
+    },
+    {
+        "_id": 73,
+        "name": "Get a Dragon full helm",
+        "isLms": false,
+        "assetImage": "Dragon_full_helm.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_full_helm"
+    },
+    {
+        "_id": 74,
+        "name": "Get a Dragon metal lump",
+        "isLms": false,
+        "assetImage": "100px-Dragon_metal_lump_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_metal_lump"
+    },
+    {
+        "_id": 75,
+        "name": "Get a Dragon metal slice",
+        "isLms": false,
+        "assetImage": "150px-Dragon_metal_slice_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_metal_slice"
+    },
+    {
+        "_id": 76,
+        "name": "Get 1 unique piece of the Evil chicken outfit",
+        "isLms": false,
+        "assetImage": "Evil_chicken_head.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Evil_chicken_outfit"
+    },
+    {
+        "_id": 77,
+        "name": "Get 1 unique piece of the Evil chicken outfit",
+        "isLms": false,
+        "assetImage": "Evil_chicken_head.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Evil_chicken_outfit"
+    },
+    {
+        "_id": 78,
+        "name": "Get 1 unique piece of the Evil chicken outfit",
+        "isLms": false,
+        "assetImage": "Evil_chicken_head.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Evil_chicken_outfit"
+    },
+    {
+        "_id": 79,
+        "name": "Get 1 unique piece of the Evil chicken outfit",
+        "isLms": false,
+        "assetImage": "Evil_chicken_head.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Evil_chicken_outfit"
+    },
+    {
+        "_id": 80,
+        "name": "Get 1 unique from the Gauntlet",
+        "isLms": false,
+        "assetImage": "Blade_of_saeldor_inactive.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Gauntlet"
+    },
+    {
+        "_id": 81,
+        "name": "Get a Draconic visage",
+        "isLms": false,
+        "assetImage": "Draconic_visage.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Draconic_visage"
+    },
+    {
+        "_id": 82,
+        "name": "Get a Dragonbone necklace",
+        "isLms": false,
+        "assetImage": "Dragonbone_necklace.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Dragonbone_necklace"
+    },
+    {
+        "_id": 83,
+        "name": "Get the Deadman's chest",
+        "isLms": false,
+        "assetImage": "150px-Deadmans_chest_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 84,
+        "name": "Get the Deadman's legs",
+        "isLms": false,
+        "assetImage": "90px-Deadmans_legs_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 85,
+        "name": "Get the Deadman's cape",
+        "isLms": false,
+        "assetImage": "130px-Deadmans_cape_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 86,
+        "name": "Get a Swift blade",
+        "isLms": false,
+        "assetImage": "140px-Swift_blade_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 87,
+        "name": "Get an Armadyl halo",
+        "isLms": false,
+        "assetImage": "150px-Armadyl_halo_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 88,
+        "name": "Get a Bandos halo",
+        "isLms": false,
+        "assetImage": "150px-Bandos_halo_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 89,
+        "name": "Get a Seren halo",
+        "isLms": false,
+        "assetImage": "150px-Seren_halo_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 90,
+        "name": "Get an Ancient halo",
+        "isLms": false,
+        "assetImage": "150px-Ancient_halo_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 91,
+        "name": "Get a Brassica halo",
+        "isLms": false,
+        "assetImage": "130px-Brassica_halo_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 92,
+        "name": "Get a Guthixian icon",
+        "isLms": false,
+        "assetImage": "150px-Guthixian_icon_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
+    },
+    {
+        "_id": 93,
+        "name": "Get a Slepey tablet",
+        "isLms": false,
+        "assetImage": "100px-Slepey_tablet_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Slepey_tablet"
+    },
+    {
+        "_id": 94,
+        "name": "Get the Metamorphic dust",
+        "isLms": false,
+        "assetImage": "150px-Metamorphic_dust_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Metamorphic_dust"
+    },
+    {
+        "_id": 95,
+        "name": "Get the Sanguine dust",
+        "isLms": false,
+        "assetImage": "150px-Sanguine_dust_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Sanguine_dust"
+    },
+    {
+        "_id": 96,
+        "name": "Get the Parasitic egg",
+        "isLms": false,
+        "assetImage": "100px-Parasitic_egg_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Parasitic_egg"
+    },
+    {
+        "_id": 97,
+        "name": "Get a Twisted ancestral colour kit",
+        "isLms": false,
+        "assetImage": "170px-Twisted_ancestral_colour_kit_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric/Challenge_Mode"
+    },
+    {
+        "_id": 98,
+        "name": "Get a Holy ornament kit",
+        "isLms": false,
+        "assetImage": "150px-Holy_ornament_kit_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Theatre_of_Blood/Hard_Mode"
+    },
+    {
+        "_id": 99,
+        "name": "Get a Sanguine ornament kit",
+        "isLms": false,
+        "assetImage": "120px-Sanguine_ornament_kit_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Theatre_of_Blood/Hard_Mode"
+    },
+    {
+        "_id": 100,
+        "name": "Get a Menaphite ornament kit",
+        "isLms": false,
+        "assetImage": "Menaphite_ornament_kit_detail",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Menaphite_ornament_kit"
+    },
+    {
+        "_id": 101,
+        "name": "Get a Cursed phalanx",
+        "isLms": false,
+        "assetImage": "Cursed_phalanx_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Cursed_phalanx"
+    },
+    {
+        "_id": 102,
+        "name": "Get a Masori crafting kit",
+        "isLms": false,
+        "assetImage": "Masori_crafting_kit_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Masori_crafting_kit"
+    },
+    {
+        "_id": 103,
+        "name": "Get a Remnant of akkha",
+        "isLms": false,
+        "assetImage": "Remnant_of_akkha_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_akkha"
+    },
+    {
+        "_id": 104,
+        "name": "Get a Remnant of ba-ba",
+        "isLms": false,
+        "assetImage": "Remnant_of_ba-ba_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_ba-ba"
+    },
+    {
+        "_id": 105,
+        "name": "Get a Remnant of kephri",
+        "isLms": false,
+        "assetImage": "Remnant_of_kephri_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_kephri"
+    },
+    {
+        "_id": 106,
+        "name": "Get a Remnant of zebak",
+        "isLms": false,
+        "assetImage": "Remnant_of_zebak_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_zebak"
+    },
+    {
+        "_id": 107,
+        "name": "Get an Ancient remnant",
+        "isLms": false,
+        "assetImage": "Ancient_remnant_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_remnant"
+    },
+    {
+        "_id": 108,
+        "name": "Get 1 unique from the Zalcano",
+        "isLms": false,
+        "assetImage": "Zalcano_shard.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano"
+    },
+    {
+        "_id": 109,
+        "name": "Get 1 unique from the Hallowed Sepulchre",
+        "isLms": false,
+        "assetImage": "120px-Hallowed_mark_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Hallowed_Sepulchre"
+    },
+    {
+        "_id": 110,
+        "name": "Get 1 unique drop from God Wars Dungeon",
+        "isLms": false,
+        "assetImage": "Armadyl_helmet.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
+    },
+    {
+        "_id": 111,
+        "name": "Get 1 unique drop from God Wars Dungeon",
+        "isLms": false,
+        "assetImage": "Armadyl_helmet.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
+    },
+    {
+        "_id": 112,
+        "name": "Get 1 unique drop from God Wars Dungeon",
+        "isLms": false,
+        "assetImage": "Armadyl_helmet.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
+    },
+    {
+        "_id": 113,
+        "name": "Get 1 unique drop from God Wars Dungeon",
+        "isLms": false,
+        "assetImage": "Armadyl_helmet.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
+    },
+    {
+        "_id": 114,
+        "name": "Get 1 unique from Guardians of the Rift",
+        "isLms": false,
+        "assetImage": "Hat_of_the_eye_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Guardians_of_the_Rift"
+    },
+    {
+        "_id": 115,
+        "name": "Get 1 unique from the Wildy bosses",
+        "isLms": false,
+        "assetImage": "Skull_of_vetion_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness#Bosses"
+    },
+    {
+        "_id": 116,
+        "name": "Get 1 unique from the Wildy bosses",
+        "isLms": false,
+        "assetImage": "Skull_of_vetion_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness#Bosses"
+    },
+    {
+        "_id": 117,
+        "name": "Get 1 unique from the Wildy bosses",
+        "isLms": false,
+        "assetImage": "Skull_of_vetion_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness#Bosses"
+    },
+    {
+        "_id": 118,
+        "name": "Get 1 unique from the Wildy bosses",
+        "isLms": false,
+        "assetImage": "Skull_of_vetion_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness#Bosses"
+    },
+    {
+        "_id": 119,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "isLms": false,
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 120,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "isLms": false,
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 121,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "isLms": false,
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 122,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "isLms": false,
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 123,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "isLms": false,
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 124,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "isLms": false,
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 125,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "isLms": false,
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    }
+]

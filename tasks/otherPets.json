@@ -1,0 +1,72 @@
+[
+    {
+        "_id": 1,
+        "name": "Bloodhound",
+        "isLms": false,
+        "assetImage": "Bloodhound.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Bloodhound"
+    },
+    {
+        "_id": 2,
+        "name": "Chompy chick",
+        "isLms": false,
+        "assetImage": "Chompy_chick.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Chompy_chick"
+    },
+    {
+        "_id": 3,
+        "name": "Herbi",
+        "isLms": false,
+        "assetImage": "Herbi.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Herbi"
+    },
+    {
+        "_id": 4,
+        "name": "Pet penance queen",
+        "isLms": false,
+        "assetImage": "Pet_penance_queen.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Pet_penance_queen"
+    },
+    {
+        "_id": 5,
+        "name": "Phoenix",
+        "isLms": false,
+        "assetImage": "Phoenix.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Phoenix"
+    },
+    {
+        "_id": 6,
+        "name": "Youngllef",
+        "isLms": false,
+        "assetImage": "Youngllef.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Youngllef"
+    },
+    {
+        "_id": 7,
+        "name": "Smolcano",
+        "isLms": false,
+        "assetImage": "Smolcano.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Smolcano"
+    },
+    {
+        "_id": 8,
+        "name": "Tiny Tempor",
+        "isLms": false,
+        "assetImage": "Tiny_Tempor_chathead.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tiny_tempor"
+    },
+    {
+        "_id": 9,
+        "name": "Lil' creator",
+        "isLms": false,
+        "assetImage": "Lil_Creator_chathead.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Lil%27_creator"
+    },
+    {
+        "_id": 10,
+        "name": "Abyssal protector",
+        "isLms": false,
+        "assetImage": "Abyssal_protector_chathead.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_protector"
+    }
+]

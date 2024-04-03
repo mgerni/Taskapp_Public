@@ -1,10 +1,6 @@
 import bcrypt
 import re
 from task_database import add_task_account
-import tasklist
-import task_urls
-import task_tips
-import task_images
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from datetime import datetime
 import config
@@ -22,34 +18,6 @@ mydb = config.MONGO_CLIENT["TaskApp"]
 mycoll = mydb['taskAccounts']
 
 # List of lists of dictionaries for tasks and cooresponding urls/tips.
-completions = [
-    tasklist.easy,
-    tasklist.medium,
-    tasklist.hard,
-    tasklist.elite,
-    tasklist.boss_pet,
-    tasklist.skill_pet,
-    tasklist.other_pet,
-    tasklist.extra,
-    tasklist.passive,
-    task_urls.easy_urls,
-    task_urls.medium_urls,
-    task_urls.hard_urls,
-    task_urls.elite_urls,
-    task_urls.boss_pet_urls,
-    task_urls.skilling_pet_urls,
-    task_urls.other_pet_urls,
-    task_urls.extra_urls,
-    task_urls.passive_urls,
-    task_tips.easy_tips,
-    task_tips.medium_tips,
-    task_tips.hard_tips,
-    task_tips.elite_tips,
-    task_images.easy_images, ## 22
-    task_images.medium_images, ## 23
-    task_images.hard_images, ## 24
-    task_images.elite_images ## 25
-    ]
 
 '''
 query_email function:
@@ -224,7 +192,7 @@ def add_user(username, password, email, isOfficial, lmsEnabled):
             hashed_pass = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
             user_input = {"username": username, "hashed_password": hashed_pass, "user_email": email, 'email_verified': False}
             coll.insert_one(user_input)
-            add_task_account(username, completions, isOfficial, lmsEnabled )
+            add_task_account(username, isOfficial, lmsEnabled )
             success = True
 
             return success, error

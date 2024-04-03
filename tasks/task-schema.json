@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Task",
+  "description": "Schema for representing a task object",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "integer",
+      "description": "Unique identifier for the task - Only unique within each task tier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the task"
+    },
+    "isLms": {
+      "type": "boolean",
+      "description": "Indicates whether the task is related to Last Man Standing (LMS)"
+    },
+    "tip": {
+      "type": "string",
+      "description": "Hint text for the task"
+    },
+    "wikiLink": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL linking to the wiki page providing more information about the task"
+    },
+    "wikiImage": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL linking to an image representing the task from the wiki"
+    },
+    "assetImage": {
+      "type": "string",
+      "description": "Name of the asset image for the task"
+    },
+    "colLogData": {
+      "type": "object",
+      "description": "Data used to check the task has been completed via the users Collection Log",
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "Category to which the task belongs in the Collection Log"
+        },
+        "logName": {
+          "type": "string",
+          "description": "Name of the task entry in the Collection Log"
+        },
+        "include": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Items to include when checking the Collection Log for this task"
+        },
+        "exclude": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Items to exclude when checking the Collection Log for this task"
+        },
+        "logCount": {
+          "type": "integer",
+          "description": "Number of items to check for in the Collection Log"
+        }
+      },
+      "required": ["category", "logName",  "logCount"]
+    }
+  },
+  "required": ["_id", "name", "isLms", "wikiLink", "assetImage"]
+}

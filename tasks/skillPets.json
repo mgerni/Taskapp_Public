@@ -1,0 +1,65 @@
+[
+    {
+        "_id": 1,
+        "name": "Baby chinchompa",
+        "isLms": false,
+        "assetImage": "Baby_chinchompa_black.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Baby_chinchompa"
+    },
+    {
+        "_id": 2,
+        "name": "Beaver",
+        "isLms": false,
+        "assetImage": "Beaver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Beaver"
+    },
+    {
+        "_id": 3,
+        "name": "Giant squirrel",
+        "isLms": false,
+        "assetImage": "Giant_squirrel.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Giant_squirrel"
+    },
+    {
+        "_id": 4,
+        "name": "Heron",
+        "isLms": false,
+        "assetImage": "Heron.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Heron"
+    },
+    {
+        "_id": 5,
+        "name": "Rift guardian",
+        "isLms": false,
+        "assetImage": "Rift_guardian_fire.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Rift_guardian"
+    },
+    {
+        "_id": 6,
+        "name": "Rock golem",
+        "isLms": false,
+        "assetImage": "Rock_golem.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Rock_golem"
+    },
+    {
+        "_id": 7,
+        "name": "Rocky",
+        "isLms": false,
+        "assetImage": "Rocky.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Rocky"
+    },
+    {
+        "_id": 8,
+        "name": "Tangleroot",
+        "isLms": false,
+        "assetImage": "Tangleroot.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tangleroot"
+    },
+    {
+        "_id": 9,
+        "name": "Quetzin",
+        "isLms": false,
+        "assetImage": "quetzin.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Quetzin"
+    }
+]

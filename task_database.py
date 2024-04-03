@@ -8,40 +8,65 @@ from task_urls import easy_urls, medium_urls, hard_urls, elite_urls, boss_pet_ur
 from task_images import easy_images, medium_images, hard_images, elite_images
 import config
 
+completions = [
+    tasklist.easy,
+    tasklist.medium,
+    tasklist.hard,
+    tasklist.elite,
+    tasklist.boss_pet,
+    tasklist.skill_pet,
+    tasklist.other_pet,
+    tasklist.extra,
+    tasklist.passive,
+    easy_urls,
+    medium_urls,
+    hard_urls,
+    elite_urls,
+    boss_pet_urls,
+    skilling_pet_urls,
+    other_pet_urls,
+    extra_urls,
+    passive_urls,
+    easy_tips,
+    medium_tips,
+    hard_tips,
+    elite_tips,
+    easy_images,
+    medium_images,
+    hard_images,
+    elite_images
+]
+
 mydb = config.MONGO_CLIENT["TaskApp"]
 
 def combine_tasks(tasks, wiki_urls, tips, images):
     new_tasks = []
-    i = 1
-    for task, url, tip, wikiImage in zip(tasks, wiki_urls, tips, images):
+    for i, (task, url, tip, wikiImage) in enumerate(zip(tasks, wiki_urls, tips, images)):
         new_tasks.append(
             {
-                "_id" : i,
-                "taskname" : task,
-                "status" : 'Incomplete',
-                "taskCurrent" : False,
+                "_id": i + 1,
+                "taskname": task,
+                "status": 'Incomplete',
+                "taskCurrent": False,
                 "taskTip": tip,
-                "wikiLink" : url,
-                "taskImage" : wikiImage['taskImage']
+                "wikiLink": url,
+                "taskImage": wikiImage['taskImage']
             }
         )
-        i += 1
     return new_tasks
 
 def combine_tasks_no_tip(tasks, wiki_urls):
     new_tasks = []
-    i = 1
     for i, (task, url) in enumerate(zip(tasks, wiki_urls)):
         new_tasks.append(
             {
-                "_id": i,
+                "_id": i + 1,
                 "taskname": task,
                 "status": 'Incomplete',
                 "taskCurrent": False,
                 "wikiLink": url
             }
         )
-        i += 1
     return new_tasks
 
 '''
@@ -92,7 +117,7 @@ Returns:
     None
 
 '''
-def add_task_account(username, completions, isOfficial, lmsEnabled):
+def add_task_account(username, isOfficial, lmsEnabled):
     coll = mydb['taskAccounts']
 
     taskAccount = {
