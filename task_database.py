@@ -8,11 +8,41 @@ from task_urls import easy_urls, medium_urls, hard_urls, elite_urls, boss_pet_ur
 from task_images import easy_images, medium_images, hard_images, elite_images
 import config
 
-
-
 mydb = config.MONGO_CLIENT["TaskApp"]
 
+def combine_tasks(tasks, wiki_urls, tips, images):
+    new_tasks = []
+    i = 1
+    for task, url, tip, wikiImage in zip(tasks, wiki_urls, tips, images):
+        new_tasks.append(
+            {
+                "_id" : i,
+                "taskname" : task,
+                "status" : 'Incomplete',
+                "taskCurrent" : False,
+                "taskTip": tip,
+                "wikiLink" : url,
+                "taskImage" : wikiImage['taskImage']
+            }
+        )
+        i += 1
+    return new_tasks
 
+def combine_tasks_no_tip(tasks, wiki_urls):
+    new_tasks = []
+    i = 1
+    for i, (task, url) in enumerate(zip(tasks, wiki_urls)):
+        new_tasks.append(
+            {
+                "_id": i,
+                "taskname": task,
+                "status": 'Incomplete',
+                "taskCurrent": False,
+                "wikiLink": url
+            }
+        )
+        i += 1
+    return new_tasks
 
 '''
 add_task_account:
@@ -65,168 +95,26 @@ Returns:
 def add_task_account(username, completions, isOfficial, lmsEnabled):
     coll = mydb['taskAccounts']
 
-
-    easyTaskCompletions = []
-    mediumTaskCompletions = []
-    hardTaskCompletions = []
-    eliteTaskCompletions = []
-    bossPetCompletions = []
-    skillPetCompletions = []
-    otherPetCompletions = []
-    extraCompletions = []
-    passiveCompletions = []
-
     taskAccount = {
-        "username" : '',
-        "isOfficial": isOfficial,
-        "lmsEnabled": lmsEnabled,
-        "easyTasks": [],
-        "mediumTasks": [],
-        "hardTasks": [],
-        "eliteTasks": [],
-        "bossPetTasks": [],
-        "skillPetTasks" : [],
-        "otherPetTasks" : [],
-        "extraTasks" : [],
-        "passiveTasks" : [],
+        "username": str(username),
+        "isOfficial": bool(isOfficial),
+        "lmsEnabled": bool(lmsEnabled),
+        "easyTasks": combine_tasks(completions[0], completions[9], completions[18], completions[22]),
+        "mediumTasks": combine_tasks(completions[1], completions[10], completions[19], completions[23]),
+        "hardTasks": combine_tasks(completions[2], completions[11], completions[20], completions[24]),
+        "eliteTasks": combine_tasks(completions[3], completions[12], completions[21], completions[25]),
+        "bossPetTasks": combine_tasks_no_tip(completions[4], completions[13]),
+        "skillPetTasks": combine_tasks_no_tip(completions[5], completions[14]),
+        "otherPetTasks": combine_tasks_no_tip(completions[6], completions[15]),
+        "extraTasks": combine_tasks_no_tip(completions[7], completions[16]),
+        "passiveTasks": combine_tasks_no_tip(completions[8], completions[17]),
+        "easyFirst": False,
+        "hardFirst": False,
+        "mediumFirst": False,
+        "eliteFirst": False
     }
-    i = 1
-    for easytask, url, tip, wikiImage in zip(completions[0],completions[9],completions[18],completions[22]):
-        easyTaskCompletions.append(
-            {
-                "_id" : i,
-                "taskname" : easytask,
-                "status" : 'Incomplete',
-                "taskCurrent" : False,
-                "taskTip": tip,
-                "wikiLink" : url,
-                "taskImage" : wikiImage['taskImage']
 
-            }
-        )
-        i += 1
-    i2 = 1
-    for mediumtask, url, tip, wikiImage in zip(completions[1],completions[10],completions[19],completions[23]):
-        mediumTaskCompletions.append(
-            {
-                "_id" : i2,
-                "taskname" : mediumtask,
-                "status" : 'Incomplete',
-                "taskCurrent" : False,
-                "taskTip": tip,
-                "wikiLink" : url,
-                "taskImage" : wikiImage['taskImage']
-            }
-        )
-        i2 += 1
-    i3 = 1
-    for hardtask, url, tip, wikiImage in zip(completions[2],completions[11],completions[20], completions[24]):
-        hardTaskCompletions.append(
-        {
-            "_id" : i3,
-            "taskname" : hardtask,
-            "status" : 'Incomplete',
-            "taskCurrent" : False,
-            "taskTip": tip,
-            "wikiLink" : url,
-            "taskImage" : wikiImage['taskImage']
-            }
-        )
-        i3 += 1
-    i4 = 1
-    for elitetask, url, tip, wikiImage in zip(completions[3],completions[12],completions[21], completions[25]):
-        eliteTaskCompletions.append(
-        {
-            "_id" : i4,
-            "taskname" : elitetask,
-            "status" : 'Incomplete',
-            "taskCurrent" : False,
-            "taskTip": tip,
-            "wikiLink" : url,
-            "taskImage" : wikiImage['taskImage']
-            }
-        )
-        i4 += 1
-    i5 = 1
-    for boss_pet, url, in zip(completions[4], completions[13]):
-        bossPetCompletions.append(
-            {
-                "_id" : i5,
-                "taskname" : boss_pet,
-                "status" : "Incomplete",
-                "taskCurrent" : False,
-                "wikiLink" : url
-            }
-        )
-        i5 += 1
-    i6 = 1
-    for skill_pet, url, in zip(completions[5], completions[14]):
-        skillPetCompletions.append(
-            {
-                "_id" : i6,
-                "taskname" : skill_pet,
-                "status" : "Incomplete",
-                "taskCurrent" : False,
-                "wikiLink" : url
-            }
-        )
-        i6 += 1
-    i7 = 1
-    for other_pet, url, in zip(completions[6], completions[15]):
-        otherPetCompletions.append(
-            {
-                "_id" : i7,
-                "taskname" : other_pet,
-                "status" : "Incomplete",
-                "taskCurrent" : False,
-                "wikiLink" : url
-            }
-        )
-        i7 += 1
-    i8 = 1
-    for extra, url, in zip(completions[7], completions[16]):
-        extraCompletions.append(
-            {
-                "_id" : i8,
-                "taskname" : extra,
-                "status" : "Incomplete",
-                "taskCurrent" : False,
-                "wikiLink" : url
-            }
-        )
-        i8 += 1
-    i9 = 1
-    for passive, url, in zip(completions[8], completions[17]):
-        passiveCompletions.append(
-            {
-                "_id" : i9,
-                "taskname" : passive,
-                "status" : "Incomplete",
-                "taskCurrent" : False,
-                "wikiLink" : url
-            }
-        )
-        i9 += 1
-
-
-    taskAccount["username"] = str(username)
-    taskAccount["isOfficial"] = bool(isOfficial)
-    taskAccount["lmsEnabled"] = bool(lmsEnabled)
-    taskAccount["easyTasks"] = easyTaskCompletions
-    taskAccount["mediumTasks"] = mediumTaskCompletions
-    taskAccount["hardTasks"] = hardTaskCompletions
-    taskAccount["eliteTasks"] = eliteTaskCompletions
-    taskAccount["bossPetTasks"] = bossPetCompletions
-    taskAccount["skillPetTasks"] = skillPetCompletions
-    taskAccount["otherPetTasks"] = otherPetCompletions
-    taskAccount["extraTasks"] = extraCompletions
-    taskAccount["passiveTasks"] = passiveCompletions
-    taskAccount["easyFirst"] = False
-    taskAccount["hardFirst"] = False
-    taskAccount["mediumFirst"] = False
-    taskAccount["eliteFirst"] = False
     coll.insert_one(taskAccount)
-
 
 # NOT USED, generic function to list all documents in a collection. Used for testing.
 def query_coll(collection):
@@ -528,7 +416,6 @@ Returns:
 def complete_task(username):
     coll = mydb['taskAccounts']
     task_check = get_taskCurrent(username)
-    easy_first, medium_first, hard_first, elite_first = False, False, False, False
     progress_before = get_task_progress(username)
     easy_before, medium_before, hard_before, elite_before = progress_before[0], progress_before[1], progress_before[2], progress_before[3]
 

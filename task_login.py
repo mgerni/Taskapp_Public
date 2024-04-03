@@ -8,8 +8,6 @@ import task_images
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from datetime import datetime
 import config
-import json
-
 
 # specifies database to use.
 db = config.MONGO_CLIENT["TaskAppLoginDB"]
@@ -224,7 +222,7 @@ def add_user(username, password, email, isOfficial, lmsEnabled):
         doc_count = coll.count_documents(user_querydb)
         if doc_count == 0:
             hashed_pass = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-            user_input = {"username": username, "hashed_password": hashed_pass, "user_email" : email, 'email_verified' : False}
+            user_input = {"username": username, "hashed_password": hashed_pass, "user_email": email, 'email_verified': False}
             coll.insert_one(user_input)
             add_task_account(username, completions, isOfficial, lmsEnabled )
             success = True
