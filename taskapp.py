@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, flash, url_for, ses
 from flask_recaptcha import ReCaptcha
 import jwt
 import datetime
-import pymongo
 import bcrypt
 import config
 from functools import wraps
@@ -36,20 +35,8 @@ else:
 # email service account.
 taskapp_email = config.SECRET_KEY
 
-# Mongodb URI
-MONGO_URL = config.MONGO_URL
-
-# Determines if certificate is needed for PROD.
-if not isProd:
-    myclient = pymongo.MongoClient(MONGO_URL)
-else:
-    X509_CERT = config.X509_CERT
-    myclient = pymongo.MongoClient(MONGO_URL,
-                     tls=True,
-                     tlsCertificateKeyFile=X509_CERT)
-
 # specifies database to use.
-db = myclient["TaskAppLoginDB"]
+db = config.MONGO_CLIENT["TaskAppLoginDB"]
 
 
 '''
@@ -225,22 +212,15 @@ def register():
                 username = form_data['username']
                 password = form_data['password']
                 repeat_password = form_data['repeat_password']
-
                 email = form_data['email']
-                if request.form.get('officialstatus') == 'on':
-                    isOfficial = True
-                else:
-                    isOfficial = False
-                if request.form.get('lmsstatus') == None:
-                    lmsStatus = False
-                else:
-                    lmsStatus = True
+                is_official = request.form.get('officialstatus') == 'on'
+                lms_status = request.form.get('lmsstatus') is None
                 if password != repeat_password:
                     error = 'Passwords did not match. Please Try again. '
                     return render_template('register.html', error=error)
                 else:
 
-                    create_user = task_login.add_user(username, password, email, isOfficial, lmsStatus)
+                    create_user = task_login.add_user(username, password, email, is_official, lms_status)
                     if create_user[0] == True:
                         send_verification_email_inital(email, username)
                         flash('Account %s Created Successfully!' % username)
@@ -253,7 +233,7 @@ def register():
                 error = 'Please fill out the Captcha!'
                 return render_template('register.html', error=error)
         else:
-            return render_template('register.html' , error=error)
+            return render_template('register.html', error=error)
     except Exception as e:
         app.logger.error('Error', e)
         error = 'An error occurred while processing your request, please try again.'
@@ -264,36 +244,36 @@ def register():
 # On POST request, verifies the users input and logs the user in.
 @app.route('/login/', methods= ['GET', 'POST'])
 def login():
-        try:
-            error = None
-            coll = db['users']
-            if request.method == 'POST':
-                if (not isProd) or recaptcha.verify():
-                    form_data = request.form
-                    attempted_username = form_data['username']
-                    attempted_password = form_data['password']
-                    username_found = coll.find_one({"username": attempted_username})
-                    if username_found:
-                        user_val = username_found['username']
-                        passwordcheck = username_found['hashed_password']
-                        if bcrypt.checkpw(attempted_password.encode('utf-8'), passwordcheck):
-                            session['logged_in'] = True
-                            session['username'] = request.form['username']
-                            return redirect(url_for('dashboard'))
-                        else:
-                            error = "Invalid Username or Password. Please Try again"
-                            return render_template('login.html', error=error)
+    try:
+        error = None
+        coll = db['users']
+        if request.method == 'POST':
+            if (not isProd) or recaptcha.verify():
+                form_data = request.form
+                attempted_username = form_data['username']
+                attempted_password = form_data['password']
+                username_found = coll.find_one({"username": attempted_username})
+                if username_found:
+                    user_val = username_found['username']
+                    passwordcheck = username_found['hashed_password']
+                    if bcrypt.checkpw(attempted_password.encode('utf-8'), passwordcheck):
+                        session['logged_in'] = True
+                        session['username'] = request.form['username']
+                        return redirect(url_for('dashboard'))
                     else:
                         error = "Invalid Username or Password. Please Try again"
                         return render_template('login.html', error=error)
                 else:
-                    error = 'Please fill out the Captcha!'
+                    error = "Invalid Username or Password. Please Try again"
                     return render_template('login.html', error=error)
             else:
+                error = 'Please fill out the Captcha!'
                 return render_template('login.html', error=error)
-        except Exception as e:
-            error = "An error occurred while processing your request, please try again."
+        else:
             return render_template('login.html', error=error)
+    except Exception as e:
+        error = "An error occurred while processing your request, please try again."
+        return render_template('login.html', error=error)
 
 
 # logout route, logs the user out and redirects to the login page.

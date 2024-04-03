@@ -1,5 +1,4 @@
 import bcrypt
-import pymongo
 import re
 from task_database import add_task_account
 import tasklist
@@ -7,47 +6,33 @@ import task_urls
 import task_tips
 import task_images
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-import taskapp
 from datetime import datetime
-import os
-
-
-
-# Mongodb URI
-MONGO_URL = os.environ["MONGO_URI"]
-
-# Determines if certificate is needed for PROD.
-if os.environ["TASKAPP_DEV"] == "True":
-    myclient = pymongo.MongoClient(MONGO_URL)
-else:
-    X509_CERT = os.environ["X509_CERT"]
-    myclient = pymongo.MongoClient(MONGO_URL,
-                     tls=True,
-                     tlsCertificateKeyFile=X509_CERT)
+import config
+import json
 
 
 # specifies database to use.
-db = myclient["TaskAppLoginDB"]
+db = config.MONGO_CLIENT["TaskAppLoginDB"]
 
 # specifies collection to use in TaskAppLoginDB database.
 coll = db['users']
 
 # specifies database to use.
-mydb = myclient["TaskApp"]
+mydb = config.MONGO_CLIENT["TaskApp"]
 
 # specifies collection to use in TaskApp database.
 mycoll = mydb['taskAccounts']
 
-# List of lists of dictionaries for tasks and cooresponding urls/tips. 
+# List of lists of dictionaries for tasks and cooresponding urls/tips.
 completions = [
-    tasklist.easy, 
-    tasklist.medium, 
-    tasklist.hard, 
-    tasklist.elite, 
-    tasklist.boss_pet, 
-    tasklist.skill_pet, 
-    tasklist.other_pet, 
-    tasklist.extra, 
+    tasklist.easy,
+    tasklist.medium,
+    tasklist.hard,
+    tasklist.elite,
+    tasklist.boss_pet,
+    tasklist.skill_pet,
+    tasklist.other_pet,
+    tasklist.extra,
     tasklist.passive,
     task_urls.easy_urls,
     task_urls.medium_urls,
@@ -99,7 +84,7 @@ Returns:
 
 '''
 def get_reset_token(username, expires=1800):
-    s = Serializer(taskapp.app.config['SECRET_KEY'], expires)
+    s = Serializer(config.SECRET_KEY, expires)
     return s.dumps({'username': username}).decode('utf-8')
 
 '''
@@ -117,10 +102,10 @@ Returns:
 
 '''
 def verify_reset_token(token):
-    s = Serializer(taskapp.app.config['SECRET_KEY'])
+    s = Serializer(config.SECRET_KEY)
     try:
         username = s.loads(token)['username']
-        
+
     except:
         return None
     return username
@@ -159,7 +144,7 @@ Returns:
 
 '''
 def get_email_verify_token(username, email, expires=1800):
-    s = Serializer(taskapp.app.config['SECRET_KEY'], expires)
+    s = Serializer(config.SECRET_KEY, expires)
     return s.dumps({'username': username, 'email' : email}).decode('utf-8')
 
 
@@ -178,7 +163,7 @@ Returns:
 
 '''
 def verify_email_verify_token(token):
-    s = Serializer(taskapp.app.config['SECRET_KEY'])
+    s = Serializer(config.SECRET_KEY)
     try:
         username = s.loads(token)['username']
         email = s.loads(token)['email']
@@ -234,7 +219,7 @@ def add_user(username, password, email, isOfficial, lmsEnabled):
     pattern = re.compile(reg)
     match = re.search(pattern, password)
     if match:
-        
+
         user_querydb = {'username': username}
         doc_count = coll.count_documents(user_querydb)
         if doc_count == 0:
@@ -243,14 +228,14 @@ def add_user(username, password, email, isOfficial, lmsEnabled):
             coll.insert_one(user_input)
             add_task_account(username, completions, isOfficial, lmsEnabled )
             success = True
-            
+
             return success, error
         else:
-            
+
             error = 'Username already exists'
             return success, error
     else:
-        
+
         error = 'Password does not meet requirements'
         return success, error
 
@@ -331,16 +316,16 @@ def username_change(username, username_value):
     else:
         coll.update_one({'username': username}, {'$set': {'username': username_value}})
         # mycoll.update_one({'username': username}, {'$set': {'username': username_value}})
-        
+
         success = True
         return success
 
 
-# NOT YET IMPLEMENTED - To be used for highscores soon TM. 
+# NOT YET IMPLEMENTED - To be used for highscores soon TM.
 def get_all_users():
     verified_users_list = []
     get_verified_users = coll.find({'email_verified': True}, {'_id': 0, 'username': 1})
-    
+
     for user in get_verified_users:
         task_user = user['username']
         disallowed = {'Gerni', 'nfinch', 'sirmad@outlook.com.au'}
@@ -349,7 +334,7 @@ def get_all_users():
 
     return verified_users_list
 
-# NOT YET IMPLEMENTED - To be used for highscores soon TM. 
+# NOT YET IMPLEMENTED - To be used for highscores soon TM.
 def sort_users(verified_user_list):
     start_time = datetime.now()
     official_user_list = []
@@ -362,7 +347,7 @@ def sort_users(verified_user_list):
             official_user_list.append(user)
         elif user_state['isOfficial'] == False:
             unofficial_user_list.append(user)
-    
+
 
     for official_user in official_user_list:
         easy_completed = 0
@@ -371,7 +356,7 @@ def sort_users(verified_user_list):
         elite_completed = 0
         pet_completed = 0
         extra_completed = 0
-        
+
         easy_points = 0
         medium_points = 0
         hard_points = 0
@@ -405,7 +390,7 @@ def sort_users(verified_user_list):
             for ele in task['hardTasks']:
                 if ele['status'] == 'Complete':
                     hard_completed += 1
-                    hard_points += 2502      
+                    hard_points += 2502
 
             for ele in task['eliteTasks']:
                 if ele['status'] == 'Complete':
@@ -414,8 +399,8 @@ def sort_users(verified_user_list):
 
             for ele in task['extraTasks']:
                 if ele['status'] == 'Complete':
-                    extra_completed += 1     
-                    extra_points += 2504  
+                    extra_completed += 1
+                    extra_points += 2504
 
             for ele in task['bossPetTasks']:
                 if ele['status'] == 'Complete':
@@ -429,7 +414,7 @@ def sort_users(verified_user_list):
 
             for ele in task['otherPetTasks']:
                 if ele['status'] == 'Complete':
-                    pet_completed += 1  
+                    pet_completed += 1
                     pet_points += 2505
 
         tasks_total =  easy_completed +  medium_completed + hard_completed + elite_completed + pet_completed + extra_completed
@@ -455,7 +440,7 @@ def sort_users(verified_user_list):
         elite_completed = 0
         pet_completed = 0
         extra_completed = 0
-        
+
         easy_points = 0
         medium_points = 0
         hard_points = 0
@@ -489,7 +474,7 @@ def sort_users(verified_user_list):
             for ele in task['hardTasks']:
                 if ele['status'] == 'Complete':
                     hard_completed += 1
-                    hard_points += 2502      
+                    hard_points += 2502
 
             for ele in task['eliteTasks']:
                 if ele['status'] == 'Complete':
@@ -498,8 +483,8 @@ def sort_users(verified_user_list):
 
             for ele in task['extraTasks']:
                 if ele['status'] == 'Complete':
-                    extra_completed += 1     
-                    extra_points += 2504  
+                    extra_completed += 1
+                    extra_points += 2504
 
             for ele in task['bossPetTasks']:
                 if ele['status'] == 'Complete':
@@ -513,7 +498,7 @@ def sort_users(verified_user_list):
 
             for ele in task['otherPetTasks']:
                 if ele['status'] == 'Complete':
-                    pet_completed += 1  
+                    pet_completed += 1
                     pet_points += 2505
 
         tasks_total =  easy_completed +  medium_completed + hard_completed + elite_completed + pet_completed + extra_completed

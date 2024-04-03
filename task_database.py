@@ -1,28 +1,16 @@
-import pymongo
 import tasklist
 import random
 import gspread
 import re
-import os
 from math import floor
 from task_tips import easy_tips, medium_tips, hard_tips, elite_tips
 from task_urls import easy_urls, medium_urls, hard_urls, elite_urls, boss_pet_urls, other_pet_urls, skilling_pet_urls, passive_urls, extra_urls
 from task_images import easy_images, medium_images, hard_images, elite_images
+import config
 
 
-# Mongodb URI
-MONGO_URL = os.environ["MONGO_URI"]
 
-# Determines if certificate is needed for PROD.
-if os.environ["TASKAPP_DEV"] == "True":
-    myclient = pymongo.MongoClient(MONGO_URL)
-else:
-    X509_CERT = os.environ["X509_CERT"]
-    myclient = pymongo.MongoClient(MONGO_URL,
-                     tls=True,
-                     tlsCertificateKeyFile=X509_CERT)
-
-mydb = myclient["TaskApp"]
+mydb = config.MONGO_CLIENT["TaskApp"]
 
 
 
@@ -77,7 +65,7 @@ Returns:
 def add_task_account(username, completions, isOfficial, lmsEnabled):
     coll = mydb['taskAccounts']
 
-    
+
     easyTaskCompletions = []
     mediumTaskCompletions = []
     hardTaskCompletions = []
@@ -113,7 +101,7 @@ def add_task_account(username, completions, isOfficial, lmsEnabled):
                 "taskTip": tip,
                 "wikiLink" : url,
                 "taskImage" : wikiImage['taskImage']
-                
+
             }
         )
         i += 1
@@ -410,7 +398,7 @@ Returns:
 
 '''
 def generate_task(username):
-    
+
     coll = mydb['taskAccounts']
     tasks_easy = []
     tasks_medium = []
@@ -451,14 +439,14 @@ def generate_task(username):
                     else:
                         if ele['taskname']['LMS'] == False:
                             tasks_elite.append(ele)
-        
+
         if len(tasks_easy) != 0:
             generated_task = random.choice(tasks_easy)
             coll.update_one({'username': username , 'easyTasks._id' : generated_task['_id']}, {'$set' : {'easyTasks.$.taskCurrent': True }})
         elif len(tasks_medium) != 0:
             generated_task = random.choice(tasks_medium)
             coll.update_one({'username': username , 'mediumTasks._id' : generated_task['_id']}, {'$set' : {'mediumTasks.$.taskCurrent': True }})
-            
+
         elif len(tasks_hard) != 0:
             generated_task = random.choice(tasks_hard)
             coll.update_one({'username': username , 'hardTasks._id' : generated_task['_id']}, {'$set' : {'hardTasks.$.taskCurrent': True }})
@@ -503,16 +491,16 @@ def complete_task_unofficial_tier(username, task_id, tier):
     if easy_before != 100 and easy_after == 100:
         easy_first = True
         coll.update_one({'username': username}, {'$set' : {"easyFirst" : easy_first}})
-        
+
     elif medium_before != 100 and medium_after == 100:
         medium_first = True
         coll.update_one({'username': username}, {'$set' : {"mediumFirst" : medium_first}})
-        
+
 
     elif hard_before != 100 and hard_after == 100:
         hard_first = True
         coll.update_one({'username': username}, {'$set' : {"hardFirst" : hard_first}})
-        
+
 
     elif elite_before != 100 and elite_after == 100:
         elite_first = True
@@ -554,17 +542,17 @@ def complete_task(username):
     if easy_before != 100 and easy_after == 100:
         easy_first = True
         coll.update_one({'username': username}, {'$set' : {"easyFirst" : easy_first}})
-        
+
 
     elif medium_before != 100 and medium_after == 100:
         medium_first = True
         coll.update_one({'username': username}, {'$set' : {"mediumFirst" : medium_first}})
-        
+
 
     elif hard_before != 100 and hard_after == 100:
         hard_first = True
         coll.update_one({'username': username}, {'$set' : {"hardFirst" : hard_first}})
-        
+
 
     elif elite_before != 100 and elite_after == 100:
         elite_first = True
@@ -591,7 +579,7 @@ def get_tier_status(username):
     coll.update_one({'username': username}, {'$set': {'easyFirst': False, 'mediumFirst': False, 'hardFirst': False, 'eliteFirst' : False}})
     return x['easyFirst'], x['mediumFirst'], x['hardFirst'], x['eliteFirst']
 
-        
+
 
 '''
 get_task_progress:
@@ -607,7 +595,7 @@ Returns:
 
 '''
 def get_task_progress(username):
-    
+
     tasks_easy = []
     tasks_medium = []
     tasks_hard = []
@@ -618,13 +606,13 @@ def get_task_progress(username):
     elite_completed = 0
 
     coll = mydb['taskAccounts']
-    
+
     task_query_easy = coll.find({'username': username}, {'easyTasks': 1})
-    
+
     task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
-    
+
     task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
-    
+
     task_query_elite = coll.find({'username': username}, {'eliteTasks': 1})
 
 
@@ -655,14 +643,14 @@ def get_task_progress(username):
         for ele in task['hardTasks']:
             tasks_hard.append(ele)
             if lms_status is False:
-                
+
                 if ele['taskname']['LMS'] is True:
                     tasks_hard.remove(ele)
                     if ele['status'] == 'Complete':
                         hard_completed -= 1
             if ele['status'] == 'Complete':
                 hard_completed += 1
-    
+
     for task in task_query_elite:
         for ele in task['eliteTasks']:
             tasks_elite.append(ele)
@@ -673,7 +661,7 @@ def get_task_progress(username):
                         elite_completed -= 1
             if ele['status'] == 'Complete':
                 elite_completed += 1
-    
+
     total_easy = len(tasks_easy)
     total_medium = len(tasks_medium)
     total_hard = len(tasks_hard)
@@ -761,7 +749,7 @@ def manual_complete_tasks(username, tier, task_id):
                         task = task_name[0]
                         image = task_name[1]
                         break
-                        
+
     return task, image, tip, link
 
 
@@ -783,7 +771,7 @@ def manual_revert_tasks(username, tier, task_id):
     exlude_tip = {'bossPetTasks', 'otherPetTasks', 'skillPetTasks', 'extraTasks', 'passiveTasks'}
     task_id = int(task_id)
     coll.update_one({'username' : username, '%s._id' % tier : task_id}, {'$set': {'%s.$.taskCurrent' % tier: False, '%s.$.status' % tier : 'Incomplete'}})
-    task_revert = coll.find({'username' : username, '%s._id' % tier : task_id}, {tier : 1, '_id': 0})  
+    task_revert = coll.find({'username' : username, '%s._id' % tier : task_id}, {tier : 1, '_id': 0})
     for tasks in task_revert:
         for key, value in tasks.items():
             for task_dict in value:
@@ -843,7 +831,7 @@ def import_spreadsheet(username, url):
             info_sheet = google_sheet.worksheet("Info")
 
             current_sheet_tier = info_sheet.get('B13:B14')
-            
+
             tier, cell = current_sheet_tier[0][0], current_sheet_tier[1][0].replace('C', "")
             cell = int(cell) - 1
             sheet_tasks = []
@@ -997,7 +985,7 @@ def reindex_list_one(tier):
     for info in user_info:
         i = 1
         for index, task in enumerate(info[tier]):
-            
+
             if task['_id'] == i:
                 print('No need to reindex task: %s ... Skipping' % task['_id'])
                 i += 1
@@ -1047,10 +1035,10 @@ def add_task_image():
             task['taskImage'] = image['taskImage']
             new_task_list_elite.append(task)
 
-        coll.update_one({'username': user['username']}, 
+        coll.update_one({'username': user['username']},
         {'$set': {
-            "easyTasks": new_task_list_easy, 
-            "mediumTasks": new_task_list_medium, 
+            "easyTasks": new_task_list_easy,
+            "mediumTasks": new_task_list_medium,
             "hardTasks": new_task_list_hard,
             "eliteTasks": new_task_list_elite
         }})
@@ -1082,12 +1070,12 @@ Returns:
 
 def rename_task(tier, task_id, new_name, new_image, lms_bool , new_tip, new_wiki_link, new_task_image):
     coll = mydb['taskAccounts']
-    update = coll.update_many({'%s._id' % tier: task_id}, 
-        {'$set': 
+    update = coll.update_many({'%s._id' % tier: task_id},
+        {'$set':
             {
-                '%s.$.taskname'% tier: 
+                '%s.$.taskname'% tier:
                     {
-                        new_name: new_image, 
+                        new_name: new_image,
                         "LMS": lms_bool,
                     },
                 f"{tier}.$.taskTip" : new_tip,
@@ -1128,7 +1116,7 @@ def update_tip(tier, task_id, new_tip):
 
 # NOT IN USE - left in for examples sake
 def update_user(username, email):
-    db = myclient["TaskAppLoginDB"]
+    db = config.MONGO_CLIENT["TaskAppLoginDB"]
     coll = db['users']
     coll.update_one({'username': username}, {'$set':{ 'user_email' : email}})
 
@@ -1137,11 +1125,11 @@ def update_all_users():
     coll = mydb['taskAccounts']
     for x in coll.find():
         username = x['username']
-        
+
         coll.update_one({'username': username}, {'$set' : {'easyFirst': False, 'mediumFirst' : False, 'hardFirst': False, 'eliteFirst': False}})
 
 
-# One-off function to add object to all Lists in the database. 
+# One-off function to add object to all Lists in the database.
 # Should be modified for future use - left in for examples sake
 def update_tip_url():
     coll = mydb['taskAccounts']
@@ -1212,7 +1200,7 @@ def add_task_last(tier, id, task_name, task_image, lmsbool, tip, wikilink, url_i
     coll = mydb['taskAccounts']
     coll.update_many(
         {},
-    {"$push": {tier: 
+    {"$push": {tier:
         {
         "_id": id,
         "taskname": {
@@ -1225,7 +1213,7 @@ def add_task_last(tier, id, task_name, task_image, lmsbool, tip, wikilink, url_i
         "wikiLink": wikilink,
         "taskImage": url_image
     }}})
-    
+
 '''
 add_task_last_notip:
 
@@ -1251,7 +1239,7 @@ def add_task_last_notip(tier, id, task_name, task_image, lmsbool, wikiLink):
     coll = mydb['taskAccounts']
     update = coll.update_many(
         {},
-    {"$push": {tier: 
+    {"$push": {tier:
         {
         "_id": id,
         "taskname": {
@@ -1263,7 +1251,7 @@ def add_task_last_notip(tier, id, task_name, task_image, lmsbool, wikiLink):
         "wikiLink": wikiLink
     }
     }}
-    
+
     )
     print(update.raw_result)
 
@@ -1552,7 +1540,7 @@ def official_icon(easy, medium, hard, elite):
 
     elif easy <= 49:
         rank_icon = '/static/assets/rank_icons/Minion.png'
-        
+
     return rank_icon
 
 
@@ -1579,11 +1567,11 @@ def unoffical_log_count(username):
     pet_completed = 0
     extra_completed = 0
     passive_completed = 0
-    dragon_hat_count = 0 
-    champscroll_count = 0 
-    unsired_count = 0 
-    grace_count = 0 
-    agility_ticket_count = 0 
+    dragon_hat_count = 0
+    champscroll_count = 0
+    unsired_count = 0
+    grace_count = 0
+    agility_ticket_count = 0
     task_query = coll.find({'username': username},
     {
                 'easyTasks' : 1,
@@ -1605,9 +1593,9 @@ def unoffical_log_count(username):
                     if key == 'Get 3 new uniques from beginner clues':
                         easy_completed += 2
                     if key == 'Get 5 new uniques from easy clues':
-                        easy_completed += 4             
+                        easy_completed += 4
                     if key == 'Get 5 new uniques from medium clues':
-                        easy_completed += 4      
+                        easy_completed += 4
                     if key == 'Get 5 new uniques from hard clues':
                         easy_completed += 4
                     if key == 'Get 2 unique notes from Fossil Island':
@@ -1615,9 +1603,9 @@ def unoffical_log_count(username):
                     if key == 'Get 2 unique Ancient pages':
                         easy_completed += 1
                     if key == 'Get the Marksman headpiece':
-                        easy_completed += 5         
+                        easy_completed += 5
                     if key == 'Get a Rune defender':
-                        easy_completed += 6  
+                        easy_completed += 6
                     if key == 'Get the full Red decorative set':
                         easy_completed += 7
                     if key == 'Get the Zamorak hood & cloak':
@@ -1634,31 +1622,31 @@ def unoffical_log_count(username):
                         if grace_count != 1:
                             easy_completed += 1
                             grace_count += 1
-                        
+
                     if key == 'Complete the Ardougne Easy Diary':
-                        easy_completed -= 1  
+                        easy_completed -= 1
                     if key == 'Complete the Desert Easy Diary':
-                        easy_completed -= 1                         
+                        easy_completed -= 1
                     if key == 'Complete the Falador Easy Diary':
-                        easy_completed -= 1     
+                        easy_completed -= 1
                     if key == 'Complete the Fremennik Easy Diary':
-                        easy_completed -= 1  
+                        easy_completed -= 1
                     if key == 'Complete the Kandarin Easy Diary':
-                        easy_completed -= 1                         
+                        easy_completed -= 1
                     if key == 'Complete the Karamja Easy Diary':
-                        easy_completed -= 1     
+                        easy_completed -= 1
                     if key == 'Complete the Kourend&Kebos Easy Diary':
-                        easy_completed -= 1  
+                        easy_completed -= 1
                     if key == 'Complete the Lumbridge&Draynor Easy Diary':
-                        easy_completed -= 1                         
+                        easy_completed -= 1
                     if key == 'Complete the Morytania Easy Diary':
-                        easy_completed -= 1     
+                        easy_completed -= 1
                     if key == 'Complete the Varrock Easy Diary':
-                        easy_completed -= 1  
+                        easy_completed -= 1
                     if key == 'Complete the Western Provinces Easy Diary':
-                        easy_completed -= 1                         
+                        easy_completed -= 1
                     if key == 'Complete the Wilderness Easy Diary':
-                        easy_completed -= 1     
+                        easy_completed -= 1
 
                     if key == 'Get 1 unique Champion scroll':
                         champscroll_count += 1
@@ -1672,9 +1660,9 @@ def unoffical_log_count(username):
                     if key == 'Get 3 new uniques from beginner clues':
                         medium_completed += 2
                     if key == 'Get 5 new uniques from easy clues':
-                        medium_completed += 4             
+                        medium_completed += 4
                     if key == 'Get 5 new uniques from medium clues':
-                        medium_completed += 4      
+                        medium_completed += 4
                     if key == 'Get 5 new uniques from hard clues':
                         medium_completed += 4
                     if key == 'Get 2 unique notes from Fossil Island':
@@ -1691,37 +1679,37 @@ def unoffical_log_count(username):
                         medium_completed += 2
                     if key == 'Get the Decorative magic set':
                         medium_completed += 2
-                        
+
 
                     if key == 'Complete the Ardougne Medium Diary':
-                        medium_completed -= 1  
+                        medium_completed -= 1
                     if key == 'Complete the Desert Medium Diary':
-                        medium_completed -= 1                         
+                        medium_completed -= 1
                     if key == 'Complete the Falador Medium Diary':
-                        medium_completed -= 1     
+                        medium_completed -= 1
                     if key == 'Complete the Fremennik Medium Diary':
-                        medium_completed -= 1  
+                        medium_completed -= 1
                     if key == 'Complete the Kandarin Medium Diary':
-                        medium_completed -= 1                         
+                        medium_completed -= 1
                     if key == 'Complete the Karamja Medium Diary':
-                        medium_completed -= 1     
+                        medium_completed -= 1
                     if key == 'Complete the Kourend&Kebos Medium Diary':
-                        medium_completed -= 1  
+                        medium_completed -= 1
                     if key == 'Complete the Lumbridge&Draynor Medium Diary':
-                        medium_completed -= 1                         
+                        medium_completed -= 1
                     if key == 'Complete the Morytania Medium Diary':
-                        medium_completed -= 1     
+                        medium_completed -= 1
                     if key == 'Complete the Varrock Medium Diary':
-                        medium_completed -= 1  
+                        medium_completed -= 1
                     if key == 'Complete the Western Provinces Medium Diary':
-                        medium_completed -= 1                         
+                        medium_completed -= 1
                     if key == 'Complete the Wilderness Medium Diary':
-                        medium_completed -= 1     
+                        medium_completed -= 1
 
                     if key == 'Get 1 unique Champion scroll':
                         champscroll_count += 1
 
-                
+
         for ele in task['hardTasks']:
             if ele['status'] == 'Complete':
                 hard_completed += 1
@@ -1729,13 +1717,13 @@ def unoffical_log_count(username):
                     if key == 'Get 3 new uniques from beginner clues':
                         hard_completed += 2
                     if key == 'Get 5 new uniques from easy clues':
-                        hard_completed += 4             
+                        hard_completed += 4
                     if key == 'Get 5 new uniques from medium clues':
-                        hard_completed += 4      
+                        hard_completed += 4
                     if key == 'Get 5 new uniques from hard clues':
                         hard_completed += 4
                     if key == 'Get 2 new uniques from elite clues':
-                        hard_completed += 1 
+                        hard_completed += 1
                     if key == 'Get 2 unique Ancient pages':
                         hard_completed += 1
                     if key == 'Get 2 uniques from the Hallowed Sepulchre':
@@ -1752,40 +1740,40 @@ def unoffical_log_count(username):
                         hard_completed += 1
 
                     if key == 'Complete the Ardougne Hard Diary':
-                        hard_completed -= 1  
+                        hard_completed -= 1
                     if key == 'Complete the Desert Hard Diary':
-                        hard_completed -= 1                         
+                        hard_completed -= 1
                     if key == 'Complete the Falador Hard Diary':
-                        hard_completed -= 1     
+                        hard_completed -= 1
                     if key == 'Complete the Fremennik Hard Diary':
-                        hard_completed -= 1  
+                        hard_completed -= 1
                     if key == 'Complete the Kandarin Hard Diary':
-                        hard_completed -= 1                         
+                        hard_completed -= 1
                     if key == 'Complete the Karamja Hard Diary':
-                        hard_completed -= 1     
+                        hard_completed -= 1
                     if key == 'Complete the Kourend&Kebos Hard Diary':
-                        hard_completed -= 1  
+                        hard_completed -= 1
                     if key == 'Complete the Lumbridge&Draynor Hard Diary':
-                        hard_completed -= 1                         
+                        hard_completed -= 1
                     if key == 'Complete the Morytania Hard Diary':
-                        hard_completed -= 1     
+                        hard_completed -= 1
                     if key == 'Complete the Varrock Hard Diary':
-                        hard_completed -= 1  
+                        hard_completed -= 1
                     if key == 'Complete the Western Provinces Hard Diary':
-                        hard_completed -= 1                         
+                        hard_completed -= 1
                     if key == 'Complete the Wilderness Hard Diary':
-                        hard_completed -= 1     
+                        hard_completed -= 1
                     if key == 'Get 1 unique Champion scroll':
                         champscroll_count += 1
                     if key =='Get a unique from Unsired':
-                        if unsired_count != 1: 
+                        if unsired_count != 1:
                             hard_completed += 1
                             unsired_count += 1
                     if key == 'Get the Brimhaven graceful set recolour' or "Get a Pirate's hook":
                         if agility_ticket_count != 1:
                             hard_completed += 1
                             agility_ticket_count +=1
-                        
+
 
 
         for ele in task['eliteTasks']:
@@ -1799,9 +1787,9 @@ def unoffical_log_count(username):
                         else:
                             elite_completed += 1
                     if key == 'Get 5 new uniques from easy clues':
-                        elite_completed += 4             
+                        elite_completed += 4
                     if key == 'Get 5 new uniques from medium clues':
-                        elite_completed += 4      
+                        elite_completed += 4
                     if key == 'Get 5 new uniques from hard clues':
                         elite_completed += 4
                     if key == 'Get 2 unique Ancient pages':
@@ -1812,38 +1800,38 @@ def unoffical_log_count(username):
                         elite_completed -= 1
 
                     if key == 'Complete the Ardougne Elite Diary':
-                        elite_completed -= 1  
+                        elite_completed -= 1
                     if key == 'Complete the Desert Elite Diary':
-                        elite_completed -= 1                         
+                        elite_completed -= 1
                     if key == 'Complete the Falador Elite Diary':
-                        elite_completed -= 1     
+                        elite_completed -= 1
                     if key == 'Complete the Fremennik Elite Diary':
-                        elite_completed -= 1  
+                        elite_completed -= 1
                     if key == 'Complete the Kandarin Elite Diary':
-                        elite_completed -= 1                         
+                        elite_completed -= 1
                     if key == 'Complete the Karamja Elite Diary':
-                        elite_completed -= 1     
+                        elite_completed -= 1
                     if key == 'Complete the Kourend&Kebos Elite Diary':
-                        elite_completed -= 1  
+                        elite_completed -= 1
                     if key == 'Complete the Lumbridge&Draynor Elite Diary':
-                        elite_completed -= 1                         
+                        elite_completed -= 1
                     if key == 'Complete the Morytania Elite Diary':
-                        elite_completed -= 1     
+                        elite_completed -= 1
                     if key == 'Complete the Varrock Elite Diary':
-                        elite_completed -= 1  
+                        elite_completed -= 1
                     if key == 'Complete the Western Provinces Elite Diary':
-                        elite_completed -= 1                         
+                        elite_completed -= 1
                     if key == 'Complete the Wilderness Elite Diary':
-                        elite_completed -= 1     
+                        elite_completed -= 1
 
                     if key == 'Get 1 unique Champion scroll':
                         champscroll_count += 1
                         if champscroll_count == 10:
                             elite_completed += 1
-                
+
         for ele in task['extraTasks']:
             if ele['status'] == 'Complete':
-                extra_completed += 1     
+                extra_completed += 1
                 for key in ele['taskname']:
                     if key == 'Finish all easy clue uniques':
                         extra_completed += 20
@@ -1856,38 +1844,38 @@ def unoffical_log_count(username):
                     if key == 'Finish all master clue uniques':
                         extra_completed += 37
                     if key == 'Finish all shared clue rewards ':
-                        extra_completed += 48 
+                        extra_completed += 48
                     if key == 'Finish all hard clue rare uniques':
                         extra_completed += 23
                     if key == 'Finish all elite clue rare uniques':
                         extra_completed += 14
-                    if key == 'Finish all master rare clue uniques': 
+                    if key == 'Finish all master rare clue uniques':
                         extra_completed += 5
                     if key == 'Complete the Gold decorative set':
                         extra_completed += 3
 
 
-                
+
         for ele in task['bossPetTasks']:
             if ele['status'] == 'Complete':
                 pet_completed += 1
-                
+
         for ele in task['skillPetTasks']:
             if ele['status'] == 'Complete':
                 pet_completed += 1
-                
+
         for ele in task['otherPetTasks']:
             if ele['status'] == 'Complete':
-                pet_completed += 1  
+                pet_completed += 1
 
         for ele in task['passiveTasks']:
             if ele['status'] == 'Complete':
-                
+
                 passive_completed += 1
                 for key in ele['taskname']:
                     if key == 'Get all random event outfits':
                         passive_completed += 22
-                        
+
 
     total_count = easy_completed + medium_completed + hard_completed + floor(elite_completed) + pet_completed + extra_completed +passive_completed
     # print('Easy: %s, Medium: %s, Hard: %s , Elite: %s, Pet: %s: Extra: %s, Passive: %s. TOTAL: %s' % (easy_completed , medium_completed , hard_completed , floor(elite_completed) , pet_completed , extra_completed ,passive_completed, total_count))
@@ -1923,7 +1911,7 @@ def unofficial_icon(username):
         rank_icon = '/static/assets/rank_icons/Explorer.png'
     else:
         rank_icon = '/static/assets/rank_icons/Minion.png'
-    
+
     return rank_icon
 
 
@@ -1931,7 +1919,7 @@ def add_task_last_one(username, tier, id, task_name, task_image, lmsbool, tip, w
     coll = mydb['taskAccounts']
     coll.update_one(
         {'username': username},
-    {"$push": {tier: 
+    {"$push": {tier:
         {
         "_id": id,
         "taskname": {
@@ -1947,13 +1935,13 @@ def add_task_last_one(username, tier, id, task_name, task_image, lmsbool, tip, w
     }}
     )
     print('Completed Task add for:', username)
-    
+
 def add_task_last_one_no_tip(username, tier, id, task_name, task_image, lmsbool, wikilink):
     coll = mydb['taskAccounts']
     update = coll.update_one(
         {'username': username},
-            {"$push": 
-                {tier: 
+            {"$push":
+                {tier:
                     {
                     "_id": id,
                     "taskname": {
@@ -1964,7 +1952,7 @@ def add_task_last_one_no_tip(username, tier, id, task_name, task_image, lmsbool,
                     "taskCurrent": False,
                     "wikiLink": wikilink
                     }
-                }       
+                }
             }
     )
     print('Completed Task add for:', username)
@@ -1982,7 +1970,7 @@ def check_task():
                 print(f'{i} {username} Last GotR task is Current task.')
     except Exception as e:
         print(f'{i} {username} ERROR: {e}')
-        
+
 def all_users_task_status(tier, task_id):
     coll = mydb['taskAccounts']
     user_data = coll.find({}, {tier: 1, 'username': 1})
