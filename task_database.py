@@ -1,4 +1,4 @@
-import tasklist
+import old_tasklist
 import random
 import gspread
 import re
@@ -9,15 +9,15 @@ from task_images import easy_images, medium_images, hard_images, elite_images
 import config
 
 completions = [
-    tasklist.easy,
-    tasklist.medium,
-    tasklist.hard,
-    tasklist.elite,
-    tasklist.boss_pet,
-    tasklist.skill_pet,
-    tasklist.other_pet,
-    tasklist.extra,
-    tasklist.passive,
+    old_tasklist.easy,
+    old_tasklist.medium,
+    old_tasklist.hard,
+    old_tasklist.elite,
+    old_tasklist.boss_pet,
+    old_tasklist.skill_pet,
+    old_tasklist.other_pet,
+    old_tasklist.extra,
+    old_tasklist.passive,
     easy_urls,
     medium_urls,
     hard_urls,
@@ -773,15 +773,15 @@ def import_spreadsheet(username, url):
 
 
             task_list = [
-                tasklist.easy,
-                tasklist.medium,
-                tasklist.hard,
-                tasklist.elite,
-                tasklist.boss_pet,
-                tasklist.skill_pet,
-                tasklist.other_pet,
-                tasklist.extra,
-                tasklist.passive
+                old_tasklist.easy,
+                old_tasklist.medium,
+                old_tasklist.hard,
+                old_tasklist.elite,
+                old_tasklist.boss_pet,
+                old_tasklist.skill_pet,
+                old_tasklist.other_pet,
+                old_tasklist.extra,
+                old_tasklist.passive
             ]
 
             taskdb_names = [

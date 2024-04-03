@@ -2,7 +2,7 @@ import task_tips
 import task_urls
 import task_images
 import collection_log
-import tasklist
+import old_tasklist
 import json
 
 #
@@ -11,15 +11,15 @@ import json
 
 
 completions = [
-    tasklist.easy,
-    tasklist.medium,
-    tasklist.hard,
-    tasklist.elite,
-    tasklist.boss_pet,
-    tasklist.skill_pet,
-    tasklist.other_pet,
-    tasklist.extra,
-    tasklist.passive,
+    old_tasklist.easy,
+    old_tasklist.medium,
+    old_tasklist.hard,
+    old_tasklist.elite,
+    old_tasklist.boss_pet,
+    old_tasklist.skill_pet,
+    old_tasklist.other_pet,
+    old_tasklist.extra,
+    old_tasklist.passive,
     task_urls.easy_urls,
     task_urls.medium_urls,
     task_urls.hard_urls,
