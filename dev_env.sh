@@ -1,0 +1,5 @@
+export FLASK_ENV=development
+export MONGO_URI=mongodb://root:example@localhost:27017/
+export SENDGRID_API_KEY=192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf
+export SECRET_KEY=192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf
+export SERVER_PORT=8080

@@ -1,13 +1,10 @@
 import sendgrid
-import os
+import config
 from sendgrid.helpers.mail import Mail, Email, To, Content
 
 
-SENDGRID_API_KEY = os.environ["SENDGRID_API_KEY"]
-
-
 def send_message(to, subject, body):
-    sg = sendgrid.SendGridAPIClient(api_key=SENDGRID_API_KEY)
+    sg = sendgrid.SendGridAPIClient(api_key=config.SENDGRID_API_KEY)
     from_email = Email("taskapposrs@gmail.com")
     to_email = To(to)
     subject = subject
@@ -18,4 +15,5 @@ def send_message(to, subject, body):
     mail_json = mail.get()
 
     # Send an HTTP POST request to /mail/send
-    response = sg.client.mail.send.post(request_body=mail_json)
+    if config.IS_PROD:
+        sg.client.mail.send.post(request_body=mail_json)
