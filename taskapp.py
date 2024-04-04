@@ -91,10 +91,72 @@ def login_required(f):
     return wrap
 
 
-
 class APIUser:
     def __init__(self, username):
         self.username = username
+
+
+'''
+Class to hold data that is used in many templates
+'''
+class BasePageInfo:
+    def __init__(self):
+        username = session['username']
+        self.username = username
+        self.official = official_check(username)
+        progress = get_task_progress(username)
+        self.progress = progress
+        if self.official:
+            self.rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
+        else:
+            self.rank_icon = unofficial_icon(username)
+        email_verify = task_login.email_verify(username)
+        self.email_bool = email_verify[0]
+        self.email_val = email_verify[1]
+
+class PageTask:
+    def __init__(self, name: str, asset_image: str, is_completed: bool, id: int, is_current: bool, wiki_link: str, tip: str = None):
+        self.name = name
+        self.asset_image = asset_image
+        self.is_completed = is_completed
+        self.id = id
+        self.is_current = is_current
+        self.wiki_link = wiki_link
+        self.tip = tip
+
+def filter_lms_to_class(t_list):
+    items = []
+    for item in t_list:
+        for x in item['taskname'].items():
+            if 'LMS' not in x:
+                items.append(PageTask(name=x[0],
+                                      asset_image=x[1],
+                                      is_completed=item['status'] != 'Incomplete',
+                                      id=item['_id'],
+                                      is_current=item['taskCurrent'],
+                                      wiki_link=item['wikiLink'],
+                                      tip=item['taskTip'] if 'taskTip' in item else None
+                                      ))
+    return items
+
+def filter_lms(t_list):
+    items = []
+    for item in t_list:
+        for x in item['taskname'].items():
+            if 'LMS' not in x:
+                # print(x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],))
+                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
+                items.append(x)
+    return items
+
+def filter_lms_no_tip(t_list):
+    items = []
+    for item in t_list:
+        for x in item['taskname'].items():
+            if 'LMS' not in x:
+                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
+                items.append(x)
+    return items
 
 
 def token_required(f):
@@ -658,98 +720,26 @@ def complete_unofficial_elite():
 @app.route('/task-list/', methods=['GET'])
 @login_required
 def task_list():
+    user_info = BasePageInfo()
 
-    items_easy = []
-    items_medium = []
-    items_hard = []
-    items_elite = []
-    items_bosspet = []
-    items_skillpet = []
-    items_otherpet = []
-    items_extra = []
-    items_passive = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
+    task = get_task_lists(user_info.username)
 
-    task = get_task_lists(username)
-    easy = task[0]
-    medium = task[1]
-    hard = task[2]
-    elite = task[3]
-    bosspet = task[4]
-    skillpet = task[5]
-    otherpet = task[6]
-    extra = task[7]
-    passive = task[8]
-
-    for item in easy:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_easy.append(x)
-
-    for item in medium:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'], item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_medium.append(x)
-
-    for item in hard:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_hard.append(x)
-
-    for item in elite:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_elite.append(x)
-
-    for item in bosspet:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_bosspet.append(x)
-
-    for item in skillpet:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_skillpet.append(x)
-
-    for item in otherpet:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_otherpet.append(x)
-
-    for item in extra:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_extra.append(x)
-
-    for item in passive:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_passive.append(x)
+    items_easy = filter_lms(task[0])
+    items_medium = filter_lms(task[1])
+    items_hard = filter_lms(task[2])
+    items_elite = filter_lms(task[3])
+    items_bosspet = filter_lms_no_tip(task[4])
+    items_skillpet = filter_lms_no_tip(task[5])
+    items_otherpet = filter_lms_no_tip(task[6])
+    items_extra = filter_lms_no_tip(task[7])
+    items_passive = filter_lms_no_tip(task[8])
 
     return render_template(
         'task_list.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        rank_icon=user_info.rank_icon,
+        email_val=user_info.email_val,
         items_easy=items_easy,
         items_medium=items_medium,
         items_hard=items_hard,
@@ -760,281 +750,86 @@ def task_list():
         items_extra=items_extra,
         items_passive=items_passive,
         taskapp_email=taskapp_email,
-        official=official
+        official=user_info.official
         )
 
+def single_task_list(task_list_index, list_title, task_type):
+    user_info = BasePageInfo()
+    task = get_task_lists(user_info.username)
+    items = filter_lms_to_class(task[task_list_index])
+    return render_template(
+        'single-task-list.html',
+        list_title=list_title,
+        task_type=task_type, # Needed as it is ingrained in JS for updating tasks
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        rank_icon=user_info.rank_icon,
+        email_val=user_info.email_val,
+        items=items,
+        taskapp_email=taskapp_email,
+        official=user_info.official
+    )
 
 # route for task-list-easy, only shows easy tasks.
 @app.route('/task-list-easy/', methods=['GET'])
 @login_required
 def task_list_easy():
-
-    items_easy = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-
-    task = get_task_lists(username)
-    easy = task[0]
-
-    for item in easy:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_easy.append(x)
-
-    return render_template(
-        'task-list-easy-new.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
-        items_easy=items_easy,
-        taskapp_email=taskapp_email,
-        official=official
-        )
+    return single_task_list(task_list_index=0, list_title='Easy Task List', task_type='easy')
 
 #route for task-list-medium, only shows medium tasks.
 @app.route('/task-list-medium/', methods=['GET'])
 @login_required
 def task_list_medium():
-    items_medium = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-
-    task = get_task_lists(username)
-    medium = task[1]
-
-    for item in medium:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_medium.append(x)
-
-    return render_template(
-        'task-list-medium-new.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
-        items_medium=items_medium,
-        taskapp_email=taskapp_email,
-        official=official
-        )
+    return single_task_list(task_list_index=1, list_title='Medium Task List', task_type='medium')
 
 # route for the hard task list, only shows hard tasks.
 @app.route('/task-list-hard/', methods=['GET'])
 @login_required
 def task_list_hard():
-    items_hard = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-
-    task = get_task_lists(username)
-    hard = task[2]
-
-    for item in hard:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_hard.append(x)
-
-    return render_template(
-        'task-list-hard-new.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
-        items_hard=items_hard,
-        taskapp_email=taskapp_email,
-        official=official
-        )
+    return single_task_list(task_list_index=2, list_title='Hard Task List', task_type='hard')
 
 
 # route for the elite task list, only shows elite tasks.
 @app.route('/task-list-elite/', methods=['GET'])
 @login_required
 def task_list_elite():
-    items_elite = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-
-    task = get_task_lists(username)
-    elite = task[3]
-
-    for item in elite:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items_elite.append(x)
-
-    return render_template(
-        'task-list-elite-new.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
-        items_elite=items_elite,
-        taskapp_email=taskapp_email,
-        official=official
-        )
+    return single_task_list(task_list_index=3, list_title='Elite Task List', task_type='elite')
 
 # route for the pets task list, only shows pets tasks.
 @app.route('/task-list-pets/', methods=['GET'])
 @login_required
 def task_list_pets():
-    items_bosspet = []
-    items_skillpet = []
-    items_otherpet = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-
-    task = get_task_lists(username)
-    bosspet = task[4]
-    skillpet = task[5]
-    otherpet = task[6]
-
-    for item in bosspet:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_bosspet.append(x)
-
-    for item in skillpet:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_skillpet.append(x)
-
-    for item in otherpet:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_otherpet.append(x)
+    user_info = BasePageInfo()
+    task = get_task_lists(user_info.username)
+    items_bosspet = filter_lms_no_tip(task[4])
+    items_skillpet = filter_lms_no_tip(task[5])
+    items_otherpet = filter_lms_no_tip(task[6])
 
     return render_template(
         'task-list-pets-new.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        rank_icon=user_info.rank_icon,
+        email_val=user_info.email_val,
         items_bosspet=items_bosspet,
         items_skillpet=items_skillpet,
         items_otherpet=items_otherpet,
         taskapp_email=taskapp_email,
-        official=official
+        official=user_info.official
         )
 
 # route for extra task list, only shows extra tasks.
 @app.route('/task-list-extra/', methods=['GET'])
 @login_required
 def task_list_extra():
-    items_extra = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-
-    task = get_task_lists(username)
-    extra = task[7]
-
-    for item in extra:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_extra.append(x)
-
-    return render_template(
-        'task-list-extra-new.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
-        items_extra=items_extra,
-        taskapp_email=taskapp_email,
-        official=official
-        )
+    return single_task_list(task_list_index=7, list_title='Extra Task List', task_type='extra')
 
 # route for passive task list, only shows passive tasks.
 @app.route('/task-list-passive/', methods=['GET'])
 @login_required
 def task_list_passive():
-    items_passive = []
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
+    return single_task_list(task_list_index=8, list_title='Passive Task List', task_type='passive')
 
-    task = get_task_lists(username)
-    passive = task[8]
-
-    for item in passive:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items_passive.append(x)
-
-    return render_template(
-        'task-list-passive-new.html',
-        username=username,
-        email_verify=email_bool,
-        rank_icon=rank_icon,
-        email_val=email_val,
-        items_passive=items_passive,
-        taskapp_email=taskapp_email,
-        official=official
-        )
 
 # AJAX route for completing tasks manually on task-list page(s).
 # only returns HTML specific to the task.
@@ -1142,23 +937,13 @@ def revert():
 @app.route('/faq/')
 @login_required
 def faq():
-    username = session['username']
-    email_verify = task_login.email_verify(username)
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-
+    user_info = BasePageInfo()
     return render_template(
         'faq.html',
-        username=username,
-        email_verify=email_bool,
-        email_val=email_val,
-        rank_icon=rank_icon,
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        email_val=user_info.email_val,
+        rank_icon=user_info.rank_icon,
         taskapp_email=taskapp_email
         )
 
@@ -1166,22 +951,13 @@ def faq():
 @app.route('/wall-of-pain/')
 @login_required
 def wall_of_pain():
-    username = session['username']
-    email_verify = task_login.email_verify(username)
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
+    user_info = BasePageInfo()
     return render_template(
         'wall_of_pain.html',
-        username=username,
-        email_verify=email_bool,
-        email_val=email_val,
-        rank_icon=rank_icon,
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        email_val=user_info.email_val,
+        rank_icon=user_info.rank_icon,
         taskapp_email=taskapp_email
     )
 
@@ -1321,25 +1097,16 @@ def reset_token(token):
 # Route for profile page.
 @app.route("/profile/")
 def profile():
-    username = session['username']
-    official = official_check(username)
-    progress = get_task_progress(username)
-    if official:
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
-    else:
-        rank_icon = unofficial_icon(username)
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-    lms_status = lms_check(username)
+    user_info = BasePageInfo()
+    lms_status = lms_check(user_info.username)
 
     return render_template(
         'profile.html',
-        username=username,
-        email_verify=email_bool,
-        email_val=email_val,
-        official=official,
-        rank_icon=rank_icon,
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        email_val=user_info.email_val,
+        official=user_info.official,
+        rank_icon=user_info.rank_icon,
         lms_status=lms_status)
 
 # AJAX route for profile email change.
