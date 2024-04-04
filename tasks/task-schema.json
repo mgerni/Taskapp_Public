@@ -68,5 +68,5 @@
       "required": ["category", "logName",  "logCount"]
     }
   },
-  "required": ["_id", "name", "isLms", "wikiLink", "assetImage"]
+  "required": ["_id", "name", "wikiLink", "assetImage"]
 }

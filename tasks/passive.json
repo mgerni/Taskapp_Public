@@ -2,308 +2,264 @@
     {
         "_id": 1,
         "name": "Get the Golden tench",
-        "isLms": false,
         "assetImage": "Golden_tench.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Golden_tench"
     },
     {
         "_id": 2,
         "name": "Get the Bottomless compost bucket",
-        "isLms": false,
         "assetImage": "Bottomless_compost_bucket.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Bottomless_compost_bucket"
     },
     {
         "_id": 3,
         "name": "Get the Stale Baguette",
-        "isLms": false,
         "assetImage": "Stale_baguette.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Stale_baguette"
     },
     {
         "_id": 4,
         "name": "Get a Hespori seed",
-        "isLms": false,
         "assetImage": "Hespori_seed_5.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hespori"
     },
     {
         "_id": 5,
         "name": "Get an Iasor seed",
-        "isLms": false,
         "assetImage": "Iasor_seed_5.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hespori"
     },
     {
         "_id": 6,
         "name": "Get a Kronos seed",
-        "isLms": false,
         "assetImage": "Iasor_seed_5.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hespori"
     },
     {
         "_id": 7,
         "name": "Get an Attas seed",
-        "isLms": false,
         "assetImage": "Iasor_seed_5.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hespori"
     },
     {
         "_id": 8,
         "name": "Get all random event outfits",
-        "isLms": false,
         "assetImage": "Mime_mask.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Random_events"
     },
     {
         "_id": 9,
         "name": "Get a Broken dragon hasta",
-        "isLms": false,
         "assetImage": "130px-Broken_dragon_hasta_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_chest"
     },
     {
         "_id": 10,
         "name": "Get a Mystic hat (dusk)",
-        "isLms": false,
         "assetImage": "130px-Mystic_hat_dusk_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_chest"
     },
     {
         "_id": 11,
         "name": "Get a Mystic robe top (dusk)",
-        "isLms": false,
         "assetImage": "180px-Mystic_robe_top_dusk_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_chest"
     },
     {
         "_id": 12,
         "name": "Get a Mystic robe bottom (dusk)",
-        "isLms": false,
         "assetImage": "180px-Mystic_robe_bottom_dusk_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_chest"
     },
     {
         "_id": 13,
         "name": "Get Mystic gloves (dusk)",
-        "isLms": false,
         "assetImage": "130px-Mystic_gloves_dusk_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_chest"
     },
     {
         "_id": 14,
         "name": "Get Mystic boots (dusk)",
-        "isLms": false,
         "assetImage": "120px-Mystic_boots_dusk_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_chest"
     },
     {
         "_id": 15,
         "name": "Get a Godsword shard 1",
-        "isLms": false,
         "assetImage": "120px-Godsword_shard_1_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
     },
     {
         "_id": 16,
         "name": "Get a Godsword shard 2",
-        "isLms": false,
         "assetImage": "120px-Godsword_shard_2_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
     },
     {
         "_id": 17,
         "name": "Get a Godsword shard 3",
-        "isLms": false,
         "assetImage": "320px-Godsword_shard_3_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
     },
     {
         "_id": 18,
         "name": "Get a Dark relic",
-        "isLms": false,
         "assetImage": "Dark_relic.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dark_relic"
     },
     {
         "_id": 19,
         "name": "Get a Torn prayer scroll",
-        "isLms": false,
         "assetImage": "160px-Torn_prayer_scroll_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Torn_prayer_scroll"
     },
     {
         "_id": 20,
         "name": "Get the Xeric's guard",
-        "isLms": false,
         "assetImage": "Xerics_guard.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Captain_Rimor"
     },
     {
         "_id": 21,
         "name": "Get the Xeric's warrior",
-        "isLms": false,
         "assetImage": "Xerics_warrior.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Captain_Rimor"
     },
     {
         "_id": 22,
         "name": "Get the Xeric's sentinel",
-        "isLms": false,
         "assetImage": "Xerics_sentinel.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Captain_Rimor"
     },
     {
         "_id": 23,
         "name": "Get the Xeric's general",
-        "isLms": false,
         "assetImage": "Xerics_general.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Captain_Rimor"
     },
     {
         "_id": 24,
         "name": "Get the Xeric's champion",
-        "isLms": false,
         "assetImage": "Xerics_champion.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Captain_Rimor"
     },
     {
         "_id": 25,
         "name": "Get the Sinhaza shroud tier 1",
-        "isLms": false,
         "assetImage": "Sinhaza_shroud_tier_1.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mysterious_Stranger"
     },
     {
         "_id": 26,
         "name": "Get the Sinhaza shroud tier 2",
-        "isLms": false,
         "assetImage": "Sinhaza_shroud_tier_2.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mysterious_Stranger"
     },
     {
         "_id": 27,
         "name": "Get the Sinhaza shroud tier 3",
-        "isLms": false,
         "assetImage": "Sinhaza_shroud_tier_3.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mysterious_Stranger"
     },
     {
         "_id": 28,
         "name": "Get the Sinhaza shroud tier 4",
-        "isLms": false,
         "assetImage": "Sinhaza_shroud_tier_4.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mysterious_Stranger"
     },
     {
         "_id": 29,
         "name": "Get the Sinhaza shroud tier 5",
-        "isLms": false,
         "assetImage": "Sinhaza_shroud_tier_5.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mysterious_Stranger"
     },
     {
         "_id": 30,
         "name": "Get a cut Onyx from Tekton",
-        "isLms": false,
         "assetImage": "Onyx.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Tekton"
     },
     {
         "_id": 31,
         "name": "Get the Gauntlet cape",
-        "isLms": false,
         "assetImage": "130px-Gauntlet_cape_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Gauntlet_cape"
     },
     {
         "_id": 32,
         "name": "Get the Victor's cape (1)",
-        "isLms": false,
         "assetImage": "150px-Victors_cape_1_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Victor%27s_cape"
     },
     {
         "_id": 33,
         "name": "Get the Victor's cape (10)",
-        "isLms": false,
         "assetImage": "150px-Victors_cape_10_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Victor%27s_cape"
     },
     {
         "_id": 34,
         "name": "Get the Victor's cape (50)",
-        "isLms": false,
         "assetImage": "150px-Victors_cape_50_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Victor%27s_cape"
     },
     {
         "_id": 35,
         "name": "Get the Victor's cape (100)",
-        "isLms": false,
         "assetImage": "150px-Victors_cape_100_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Victor%27s_cape"
     },
     {
         "_id": 36,
         "name": "Get the Victor's cape (500)",
-        "isLms": false,
         "assetImage": "150px-Victors_cape_500_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Victor%27s_cape"
     },
     {
         "_id": 37,
         "name": "Get the Victor's cape (1000)",
-        "isLms": false,
         "assetImage": "150px-Victors_cape_1000_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Victor%27s_cape"
     },
     {
         "_id": 38,
         "name": "Get the Icthlarin's shroud (tier 1)",
-        "isLms": false,
         "assetImage": "Icthlarins_shroud_tier_1_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin%27s_shroud"
     },
     {
         "_id": 39,
         "name": "Get the Icthlarin's shroud (tier 2)",
-        "isLms": false,
         "assetImage": "Icthlarins_shroud_tier_2_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin%27s_shroud"
     },
     {
         "_id": 40,
         "name": "Get the Icthlarin's shroud (tier 3)",
-        "isLms": false,
         "assetImage": "Icthlarins_shroud_tier_3_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin%27s_shroud"
     },
     {
         "_id": 41,
         "name": "Get the Icthlarin's shroud (tier 4)",
-        "isLms": false,
         "assetImage": "Icthlarins_shroud_tier_4_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin%27s_shroud"
     },
     {
         "_id": 42,
         "name": "Get the Icthlarin's shroud (tier 5)",
-        "isLms": false,
         "assetImage": "Icthlarins_shroud_tier_5_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin%27s_shroud"
     },
     {
         "_id": 43,
         "name": "Get the Charged ice",
-        "isLms": false,
         "assetImage": "Charged_ice_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Charged_ice"
     },
     {
         "_id": 44,
         "name": "Get a Dark claw",
-        "isLms": false,
         "assetImage": "Dark_claw.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dark_claw"
     }

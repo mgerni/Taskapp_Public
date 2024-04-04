@@ -525,6 +525,7 @@ hard_images = [
 {"taskImage": "https://oldschool.runescape.wiki/w/Guild_hunter_top#/media/File:Guild_hunter_top_detail.png"},
 {"taskImage": "https://oldschool.runescape.wiki/w/Guild_hunter_top#/media/File:Guild_hunter_top_detail.png"},
 {"taskImage": "https://oldschool.runescape.wiki/w/Guild_hunter_top#/media/File:Guild_hunter_top_detail.png"},
+{"taskImage": "https://oldschool.runescape.wiki/images/thumb/Sunfire_splinters_4_detail.png/260px-Sunfire_splinters_4_detail.png?a1a45"}
 ]
 
 

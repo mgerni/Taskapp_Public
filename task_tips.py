@@ -513,7 +513,8 @@ hard_tips = [
 'Received as a drop from Moons of Peril bosses',
 'Received as a drop when completing Hunters Rumours',
 'Received as a drop when completing Hunters Rumours',
-'Received as a drop when completing Hunters Rumours'
+'Received as a drop when completing Hunters Rumours',
+'Reward from Fortis Colosseum or from hunting Sunfire Antelope'
 ]
 
 

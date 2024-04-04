@@ -1,4 +1,6 @@
-easy= [
+import tasklists
+
+easy = [
 {'Get bolt racks from Barrows': 'Bolt_rack_5.png', 'LMS': False},
 {'Get a Mole claw + skin': 'Mole_claw.png', 'LMS': False},
 {'Get 1 Unique from Wintertodt': 'Pyromancer_hood.png', 'LMS': False},
@@ -945,3 +947,12 @@ passive = [
 {"Get the Charged ice": "Charged_ice_detail.png"},
 {'Get a Dark claw': 'Dark_claw.png', 'LMS': False}
 ]
+
+def to_old_task(new_task):
+    return { new_task['name']: new_task['assetImage'], 'LMS': 'isLMS' in new_task }
+
+if __name__ == "__main__":
+    print(easy)
+    print('\n\n\n\n\n\n\n\n\n')
+    print(list(map(to_old_task, tasklists.easy)))
+    assert easy == list(map(to_old_task, tasklists.easy))

@@ -512,7 +512,8 @@ hard_urls = [
  'https://oldschool.runescape.wiki/w/Moons_of_Peril',
  'https://oldschool.runescape.wiki/w/Hunter_Guild#Other',
  'https://oldschool.runescape.wiki/w/Hunter_Guild#Other',
- 'https://oldschool.runescape.wiki/w/Hunter_Guild#Other'
+ 'https://oldschool.runescape.wiki/w/Hunter_Guild#Other',
+ 'https://oldschool.runescape.wiki/w/Sunfire_splinters'
 ]
 
 

@@ -313,6 +313,7 @@ hard_log_slots = [
 {'taskName' : 'Get 1 unique item from Mount Karuulm','category' : 'Other','logName' : 'Slayer','include' : {'Dragon thrownaxe', 'Dragon harpoon', 'Dragon sword', 'Dragon knife', 'Drake\'s tooth', 'Drake\'s claw'},'db_count' : 5,'log_count' : 0},
 {'taskName' : 'Get 1 unique from the Chaos Elemental','category' : 'Bosses','logName' : 'Chaos Elemental','exclude' : {'Pet chaos elemental'},'db_count' : 1,'log_count' : 0},
 {'taskName' : 'Get 1 unique from the Chaos Elemental','category' : 'Bosses','logName' : 'Chaos Elemental','exclude' : {'Pet chaos elemental'},'db_count' : 2,'log_count' : 0},
+    None,
 {'taskName' : 'Get 1 unique from Cerberus','category' : 'Bosses','logName' : 'Cerberus','exclude' : {'Hellpuppy', 'Jar of souls'},'db_count' : 1,'log_count' : 0},
 {'taskName' : 'Get 1 unique from Cerberus','category' : 'Bosses','logName' : 'Cerberus','exclude' : {'Hellpuppy', 'Jar of souls'},'db_count' : 2,'log_count' : 0},
 {'taskName' : 'Get 1 unique from Cerberus','category' : 'Bosses','logName' : 'Cerberus','exclude' : {'Hellpuppy', 'Jar of souls'},'db_count' : 3,'log_count' : 0},
@@ -433,6 +434,7 @@ hard_log_slots = [
 {'taskName' : 'Get the Brimhaven graceful set recolour','category' : 'Minigames','logName' : 'Brimhaven Agility Arena', 'exclude': {'Agility arena ticket', 'Pirate\'s hook'},'db_count' : 6,'log_count' : 0},
 {'taskName' : 'Get a Volcanic mine teleport','category' : 'Minigames','logName' : 'Volcanic Mine','include' : {'Volcanic mine teleport'},'db_count' : 1,'log_count' : 0},
 {'taskName' : 'Get a Heat-proof vessel','category' : 'Minigames','logName' : 'Volcanic Mine','include' : {'Large water container'},'db_count' : 1,'log_count' : 0},
+None,
 {'taskName' : 'Get 1 unique from Tempoross','category' : 'Bosses','logName' : 'Tempoross','exclude' : {'Dragon harpoon', 'Tiny tempor'},'db_count' : 10,'log_count' : 0},
 {'taskName' : 'Get a Vial of blood (from Story mode ToB)','category' : 'Raids','logName' : 'Theatre of Blood','include' : {'Vial of blood'},'db_count' : 1,'log_count' : 0},
 {'taskName' : 'Get a unique Egg Sac from the Grubby Chest','category' : 'Other','logName' : 'Miscellaneous','include' : {'Orange egg sac', 'Blue egg sac'},'db_count' : 1,'log_count' : 0},
@@ -464,6 +466,7 @@ hard_log_slots = [
 {'taskName' : "Get 1 unique from the Hunter Guild", 'category' : 'Other', 'logName': 'Hunter Guild', 'exclude' : {'Quetzin'}, 'db_count' : 3, 'log_count' : 0},
 {'taskName' : "Get 1 unique from the Hunter Guild", 'category' : 'Other', 'logName': 'Hunter Guild', 'exclude' : {'Quetzin'}, 'db_count' : 4, 'log_count' : 0},
 {'taskName' : "Get 1 unique from the Hunter Guild", 'category' : 'Other', 'logName': 'Hunter Guild', 'exclude' : {'Quetzin'}, 'db_count' : 5, 'log_count' : 0},
+{'taskName' : "Obtain Sunfire splinters", 'category' : 'Bosses', 'logName': 'Fortis Colosseum', 'include' : {'Sunfire splinters'}, 'db_count' : 1, 'log_count' : 0},
 ]
 
 
