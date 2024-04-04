@@ -1,6 +1,8 @@
+# Taskapp #
 
-=======
-Taskapp
+OSRS task tracker and generator
+
+See live version - https://www.osrstaskapp.com/
 
 ## Initial Setup ###
 
@@ -17,11 +19,13 @@ Taskapp
 https://sendgrid.com/en-us
 
 ### Create enviroment variables ###
-SECRET_KEY="RandomStringForFlask"
-TASKAPP_EMAIL="taskapp@taskapp-334809.iam.gserviceaccount.com"
-SENDGRID_API_KEY="YOURSENDGRIDAPIKEY"
-MONGO_URI="mongodb://localhost:27017"
-TASKAPP_DEV="True"
+For example
+```
+export FLASK_ENV=development
+export MONGO_URI=mongodb://root:example@localhost:27017/
+export SENDGRID_API_KEY=192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf
+export SECRET_KEY=192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf
+```
 
 ### Clone dev branch ###
 The dev branch has changes suitable for development, which includes using a local database. 
@@ -32,6 +36,8 @@ The dev branch has changes suitable for development, which includes using a loca
 ### MongoDB Setup - Local Testing ###
 Follow instructions on `https://docs.mongodb.com/manual/administration/install-community/` to install mongoDB
 
+Alternatively, if you use Docker, you can run a Mongo DB instance using `docker compose up`
+
 In mongoDB Compass or CLI, connect to `mongodb://localhost:27017/`
 
 
@@ -41,6 +47,8 @@ In mongoDB Compass or CLI, connect to `mongodb://localhost:27017/`
 ### Test it ###
 
 Run `python taskapp.py`
+
+or `source dev.sh && python taskapp.py`
 
 Open `http://127.0.0.1:5000/` on a browser to open the app
 

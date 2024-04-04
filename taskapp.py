@@ -1222,4 +1222,7 @@ def taskHelp():
 
 
 if __name__ == "__main__":
-    app.run(host="localhost", port=8080)
+    if (isProd):
+        app.run(host='0.0.0.0')
+    else:
+        app.run(host="localhost", port=8080)
