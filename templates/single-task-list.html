@@ -38,15 +38,19 @@
                     <div class="container mt-3 text-white bg-dark">
                         <tbody id="tableDetails">
                         {% for item in items %}
-                                <tr class="{{'bg-success' if item.is_completed else 'bg-warning' if item.is_current else ''}}" id="incomplete-task-{{task_type}}" name="{{item.name}}">
-
+                            {% if item.is_completed %}
+                                <tr class="bg-success task{{item.id}}_{{task_type}}" id="completed-task-{{task_type}}">
+                            {% elif item.is_current %}
+                                <tr class="bg-warning">
+                            {% else %}
+                                <tr class="task{{item.id}}_{{task_type}}" id="incomplete-task-{{task_type}}" name="{{item.name}}">
+                            {% endif %}
                                     <td class="text-center align-middle">
                                         <button type="button" class="btn btn-lg taskHelpModal" tip="{{item.tip}}"
                                                 link="{{item.wiki_link}}" value="{{item.name}}">
                                             <i class="bi bi-info-circle text-{{'white' if item.is_current or item.is_completed else 'success'}} fw-bold"></i>
                                         </button>
                                     </td>
-
                                     <td class="text-center align-middle">{{item.name}}</td>
                                     <td class="text-center align-middle"><img src="/static/assets/placeholder_complete.png"
                                                                               data-src="/static/assets/{{item.asset_image}}" width="40"
