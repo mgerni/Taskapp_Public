@@ -1,32 +1,56 @@
 import json
+from dataclasses import dataclass
 
-
+@dataclass
 class ColLogData:
-    def __init__(self, category: str, log_name: str, exclude: list, include: list, log_count: int, count: int):
-        self.category = category
-        self.log_name = log_name
-        self.exclude = exclude
-        self.include = include
-        self.log_count = log_count
-        self.count = count
+    category: str
+    log_name: str
+    exclude: list
+    include: list
+    log_count: int
+    count: int
 
-class PageTask:
-    def __init__(self, _id: int, name: str, tip: str, wiki_link: str, wiki_image: str,
-                 asset_image: str, col_log_data: ColLogData):
-        self._id = _id
-        self.name = name
-        self.tip = tip
-        self.wiki_link = wiki_link
-        self.wiki_image = wiki_image
-        self.asset_image = asset_image
-        self.col_log_data = col_log_data
+@dataclass
+class Task:
+    id: int
+    name: str
+    tip: str
+    wiki_link: str
+    wiki_image: str
+    asset_image: str
+    col_log_data: ColLogData
 
 
 def read_tasks(filename):
     with open('tasks/' + filename + '.json') as f:
         return json.load(f)
 
+def to_col_log_data(data):
+    if data is None:
+        return None
+    return ColLogData(category=data['category'],
+                      log_name=data['logName'],
+                      exclude=data.get('exclude'),
+                      include=data.get('include'),
+                      log_count=data['logCount'],
+                      count=data.get('count'))
 
+def to_task_class(data):
+    return Task(id=data['_id'],
+                name=data['name'],
+                tip=data.get('tip'),
+                wiki_link=data['wikiLink'],
+                wiki_image=data.get('wikiImage'),
+                asset_image=data['assetImage'],
+                col_log_data=data.get('colLogData')
+                )
+
+def convert_dicts(l):
+    return list(map(to_task_class, l))
+
+
+# Deprecated - Use the new class lists below
+# Exporting for backwards compatibility
 easy = read_tasks('easy')
 medium = read_tasks('medium')
 hard = read_tasks('hard')
@@ -37,4 +61,12 @@ boss_pets = read_tasks('bossPets')
 skill_pets = read_tasks('skillPets')
 other_pets = read_tasks('otherPets')
 
-# TODO Should we create a task class?
+easy_tasks = convert_dicts(easy)
+medium_tasks = convert_dicts(medium)
+hard_tasks = convert_dicts(hard)
+elite_tasks = convert_dicts(elite)
+passive_tasks = convert_dicts(passive)
+extra_tasks = convert_dicts(extra)
+boss_pet_tasks = convert_dicts(boss_pets)
+skill_pet_tasks = convert_dicts(skill_pets)
+other_pet_tasks = convert_dicts(other_pets)
