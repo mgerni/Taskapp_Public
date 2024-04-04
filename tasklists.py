@@ -11,8 +11,8 @@ hard = read_tasks('hard')
 elite = read_tasks('elite')
 passive = read_tasks('passive')
 extra = read_tasks('extra')
-bossPets = read_tasks('bossPets')
-skillPets = read_tasks('skillPets')
-otherPets = read_tasks('otherPets')
+boss_pets = read_tasks('bossPets')
+skill_pets = read_tasks('skillPets')
+other_pets = read_tasks('otherPets')
 
 # TODO Should we create a task class?

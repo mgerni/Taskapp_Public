@@ -250,11 +250,11 @@
             "category": "Bosses",
             "logName": "Abyssal Sire",
             "include": [
-                "Abyssal dagger",
-                "Bludgeon axon",
-                "Bludgeon spine",
+                "Abyssal head",
                 "Bludgeon claw",
-                "Abyssal head"
+                "Abyssal dagger",
+                "Bludgeon spine",
+                "Bludgeon axon"
             ],
             "logCount": 1
         }
@@ -270,11 +270,11 @@
             "category": "Bosses",
             "logName": "Abyssal Sire",
             "include": [
-                "Abyssal dagger",
-                "Bludgeon axon",
-                "Bludgeon spine",
+                "Abyssal head",
                 "Bludgeon claw",
-                "Abyssal head"
+                "Abyssal dagger",
+                "Bludgeon spine",
+                "Bludgeon axon"
             ],
             "logCount": 2
         }
@@ -290,11 +290,11 @@
             "category": "Bosses",
             "logName": "Abyssal Sire",
             "include": [
-                "Abyssal dagger",
-                "Bludgeon axon",
-                "Bludgeon spine",
+                "Abyssal head",
                 "Bludgeon claw",
-                "Abyssal head"
+                "Abyssal dagger",
+                "Bludgeon spine",
+                "Bludgeon axon"
             ],
             "logCount": 3
         }
@@ -326,12 +326,12 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Drake's claw",
+                "Dragon knife",
+                "Drake's tooth",
                 "Dragon thrownaxe",
                 "Dragon harpoon",
                 "Dragon sword",
-                "Dragon knife",
-                "Drake's tooth"
+                "Drake's claw"
             ],
             "logCount": 1
         }
@@ -347,12 +347,12 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Drake's claw",
+                "Dragon knife",
+                "Drake's tooth",
                 "Dragon thrownaxe",
                 "Dragon harpoon",
                 "Dragon sword",
-                "Dragon knife",
-                "Drake's tooth"
+                "Drake's claw"
             ],
             "logCount": 2
         }
@@ -368,12 +368,12 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Drake's claw",
+                "Dragon knife",
+                "Drake's tooth",
                 "Dragon thrownaxe",
                 "Dragon harpoon",
                 "Dragon sword",
-                "Dragon knife",
-                "Drake's tooth"
+                "Drake's claw"
             ],
             "logCount": 3
         }
@@ -389,12 +389,12 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Drake's claw",
+                "Dragon knife",
+                "Drake's tooth",
                 "Dragon thrownaxe",
                 "Dragon harpoon",
                 "Dragon sword",
-                "Dragon knife",
-                "Drake's tooth"
+                "Drake's claw"
             ],
             "logCount": 4
         }
@@ -410,12 +410,12 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Drake's claw",
+                "Dragon knife",
+                "Drake's tooth",
                 "Dragon thrownaxe",
                 "Dragon harpoon",
                 "Dragon sword",
-                "Dragon knife",
-                "Drake's tooth"
+                "Drake's claw"
             ],
             "logCount": 5
         }
@@ -471,8 +471,8 @@
             "category": "Bosses",
             "logName": "Cerberus",
             "exclude": [
-                "Hellpuppy",
-                "Jar of souls"
+                "Jar of souls",
+                "Hellpuppy"
             ],
             "logCount": 1
         }
@@ -488,8 +488,8 @@
             "category": "Bosses",
             "logName": "Cerberus",
             "exclude": [
-                "Hellpuppy",
-                "Jar of souls"
+                "Jar of souls",
+                "Hellpuppy"
             ],
             "logCount": 2
         }
@@ -505,8 +505,8 @@
             "category": "Bosses",
             "logName": "Cerberus",
             "exclude": [
-                "Hellpuppy",
-                "Jar of souls"
+                "Jar of souls",
+                "Hellpuppy"
             ],
             "logCount": 3
         }
@@ -554,39 +554,39 @@
             "category": "Other",
             "logName": "All Pets",
             "exclude": [
-                "Olmlet",
-                "Pet general graardor",
-                "Pet smoke devil",
-                "Kalphite princess",
-                "Pet dagannoth rex",
-                "Baby mole",
-                "Venenatis spiderling",
-                "Pet kree'arra",
-                "Vorki",
-                "Scorpia's offspring",
-                "Pet dagannoth prime",
-                "Noon/Midnight",
-                "Sraracha",
-                "Ikkle hydra",
-                "Callisto cub",
-                "Vet'ion jr.",
-                "Nexling",
-                "Prince black dragon",
-                "Jal-nib-rek/Tzrek-zuk",
                 "Lil' zik",
-                "Abyssal orphan",
-                "Little nightmare",
-                "Hellpuppy",
-                "Pet dark core/corporeal critter",
-                "Pet dagannoth supreme",
-                "Pet kraken",
-                "Pet snakeling",
-                "Pet chaos elemental",
-                "Pet zilyana",
+                "Venenatis spiderling",
+                "Kalphite princess",
+                "Pet kree'arra",
+                "Pet general graardor",
+                "Prince black dragon",
+                "Callisto cub",
+                "Pet dagannoth prime",
                 "Skotos",
+                "Jal-nib-rek/Tzrek-zuk",
+                "Sraracha",
+                "Nexling",
+                "Pet kraken",
+                "Vet'ion jr.",
                 "Tzrek-jad",
+                "Abyssal orphan",
+                "Pet dagannoth rex",
+                "Pet dark core/corporeal critter",
+                "Ikkle hydra",
+                "Pet snakeling",
+                "Baby mole",
+                "Pet chaos elemental",
+                "Tumeken's guardian",
+                "Scorpia's offspring",
+                "Hellpuppy",
+                "Little nightmare",
+                "Pet dagannoth supreme",
+                "Pet zilyana",
+                "Noon/Midnight",
+                "Pet smoke devil",
+                "Vorki",
                 "Pet k'ril tsutsaroth",
-                "Tumeken's guardian"
+                "Olmlet"
             ],
             "logCount": 1
         }
@@ -602,10 +602,10 @@
             "category": "Bosses",
             "logName": "K'ril Tsutsaroth",
             "include": [
-                "Zamorakian spear",
-                "Zamorak hilt",
+                "Steam battlestaff",
                 "Staff of the dead",
-                "Steam battlestaff"
+                "Zamorakian spear",
+                "Zamorak hilt"
             ],
             "logCount": 1
         }
@@ -621,10 +621,10 @@
             "category": "Bosses",
             "logName": "K'ril Tsutsaroth",
             "include": [
-                "Zamorakian spear",
-                "Zamorak hilt",
+                "Steam battlestaff",
                 "Staff of the dead",
-                "Steam battlestaff"
+                "Zamorakian spear",
+                "Zamorak hilt"
             ],
             "logCount": 2
         }
@@ -641,8 +641,8 @@
             "logName": "Dagannoth Kings",
             "exclude": [
                 "Pet dagannoth prime",
-                "Pet dagannoth rex",
-                "Pet dagannoth supreme"
+                "Pet dagannoth supreme",
+                "Pet dagannoth rex"
             ],
             "logCount": 1
         }
@@ -659,8 +659,8 @@
             "logName": "Dagannoth Kings",
             "exclude": [
                 "Pet dagannoth prime",
-                "Pet dagannoth rex",
-                "Pet dagannoth supreme"
+                "Pet dagannoth supreme",
+                "Pet dagannoth rex"
             ],
             "logCount": 2
         }
@@ -677,8 +677,8 @@
             "logName": "Dagannoth Kings",
             "exclude": [
                 "Pet dagannoth prime",
-                "Pet dagannoth rex",
-                "Pet dagannoth supreme"
+                "Pet dagannoth supreme",
+                "Pet dagannoth rex"
             ],
             "logCount": 3
         }
@@ -695,8 +695,8 @@
             "logName": "Dagannoth Kings",
             "exclude": [
                 "Pet dagannoth prime",
-                "Pet dagannoth rex",
-                "Pet dagannoth supreme"
+                "Pet dagannoth supreme",
+                "Pet dagannoth rex"
             ],
             "logCount": 4
         }
@@ -713,8 +713,8 @@
             "logName": "Dagannoth Kings",
             "exclude": [
                 "Pet dagannoth prime",
-                "Pet dagannoth rex",
-                "Pet dagannoth supreme"
+                "Pet dagannoth supreme",
+                "Pet dagannoth rex"
             ],
             "logCount": 5
         }
@@ -731,8 +731,8 @@
             "logName": "Dagannoth Kings",
             "exclude": [
                 "Pet dagannoth prime",
-                "Pet dagannoth rex",
-                "Pet dagannoth supreme"
+                "Pet dagannoth supreme",
+                "Pet dagannoth rex"
             ],
             "logCount": 6
         }
@@ -749,8 +749,8 @@
             "logName": "Dagannoth Kings",
             "exclude": [
                 "Pet dagannoth prime",
-                "Pet dagannoth rex",
-                "Pet dagannoth supreme"
+                "Pet dagannoth supreme",
+                "Pet dagannoth rex"
             ],
             "logCount": 7
         }
@@ -766,9 +766,9 @@
             "category": "Bosses",
             "logName": "Grotesque Guardians",
             "exclude": [
+                "Jar of stone",
                 "Granite dust",
-                "Noon",
-                "Jar of stone"
+                "Noon"
             ],
             "logCount": 1
         }
@@ -784,9 +784,9 @@
             "category": "Bosses",
             "logName": "Grotesque Guardians",
             "exclude": [
+                "Jar of stone",
                 "Granite dust",
-                "Noon",
-                "Jar of stone"
+                "Noon"
             ],
             "logCount": 2
         }
@@ -802,9 +802,9 @@
             "category": "Bosses",
             "logName": "Grotesque Guardians",
             "exclude": [
+                "Jar of stone",
                 "Granite dust",
-                "Noon",
-                "Jar of stone"
+                "Noon"
             ],
             "logCount": 3
         }
@@ -870,8 +870,8 @@
             "category": "Bosses",
             "logName": "Kraken",
             "exclude": [
-                "Pet kraken",
-                "Jar of dirt"
+                "Jar of dirt",
+                "Pet kraken"
             ],
             "logCount": 1
         }
@@ -887,8 +887,8 @@
             "category": "Bosses",
             "logName": "Kraken",
             "exclude": [
-                "Pet kraken",
-                "Jar of dirt"
+                "Jar of dirt",
+                "Pet kraken"
             ],
             "logCount": 2
         }
@@ -968,9 +968,9 @@
             "category": "Bosses",
             "logName": "Zulrah",
             "include": [
-                "Serpentine visage",
-                "Tanzanite fang",
                 "Magic fang",
+                "Tanzanite fang",
+                "Serpentine visage",
                 "Uncut onyx"
             ],
             "logCount": 1
@@ -987,9 +987,9 @@
             "category": "Bosses",
             "logName": "Zulrah",
             "include": [
-                "Serpentine visage",
-                "Tanzanite fang",
                 "Magic fang",
+                "Tanzanite fang",
+                "Serpentine visage",
                 "Uncut onyx"
             ],
             "logCount": 2
@@ -1006,9 +1006,9 @@
             "category": "Bosses",
             "logName": "Zulrah",
             "include": [
-                "Serpentine visage",
-                "Tanzanite fang",
                 "Magic fang",
+                "Tanzanite fang",
+                "Serpentine visage",
                 "Uncut onyx"
             ],
             "logCount": 3
@@ -1025,9 +1025,9 @@
             "category": "Bosses",
             "logName": "Zulrah",
             "include": [
-                "Serpentine visage",
-                "Tanzanite fang",
                 "Magic fang",
+                "Tanzanite fang",
+                "Serpentine visage",
                 "Uncut onyx"
             ],
             "logCount": 4
@@ -1478,12 +1478,12 @@
             "category": "Minigames",
             "logName": "Castle Wars",
             "include": [
-                "Decorative boots",
-                "Decorative sword",
                 "Decorative shield",
+                "Decorative full helm",
+                "Decorative sword",
+                "Decorative boots",
                 "Decorative helm",
-                "Decorative armour",
-                "Decorative full helm"
+                "Decorative armour"
             ],
             "logCount": 16
         }
@@ -1499,12 +1499,12 @@
             "category": "Minigames",
             "logName": "Castle Wars",
             "include": [
-                "Decorative boots",
-                "Decorative sword",
                 "Decorative shield",
+                "Decorative full helm",
+                "Decorative sword",
+                "Decorative boots",
                 "Decorative helm",
-                "Decorative armour",
-                "Decorative full helm"
+                "Decorative armour"
             ],
             "logCount": 18
         }
@@ -1520,12 +1520,12 @@
             "category": "Minigames",
             "logName": "Castle Wars",
             "include": [
-                "Decorative boots",
-                "Decorative sword",
                 "Decorative shield",
+                "Decorative full helm",
+                "Decorative sword",
+                "Decorative boots",
                 "Decorative helm",
-                "Decorative armour",
-                "Decorative full helm"
+                "Decorative armour"
             ],
             "logCount": 20
         }
@@ -1541,12 +1541,12 @@
             "category": "Minigames",
             "logName": "Castle Wars",
             "include": [
-                "Decorative boots",
-                "Decorative sword",
                 "Decorative shield",
+                "Decorative full helm",
+                "Decorative sword",
+                "Decorative boots",
                 "Decorative helm",
-                "Decorative armour",
-                "Decorative full helm"
+                "Decorative armour"
             ],
             "logCount": 22
         }
@@ -1595,12 +1595,12 @@
             "logName": "Trouble Brewing",
             "exclude": [
                 "Phasmatys flag",
-                "Cutthroat flag",
-                "Treasure flag",
-                "Gilded smile flag",
                 "Lucky shot flag",
-                "The stuff",
                 "rum",
+                "Cutthroat flag",
+                "The stuff",
+                "Gilded smile flag",
+                "Treasure flag",
                 "Bronze fist flag"
             ],
             "logCount": 9
@@ -1618,12 +1618,12 @@
             "logName": "Trouble Brewing",
             "exclude": [
                 "Phasmatys flag",
-                "Cutthroat flag",
-                "Treasure flag",
-                "Gilded smile flag",
                 "Lucky shot flag",
-                "The stuff",
                 "rum",
+                "Cutthroat flag",
+                "The stuff",
+                "Gilded smile flag",
+                "Treasure flag",
                 "Bronze fist flag"
             ],
             "logCount": 12
@@ -1641,12 +1641,12 @@
             "logName": "Trouble Brewing",
             "exclude": [
                 "Phasmatys flag",
-                "Cutthroat flag",
-                "Treasure flag",
-                "Gilded smile flag",
                 "Lucky shot flag",
-                "The stuff",
                 "rum",
+                "Cutthroat flag",
+                "The stuff",
+                "Gilded smile flag",
+                "Treasure flag",
                 "Bronze fist flag"
             ],
             "logCount": 15
@@ -1935,8 +1935,8 @@
             "category": "Bosses",
             "logName": "Thermonuclear Smoke Devil",
             "include": [
-                "Occult necklace",
-                "Smoke battlestaff"
+                "Smoke battlestaff",
+                "Occult necklace"
             ],
             "logCount": 1
         }
@@ -1952,8 +1952,8 @@
             "category": "Other",
             "logName": "TzHaar",
             "include": [
-                "Obsidian helmet",
                 "Obsidian platelegs",
+                "Obsidian helmet",
                 "Obsidian platebody"
             ],
             "logCount": 1
@@ -1970,8 +1970,8 @@
             "category": "Other",
             "logName": "TzHaar",
             "include": [
-                "Obsidian helmet",
                 "Obsidian platelegs",
+                "Obsidian helmet",
                 "Obsidian platebody"
             ],
             "logCount": 2
@@ -2196,8 +2196,8 @@
             "category": "Bosses",
             "logName": "The Gauntlet",
             "exclude": [
-                "Gauntlet cape",
-                "Youngllef"
+                "Youngllef",
+                "Gauntlet cape"
             ],
             "logCount": 1
         }
@@ -2213,8 +2213,8 @@
             "category": "Bosses",
             "logName": "The Gauntlet",
             "exclude": [
-                "Gauntlet cape",
-                "Youngllef"
+                "Youngllef",
+                "Gauntlet cape"
             ],
             "logCount": 2
         }
@@ -2470,10 +2470,10 @@
             "category": "Minigames",
             "logName": "Mahogany Homes",
             "exclude": [
-                "Plank sack",
                 "Supply crate",
-                "Amy's saw",
-                "Hosidius blueprints"
+                "Plank sack",
+                "Hosidius blueprints",
+                "Amy's saw"
             ],
             "logCount": 3
         }
@@ -2489,10 +2489,10 @@
             "category": "Minigames",
             "logName": "Mahogany Homes",
             "exclude": [
-                "Plank sack",
                 "Supply crate",
-                "Amy's saw",
-                "Hosidius blueprints"
+                "Plank sack",
+                "Hosidius blueprints",
+                "Amy's saw"
             ],
             "logCount": 4
         }
@@ -2564,7 +2564,7 @@
     {
         "_id": 157,
         "name": "Get a new dark bow paint from LMS",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/7/73/Yellow_dark_bow_paint_detail.png/120px-Yellow_dark_bow_paint_detail.png?c6c2d",
@@ -2573,7 +2573,7 @@
     {
         "_id": 158,
         "name": "Get a new dark bow paint from LMS",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/7/73/Yellow_dark_bow_paint_detail.png/120px-Yellow_dark_bow_paint_detail.png?c6c2d",
@@ -2582,7 +2582,7 @@
     {
         "_id": 159,
         "name": "Get a new dark bow paint from LMS",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/7/73/Yellow_dark_bow_paint_detail.png/120px-Yellow_dark_bow_paint_detail.png?c6c2d",
@@ -2591,7 +2591,7 @@
     {
         "_id": 160,
         "name": "Get a new dark bow paint from LMS",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/7/73/Yellow_dark_bow_paint_detail.png/120px-Yellow_dark_bow_paint_detail.png?c6c2d",
@@ -2665,8 +2665,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 10
         }
@@ -2698,8 +2698,8 @@
             "category": "Other",
             "logName": "Miscellaneous",
             "include": [
-                "Blue egg sac",
-                "Orange egg sac"
+                "Orange egg sac",
+                "Blue egg sac"
             ],
             "logCount": 1
         }
@@ -2715,8 +2715,8 @@
             "category": "Other",
             "logName": "Miscellaneous",
             "include": [
-                "Blue egg sac",
-                "Orange egg sac"
+                "Orange egg sac",
+                "Blue egg sac"
             ],
             "logCount": 2
         }
@@ -2732,11 +2732,11 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
+                "Ancient ceremonial mask",
                 "Ancient ceremonial legs",
-                "Ancient ceremonial boots",
                 "Ancient ceremonial top",
-                "Ancient ceremonial gloves",
-                "Ancient ceremonial mask"
+                "Ancient ceremonial boots",
+                "Ancient ceremonial gloves"
             ],
             "logCount": 1
         }
@@ -2752,11 +2752,11 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
+                "Ancient ceremonial mask",
                 "Ancient ceremonial legs",
-                "Ancient ceremonial boots",
                 "Ancient ceremonial top",
-                "Ancient ceremonial gloves",
-                "Ancient ceremonial mask"
+                "Ancient ceremonial boots",
+                "Ancient ceremonial gloves"
             ],
             "logCount": 2
         }
@@ -2772,11 +2772,11 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
+                "Ancient ceremonial mask",
                 "Ancient ceremonial legs",
-                "Ancient ceremonial boots",
                 "Ancient ceremonial top",
-                "Ancient ceremonial gloves",
-                "Ancient ceremonial mask"
+                "Ancient ceremonial boots",
+                "Ancient ceremonial gloves"
             ],
             "logCount": 3
         }
@@ -2792,11 +2792,11 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
+                "Ancient ceremonial mask",
                 "Ancient ceremonial legs",
-                "Ancient ceremonial boots",
                 "Ancient ceremonial top",
-                "Ancient ceremonial gloves",
-                "Ancient ceremonial mask"
+                "Ancient ceremonial boots",
+                "Ancient ceremonial gloves"
             ],
             "logCount": 4
         }
@@ -2812,11 +2812,11 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
+                "Ancient ceremonial mask",
                 "Ancient ceremonial legs",
-                "Ancient ceremonial boots",
                 "Ancient ceremonial top",
-                "Ancient ceremonial gloves",
-                "Ancient ceremonial mask"
+                "Ancient ceremonial boots",
+                "Ancient ceremonial gloves"
             ],
             "logCount": 5
         }
@@ -2928,20 +2928,20 @@
             "category": "Raids",
             "logName": "Tombs of Amascut",
             "exclude": [
-                "Masori crafting kit",
-                "Tuemaken's guardian",
-                "Icthlarin's shroud (tier 4)",
-                "Icthlarin's shroud (tier 1)",
-                "Icthlarin's shroud (tier 3)",
-                "Icthlarin's shroud (tier 2)",
-                "Menaphite ornament kit",
-                "Remnant of akkha",
-                "Icthlarin's shroud (tier 5)",
-                "Remnant of zebak",
-                "Remnant of ba-ba",
                 "Cursed phalanx",
-                "Ancient remnant",
-                "Remnant of kephri"
+                "Tuemaken's guardian",
+                "Icthlarin's shroud (tier 2)",
+                "Icthlarin's shroud (tier 5)",
+                "Icthlarin's shroud (tier 1)",
+                "Remnant of kephri",
+                "Remnant of ba-ba",
+                "Menaphite ornament kit",
+                "Remnant of zebak",
+                "Icthlarin's shroud (tier 4)",
+                "Masori crafting kit",
+                "Remnant of akkha",
+                "Icthlarin's shroud (tier 3)",
+                "Ancient remnant"
             ],
             "logCount": 1
         }
@@ -2957,20 +2957,20 @@
             "category": "Raids",
             "logName": "Tombs of Amascut",
             "exclude": [
-                "Masori crafting kit",
-                "Tuemaken's guardian",
-                "Icthlarin's shroud (tier 4)",
-                "Icthlarin's shroud (tier 1)",
-                "Icthlarin's shroud (tier 3)",
-                "Icthlarin's shroud (tier 2)",
-                "Menaphite ornament kit",
-                "Remnant of akkha",
-                "Icthlarin's shroud (tier 5)",
-                "Remnant of zebak",
-                "Remnant of ba-ba",
                 "Cursed phalanx",
-                "Ancient remnant",
-                "Remnant of kephri"
+                "Tuemaken's guardian",
+                "Icthlarin's shroud (tier 2)",
+                "Icthlarin's shroud (tier 5)",
+                "Icthlarin's shroud (tier 1)",
+                "Remnant of kephri",
+                "Remnant of ba-ba",
+                "Menaphite ornament kit",
+                "Remnant of zebak",
+                "Icthlarin's shroud (tier 4)",
+                "Masori crafting kit",
+                "Remnant of akkha",
+                "Icthlarin's shroud (tier 3)",
+                "Ancient remnant"
             ],
             "logCount": 2
         }
@@ -3020,14 +3020,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 6
         }
@@ -3043,14 +3043,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 7
         }
@@ -3066,14 +3066,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 8
         }

@@ -237,12 +237,12 @@
             "category": "Bosses",
             "logName": "Zulrah",
             "include": [
-                "Zul-andra teleport",
                 "Serpentine visage",
-                "Uncut onyx",
-                "Tanzanite fang",
                 "Magic fang",
-                "Zulrah's scales"
+                "Zulrah's scales",
+                "Tanzanite fang",
+                "Zul-andra teleport",
+                "Uncut onyx"
             ],
             "logCount": 1
         }
@@ -258,12 +258,12 @@
             "category": "Bosses",
             "logName": "Zulrah",
             "include": [
-                "Zul-andra teleport",
                 "Serpentine visage",
-                "Uncut onyx",
-                "Tanzanite fang",
                 "Magic fang",
-                "Zulrah's scales"
+                "Zulrah's scales",
+                "Tanzanite fang",
+                "Zul-andra teleport",
+                "Uncut onyx"
             ],
             "logCount": 2
         }
@@ -649,12 +649,12 @@
             "category": "Minigames",
             "logName": "Castle Wars",
             "include": [
-                "Decorative boots",
-                "Decorative sword",
                 "Decorative shield",
+                "Decorative full helm",
+                "Decorative sword",
+                "Decorative boots",
                 "Decorative helm",
-                "Decorative armour",
-                "Decorative full helm"
+                "Decorative armour"
             ],
             "logCount": 11
         }
@@ -670,12 +670,12 @@
             "category": "Minigames",
             "logName": "Castle Wars",
             "include": [
-                "Decorative boots",
-                "Decorative sword",
                 "Decorative shield",
+                "Decorative full helm",
+                "Decorative sword",
+                "Decorative boots",
                 "Decorative helm",
-                "Decorative armour",
-                "Decorative full helm"
+                "Decorative armour"
             ],
             "logCount": 14
         }
@@ -1027,9 +1027,9 @@
             "category": "Minigames",
             "logName": "Tithe Farm",
             "exclude": [
+                "Gricoller's can",
                 "Seed box",
-                "Herb sack",
-                "Gricoller's can"
+                "Herb sack"
             ],
             "logCount": 2
         }
@@ -1045,9 +1045,9 @@
             "category": "Minigames",
             "logName": "Tithe Farm",
             "exclude": [
+                "Gricoller's can",
                 "Seed box",
-                "Herb sack",
-                "Gricoller's can"
+                "Herb sack"
             ],
             "logCount": 3
         }
@@ -1063,9 +1063,9 @@
             "category": "Minigames",
             "logName": "Tithe Farm",
             "exclude": [
+                "Gricoller's can",
                 "Seed box",
-                "Herb sack",
-                "Gricoller's can"
+                "Herb sack"
             ],
             "logCount": 4
         }
@@ -1098,12 +1098,12 @@
             "logName": "Trouble Brewing",
             "exclude": [
                 "Phasmatys flag",
-                "Cutthroat flag",
-                "Treasure flag",
-                "Gilded smile flag",
                 "Lucky shot flag",
-                "The stuff",
                 "rum",
+                "Cutthroat flag",
+                "The stuff",
+                "Gilded smile flag",
+                "Treasure flag",
                 "Bronze fist flag"
             ],
             "logCount": 3
@@ -1121,12 +1121,12 @@
             "logName": "Trouble Brewing",
             "exclude": [
                 "Phasmatys flag",
-                "Cutthroat flag",
-                "Treasure flag",
-                "Gilded smile flag",
                 "Lucky shot flag",
-                "The stuff",
                 "rum",
+                "Cutthroat flag",
+                "The stuff",
+                "Gilded smile flag",
+                "Treasure flag",
                 "Bronze fist flag"
             ],
             "logCount": 6
@@ -1610,8 +1610,8 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Leaf-bladed battleaxe",
-                "Mystic robe top (light)"
+                "Mystic robe top (light)",
+                "Leaf-bladed battleaxe"
             ],
             "logCount": 1
         }
@@ -1627,8 +1627,8 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Leaf-bladed battleaxe",
-                "Mystic robe top (light)"
+                "Mystic robe top (light)",
+                "Leaf-bladed battleaxe"
             ],
             "logCount": 2
         }
@@ -1676,8 +1676,8 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Rune boots",
-                "Adamant boots"
+                "Adamant boots",
+                "Rune boots"
             ],
             "logCount": 1
         }
@@ -1693,8 +1693,8 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Rune boots",
-                "Adamant boots"
+                "Adamant boots",
+                "Rune boots"
             ],
             "logCount": 2
         }
@@ -1726,10 +1726,10 @@
             "category": "Other",
             "logName": "TzHaar",
             "exclude": [
-                "Toktz-mej-tal",
+                "Obsidian platelegs",
                 "Obsidian helmet",
                 "Obsidian platebody",
-                "Obsidian platelegs"
+                "Toktz-mej-tal"
             ],
             "logCount": 3
         }
@@ -1745,10 +1745,10 @@
             "category": "Other",
             "logName": "TzHaar",
             "exclude": [
-                "Toktz-mej-tal",
+                "Obsidian platelegs",
                 "Obsidian helmet",
                 "Obsidian platebody",
-                "Obsidian platelegs"
+                "Toktz-mej-tal"
             ],
             "logCount": 4
         }
@@ -1764,10 +1764,10 @@
             "category": "Other",
             "logName": "TzHaar",
             "exclude": [
-                "Toktz-mej-tal",
+                "Obsidian platelegs",
                 "Obsidian helmet",
                 "Obsidian platebody",
-                "Obsidian platelegs"
+                "Toktz-mej-tal"
             ],
             "logCount": 5
         }
@@ -1783,10 +1783,10 @@
             "category": "Other",
             "logName": "TzHaar",
             "exclude": [
-                "Toktz-mej-tal",
+                "Obsidian platelegs",
                 "Obsidian helmet",
                 "Obsidian platebody",
-                "Obsidian platelegs"
+                "Toktz-mej-tal"
             ],
             "logCount": 6
         }
@@ -2060,10 +2060,10 @@
             "category": "Minigames",
             "logName": "Mahogany Homes",
             "exclude": [
-                "Plank sack",
                 "Supply crate",
-                "Amy's saw",
-                "Hosidius blueprints"
+                "Plank sack",
+                "Hosidius blueprints",
+                "Amy's saw"
             ],
             "logCount": 1
         }
@@ -2079,10 +2079,10 @@
             "category": "Minigames",
             "logName": "Mahogany Homes",
             "exclude": [
-                "Plank sack",
                 "Supply crate",
-                "Amy's saw",
-                "Hosidius blueprints"
+                "Plank sack",
+                "Hosidius blueprints",
+                "Amy's saw"
             ],
             "logCount": 2
         }
@@ -2122,7 +2122,7 @@
     {
         "_id": 136,
         "name": "Get a Ward upgrade kit",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/1/19/Ward_upgrade_kit_detail.png/150px-Ward_upgrade_kit_detail.png?7052f",
@@ -2131,7 +2131,7 @@
     {
         "_id": 137,
         "name": "Get a Granite clamp",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/6/6b/Granite_clamp_detail.png/150px-Granite_clamp_detail.png?7627d",
@@ -2140,7 +2140,7 @@
     {
         "_id": 138,
         "name": "Get a Volcanic whip mix",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/5/59/Volcanic_whip_mix_detail_animated.gif/120px-Volcanic_whip_mix_detail_animated.gif?f6fd3",
@@ -2149,7 +2149,7 @@
     {
         "_id": 139,
         "name": "Get a Frozen whip mix",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/e/e4/Frozen_whip_mix_detail.png/120px-Frozen_whip_mix_detail.png?20473",
@@ -2158,7 +2158,7 @@
     {
         "_id": 140,
         "name": "Get a Steam staff upgrade kit",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/3/3e/Steam_staff_upgrade_kit_detail.png/150px-Steam_staff_upgrade_kit_detail.png?7627d",
@@ -2167,7 +2167,7 @@
     {
         "_id": 141,
         "name": "Get a Lava staff upgrade kit",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/c/c9/Lava_staff_upgrade_kit_detail.png/150px-Lava_staff_upgrade_kit_detail.png?7627d",
@@ -2176,7 +2176,7 @@
     {
         "_id": 142,
         "name": "Get a Dragon pickaxe upgrade kit",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/f/f8/Dragon_pickaxe_upgrade_kit_detail.png/150px-Dragon_pickaxe_upgrade_kit_detail.png?7627d",
@@ -2185,7 +2185,7 @@
     {
         "_id": 143,
         "name": "Get an Ornate maul handle",
-        "isLms": true,
+        "isLMS": true,
         "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/a/a2/Ornate_maul_handle_detail.png/120px-Ornate_maul_handle_detail.png?f9782",
@@ -2234,8 +2234,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 5
         }
@@ -2251,8 +2251,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 6
         }
@@ -2268,8 +2268,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 7
         }
@@ -2301,8 +2301,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 8
         }
@@ -2318,8 +2318,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 9
         }
@@ -2463,14 +2463,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 2
         }
@@ -2486,14 +2486,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 3
         }
@@ -2509,14 +2509,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 4
         }
@@ -2532,14 +2532,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 5
         }

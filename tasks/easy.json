@@ -424,12 +424,12 @@
             "category": "Minigames",
             "logName": "Castle Wars",
             "include": [
-                "Decorative boots",
-                "Decorative sword",
                 "Decorative shield",
+                "Decorative full helm",
+                "Decorative sword",
+                "Decorative boots",
                 "Decorative helm",
-                "Decorative armour",
-                "Decorative full helm"
+                "Decorative armour"
             ],
             "logCount": 8
         }
@@ -767,9 +767,9 @@
             "category": "Minigames",
             "logName": "Tithe Farm",
             "exclude": [
+                "Gricoller's can",
                 "Seed box",
-                "Herb sack",
-                "Gricoller's can"
+                "Herb sack"
             ],
             "logCount": 1
         }
@@ -1009,8 +1009,8 @@
             "category": "Other",
             "logName": "Motherlode Mine",
             "exclude": [
-                "Coal bag",
-                "Gem bag"
+                "Gem bag",
+                "Coal bag"
             ],
             "logCount": 1
         }
@@ -1026,8 +1026,8 @@
             "category": "Other",
             "logName": "Motherlode Mine",
             "exclude": [
-                "Coal bag",
-                "Gem bag"
+                "Gem bag",
+                "Coal bag"
             ],
             "logCount": 2
         }
@@ -1043,8 +1043,8 @@
             "category": "Other",
             "logName": "Motherlode Mine",
             "exclude": [
-                "Coal bag",
-                "Gem bag"
+                "Gem bag",
+                "Coal bag"
             ],
             "logCount": 3
         }
@@ -1060,8 +1060,8 @@
             "category": "Other",
             "logName": "Motherlode Mine",
             "exclude": [
-                "Coal bag",
-                "Gem bag"
+                "Gem bag",
+                "Coal bag"
             ],
             "logCount": 4
         }
@@ -1305,10 +1305,10 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Mithril boots",
-                "Iron boots",
-                "Bronze boots",
                 "Black boots",
+                "Mithril boots",
+                "Bronze boots",
+                "Iron boots",
                 "Steel boots"
             ],
             "logCount": 1
@@ -1325,10 +1325,10 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Mithril boots",
-                "Iron boots",
-                "Bronze boots",
                 "Black boots",
+                "Mithril boots",
+                "Bronze boots",
+                "Iron boots",
                 "Steel boots"
             ],
             "logCount": 2
@@ -1345,10 +1345,10 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Mithril boots",
-                "Iron boots",
-                "Bronze boots",
                 "Black boots",
+                "Mithril boots",
+                "Bronze boots",
+                "Iron boots",
                 "Steel boots"
             ],
             "logCount": 3
@@ -1365,10 +1365,10 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Mithril boots",
-                "Iron boots",
-                "Bronze boots",
                 "Black boots",
+                "Mithril boots",
+                "Bronze boots",
+                "Iron boots",
                 "Steel boots"
             ],
             "logCount": 4
@@ -1385,10 +1385,10 @@
             "category": "Other",
             "logName": "Slayer",
             "include": [
-                "Mithril boots",
-                "Iron boots",
-                "Bronze boots",
                 "Black boots",
+                "Mithril boots",
+                "Bronze boots",
+                "Iron boots",
                 "Steel boots"
             ],
             "logCount": 5
@@ -1503,10 +1503,10 @@
             "category": "Other",
             "logName": "TzHaar",
             "exclude": [
-                "Toktz-mej-tal",
+                "Obsidian platelegs",
                 "Obsidian helmet",
                 "Obsidian platebody",
-                "Obsidian platelegs"
+                "Toktz-mej-tal"
             ],
             "logCount": 1
         }
@@ -1522,10 +1522,10 @@
             "category": "Other",
             "logName": "TzHaar",
             "exclude": [
-                "Toktz-mej-tal",
+                "Obsidian platelegs",
                 "Obsidian helmet",
                 "Obsidian platebody",
-                "Obsidian platelegs"
+                "Toktz-mej-tal"
             ],
             "logCount": 2
         }
@@ -1605,9 +1605,9 @@
             "category": "Other",
             "logName": "Miscellaneous",
             "include": [
-                "Dark totem top",
+                "Dark totem base",
                 "Dark totem middle",
-                "Dark totem base"
+                "Dark totem top"
             ],
             "logCount": 1
         }
@@ -1623,9 +1623,9 @@
             "category": "Other",
             "logName": "Miscellaneous",
             "include": [
-                "Dark totem top",
+                "Dark totem base",
                 "Dark totem middle",
-                "Dark totem base"
+                "Dark totem top"
             ],
             "logCount": 2
         }
@@ -1641,9 +1641,9 @@
             "category": "Other",
             "logName": "Miscellaneous",
             "include": [
-                "Dark totem top",
+                "Dark totem base",
                 "Dark totem middle",
-                "Dark totem base"
+                "Dark totem top"
             ],
             "logCount": 3
         }
@@ -1932,8 +1932,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 1
         }
@@ -1949,8 +1949,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 2
         }
@@ -1966,8 +1966,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 3
         }
@@ -1983,8 +1983,8 @@
             "category": "Bosses",
             "logName": "Tempoross",
             "exclude": [
-                "Tiny tempor",
-                "Dragon harpoon"
+                "Dragon harpoon",
+                "Tiny tempor"
             ],
             "logCount": 4
         }
@@ -2160,14 +2160,14 @@
             "category": "Other",
             "logName": "Forestry",
             "exclude": [
-                "Pheasant hat",
-                "Lumberjack boots",
-                "Lumberjack top",
-                "Pheasant boots",
                 "Lumberjack legs",
-                "Pheasant cape",
+                "Pheasant legs",
+                "Pheasant boots",
                 "Lumberjack hat",
-                "Pheasant legs"
+                "Lumberjack boots",
+                "Pheasant hat",
+                "Lumberjack top",
+                "Pheasant cape"
             ],
             "logCount": 1
         }
@@ -2184,9 +2184,9 @@
             "logName": "Forestry",
             "include": [
                 "Pheasant hat",
-                "Pheasant boots",
+                "Pheasant legs",
                 "Pheasant cape",
-                "Pheasant legs"
+                "Pheasant boots"
             ],
             "logCount": 4
         }

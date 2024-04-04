@@ -58,15 +58,15 @@ def combine_tasks_with_col_log_data(tasks, wiki_urls, tips, images, col_log_data
         new_task = {
             "_id": i,
             "name": task_name,
-            "isLms": is_lms,
+            "isLMS": is_lms,
             "tip": tip,
             "wikiLink": url,
             "wikiImage": wikiImage['taskImage'],
             "assetImage": list(task.values())[0],
             "colLogData": col_log_data
         }
-        if not new_task['isLms']:
-            del new_task['isLms']
+        if not new_task['isLMS']:
+            del new_task['isLMS']
         if new_task['colLogData'] is None:
             del new_task['colLogData']
         new_tasks.append(new_task)
@@ -80,14 +80,14 @@ def combine_tasks(tasks, wiki_urls, tips, images):
         new_task = {
             "_id": i,
             "name": list(task.keys())[0],
-            "isLms": list(task.values())[1],
+            "isLMS": list(task.values())[1],
             "tip": tip,
             "wikiLink": url,
             "wikiImage": wikiImage['taskImage'],
             "assetImage": list(task.values())[0]
         }
-        if not new_task['isLms']:
-            del new_task['isLms']
+        if not new_task['isLMS']:
+            del new_task['isLMS']
         new_tasks.append(new_task)
         i += 1
     return new_tasks
@@ -98,12 +98,12 @@ def combine_tasks_no_tip(tasks, wiki_urls):
         new_task = {
             "_id": i + 1,
             "name": list(task.keys())[0],
-            "isLms": False if len(list(task.values())) == 1 else list(task.values())[1],
+            "isLMS": False if len(list(task.values())) == 1 else list(task.values())[1],
             "assetImage": list(task.values())[0],
             "wikiLink": url
         }
-        if not new_task['isLms']:
-            del new_task['isLms']
+        if not new_task['isLMS']:
+            del new_task['isLMS']
         new_tasks.append(new_task)
     return new_tasks
 
