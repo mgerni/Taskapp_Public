@@ -1,5 +1,6 @@
 import requests
 import json
+from tasklists import Task
 
 def get_collection_log(rsn):
     rsn = rsn.replace(' ', '%20')
@@ -8,7 +9,7 @@ def get_collection_log(rsn):
 
     return response.status_code, response_info
 
-def check_collection_log(task_list, log_data):
+def check_collection_log(task_list: list[Task], log_data):
     missing_tasks = []
     valid = True
     debug = False
@@ -19,40 +20,49 @@ def check_collection_log(task_list, log_data):
         log_data['collectionLog']['tabs']['Bosses']['Wintertodt']['items'][1]['obtained'] = False
         log_data['collectionLog']['tabs']['Bosses']['Tempoross']['items'][4]['obtained'] = False
         log_data['collectionLog']['tabs']['Other']['Slayer']['items'][0]['obtained'] = False
-        
+
     for i, task in enumerate(task_list, 1):
-        taskname = task['taskName']
-        category = task['category']
-        logname = task['logName']
+        if task.col_log_data is None:
+            continue
+
+        taskname = task.name
+        category = task.col_log_data.category
+        logname = task.col_log_data.log_name
+        include_list = task.col_log_data.include
+        exclude_list = task.col_log_data.exclude
+        db_count = task.col_log_data.log_count  # Expected number of logs for a given task
+        log_count = 0  # Current count of that log in collection log data
+
+        # print(log_data)
         items = log_data['collectionLog']['tabs'][category][logname]['items']
-        
-        if task.get('include'):
-            for item in items:
-                if item['name'] in task['include']:
-                    if item['obtained'] == True:
-                        task['log_count'] += 1
 
-                    if task['db_count'] == task['log_count']:
+        if include_list:
+            for item in items:
+                if item['name'] in include_list:
+                    if item['obtained']:
+                        log_count += 1
+
+                    if db_count == log_count:
                         break
-            
-            if task['db_count'] != task['log_count']:
+
+            if db_count != log_count:
                 valid = False
                 missing_tasks.append(taskname)
-            print('[%s]: Proccessed Task: [%s:%s] in %s. Counts: [DB: %s] [LOG: %s]' %(i, taskname, item['name'], logname, task['db_count'], task['log_count']))
+            print('[%s]: Proccessed Task: [%s:%s] in %s. Counts: [DB: %s] [LOG: %s]' %(i, taskname, item['name'], logname, db_count, log_count))
 
-        if task.get('exclude'):
+        if exclude_list:
             for item in items:
-                if item['name'] not in task['exclude']:
-                    if item['obtained'] == True:
-                        task['log_count'] += 1
+                if item['name'] not in exclude_list:
+                    if item['obtained']:
+                        log_count += 1
 
-                    if task['db_count'] == task['log_count']:
+                    if db_count == log_count:
                         break
-            
-            if task['db_count'] != task['log_count']:
+
+            if db_count != log_count:
                 valid = False
                 missing_tasks.append(taskname)
-            print('[%s]: Proccessed Task: [%s:%s] in %s. Counts: [DB: %s] [LOG: %s]' %(i, taskname, item['name'], logname, task['db_count'], task['log_count']))      
+            print('[%s]: Proccessed Task: [%s:%s] in %s. Counts: [DB: %s] [LOG: %s]' %(i, taskname, item['name'], logname, db_count, log_count))
     return valid, missing_tasks
 
 if __name__ == '__main__':

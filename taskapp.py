@@ -6,6 +6,7 @@ import bcrypt
 import config
 from functools import wraps
 import task_login
+import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
                            get_task_lists, manual_complete_tasks, manual_revert_tasks,
                            import_spreadsheet, official_check, uncomplete_all_tasks, get_tier_status, lms_check, lms_status_change,
@@ -13,7 +14,6 @@ from task_database import (get_taskCurrent, generate_task, complete_task, get_ta
                            complete_task_unofficial_tier)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
-from collection_log import easy_log_slots, medium_log_slots, hard_log_slots
 
 app = Flask(__name__)
 
@@ -568,15 +568,9 @@ def collection_log_check():
     rs_username = form_data['username']
     log_data = get_collection_log(rs_username)
     if log_data[0] == 200:
-        easy_check = check_collection_log(easy_log_slots, log_data[1])
-        medium_check = check_collection_log(medium_log_slots, log_data[1])
-        hard_check = check_collection_log(hard_log_slots, log_data[1])
-        for task in easy_log_slots:
-            task['log_count'] = 0
-        for task in medium_log_slots:
-            task['log_count'] = 0
-        for task in hard_log_slots:
-            task['log_count'] = 0
+        easy_check = check_collection_log(tasklists.easy, log_data[1])
+        medium_check = check_collection_log(tasklists.medium, log_data[1])
+        hard_check = check_collection_log(tasklists.hard, log_data[1])
 
         return render_template('collection_log_check.html',
         rs_username = rs_username,

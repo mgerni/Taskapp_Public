@@ -1,4 +1,3 @@
-import old_tasklist
 import random
 import gspread
 import re
@@ -15,7 +14,7 @@ def combine_tasks(tasks: list[tasklists.Task]):
         new_tasks.append(
             {
                 "_id": task.id,
-                "taskname": {task.name: task.asset_image},
+                "taskname": {task.name: task.asset_image, 'LMS': task.is_lms},
                 "status": 'Incomplete',
                 "taskCurrent": False,
                 "taskTip": task.tip,
@@ -80,15 +79,15 @@ def add_task_account(username, isOfficial, lmsEnabled):
         "username": str(username),
         "isOfficial": bool(isOfficial),
         "lmsEnabled": bool(lmsEnabled),
-        "easyTasks": combine_tasks(tasklists.easy_tasks),
-        "mediumTasks": combine_tasks(tasklists.medium_tasks),
-        "hardTasks": combine_tasks(tasklists.hard_tasks),
-        "eliteTasks": combine_tasks(tasklists.elite_tasks),
-        "bossPetTasks": combine_tasks(tasklists.boss_pet_tasks),
-        "skillPetTasks": combine_tasks(tasklists.skill_pet_tasks),
-        "otherPetTasks": combine_tasks(tasklists.other_pet_tasks),
-        "extraTasks": combine_tasks(tasklists.extra_tasks),
-        "passiveTasks": combine_tasks(tasklists.passive_tasks),
+        "easyTasks": combine_tasks(tasklists.easy),
+        "mediumTasks": combine_tasks(tasklists.medium),
+        "hardTasks": combine_tasks(tasklists.hard),
+        "eliteTasks": combine_tasks(tasklists.elite),
+        "bossPetTasks": combine_tasks(tasklists.boss_pet),
+        "skillPetTasks": combine_tasks(tasklists.skill_pet),
+        "otherPetTasks": combine_tasks(tasklists.other_pet),
+        "extraTasks": combine_tasks(tasklists.extra),
+        "passiveTasks": combine_tasks(tasklists.passive),
         "easyFirst": False,
         "hardFirst": False,
         "mediumFirst": False,
@@ -729,15 +728,15 @@ def import_spreadsheet(username, url):
 
 
             task_list = [
-                tasklists.easy_tasks,
-                tasklists.medium_tasks,
-                tasklists.hard_tasks,
-                tasklists.elite_tasks,
-                tasklists.boss_pet_tasks,
-                tasklists.skill_pet_tasks,
-                tasklists.other_pet_tasks,
-                tasklists.extra_tasks,
-                tasklists.passive_tasks
+                tasklists.easy,
+                tasklists.medium,
+                tasklists.hard,
+                tasklists.elite,
+                tasklists.boss_pet,
+                tasklists.skill_pet,
+                tasklists.other_pet,
+                tasklists.extra,
+                tasklists.passive
             ]
 
             taskdb_names = [
@@ -968,39 +967,39 @@ def update_tip_url():
     coll = mydb['taskAccounts']
     for users in coll.find():
         user = users['username']
-        for task in tasklists.easy_tasks:
+        for task in tasklists.easy:
             coll.update_one({'username': user, 'easyTasks._id': task.id},
             {'$set':{'easyTasks.$.taskTip': task.tip, 'easyTasks.$.wikiLink': task.wiki_link}})
 
-        for task in tasklists.medium_tasks:
+        for task in tasklists.medium:
             coll.update_one({'username': user, 'mediumTasks._id': task.id},
             {'$set':{'mediumTasks.$.taskTip': task.tip, 'mediumTasks.$.wikiLink':  task.wiki_link}})
 
-        for task in tasklists.hard_tasks:
+        for task in tasklists.hard:
             coll.update_one({'username': user, 'hardTasks._id': task.id},
             {'$set':{'hardTasks.$.taskTip': task.tip, 'hardTasks.$.wikiLink':  task.wiki_link}})
 
-        for task in tasklists.elite_tasks:
+        for task in tasklists.elite:
             coll.update_one({'username': user, 'eliteTasks._id': task.id},
             {'$set':{'eliteTasks.$.taskTip': task.tip, 'eliteTasks.$.wikiLink':  task.wiki_link}})
 
-        for task in tasklists.boss_pet_tasks:
+        for task in tasklists.boss_pet:
             coll.update_one({'username': user, 'bossPetTasks._id': task.id},
             {'$set':{'bossPetTasks.$.wikiLink': task.wiki_link}})
 
-        for task in tasklists.other_pet_tasks:
+        for task in tasklists.other_pet:
             coll.update_one({'username': user, 'otherPetTasks._id': task.id},
             {'$set':{'otherPetTasks.$.wikiLink': task.wiki_link}})
 
-        for task in tasklists.other_pet_tasks:
+        for task in tasklists.other_pet:
             coll.update_one({'username': user, 'skillPetTasks._id': task.id},
             {'$set':{'skillPetTasks.$.wikiLink': task.wiki_link}})
 
-        for task in tasklists.extra_tasks:
+        for task in tasklists.extra:
             coll.update_one({'username': user, 'extraTasks._id': task.id},
             {'$set':{'extraTasks.$.wikiLink': task.wiki_link}})
 
-        for task in tasklists.passive_tasks:
+        for task in tasklists.passive:
             coll.update_one({'username': user, 'passiveTasks._id': task.id},
             {'$set':{'passiveTasks.$.wikiLink': task.wiki_link}})
 
