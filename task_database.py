@@ -729,15 +729,15 @@ def import_spreadsheet(username, url):
 
 
             task_list = [
-                old_tasklist.easy,
-                old_tasklist.medium,
-                old_tasklist.hard,
-                old_tasklist.elite,
-                old_tasklist.boss_pet,
-                old_tasklist.skill_pet,
-                old_tasklist.other_pet,
-                old_tasklist.extra,
-                old_tasklist.passive
+                tasklists.easy_tasks,
+                tasklists.medium_tasks,
+                tasklists.hard_tasks,
+                tasklists.elite_tasks,
+                tasklists.boss_pet_tasks,
+                tasklists.skill_pet_tasks,
+                tasklists.other_pet_tasks,
+                tasklists.extra_tasks,
+                tasklists.passive_tasks
             ]
 
             taskdb_names = [
