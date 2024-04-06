@@ -37,44 +37,10 @@
                 <table class="table text-white">
                     <div class="container mt-3 text-white bg-dark">
                         <tbody id="tableDetails">
-                        {% for item in items %}
-                            {% if item.is_completed %}
-                                <tr class="bg-success task{{item.id}}_{{task_type}}" id="completed-task-{{task_type}}">
-                            {% elif item.is_current %}
-                                <tr class="bg-warning">
-                            {% else %}
-                                <tr class="task{{item.id}}_{{task_type}}" id="incomplete-task-{{task_type}}" name="{{item.name}}">
-                            {% endif %}
-                                    <td class="text-center align-middle">
-                                        <button type="button" class="btn btn-lg taskHelpModal" tip="{{item.tip}}"
-                                                link="{{item.wiki_link}}" value="{{item.name}}">
-                                            <i class="bi bi-info-circle text-{{'white' if item.is_current or item.is_completed else 'success'}} fw-bold"></i>
-                                        </button>
-                                    </td>
-                                    <td class="text-center align-middle">{{item.name}}</td>
-                                    <td class="text-center align-middle"><img src="/static/assets/placeholder_complete.png"
-                                                                              data-src="/static/assets/{{item.asset_image}}" width="40"
-                                                                              height="40" alt="task_image" class="lazyload">
-                                    </td>
-                                    <td class="text-center align-middle">
-                                        <form>
-                                            {% if item.is_completed %}
-                                                <button class="btn btn-default revertButton" task_id="{{item.id}}" type="button"
-                                                        name="{{task_type}}Tasks">
-                                                    <img src="/static/assets/placeholder_complete.png"
-                                                         data-src="/static/Remove_button.png" alt="check image" class="lazyload">
-                                                </button>
-                                            {% elif item.is_current %}
-                                            {% else %}
-                                                <button class="btn btn-default updateButton" task_id="{{item.id}}" type="button"
-                                                        name="{{task_type}}Tasks">
-                                                    <img src="/static/assets/placeholder_incomplete.png"
-                                                         data-src="/static/check_button.png" alt="check image" class="lazyload">
-                                                </button>
-                                            {% endif %}
-                                        </form>
-                                    </td>
-                                </tr>
+                        {% for task in items %}
+                            {% with current_task_type=task_type %}
+                                {% include "fragments/task.html" %}
+                            {% endwith %}
                         {% endfor %}
 
                         <tr class="d-none" id="none-found">

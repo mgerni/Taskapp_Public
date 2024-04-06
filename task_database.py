@@ -7,7 +7,37 @@ import config
 
 mydb = config.MONGO_CLIENT["TaskApp"]
 
-# Ideally, we don't store all of this in Mongo but here is a rewrite with the new tasklist changes to keep it compatible
+'''
+Proposed new Mongo format for TaskApp db
+{
+    _id : randomly generated id user id,
+    username: '',
+    isOfficial: true/false,
+    lmsEnabled: false/false,
+    easyTier: { 
+        currentTask: {
+            "taskId": "Maybe a new id field here that matches new field in task list jsons?",
+            "assignedDate": "some date/time format"
+        },
+        completedTasks: [ # only stores completed
+            {
+                "taskId": "Maybe a new id field here that matches new field in task list jsons?",
+                "isCompleted": true,
+                "completionDate": "some date/time format", # both dates are nullable
+                "startedDate": "some date/time format from above assignedDate field"
+            },...
+        ],
+    }
+    medium: {same as easyTier},
+    hard: {same as easyTier},
+    elite: {same as easyTier},
+    pets: {same as easyTier},
+    extra: {same as easyTier},
+    passive: {same as easyTier}
+}
+'''
+
+
 def combine_tasks(tasks: list[tasklists.Task]):
     new_tasks = []
     for task in tasks:

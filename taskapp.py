@@ -135,27 +135,24 @@ def filter_lms_to_class(t_list):
                                       id=item['_id'],
                                       is_current=item['taskCurrent'],
                                       wiki_link=item['wikiLink'],
-                                      tip=item['taskTip'] if 'taskTip' in item else None
+                                      tip=item.get('tip')
                                       ))
     return items
 
+# Converts dict from users task data to a list of user data represented as another list.
+# Also filters out LMS fields
+# Going forward, convert pages to use the class above instead
 def filter_lms(t_list):
     items = []
     for item in t_list:
         for x in item['taskname'].items():
             if 'LMS' not in x:
-                # print(x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],))
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['taskTip'],item['wikiLink'],)
-                items.append(x)
-    return items
-
-def filter_lms_no_tip(t_list):
-    items = []
-    for item in t_list:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                x = x + (item['status'], item['_id'],item['taskCurrent'],item['wikiLink'],)
-                items.append(x)
+                tip = item.get('taskTip')
+                newItemAsList = [x[0], x[1], item['status'], item['_id'],item['taskCurrent'],]
+                if tip is not None:
+                    newItemAsList.append(tip)
+                newItemAsList.append(item['wikiLink'])
+                items.append(newItemAsList)
     return items
 
 
@@ -316,7 +313,6 @@ def login():
                 attempted_password = form_data['password']
                 username_found = coll.find_one({"username": attempted_username})
                 if username_found:
-                    user_val = username_found['username']
                     passwordcheck = username_found['hashed_password']
                     if bcrypt.checkpw(attempted_password.encode('utf-8'), passwordcheck):
                         session['logged_in'] = True
@@ -351,15 +347,11 @@ def logout():
 @app.route('/dashboard/', methods=['GET', 'POST'])
 @login_required
 def dashboard():
+    user_info = BasePageInfo()
     username = session['username']
-    email_verify = task_login.email_verify(username)
-    email_bool = email_verify[0]
-    email_val = email_verify[1]
-    official = official_check(username)
-    if official:
-        progress = get_task_progress(username)
+    progress = get_task_progress(username)
+    if user_info.official:
         current_task = get_taskCurrent(username)
-        rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
         if current_task is not None:
             task = current_task[0]
             image = current_task[1]
@@ -369,10 +361,10 @@ def dashboard():
             return render_template(
                 'index.html',
                 username=username,
-                rank_icon=rank_icon,
-                email_verify=email_bool,
-                email_val=email_val,
-                official=official,
+                rank_icon=user_info.rank_icon,
+                email_verify=user_info.email_bool,
+                email_val=user_info.email_val,
+                official=user_info.official,
                 taskapp_email=taskapp_email,
                 task=task,
                 image=image,
@@ -394,10 +386,10 @@ def dashboard():
             return render_template(
                 'index.html',
                 username=username,
-                rank_icon=rank_icon,
-                email_verify=email_bool,
-                email_val=email_val,
-                official=official,
+                rank_icon=user_info.rank_icon,
+                email_verify=user_info.email_bool,
+                email_val=user_info.email_val,
+                official=user_info.official,
                 taskapp_email=taskapp_email,
                 task=task,
                 image=image,
@@ -413,8 +405,6 @@ def dashboard():
                 elite_first=elite_first
                 )
     else:
-        rank_icon = unofficial_icon(username)
-        progress = get_task_progress(username)
         easy_progress, medium_progress, hard_progress, elite_progress = progress[0], progress[1], progress[2], progress[3]
         current_task_easy = get_taskCurrent_tier(username, 'easyTasks')
 
@@ -722,11 +712,11 @@ def task_list():
     items_medium = filter_lms(task[1])
     items_hard = filter_lms(task[2])
     items_elite = filter_lms(task[3])
-    items_bosspet = filter_lms_no_tip(task[4])
-    items_skillpet = filter_lms_no_tip(task[5])
-    items_otherpet = filter_lms_no_tip(task[6])
-    items_extra = filter_lms_no_tip(task[7])
-    items_passive = filter_lms_no_tip(task[8])
+    items_bosspet = filter_lms(task[4])
+    items_skillpet = filter_lms(task[5])
+    items_otherpet = filter_lms(task[6])
+    items_extra = filter_lms(task[7])
+    items_passive = filter_lms(task[8])
 
     return render_template(
         'task_list.html',
@@ -754,7 +744,7 @@ def single_task_list(task_list_index, list_title, task_type):
     return render_template(
         'single-task-list.html',
         list_title=list_title,
-        task_type=task_type, # Needed as it is ingrained in JS for updating tasks
+        task_type=task_type,  # Needed as it is ingrained in JS for updating tasks
         username=user_info.username,
         email_verify=user_info.email_bool,
         rank_icon=user_info.rank_icon,
@@ -795,9 +785,9 @@ def task_list_elite():
 def task_list_pets():
     user_info = BasePageInfo()
     task = get_task_lists(user_info.username)
-    items_bosspet = filter_lms_no_tip(task[4])
-    items_skillpet = filter_lms_no_tip(task[5])
-    items_otherpet = filter_lms_no_tip(task[6])
+    items_bosspet = filter_lms(task[4])
+    items_skillpet = filter_lms(task[5])
+    items_otherpet = filter_lms(task[6])
 
     return render_template(
         'task-list-pets-new.html',
@@ -824,6 +814,17 @@ def task_list_extra():
 def task_list_passive():
     return single_task_list(task_list_index=8, list_title='Passive Task List', task_type='passive')
 
+tier_to_type = {
+    "easyTasks": 'easy',
+    "mediumTasks": 'medium',
+    "hardTasks": 'hard',
+    "eliteTasks": 'elite',
+    "bossPetTasks": 'pet',
+    "skillPetTasks": 'pet',
+    "otherPetTasks": 'pet',
+    "passiveTasks": 'passive',
+    "extraTasks": 'extra',
+}
 
 # AJAX route for completing tasks manually on task-list page(s).
 # only returns HTML specific to the task.
@@ -839,41 +840,9 @@ def update():
     image = task_update[1]
     tip = task_update[2]
     link = task_update[3]
-    if tier == "easyTasks":
-        task_type = 'easy'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-    if tier == "mediumTasks":
-        task_type = 'medium'
 
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "hardTasks":
-        task_type = 'hard'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "eliteTasks":
-        task_type = 'elite'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "bossPetTasks":
-        task_type = 'pets'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "skillPetTasks":
-        task_type = 'pets'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "otherPetTasks":
-        task_type = 'pets'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "passiveTasks":
-        task_type = 'passive'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "extraTasks":
-        task_type = 'extra'
-        return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
+    task_type = tier_to_type[tier]
+    return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
 
 
 # AJAX route for uncompleting/reverting tasks manually on task-list page(s).
@@ -889,41 +858,8 @@ def revert():
     image = task_revert[1]
     tip = task_revert[2]
     link = task_revert[3]
-    if tier == "easyTasks":
-        task_type = 'easy'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "mediumTasks":
-        task_type = 'medium'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "hardTasks":
-        task_type = 'hard'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "eliteTasks":
-        task_type = 'elite'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "bossPetTasks":
-        task_type = 'pets'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "skillPetTasks":
-        task_type = 'pets'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "otherPetTasks":
-        task_type = 'pets'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "passiveTasks":
-        task_type = 'passive'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
-    if tier == "extraTasks":
-        task_type = 'extra'
-        return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
+    task_type = tier_to_type[tier]
+    return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
 
 
 
