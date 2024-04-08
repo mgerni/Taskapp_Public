@@ -14,7 +14,7 @@ def task_info_for_id(task_list, task_id) -> tasklists.Task:
         raise Exception("No id found in list " + task_id)
     return filtered[0]
 
-def task_list_for_tier_string(tier) -> list[tasklists.Task]
+def task_list_for_tier_string(tier) -> list[tasklists.Task]:
     return {
         'easyTasks': tasklists.easy,
         'mediumTasks': tasklists.medium,
