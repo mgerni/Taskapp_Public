@@ -4,8 +4,206 @@ import re
 from math import floor
 import tasklists
 import config
+from dataclasses import dataclass
+from datetime import datetime
+from bson.objectid import ObjectId
+
+def task_info_for_id(task_list, task_id) -> tasklists.Task:
+    filtered = list(filter(lambda x: x.id == task_id, task_list))
+    if len(filtered) == 0:
+        raise Exception("No id found in list " + task_id)
+    return filtered[0]
+
+
+
+
+@dataclass
+class TierProgress:
+    percent_complete: int
+    total: int
+    total_complete: int
+
+@dataclass
+class DatabaseCurrentTask:
+    task_id: int
+    assigned_date: datetime = None
+
+@dataclass
+class DatabaseCompletedTask:
+    task_id: int
+    assigned_date: datetime = None
+    completed_date: datetime = None
+
+@dataclass
+class UserTaskList:
+    current_task: DatabaseCurrentTask
+    completed_tasks: list[DatabaseCompletedTask]
+
+@dataclass
+class UserDatabaseObject:
+    id: ObjectId
+    username: str
+    is_official: bool
+    lms_enabled: bool
+    easy: UserTaskList
+    medium: UserTaskList
+    hard: UserTaskList
+    elite: UserTaskList
+    passive: UserTaskList
+    extra: UserTaskList
+    boss_pets: UserTaskList
+    skill_pets: UserTaskList
+    other_pets: UserTaskList
+
+    def get_task_list(self, tier: str) -> UserTaskList:
+        return {
+            'easyTasks': self.easy,
+            'mediumTasks': self.medium,
+            'hardTasks': self.hard,
+            'eliteTasks': self.elite,
+            'easy': self.easy,
+            'medium': self.medium,
+            'hard': self.hard,
+            'elite': self.elite
+        }[tier]
+
+    def current_task_for_tier(self, tier: str) -> tuple or None:
+        user_task_list = self.get_task_list(tier)
+        if user_task_list.current_task is None:
+            return None
+        task = task_info_for_id(tasklists.list_for_tier(tier), user_task_list.current_task.task_id)
+        # TODO Fix this format
+        return task.name, task.asset_image, tier, task.id, task.tip, task.wiki_link, task.wiki_image
+
+    def current_task(self) -> tuple or None:
+        if self.easy.current_task is not None:
+            return self.current_task_for_tier('easyTasks')
+        elif self.medium.current_task is not None:
+            return self.current_task_for_tier('mediumTasks')
+        elif self.hard.current_task is not None:
+            return self.current_task_for_tier('hardTasks')
+        elif self.elite.current_task is not None:
+            return self.current_task_for_tier('eliteTasks')
+        else:
+            return None
+
+    def get_tier_progress(self, tier: str) -> TierProgress:
+        completed = len(self.get_task_list(tier).completed_tasks)
+        total_tasks = tasklists.list_for_tier(tier)
+        if not self.lms_enabled:
+            total_tasks = list(filter(lambda x: not x.is_lms, total_tasks))
+        total = len(total_tasks)
+        percent = floor(completed / total * 100)
+        return TierProgress(percent, total, completed)
+
 
 mydb = config.MONGO_CLIENT["TaskApp"]
+
+def migrate_user_tier_list(tier_list):
+    filtered_completed_tier_list = filter(lambda x: x['status'] == 'Complete', tier_list)
+    converted_completed_tier_list = list(map(lambda x: {'taskId': x['_id']}, filtered_completed_tier_list))
+    filtered_completed_tier_list = list(filter(lambda x: x['taskCurrent'], tier_list))
+    new_tier_list_object = {}
+    if len(filtered_completed_tier_list) > 0:
+        new_tier_list_object['currentTask'] = {
+            'taskId': filtered_completed_tier_list[0]['_id']
+        }
+    new_tier_list_object['completedTasks'] = converted_completed_tier_list
+    return new_tier_list_object
+
+def migrate_database_user_to_new_format(user: dict) -> dict:
+    return {
+        '_id': user['_id'],
+        'username': user['username'],
+        'isOfficial': user['isOfficial'],
+        'lmsEnabled': user['lmsEnabled'],
+        'tiers': {
+            'easy': migrate_user_tier_list(user['easyTasks']),
+            'medium': migrate_user_tier_list(user['mediumTasks']),
+            'hard': migrate_user_tier_list(user['hardTasks']),
+            'elite': migrate_user_tier_list(user['eliteTasks']),
+            'passive': migrate_user_tier_list(user['passiveTasks']),
+            'extra': migrate_user_tier_list(user['extraTasks']),
+            'bossPets': migrate_user_tier_list(user['bossPetTasks']),
+            'skillPets': migrate_user_tier_list(user['skillPetTasks']),
+            'otherPets': migrate_user_tier_list(user['otherPetTasks'])
+        }
+    }
+
+'''
+migrate_db:
+
+Migrates all users to new format in a new table called taskLists
+'''
+def migrate_db():
+    coll = mydb['taskAccounts']
+    new_coll = mydb['taskLists']  # Can't seem to find a way to easily rewrite to existing collection
+    new_coll.drop()
+    users = coll.find({}, {})
+
+    for user in users:
+        new_coll.insert_one(migrate_database_user_to_new_format(user))
+
+
+def convert_database_tier(data: dict) -> UserTaskList:
+    completed_tasks = list(map(lambda x: DatabaseCompletedTask(task_id=x['taskId']), data['completedTasks']))
+    # Filter tasks that have been removed from tasklist
+    completed_tasks = list(filter())
+    current = data.get('currentTask')
+    if current:
+        current = DatabaseCurrentTask(task_id=current['taskId'])
+    return UserTaskList(current_task=current,
+                        completed_tasks=completed_tasks)
+
+def convert_database_user(user_data: dict) -> UserDatabaseObject:
+    tiers = user_data['tiers']
+
+    def convert_database_tier(tier: str) -> UserTaskList:
+        data = tiers[tier]
+        completed_tasks = list(map(lambda x: DatabaseCompletedTask(task_id=x['taskId']), data['completedTasks']))
+        # Filter tasks that have been removed from tasklist
+        all_current_tier_ids = list(map(lambda x: x.id, tasklists.list_for_tier(tier)))
+        completed_tasks = list(filter(lambda x: x.task_id in all_current_tier_ids, completed_tasks))
+
+        current = data.get('currentTask')
+        if current:
+            current = DatabaseCurrentTask(task_id=current['taskId'])
+        return UserTaskList(current_task=current,
+                            completed_tasks=completed_tasks)
+
+    return UserDatabaseObject(
+        id=user_data['_id'],
+        username=user_data['username'],
+        is_official=user_data['isOfficial'],
+        lms_enabled=user_data['lmsEnabled'],
+        easy=convert_database_tier('easy'),
+        medium=convert_database_tier('medium'),
+        hard=convert_database_tier('hard'),
+        elite=convert_database_tier('elite'),
+        passive=convert_database_tier('passive'),
+        extra=convert_database_tier('extra'),
+        boss_pets=convert_database_tier('bossPets'),
+        skill_pets=convert_database_tier('skillPets'),
+        other_pets=convert_database_tier('otherPets')
+    )
+
+# For old taskList data format
+def get_user(username) -> UserDatabaseObject:
+    coll = mydb['taskAccounts']
+    users = list(coll.find({'username': username}))
+    if len(users) == 0:
+        raise Exception("No user found with username " + username)
+    old_user_data = users[0]
+    return convert_database_user(migrate_database_user_to_new_format(old_user_data))
+
+# For new taskList data format
+def get_user_2(username) -> UserDatabaseObject:
+    coll = mydb['taskLists']
+    users = list(coll.find({'username': username}))
+    if len(users) == 0:
+        raise Exception("No user found with username " + username)
+    user_data = users[0]
+    return convert_database_user(user_data)
 
 
 '''
@@ -109,20 +307,7 @@ Returns:
 
 '''
 def get_taskCurrent(username):
-    task_list = ['easyTasks', 'mediumTasks', 'hardTasks', 'eliteTasks']
-    coll = mydb['taskAccounts']
-    user_info = coll.find({'username': username})
-    for info in user_info:
-        for tier in task_list:
-            task_tier = tier
-            for task in info[tier]:
-                if task['taskCurrent'] == True:
-                    taskcurrent_id = task['_id']
-                    task_tip = task['taskTip']
-                    wiki_url = task['wikiLink']
-                    wiki_image = task['taskImage']
-                    for taskname , taskimage in task['taskname'].items():
-                        return taskname, taskimage, task_tier ,taskcurrent_id, task_tip, wiki_url, wiki_image
+    return get_user(username).current_task()
 
 
 '''
@@ -140,16 +325,7 @@ Returns:
 
 '''
 def get_taskCurrent_tier(username, tier):
-    coll = mydb['taskAccounts']
-    user_info = coll.find({'username': username}, {tier: 1})
-    for task in user_info:
-        for ele in task[tier]:
-            if ele['taskCurrent'] == True:
-                taskcurrent_id = ele['_id']
-                task_tip = ele['taskTip']
-                wiki_url = ele['wikiLink']
-                for taskname, taskimage in ele['taskname'].items():
-                    return taskname, taskimage, tier, taskcurrent_id, task_tip, wiki_url
+    return get_user(username).current_task_for_tier(tier)
 
 
 
@@ -167,9 +343,7 @@ Returns:
 
 '''
 def lms_check(username):
-    coll = mydb['taskAccounts']
-    lms = coll.find_one({'username': username}, {'lmsEnabled': True})
-    return lms['lmsEnabled']
+    return get_user(username).lms_enabled
 
 
 '''
@@ -186,9 +360,7 @@ Returns:
 
 '''
 def official_check(username):
-    coll = mydb['taskAccounts']
-    official = coll.find_one({'username': username}, {'isOfficial' : True})
-    return official['isOfficial']
+    return get_user(username).is_official
 
 '''
 generate_task_unofficial_tier:
@@ -310,8 +482,6 @@ def generate_task(username):
 
 
 
-
-
 '''
 complete_task_unofficial_tier:
 
@@ -416,6 +586,12 @@ def complete_task(username):
 get_tier_status:
 
 The get_tier_status function, gets the tierFirst status of each tier.
+tierFirst is used to add fireworks when page refreshes.
+e.g.
+User completes task -> database updated with easyFirst -> Complete task button refreshes page
+    -> easyFirst is true and fireworks show -> easyFirst set to false somewhere
+    
+TODO Replace with like a variable in redirect or something?
 
 Args:
     str: username - username of the user.
@@ -447,85 +623,15 @@ Returns:
 
 '''
 def get_task_progress(username):
+    user = get_user(username)
+    easy = user.get_tier_progress('easy')
+    medium = user.get_tier_progress('medium')
+    hard = user.get_tier_progress('hard')
+    elite = user.get_tier_progress('elite')
 
-    tasks_easy = []
-    tasks_medium = []
-    tasks_hard = []
-    tasks_elite = []
-    easy_completed = 0
-    medium_completed = 0
-    hard_completed = 0
-    elite_completed = 0
-
-    coll = mydb['taskAccounts']
-
-    task_query_easy = coll.find({'username': username}, {'easyTasks': 1})
-
-    task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
-
-    task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
-
-    task_query_elite = coll.find({'username': username}, {'eliteTasks': 1})
-
-
-    lms_status = lms_check(username)
-
-    for task in task_query_easy:
-        for ele in task['easyTasks']:
-            tasks_easy.append(ele)
-            if lms_status is False:
-                if ele['taskname']['LMS'] is True:
-                    tasks_easy.remove(ele)
-                    if ele['status'] == 'Complete':
-                        easy_completed -= 1
-            if ele['status'] == 'Complete':
-                easy_completed += 1
-    for task in task_query_medium:
-        for ele in task['mediumTasks']:
-            tasks_medium.append(ele)
-            if lms_status is False:
-                if ele['taskname']['LMS'] is True:
-                    tasks_medium.remove(ele)
-                    if ele['status'] == 'Complete':
-                        medium_completed -= 1
-            if ele['status'] == 'Complete':
-                medium_completed += 1
-
-    for task in task_query_hard:
-        for ele in task['hardTasks']:
-            tasks_hard.append(ele)
-            if lms_status is False:
-
-                if ele['taskname']['LMS'] is True:
-                    tasks_hard.remove(ele)
-                    if ele['status'] == 'Complete':
-                        hard_completed -= 1
-            if ele['status'] == 'Complete':
-                hard_completed += 1
-
-    for task in task_query_elite:
-        for ele in task['eliteTasks']:
-            tasks_elite.append(ele)
-            if lms_status is False:
-                if ele['taskname']['LMS'] is True:
-                    tasks_elite.remove(ele)
-                    if ele['status'] == 'Complete':
-                        elite_completed -= 1
-            if ele['status'] == 'Complete':
-                elite_completed += 1
-
-    total_easy = len(tasks_easy)
-    total_medium = len(tasks_medium)
-    total_hard = len(tasks_hard)
-    total_elite = len(tasks_elite)
-
-    percent_easy = floor(easy_completed / total_easy * 100)
-    percent_medium = floor(medium_completed / total_medium * 100)
-    percent_hard = floor(hard_completed / total_hard * 100)
-    percent_elite = floor(elite_completed / total_elite * 100)
-
-
-    return percent_easy, percent_medium, percent_hard, percent_elite, easy_completed, total_easy, medium_completed,total_medium,hard_completed, total_hard, elite_completed, total_elite
+    return easy.percent_complete, medium.percent_complete, hard.percent_complete, elite.percent_complete,\
+        easy.total_complete, easy.total, medium.total_complete, medium.total, hard.total_complete, hard.total,\
+        elite.total_complete, elite.total
 
 
 
@@ -857,7 +963,6 @@ Returns:
 '''
 def username_change(username, username_value):
     coll = mydb['taskAccounts']
-    success, error = False, None
     doc_count_new_username = coll.count_documents({'username': username_value})
     if doc_count_new_username != 0:
         error = 'Username already exists'
@@ -871,14 +976,14 @@ def username_change(username, username_value):
 '''
 official_icon:
 
-The official_icon function, determines the icon to display for official users. 
+The official_icon function, determines the icon to display for official users.
 
 Args:
     int: easy - easy percentage
     int: medium - medium percentage
     int: hard - hard percentage
     int: elite - elite percentage
-    
+
 Returns:
        str: rank_icon - The icon to display.
 
@@ -942,15 +1047,15 @@ def unoffical_log_count(username):
     agility_ticket_count = 0
     task_query = coll.find({'username': username},
     {
-                'easyTasks' : 1,
-                'mediumTasks' : 1,
-                'hardTasks' : 1,
-                'eliteTasks' : 1,
-                'extraTasks' : 1,
-                'bossPetTasks' : 1,
-                'skillPetTasks' : 1,
-                'otherPetTasks' : 1,
-                'passiveTasks' : 1
+        'easyTasks' : 1,
+        'mediumTasks' : 1,
+        'hardTasks' : 1,
+        'eliteTasks' : 1,
+        'extraTasks' : 1,
+        'bossPetTasks' : 1,
+        'skillPetTasks' : 1,
+        'otherPetTasks' : 1,
+        'passiveTasks' : 1
     })
 
     for task in task_query:
@@ -1249,8 +1354,6 @@ def unoffical_log_count(username):
     # print('Easy: %s, Medium: %s, Hard: %s , Elite: %s, Pet: %s: Extra: %s, Passive: %s. TOTAL: %s' % (easy_completed , medium_completed , hard_completed , floor(elite_completed) , pet_completed , extra_completed ,passive_completed, total_count))
     # print(total_count)
     return total_count
-
-
 
 
 '''

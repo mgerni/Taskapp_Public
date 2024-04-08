@@ -61,3 +61,21 @@ extra = read_tasks('extra')
 boss_pet = read_tasks('bossPets')
 skill_pet = read_tasks('skillPets')
 other_pet = read_tasks('otherPets')
+
+#
+def list_for_tier(tier) -> list[Task]:
+    return {
+        'easyTasks': easy,
+        'mediumTasks': medium,
+        'hardTasks': hard,
+        'eliteTasks': elite,
+        'passive': passive,
+        'extra': extra,
+        'bossPets': boss_pet,
+        'skillPets': skill_pet,
+        'otherPets': other_pet,
+        'easy': easy,
+        'medium': medium,
+        'hard': hard,
+        'elite': elite
+    }[tier]
