@@ -55,9 +55,7 @@ class UserDatabaseObject:
 
     def get_tier_progress(self, tier: str) -> TierProgress:
         completed = len(self.get_task_list(tier).completed_tasks)
-        total_tasks = tasklists.list_for_tier(tier)
-        if not self.lms_enabled:
-            total_tasks = list(filter(lambda x: not x.is_lms, total_tasks))
+        total_tasks = tasklists.list_for_tier(tier, self.lms_enabled)
         total = len(total_tasks)
         percent = floor(completed / total * 100)
         return TierProgress(percent, total, completed)

@@ -38,8 +38,8 @@ skill_pet = read_tasks('skillPets')
 other_pet = read_tasks('otherPets')
 
 #
-def list_for_tier(tier) -> list[TaskData]:
-    return {
+def list_for_tier(tier: str, include_lms: bool = True) -> list[TaskData]:
+    all_tasks = {
         'easyTasks': easy,
         'mediumTasks': medium,
         'hardTasks': hard,
@@ -54,3 +54,6 @@ def list_for_tier(tier) -> list[TaskData]:
         'hard': hard,
         'elite': elite
     }[tier]
+    if not include_lms:
+        return list(filter(lambda x: not x.is_lms, all_tasks))
+    return all_tasks

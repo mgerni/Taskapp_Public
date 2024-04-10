@@ -6,7 +6,7 @@ import tasklists
 import config
 from user_dao import UserDatabaseObject, convert_database_user
 from user_migrate import migrate_database_user_to_new_format
-
+from task_types import TaskData
 
 mydb = config.MONGO_CLIENT["TaskApp"]
 
@@ -215,25 +215,20 @@ Returns:
     None
 
 '''
-def generate_task_unofficial_tier(username, tier):
+def generate_task_for_tier(username, tier):
     coll = mydb['taskAccounts']
     user = get_user(username)
-    tasks_list = []
-    lms_enabled = lms_check(username)
-    if get_taskCurrent_tier(username, tier) is None:
-        task_query = coll.find({'username': username}, {tier: 1})
-        for task in task_query:
-            for ele in task[tier]:
-                if ele['status'] == 'Incomplete':
-                    tasks_list.append(ele)
-                    if lms_enabled is False and ele['taskname']['LMS'] is True:
-                        tasks_list.remove(ele)
-    if len(tasks_list) != 0:
-        generated_task = random.choice(tasks_list)
+    uncompleted_tasks = []
+    if user.current_task_for_tier(tier) is None:
+        all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
+        completed_task_ids = list(map(lambda x: x.task_id, user.get_task_list(tier).completed_tasks))
+        uncompleted_tasks = list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
 
-        coll.update_one({'username': username, '%s._id' % tier: generated_task['_id']}, {'$set' : {'%s.$.taskCurrent' % tier: True }})
+    if len(uncompleted_tasks) != 0:
+        generated_task = random.choice(uncompleted_tasks)
+        coll.update_one({'username': username, '%s._id' % tier: generated_task.id}, {'$set' : {'%s.$.taskCurrent' % tier: True }})
     else:
-        task_info = get_taskCurrent_tier(username, tier)
+        task_info = user.current_task_for_tier(tier)
         task_tier = task_info[2]
         task_number = task_info[3]
         coll.update_one({'username': username, '%s._id' % task_tier : task_number}, {'$set' : {'%s.$.taskCurrent' % tier: False }})
@@ -261,63 +256,35 @@ Returns:
 
 '''
 def generate_task(username):
-
     coll = mydb['taskAccounts']
-    tasks_easy = []
-    tasks_medium = []
-    tasks_hard = []
-    tasks_elite = []
-    if get_taskCurrent(username) is None:
-        task_query = coll.find({'username': username}, {'easyTasks': 1, 'mediumTasks': 1, 'hardTasks': 1, 'eliteTasks': 1})
+    user = get_user(username)
+    if user.current_task() is not None:
+        return
 
-        for task in task_query:
-            for ele in task['easyTasks']:
-                if ele['status'] == 'Incomplete':
-                    if lms_check(username):
-                            tasks_easy.append(ele)
-                    else:
-                        if ele['taskname']['LMS'] == False:
-                            tasks_easy.append(ele)
+    def get_incomplete_tasks(tier: str) -> list[TaskData]:
+        all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
+        completed_task_ids = list(map(lambda x: x.task_id, user.get_task_list(tier).completed_tasks))
+        return list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
 
-            for ele in task['mediumTasks']:
-                if ele['status'] == 'Incomplete':
-                    if lms_check(username):
-                            tasks_medium.append(ele)
-                    else:
-                        if ele['taskname']['LMS'] == False:
-                            tasks_medium.append(ele)
+    tasks_easy = get_incomplete_tasks('easy')
+    tasks_medium = get_incomplete_tasks('medium')
+    tasks_hard = get_incomplete_tasks('hard')
+    tasks_elite = get_incomplete_tasks('elite')
 
-            for ele in task['hardTasks']:
-                if ele['status'] == 'Incomplete':
-                    if lms_check(username):
-                            tasks_hard.append(ele)
-                    else:
-                        if ele['taskname']['LMS'] == False:
-                            tasks_hard.append(ele)
+    if len(tasks_easy) != 0:
+        generated_task = random.choice(tasks_easy)
+        coll.update_one({'username': username , 'easyTasks._id' : generated_task.id}, {'$set' : {'easyTasks.$.taskCurrent': True }})
+    elif len(tasks_medium) != 0:
+        generated_task = random.choice(tasks_medium)
+        coll.update_one({'username': username , 'mediumTasks._id' : generated_task.id}, {'$set' : {'mediumTasks.$.taskCurrent': True }})
 
-            for ele in task['eliteTasks']:
-                if ele['status'] == 'Incomplete':
-                    if lms_check(username):
-                            tasks_elite.append(ele)
-                    else:
-                        if ele['taskname']['LMS'] == False:
-                            tasks_elite.append(ele)
+    elif len(tasks_hard) != 0:
+        generated_task = random.choice(tasks_hard)
+        coll.update_one({'username': username , 'hardTasks._id' : generated_task.id}, {'$set' : {'hardTasks.$.taskCurrent': True }})
 
-        if len(tasks_easy) != 0:
-            generated_task = random.choice(tasks_easy)
-            coll.update_one({'username': username , 'easyTasks._id' : generated_task['_id']}, {'$set' : {'easyTasks.$.taskCurrent': True }})
-        elif len(tasks_medium) != 0:
-            generated_task = random.choice(tasks_medium)
-            coll.update_one({'username': username , 'mediumTasks._id' : generated_task['_id']}, {'$set' : {'mediumTasks.$.taskCurrent': True }})
-
-        elif len(tasks_hard) != 0:
-            generated_task = random.choice(tasks_hard)
-            coll.update_one({'username': username , 'hardTasks._id' : generated_task['_id']}, {'$set' : {'hardTasks.$.taskCurrent': True }})
-
-        elif len(tasks_elite) != 0:
-            generated_task = random.choice(tasks_elite)
-            coll.update_one({'username': username , 'eliteTasks._id' : generated_task['_id']}, {'$set' : {'eliteTasks.$.taskCurrent': True }})
-
+    elif len(tasks_elite) != 0:
+        generated_task = random.choice(tasks_elite)
+        coll.update_one({'username': username , 'eliteTasks._id' : generated_task.id}, {'$set' : {'eliteTasks.$.taskCurrent': True }})
 
 
 '''
@@ -340,7 +307,6 @@ Returns:
 '''
 def complete_task_unofficial_tier(username, task_id, tier):
     coll = mydb['taskAccounts']
-    easy_first, medium_first, hard_first, elite_first = False, False, False, False
     progress_before = get_task_progress(username)
     easy_before, medium_before, hard_before, elite_before = progress_before[0], progress_before[1], progress_before[2], progress_before[3]
 

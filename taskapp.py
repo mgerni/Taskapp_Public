@@ -10,7 +10,7 @@ import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
                            get_task_lists, manual_complete_tasks, manual_revert_tasks,
                            import_spreadsheet, official_check, uncomplete_all_tasks, get_tier_status, lms_check, lms_status_change,
-                           official_status_change, username_change, official_icon, unofficial_icon,  get_taskCurrent_tier, generate_task_unofficial_tier,
+                           official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
                            complete_task_unofficial_tier)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
@@ -441,10 +441,10 @@ def dashboard():
         return render_template(
             'dashboard_unofficial.html',
             username=username,
-            rank_icon=rank_icon,
-            email_verify=email_bool,
-            email_val=email_val,
-            official=official,
+            rank_icon=user_info.rank_icon,
+            email_verify=user_info.email_bool,
+            email_val=user_info.email_val,
+            official=user_info.official,
             taskapp_email=taskapp_email,
             task_easy=task_easy,
             image_easy=image_easy,
@@ -590,7 +590,7 @@ def generate_button():
 @login_required
 def generate_unofficial_easy():
     username = session['username']
-    generate_task_unofficial_tier(username, 'easyTasks')
+    generate_task_for_tier(username, 'easyTasks')
     return redirect(url_for('dashboard'))
 
 # Form request route for generating a medium task for unofficial users.
@@ -600,7 +600,7 @@ def generate_unofficial_easy():
 @login_required
 def generate_unofficial_medium():
     username = session['username']
-    generate_task_unofficial_tier(username, 'mediumTasks')
+    generate_task_for_tier(username, 'mediumTasks')
     return redirect(url_for('dashboard'))
 
 # Form request route for generating a hard task for unofficial users.
@@ -610,7 +610,7 @@ def generate_unofficial_medium():
 @login_required
 def generate_unofficial_hard():
     username = session['username']
-    generate_task_unofficial_tier(username, 'hardTasks')
+    generate_task_for_tier(username, 'hardTasks')
     return redirect(url_for('dashboard'))
 
 # Form request route for generating a elite task for unofficial users.
@@ -620,7 +620,7 @@ def generate_unofficial_hard():
 @login_required
 def generate_unofficial_elite():
     username = session['username']
-    generate_task_unofficial_tier(username, 'eliteTasks')
+    generate_task_for_tier(username, 'eliteTasks')
     return redirect(url_for('dashboard'))
 
 
