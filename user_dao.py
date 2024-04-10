@@ -2,7 +2,7 @@ from math import floor
 import tasklists
 from dataclasses import dataclass
 from bson.objectid import ObjectId
-from task_types import UserTaskList, TierProgress, UserCompletedTask, UserCurrentTask, TaskData
+from task_types import UserTaskList, TierProgress, UserCompletedTask, UserCurrentTask, TaskData, PageTask
 
 
 @dataclass
@@ -30,7 +30,12 @@ class UserDatabaseObject:
             'easy': self.easy,
             'medium': self.medium,
             'hard': self.hard,
-            'elite': self.elite
+            'elite': self.elite,
+            'passive': self.passive,
+            'extra': self.extra,
+            'bossPets': self.boss_pets,
+            'skillPets': self.skill_pets,
+            'otherPets': self.other_pets
         }[tier]
 
     def current_task_for_tier(self, tier: str) -> tuple or None:
@@ -60,12 +65,27 @@ class UserDatabaseObject:
         percent = floor(completed / total * 100)
         return TierProgress(percent, total, completed)
 
+    def page_tasks(self, tier: str) -> list[PageTask]:
+        if tier in ['easy', 'medium', 'hard', 'elite']:
+            current_task = self.current_task_for_tier(tier)
+            current_task_id = current_task[2] if current_task is not None else None
+        else:
+            current_task_id = None
+        completed_tasks = self.get_task_list(tier).completed_tasks
+
+        def page_task(task: TaskData):
+            return PageTask(is_current=task.id is current_task_id, is_completed=task.id in completed_tasks,
+                            task_data=task)
+
+        return list(map(page_task, tasklists.list_for_tier(tier, self.lms_enabled)))
+
 
 def task_info_for_id(task_list: list[TaskData], task_id: [str]) -> tasklists.TaskData:
     filtered = list(filter(lambda x: x.id == task_id, task_list))
     if len(filtered) == 0:
         raise Exception("No id found in list " + task_id)
     return filtered[0]
+
 
 '''
 convert_database_user
@@ -79,6 +99,8 @@ Returns:
     UserDatabaseObject
 
 '''
+
+
 def convert_database_user(user_data: dict) -> UserDatabaseObject:
     tiers = user_data['tiers']
 

@@ -11,7 +11,7 @@ from task_database import (get_taskCurrent, generate_task, complete_task, get_ta
                            get_task_lists, manual_complete_tasks, manual_revert_tasks,
                            import_spreadsheet, official_check, uncomplete_all_tasks, get_tier_status, lms_check, lms_status_change,
                            official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
-                           complete_task_unofficial_tier)
+                           complete_task_unofficial_tier, get_user)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
 
@@ -102,8 +102,10 @@ Class to hold data that is used in many templates
 class BasePageInfo:
     def __init__(self):
         username = session['username']
+        user = get_user(username)
         self.username = username
-        self.official = official_check(username)
+        self.user = user
+        self.official = user.is_official
         progress = get_task_progress(username)
         self.progress = progress
         if self.official:
@@ -114,30 +116,6 @@ class BasePageInfo:
         self.email_bool = email_verify[0]
         self.email_val = email_verify[1]
 
-class PageTask:
-    def __init__(self, name: str, asset_image: str, is_completed: bool, id: int, is_current: bool, wiki_link: str, tip: str = None):
-        self.name = name
-        self.asset_image = asset_image
-        self.is_completed = is_completed
-        self.id = id
-        self.is_current = is_current
-        self.wiki_link = wiki_link
-        self.tip = tip
-
-def filter_lms_to_class(t_list):
-    items = []
-    for item in t_list:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                items.append(PageTask(name=x[0],
-                                      asset_image=x[1],
-                                      is_completed=item['status'] != 'Incomplete',
-                                      id=item['_id'],
-                                      is_current=item['taskCurrent'],
-                                      wiki_link=item['wikiLink'],
-                                      tip=item.get('tip')
-                                      ))
-    return items
 
 # Converts dict from users task data to a list of user data represented as another list.
 # Also filters out LMS fields
@@ -737,10 +715,9 @@ def task_list():
         official=user_info.official
         )
 
-def single_task_list(task_list_index, list_title, task_type):
+def single_task_list(list_title, task_type):
     user_info = BasePageInfo()
-    task = get_task_lists(user_info.username)
-    items = filter_lms_to_class(task[task_list_index])
+    items = user_info.user.page_tasks(task_type)
     return render_template(
         'single-task-list.html',
         list_title=list_title,
@@ -758,26 +735,26 @@ def single_task_list(task_list_index, list_title, task_type):
 @app.route('/task-list-easy/', methods=['GET'])
 @login_required
 def task_list_easy():
-    return single_task_list(task_list_index=0, list_title='Easy Task List', task_type='easy')
+    return single_task_list(list_title='Easy Task List', task_type='easy')
 
 #route for task-list-medium, only shows medium tasks.
 @app.route('/task-list-medium/', methods=['GET'])
 @login_required
 def task_list_medium():
-    return single_task_list(task_list_index=1, list_title='Medium Task List', task_type='medium')
+    return single_task_list(list_title='Medium Task List', task_type='medium')
 
 # route for the hard task list, only shows hard tasks.
 @app.route('/task-list-hard/', methods=['GET'])
 @login_required
 def task_list_hard():
-    return single_task_list(task_list_index=2, list_title='Hard Task List', task_type='hard')
+    return single_task_list(list_title='Hard Task List', task_type='hard')
 
 
 # route for the elite task list, only shows elite tasks.
 @app.route('/task-list-elite/', methods=['GET'])
 @login_required
 def task_list_elite():
-    return single_task_list(task_list_index=3, list_title='Elite Task List', task_type='elite')
+    return single_task_list(list_title='Elite Task List', task_type='elite')
 
 # route for the pets task list, only shows pets tasks.
 @app.route('/task-list-pets/', methods=['GET'])
@@ -806,13 +783,13 @@ def task_list_pets():
 @app.route('/task-list-extra/', methods=['GET'])
 @login_required
 def task_list_extra():
-    return single_task_list(task_list_index=7, list_title='Extra Task List', task_type='extra')
+    return single_task_list(list_title='Extra Task List', task_type='extra')
 
 # route for passive task list, only shows passive tasks.
 @app.route('/task-list-passive/', methods=['GET'])
 @login_required
 def task_list_passive():
-    return single_task_list(task_list_index=8, list_title='Passive Task List', task_type='passive')
+    return single_task_list(list_title='Passive Task List', task_type='passive')
 
 tier_to_type = {
     "easyTasks": 'easy',

@@ -42,3 +42,13 @@ class TierProgress:
     percent_complete: int
     total: int
     total_complete: int
+
+class PageTask:
+    def __init__(self, is_completed: bool, is_current: bool, task_data: TaskData):
+        self.name = task_data.name
+        self.asset_image = task_data.asset_image
+        self.is_completed = is_completed
+        self.id = task_data.id
+        self.is_current = is_current
+        self.wiki_link = task_data.wiki_link
+        self.tip = task_data.tip
