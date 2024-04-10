@@ -1,6 +1,6 @@
 import requests
 import json
-from tasklists import Task
+from tasklists import TaskData
 
 def get_collection_log(rsn):
     rsn = rsn.replace(' ', '%20')
@@ -9,7 +9,7 @@ def get_collection_log(rsn):
 
     return response.status_code, response_info
 
-def check_collection_log(task_list: list[Task], log_data):
+def check_collection_log(task_list: list[TaskData], log_data):
     missing_tasks = []
     valid = True
     debug = False

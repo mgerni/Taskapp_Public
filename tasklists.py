@@ -1,28 +1,6 @@
 import json
-from dataclasses import dataclass
-
-@dataclass
-class ColLogData:
-    category: str
-    log_name: str
-    exclude: list
-    include: list
-    log_count: int
-    count: int
-
-@dataclass
-class Task:
-    id: int
-    name: str
-    tip: str
-    is_lms: str
-    wiki_link: str
-    wiki_image: str
-    asset_image: str
-    col_log_data: ColLogData
-
-
-def to_col_log_data(data):
+from task_types import TaskData, ColLogData
+def to_col_log_data(data: dict) -> ColLogData or None:
     if data is None:
         return None
     return ColLogData(category=data['category'],
@@ -32,21 +10,18 @@ def to_col_log_data(data):
                       log_count=data['logCount'],
                       count=data.get('count'))
 
-def to_task_class(data):
-    return Task(id=data['_id'],
-                name=data['name'],
-                tip=data.get('tip'),
-                is_lms=data.get("isLMS") is True,
-                wiki_link=data['wikiLink'],
-                wiki_image=data.get('wikiImage'),
-                asset_image=data['assetImage'],
-                col_log_data=to_col_log_data(data.get('colLogData'))
-                )
+def to_task_class(data: dict) -> TaskData:
+    return TaskData(id=data['_id'],
+                    name=data['name'],
+                    tip=data.get('tip'),
+                    is_lms=data.get("isLMS") is True,
+                    wiki_link=data['wikiLink'],
+                    wiki_image=data.get('wikiImage'),
+                    asset_image=data['assetImage'],
+                    col_log_data=to_col_log_data(data.get('colLogData'))
+                    )
 
-def convert_dicts(l):
-    return list(map(to_task_class, l))
-
-def read_tasks(filename):
+def read_tasks(filename: str) -> list[TaskData]:
     with open('tasks/' + filename + '.json') as f:
         json_list = json.load(f)
         return list(map(to_task_class, json_list))
@@ -63,7 +38,7 @@ skill_pet = read_tasks('skillPets')
 other_pet = read_tasks('otherPets')
 
 #
-def list_for_tier(tier) -> list[Task]:
+def list_for_tier(tier) -> list[TaskData]:
     return {
         'easyTasks': easy,
         'mediumTasks': medium,
