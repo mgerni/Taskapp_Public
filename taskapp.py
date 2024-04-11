@@ -9,7 +9,7 @@ import task_login
 import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
                            get_task_lists, manual_complete_tasks, manual_revert_tasks,
-                           import_spreadsheet, official_check, uncomplete_all_tasks, get_tier_status, lms_check, lms_status_change,
+                           import_spreadsheet, uncomplete_all_tasks, lms_check, lms_status_change,
                            official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
                            complete_task_unofficial_tier, get_user)
 import send_grid_email
@@ -326,6 +326,11 @@ def logout():
 @login_required
 def dashboard():
     user_info = BasePageInfo()
+    # The "first" variables determine whether a user has just completed a task
+    easy_first = bool(request.args.get('easy-first'))
+    medium_first = bool(request.args.get('medium-first'))
+    hard_first = bool(request.args.get('medium-first'))
+    elite_first = bool(request.args.get('medium-first'))
     username = session['username']
     progress = get_task_progress(username)
     if user_info.official:
@@ -359,8 +364,6 @@ def dashboard():
             image = None
             tip = None
             link = None
-            tier_status = get_tier_status(username)
-            easy_first, medium_first, hard_first, elite_first = tier_status[0], tier_status[1], tier_status[2], tier_status[3]
             return render_template(
                 'index.html',
                 username=username,
@@ -387,15 +390,9 @@ def dashboard():
         current_task_easy = get_taskCurrent_tier(username, 'easyTasks')
 
         if current_task_easy is not None:
-
             task_easy, image_easy, tip_easy, link_easy = current_task_easy[0], current_task_easy[1], current_task_easy[4],current_task_easy[5]
-            easy_first, medium_first, hard_first, elite_first = False, False, False, False
         else:
-
             task_easy, image_easy, tip_easy, link_easy = '', None, None, None
-            tier_status = get_tier_status(username)
-            easy_first, medium_first, hard_first, elite_first = tier_status[0], tier_status[1], tier_status[2], tier_status[3]
-
 
         current_task_medium = get_taskCurrent_tier(username, 'mediumTasks')
 
@@ -610,10 +607,9 @@ def generate_unofficial_elite():
 def complete_button():
     username = session['username']
     current_task = get_taskCurrent(username)
-    if current_task != None:
-        complete_task(username)
-        return redirect(url_for('dashboard'))
-
+    if current_task is not None:
+        query_params = complete_task(username)
+        return redirect(url_for('dashboard', **query_params))
     return redirect(url_for('dashboard'))
 
 
@@ -626,10 +622,10 @@ def complete_button():
 def complete_unofficial_easy():
     username = session['username']
     current_task = get_taskCurrent_tier(username, 'easyTasks')
-    if current_task != None:
+    if current_task is not None:
         task_id = current_task[3]
-        complete_task_unofficial_tier(username, task_id, 'easyTasks')
-        return redirect(url_for('dashboard'))
+        query_params = complete_task_unofficial_tier(username, task_id, 'easyTasks')
+        return redirect(url_for('dashboard'), **query_params)
     return redirect(url_for('dashboard'))
 
 
@@ -641,10 +637,10 @@ def complete_unofficial_easy():
 def complete_unofficial_medium():
     username = session['username']
     current_task = get_taskCurrent_tier(username, 'mediumTasks')
-    if current_task != None:
+    if current_task is not None:
         task_id = current_task[3]
-        complete_task_unofficial_tier(username, task_id, 'mediumTasks')
-        return redirect(url_for('dashboard'))
+        query_params = complete_task_unofficial_tier(username, task_id, 'mediumTasks')
+        return redirect(url_for('dashboard'), **query_params)
     return redirect(url_for('dashboard'))
 
 
@@ -656,10 +652,10 @@ def complete_unofficial_medium():
 def complete_unofficial_hard():
     username = session['username']
     current_task = get_taskCurrent_tier(username, 'hardTasks')
-    if current_task != None:
+    if current_task is not None:
         task_id = current_task[3]
-        complete_task_unofficial_tier(username, task_id, 'hardTasks')
-        return redirect(url_for('dashboard'))
+        query_params = complete_task_unofficial_tier(username, task_id, 'hardTasks')
+        return redirect(url_for('dashboard'), **query_params)
     return redirect(url_for('dashboard'))
 
 
@@ -671,10 +667,10 @@ def complete_unofficial_hard():
 def complete_unofficial_elite():
     username = session['username']
     current_task = get_taskCurrent_tier(username, 'eliteTasks')
-    if current_task != None:
+    if current_task is not None:
         task_id = current_task[3]
-        complete_task_unofficial_tier(username, task_id, 'eliteTasks')
-        return redirect(url_for('dashboard'))
+        query_params = complete_task_unofficial_tier(username, task_id, 'eliteTasks')
+        return redirect(url_for('dashboard'), **query_params)
     return redirect(url_for('dashboard'))
 
 

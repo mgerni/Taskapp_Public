@@ -74,10 +74,6 @@ The document is structured as follows:
     skillingPetTasks: [ same as easyTasks except does not include taskTip ],
     extraTasks: [ same as easyTasks except does not include taskTip ],
     passiveTasks: [ same as easyTasks except does not include taskTip ]
-    easyFirst: True/False,
-    mediumFirst: True/False,
-    hardFirst: True/False,
-    eliteFirst: True/False,
 }
 
 Args:
@@ -121,11 +117,7 @@ def add_task_account(username, isOfficial, lmsEnabled):
         "skillPetTasks": combine_tasks(tasklists.skill_pet),
         "otherPetTasks": combine_tasks(tasklists.other_pet),
         "extraTasks": combine_tasks(tasklists.extra),
-        "passiveTasks": combine_tasks(tasklists.passive),
-        "easyFirst": False,
-        "hardFirst": False,
-        "mediumFirst": False,
-        "eliteFirst": False
+        "passiveTasks": combine_tasks(tasklists.passive)
     }
 
     coll.insert_one(taskAccount)
@@ -302,10 +294,10 @@ Args:
     int: task_id - id of the task.
 
 Returns:
-    None
+    dict: Contains URL parameters specific for showing the fireworks when a tier goes from 99 -> 100% complete
 
 '''
-def complete_task_unofficial_tier(username, task_id, tier):
+def complete_task_unofficial_tier(username: str, task_id: int, tier: str) -> dict:
     coll = mydb['taskAccounts']
     progress_before = get_task_progress(username)
     easy_before, medium_before, hard_before, elite_before = progress_before[0], progress_before[1], progress_before[2], progress_before[3]
@@ -316,22 +308,14 @@ def complete_task_unofficial_tier(username, task_id, tier):
     easy_after, medium_after, hard_after, elite_after = progress_after[0], progress_after[1], progress_after[2], progress_after[3]
 
     if easy_before != 100 and easy_after == 100:
-        easy_first = True
-        coll.update_one({'username': username}, {'$set' : {"easyFirst" : easy_first}})
-
+        return {'easy-first': True}
     elif medium_before != 100 and medium_after == 100:
-        medium_first = True
-        coll.update_one({'username': username}, {'$set' : {"mediumFirst" : medium_first}})
-
-
+        return {'medium-first': True}
     elif hard_before != 100 and hard_after == 100:
-        hard_first = True
-        coll.update_one({'username': username}, {'$set' : {"hardFirst" : hard_first}})
-
-
+        return {'hard-first': True}
     elif elite_before != 100 and elite_after == 100:
-        elite_first = True
-        coll.update_one({'username': username}, {'$set' : {"eliteFirst" : elite_first}})
+        return {'elite-first': True}
+    return {}
 
 
 '''
@@ -349,68 +333,34 @@ Args:
     int: task_id - id of the task.
 
 Returns:
-    None
+    dict: Contains URL parameters specific for showing the fireworks when a tier goes from 99 -> 100% complete
 
 '''
-def complete_task(username):
+def complete_task(username: str) -> dict:
     coll = mydb['taskAccounts']
-    task_check = get_taskCurrent(username)
+    user = get_user(username)
+    task_check = user.current_task()
+
+    if task_check is None:
+        return {}
+
     progress_before = get_task_progress(username)
     easy_before, medium_before, hard_before, elite_before = progress_before[0], progress_before[1], progress_before[2], progress_before[3]
-
-    if task_check is not None:
-        tier = task_check[2]
-        task_id = task_check[3]
-        coll.update_one({'username' : username, '%s._id' % tier : task_id}, {'$set': {'%s.$.taskCurrent' % tier: False, '%s.$.status' % tier : 'Complete'}})
-        progress_after = get_task_progress(username)
-        easy_after, medium_after, hard_after, elite_after = progress_after[0], progress_after[1], progress_after[2], progress_after[3]
+    tier = task_check[2]
+    task_id = task_check[3]
+    coll.update_one({'username' : username, '%s._id' % tier : task_id}, {'$set': {'%s.$.taskCurrent' % tier: False, '%s.$.status' % tier : 'Complete'}})
+    progress_after = get_task_progress(username)
+    easy_after, medium_after, hard_after, elite_after = progress_after[0], progress_after[1], progress_after[2], progress_after[3]
 
     if easy_before != 100 and easy_after == 100:
-        easy_first = True
-        coll.update_one({'username': username}, {'$set' : {"easyFirst" : easy_first}})
-
-
+        return {'easy-first': True}
     elif medium_before != 100 and medium_after == 100:
-        medium_first = True
-        coll.update_one({'username': username}, {'$set' : {"mediumFirst" : medium_first}})
-
-
+        return {'medium-first': True}
     elif hard_before != 100 and hard_after == 100:
-        hard_first = True
-        coll.update_one({'username': username}, {'$set' : {"hardFirst" : hard_first}})
-
-
+        return {'hard-first': True}
     elif elite_before != 100 and elite_after == 100:
-        elite_first = True
-        coll.update_one({'username': username}, {'$set' : {"eliteFirst" : elite_first}})
-
-
-
-'''
-get_tier_status:
-
-The get_tier_status function, gets the tierFirst status of each tier.
-tierFirst is used to add fireworks when page refreshes.
-e.g.
-User completes task -> database updated with easyFirst -> Complete task button refreshes page
-    -> easyFirst is true and fireworks show -> easyFirst set to false somewhere
-    
-TODO Replace with like a variable in redirect or something?
-
-Args:
-    str: username - username of the user.
-
-
-Returns:
-    tuple: easy_first, medium_first, hard_first, elite_first - boolean values for each tier.
-
-'''
-def get_tier_status(username):
-    coll = mydb['taskAccounts']
-    x = coll.find_one({'username': username}, {'_id': 0, 'easyFirst': 1, 'mediumFirst': 1, 'hardFirst': 1, 'eliteFirst': 1})
-    coll.update_one({'username': username}, {'$set': {'easyFirst': False, 'mediumFirst': False, 'hardFirst': False, 'eliteFirst' : False}})
-    return x['easyFirst'], x['mediumFirst'], x['hardFirst'], x['eliteFirst']
-
+        return {'elite-first': True}
+    return {}
 
 
 '''
@@ -426,7 +376,7 @@ Returns:
     tuple: easy_progress, medium_progress, hard_progress, elite_progress - percentage of progress for each tier.
 
 '''
-def get_task_progress(username):
+def get_task_progress(username: str):
     user = get_user(username)
     easy = user.get_tier_progress('easy')
     medium = user.get_tier_progress('medium')
