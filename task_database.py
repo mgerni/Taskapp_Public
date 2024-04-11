@@ -7,7 +7,7 @@ import config
 import user_dao
 from user_dao import UserDatabaseObject, convert_database_user
 from user_migrate import migrate_database_user_to_new_format
-from task_types import TaskData, LeaderboardEntry
+from task_types import TaskData, LeaderboardEntry, TaskData
 
 mydb = config.MONGO_CLIENT["TaskApp"]
 
@@ -94,7 +94,7 @@ Returns:
 def add_task_account(username, isOfficial, lmsEnabled):
     coll = mydb['taskAccounts']
 
-    def combine_tasks(tasks: list[tasklists.Task]):
+    def combine_tasks(tasks: list[TaskData]):
         new_tasks = []
         for task in tasks:
             new_tasks.append(
@@ -1097,7 +1097,7 @@ def get_leaderboard() -> list[LeaderboardEntry]:
                                 user.get_tier_progress('elite'))
 
     coll = mydb['taskAccounts']
-    return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points()))
+    return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
 
 
 if __name__ == "__main__":
