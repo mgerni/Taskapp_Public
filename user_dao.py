@@ -80,7 +80,7 @@ class UserDatabaseObject:
         return list(map(page_task, tasklists.list_for_tier(tier, self.lms_enabled)))
 
 
-def task_info_for_id(task_list: list[TaskData], task_id: [str]) -> tasklists.TaskData:
+def task_info_for_id(task_list: list[TaskData], task_id: int) -> tasklists.TaskData:
     filtered = list(filter(lambda x: x.id == task_id, task_list))
     if len(filtered) == 0:
         raise Exception("No id found in list " + task_id)

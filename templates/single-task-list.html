@@ -37,23 +37,24 @@
                 <table class="table text-white">
                     <div class="container mt-3 text-white bg-dark">
                         <tbody id="tableDetails">
-                        {% for task in items %}
-                            {% with current_task_type=task_type %}
-                                {% include "fragments/task.html" %}
-                            {% endwith %}
-                        {% endfor %}
+                            {% for task in items %}
+                                {% with current_task_type=task_type %}
+                                    {% include "fragments/task.html" %}
+                                {% endwith %}
+                            {% endfor %}
 
-                        <tr class="d-none" id="none-found">
-                            <td>
-                                <button type="button" class="btn btn-lg taskHelpModal">
-                                    <i class="bi bi-emoji-frown text-white fw-bold"></i>
-                                </button>
-                            </td>
-                            <td class="text-center align-middle">No results found!</td>
+                            <tr class="d-none" id="none-found">
+                                <td>
+                                    <button type="button" class="btn btn-lg taskHelpModal">
+                                        <i class="bi bi-emoji-frown text-white fw-bold"></i>
+                                    </button>
+                                </td>
+                                <td class="text-center align-middle">No results found!</td>
 
-                            <td><img src="/static/assets/placeholder_incomplete.png" alt="placeholder_image"></td>
-                        </tr>
-                    </tbody>
+                                <td><img src="/static/assets/placeholder_incomplete.png" alt="placeholder_image"></td>
+                            </tr>
+                        </tbody>
+                    </div>
                 </table>
             </div>
         </div>

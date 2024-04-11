@@ -9,9 +9,9 @@ import task_login
 import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
                            get_task_lists, manual_complete_tasks, manual_revert_tasks,
-                           import_spreadsheet, uncomplete_all_tasks, lms_check, lms_status_change,
+                           import_spreadsheet, uncomplete_all_tasks, lms_status_change,
                            official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
-                           complete_task_unofficial_tier, get_user)
+                           complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
 
@@ -175,7 +175,7 @@ def api_login():
 def api_current_task(user):
     current_task = get_taskCurrent(user.username)
     if current_task:
-        return jsonify({'message': {'taskName': current_task[0], 'taskImage' : current_task[6]}})
+        return jsonify({'message': {'taskName': current_task[0], 'taskImage': current_task[6]}})
     return jsonify({'message': None})
 
 @app.route('/api/v1/resource/task_progress')
@@ -787,6 +787,21 @@ def task_list_extra():
 def task_list_passive():
     return single_task_list(list_title='Passive Task List', task_type='passive')
 
+@app.route('/hiscores', methods=['GET'])
+@login_required
+def highscores():
+    user_info = BasePageInfo()
+    return render_template(
+        'highscores.html',
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        rank_icon=user_info.rank_icon,
+        email_val=user_info.email_val,
+        taskapp_email=taskapp_email,
+        official=user_info.official,
+        leaderboard=get_leaderboard()
+    )
+
 tier_to_type = {
     "easyTasks": 'easy',
     "mediumTasks": 'medium',
@@ -1001,7 +1016,6 @@ def reset_token(token):
 @app.route("/profile/")
 def profile():
     user_info = BasePageInfo()
-    lms_status = lms_check(user_info.username)
 
     return render_template(
         'profile.html',
@@ -1010,7 +1024,7 @@ def profile():
         email_val=user_info.email_val,
         official=user_info.official,
         rank_icon=user_info.rank_icon,
-        lms_status=lms_status)
+        lms_status=user_info.user.lms_enabled)
 
 # AJAX route for profile email change.
 # I don't know why I didn't just change the HTML via javascript...

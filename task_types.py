@@ -52,3 +52,18 @@ class PageTask:
         self.is_current = is_current
         self.wiki_link = task_data.wiki_link
         self.tip = task_data.tip
+
+@dataclass
+class LeaderboardEntry:
+    username: str
+    lms_enabled: bool
+    easy_progress: TierProgress
+    medium_progress: TierProgress
+    hard_progress: TierProgress
+    elite_progress: TierProgress
+
+    # TODO Have different weightings per tier
+    def points(self) -> int:
+        return self.easy_progress.percent_complete + self.medium_progress.percent_complete + \
+            self.hard_progress.percent_complete + self.elite_progress.percent_complete
+

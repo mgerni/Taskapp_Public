@@ -1,8 +1,33 @@
 {% extends "base.html" %}
-
 {% block context %}
 
-
-
+<div class="container d-flex flex min-vh-100 py-2 mt-5 border-light">
+    <table class="table table-condensed text-white">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>LMS Enabled</th>
+            <th>Easy Percent</th>
+            <th>Medium Percent</th>
+            <th>Hard Percent</th>
+            <th>Elite Percent</th>
+            <th>Points</th>
+        </tr>
+        </thead>
+        <tbody style="--bs-table-hover-color=white">
+        {% for user in leaderboard %}
+        <tr id="{{ user }}">
+            <td>{{ user.username }}</td>
+            <td>{{ user.lms_enabled }}</td>
+            <td>{{ user.easy_progress.percent_complete }}</td>
+            <td>{{ user.medium_progress.percent_complete }}</td>
+            <td>{{ user.hard_progress.percent_complete }}</td>
+            <td>{{ user.elite_progress.percent_complete }}</td>
+            <td>{{ user.points() }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 {% endblock %}
