@@ -333,120 +333,58 @@ def dashboard():
     elite_first = bool(request.args.get('medium-first'))
     username = session['username']
     progress = get_task_progress(username)
+    context = {
+        'username': username,
+        'rank_icon': user_info.rank_icon,
+        'email_verify': user_info.email_bool,
+        'email_val': user_info.email_val,
+        'official': user_info.official,
+        'taskapp_email': taskapp_email,
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3]
+    }
     if user_info.official:
         current_task = get_taskCurrent(username)
-        if current_task is not None:
-            task = current_task[0]
-            image = current_task[1]
-            tip = current_task[4]
-            link = current_task[5]
-            easy, medium, hard, elite = progress[0], progress[1], progress[2], progress[3]
-            return render_template(
-                'index.html',
-                username=username,
-                rank_icon=user_info.rank_icon,
-                email_verify=user_info.email_bool,
-                email_val=user_info.email_val,
-                official=user_info.official,
-                taskapp_email=taskapp_email,
-                task=task,
-                image=image,
-                tip=tip,
-                link=link,
-                easy=easy,
-                medium=medium,
-                hard=hard,
-                elite=elite)
+        print(current_task)
+        if current_task:
+            task, image, _, _, tip, link, _ = current_task
+            context.update({
+                'task': task,
+                'image': image,
+                'tip': tip,
+                'link': link
+            })
+            return render_template('index.html', **context)
+        
         else:
-            progress = get_task_progress(username)
-            easy, medium, hard, elite = progress[0], progress[1], progress[2], progress[3]
-            task = ''
-            image = None
-            tip = None
-            link = None
-            return render_template(
-                'index.html',
-                username=username,
-                rank_icon=user_info.rank_icon,
-                email_verify=user_info.email_bool,
-                email_val=user_info.email_val,
-                official=user_info.official,
-                taskapp_email=taskapp_email,
-                task=task,
-                image=image,
-                tip=tip,
-                link=link,
-                easy=easy,
-                medium=medium,
-                hard=hard,
-                elite=elite,
-                easy_first=easy_first,
-                medium_first=medium_first,
-                hard_first=hard_first,
-                elite_first=elite_first
-                )
+            context.update({
+                'task': '',
+                'image': None,
+                'tip': None,
+                'link': None,
+                'easy_first': easy_first,
+                'medium_first': medium_first,
+                'hard_first': hard_first,
+                'elite_first': elite_first 
+
+            })
+            return render_template('index.html', **context)
     else:
-        easy_progress, medium_progress, hard_progress, elite_progress = progress[0], progress[1], progress[2], progress[3]
-        current_task_easy = get_taskCurrent_tier(username, 'easyTasks')
-
-        if current_task_easy is not None:
-            task_easy, image_easy, tip_easy, link_easy = current_task_easy[0], current_task_easy[1], current_task_easy[4],current_task_easy[5]
-        else:
-            task_easy, image_easy, tip_easy, link_easy = '', None, None, None
-
-        current_task_medium = get_taskCurrent_tier(username, 'mediumTasks')
-
-        if current_task_medium is not None:
-            task_medium, image_medium, tip_medium, link_medium = current_task_medium[0], current_task_medium[1], current_task_medium[4],current_task_medium[5]
-        else:
-            task_medium, image_medium, tip_medium, link_medium = '', None, None, None
-
-        current_task_hard = get_taskCurrent_tier(username, 'hardTasks')
-
-        if current_task_hard is not None:
-            task_hard, image_hard, tip_hard, link_hard = current_task_hard[0], current_task_hard[1], current_task_hard[4],current_task_hard[5]
-        else:
-            task_hard, image_hard, tip_hard, link_hard = '', None, None, None
-        current_task_elite = get_taskCurrent_tier(username, 'eliteTasks')
-
-        if current_task_elite is not None:
-            task_elite, image_elite, tip_elite, link_elite = current_task_elite[0], current_task_elite[1], current_task_elite[4],current_task_elite[5]
-        else:
-            task_elite, image_elite, tip_elite, link_elite = '', None, None, None
-        return render_template(
-            'dashboard_unofficial.html',
-            username=username,
-            rank_icon=user_info.rank_icon,
-            email_verify=user_info.email_bool,
-            email_val=user_info.email_val,
-            official=user_info.official,
-            taskapp_email=taskapp_email,
-            task_easy=task_easy,
-            image_easy=image_easy,
-            tip_easy=tip_easy,
-            link_easy=link_easy,
-            task_medium=task_medium,
-            image_medium=image_medium,
-            tip_medium=tip_medium,
-            link_medium=link_medium,
-            task_hard=task_hard,
-            image_hard=image_hard,
-            tip_hard=tip_hard,
-            link_hard=link_hard,
-            task_elite=task_elite,
-            image_elite=image_elite,
-            tip_elite=tip_elite,
-            link_elite=link_elite,
-            easy_first=easy_first,
-            medium_first=medium_first,
-            hard_first=hard_first,
-            elite_first=elite_first,
-            easy_progress=easy_progress,
-            medium_progress=medium_progress,
-            hard_progress=hard_progress,
-            elite_progress=elite_progress
-            )
-
+        context['easy_progress'], context['medium_progress'], context['hard_progress'], context['elite_progress'] = progress[0], progress[1], progress[2], progress[3]
+        for tier, task_type in [('easy', 'easyTasks'), ('medium', 'mediumTasks'), ('hard', 'hardTasks'), ('elite', 'eliteTasks')]:
+            current_task = get_taskCurrent_tier(username, task_type)
+            if current_task:
+                context[f'task_{tier}'], context[f'image_{tier}'], _, _, context[f'tip_{tier}'], context[f'link_{tier}'], _ = current_task
+            else:
+                context.update({
+                    f'task_{tier}': '',
+                    f'image_{tier}': None,
+                    f'tip_{tier}': None,
+                    f'link_{tier}': None
+                })
+        return render_template('dashboard_unofficial.html', **context)
 
 # AJAX route for importing a exisiting Generate Task Spreadsheet.
 @app.route('/import/', methods=['POST'])
@@ -1142,4 +1080,4 @@ if __name__ == "__main__":
     if (isProd):
         app.run(host='0.0.0.0')
     else:
-        app.run(host="localhost", port=8080)
+        app.run(host="0.0.0.0", port=5000)
