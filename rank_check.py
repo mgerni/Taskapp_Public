@@ -48,7 +48,7 @@ def check_collection_log(task_list: list[TaskData], log_data):
             if db_count != log_count:
                 valid = False
                 missing_tasks.append(taskname)
-            print(f'[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]')
+            print(f"[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]")
 
         if exclude_list:
             for item in items:
@@ -62,8 +62,8 @@ def check_collection_log(task_list: list[TaskData], log_data):
             if db_count != log_count:
                 valid = False
                 missing_tasks.append(taskname)
-            print(f'[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]')
-            
+            print(f"[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]")
+
     return valid, missing_tasks
 
 if __name__ == '__main__':
