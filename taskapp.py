@@ -357,7 +357,7 @@ def dashboard():
                 'link': link
             })
             return render_template('index.html', **context)
-        
+
         else:
             context.update({
                 'task': '',
@@ -367,7 +367,7 @@ def dashboard():
                 'easy_first': easy_first,
                 'medium_first': medium_first,
                 'hard_first': hard_first,
-                'elite_first': elite_first 
+                'elite_first': elite_first
 
             })
             return render_template('index.html', **context)
@@ -620,6 +620,7 @@ def task_list():
 
     task = get_task_lists(user_info.username)
 
+    # TODO Refactor template to use the user page_tasks class
     items_easy = filter_lms(task[0])
     items_medium = filter_lms(task[1])
     items_hard = filter_lms(task[2])

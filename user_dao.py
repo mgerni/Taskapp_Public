@@ -71,10 +71,10 @@ class UserDatabaseObject:
             current_task_id = current_task[2] if current_task is not None else None
         else:
             current_task_id = None
-        completed_tasks = self.get_task_list(tier).completed_tasks
+        completed_task_ids = list(map(lambda x: x.task_id, self.get_task_list(tier).completed_tasks))
 
         def page_task(task: TaskData):
-            return PageTask(is_current=task.id is current_task_id, is_completed=task.id in completed_tasks,
+            return PageTask(is_current=task.id is current_task_id, is_completed=task.id in completed_task_ids,
                             task_data=task)
 
         return list(map(page_task, tasklists.list_for_tier(tier, self.lms_enabled)))
