@@ -68,7 +68,8 @@ class UserDatabaseObject:
     def page_tasks(self, tier: str) -> list[PageTask]:
         if tier in ['easy', 'medium', 'hard', 'elite']:
             current_task = self.current_task_for_tier(tier)
-            current_task_id = current_task[2] if current_task is not None else None
+            current_task_id = current_task[3] if current_task is not None else None
+            print(current_task_id)
         else:
             current_task_id = None
         completed_task_ids = list(map(lambda x: x.task_id, self.get_task_list(tier).completed_tasks))
