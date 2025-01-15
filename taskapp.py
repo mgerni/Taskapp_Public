@@ -824,13 +824,25 @@ def faq():
 @login_required
 def wall_of_pain():
     user_info = BasePageInfo()
+    progress = get_task_progress(user_info.username)
+    context = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master' : progress[4],
+        'passive': progress[5],
+        'extra': progress[6],
+        'allPets': progress[7]
+    }
     return render_template(
         'wall_of_pain.html',
         username=user_info.username,
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,
         rank_icon=user_info.rank_icon,
-        taskapp_email=taskapp_email
+        taskapp_email=taskapp_email,
+        **context
     )
 
 

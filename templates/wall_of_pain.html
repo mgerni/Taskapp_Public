@@ -1,650 +1,792 @@
-{% extends "base.html" %}
-<title>{% block title %}Task App Wall of Pain{%endblock %}</title>
+{% extends "base_updated.html" %}
+{% block title %}
+Wall Of Pain
+{% endblock %}
+{% block head %}
+{% endblock %}
 {% block context %}
-<section class="vh-100">
-   <div class="flex-row d-flex align-items-center justify-content-center mt-5 gx-2">
-      <div class="flex-col-10">
-         <h1 class="text-white">Wall of Pain</h1>
-      </div>
-   </div>
-   <div class="container mt-5">
-      <table class="table table-dark table-hover text-white border-light">
-         <thead>
-            <tr>
-               <th scope="col">Task Account</th>
-               <th scope="col">Task</th>
-               <th scope="col">Kill Count</th>
-               <th scope="col">Times over droprate</th>
-            </tr>
-         </thead>
+<div class="wop-container">
+   <div class="wop-box">
+      <table class="rsText">
          <tbody>
             <tr>
-               <td>Taskus Maxus</td>
-               <td>Mystic hat  dark <img src="/static/assets/Mystic_hat_dark.png" alt=""></td>
-               <td>5,250kc</td>
-               <td>10.25x</td>
-            </tr>
-            <tr>
-               <td>EasyDevy</td>
-               <td>Mystic boots dark <img src="/static/assets/Mystic_boots_(dark).png" alt=""></td>
-               <td>4,686kc</td>
-               <td>9.15x</td>
-            </tr>
-            <tr>
-               <td>TaskSpanner</td>
-               <td>Kurask Unique <img src="/static/assets/Leaf-bladed_battleaxe.png"></td>
-               <td>3,106kc</td>
-               <td>9.10x</td>
-            </tr>
-            <tr>
-               <td>TaskBlinky</td>
-               <td>Right skull half <img src="/static/assets/Right_skull_half.png" alt=""></td>
-               <td>303kc</td>
-               <td>9.00x</td>
-            </tr>
-            <tr>
-               <td>BreadTask</td>
-               <td>Iron boots <img src="/static/assets/Iron_boots.png" alt=""></td>
-               <td>959kc</td>
-               <td>7.49x</td>
-            </tr>
-            <tr>
-               <td>UIM Mispell</td>
-               <td>Angler piece <img src="/static/assets/Angler_top.png" alt=""></td>
-               <td>58 trips</td>
-               <td>7.25x</td>
-            </tr>
-            <tr>
-               <td>Taskflake</td>
-               <td>Cockatrice head <img src="/static/assets/Cockatrice_head.png" alt=""></td>
-               <td>6,997kc</td>
-               <td>7x</td>
-            </tr>
-            <tr>
-               <td>K Tasks</td>
-               <td>Ecumenical key <img src="/static/assets/Ecumenical_key.png" alt=""></td>
-               <td>402kc</td>
-               <td>6.7x</td>
-            </tr>
-            <tr>
-               <td>Lheana</td>
-               <td>Mystic Boots (light) <img src="/static/assets/Mystic_boots_light.png"></td>
-               <td>3422kc</td>
-               <td>6.68x</td>
-            </tr>
-            <tr>
-               <td>Taskus Maxus</td>
-               <td>Left skull half <img src="/static/assets/Left_skull_half.png" alt=""></td>
-               <td>221kc</td>
-               <td>6.63x</td>
-            </tr>
-            <tr>
-               <td>TaskOnly UIM</td>
-               <td>Granite maul <img src="/static/assets/Granite_maul.png" alt=""></td>
-               <td>1,662kc</td>
-               <td>6.49x</td>
-            </tr>
-            <tr>
-               <td>BirdTask</td>
-               <td>Big swordfish <img src="/static/assets/Big_swordfish.png" alt=""></td>
-               <td>16,191</td>
-               <td>6.48x</td>
-            </tr>
-            <tr>
-               <td>Lizzy Task</td>
-               <td>Mystic hat (light) <img src="/static/assets/Mystic_hat_light.png" alt=""></td>
-               <td>3,310kc</td>
-               <td>6.46x</td>
-            </tr>
-            <tr>
-               <td>TskBelgarath</td>
-               <td>Zammy GWD unique <img src="/static/assets/Pet_kril_tsutsaroth.png" alt=""></td>
-               <td>328kc</td>
-               <td>6.46x</td>
-            </tr>
-            <tr>
-               <td>Taskboiii</td>
-               <td>Rune satchel <img src="/static/assets/Rune_satchel.png" alt=""></td>
-               <td>42kc</td>
-               <td>6.30x</td>
-            </tr>
-            <tr>
-               <td>IM TaskMan</td>
-               <td>Granite maul <img src="/static/assets/Granite_maul.png" alt=""></td>
-               </td>
-               <td>1,580kc</td>
-               <td>6.17x</td>
-            </tr>
-            <tr>
-               <td>TaskinHersel</td>
-               <td>Black mask <img src="/static/assets/Black_mask.png" alt=""></td>
-               <td>3,137kc</td>
-               <td>6.13x</td>
-            </tr>
-            <tr>
-               <td>DehDehBanana</td>
-               <td>Bracelet of ethereum <img src="/static/assets/140px-Bracelet_of_ethereum_uncharged_detail.png" width="28px" height="28px"></td>
-               <td>125kc</td>
-               <td>6.08x</td>
-            </tr>
-            <tr>
-               <td>DayV Task</td>
-               <td>Rune Boots <img src="/static/assets/Rune_boots_detail.png" width="28px" height="28px" alt=""></td>
-               <td>690kc</td>
-               <td>5.95x</td>
-            </tr>
-            <tr>
-               <td>1BananaTask</td>
-               <td>Big bass <img src="/static/assets/Big_bass.png" alt=""></td>
-               <td>5,892 bass</td>
-               <td>5.89x</td>
-            </tr>
-            <tr>
-               <td>Thaksk</td>
-               <td>Mystic boots (dark) <img src="/static/assets/Mystic_boots_(dark).png" alt=""></td>
-               <td>2,988kc</td>
-               <td>5.84x</td>
-            </tr>
-            <tr>
-               <td>MorRochTask</td>
-               <td>Black boots <img src="/static/assets/Black_boots.png" alt=""></td>
-               <td>737kc</td>
-               <td>5.76x</td>
-            </tr>
-            <tr>
-               <td>Brouwen</td>
-               <td>Big swordfish <img src="/static/assets/Big_swordfish.png" alt=""></td>
-               <td>14,347 swordfish</td>
-               <td>5.74x</td>
-            </tr>
-            <tr>
-               <td>Task Memes</td>
-               <td>Big swordfish <img src="/static/assets/Big_swordfish.png" alt=""></td>
-               <td>14,176 swordfish</td>
-               <td>5.67x</td>
-            </tr>
-            <tr>
-               <td>AsarekinTask</td>
-               <td>Brine sabre <img src="/static/assets/Brine_sabre.png" alt=""></td>
-               <td>2,844kc</td>
-               <td>5.55x</td>
-            </tr>
-            <tr>
-               <td>Scythe Task</td>
-               <td>Cockatrice head <img src="/static/assets/Cockatrice_head.png" alt=""></td>
-               <td>5,527kc</td>
-               <td>5.53x</td>
-            </tr>
-            <tr>
-               <td>TASK BMO</td>
-               <td>Obsidian armour piece <img src="/static/assets/Obsidian_platebody.png" alt=""></td>
-               <td>3,600kc</td>
-               <td>5.41x</td>
-            </tr>
-            <tr>
-               <td>AtrozTask</td>
-               <td>Granite Helm <img src="/static/assets/Granite_helm.png" alt=""></td>
-               <td>687kc</td>
-               <td>5.37x</td>
-            </tr>
-            <tr>
-               <td>Brog Task</td>
-               <td>Black boots <img src="/static/assets/Black_boots.png" alt=""></td>
-               <td>683kc</td>
-               <td>5.34x</td>
-            </tr>
-            <tr>
-               <td>DehDehZulrah</td>
-               <td>Mystic boots  light <img src="/static/assets/Mystic_boots_light.png" alt=""></td>
-               <td>2,723kc</td>
-               <td>5.32x</td>
-            </tr>
-            <tr>
-               <td>TskBelgarath</td>
-               <td>Elder chaos hood <img src="/static/assets/Elder_chaos_hood.png" alt=""></td>
-               <td>7,502kc</td>
-               <td>5.29x</td>
-            </tr>
-            <tr>
-               <td>Riddle Task</td>
-               <td>Lumberjack piece <img src="/static/assets/Lumberjack_top.png" alt=""></td>
-               <td>21kc</td>
-               <td>5.25x</td>
-            </tr>
-            <tr>
-               <td>Ironpuncake</td>
-               <td>Green Satchel <img src="/static/assets/Green_satchel.png" alt=""></td>
-               <td>35kc</td>
-               <td>5.25x</td>
-            </tr>
-            <tr>
-               <td>TskBelgarath</td>
-               <td>Occult necklace <img src="/static/assets/Occult_necklace.png" alt=""></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td>Shadu Task</td>
-               <td>Toktz-ket-xil <img src="/static/assets/Toktz-ket-xil_detail.png" width="28px" height="28px" alt=""></td>
-               <td>2,600kc</td>
-               <td>5.08x</td>
-            </tr>
-            <tr>
-               <td>Ann Arbor</td>
-               <td>Brine sabre <img src="/static/assets/Brine_sabre.png" alt=""></td>
-               <td>2,598kc</td>
-               <td>5.07x</td>
-            </tr>
-            <tr>
-               <td>JafusTask</td>
-               <td>Mystic Hat (light) <img src="/static/assets/Mystic_hat_light.png" alt=""></td>
-               <td>2,590kc</td>
-               <td>5.06x</td>
-            </tr>
-            <tr>
-               <td>Gerni Task</td>
-               <td>Sarachnis cudgel <img src="/static/assets/Sarachnis_cudgel.png" alt=""></td>
-               <td>1,936kc</td>
-               <td>5.04x</td>
-            </tr>
-            <tr>
-               <td>Musto Task</td>
-               <td>Dragon sword <img src="/static/assets/Dragon_sword.png" alt=""></td>
-               <td>10,086kc</td>
-               <td>5.04x</td>
-            </tr>
-            <tr>
-               <td>TaskLuX</td>
-               <td>Elder chaos top <img src="/static/assets/Elder_chaos_top.png" alt=""></td>
-               <td>7,100kc</td>
-               <td>5.00x</td>
-            </tr>
-            <tr>
-               <td>GenerateTask</td>
-               <td>Mystic hat  dark <img src="/static/assets/Mystic_hat_dark.png" alt=""></td>
-               <td>2,554kc</td>
-               <td>4.99x</td>
-            </tr>
-            <tr>
-               <td>TASK BMO</td>
-               <td>DKS unique  warrior ring <img src="/static/assets/Warrior_ring.png" alt=""></td>
-               <td>212kc</td>
-               <td>4.97x</td>
-            </tr>
-            <tr>
-               <td>GenerateTask</td>
-               <td>Zombie champion scroll <img src="/static/assets/Zombie_champion_scroll.png" alt=""></td>
-               <td>24,863kc</td>
-               <td>4.97x</td>
-            </tr>
-            <tr>
-               <td>A New Task</td>
-               <td>Brine Sabre <img src="/static/assets/Brine_sabre.png" alt=""></td>
-               <td>2,539kc</td>
-               <td>4.96x</td>
-            </tr>
-            <tr>
-               <td>BlaineBP</td>
-               <td>Mystic hat  light <img src="/static/assets/Mystic_hat_light.png" alt=""></td>
-               <td>2,529kc</td>
-               <td>4.94x</td>
-            <tr>
-               <td>MorRochTask</td>
-               <td>Kraken unique <img src="/static/assets/Trident_of_the_seas.png" alt=""></td>
-               <td>1,110kc</td>
-               <td>4.93x</td>
-            </tr>
-            </tr>
-            <tr>
-               <td>Taskurus</td>
-               <td>Dark totem piece <img src="/static/assets/Dark_totem_base.png" alt=""></td>
-               <td>2,285kc</td>
-               <td>4.91x</td>
-            </tr>
-            <tr>
-               <td>ZezadaTask</td>
-               <td>Mithril boots <img src="/static/assets/Mithril_boots.png" alt=""></td>
-               <td>313kc</td>
-               <td>4.89x</td>
-            </tr>
-            <tr>
-               <td>TaskForSnus</td>
-               <td>Mudskipper hat <img src="/static/assets/Mudskipper_hat.png" alt=""></td>
-               <td>125kc</td>
-               <td>4.88x</td>
-            </tr>
-            <tr>
-               <td>Azeavia task</td>
-               <td>Barrows unique <img src="/static/assets/Guthans_helm.png" alt=""></td>
-               <td>71kc</td>
-               <td>4.87x</td>
-            <tr>
-               <td>TaskBoy6</td>
-               <td>Big bass <img src="/stati\c/assets/Big_bass.png" alt=""></td>
+               <td>1.</td>
+               <td class="complete">AkaTasks</td>
+               <td class="incomplete">Granite longsword</td>
+               <td>5,322kc (10.39x)</td>
+       </tr>
+       <tr>
+               <td>2.</td>
+               <td class="complete">Taskus Maxus</td>
+               <td class="incomplete">Mystic hat (dark)</td>
+               <td>5,250kc (10.25x)</td>
+       </tr>
+       <tr>
+               <td>3.</td>
+               <td class="complete">EasyDevy</td>
+               <td class="incomplete">Mystic boots (dark)</td>
+               <td>4,686kc (9.15x)</td>
+       </tr>
+       <tr>
+               <td>4.</td>
+               <td class="complete">TaskSpanner</td>
+               <td class="incomplete">Kurask unique</td>
+               <td>3,106kc (9.10x)</td>
+       </tr>
+       <tr>
+               <td>5.</td>
+               <td class="complete">TaskBlinky</td>
+               <td class="incomplete">Right skull half</td>
+               <td>303kc (9.00x)</td>
+       </tr>
+       <tr>
+               <td>6.</td>
+               <td class="complete">BreadTask</td>
+               <td class="incomplete">Iron boots</td>
+               <td>959kc (7.49x)</td>
+       </tr>
+       <tr>
+               <td>7.</td>
+               <td class="complete">Cole Lexion</td>
+               <td class="incomplete">Brine sabre</td>
+               <td>3,761kc (7.35x)</td>
+       </tr>
+       <tr>
+               <td>8.</td>
+               <td class="complete">UIM Mispell</td>
+               <td class="incomplete">Angler piece</td>
+               <td>58 trips (7.25x)</td>
+       </tr>
+       <tr>
+               <td>9.</td>
+               <td class="complete">Taskflake</td>
+               <td class="incomplete">Cockatrice head</td>
+               <td>6,997kc (7x)</td>
+       </tr>
+       <tr>
+               <td>10.</td>
+               <td class="complete">K Tasks</td>
+               <td class="incomplete">Ecumenical key</td>
+               <td>402kc (6.7x)</td>
+       </tr>
+       <tr>
+               <td>11.</td>
+               <td class="complete">Lheana</td>
+               <td class="incomplete">Mystic boots (light)</td>
+               <td>3,422kc (6.68x)</td>
+       </tr>
+       <tr>
+               <td>12.</td>
+               <td class="complete">Taskus Maxus</td>
+               <td class="incomplete">Left skull half</td>
+               <td>221kc (6.63x)</td>
+       </tr>
+       <tr>
+               <td>13.</td>
+               <td class="complete">TaskOnly UIM</td>
+               <td class="incomplete">Granite maul</td>
+               <td>1,662kc (6.49x)</td>
+       </tr>
+       <tr>
+               <td>14.</td>
+               <td class="complete">BirdTask</td>
+               <td class="incomplete">Big swordfish</td>
+               <td>16,191 swordfish (6.48x)</td>
+       </tr>
+       <tr>
+               <td>15.</td>
+               <td class="complete">Lizzy Task</td>
+               <td class="incomplete">Mystic hat (light)</td>
+               <td>3,310kc (6.46x)</td>
+       </tr>
+       <tr>
+               <td>16.</td>
+               <td class="complete">TskBelgarath</td>
+               <td class="incomplete">Zammy GWD unique</td>
+               <td>328kc (6.46x)</td>
+       </tr>
+       <tr>
+               <td>17.</td>
+               <td class="complete">JardonTask</td>
+               <td class="incomplete">Giant key</td>
+               <td>818kc (6.39x)</td>
+       </tr>
+       <tr>
+               <td>18.</td>
+               <td class="complete">Taskboiii</td>
+               <td class="incomplete">Rune satchel</td>
+               <td>42kc (6.30x)</td>
+       </tr>
+       <tr>
+               <td>19.</td>
+               <td class="complete">DehDehChaos</td>
+               <td class="incomplete">Sulphur Blades</td>
+               <td>2,826kc (6.28x)</td>
+       </tr>
+       <tr>
+               <td>20.</td>
+               <td class="complete">Cole Lexion</td>
+               <td class="incomplete">Gargoyle unique</td>
+               <td>1,064kc (6.23x)</td>
+       </tr>
+       <tr>
+               <td>21.</td>
+               <td class="complete">IM TaskMan</td>
+               <td class="incomplete">Granite maul</td>
+               <td>1,580kc (6.17x)</td>
+       </tr>
+       <tr>
+               <td>22.</td>
+               <td class="complete">Killage Task</td>
+               <td class="incomplete">Granite helm</td>
+               <td>783kc (6.15x)</td>
+       </tr>
+       <tr>
+               <td>23.</td>
+               <td class="complete">TaskinHersel</td>
+               <td class="incomplete">Black mask</td>
+               <td>3,137kc (6.13x)</td>
+       </tr>
+       <tr>
+               <td>24.</td>
+               <td class="complete">DehDehBanana</td>
+               <td class="incomplete">Bracelet of ethereum</td>
+               <td>125kc (6.08x)</td>
+       </tr>
+       <tr>
+               <td>25.</td>
+               <td class="complete">316-task</td>
+               <td class="incomplete">Granite longsword</td>
+               <td>3,075kc (6.01x)</td>
+       </tr>
+       <tr>
+               <td>26.</td>
+               <td class="complete">DayV Task</td>
+               <td class="incomplete">Rune Boots</td>
+               <td>690kc (5.95x)</td>
+       </tr>
+       <tr>
+               <td>27.</td>
+               <td class="complete">1BananaTask</td>
+               <td class="incomplete">Big bass</td>
+               <td>5,892 bass (5.89x)</td>
+       </tr>
+       <tr>
+               <td>28.</td>
+               <td class="complete">Thaksk</td>
+               <td class="incomplete">Mystic boots (dark)</td>
+               <td>2,988kc (5.84x)</td>
+       </tr>
+       <tr>
+               <td>29.</td>
+               <td class="complete">GenerateHaer</td>
+               <td class="incomplete">Granite longsword</td>
+               <td>2,955kc (5.77x)</td>
+       </tr>
+       <tr>
+               <td>30.</td>
+               <td class="complete">MorRochTask</td>
+               <td class="incomplete">Black boots</td>
+               <td>737kc (5.76x)</td>
+       </tr>
+       <tr>
+               <td>31.</td>
+               <td class="complete">Brouwen</td>
+               <td class="incomplete">Big swordfish</td>
+               <td>14,347 swordfish (5.74x)</td>
+       </tr>
+       <tr>
+               <td>32.</td>
+               <td class="complete">Task Memes</td>
+               <td class="incomplete">Big swordfish</td>
+               <td>14,176 swordfish (5.67x)</td>
+       </tr>
+       <tr>
+               <td>33.</td>
+               <td class="complete">AsarekinTask</td>
+               <td class="incomplete">Brine sabre</td>
+               <td>2,844kc (5.55x)</td>
+       </tr>
+       <tr>
+               <td>34.</td>
+               <td class="complete">Scythe Task</td>
+               <td class="incomplete">Cockatrice head</td>
+               <td>5,527kc (5.53x)</td>
+       </tr>
+       <tr>
+               <td>35.</td>
+               <td class="complete">TASK BMO</td>
+               <td class="incomplete">Obsidian armour piece</td>
+               <td>3,600kc (5.41x)</td>
+       </tr>
+       <tr>
+               <td>36.</td>
+               <td class="complete">AreYaTasking</td>
+               <td class="incomplete">Basilisk Head</td>
+               <td>10,778kc (5.39x)</td>
+       </tr>
+       <tr>
+               <td>37.</td>
+               <td class="complete">AtrozTask</td>
+               <td class="incomplete">Granite helm</td>
+               <td>687kc (5.37x)</td>
+       </tr>
+       <tr>
+               <td>38.</td>
+               <td class="complete">Brog Task</td>
+               <td class="incomplete">Black boots</td>
+               <td>683kc (5.34x)</td>
+       </tr>
+       <tr>
+               <td>39.</td>
+               <td class="complete">DehDehZulrah</td>
+               <td class="incomplete">Mystic boots (light)</td>
+               <td>2,723kc (5.32x)</td>
+       </tr>
+       <tr>
+               <td>40.</td>
+               <td class="complete">TskBelgarath</td>
+               <td class="incomplete">Elder chaos hood</td>
+               <td>7,502kc (5.29x)</td>
+       </tr>
+       <tr>
+               <td>41.</td>
+               <td class="complete">Riddle Task</td>
+               <td class="incomplete">Lumberjack piece</td>
+               <td>21kc (5.25x)</td>
+       </tr>
+       <tr>
+               <td>42.</td>
+               <td class="complete">Ironpuncake</td>
+               <td class="incomplete">Green satchel</td>
+               <td>35kc (5.25x)</td>
+       </tr>
+       <tr>
+               <td>43.</td>
+               <td class="complete">Cole Lexion</td>
+               <td class="incomplete">Angler piece</td>
+               <td>63kc (5.25x)</td>
+       </tr>
+       <tr>
+               <td>44.</td>
+               <td class="complete">TskBelgarath</td>
+               <td class="incomplete">Occult necklace</td>
+               <td>1,557kc + 471 thermy kc (5.23x)</td>
+       </tr>
+       <tr>
+               <td>45.</td>
+               <td class="complete">Thalrs</td>
+               <td class="incomplete">Crawling hand</td>
+               <td>2,611kc (5.22x)</td>
+       </tr>
+       <tr>
+               <td>46.</td>
+               <td class="complete">Shadu Task</td>
+               <td class="incomplete">Toktz-ket-xil</td>
+               <td>2,600kc (5.08x)</td>
+       </tr>
+       <tr>
+               <td>47.</td>
+               <td class="complete">Ann Arbor</td>
+               <td class="incomplete">Brine sabre</td>
+               <td>2,598kc (5.07x)</td>
+       </tr>
+       <tr>
+               <td>48.</td>
+               <td class="complete">JafusTask</td>
+               <td class="incomplete">Mystic hat (light)</td>
+               <td>2,590kc (5.06x)</td>
+       </tr>
+       <tr>
+               <td>49.</td>
+               <td class="complete">Gerni Task</td>
+               <td class="incomplete">Sarachnis cudgel</td>
+               <td>1,936kc (5.04x)</td>
+       </tr>
+       <tr>
+               <td>50.</td>
+               <td class="complete">Musto Task</td>
+               <td class="incomplete">Dragon sword</td>
+               <td>10,086kc (5.04x)</td>
+       </tr>
+       <tr>
+               <td>51.</td>
+               <td class="complete">TaskLuX</td>
+               <td class="incomplete">Elder chaos top</td>
+               <td>7,100kc (5.00x)</td>
+       </tr>
+       <tr>
+               <td>52.</td>
+               <td class="complete">GenerateTask</td>
+               <td class="incomplete">Mystic hat (dark)</td>
+               <td>2,554kc (4.99x)</td>
+       </tr>
+       <tr>
+               <td>53.</td>
+               <td class="complete">TASK BMO</td>
+               <td class="incomplete">DKS unique (warrior ring)</td>
+               <td>212kc (4.97x)</td>
+       </tr>
+       <tr>
+               <td>54.</td>
+               <td class="complete">GenerateTask</td>
+               <td class="incomplete">Zombie champion scroll</td>
+               <td>24,863kc (4.97x)</td>
+       </tr>
+       <tr>
+               <td>55.</td>
+               <td class="complete">A New Task</td>
+               <td class="incomplete">Brine Sabre</td>
+               <td>2,539kc (4.96x)</td>
+       </tr>
+       <tr>
+               <td>56.</td>
+               <td class="complete">BlaineBP</td>
+               <td class="incomplete">Mystic hat (light)</td>
+               <td>2,529kc (4.94x)</td>
+       </tr>
+       <tr>
+               <td>57.</td>
+               <td class="complete">MorRochTask</td>
+               <td class="incomplete">Kraken unique</td>
+               <td>1,110kc (4.93x)</td>
+       </tr>
+       <tr>
+               <td>58.</td>
+               <td class="complete">Taskurus</td>
+               <td class="incomplete">Dark totem piece</td>
+               <td>2,285kc (4.91x)</td>
+       </tr>
+       <tr>
+               <td>59.</td>
+               <td class="complete">ZezadaTask</td>
+               <td class="incomplete">Mithril boots</td>
+               <td>313kc (4.89x)</td>
+       </tr>
+       <tr>
+               <td>60.</td>
+               <td class="complete">TaskForSnus</td>
+               <td class="incomplete">Mudskipper hat</td>
+               <td>125kc (4.88x)</td>
+       </tr>
+       <tr>
+               <td>61.</td>
+               <td class="complete">Azeavia task</td>
+               <td class="incomplete">Barrows unique</td>
+               <td>71kc (4.87x)</td>
+       </tr>
+       <tr>
+               <td>62.</td>
+               <td class="complete">TaskBoy6</td>
+               <td class="incomplete">Big bass</td>
                <td>4,850 bass</td>
-               <td>4.85x</td>
-            </tr>
-            </tr>
-            <tr>
-               <td>GenerateTask</td>
-               <td>Malediction shard 2 <img src="/static/assets/Malediction_shard_2.png" alt=""></td>
-               <td>1,229kc</td>
-               <td>4.8x</td>
-            </tr>
-            <tr>
-               <td>TaskBlinky</td>
-               <td>Red satchel <img src="/static/assets/Red_satchel.png" alt=""></td>
-               <td>32kc</td>
-               <td>4.8x</td>
-            </tr>
-            <tr>
-               <td>Gerni Task</td>
-               <td>Malediction shard 1 <img src="/static/image/Malediction_shard_2.png" alt=""></td>
-               <td>1,229kc</td>
-               <td>4.8x</td>
-            </tr>
-            <tr>
-               <td>TaskAccount</td>
-               <td>Fedora  first unique <img src="/static/assets/Fedora.png" alt=""></td>
-               <td>304kc</td>
-               <td>4.75x</td>
-            </tr>
-            <tr>
-               <td>TaskinAway</td>
-               <td>KQ Unique <img src="/static/assets/Kq_head.png" alt=""></td>
-               <td>304kc</td>
-               <td>4.78x</td>
-            </tr>
-            <tr>
-               <td>Pirkka Taski</td>
-               <td>Dark totem piece <img src="/static/assets/Dark_totem_base.png" alt=""></td>
-               <td>2,234kc</td>
-               <td>4.74x</td>
-            </tr>
-            <tr>
-               <td>A New Task</td>
-               <td>Shaman mask <img src="/static/assets/Shaman_mask.png" alt=""></td>
-               <td>5,681kc</td>
-               <td>4.73x</td>
-            </tr>
-            <tr>
-               <td>Tiny Task</td>
-               <td>Mossy Key <img src="/static/assets/Mossy_key.png" alt=""></td>
-               <td>709kc</td>
-               <td>4.73x</td>
-            </tr>
-            <tr>
-               <td>GenerateTask</td>
-               <td>Kraken unique <img src="/static/assets/Trident_of_the_seas.png" alt=""></td>
-               <td>1,052kc</td>
-               <td>4.68x</td>
-            </tr>
-            <tr>
-               <td>Taskus Maxus</td>
-               <td>Granite longsword <img src="/static/assets/Granite_longsword.png" alt=""></td>
-               <td>2,390kc</td>
-               <td>4.67x</td>
-            </tr>
-            <tr>
-               <td>TaskinAway</td>
-               <td>Big bass <img src="/static/assets/Big_bass.png" alt=""></td>
-               <td>4,617kc</td>
-               <td>4.62x</td>
-            </tr>
-            <tr>
-               <td>capt tasking</td>
-               <td>Mystic boots (light) <img src="/static/assets/Mystic_boots_light.png" alt=""></td>
-               <td>2,351kc</td>
-               <td>4.59x</td>
-            </tr>
-            <tr>
-               <td>Ultidev</td>
-               <td>Giant key <img src="/static/assets/Giant_key.png" alt=""></td>
-               <td>586kc</td>
-               <td>4.58x</td>
-            </tr>
-            <tr>
-               <td>TaskOnly UIM</td>
-               <td>Tome of fire <img src="/static/assets/Tome_of_fire_(empty).png" alt=""></td>
-               <td>N/A</td>
-               <td>4.58x</td>
-            </tr>
-            <tr>
-               <td>Cindertask</td>
-               <td>Leaf bladed sword <img src="/static/assets/Leaf-bladed_sword.png" alt=""></td>
-               <td>2,283kc</td>
-               <td>4.57x</td>
-            </tr>
-            <tr>
-               <td>Hooch Task</td>
-               <td>Chaos elemental unique <img src="/static/assets/Dragon_2h_sword.png" alt=""></td>
-               <td>388kc</td>
-               <td>4.55x</td>
-            </tr>
-            <tr>
-               <td>me do task</td>
-               <td>Mossy Key <img src="/static/assets/Mossy_key.png" alt=""></td>
-               <td>683kc</td>
-               <td>4.55x</td>
-            </tr>
-            <tr>
-               <td>TaskinHersel</td>
-               <td>Big shark <img src="/static/assets/Big_shark.png" alt=""></td>
-               <td>22,759 shark</td>
-               <td>4.55x</td>
-            </tr>
-            <tr>
-               <td>Quazis Task</td>
-               <td>Ancient shard <img src="/static/assets/Ancient_shard.png" alt=""></td>
-               <td>1,421kc</td>
-               <td>4.53x</td>
-            </tr>
-            <tr>
-               <td>Generate Ore</td>
-               <td>Long bone <img src="/static/assets/Long_bone.png" alt=""></td>
-               <td>1,797kc</td>
-               <td>4.49x</td>
-            </tr>
-            <tr>
-               <td>DirtyTasker</td>
-               <td>Mystic gloves light <img src="/static/assets/Mystic_gloves_light.png" alt=""></td>
-               <td>2,247kc</td>
-               <td>4.39x</td>
-            </tr>
-            <tr>
-               <td>TaskOnly UIM</td>
-               <td>Hobgoblin Champion scroll <img src="/static/assets/Goblin_champion_scroll.png" alt=""></td>
-               <td>21,932kc</td>
-               <td>4.38x</td>
-            </tr>
-            <tr>
-               <td>GanerateTask</td>
-               <td>Ancient shard <img src="/static/assets/Ancient_shard.png" alt=""></td>
-               <td>1,374kc</td>
-               <td>4.38x</td>
-            </tr>
-            <tr>
-               <td>Gerni Task</td>
-               <td>Dragon Pickaxe <img src="/static/assets/Pet_chaos_elemental.png" alt=""></td>
-               <td>1,110kc</td>
-               <td>4.36x</td>
-            </tr>
-            <tr>
-               <td>Meneer Foro</td>
-               <td>Giant Key <img src="/static/assets/Giant_key.png" alt=""></td>
-               <td>553kc</td>
-               <td>4.32x</td>
-            </tr>
-            <tr>
-               <td>TskBelgarath</td>
-               <td>Mystic robe bottom light <img src="/static/assets/Mystic_robe_bottom_(light).png" alt=""></td>
-               <td>2,213kc</td>
-               <td>4.32x</td>
-            </tr>
-            <tr>
-               <td>DayV Task</td>
-               <td>Basilisk Head <img src="/static/assets/150px-Basilisk_head_detail.png" width="28px" height="28px" alt=""></td>
-               <td>8,637kc</td>
-               <td>4.32x</td>
-            </tr>
-            <tr>
-               <td>TskBelgarath</td>
-               <td>Enhanced crystal teleport seed <img src="/static/assets/Enhanced_crystal_teleport_seed.png" alt=""></td>
-               <td>4,412kc</td>
-               <td>4.31x</td>
-            </tr>
-            <tr>
-               <td>MrLoggie</td>
-               <td>Brine Sabre <img src="/static/assets/Brine_sabre.png" alt=""></td>
-               <td>2,208kc</td>
-               <td>4.31x</td>
-            </tr>
-            <tr>
-               <td>MorRochTask</td>
-               <td>Kurask head <img src="/static/assets/Kurask_head.png" alt=""></td>
-               <td>12,809kc</td>
-               <td>4.27x</td>
-            </tr>
-            <tr>
-               <td>TaskPlease</td>
-               <td>Angler Piece <img src="/static/assets/Angler_top.png" alt=""></td>
-               <td>51 trips</td>
-               <td>4.25x</td>
-            </tr>
-            <tr>
-               <td>Brog Task</td>
-               <td>Dragon defender <img src="/static/assets/Dragon_defender.png" alt=""></td>
-               <td>424kc</td>
-               <td>4.24x</td>
-            </tr>
-            <tr>
-               <td>Ixarion Task</td>
-               <td>Mystic hat light <img src="/static/assets/Mystic_hat_light.png" alt=""></td>
-               <td>2,168kc</td>
-               <td>4.23x</td>
-            </tr>
-            <tr>
-               <td>Generate Kats</td>
-               <td>Odium shard 2 <img src="/static/assets/Odium_shard_1.png" alt=""></td>
-               <td>1,080kc</td>
-               <td>4.22x</td>
-            </tr>
-            <tr>
-               <td>1BananaTask</td>
-               <td>Green satchel <img src="/static/assets/Green_satchel.png" alt=""></td>
-               <td>28kc</td>
-               <td>4.20x</td>
-            </tr>
-            <tr>
-               <td>Task Project</td>
-               <td>Bronze boots <img src="/static/assets/Bronze_boots.png" alt=""></td>
-               <td>532kc</td>
-               <td>4.16x</td>
-            </tr>
-            <tr>
-               <td>BlaineBP</td>
-               <td>Big swordfish <img src="/static/assets/Big_swordfish.png" alt=""></td>
-               <td>10,405 swordfish</td>
-               <td>4.16x</td>
-            </tr>
-            <tr>
-               <td>Terry Tasko</td>
-               <td>Ancient shard <img src="/static/assets/Ancient_shard.png" alt=""></td>
-               <td>1,286kc</td>
-               <td>4.15x</td>
-            </tr>
-            <tr>
-               <td>Gerni Task</td>
-               <td>Zulrah Unique <img src="/static/assets/Tanzanite_fang.png" alt=""></td>
-               <td>531kc</td>
-               <td>4.15x</td>
-            </tr>
-            <tr>
-               <td>Musto Task</td>
-               <td>Steam battlestaff <img src="/static/assets/Steam_battlestaff.png" alt=""></td>
-               <td>526kc</td>
-               <td>4.14x</td>
-            </tr>
-            <tr>
-               <td>Tashcerade</td>
-               <td>Long bone <img src="/static/assets/Long_bone.png" alt=""></td>
-               <td>1,656kc</td>
-               <td>4.14x</td>
-            </tr>
-            <tr>
-               <td>dragonzfire5</td>
-               <td>Barrows unique <img src="/static/assets/Guthans_helm.png" alt=""></td>
-               <td>62kc x</td>
-               <td>4.13x</td>
-            </tr>
-            <tr>
-               <td>MorRochTask</td>
-               <td>Enhanced crystal teleport seed <img src="/static/assets/Enhanced_crystal_teleport_seed.png" alt=""></td>
-               <td>4,159kc</td>
-               <td>4.06x</td>
-            </tr>
-            <tr>
-               <td>TaskLuX</td>
-               <td>Mask of ranul <img src="/static/assets/Mask_of_ranul.png" alt=""></td>
-               <td>4,050kc</td>
-               <td>4.05x</td>
-            </tr>
-            <tr>
-               <td>Gerni Task</td>
-               <td>Big swordfish <img src="/static/assets/Big_swordfish.png" alt=""></td>
-               <td>10,129 swordfish</td>
-               <td>4.05x</td>
-            </tr>
-            <tr>
-               <td>TaskLuX</td>
-               <td>Mystic robe bottom light <img src="/static/assets/Mystic_robe_bottom_(light).png" alt=""></td>
-               <td>2,066kc</td>
-               <td>4.04x</td>
-            </tr>
-            <tr>
-               <td>TaskBoiii</td>
-               <td>Crazy Arch unique <img src="/static/assets/Fedora.png" alt=""></td>
-               <td>257kc</td>
-               <td>4.02x</td>
-            </tr>
-            <tr>
-               <td>TASK BMO</td>
-               <td>Big Shark <img src="/static/assets/Big_shark.png" alt=""></td>
-               <td>20,035 shark</td>
-               <td>4.01x</td>
-            </tr>
-            <tr>
-               <td>TaskLuX</td>
-               <td>Vial of blood <img src="/static/assets/Vial_of_blood.png" alt=""></td>
-               <td>20kc</td>
-               <td>4x</td>
-            </tr>
-            <tr>
-               <td>Task Mize</td>
-               <td>Big Swordfish <img src="/static/assets/Big_swordfish.png" alt=""></td>
-               <td>10,002 swordfish</td>
-               <td>4x</td>
-            </tr>
-            <tr>
-               <td>TskBelgarath</td>
-               <td>Angler piece <img src="/static/assets/Angler_top.png" alt=""></td>
-               <td>32 trips</td>
-               <td>4x</td>
-            </tr>
-            <tr>
-               <td>TaskLog</td>
-               <td>Angler Piece <img src="/static/assets/Angler_top.png" alt=""></td>
-               <td>48 Trips</td>
-               <td>4.00x</td>
-            </tr>
+       </tr>
+       <tr>
+               <td>63.</td>
+               <td class="complete">GenerateTask</td>
+               <td class="incomplete">Malediction shard 2</td>
+               <td>1,229kc (4.8x)</td>
+       </tr>
+       <tr>
+               <td>64.</td>
+               <td class="complete">TaskBlinky</td>
+               <td class="incomplete">Red satchel</td>
+               <td>32kc (4.8x)</td>
+       </tr>
+       <tr>
+               <td>65.</td>
+               <td class="complete">Gerni Task</td>
+               <td class="incomplete">Malediction shard 1</td>
+               <td>1,225kc (4.78x)</td>
+       </tr>
+       <tr>
+               <td>66.</td>
+               <td class="complete">TaskAccount</td>
+               <td class="incomplete">Fedora (first unique)</td>
+               <td>304kc (4.75x)</td>
+       </tr>
+       <tr>
+               <td>67.</td>
+               <td class="complete">DionysusTask</td>
+               <td class="incomplete">Angler piece</td>
+               <td>57 trips (4.75x)</td>
+       </tr>
+       <tr>
+               <td>68.</td>
+               <td class="complete">TaskinAway</td>
+               <td class="incomplete">KQ Unique</td>
+               <td>304kc (4.75x)</td>
+       </tr>
+       <tr>
+               <td>69.</td>
+               <td class="complete">Pirkka Taski</td>
+               <td class="incomplete">Dark totem piece</td>
+               <td>2,234kc (4.74x)</td>
+       </tr>
+       <tr>
+               <td>70.</td>
+               <td class="complete">A New Task</td>
+               <td class="incomplete">Shaman mask</td>
+               <td>5,681kc (4.73x)</td>
+       </tr>
+       <tr>
+               <td>71.</td>
+               <td class="complete">Tiny Task</td>
+               <td class="incomplete">Mossy key</td>
+               <td>709kc (4.73x)</td>
+       </tr>
+       <tr>
+               <td>72.</td>
+               <td class="complete">Dukes H ole</td>
+               <td class="incomplete">Unique shard 1</td>
+               <td>604kc (4.72x)</td>
+       </tr>
+       <tr>
+               <td>73.</td>
+               <td class="complete">Task Fource</td>
+               <td class="incomplete">Odium shard 3</td>
+               <td>1,209kc (4.72x)</td>
+       </tr>
+       <tr>
+               <td>74.</td>
+               <td class="complete">Dukes H ole</td>
+               <td class="incomplete">Brine sabre</td>
+               <td>2,403kc (4,69x)</td>
+       </tr>
+       <tr>
+               <td>75.</td>
+               <td class="complete">GenerateTask</td>
+               <td class="incomplete">Kraken unique</td>
+               <td>1,052kc (4.68x)</td>
+       </tr>
+       <tr>
+               <td>76.</td>
+               <td class="complete">Taskus Maxus</td>
+               <td class="incomplete">Granite longsword</td>
+               <td>2,390kc (4.67x)</td>
+       </tr>
+       <tr>
+               <td>77.</td>
+               <td class="complete">friiztask</td>
+               <td class="incomplete">Green satchel</td>
+               <td>31kc (4.65x)</td>
+       </tr>
+       <tr>
+               <td>78.</td>
+               <td class="complete">DionysusTask</td>
+               <td class="incomplete">Mystic gloves (light)</td>
+               <td>2,370kc (4.63x)</td>
+       </tr>
+       <tr>
+               <td>79.</td>
+               <td class="complete">TaskinAway</td>
+               <td class="incomplete">Big bass</td>
+               <td>4,617kc (4.62x)</td>
+       </tr>
+       <tr>
+               <td>80.</td>
+               <td class="complete">capt tasking</td>
+               <td class="incomplete">Mystic boots (light)</td>
+               <td>2,351kc (4.59x)</td>
+       </tr>
+       <tr>
+               <td>81.</td>
+               <td class="complete">Ultidev</td>
+               <td class="incomplete">Giant key</td>
+               <td>586kc (4.58x)</td>
+       </tr>
+       <tr>
+               <td>82.</td>
+               <td class="complete">TaskOnly UIM</td>
+               <td class="incomplete">Tome of fire</td>
+               <td>(4.58x)</td>
+       </tr>
+       <tr>
+               <td>83.</td>
+               <td class="complete">Cindertask</td>
+               <td class="incomplete">Leaf-bladed sword</td>
+               <td>2,283kc (4.57x)</td>
+       </tr>
+       <tr>
+               <td>84.</td>
+               <td class="complete">Hooch Task</td>
+               <td class="incomplete">Chaos elemental unique</td>
+               <td>388kc (4.55x)</td>
+       </tr>
+       <tr>
+               <td>85.</td>
+               <td class="complete">me do task</td>
+               <td class="incomplete">Mossy key</td>
+               <td>683kc (4.55x)</td>
+       </tr>
+       <tr>
+               <td>86.</td>
+               <td class="complete">TaskinHersel</td>
+               <td class="incomplete">Big shark</td>
+               <td>22,759 shark (4.55x)</td>
+       </tr>
+       <tr>
+               <td>87.</td>
+               <td class="complete">Quazis Task</td>
+               <td class="incomplete">Ancient shard</td>
+               <td>1,421kc (4.53x)</td>
+       </tr>
+       <tr>
+               <td>88.</td>
+               <td class="complete">Generate Ore</td>
+               <td class="incomplete">Long bone</td>
+               <td>1,797kc (4.49x)</td>
+       </tr>
+       <tr>
+               <td>89.</td>
+               <td class="complete">Generate_Wax</td>
+               <td class="incomplete">Hill giant club</td>
+               <td>528kc (4.47x)</td>
+       </tr>
+       <tr>
+               <td>90.</td>
+               <td class="complete">EmeraldTask</td>
+               <td class="incomplete">Broken Zombie Axe</td>
+               <td>3,561kc (4.45x)</td>
+       </tr>
+       <tr>
+               <td>91.</td>
+               <td class="complete">OS Tasker</td>
+               <td class="incomplete">Big bass</td>
+               <td>4,399 bass (4.40x)</td>
+       </tr>
+       <tr>
+               <td>92.</td>
+               <td class="complete">DirtyTasker</td>
+               <td class="incomplete">Mystic gloves (light)</td>
+               <td>2,247kc (4.39x)</td>
+       </tr>
+       <tr>
+               <td>93.</td>
+               <td class="complete">TaskOnly UIM</td>
+               <td class="incomplete">Hobgoblin champion scroll</td>
+               <td>21,932kc (4.38x)</td>
+       </tr>
+       <tr>
+               <td>94.</td>
+               <td class="complete">GanerateTask</td>
+               <td class="incomplete">Ancient shard</td>
+               <td>1,374kc (4.38x)</td>
+       </tr>
+       <tr>
+               <td>95.</td>
+               <td class="complete">Gerni Task</td>
+               <td class="incomplete">Dragon pickaxe</td>
+               <td>1,110kc (4.36x)</td>
+       </tr>
+       <tr>
+               <td>96.</td>
+               <td class="complete">Meneer Foro</td>
+               <td class="incomplete">Giant key</td>
+               <td>553kc (4.32x)</td>
+       </tr>
+       <tr>
+               <td>97.</td>
+               <td class="complete">TskBelgarath</td>
+               <td class="incomplete">Mystic robe bottom (light)</td>
+               <td>2,213kc (4.32x)</td>
+       </tr>
+       <tr>
+               <td>98.</td>
+               <td class="complete">DayV Task</td>
+               <td class="incomplete">Basilisk Head</td>
+               <td>8,637kc (4.32x)</td>
+       </tr>
+       <tr>
+               <td>99.</td>
+               <td class="complete">TskBelgarath</td>
+               <td class="incomplete">Enhanced crystal teleport seed</td>
+               <td>4,412kc (4.31x)</td>
+       </tr>
+       <tr>
+               <td>100.</td>
+               <td class="complete">MrLoggie</td>
+               <td class="incomplete">Brine sabre</td>
+               <td>2,208kc (4.31x)</td>
+       </tr>
+       <tr>
+               <td>101.</td>
+               <td class="complete">MorRochTask</td>
+               <td class="incomplete">Kurask head</td>
+               <td>12,809kc (4.27x)</td>
+       </tr>
+       <tr>
+               <td>102.</td>
+               <td class="complete">TaskPlease</td>
+               <td class="incomplete">Angler piece</td>
+               <td>51 trips (4.25x)</td>
+       </tr>
+       <tr>
+               <td>103.</td>
+               <td class="complete">Generate_Wax</td>
+               <td class="incomplete">Kurask unique</td>
+               <td>1,452kc (4.25x)</td>
+       </tr>
+       <tr>
+               <td>104.</td>
+               <td class="complete">Brog Task</td>
+               <td class="incomplete">Dragon defender</td>
+               <td>424kc (4.24x)</td>
+       </tr>
+       <tr>
+               <td>105.</td>
+               <td class="complete">Generate_Wax</td>
+               <td class="incomplete">Mystic robe top (light)</td>
+               <td>2,165kc (4.23x)</td>
+       </tr>
+       <tr>
+               <td>106.</td>
+               <td class="complete">Ixarion Task</td>
+               <td class="incomplete">Mystic hat (light)</td>
+               <td>2,168kc (4.23x)</td>
+       </tr>
+       <tr>
+               <td>107.</td>
+               <td class="complete">GenerateKats</td>
+               <td class="incomplete">Odium shard 2</td>
+               <td>1,080kc (4.22x)</td>
+       </tr>
+       <tr>
+               <td>108.</td>
+               <td class="complete">1BananaTask</td>
+               <td class="incomplete">Green satchel</td>
+               <td>28kc (4.20x)</td>
+       </tr>
+       <tr>
+               <td>109.</td>
+               <td class="complete">Task Project</td>
+               <td class="incomplete">Bronze boots</td>
+               <td>532kc (4.16x)</td>
+       </tr>
+       <tr>
+               <td>110.</td>
+               <td class="complete">BlaineBP</td>
+               <td class="incomplete">Big swordfish</td>
+               <td>10,405 swordfish (4.16x)</td>
+       </tr>
+       <tr>
+               <td>111.</td>
+               <td class="complete">Terry Tasko</td>
+               <td class="incomplete">Ancient shard</td>
+               <td>1,286kc (4.15x)</td>
+       </tr>
+       <tr>
+               <td>112.</td>
+               <td class="complete">Gerni Task</td>
+               <td class="incomplete">Zulrah unique</td>
+               <td>531kc (4.15x)</td>
+       </tr>
+       <tr>
+               <td>113.</td>
+               <td class="complete">Musto Task</td>
+               <td class="incomplete">Steam battlestaff</td>
+               <td>526kc (4.14x)</td>
+       </tr>
+       <tr>
+               <td>114.</td>
+               <td class="complete">Tashcerade</td>
+               <td class="incomplete">Long bone</td>
+               <td>1,656kc (4.14x)</td>
+       </tr>
+       <tr>
+               <td>115.</td>
+               <td class="complete">dragonzfire5</td>
+               <td class="incomplete">Barrows unique</td>
+               <td>62kc (4.13x)</td>
+       </tr>
+       <tr>
+               <td>116.</td>
+               <td class="complete">KelticTasks</td>
+               <td class="incomplete">Mystic hat (light)</td>
+               <td>2,093kc (4.09x)</td>
+       </tr>
+       <tr>
+               <td>117.</td>
+               <td class="complete">MorRochTask</td>
+               <td class="incomplete">Enhanced crystal teleport seed</td>
+               <td>4,159kc (4.06x)</td>
+       </tr>
+       <tr>
+               <td>118.</td>
+               <td class="complete">TaskLuX</td>
+               <td class="incomplete">Mask of ranul</td>
+               <td>4,050kc (4.05x)</td>
+       </tr>
+       <tr>
+               <td>119.</td>
+               <td class="complete">Gerni Task</td>
+               <td class="incomplete">Big swordfish</td>
+               <td>10,129 swordfish (4.05x)</td>
+       </tr>
+       <tr>
+               <td>120.</td>
+               <td class="complete">TaskLuX</td>
+               <td class="incomplete">Mystic robe bottom (light)</td>
+               <td>2,066kc (4.04x)</td>
+       </tr>
+       <tr>
+               <td>121.</td>
+               <td class="complete">DionysusTask</td>
+               <td class="incomplete">Brine sabre</td>
+               <td>2,067KC</td>
+       </tr>
+       <tr>
+               <td>122.</td>
+               <td class="complete">TaskBoiii</td>
+               <td class="incomplete">Crazy arch unique</td>
+               <td>257kc (4.02x)</td>
+       </tr>
+       <tr>
+               <td>123.</td>
+               <td class="complete">TASK BMO</td>
+               <td class="incomplete">Big Shark</td>
+               <td>20,035 shark (4.01x)</td>
+       </tr>
+       <tr>
+               <td>124.</td>
+               <td class="complete">TaskerLux</td>
+               <td class="incomplete">Mystic gloves (light)</td>
+               <td>2,054kc (4.01x)</td>
+       </tr>
+       <tr>
+               <td>125.</td>
+               <td class="complete">TaskLuX</td>
+               <td class="incomplete">Vial of blood</td>
+               <td>20kc (4x)</td>
+       </tr>
+       <tr>
+               <td>126.</td>
+               <td class="complete">Task Mize</td>
+               <td class="incomplete">Big Swordfish</td>
+               <td>10,002 swordfish (4x)</td>
+       </tr>
+       <tr>
+               <td>127.</td>
+               <td class="complete">TskBelgarath</td>
+               <td class="incomplete">Angler piece</td>
+               <td>32 trips (4x)</td>
+       </tr>
+       <tr>
+               <td>128.</td>
+               <td class="complete">TaskLog</td>
+               <td class="incomplete">Angler piece</td>
+               <td>48 trips (4x)</td>
+       </tr>
+       <tr>
+               <td>129.</td>
+               <td class="complete">316-task</td>
+               <td class="incomplete">Lumberjack piece</td>
+               <td>16kc (4x) </td>
+       </tr>
          </tbody>
       </table>
    </div>
-</section>
-<script>
-   $(document).ready(function() {
-       $(".active").removeClass("active");
-       $("#wall-of-pain").addClass("active");
-   });
-</script>
+
+</div>
 {% endblock %}
+
