@@ -803,9 +803,10 @@ def faq():
         'medium': progress[1],
         'hard': progress[2],
         'elite': progress[3],
-        'passive': progress[4],
-        'extra': progress[5],
-        'allPets': progress[6]
+        'master' : progress[4],
+        'passive': progress[5],
+        'extra': progress[6],
+        'allPets': progress[7]
     }
 
     return render_template(
