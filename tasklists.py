@@ -31,6 +31,7 @@ easy = read_tasks('easy')
 medium = read_tasks('medium')
 hard = read_tasks('hard')
 elite = read_tasks('elite')
+master = read_tasks('master')
 passive = read_tasks('passive')
 extra = read_tasks('extra')
 boss_pet = read_tasks('bossPets')
@@ -44,6 +45,7 @@ def list_for_tier(tier: str, include_lms: bool = True) -> list[TaskData]:
         'mediumTasks': medium,
         'hardTasks': hard,
         'eliteTasks': elite,
+        'masterTasks' : master,
         'passive': passive,
         'extra': extra,
         'bossPets': boss_pet,
@@ -52,7 +54,8 @@ def list_for_tier(tier: str, include_lms: bool = True) -> list[TaskData]:
         'easy': easy,
         'medium': medium,
         'hard': hard,
-        'elite': elite
+        'elite': elite,
+        'master': master
     }[tier]
     if not include_lms:
         return list(filter(lambda x: not x.is_lms, all_tasks))

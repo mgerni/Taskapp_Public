@@ -15,6 +15,7 @@ class UserDatabaseObject:
     medium: UserTaskList
     hard: UserTaskList
     elite: UserTaskList
+    master: UserTaskList
     passive: UserTaskList
     extra: UserTaskList
     boss_pets: UserTaskList
@@ -27,16 +28,19 @@ class UserDatabaseObject:
             'mediumTasks': self.medium,
             'hardTasks': self.hard,
             'eliteTasks': self.elite,
+            'masterTasks': self.master,
             'easy': self.easy,
             'medium': self.medium,
             'hard': self.hard,
             'elite': self.elite,
+            'master': self.master,
             'passive': self.passive,
             'extra': self.extra,
             'bossPets': self.boss_pets,
             'skillPets': self.skill_pets,
-            'otherPets': self.other_pets
+            'otherPets': self.other_pets,
         }[tier]
+    
 
     def current_task_for_tier(self, tier: str) -> tuple or None:
         user_task_list = self.get_task_list(tier)
@@ -55,6 +59,8 @@ class UserDatabaseObject:
             return self.current_task_for_tier('hardTasks')
         elif self.elite.current_task is not None:
             return self.current_task_for_tier('eliteTasks')
+        elif self.master.current_task is not None:
+            return self.current_task_for_tier('masterTasks')
         else:
             return None
 
@@ -66,7 +72,7 @@ class UserDatabaseObject:
         return TierProgress(percent, total, completed)
 
     def page_tasks(self, tier: str) -> list[PageTask]:
-        if tier in ['easy', 'medium', 'hard', 'elite']:
+        if tier in ['easy', 'medium', 'hard', 'elite', 'master']:
             current_task = self.current_task_for_tier(tier)
             current_task_id = current_task[3] if current_task is not None else None
         else:
@@ -126,6 +132,7 @@ def convert_database_user(user_data: dict) -> UserDatabaseObject:
         medium=convert_database_tier('medium'),
         hard=convert_database_tier('hard'),
         elite=convert_database_tier('elite'),
+        master=convert_database_tier('master'),
         passive=convert_database_tier('passive'),
         extra=convert_database_tier('extra'),
         boss_pets=convert_database_tier('bossPets'),

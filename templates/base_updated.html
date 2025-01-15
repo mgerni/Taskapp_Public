@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" value="notranslate">
+    <title>TaskApp{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/clog.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/static/js/lazysizes.min.js" async=""></script>
+    {% block head %}{% endblock %}
+</head>
+
+<nav class="rsText">
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+
+    <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </label>
+        <a href="/dashboard/" class="home-link">Dashboard</a>
+        <a class="faq" href="/faq/">FAQ/Rules</a>
+        <a class="wop" href="#">Wall Of Pain</a>
+        <a class="profile" href="#">{{username}}</a>
+    </div>
+</nav>
+
+<header>
+    <div class="tasks-bar rsText">
+        <div class="tasks-col">
+            <a href="/task-list-easy/">
+                <span> Easy </span>
+                {% if easy == 0 %}
+                <span class="percent_red" id="easyPercent"> {{easy}}% </span>
+                {% elif easy <= 24 %}
+                <span class="percent_orange_red" id="easyPercent"> {{easy}}% </span>
+                {% elif easy <= 49 %}
+                <span class="percent_orange" id="easyPercent"> {{easy}}% </span>
+                {% elif easy <= 74 %}
+                <span class="percent_yellow" id="easyPercent"> {{easy}}% </span>
+                {% elif easy <= 99 %}
+                <span class="percent_green_yellow" id="easyPercent"> {{easy}}% </span>
+                {% elif easy <= 100 %}
+                <span class="percent_green" id="easyPercent"> {{easy}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="/task-list-medium/">
+                <span> Medium </span>
+                {% if medium == 0 %}
+                <span class="percent_red" id="mediumPercent"> {{medium}}% </span>
+                {% elif medium <= 24 %}
+                <span class="percent_orange_red" id="mediumPercent"> {{medium}}% </span>
+                {% elif medium <= 49 %}
+                <span class="percent_orange" id="mediumPercent"> {{medium}}% </span>
+                {% elif medium <= 74 %}
+                <span class="percent_yellow" id="mediumPercent"> {{medium}}% </span>
+                {% elif medium <= 99 %}
+                <span class="percent_green_yellow" id="mediumPercent"> {{medium}}% </span>
+                {% elif medium <= 100 %}
+                <span class="percent_green" id="mediumPercent"> {{medium}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="/task-list-hard/">
+                <span> Hard </span>
+                {% if hard == 0 %}
+                <span class="percent_red" id="hardPercent"> {{hard}}% </span>
+                {% elif hard <= 24 %}
+                <span class="percent_orange_red" id="hardPercent"> {{hard}}% </span>
+                {% elif hard <= 49 %}
+                <span class="percent_orange" id="hardPercent"> {{hard}}% </span>
+                {% elif hard <= 74 %}
+                <span class="percent_yellow" id="hardPercent"> {{hard}}% </span>
+                {% elif hard <= 99 %}
+                <span class="percent_green_yellow" id="hardPercent"> {{hard}}% </span>
+                {% elif hard <= 100 %}
+                <span class="percent_green" id="hardPercent"> {{hard}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="/task-list-elite/">
+                <span> Elite </span>
+                {% if elite == 0 %}
+                <span class="percent_red" id="elitePercent"> {{elite}}% </span>
+                {% elif elite <= 24 %}
+                <span class="percent_orange_red" id="elitePercent"> {{elite}}% </span>
+                {% elif elite <= 49 %}
+                <span class="percent_orange" id="elitePercent"> {{elite}}% </span>
+                {% elif elite <= 74 %}
+                <span class="percent_yellow" id="elitePercent"> {{elite}}% </span>
+                {% elif elite <= 99 %}
+                <span class="percent_green_yellow" id="elitePercent"> {{elite}}% </span>
+                {% elif elite <= 100 %}
+                <span class="percent_green" id="elitePercent"> {{elite}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="/task-list-master/">
+                <span> Master </span>
+                {% if master == 0 %}
+                <span class="percent_red" id="masterPercent"> {{master}}% </span>
+                {% elif master <= 24 %}
+                <span class="percent_orange_red" id="masterPercent"> {{master}}% </span>
+                {% elif master <= 49 %}
+                <span class="percent_orange" id="masterPercent"> {{master}}% </span>
+                {% elif master <= 74 %}
+                <span class="percent_yellow" id="masterPercent"> {{master}}% </span>
+                {% elif master <= 99 %}
+                <span class="percent_green_yellow" id="masterPercent"> {{master}}% </span>
+                {% elif master <= 100 %}
+                <span class="percent_green" id="masterPercent"> {{master}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="/task-list-passive/">
+                <span> Passive </span>
+                {% if passive == 0 %}
+                <span class="percent_red" id="passivePercent"> {{passive}}% </span>
+                {% elif passive <= 24 %}
+                <span class="percent_orange_red" id="passivePercent"> {{passive}}% </span>
+                {% elif passive <= 49 %}
+                <span class="percent_orange" id="passivePercent"> {{passive}}% </span>
+                {% elif passive <= 74 %}
+                <span class="percent_yellow" id="passivePercent"> {{passive}}% </span>
+                {% elif passive <= 99 %}
+                <span class="percent_green_yellow" id="passivePercent"> {{passive}}% </span>
+                {% elif passive <= 100 %}
+                <span class="percent_green" id="passivePercent"> {{passive}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="/task-list-extra/">
+                <span> Extra </span>
+                {% if extra == 0 %}
+                <span class="percent_red" id="extraPercent"> {{extra}}% </span>
+                {% elif extra <= 24 %}
+                <span class="percent_orange_red" id="extraPercent"> {{extra}}% </span>
+                {% elif extra <= 49 %}
+                <span class="percent_orange" id="extraPercent"> {{extra}}% </span>
+                {% elif extra <= 74 %}
+                <span class="percent_yellow" id="extraPercent"> {{extra}}% </span>
+                {% elif extra <= 99 %}
+                <span class="percent_green_yellow" id="extraPercent"> {{extra}}% </span>
+                {% elif extra <= 100 %}
+                <span class="percent_green" id="extraPercent"> {{extra}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="/task-list-pets/">
+                <span> Pets </span>
+                {% if allPets == 0 %}
+                <span class="percent_red" id="allPetsPercent"> {{allPets}}% </span>
+                {% elif allPets <= 24 %}
+                <span class="percent_orange_red" id="allPetsPercent"> {{allPets}}% </span>
+                {% elif allPets <= 49 %}
+                <span class="percent_orange" id="allPetsPercent"> {{allPets}}% </span>
+                {% elif allPets <= 74 %}
+                <span class="percent_yellow" id="allPetsPercent"> {{allPets}}% </span>
+                {% elif allPets <= 99 %}
+                <span class="percent_green_yellow" id="allPetsPercent"> {{allPets}}% </span>
+                {% elif allPets <= 100 %}
+                <span class="percent_green" id="allPetsPercent"> {{allPets}}% </span>
+                {% endif %}
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+    </div>
+</header>
+<body>
+    {% block context %}{% endblock %}
+</body>
+<script src="/static/js/task.js"></script>
+<script type="text/javascript">
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+</html>

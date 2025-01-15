@@ -8,6 +8,7 @@ import user_dao
 from user_dao import UserDatabaseObject, convert_database_user
 from user_migrate import migrate_database_user_to_new_format
 from task_types import TaskData, LeaderboardEntry, TaskData
+from temp import id_list, name_list, tip_list, wiki_list, wiki_image_list, asset_image_list
 
 mydb = config.MONGO_CLIENT["TaskApp"]
 
@@ -118,6 +119,7 @@ def add_task_account(username, isOfficial, lmsEnabled):
         "mediumTasks": combine_tasks(tasklists.medium),
         "hardTasks": combine_tasks(tasklists.hard),
         "eliteTasks": combine_tasks(tasklists.elite),
+        "masterTasks": combine_tasks(tasklists.master),
         "bossPetTasks": combine_tasks(tasklists.boss_pet),
         "skillPetTasks": combine_tasks(tasklists.skill_pet),
         "otherPetTasks": combine_tasks(tasklists.other_pet),
@@ -195,22 +197,31 @@ Returns:
     None
 
 '''
-def generate_task_for_tier(username, tier):
+def generate_task_for_tier(username, tier) ->TaskData or None:
     user = get_user(username)
     uncompleted_tasks = []
+
     if user.current_task_for_tier(tier) is None:
         all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
         completed_task_ids = list(map(lambda x: x.task_id, user.get_task_list(tier).completed_tasks))
         uncompleted_tasks = list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
 
     if len(uncompleted_tasks) != 0:
+        if tier == "masterTasks" and uncompleted_tasks[0].id == 1:
+            generated_task = uncompleted_tasks[0]
+            __set_current_task(username, tier, generated_task.id, True)
+            return generated_task
+        
         generated_task = random.choice(uncompleted_tasks)
         __set_current_task(username, tier, generated_task.id, True)
+        return generated_task
+
     else:
         task_info = user.current_task_for_tier(tier)
         task_tier = task_info[2]
         task_number = task_info[3]
         __set_current_task(username, task_tier, task_number, False)
+        return None
 
 '''
 generate_task:
@@ -244,10 +255,12 @@ def generate_task(username: str) -> TaskData or None:
     tasks_medium = get_incomplete_tasks('medium')
     tasks_hard = get_incomplete_tasks('hard')
     tasks_elite = get_incomplete_tasks('elite')
+    tasks_master = get_incomplete_tasks('master')
 
     if len(tasks_easy) != 0:
         generated_task = random.choice(tasks_easy)
         __set_current_task(username, 'easyTasks', generated_task.id, True)
+        print(generated_task)
         return generated_task
     elif len(tasks_medium) != 0:
         generated_task = random.choice(tasks_medium)
@@ -260,6 +273,13 @@ def generate_task(username: str) -> TaskData or None:
     elif len(tasks_elite) != 0:
         generated_task = random.choice(tasks_elite)
         __set_current_task(username, 'eliteTasks', generated_task.id, True)
+        return generated_task
+    elif len(tasks_master) != 0:
+        if tasks_master[0].id == 1:
+            generated_task = tasks_master[0]
+        else:
+            generated_task = random.choice(tasks_master)
+        __set_current_task(username, 'masterTasks', generated_task.id, True)
         return generated_task
     return None
 
@@ -357,10 +377,20 @@ def get_task_progress(username: str):
     medium = user.get_tier_progress('medium')
     hard = user.get_tier_progress('hard')
     elite = user.get_tier_progress('elite')
+    master = user.get_tier_progress('master')
+    passive = user.get_tier_progress('passive')
+    extra = user.get_tier_progress('extra')
+    boss_pets = user.get_tier_progress('bossPets')
+    skill_pets = user.get_tier_progress('skillPets')
+    other_pets = user.get_tier_progress('otherPets')
+    all_pets_total = boss_pets.total + skill_pets.total + other_pets.total
+    all_pets_total_complete = boss_pets.total_complete + skill_pets.total_complete + other_pets.total_complete
+    all_pets_percent_complete = floor(all_pets_total_complete / all_pets_total * 100)
 
-    return easy.percent_complete, medium.percent_complete, hard.percent_complete, elite.percent_complete, \
-        easy.total_complete, easy.total, medium.total_complete, medium.total, hard.total_complete, hard.total, \
-        elite.total_complete, elite.total
+    return easy.percent_complete, medium.percent_complete, hard.percent_complete, elite.percent_complete, master.percent_complete, \
+            passive.percent_complete, extra.percent_complete, all_pets_percent_complete, \
+            easy.total_complete, easy.total, medium.total_complete, medium.total, hard.total_complete, hard.total, \
+            elite.total_complete, elite.total, master.total_complete, master.total
 
 
 '''
@@ -386,6 +416,7 @@ def get_task_lists(username):
     task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
     task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
     task_query_elite = coll.find({'username': username}, {'eliteTasks': 1})
+    task_query_master = coll.find({'username': username}, {'masterTasks' : 1}),
     task_query_bosspet = coll.find({'username': username}, {'bossPetTasks': 1})
     task_query_skillpet = coll.find({'username': username}, {'skillPetTasks': 1})
     task_query_otherpet = coll.find({'username': username}, {'otherPetTasks': 1})
@@ -396,13 +427,14 @@ def get_task_lists(username):
     medium_list = task_query_medium[0]['mediumTasks']
     hard_list = task_query_hard[0]['hardTasks']
     elite_list = task_query_elite[0]['eliteTasks']
+    master_list = task_query_master[0]['masterTasks']
     bosspet_list = task_query_bosspet[0]['bossPetTasks']
     skillpet_list = task_query_skillpet[0]['skillPetTasks']
     otherpet_list = task_query_otherpet[0]['otherPetTasks']
     extra_list = task_query_extra[0]['extraTasks']
     passive_list = task_query_passive[0]['passiveTasks']
 
-    return easy_list, medium_list, hard_list, elite_list, bosspet_list, skillpet_list, otherpet_list, extra_list, passive_list
+    return easy_list, medium_list, hard_list, elite_list, master_list, bosspet_list, skillpet_list, otherpet_list, extra_list, passive_list
 
 
 '''
@@ -423,6 +455,9 @@ Returns:
 def manual_complete_tasks(username, tier, task_id):
     task_id = int(task_id)
     __set_task_complete(username, tier, task_id, True)
+    exclude_list = ['bossPetTasks', 'skillPetTasks', 'otherPetTasks']
+    if tier in exclude_list:
+        tier = tier.replace('Tasks', 's')
     task = user_dao.task_info_for_id(tasklists.list_for_tier(tier), task_id)
     return task.name, task.asset_image, task.tip, task.wiki_link
 
@@ -445,6 +480,9 @@ Returns:
 def manual_revert_tasks(username, tier, task_id):
     task_id = int(task_id)
     __set_task_complete(username, tier, task_id, False)
+    exclude_list = ['bossPetTasks', 'skillPetTasks', 'otherPetTasks']
+    if tier in exclude_list:
+        tier = tier.replace('Tasks', 's')
     task = user_dao.task_info_for_id(tasklists.list_for_tier(tier), task_id)
     return task.name, task.asset_image, task.tip, task.wiki_link
 
@@ -1094,11 +1132,26 @@ def get_leaderboard() -> list[LeaderboardEntry]:
         user = convert_database_user(migrate_database_user_to_new_format(data))
         return LeaderboardEntry(user.username, user.lms_enabled, user.get_tier_progress('easy'),
                                 user.get_tier_progress('medium'), user.get_tier_progress('hard'),
-                                user.get_tier_progress('elite'))
+                                user.get_tier_progress('elite'), user.get_tier_progress('master'))
 
     coll = mydb['taskAccounts']
     return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
 
+def add_master():
+    coll = mydb['taskAccounts']
+    update_query = []
+    for id, name, tip, wiki_link, wiki_image, asset_image in zip(id_list, name_list, tip_list, wiki_list, wiki_image_list, asset_image_list):
+        update_query.append({
+            '_id' : id,
+            'taskname' : {name : asset_image, 'LMS' : False},
+            'status' : 'Incomplete',
+            'taskCurrent' : False,
+            'taskTip' : tip, 
+            'wikiLink' : wiki_link,
+            'taskImage' : wiki_image
+        })
+    update = coll.update_many({}, {'$set' : {'masterTasks' : update_query}})
+    print(update.raw_result)
 
 if __name__ == "__main__":
     pass

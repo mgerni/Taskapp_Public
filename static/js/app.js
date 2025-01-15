@@ -1,100 +1,100 @@
 
 //Email verification modal
 
-$(document).ready(function() {
-    $(document).on('click', '.emailButton', function() {
-        var valid = this.form.checkValidity();
-        $("#email").html(valid)
-        if (valid){
+// $(document).ready(function() {
+//     $(document).on('click', '.emailButton', function() {
+//         var valid = this.form.checkValidity();
+//         $("#email").html(valid)
+//         if (valid){
 
 
-            $('form').submit(false);
-            var email = $('#email').val();
+//             $('form').submit(false);
+//             var email = $('#email').val();
 
-            req = $.ajax({
-                url : '/email_verify/',
-                type : 'POST',
-                data : {email : email}
-            });
+//             req = $.ajax({
+//                 url : '/email_verify/',
+//                 type : 'POST',
+//                 data : {email : email}
+//             });
 
-            req.done(function(data)
-            {
+//             req.done(function(data)
+//             {
 
-                $('#emailverificationModal').html(data);
-            });
-        }
-    });
-});
+//                 $('#emailverificationModal').html(data);
+//             });
+//         }
+//     });
+// });
 
 
 //email verification modal?
-$(document).ready(function() {
-    $(document).on('click', '.emailButton2', function() {
+// $(document).ready(function() {
+//     $(document).on('click', '.emailButton2', function() {
 
 
-            $('form').submit(false);
-            var email = $('#email').val();
+//             $('form').submit(false);
+//             var email = $('#email').val();
 
 
-            req = $.ajax({
-                url : '/email_verify/',
-                type : 'POST',
-                data : {email : email}
-            });
+//             req = $.ajax({
+//                 url : '/email_verify/',
+//                 type : 'POST',
+//                 data : {email : email}
+//             });
 
-            req.done(function(data)
-            {
+//             req.done(function(data)
+//             {
 
-                $('#emailverificationModal').html(data);
-            });
+//                 $('#emailverificationModal').html(data);
+//             });
         
-    });
-});
+//     });
+// });
 
 //Change Official status Modal button
 
-$(document).ready(function(){
-    $(document).on('click', '.changeOfficialButton', function(){
-        var official_status = false
-        req = $.ajax({
-            url : '/profile_change_official/',
-            type : 'POST',
-            data : {official_status : official_status}
-        });
+// $(document).ready(function(){
+//     $(document).on('click', '.changeOfficialButton', function(){
+//         var official_status = false
+//         req = $.ajax({
+//             url : '/profile_change_official/',
+//             type : 'POST',
+//             data : {official_status : official_status}
+//         });
 
-        req.done(function()
-        {
-            $('#changeOfficalStatusModal').modal('hide');
-            window.location.reload();
-        });
+//         req.done(function()
+//         {
+//             $('#changeOfficalStatusModal').modal('hide');
+//             window.location.reload();
+//         });
 
         
-    })
-});
+//     })
+// });
 
 
 
 
 // Changes input html for email change function.
-$(document).ready(function() {
-    $(document).on('click', '.emailChange', function() {
+// $(document).ready(function() {
+//     $(document).on('click', '.emailChange', function() {
 
 
-            $('form').submit(false);
+//             $('form').submit(false);
             
-            req = $.ajax({
-                url : '/profile_emailChange/',
-                type : 'POST'
+//             req = $.ajax({
+//                 url : '/profile_emailChange/',
+//                 type : 'POST'
                 
-            });
+//             });
 
-            req.done(function(data)
-            {
-                $('#changeEmail').html(data);
-            });
+//             req.done(function(data)
+//             {
+//                 $('#changeEmail').html(data);
+//             });
         
-    });
-});
+//     });
+// });
 
 
 // Sends AJAX request to backend to change the email address. 
@@ -422,3 +422,49 @@ $(document).ready(function() {
 });
 
 
+  $(document).ready(function() {
+    $(document).on("click", "#questList", function(event) {
+      var modal = document.getElementById("questModal");
+      modal.style.display = "block";
+    });
+  });
+
+  $(document).ready(function(){
+    $(document).on("click", "#questModalClose", function(){
+        var modal = document.getElementById("questModal");
+        modal.style.display = "none";
+    });
+  });
+
+
+  $(document).ready(function() {
+    $(document).on("click", "#farmModalOpen", function(event) {
+      var modal = document.getElementById("farmModal");
+      modal.style.display = "block";
+    });
+  });
+
+
+
+  $(document).ready(function(){
+    $(document).on("click", "#farmModalClose", function(){
+        var modal = document.getElementById("farmModal");
+        modal.style.display = "none";
+    });
+  });
+
+
+  $(document).ready(function() {
+    $(document).on("click", "#ancientPageModalOpen", function(event) {
+      var modal = document.getElementById("ancientPageModal");
+      modal.style.display = "block";
+    });
+  });
+
+
+  $(document).ready(function(){
+    $(document).on("click", "#ancientPageModalClose", function(){
+        var modal = document.getElementById("ancientPageModal");
+        modal.style.display = "none";
+    });
+  });

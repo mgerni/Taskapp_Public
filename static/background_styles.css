@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@font-face {
+    font-family: rsText;
+    src: url('RuneScape-UF.woff2') format('woff2'),
+         url('RuneScape-UF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.rsText {
+    color: #ffff00 !important;
+    font-size: 1rem !important;
+    font-family: rsText;
+}
+
+
+html {
+    background-color: rgba(37,47,63);
+}

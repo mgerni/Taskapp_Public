@@ -1,0 +1,156 @@
+{% extends "base_updated.html" %}
+{% block title %}
+{{task_type|capitalize}} Task List
+{% endblock %}
+{% block head %}
+<meta id="tier" data-tier="{{task_type}}">
+{% endblock %}
+{% block context %}
+<div class="task-title rsText">
+    <h1>{{task_type|capitalize}} Task List</h1>
+    <p>Hovering a Task Image shows a helpfulish tip!</p>
+    <p>Clicking a Task Image opens a Wiki Link for the task!</p>
+</div>
+
+    <div class="container">
+        <div class="tasklist-main-content">
+            <div class="space-under">
+                <div class="search-container">
+                    <button class="button-complete button-green shadow rsText" onclick="hideComplete()"> Toggle   Complete</button>
+                    <input type="text" class="txtInputTable form-control text-center rsText" placeholder="Search for a task..." id="txtInputTable">
+                     <button class="button-incomplete button-orange rsText" onclick="hideIncomplete()">Toggle Incomplete</button>
+                </div>
+            </div>
+            
+            <table id="tableDetails">
+                <tbody>
+
+                    <!-- Completed tasks -->
+                    {% for task in tasks %}
+                    {% if task.is_completed %}
+                    
+                    <tr>
+                            <div class="rect complete-hover space-under" data-tooltip="Mark Incomplete" name="{{task.name}}">
+                                <div class="triangle-top-left">
+                                    <div class="decoration-top-left shadow"></div>
+                                </div>
+                                <div class="triangle-top-right">
+                                    <div class="decoration-top-right shadow"></div>   
+                                </div>
+                                <div class="triangle-bottom-left">
+                                    <div class="decoration-bottom-left shadow"></div>
+                                </div>
+                                <div class="triangle-bottom-right">
+                                    <div class="decoration-bottom-right shadow"></div>
+                                </div>
+                                    <div id="{{task.id}}" class="content-container rsText revertButton">
+                                            <div class="square cut-corners square-complete">
+                                                <a href="{{task.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{task.asset_image}}" alt="" width="50px" height="50px" name="{{task.tip}}"></a>
+                                            </div>
+                                        <p class="complete">{{task.name}}</p>
+                                        <p class="complete">--/--/---- --:--</p>
+                                    </div>
+                            </div>
+                    </tr>
+
+                    <!-- Current task -->
+                    {% elif task.is_current %}
+                    <tr class="space-under" name="{{task.name}}">
+                        <div class="rect current-task-hover space-under" data-tooltip="Use Dashboard To Complete Task">
+                            <div class="triangle-top-left">
+                                <div class="decoration-top-left shadow"></div>
+                            </div>
+                            <div class="triangle-top-right">
+                                <div class="decoration-top-right shadow"></div>   
+                            </div>
+                            <div class="triangle-bottom-left">
+                                <div class="decoration-bottom-left shadow"></div>
+                            </div>
+                            <div class="triangle-bottom-right">
+                                <div class="decoration-bottom-right shadow"></div>
+                            </div>
+                            <div id="{{task.id}}" class="content-container rsText">
+                                <div class="square cut-corners square-current-task">
+                                    <a href="{{task.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{task.asset_image}}" alt="" width="50px" height="50px" name="{{task.tip}}"></a>
+                                </div>
+                                <p class="current-task">{{task.name}}</p>
+                                <p class="current-task">--/--/---- --:--</p>
+                            </div>
+                        </div>
+                    </tr>
+
+                    <!-- Incomplete tasks -->
+                    {% else %}
+                    <tr class="space-under" name="{{task.name}}">
+                        <div class="rect incomplete-hover space-under" data-tooltip="Mark Complete">
+                            <div class="triangle-top-left">
+                                <div class="decoration-top-left shadow"></div>
+                            </div>
+                            <div class="triangle-top-right">
+                                <div class="decoration-top-right shadow"></div>   
+                            </div>
+                            <div class="triangle-bottom-left">
+                                <div class="decoration-bottom-left shadow"></div>
+                            </div>
+                            <div class="triangle-bottom-right">
+                                <div class="decoration-bottom-right shadow"></div>
+                            </div>
+                            <div id="{{task.id}}" class="content-container rsText updateButton">
+                                <div class="square cut-corners square-incomplete ">
+                                    <a href="{{task.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{task.asset_image}}" alt="" width="50px" height="50px" name="{{task.tip}}"></a>
+                                </div>
+                                <p class="incomplete">{{task.name}}</p>
+                                <p class="incomplete">--/--/---- --:--</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+
+<!-- For searching purpose -->
+<script>
+$(document).ready(function(){
+    $("#txtInputTable").on("keyup", function(){
+        var value = $(this).val().toLowerCase();
+        $(".rect").filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+</script>
+
+<script>
+function hideComplete() {
+    var x = document.getElementsByClassName("complete-hover");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if (x[i].style.display === "none") {
+            x[i].style.display = "block";
+        } else {
+            x[i].style.display = "none";
+        }
+    }
+}
+
+function hideIncomplete() {
+    var x = document.getElementsByClassName("incomplete-hover");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if (x[i].style.display === "none") {
+            x[i].style.display = "block";
+        } else {
+            x[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+

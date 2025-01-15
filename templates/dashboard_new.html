@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+<title>{% block title %}Task App Dashboard{%endblock %}</title>
+{% block context %}
+<header>
+    <div class="tasks-bar rsText">
+        <div class="tasks-col">
+            <a href="#">
+                <span> Easy </span>
+                <span id="easyPercent"> 0% </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="#">
+                <span> Medium </span>
+                <span id="mediumPercent"> 0% </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="#">
+                <span> Hard </span>
+                <span id="hardPercent"> 0% </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="#">
+                <span> Elite </span>
+                <span id="elitePercent"> 0% </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="#">
+                <span> <del>Master</del> </span>
+                <span> Comming Soon </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="#">
+                <span> Passive </span>
+                <span id="passivePercent"> 0% </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="#">
+                <span> Extra </span>
+                <span id="extraPercent"> 0% </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+        <div class="tasks-col">
+            <a href="#">
+                <span> Pets </span>
+                <span id="petsPercent"> 0% </span>
+                <span class="tasks-line"></span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="task-container rsText">
+        <div class="task-box rsText">
+            <div class="task-header">
+                <h2>CURRENT TASK</h3>
+            </div>
+            <div class="task-content">
+                <img src="/static/assets/Void_seal.png" width="90" height="90">
+                <div class="task-info">
+                    <p>Get a Void Knight Seal</p>
+                    <hr>
+                    <p class="task-tip">Obtained from Pest Control Shop</p>
+                </div>
+            </div>
+            <div class="task-buttons rsText">
+                <button class="generateButton rsText">GENERATE TASK</button>
+                <button class="completeButton rsText">COMPLETE TASK</button>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

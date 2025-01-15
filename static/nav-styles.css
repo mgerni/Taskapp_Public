@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    align-items: center;
+    min-width: 100%;
+    /* justify-content: center; */
+}
+
+.brand-title {
+    font-size: 2.5rem !important;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    margin-top: .5rem;
+    color: #ffff00;
+    
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link:hover {
+    background-color: #555;
+}
+
+.dropdown {
+    position: relative;
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + .25rem);
+    background-color: #333;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+    border: 2px solid white;
+    z-index: 10;
+
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.information-grid {
+    display: grid;
+    grid-template-columns: repeat(1, max-content);
+    gap: 2rem;
+}
+
+.dropdown-links {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.dropdown-links > a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-links > a:hover {
+    background-color: #555;
+}
+
+.dropdown-hr {
+    width: 100%;
+}
+
+.dropdown-links > del > a {
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-links > del > a:hover {
+    background-color: #555;
+}
+
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        transform: translateY(100px);
+        background-color: rgba(37,47,63);
+        z-index: 999;
+    }
+}
+
+
+.tasks-bar {
+    position: relative;
+    overflow-x: auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.tasks-col a{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    
+}
+.tasks-col {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+.tasks-line {
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    
+}
+
+.tasks-col a:hover {
+    .tasks-line {
+        background-color: white;
+    }
+}

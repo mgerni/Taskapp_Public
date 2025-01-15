@@ -3,13 +3,18 @@
   src: url(runescape_uf.ttf);
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 
 body{
     background-color: rgba(37,47,63);
 }
 
 .rsText {
-  color: #ffff00 !important;
+  color: #ffff00;
   font-size: 1.2rem !important;
   font-family: rsText;
 
@@ -75,7 +80,7 @@ body{
 
 
 .percent_red{
-    color: red;
+    color: red !important;
     
 }
 .percent_orange_red{
@@ -395,4 +400,260 @@ height: auto;
 
 .link_hover {
   cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgba(37,47,63);
+}
+.page__wrapper {
+	/* height: 200vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "sans-serif";
+	flex-direction: column;
+}
+.heading {
+	color: #fff;
+	letter-spacing: 5px;
+	font-size: 2.6em;
+	margin-bottom: 30px;
+	padding: 0px 15px;
+}
+.faq-accordion {
+	max-width: 500px;
+	width: calc(100% - 20px);
+    margin: auto;
+}
+
+details {
+	background-color: #212529;
+    border: 1px solid white;
+    border-radius: .4rem;
+    margin-top: 10px;
+	margin-bottom: 10px;
+	filter: drop-shadow(5px 5px 0px #0A0A0A);
+}
+details:hover {
+	filter: drop-shadow(5px 5px 4px #0A0A0A);
+}
+details > summary {
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 1.3em;
+	cursor: pointer;
+    
+}
+details > p {
+    padding: 1.5rem;
+	color: #ddd;
+	font-size: 1.1em;
+}
+
+details > p > a {
+color: #fff;
+}
+
+details > ul {
+    padding-left: 2rem;
+}
+
+details > ul > p {
+    color: #fff;
+    }
+
+details > ul > li {
+        color: #fff;
+        padding-left: 2rem;
+        }
+
+.column > img {
+    width: 70%;
+    height: 70%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.faq-table {
+    margin: auto;
+    font-size: 1.1rem;
+    color: white;
+    width: 80%;
+    text-align: center;
+}
+
+.faq-table, .faq-th, .faq-td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.list {
+    color: white;
+    margin: auto;
+    width: 80%;
+}
+
+.faq-hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid lightgreen;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.myModal {
+  background-color: rgb(75,65,55);
+  margin-top: 10%;
+  box-shadow: 30px 25px 25px;
+}
+
+.modal {
+  display: hidden;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-body {
+  background-color: rgba(37,47,63);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: white;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.questPoints {
+  color: rgb(10, 226, 10);
+}
+/* nav stuff */
+
+.task-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  
+}
+
+.task {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: .2rem;
+}
+.task-header {
+  margin: auto auto;
+  size: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: .2rem;
+  padding-left: 5%;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
+.task-box {
+background-color: #333;
+display: flex;
+flex-direction: column;
+box-shadow:  0 0 30px black;
+width: 50%;
+border-radius: .5rem;
+border: 1px solid white;
+
+}
+
+.task-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.task-info {
+  justify-content: space-evenly;
+}
+
+.task-tip {
+  color: white !important;
+  margin-top: .2rem;
+}
+.task-buttons {
+  margin: 10%;
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+}
+
+.task-button-image {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+.generateButton {
+  background-color: rgb(107, 114, 128);
+  width: 100%;
+  border-color: transparent;
+  border-radius: .375rem;
+  border-width: 1px;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding: .5rem .75rem;
+  margin-right: 10%;
+}
+
+.completeButton {
+  background-color: rgb(14, 159, 110);
+  width: 100%;
+  border-color: transparent;
+  border-radius: .375rem;
+  border-width: 1px;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding: .5rem .75rem;
+  margin-left: 10%;
+
 }

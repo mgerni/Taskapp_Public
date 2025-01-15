@@ -61,6 +61,7 @@ class LeaderboardEntry:
     medium_progress: TierProgress
     hard_progress: TierProgress
     elite_progress: TierProgress
+    master_progress : TierProgress
 
     # TODO Have different weightings per tier
     def points(self) -> int:

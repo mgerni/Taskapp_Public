@@ -1,0 +1,13 @@
+{% extends "base_updated.html" %}
+{% block title %}
+{{task_type|capitalize}} Task List
+{% endblock %}
+{% block head %}
+<meta id="tier" data-tier="{{task_type}}">
+{% endblock %}
+{% block context %}
+<div class="faq-container">
+    <iframe class="faq-frame" src="https://docs.google.com/document/d/e/2PACX-1vTHfXHzMQFbt_iYAP-O88uRhhz3wigh1KMiiuomU7ftli-rL_c3bRqfGYmUliE1EHcIr3LfMx2UTf2U/pub?embedded=true"></iframe>
+</div>
+
+{% endblock %}
