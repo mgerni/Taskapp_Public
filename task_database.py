@@ -415,7 +415,7 @@ def get_task_lists(username):
     task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
     task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
     task_query_elite = coll.find({'username': username}, {'eliteTasks': 1})
-    task_query_master = coll.find({'username': username}, {'masterTasks' : 1}),
+    task_query_master = coll.find({'username': username}, {'masterTasks' : 1})
     task_query_bosspet = coll.find({'username': username}, {'bossPetTasks': 1})
     task_query_skillpet = coll.find({'username': username}, {'skillPetTasks': 1})
     task_query_otherpet = coll.find({'username': username}, {'otherPetTasks': 1})
