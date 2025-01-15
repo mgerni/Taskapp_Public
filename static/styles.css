@@ -120,6 +120,51 @@ body {
     justify-content: center;
   }
 
+.wop-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wop-input {
+    background-color: var(--main-bg-color);
+    color: var(--current-task-color);
+    border: 2px solid var(--main-accent-color);
+    border-radius: 5px;
+    padding: 15px 15px;
+    font-size: 16px;
+    outline: none;
+    width: 200px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wop-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40%;
+    width: 600px;
+    height: 60vh;
+    box-shadow: 1px 1px 10px .5px black;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.wop-container tr {
+    border-bottom: 2px solid #ddd;
+}
+
+.wop-container th, td {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
 .container-unofficial {
     display: flex;
     /* align-items: center; */
@@ -557,7 +602,7 @@ hr {
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translateX(-50%) translateY(250%) scale(var(--scale));
+    transform: translateX(-50%) translateY(500%) scale(var(--scale));
     transition: 250ms transform;
     transform-origin: bottom center;
     box-shadow: 1px 1px 10px .5px black;
@@ -577,6 +622,9 @@ hr {
     z-index: 10;
 }
 
+#taskImage:hover::before {
+    --scale: 1
+}
 
 
 
@@ -725,6 +773,16 @@ nav .faq:before {
 nav .wop:before {
     font-family: "Font Awesome 5 Free";
     content: "\f492";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    color: var(--complete-color);
+}
+
+nav .rank-check::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
     display: inline-block;
     padding-right: 3px;
     vertical-align: middle;
