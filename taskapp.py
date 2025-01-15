@@ -343,11 +343,14 @@ def dashboard():
         'easy': progress[0],
         'medium': progress[1],
         'hard': progress[2],
-        'elite': progress[3]
+        'elite': progress[3],
+        'master' : progress[4],
+        'passive' : progress[5], 
+        'extra' : progress[6],
+        'allPets' : progress[7],
     }
     if user_info.official:
         current_task = get_taskCurrent(username)
-        print(current_task)
         if current_task:
             task, image, _, _, tip, link, _ = current_task
             context.update({
@@ -356,7 +359,7 @@ def dashboard():
                 'tip': tip,
                 'link': link
             })
-            return render_template('index.html', **context)
+            return render_template('dashboard_official.html', **context)
 
         else:
             context.update({
@@ -370,10 +373,10 @@ def dashboard():
                 'elite_first': elite_first
 
             })
-            return render_template('index.html', **context)
+            return render_template('dashboard_official.html', **context)
     else:
-        context['easy_progress'], context['medium_progress'], context['hard_progress'], context['elite_progress'] = progress[0], progress[1], progress[2], progress[3]
-        for tier, task_type in [('easy', 'easyTasks'), ('medium', 'mediumTasks'), ('hard', 'hardTasks'), ('elite', 'eliteTasks')]:
+        context['easy_progress'], context['medium_progress'], context['hard_progress'], context['elite_progress'], context['master_progress']= progress[0], progress[1], progress[2], progress[3],progress[4]
+        for tier, task_type in [('easy', 'easyTasks'), ('medium', 'mediumTasks'), ('hard', 'hardTasks'), ('elite', 'eliteTasks'), ('master', 'masterTasks')]:
             current_task = get_taskCurrent_tier(username, task_type)
             if current_task:
                 context[f'task_{tier}'], context[f'image_{tier}'], _, _, context[f'tip_{tier}'], context[f'link_{tier}'], _ = current_task
@@ -384,7 +387,7 @@ def dashboard():
                     f'tip_{tier}': None,
                     f'link_{tier}': None
                 })
-        return render_template('dashboard_unofficial.html', **context)
+        return render_template('dashboard_unofficial_v2.html', **context)
 
 # AJAX route for importing a exisiting Generate Task Spreadsheet.
 @app.route('/import/', methods=['POST'])
@@ -485,61 +488,15 @@ def collection_log_check():
         print(log_data[0], log_data[1]['error'])
         return render_template('collection_log_check_error.html', rs_username=rs_username, error=log_data[1]['error'])
 
-# Form request route for generating a task for official users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
+# AJAX route for generating a task.
 @app.route('/generate/', methods=['POST'])
 @login_required
 def generate_button():
     username = session['username']
-    generate_task(username)
-    return redirect(url_for('dashboard'))
+    task = generate_task(username)
+    data = {"name" : task.name, "image" : task.asset_image, "tip" : task.tip, "link" : task.wiki_link}
+    return data
 
-
-# Form request route for generating a easy task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-@app.route('/generate_unofficial_easy/', methods=['POST'])
-@login_required
-def generate_unofficial_easy():
-    username = session['username']
-    generate_task_for_tier(username, 'easyTasks')
-    return redirect(url_for('dashboard'))
-
-# Form request route for generating a medium task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-@app.route('/generate_unofficial_medium/', methods=['POST'])
-@login_required
-def generate_unofficial_medium():
-    username = session['username']
-    generate_task_for_tier(username, 'mediumTasks')
-    return redirect(url_for('dashboard'))
-
-# Form request route for generating a hard task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-@app.route('/generate_unofficial_hard/', methods=['POST'])
-@login_required
-def generate_unofficial_hard():
-    username = session['username']
-    generate_task_for_tier(username, 'hardTasks')
-    return redirect(url_for('dashboard'))
-
-# Form request route for generating a elite task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-@app.route('/generate_unofficial_elite/', methods=['POST'])
-@login_required
-def generate_unofficial_elite():
-    username = session['username']
-    generate_task_for_tier(username, 'eliteTasks')
-    return redirect(url_for('dashboard'))
-
-
-# Form request route for completing a task for official users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
 @app.route('/complete/', methods =['POST'])
 @login_required
 def complete_button():
@@ -550,74 +507,68 @@ def complete_button():
         return redirect(url_for('dashboard', **query_params))
     return redirect(url_for('dashboard'))
 
+# AJAX route for generating a task for unofficial users.
+@app.route('/generate_unofficial/', methods=['POST'])
+@login_required
+def generate_unofficial():
+    username = session['username']
+    tier = request.form["tier"]
+    task = generate_task_for_tier(username, tier)
+    if task:
+        data = {"name" : task.name, "image" : task.asset_image, "tip" : task.tip, "link" : task.wiki_link}
+        return data
+    tier = tier.replace('Tasks', '')
+    data = {"name" : f"You have no {tier} task!", 
+            "image" : "Cake_of_guidance_detail.png",
+            "tip" : "Generate a Task!",
+            "link" : "#"
+            }
+    return data
 
+
+# AJAX route for completing a task for unofficial users.
+@app.route('/complete_unofficial/', methods =['POST'])
+@login_required
+def complete_unofficial():
+    username = session['username']
+    tier = request.form['tier']
+    current_task = get_taskCurrent_tier(username, tier)
+    progress = get_task_progress(username)
+    data = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master': progress[4],
+        'passive' : progress[5], 
+        'extra' : progress[6],
+        'allPets' : progress[7],
+        }
+    if current_task is not None:
+        task_id = current_task[3]
+        query_params = complete_task_unofficial_tier(username, task_id, tier)
+        return data
+    return data
 
 # Form request route for completing a easy task for unofficial users.
 # The Form request/action method was used before I started using AJAX.
 # Should be modified to use AJAX eventually.
-@app.route('/complete_unofficial_easy/', methods =['POST'])
-@login_required
-def complete_unofficial_easy():
-    username = session['username']
-    current_task = get_taskCurrent_tier(username, 'easyTasks')
-    if current_task is not None:
-        task_id = current_task[3]
-        query_params = complete_task_unofficial_tier(username, task_id, 'easyTasks')
-        return redirect(url_for('dashboard'), **query_params)
-    return redirect(url_for('dashboard'))
-
-
-# Form request route for completing a medium task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-@app.route('/complete_unofficial_medium/', methods =['POST'])
-@login_required
-def complete_unofficial_medium():
-    username = session['username']
-    current_task = get_taskCurrent_tier(username, 'mediumTasks')
-    if current_task is not None:
-        task_id = current_task[3]
-        query_params = complete_task_unofficial_tier(username, task_id, 'mediumTasks')
-        return redirect(url_for('dashboard'), **query_params)
-    return redirect(url_for('dashboard'))
-
-
-# Form request route for completing a hard task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-@app.route('/complete_unofficial_hard/', methods =['POST'])
-@login_required
-def complete_unofficial_hard():
-    username = session['username']
-    current_task = get_taskCurrent_tier(username, 'hardTasks')
-    if current_task is not None:
-        task_id = current_task[3]
-        query_params = complete_task_unofficial_tier(username, task_id, 'hardTasks')
-        return redirect(url_for('dashboard'), **query_params)
-    return redirect(url_for('dashboard'))
-
-
-# Form request route for completing a elite task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-@app.route('/complete_unofficial_elite/', methods =['POST'])
-@login_required
-def complete_unofficial_elite():
-    username = session['username']
-    current_task = get_taskCurrent_tier(username, 'eliteTasks')
-    if current_task is not None:
-        task_id = current_task[3]
-        query_params = complete_task_unofficial_tier(username, task_id, 'eliteTasks')
-        return redirect(url_for('dashboard'), **query_params)
-    return redirect(url_for('dashboard'))
-
+# @app.route('/complete_unofficial_easy/', methods =['POST'])
+# @login_required
+# def complete_unofficial_easy():
+#     username = session['username']
+#     current_task = get_taskCurrent_tier(username, 'easyTasks')
+#     if current_task is not None:
+#         task_id = current_task[3]
+#         query_params = complete_task_unofficial_tier(username, task_id, 'easyTasks')
+#         return redirect(url_for('dashboard'), **query_params)
+#     return redirect(url_for('dashboard'))
 
 # route for task-list page, this page lists all tasks easy, medium, hard, elite, extra, passive and pets.
 @app.route('/task-list/', methods=['GET'])
 @login_required
 def task_list():
     user_info = BasePageInfo()
-
     task = get_task_lists(user_info.username)
 
     # TODO Refactor template to use the user page_tasks class
@@ -625,11 +576,12 @@ def task_list():
     items_medium = filter_lms(task[1])
     items_hard = filter_lms(task[2])
     items_elite = filter_lms(task[3])
-    items_bosspet = filter_lms(task[4])
-    items_skillpet = filter_lms(task[5])
-    items_otherpet = filter_lms(task[6])
-    items_extra = filter_lms(task[7])
-    items_passive = filter_lms(task[8])
+    items_master = filter_lms(task[4])
+    items_bosspet = filter_lms(task[5])
+    items_skillpet = filter_lms(task[6])
+    items_otherpet = filter_lms(task[7])
+    items_extra = filter_lms(task[8])
+    items_passive = filter_lms(task[9])
 
     return render_template(
         'task_list.html',
@@ -641,6 +593,7 @@ def task_list():
         items_medium=items_medium,
         items_hard=items_hard,
         items_elite=items_elite,
+        items_master=items_master,
         items_bosspet=items_bosspet,
         items_skillpet=items_skillpet,
         items_otherpet=items_otherpet,
@@ -652,18 +605,31 @@ def task_list():
 
 def single_task_list(list_title, task_type):
     user_info = BasePageInfo()
-    items = user_info.user.page_tasks(task_type)
+    progress = get_task_progress(user_info.username)
+    tasks = user_info.user.page_tasks(task_type)
+    context = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master' : progress[4],
+        'passive': progress[5],
+        'extra': progress[6],
+        'allPets': progress[7]
+    }
+    
+
     return render_template(
-        'single-task-list.html',
+        'task-list.html',
+        tasks=tasks,
         list_title=list_title,
         task_type=task_type,  # Needed as it is ingrained in JS for updating tasks
         username=user_info.username,
         email_verify=user_info.email_bool,
         rank_icon=user_info.rank_icon,
         email_val=user_info.email_val,
-        items=items,
-        taskapp_email=taskapp_email,
-        official=user_info.official
+        official=user_info.official,
+        **context
     )
 
 # route for task-list-easy, only shows easy tasks.
@@ -691,18 +657,36 @@ def task_list_hard():
 def task_list_elite():
     return single_task_list(list_title='Elite Task List', task_type='elite')
 
+# route for the master task list, only shows master tasks.
+@app.route('/task-list-master/', methods=['GET'])
+@login_required
+def task_list_master():
+    return single_task_list(list_title='Master Task List', task_type='master')
+
 # route for the pets task list, only shows pets tasks.
 @app.route('/task-list-pets/', methods=['GET'])
 @login_required
 def task_list_pets():
     user_info = BasePageInfo()
     task = get_task_lists(user_info.username)
+    progress = get_task_progress(user_info.username)
     items_bosspet = filter_lms(task[4])
     items_skillpet = filter_lms(task[5])
     items_otherpet = filter_lms(task[6])
 
+    context = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master': progress[4],
+        'passive': progress[5],
+        'extra': progress[6],
+        'allPets': progress[7]
+    }
+
     return render_template(
-        'task-list-pets-new.html',
+        'task-list-pets.html',
         username=user_info.username,
         email_verify=user_info.email_bool,
         rank_icon=user_info.rank_icon,
@@ -711,7 +695,8 @@ def task_list_pets():
         items_skillpet=items_skillpet,
         items_otherpet=items_otherpet,
         taskapp_email=taskapp_email,
-        official=user_info.official
+        official=user_info.official,
+        **context
         )
 
 # route for extra task list, only shows extra tasks.
@@ -746,6 +731,7 @@ tier_to_type = {
     "mediumTasks": 'medium',
     "hardTasks": 'hard',
     "eliteTasks": 'elite',
+    "masterTasks": 'master',
     "bossPetTasks": 'pet',
     "skillPetTasks": 'pet',
     "otherPetTasks": 'pet',
@@ -759,18 +745,26 @@ tier_to_type = {
 @app.route('/update_completed/', methods= ['POST'])
 @login_required
 def update():
-
+    user_info = BasePageInfo()
+    progress = get_task_progress(user_info.username)
+    data = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master' : progress[4],
+        'passive': progress[5],
+        'extra': progress[6],
+        'allPets': progress[7]
+    }
     task_id = request.form['id']
-    tier = request.form['name']
-    task_update = manual_complete_tasks(session['username'], tier, task_id)
-    task = task_update[0]
-    image = task_update[1]
-    tip = task_update[2]
-    link = task_update[3]
+    if request.form["tier"] == 'bossPets' or request.form["tier"] == 'skillPets' or request.form["tier"] == 'otherPets':
+        tier = request.form["tier"]
+    else:
+        tier = request.form['tier'] + 'Tasks'
+    manual_complete_tasks(session['username'], tier, task_id)
 
-    task_type = tier_to_type[tier]
-    return render_template('update_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
-
+    return data
 
 # AJAX route for uncompleting/reverting tasks manually on task-list page(s).
 # only returns HTML specific to the task.
@@ -779,14 +773,22 @@ def update():
 @login_required
 def revert():
     task_id = request.form['id']
-    tier = request.form['name']
-    task_revert = manual_revert_tasks(session['username'], tier, task_id)
-    task = task_revert[0]
-    image = task_revert[1]
-    tip = task_revert[2]
-    link = task_revert[3]
-    task_type = tier_to_type[tier]
-    return render_template('revert_completed_easy.html', task=task, image=image, task_id=task_id, tier=tier, task_type=task_type, tip=tip, link=link)
+    tier = request.form['tier'] + 'Tasks'
+    user_info = BasePageInfo()
+    progress = get_task_progress(user_info.username)
+    data = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master' : progress[4],
+        'passive': progress[5],
+        'extra': progress[6],
+        'allPets': progress[7]
+    }
+    manual_revert_tasks(session['username'], tier, task_id)
+
+    return data
 
 
 
@@ -795,13 +797,25 @@ def revert():
 @login_required
 def faq():
     user_info = BasePageInfo()
+    progress = get_task_progress(user_info.username)
+    context = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'passive': progress[4],
+        'extra': progress[5],
+        'allPets': progress[6]
+    }
+
     return render_template(
-        'faq.html',
+        'faq-new.html',
         username=user_info.username,
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,
         rank_icon=user_info.rank_icon,
-        taskapp_email=taskapp_email
+        taskapp_email=taskapp_email,
+        **context
         )
 
 #route for Wall-of-pain page.

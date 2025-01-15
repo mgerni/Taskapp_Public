@@ -197,7 +197,7 @@ Returns:
     None
 
 '''
-def generate_task_for_tier(username, tier) ->TaskData or None:
+def generate_task_for_tier(username, tier) ->TaskData or None: # type: ignore
     user = get_user(username)
     uncompleted_tasks = []
 
@@ -241,7 +241,7 @@ Returns:
 '''
 
 
-def generate_task(username: str) -> TaskData or None:
+def generate_task(username: str) -> TaskData or None: # type: ignore
     user = get_user(username)
     if user.current_task() is not None:
         return
