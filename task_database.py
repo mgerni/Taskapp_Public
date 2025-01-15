@@ -260,7 +260,6 @@ def generate_task(username: str) -> TaskData or None: # type: ignore
     if len(tasks_easy) != 0:
         generated_task = random.choice(tasks_easy)
         __set_current_task(username, 'easyTasks', generated_task.id, True)
-        print(generated_task)
         return generated_task
     elif len(tasks_medium) != 0:
         generated_task = random.choice(tasks_medium)
@@ -601,7 +600,6 @@ def import_spreadsheet(username, url):
                     coll.update_one({'username': username}, {'$set': {doc_list_names: user_tasks[doc_list_names]}})
                     task_import_logs.append('Tasks for %s were updated!' % doc_list_names)
                 else:
-                    print(len(sheet_task_list), len(tasks_lists))
                     task_import_logs.append(
                         'Unable to update %s! Spreadsheet data differs from database!' % doc_list_names)
 
@@ -1091,8 +1089,6 @@ def unoffical_log_count(username):
 
     total_count = easy_completed + medium_completed + hard_completed + floor(
         elite_completed) + pet_completed + extra_completed + passive_completed
-    # print('Easy: %s, Medium: %s, Hard: %s , Elite: %s, Pet: %s: Extra: %s, Passive: %s. TOTAL: %s' % (easy_completed , medium_completed , hard_completed , floor(elite_completed) , pet_completed , extra_completed ,passive_completed, total_count))
-    # print(total_count)
     return total_count
 
 

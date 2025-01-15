@@ -145,8 +145,6 @@ $(document).on('click', '#complete_unofficial', function(){
     image.src = "/static/assets/Cake_of_guidance_detail.png";
     imagePreview.src = "/static/assets/Cake_of_guidance_detail.png";
     updatePercent.innerHTML = data[tier] + '%'
-    
-    console.log(updatePercent)
   });
 });
 

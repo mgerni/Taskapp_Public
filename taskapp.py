@@ -1002,7 +1002,6 @@ def emailChangeSubmit():
 # I don't know why I didn't just change the HTML via javascript...
 @app.route("/profile_usernameChange/", methods=['POST'])
 def usernameChange():
-    print('POST RECIVED')
     username = session['username']
     email_verify = task_login.email_verify(username)
     email_val = email_verify[1]
@@ -1015,7 +1014,6 @@ def usernameChange():
 def usernameChangeSubmit():
     username_value = request.form['username']
     username = session['username']
-    print(username)
     email_verify = task_login.email_verify(username)
     email_val = email_verify[1]
 
