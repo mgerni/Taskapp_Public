@@ -1132,21 +1132,6 @@ def get_leaderboard() -> list[LeaderboardEntry]:
     coll = mydb['taskAccounts']
     return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
 
-def add_master():
-    coll = mydb['taskAccounts']
-    update_query = []
-    for id, name, tip, wiki_link, wiki_image, asset_image in zip(id_list, name_list, tip_list, wiki_list, wiki_image_list, asset_image_list):
-        update_query.append({
-            '_id' : id,
-            'taskname' : {name : asset_image, 'LMS' : False},
-            'status' : 'Incomplete',
-            'taskCurrent' : False,
-            'taskTip' : tip, 
-            'wikiLink' : wiki_link,
-            'taskImage' : wiki_image
-        })
-    update = coll.update_many({}, {'$set' : {'masterTasks' : update_query}})
-    print(update.raw_result)
 
 if __name__ == "__main__":
     pass
