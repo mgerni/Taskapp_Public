@@ -670,9 +670,9 @@ def task_list_pets():
     user_info = BasePageInfo()
     task = get_task_lists(user_info.username)
     progress = get_task_progress(user_info.username)
-    items_bosspet = filter_lms(task[4])
-    items_skillpet = filter_lms(task[5])
-    items_otherpet = filter_lms(task[6])
+    items_bosspet = filter_lms(task[5])
+    items_skillpet = filter_lms(task[6])
+    items_otherpet = filter_lms(task[7])
 
     context = {
         'easy': progress[0],
