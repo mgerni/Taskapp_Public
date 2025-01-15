@@ -8,7 +8,6 @@ import user_dao
 from user_dao import UserDatabaseObject, convert_database_user
 from user_migrate import migrate_database_user_to_new_format
 from task_types import TaskData, LeaderboardEntry, TaskData
-from temp import id_list, name_list, tip_list, wiki_list, wiki_image_list, asset_image_list
 
 mydb = config.MONGO_CLIENT["TaskApp"]
 
