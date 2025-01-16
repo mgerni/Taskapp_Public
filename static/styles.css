@@ -181,18 +181,9 @@ body {
 
 
 .wop-box {
-    position: absolute;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40%;
-    width: 600px;
-    box-shadow: 1px 1px 10px .5px black;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    
+    width: max-content;
 }
 
 .wop-container tr {
@@ -235,10 +226,36 @@ body {
     padding: 10px;
 }
 
-.wop-inputBox {
+.wop-input {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.wop-container {
+    margin-top: 2%;
+}
+
+.wop-input-field {
+    background-color: var(--main-bg-color);
+    color: var(--current-task-color);
+    border: 2px solid var(--main-accent-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wop-input-field:hover {
+    border-color: var(--current-task-color);
+    cursor: pointer;
+}
+
+.wop-input-field:focus {
+    border-color: var(--current-task-color);
+    box-shadow: 0 0 5px var(--current-task-color);
 }
 
 .tasklist-main-content {
@@ -302,6 +319,16 @@ body {
     padding: 10px;
   }
 
+  .rect-large-wop {
+    background-color: var(--main-accent-color);
+    position: relative;
+    box-shadow: 1px 1px 10px .5px black;
+    padding: 10px;
+    height: 75vh;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
 
 .complete a {
     text-decoration: none;
