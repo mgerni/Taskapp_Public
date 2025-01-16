@@ -126,17 +126,59 @@ body {
     justify-content: center;
 }
 
-.wop-input {
+.rc-input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rc-input {
     background-color: var(--main-bg-color);
     color: var(--current-task-color);
     border: 2px solid var(--main-accent-color);
     border-radius: 5px;
-    padding: 15px 15px;
+    padding: 10px 15px;
     font-size: 16px;
     outline: none;
-    width: 200px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.rc-input:hover {
+    border-color: var(--current-task-color);
+    cursor: pointer;
+}
+
+.rc-input:focus {
+    border-color: var(--current-task-color);
+    box-shadow: 0 0 5px var(--current-task-color);
+}
+
+#rankCheckContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank-results-col { 
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.rank-results-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+}
+
+.row-border {
+    padding: 5px;
+    box-shadow: 2px 2px 10px .5px black;box-shadow: 2px 1px 10px .5px black;
+}
+
 
 .wop-box {
     position: absolute;
@@ -146,11 +188,11 @@ body {
     justify-content: center;
     margin-top: 40%;
     width: 600px;
-    height: 60vh;
     box-shadow: 1px 1px 10px .5px black;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    
 }
 
 .wop-container tr {
@@ -182,6 +224,21 @@ body {
     flex-direction: column;
     align-items: center;
     flex-basis: auto;
+}
+
+.main-content-rank-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: auto;
+    padding: 10px;
+}
+
+.wop-inputBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tasklist-main-content {
@@ -222,16 +279,34 @@ body {
     justify-content: space-between;
     margin-left: 5%;
     margin-right: 5%;
+     
 }
   
-  .rect {
+
+.rect {
     background-color: var(--main-accent-color);
     position: relative;
     height: 100px;
     width: 100%;
     box-shadow: 1px 1px 10px .5px black;
+    text-align: center;
+    text-align: center;
+    vertical-align: middle;
   }
 
+.rect-large {
+    background-color: var(--main-accent-color);
+    position: relative;
+    width: 100%;
+    box-shadow: 1px 1px 10px .5px black;
+    padding: 10px;
+  }
+
+
+.complete a {
+    text-decoration: none;
+
+}
 .bg-override {
     background-color: var(--main-accent-color) !important;
 }
@@ -959,6 +1034,16 @@ nav svg {
     
   }
 
+  .button-failed {
+    background-color: var(--main-accent-color);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 1px 1px 10px .5px black;
+    color: var(--incomplete-color) !important;
+  }
 .button-green:hover {
     cursor: pointer;
     border: 1px solid var(--complete-color);

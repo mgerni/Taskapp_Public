@@ -477,7 +477,7 @@ def collection_log_check():
         easy_check = check_collection_log(tasklists.easy, log_data[1])
         medium_check = check_collection_log(tasklists.medium, log_data[1])
         hard_check = check_collection_log(tasklists.hard, log_data[1])
-
+        
         return render_template('collection_log_check.html',
         rs_username = rs_username,
         easy_check= easy_check,
@@ -837,6 +837,33 @@ def wall_of_pain():
     }
     return render_template(
         'wall_of_pain.html',
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        email_val=user_info.email_val,
+        rank_icon=user_info.rank_icon,
+        taskapp_email=taskapp_email,
+        **context
+    )
+
+
+#route for Rank Check Page
+@app.route('/rank-check/', methods=['GET'])
+@login_required
+def rank_check():
+    user_info = BasePageInfo()
+    progress = get_task_progress(user_info.username)
+    context = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master' : progress[4],
+        'passive': progress[5],
+        'extra': progress[6],
+        'allPets': progress[7]
+    }
+    return render_template(
+        'rank-check.html',
         username=user_info.username,
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,

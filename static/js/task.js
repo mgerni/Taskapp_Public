@@ -339,6 +339,25 @@ $(document).ready(function(){
   });
 });
 
+
+$(document).ready(function(){
+  $(document).on('click', '#rankCheckButton', function(){
+    var input = document.getElementById('rankCheckInput');
+    var username = input.value;
+    var rcContent = document.getElementById('rankCheckContent');
+
+    req = $.ajax({
+      url : '/collectionlog_check/',
+      type : 'POST',
+      data : {username : username}
+    });
+
+    req.done(function(data) {
+      $(rcContent).html(data)
+    });
+  });
+});
+
 $(document).ready(function(){
 $('.task-image').mouseenter(function(){
   const tip = this.name;
@@ -420,4 +439,53 @@ $(document).ready(function(){
     target.removeClass("active-task-tooltip-hover");
   });
 
+});
+
+
+$(document).on('click', '.missing-easy', function(){
+  $('form').submit(false);
+  console.log('click')
+  var tasks = document.getElementsByClassName('li-easy');
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].style.display == 'none') {
+      tasks[i].style.display = 'block';
+    }
+    else {
+      tasks[i].style.display = 'none';
+    }
+    
+  }
+});
+
+
+$(document).on('click', '.missing-medium', function(){
+  $('form').submit(false);
+  console.log('click')
+  var tasks = document.getElementsByClassName('li-medium');
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].style.display == 'none') {
+      tasks[i].style.display = 'block';
+    }
+    else {
+      tasks[i].style.display = 'none';
+    }
+    
+  }
+});
+
+
+
+$(document).on('click', '.missing-hard', function(){
+  $('form').submit(false);
+  console.log('click')
+  var tasks = document.getElementsByClassName('li-hard');
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].style.display == 'none') {
+      tasks[i].style.display = 'block';
+    }
+    else {
+      tasks[i].style.display = 'none';
+    }
+    
+  }
 });

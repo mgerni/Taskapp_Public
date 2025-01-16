@@ -1,0 +1,60 @@
+{% extends "base_updated.html" %}
+{% block title %}
+Rank Check
+{% endblock %}
+{% block head %}
+{% endblock %}
+{% block context %}
+
+<div class="container" style="margin-top: 5%;">
+    <div class="main-content-rank-check">
+        <div class="rect-large rsText">
+            <div class="triangle-top-left">
+                <div class="decoration-top-left shadow"></div>
+            </div>
+            <div class="triangle-top-right">
+                <div class="decoration-top-right shadow"></div>   
+            </div>
+            <div class="triangle-bottom-left">
+                <div class="decoration-bottom-left shadow"></div>
+            </div>
+            <div class="triangle-bottom-right">
+                <div class="decoration-bottom-right shadow"></div>
+            </div>
+
+            <div id="rankCheckContent">
+                <div class="rank-results-col">
+                    <h3>Rank Up Check</h3>
+                    <p class="complete">Official accounts are required to submit a Rank Up request in the Generate Task Discord.</p>
+                    <br>
+                    <p class="complete">You can Rank-Up when reaching the following milestones:</p>
+                    <ul>
+                        <li class="incomplete">Reaching 100% Easy Completion</li>
+                        <li class="incomplete">Reaching 100% Medium Completion</li>
+                        <li class="incomplete">Reaching 100% Hard Completion</li>
+                    </ul>
+                    <br>
+                    <p class="complete">You must "link" your account to <a href="https://collectionlog.net">Collectionlog.net</a></p>
+                    <br>
+                    <p class="complete">You should ensure that all collection log data is updated before submitting the request on Discord.</p>
+                    <br>
+                     <p class="complete">If you have not linked your account, you can follow the steps below to do so:</p>
+                     <ol>
+                        <li class="incomplete">Install the "Collection Log" Runelite plugin from the Pluginhub.</li>
+                        <li class="incomplete">In the settings/configuration option for the "Collection Log" plugin, ensure "Allow collectionlog.net connection" is enabled.</li>
+                        <li class="incomplete">Ingame, open your collection log and click each individual page.</li>
+                        <li class="incomplete">Logout of the game which should sync your collection log data.</li>
+                     </ol>
+        
+                     <p  class="complete">Once you have ensured your Collectionlog.net data is updated/sync'd, enter your Runescape Username and click Rank Check.</p>
+                     <div class="rc-input-section">
+                        <input class="rc-input" type="text" name="inputText" id="rankCheckInput" placeholder="RSN">
+                        <button id="rankCheckButton" class="rsText button-complete button-green">Rank Check</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
