@@ -3,11 +3,50 @@
 {{task_type|capitalize}} Task List
 {% endblock %}
 {% block head %}
+
+<style type="text/css">
+    ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+    ::-webkit-scrollbar-button {
+      width: 0px;
+      height: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: transparent;
+      border: 0px none;
+      border-radius: 0px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb:active {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+      border: 0px none;
+      border-radius: 0px;
+    }
+    ::-webkit-scrollbar-track:hover {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-track:active {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+    </style> 
+    
 <meta id="tier" data-tier="{{task_type}}">
 {% endblock %}
 {% block context %}
 <div class="faq-container">
     <iframe class="faq-frame" src="https://docs.google.com/document/d/e/2PACX-1vTHfXHzMQFbt_iYAP-O88uRhhz3wigh1KMiiuomU7ftli-rL_c3bRqfGYmUliE1EHcIr3LfMx2UTf2U/pub?embedded=true"></iframe>
 </div>
+
+
 
 {% endblock %}

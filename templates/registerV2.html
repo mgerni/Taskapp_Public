@@ -1,0 +1,177 @@
+{% extends "base_unauth.html" %}
+{% block title %}
+Register
+{% endblock %}
+{% block head %}
+{% endblock %}
+{% block context %}
+<div class="register-container">
+        <div class="rect-large-register">
+            <div class="triangle-top-left">
+                <div class="decoration-top-left shadow"></div>
+            </div>
+            <div class="triangle-top-right">
+                <div class="decoration-top-right shadow"></div>   
+            </div>
+            <div class="triangle-bottom-left">
+                <div class="decoration-bottom-left shadow"></div>
+            </div>
+            <div class="triangle-bottom-right">
+                <div class="decoration-bottom-right shadow"></div>
+            </div>
+            <a href="/"><h1 class="register-title rsText">Register For TaskApp</h1></a>
+            <form class="form rsText">
+                <div class="input-group rsText">
+                    <label for="email">Email Address:</label>
+                    <input type="email" name="email" id="email" required class="rsText" placeholder="Email Address">
+                </div>
+                <div class="input-group rsText">
+                    <label for="username">Username:</label>
+                    <input type="username" name="username" id="username" required class="rsText" placeholder="Username">
+                </div>
+                <div class="input-group rsText">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required class="rsText"placeholder="Password">
+                </div>
+                <div class="input-group rsText">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" required class="rsText" placeholder="Confirm Password">
+                </div>
+
+                <span>
+                    <ul>
+                        <li id="number" class="">Password must have at least one number (0-9)</li>
+                        <li id="uppercase" class="">Password must have at least one uppercase letters (A-Z)</li>
+                        <li id="lowercase" class="">Password must have at least one lowercase letters (a-z)</li>
+                        <li id="special" class="">Password must have at least one special character. (e.g. !@#$%^&*())</li>
+                        <li id="length" class="">Password must have at least 8 characters.</li>
+                        <li id="match" class="">Password and confirm password must match.</li>
+                    </ul>
+                </span>
+                <span>
+                    <p>Official Task Account</p>
+                    <label class="switch">
+                        <input type="checkbox" id="official">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <p>LMS Tasks (You can still be official without LMS Tasks enabled)</p>
+                    <label class="switch">
+                        <input type="checkbox" id="lms_status">
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+                <div>{{ recaptcha }}</div>
+                <button id="registerButton"class="register-button rsText">Register</button>
+            </form>
+        </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#password").bind("keyup", function(){
+            var regex_uppercase = new Array();
+            var regex_lowercase = new Array();
+            var regex_digit = new Array();
+            var regex_special = new Array();
+            regex_uppercase.push("[A-Z]");
+            regex_lowercase.push("[a-z]");
+            regex_digit.push("[0-9]");
+            regex_special.push("[!@#$%^&*()]");
+    
+            if ($(this).val().length >= 8){
+                $('#length').addClass('complete');
+            }
+            else {
+                $('#length').removeClass('complete');
+            }
+    
+            for (let i = 0; i < regex_uppercase.length; i++) {
+                if (new RegExp(regex_uppercase[i]).test($(this).val())) {
+                    $('#uppercase').addClass('complete');
+                }
+                else {
+                    $('#uppercase').removeClass('complete');
+                }
+            }
+    
+            for (let i = 0; i < regex_lowercase.length; i++) {
+                if (new RegExp(regex_lowercase[i]).test($(this).val())) {
+                    $('#lowercase').addClass('complete');
+                }
+                else {
+                    $('#lowercase').removeClass('complete');
+                }
+            }
+            for (let i = 0; i < regex_digit.length; i++) {
+                if (new RegExp(regex_digit[i]).test($(this).val())) {
+                    $('#number').addClass('complete');
+                }
+                else {
+                    $('#number').removeClass('complete');
+                }
+            }
+            for (let i = 0; i < regex_special.length; i++) {
+                if (new RegExp(regex_special[i]).test($(this).val())) {
+                    $('#special').addClass('complete');
+                }
+                else {
+                    $('#special').removeClass('complete');
+                }
+            }
+        });
+    });
+    
+    $(document).ready(function(){
+        $('#confirmPassword').bind('keyup', function() {
+            var password = $('#password').val();
+            var confirmPassword = $('#confirmPassword').val();
+    
+            if (password === confirmPassword) {
+                $('#match').addClass('complete');
+            }
+            else {
+                $('#match').removeClass('complete');
+            }
+        });
+    });
+    
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('#registerButton').on('click', function(){
+            $('form').submit(false);
+            var email = $('#email').val();
+            var username = $('#username').val();
+            var password = $('#password').val();
+            var confirmPassword = $('#confirmPassword').val();
+            var official =  $('#official').is(':checked')
+            var lms_status = $('#lms_status').is(':checked')
+
+            req = $.ajax({
+                url : '/register/user/',
+                type : 'POST',
+                data : {email : email,
+                        username : username,
+                        password : password, 
+                        confirmPassword : confirmPassword,
+                        official : official,
+                        lms_status : lms_status}
+            });
+
+            req.done(function(data){
+                if (!data['success']){
+                    alert(data['error'])
+                }
+                else {
+                    alert("Account " + username + " Created Successfully!")
+                    alert("Verification email was sent to " + email + " please check your email (be sure to check your spam folder)")
+                    location.replace("/login")
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

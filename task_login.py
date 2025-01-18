@@ -223,7 +223,7 @@ Returns:
 
 '''
 def change_password(username, password):
-    reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%*#?&])[A-Za-z\d@!#%*?&]{8,20}$"
+    reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%$*#?&*])[A-Za-z\d@!#%*?&]{8,20}$"
     pattern = re.compile(reg)
     match = re.search(pattern, password)
     error = None

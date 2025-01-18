@@ -1,0 +1,73 @@
+{% extends "base_unauth.html" %}
+{% block title %}
+Login
+{% endblock %}
+{% block head %}
+{% endblock %}
+{% block context %}
+<div class="register-container">
+    <div class="rect-large-register">
+        <div class="triangle-top-left">
+            <div class="decoration-top-left shadow"></div>
+        </div>
+        <div class="triangle-top-right">
+            <div class="decoration-top-right shadow"></div>   
+        </div>
+        <div class="triangle-bottom-left">
+            <div class="decoration-bottom-left shadow"></div>
+        </div>
+        <div class="triangle-bottom-right">
+            <div class="decoration-bottom-right shadow"></div>
+        </div>
+
+        <a href="/"><h1 class="register-title rsText">Login To TaskApp</h1></a>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+              <p class="flash-message rsText incomplete">{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+        <form class="form rsText">
+            <div class="input-group rsText">
+                <label for="username">Username:</label>
+                <input type="username" name="username" id="username" required class="rsText" placeholder="Username" autocomplete="username">
+            </div>
+            <div class="input-group rsText">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required class="rsText"placeholder="Password" autocomplete="password">
+                <div class="forgot-password"><a href="/reset-password/">Forgot Password</a></div>
+            </div>
+            
+            <div>{{ recaptcha }}</div>
+            <button id="loginButton"class="register-button rsText">Login</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#loginButton").on('click', function(){
+            $('form').submit(false);
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            req = $.ajax({
+                url : '/login/user/',
+                type : 'POST',
+                data : {username : username, password : password}
+            });
+
+            req.done(function(data){
+                if (!data['success']) {
+                    alert(data['error']);
+                }
+                else {
+                    location.replace('/dashboard/');
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
+

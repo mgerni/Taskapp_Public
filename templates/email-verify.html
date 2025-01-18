@@ -1,0 +1,46 @@
+{% extends "base_unauth.html" %}
+{% block title %}
+Forgot Password
+{% endblock %}
+{% block head %}
+{% endblock %}
+{% block context %}
+
+<div class="register-container">
+    <div class="rect-large-register">
+        <div class="triangle-top-left">
+            <div class="decoration-top-left shadow"></div>
+        </div>
+        <div class="triangle-top-right">
+            <div class="decoration-top-right shadow"></div>   
+        </div>
+        <div class="triangle-bottom-left">
+            <div class="decoration-bottom-left shadow"></div>
+        </div>
+        <div class="triangle-bottom-right">
+            <div class="decoration-bottom-right shadow"></div>
+        </div>
+
+        <a href="/"><h1 class="register-title rsText">Email Verification Required</h1></a>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+              <p class="flash-message rsText incomplete">{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+        <div class="email-verify rsText">
+            <p>Verification email was sent to provided email address.</p>
+            <p>Check your email and, click the link provided to complete verification.</p>
+            <p>Be sure to check your spam folder! </p>
+            <p class="incomplete">*If you have not received the email after a few minutes*</p>
+            <p class="incomplete">*Please contact Gerni Task on Discord*</p>
+            <p class="incomplete">*We have seen issues with some email providers not accepting our emails*</p>
+            <p class="complete">You may close this browser tab/window now.</p>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

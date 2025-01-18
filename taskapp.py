@@ -232,49 +232,72 @@ Functions will be explained in more detail in the functions themselves.
 
 
 
-# Base route for the website, renders welcome.html
+# Base route for the website, renders hero.html
 @app.route('/')
 def index():
-    return render_template('welcome.html')
+    return render_template('hero.html')
 
-# Register route, renders register.html on GET request.
-# On POST request, verifies the users input and creates a new user in the database.
+# Register route, renders registerV2.html on GET request.
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
-    try:
-        error = None
-        if request.method == 'POST':
-            if (not isProd) or recaptcha.verify():
-                form_data = request.form
-                username = form_data['username']
-                password = form_data['password']
-                repeat_password = form_data['repeat_password']
-                email = form_data['email']
-                is_official = request.form.get('officialstatus') == 'on'
-                lms_status = request.form.get('lmsstatus') is None
-                if password != repeat_password:
-                    error = 'Passwords did not match. Please Try again. '
-                    return render_template('register.html', error=error)
-                else:
+    return render_template('registerV2.html')
 
-                    create_user = task_login.add_user(username, password, email, is_official, lms_status)
-                    if create_user[0] == True:
-                        send_verification_email_inital(email, username)
-                        flash('Account %s Created Successfully!' % username)
-                        flash('Verification email was sent to %s, please check your email (be sure to check your spam folder).' % email)
-                        return redirect('/login/')
-                    else:
-                        error = create_user[1]
-                        return render_template('register.html', error=error)
-            else:
-                error = 'Please fill out the Captcha!'
-                return render_template('register.html', error=error)
-        else:
-            return render_template('register.html', error=error)
+# AJAX route for user registration.
+@app.route('/register/user/', methods=['POST'])
+def register_user():
+    try:
+        if (not isProd) or recaptcha.verify():
+            if request.form["password"] != request.form["confirmPassword"]:
+                error = 'Passwords did not match. Please try again.'
+                return {'success' : False, 'error' : error}
+            
+            official = bool(request.form["official"])
+            lms = bool(request.form["lms_status"])
+            create_user = task_login.add_user(request.form["username"],
+                                            request.form["password"],
+                                            request.form["email"],
+                                            official,
+                                            lms)
+            if not create_user[0]:
+                error = create_user[1]
+                return {'success' : False, 'error' : error}
+            
+            send_verification_email_inital(request.form['email'], request.form["username"])
+            return {'success' : True, 'error' : None}
+        
+        error = 'Please fill out the captcha!'
+        return {'success' : False, 'error' : error}
     except Exception as e:
         app.logger.error('Error', e)
         error = 'An error occurred while processing your request, please try again.'
-        return render_template('register.html', error=error)
+        return {'success' : False, 'error' : e}
+
+@app.route('/login/user/', methods = ['POST'])
+def login_user():
+    try:
+        coll = db['users']
+        if (not isProd) or recaptcha.verify():
+            username_found = coll.find_one({'username': request.form["username"]})
+            if not username_found:
+                error = "Invalid Username or Password. Please Try again"
+                return {'success' : False, 'error' : error}
+            
+            password_check = username_found['hashed_password']
+            if bcrypt.checkpw(request.form["password"].encode('utf-8'), password_check):
+                session['logged_in'] = True
+                session['username'] = request.form['username']
+                return {'success' : True, 'error' : None}
+            
+            error = "Invalid Username or Password. Please Try again"
+            return {'success' : False, 'error' : error}
+        
+        error = 'Please fill out the Captcha!'
+        return {'success' : False, 'error' : error}
+    
+    except Exception as e:
+        app.logger.error('Error', e)
+        error = "An error occurred while processing your request, please try again."
+        return {'success' : False, 'error' : error}
 
 
 # Login route, renders login.html on GET request.
@@ -306,7 +329,7 @@ def login():
                 error = 'Please fill out the Captcha!'
                 return render_template('login.html', error=error)
         else:
-            return render_template('login.html', error=error)
+            return render_template('loginV2.html', error=error)
     except Exception as e:
         error = "An error occurred while processing your request, please try again."
         return render_template('login.html', error=error)
@@ -326,6 +349,8 @@ def logout():
 @login_required
 def dashboard():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
     # The "first" variables determine whether a user has just completed a task
     easy_first = bool(request.args.get('easy-first'))
     medium_first = bool(request.args.get('medium-first'))
@@ -389,83 +414,6 @@ def dashboard():
                 })
         return render_template('dashboard_unofficial_v2.html', **context)
 
-# AJAX route for importing a exisiting Generate Task Spreadsheet.
-@app.route('/import/', methods=['POST'])
-@login_required
-def import_dashboard():
-    try:
-        form_data = request.form
-        username = session['username']
-        url = form_data['spreadsheet_url']
-        uncomplete_all_tasks(username)
-        import_data = import_spreadsheet(username, url)
-        import_task_logs = import_data[0]
-        import_current_logs = import_data[1]
-        error = import_data[2]
-        if len(import_task_logs) != 0:
-            for task_logs in import_task_logs:
-                flash(task_logs)
-        if len(import_current_logs) != 0:
-            for current_logs in import_current_logs:
-                flash(current_logs)
-        if error is not None:
-            flash(error)
-        return redirect(url_for('dashboard'))
-    except Exception as e:
-        print(str(e))
-        error = "There was an error proccessing the request, contact Gerni Task on Discord"
-        flash(error)
-        return redirect(url_for('dashboard'))
-
-
-
-# AJAX route for exporting Task App progress to a shareable spreadsheet.
-# @app.route('/export_progress/', methods=['POST'])
-# @login_required
-# def export_progress():
-#     username = session['username']
-#     email_address = task_login.query_email(username)
-#     progress = get_task_progress(username)
-#     easy_progress, medium_progress, hard_progress, elite_progress = progress[0], progress[1], progress[2], progress[3]
-#     task_lists = get_task_lists(username)
-#     easy_list, medium_list, hard_list, elite_list, bosspet_list, skillpet_list, otherpet_list, extra_list, passive_list = (
-#         task_lists[0],
-#         task_lists[1],
-#         task_lists[2],
-#         task_lists[3],
-#         task_lists[4],
-#         task_lists[5],
-#         task_lists[6],
-#         task_lists[7],
-#         task_lists[8])
-#     lms_status = lms_check(username)
-#     generate_sheet = copy_master_sheet(username)
-#     if generate_sheet[0] is False:
-#         error = 'An error occured while generating the spreadsheet. Please try again in a few minutes. This is likely due to Google API rate limiting.'
-#         return render_template('export_progress_error.html', error=error)
-#     else:
-#         google_sheet = update_spreadsheet(
-#             username,
-#             email_address,
-#             generate_sheet[1],
-#             easy_progress,
-#             medium_progress,
-#             hard_progress,
-#             elite_progress,
-#             easy_list,
-#             medium_list,
-#             hard_list,
-#             elite_list,
-#             bosspet_list,
-#             skillpet_list,
-#             otherpet_list,
-#             extra_list,
-#             passive_list,
-#             lms_status)
-#         if google_sheet[0] is False:
-#             return render_template('export_progress_error.html', error=google_sheet[0])
-#         else:
-#             return render_template('export_progress.html', google_sheet=google_sheet[1])
 
 @app.route('/collectionlog_check/', methods=['POST'])
 @login_required
@@ -550,25 +498,13 @@ def complete_unofficial():
         return data
     return data
 
-# Form request route for completing a easy task for unofficial users.
-# The Form request/action method was used before I started using AJAX.
-# Should be modified to use AJAX eventually.
-# @app.route('/complete_unofficial_easy/', methods =['POST'])
-# @login_required
-# def complete_unofficial_easy():
-#     username = session['username']
-#     current_task = get_taskCurrent_tier(username, 'easyTasks')
-#     if current_task is not None:
-#         task_id = current_task[3]
-#         query_params = complete_task_unofficial_tier(username, task_id, 'easyTasks')
-#         return redirect(url_for('dashboard'), **query_params)
-#     return redirect(url_for('dashboard'))
-
 # route for task-list page, this page lists all tasks easy, medium, hard, elite, extra, passive and pets.
 @app.route('/task-list/', methods=['GET'])
 @login_required
 def task_list():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
     task = get_task_lists(user_info.username)
 
     # TODO Refactor template to use the user page_tasks class
@@ -668,6 +604,8 @@ def task_list_master():
 @login_required
 def task_list_pets():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
     task = get_task_lists(user_info.username)
     progress = get_task_progress(user_info.username)
     items_bosspet = filter_lms(task[5])
@@ -715,6 +653,8 @@ def task_list_passive():
 @login_required
 def highscores():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
     return render_template(
         'highscores.html',
         username=user_info.username,
@@ -797,6 +737,8 @@ def revert():
 @login_required
 def faq():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
         'easy': progress[0],
@@ -824,6 +766,8 @@ def faq():
 @login_required
 def wall_of_pain():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
         'easy': progress[0],
@@ -851,6 +795,8 @@ def wall_of_pain():
 @login_required
 def rank_check():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
         'easy': progress[0],
@@ -877,6 +823,8 @@ def rank_check():
 # Function to send email using send_grid API.
 def send_reset_email(email, username):
     token = task_login.get_reset_token(username)
+    print(token)
+    print(url_for('reset_token', token=token, _external=True))
     email_message = send_grid_email.send_message(
     email,
     'Password Reset Request For Task App',
@@ -947,28 +895,23 @@ def email_verify_inital(token):
 
 
 # Route for reset password page.
-@app.route("/reset_password/", methods=['GET', 'POST'])
+@app.route("/reset-password/", methods=['GET'])
 def reset_request():
-    if request.method == 'GET':
-        try:
-            if session['username']:
-                flash('You are already logged in.')
-                return redirect(url_for('dashboard'))
-        except KeyError:
-            pass
-        return render_template('reset_request.html')
-    if request.method == 'POST':
+    try:
+        if session.get('username'):
+            return redirect(url_for('dashboard'))
+        return render_template('password-request.html')    
+    except Exception as e:
+        print(str(e))
 
-        form_data = request.form
-        email = form_data['email']
-        email_query = task_login.query_email(email)
-        if email_query is None:
-            flash('Email address not found.', 'warning')
-            return render_template('reset_request.html')
-        username = email_query['username']
-        send_reset_email(email, username)
-        flash('Email sent to %s. Be sure to check your spam folder.' % email)
-        return redirect(url_for('login'))
+@app.route("/reset-password/request/", methods=['POST'])
+def reset_password_request():
+    email_query = task_login.query_email(request.form['email'])
+    if email_query is None:
+        error = 'Email Address not found'
+        return {'sucess': False, 'error': error}
+    send_reset_email(request.form['email'], email_query['username'])
+    return {'success' : True, 'error': None}
 
 # route for password reset page requiring a token.
 @app.route("/reset_password/<token>", methods=['GET', 'POST'])
@@ -976,7 +919,6 @@ def reset_token(token):
     if request.method == 'GET':
         try:
             if session['username']:
-                flash('You are already logged in.')
                 return redirect(url_for('dashboard'))
         except KeyError:
             pass
@@ -985,30 +927,44 @@ def reset_token(token):
             flash('That is an invalid or expired token')
             return redirect(url_for('reset_request'))
 
-        return render_template('reset_password.html')
+        return render_template('password-reset.html')
+    
     if request.method == 'POST':
         user = task_login.verify_reset_token(token)
-        error = None
         form_data = request.form
         password = form_data['password']
-        repeat_password = form_data['repeat_password']
+        repeat_password = form_data['confirmPassword']
         if password != repeat_password:
-            error = 'Passwords did not match. Please Try again. '
-            return render_template('reset_password.html', error=error)
+            flash("Passwords did not match. Please Try again.")
+            return render_template('passwork-reset.html')
         else:
             change_pass = task_login.change_password(user, password)
             if change_pass[0] == True:
                 flash('Password changed sucessfully, please login.')
                 return redirect(url_for('login'))
             else:
-                error = change_pass[1]
-                return render_template('reset_password.html', error=error)
+                flash(change_pass[0])
+                return render_template('password-reset.html')
 
 
 # Route for profile page.
 @app.route("/profile/")
+@login_required
 def profile():
     user_info = BasePageInfo()
+    if not user_info.email_bool:
+        return render_template('email-verify.html')
+    progress = get_task_progress(user_info.username)
+    context = {
+        'easy': progress[0],
+        'medium': progress[1],
+        'hard': progress[2],
+        'elite': progress[3],
+        'master': progress[4],
+        'passive' : progress[5], 
+        'extra' : progress[6],
+        'allPets' : progress[7],
+        }
 
     return render_template(
         'profile.html',
@@ -1017,117 +973,73 @@ def profile():
         email_val=user_info.email_val,
         official=user_info.official,
         rank_icon=user_info.rank_icon,
-        lms_status=user_info.user.lms_enabled)
+        lms_status=user_info.user.lms_enabled,
+        **context)
 
-# AJAX route for profile email change.
-# I don't know why I didn't just change the HTML via javascript...
-@app.route("/profile_emailChange/", methods=['POST'])
-def emailChange():
+
+@app.route("/profile/change-email/", methods=['POST'])
+@login_required
+def change_email():
+    new_email = request.form['email']
+    task_login.email_change(session['username'], new_email)
+    return {'success': True}
+
+@app.route("/profile/change-username/", methods=['POST'])
+@login_required
+def change_username():
+    new_username = request.form['username']
+    current_username = session['username']
+
+    if new_username == current_username:
+        error = f"{current_username} is already your username..."
+        return {'success' : False, 'error': error}
+
+    change_username_result = task_login.username_change(current_username, new_username)
+    change_username_result_task_account = username_change(current_username, new_username)
+
+    if change_username_result == True and change_username_result_task_account == True:
+        session['username'] = new_username
+        return {'success' : True}
+    
+    return {'success': False, 'error': change_username_result}
+
+@app.route("/profile/change-password/", methods=['POST'])
+@login_required
+def change_password():
     username = session['username']
-    email_verify = task_login.email_verify(username)
-    email_val = email_verify[1]
-    return render_template('email_change.html', username=username, email_value=email_val)
-
-
-# AJAX route for profile email change.
-# This one is needed to actually change the email in the database.
-@app.route("/profile_emailChangeSubmit/", methods=['POST'])
-def emailChangeSubmit():
-    email_val = request.form['email']
-    username = session['username']
-    task_login.email_change(username, email_val)
-    return render_template('email_change_submit.html', email_val=email_val, username=username)
-
-# AJAX route for profile username change.
-# I don't know why I didn't just change the HTML via javascript...
-@app.route("/profile_usernameChange/", methods=['POST'])
-def usernameChange():
-    username = session['username']
-    email_verify = task_login.email_verify(username)
-    email_val = email_verify[1]
-    return render_template('username_change.html', email_val=email_val)
-
-
-# AJAX route for profile username change.
-# This one is needed to actually change the username in the database.
-@app.route("/profile_usernameChangeSubmit/", methods=['POST'])
-def usernameChangeSubmit():
-    username_value = request.form['username']
-    username = session['username']
-    email_verify = task_login.email_verify(username)
-    email_val = email_verify[1]
-
-    if username == username_value:
-        error = "%s is already your username..." % username_value
-        return render_template('username_change_submit.html', username=username, email_val=email_val, error=error)
-    else:
-        change_username_result = task_login.username_change(username, username_value)
-        change_username_result_taskaccount = username_change(username, username_value)
-
-        if change_username_result and change_username_result_taskaccount == True:
-            session['username'] = username_value
-            username = session['username']
-            return render_template('username_change_submit.html', username=username, email_val=email_val)
-        else:
-            error = change_username_result
-            return render_template('username_change_submit.html', username=username, change_username_result=change_username_result, error=error)
-
-# AJAX route to change LMS status
-@app.route("/change_lms_status/", methods=['POST'])
-def change_lms_status():
-    username = session['username']
-    data = request.form['lms_status']
-    if data == 'true':
-        data = True
-        lms_status_change(username, data)
-    elif data == 'false':
-        data = False
-        lms_status_change(username, data)
-    return render_template('lms_change.html')
-
-# AJAX route to change offical status
-@app.route("/profile_change_official/", methods=['POST'])
-def change_official_status():
-    username = session['username']
-    data = request.form['official_status']
-    if data == 'false':
-        official_status_change(username)
-    return redirect(url_for('profile'))
-
-# AJAX route to change password
-@app.route("/profile_passwordChangeSubmit/", methods=['POST'])
-def change_password_profile():
-    username = session['username']
-    new_password = request.form['change_password']
+    new_password = request.form['new_password']
     confirm_password = request.form['confirm_password']
 
     if new_password != '':
-        if new_password == confirm_password:
-            change_pass = task_login.change_password(username, new_password)
-            success = change_pass[0]
-            if not success:
-                error = change_pass[1]
-                return render_template('change_password_error.html', error=error)
-            else:
-                success = 'Password Changed!'
-                return render_template('change_password_error.html', success=success)
-        else:
-            return render_template('change_password_error.html', error='Passwords do not match!')
-    else:
-        return render_template('change_password_error.html', error='Password fields are not filled out!')
+        return {'success': False, 'error' : 'Password cannot be empty.'}
+    if new_password != confirm_password:
+        return {'success' : False, 'error' : 'Passwords do not match!'}
+    change_password = task_login.change_password(username, new_password)
+    if change_password[0]:
+        return {'success' : True}
+    if not change_password[0]:
+        return {'success' : False, 'error' : change_password[1]}
+    
+    return {'success' : False, 'error' : 'An error occurred!'}
 
 
-# AJAX route for task-help.
-@app.route("/task_help/", methods=['POST'])
-def taskHelp():
-    tip = request.form['tip']
-    link = request.form['link']
-    if tip != 'None':
-        return render_template('task_help.html', tip=tip, link=link)
-    else:
-        tip = ''
-        return render_template('task_help.html', tip=tip, link=link)
+# AJAX route to change LMS status
+@app.route("/profile/change-lms-status/", methods=['POST'])
+@login_required
+def change_lms_status():
+    username = session['username']
+    data = request.form['lms_status']
+    data = False if data == 'false' else True
+    lms_status_change(username, data)
+    return {'success' : True}
 
+# AJAX route to change offical status
+@app.route("/profile/change-official/", methods=['POST'])
+@login_required
+def change_official_status():
+    username = session['username']
+    official_status_change(username)
+    return {'success' : True}
 
 if __name__ == "__main__":
     if (isProd):
