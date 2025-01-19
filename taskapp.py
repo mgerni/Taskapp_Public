@@ -425,12 +425,14 @@ def collection_log_check():
         easy_check = check_collection_log(tasklists.easy, log_data[1])
         medium_check = check_collection_log(tasklists.medium, log_data[1])
         hard_check = check_collection_log(tasklists.hard, log_data[1])
+        elite_check = check_collection_log(tasklists.elite, log_data[1])
         
         return render_template('collection_log_check.html',
         rs_username = rs_username,
         easy_check= easy_check,
         medium_check= medium_check,
-        hard_check = hard_check
+        hard_check = hard_check,
+        elite_check = elite_check
         )
     else:
         print(log_data[0], log_data[1]['error'])

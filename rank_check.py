@@ -30,11 +30,50 @@ def check_collection_log(task_list: list[TaskData], log_data):
         logname = task.col_log_data.log_name
         include_list = task.col_log_data.include
         exclude_list = task.col_log_data.exclude
+        multi_source = task.col_log_data.multi
         db_count = task.col_log_data.log_count  # Expected number of logs for a given task
         log_count = 0  # Current count of that log in collection log data
 
         # print(log_data)
-        items = log_data['collectionLog']['tabs'][category][logname]['items']
+        if not multi_source:
+            items = log_data['collectionLog']['tabs'][category][logname]['items']
+
+        if multi_source:
+            used = set()
+            if include_list:
+                for source in multi_source:
+                    items = log_data['collectionLog']['tabs'][category][source]['items']
+                    if db_count == log_count:
+                        break
+                    for item in items:
+                        if item['name'] in include_list and item['name'] not in used:
+                            if item['obtained']:
+                                log_count += 1
+                                used.add(item['name'])
+                            if db_count == log_count:
+                                break
+                if db_count != log_count:
+                    valid = False
+                    missing_tasks.append(taskname)
+                
+
+            if exclude_list:
+                for source in multi_source:
+                    items = log_data['collectionLog']['tabs'][category][source]['items']
+                    if db_count == log_count:
+                        break
+                    for item in items:
+                        if item['name'] not in exclude_list and item['name'] not in used:
+                            if item['obtained']:
+                                log_count +=1
+                                used.add(item['name'])
+                            if db_count == log_count:
+                                break
+                if db_count != log_count:
+                    valid = False
+                    missing_tasks.append(taskname)
+            continue
+
 
         if include_list:
             for item in items:
@@ -48,7 +87,7 @@ def check_collection_log(task_list: list[TaskData], log_data):
             if db_count != log_count:
                 valid = False
                 missing_tasks.append(taskname)
-            print(f"[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]")
+            # print(f"[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]")
 
         if exclude_list:
             for item in items:
@@ -62,8 +101,11 @@ def check_collection_log(task_list: list[TaskData], log_data):
             if db_count != log_count:
                 valid = False
                 missing_tasks.append(taskname)
-            print(f"[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]")
+            # print(f"[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]")
 
+
+    for tasks in missing_tasks:
+        print(tasks)
     return valid, missing_tasks
 
 if __name__ == '__main__':

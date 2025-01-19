@@ -7,6 +7,7 @@ class ColLogData:
     log_name: str
     exclude: list
     include: list
+    multi: list
     log_count: int
     count: int
 
