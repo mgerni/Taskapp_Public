@@ -165,8 +165,10 @@ body {
 
 #rankCheckContent {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .rank-results-col { 

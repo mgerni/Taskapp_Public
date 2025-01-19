@@ -489,3 +489,19 @@ $(document).on('click', '.missing-hard', function(){
     
   }
 });
+
+$(document).on('click', '.missing-elite', function(){
+  $('form').submit(false);
+  console.log('click')
+  var tasks = document.getElementsByClassName('li-elite');
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].style.display == 'none') {
+      tasks[i].style.display = 'block';
+    }
+    else {
+      tasks[i].style.display = 'none';
+    }
+    
+  }
+});
+

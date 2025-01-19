@@ -36,7 +36,10 @@ def check_collection_log(task_list: list[TaskData], log_data):
 
         # print(log_data)
         if not multi_source:
-            items = log_data['collectionLog']['tabs'][category][logname]['items']
+            try:
+                items = log_data['collectionLog']['tabs'][category][logname]['items']
+            except KeyError:
+                print(task)
 
         if multi_source:
             used = set()
