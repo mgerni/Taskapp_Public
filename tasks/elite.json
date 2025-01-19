@@ -3257,7 +3257,7 @@
         "assetImage": "Broken_pickaxe_dragon_detail.png",
         "colLogData": {
             "category" : "Minigames",
-            "logName" : "volcanic Mine",
+            "logName" : "Volcanic Mine",
             "include" : [
                 "Dragon pickaxe (broken)"
             ],
