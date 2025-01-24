@@ -275,6 +275,10 @@ def register_user():
 
 @app.route('/login/user/', methods = ['POST'])
 def login_user():
+    if not isProd:
+        print('running as dev')
+    status = recaptcha.verify()
+    print(status)
     try:
         coll = db['users']
         if recaptcha.verify():
