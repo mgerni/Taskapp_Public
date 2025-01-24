@@ -276,7 +276,7 @@ def register_user():
 
 @app.route('/login/user/', methods = ['POST'])
 def login_user():
-    for x in requests.form:
+    for x in request.form:
         print(x)
     try:
         coll = db['users']
