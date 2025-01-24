@@ -276,7 +276,9 @@ def register_user():
 def login_user():
     try:
         coll = db['users']
+        print(recaptcha.verify())
         if (not isProd) or recaptcha.verify():
+            print(recaptcha.verify())
             username_found = coll.find_one({'username': request.form["username"]})
             if not username_found:
                 error = "Invalid Username or Password. Please Try again"
