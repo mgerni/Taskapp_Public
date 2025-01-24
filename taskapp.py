@@ -240,7 +240,44 @@ def index():
 # Register route, renders registerV2.html on GET request.
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
-    return render_template('registerV2.html')
+    try:
+        if request.method == 'POST':
+            if (not isProd) or recaptcha.verify():
+                if request.form["password"] != request.form["confirmPassword"]:
+                    error = 'Passwords did not match. Please try again.'
+                    flash(error)
+                    return render_template('registerV2.html')
+                
+                official = bool(request.form["official"])
+                lms = bool(request.form["lms_status"])
+                create_user = task_login.add_user(request.form["username"],
+                                                request.form["password"],
+                                                request.form["email"],
+                                                official,
+                                                lms)
+                if not create_user[0]:
+                    error = create_user[1]
+                    flash(error)
+                    return render_template('registerV2.html')
+                
+                send_verification_email_inital(request.form['email'], request.form["username"])
+                flash(f'Account {request.form['username']} Created Successfully!')
+                flash(f'Verfication email was sent to {request.form['email']}, please check your email. (be sure to check your spam folder)')
+                return redirect('/login/')
+            
+            error = 'Please fill out the captcha!'
+            flash(error)
+            return render_template('registerV2.html')
+        
+        else:
+            return render_template('registerV2.html')
+        
+    except Exception as e:
+        app.logger.error('Error', e)
+        error = 'An error occurred while processing your request, please try again.'
+        return {'success' : False, 'error' : e}
+    
+    
 
 # AJAX route for user registration.
 @app.route('/register/user/', methods=['POST'])
@@ -294,18 +331,22 @@ def login():
                         return redirect(url_for('dashboard'))
                     else:
                         error = "Invalid Username or Password. Please Try again"
-                        return render_template('loginV2.html', error=error)
+                        flash(error)
+                        return render_template('loginV2.html')
                 else:
                     error = "Invalid Username or Password. Please Try again"
-                    return render_template('loginV2.html', error=error)
+                    flash(error)
+                    return render_template('loginV2.html')
             else:
                 error = 'Please fill out the Captcha!'
-                return render_template('loginV2.html', error=error)
+                flash(error)
+                return render_template('loginV2.html')
         else:
-            return render_template('loginV2.html', error=error)
+            return render_template('loginV2.html')
+        
     except Exception as e:
         error = "An error occurred while processing your request, please try again."
-        return render_template('loginV2.html', error=error)
+        return render_template('loginV2.html')
 
 
 # logout route, logs the user out and redirects to the login page.

@@ -20,6 +20,13 @@ Register
                 <div class="decoration-bottom-right shadow"></div>
             </div>
             <a href="/"><h1 class="register-title rsText">Register For TaskApp</h1></a>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                  <p class="flash-message rsText incomplete">{{message}}</p>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
             <form class="form rsText">
                 <div class="input-group rsText">
                     <label for="email">Email Address:</label>
@@ -139,39 +146,4 @@ Register
     
 </script>
 
-<script>
-    $(document).ready(function(){
-        $('#registerButton').on('click', function(){
-            $('form').submit(false);
-            var email = $('#email').val();
-            var username = $('#username').val();
-            var password = $('#password').val();
-            var confirmPassword = $('#confirmPassword').val();
-            var official =  $('#official').is(':checked')
-            var lms_status = $('#lms_status').is(':checked')
-
-            req = $.ajax({
-                url : '/register/user/',
-                type : 'POST',
-                data : {email : email,
-                        username : username,
-                        password : password, 
-                        confirmPassword : confirmPassword,
-                        official : official,
-                        lms_status : lms_status}
-            });
-
-            req.done(function(data){
-                if (!data['success']){
-                    alert(data['error'])
-                }
-                else {
-                    alert("Account " + username + " Created Successfully!")
-                    alert("Verification email was sent to " + email + " please check your email (be sure to check your spam folder)")
-                    location.replace("/login")
-                }
-            });
-        });
-    });
-</script>
 {% endblock %}
