@@ -276,8 +276,7 @@ def register_user():
 
 @app.route('/login/user/', methods = ['POST'])
 def login_user():
-    for x in request.form:
-        print(x)
+    print(request.form['g-recaptcha-response'])
     try:
         coll = db['users']
         if (not isProd) or recaptcha.verify():
