@@ -1443,3 +1443,8 @@ input:checked + .slider:before {
 .email-verify {
     text-align: center;
 }
+
+.recaptcha {
+    display: flex;
+    justify-content: center;
+}
