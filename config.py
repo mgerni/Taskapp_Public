@@ -5,6 +5,7 @@ import base64
 def create_pem_from_base64(base64_string, filename):
     decoded_data = base64.b64decode(base64_string)
 
+    # save to file
     with open(filename, "wb") as pem_file:
         pem_file.write(decoded_data)
 
