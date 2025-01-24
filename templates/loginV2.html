@@ -29,7 +29,7 @@ Login
           {% endfor %}
         {% endif %}
       {% endwith %}
-        <form class="form rsText">
+        <form class="form rsText" method="POST">
             <div class="input-group rsText">
                 <label for="username">Username:</label>
                 <input type="username" name="username" id="username" required class="rsText" placeholder="Username" autocomplete="username">
@@ -48,7 +48,7 @@ Login
 <script>
     $(document).ready(function(){
         $("#loginButton").on('click', function(){
-            $('form').submit(false);
+            // $('form').submit(false);
             var username = $('#username').val();
             var password = $('#password').val();
             var test = $('#g-recaptcha-response');
