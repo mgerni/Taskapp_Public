@@ -3,7 +3,6 @@
 Login
 {% endblock %}
 {% block head %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock %}
 {% block context %}
 <div class="register-container">
@@ -39,37 +38,10 @@ Login
                 <input type="password" name="password" id="password" required class="rsText"placeholder="Password" autocomplete="password">
                 <div class="forgot-password"><a href="/reset-password/">Forgot Password</a></div>
             </div>
-            <div class="g-recaptcha" data-sitekey="{{recaptcha_site_key}}"></div>
+            <div class="recaptcha">{{recaptcha}}</div>
             <button id="loginButton"class="register-button rsText">Login</button>
         </form>
     </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-        $("#loginButton").on('click', function(){
-            // $('form').submit(false);
-            var username = $('#username').val();
-            var password = $('#password').val();
-            var test = $('#g-recaptcha-response');
-            console.log(test)
-
-            req = $.ajax({
-                url : '/login/user/',
-                type : 'POST',
-                data : {username : username, password : password}
-            });
-
-            req.done(function(data){
-                if (!data['success']) {
-                    alert(data['error']);
-                }
-                else {
-                    location.replace('/dashboard/');
-                }
-            });
-        });
-    });
-</script>
 {% endblock %}
 
