@@ -2634,7 +2634,15 @@
         "tip": "Can be purchased as a reward from the Volcanic Mine Minigame.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Volcanic_Mine",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/7/71/Ash_covered_tome_detail.png/130px-Ash_covered_tome_detail.png?0dd49",
-        "assetImage": "130px-Ash_covered_tome_detail.png"
+        "assetImage": "130px-Ash_covered_tome_detail.png",
+        "colLogData": {
+            "category": "Minigames",
+            "logName": "Volcanic Mine",
+            "include": [
+                "Ash covered tome"
+            ],
+            "logCount": 1
+        }
     },
     {
         "_id": 165,
