@@ -922,12 +922,17 @@ def reset_request():
 
 @app.route("/reset-password/request/", methods=['POST'])
 def reset_password_request():
-    email_query = task_login.query_email(request.form['email'])
-    if email_query is None:
-        error = 'Email Address not found'
-        return {'sucess': False, 'error': error}
-    send_reset_email(request.form['email'], email_query['username'])
-    return {'success' : True, 'error': None}
+    if recaptcha.verify():
+
+        email_query = task_login.query_email(request.form['email'])
+        if email_query is None:
+            error = 'Email Address not found'
+            flash(error)
+            return render_template('password-request.html')
+        
+        send_reset_email(request.form['email'], email_query['username'])
+        flash(f'Email was sent to {request.form['email']}. Be sure to check your spam folder.')
+        return render_template('password-request.html')
 
 # route for password reset page requiring a token.
 @app.route("/reset_password/<token>", methods=['GET', 'POST'])
