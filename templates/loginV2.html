@@ -51,6 +51,8 @@ Login
             $('form').submit(false);
             var username = $('#username').val();
             var password = $('#password').val();
+            var test = $('#g-recaptcha-response');
+            console.log(test)
 
             req = $.ajax({
                 url : '/login/user/',
