@@ -15,6 +15,8 @@ SENDGRID_API_KEY = os.environ["SENDGRID_API_KEY"]
 MONGO_URL = os.environ["MONGO_URI"]
 
 if IS_PROD:
+    RECAPTCHA_SITE_KEY = os.environ["RECAPTCHA_SITE_KEY"]
+    RECAPTCHA_SECRET_KEY = os.environ["RECAPTCHA_SECRET_KEY"]
     X509_CERT = os.environ["X509"]
     create_pem_from_base64(X509_CERT, "certificate.pem")
     MONGO_CLIENT = pymongo.MongoClient(MONGO_URL,
