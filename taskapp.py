@@ -14,7 +14,6 @@ from task_database import (get_taskCurrent, generate_task, complete_task, get_ta
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
-import requests
 
 app = Flask(__name__)
 
@@ -28,8 +27,7 @@ if isProd:
     app.config['RECAPTCHA_SITE_KEY'] = config.RECAPTCHA_SITE_KEY
     app.config['RECAPTCHA_SECRET_KEY'] = config.RECAPTCHA_SECRET_KEY
     # initialize reCAPTCHA
-    recaptcha = ReCaptcha()
-    recaptcha.init_app(app)
+    recaptcha = ReCaptcha(app)
 else:
     recaptcha = "Disabled for DEV"
 
@@ -274,35 +272,6 @@ def register_user():
         error = 'An error occurred while processing your request, please try again.'
         return {'success' : False, 'error' : e}
 
-@app.route('/login/user/', methods = ['POST'])
-def login_user():
-    print(request.form['g-recaptcha-response'])
-    try:
-        coll = db['users']
-        if (not isProd) or recaptcha.verify():
-            print(recaptcha.verify())
-            username_found = coll.find_one({'username': request.form["username"]})
-            if not username_found:
-                error = "Invalid Username or Password. Please Try again"
-                return {'success' : False, 'error' : error}
-            
-            password_check = username_found['hashed_password']
-            if bcrypt.checkpw(request.form["password"].encode('utf-8'), password_check):
-                session['logged_in'] = True
-                session['username'] = request.form['username']
-                return {'success' : True, 'error' : None}
-            
-            error = "Invalid Username or Password. Please Try again"
-            return {'success' : False, 'error' : error}
-        
-        error = 'Please fill out the Captcha!!!!'
-        return {'success' : False, 'error' : error}
-    
-    except Exception as e:
-        app.logger.error('Error', e)
-        error = "An error occurred while processing your request, please try again."
-        return {'success' : False, 'error' : error}
-
 
 # Login route, renders login.html on GET request.
 # On POST request, verifies the users input and logs the user in.
@@ -333,7 +302,7 @@ def login():
                 error = 'Please fill out the Captcha!'
                 return render_template('loginV2.html', error=error)
         else:
-            return render_template('loginV2.html', error=error, recaptcha_site_key=config.RECAPTCHA_SITE_KEY)
+            return render_template('loginV2.html', error=error)
     except Exception as e:
         error = "An error occurred while processing your request, please try again."
         return render_template('loginV2.html', error=error)
