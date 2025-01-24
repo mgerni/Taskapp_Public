@@ -3,6 +3,7 @@
 Login
 {% endblock %}
 {% block head %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock %}
 {% block context %}
 <div class="register-container">
@@ -38,8 +39,7 @@ Login
                 <input type="password" name="password" id="password" required class="rsText"placeholder="Password" autocomplete="password">
                 <div class="forgot-password"><a href="/reset-password/">Forgot Password</a></div>
             </div>
-            
-            <div>{{ recaptcha }}</div>
+            <div class="g-recaptcha" data-sitekey="{{recaptcha_site_key}}"></div>
             <button id="loginButton"class="register-button rsText">Login</button>
         </form>
     </div>

@@ -14,6 +14,7 @@ from task_database import (get_taskCurrent, generate_task, complete_task, get_ta
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
+import requests
 
 app = Flask(__name__)
 
@@ -275,14 +276,10 @@ def register_user():
 
 @app.route('/login/user/', methods = ['POST'])
 def login_user():
-    if not isProd:
-        print('running as dev')
-    status = recaptcha.verify()
-    print(status)
+    for x in requests.form:
+        print(x)
     try:
         coll = db['users']
-        if recaptcha.verify():
-            return {'success' : True, 'error': 'This was a test'}
         if (not isProd) or recaptcha.verify():
             print(recaptcha.verify())
             username_found = coll.find_one({'username': request.form["username"]})
@@ -337,7 +334,7 @@ def login():
                 error = 'Please fill out the Captcha!'
                 return render_template('loginV2.html', error=error)
         else:
-            return render_template('loginV2.html', error=error)
+            return render_template('loginV2.html', error=error, recaptcha_site_key=config.RECAPTCHA_SITE_KEY)
     except Exception as e:
         error = "An error occurred while processing your request, please try again."
         return render_template('loginV2.html', error=error)
