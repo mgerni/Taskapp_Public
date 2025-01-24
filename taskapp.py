@@ -277,7 +277,8 @@ def register_user():
 def login_user():
     try:
         coll = db['users']
-        print(recaptcha.verify())
+        if recaptcha.verify():
+            return {'success' : True, 'error': 'This was a test'}
         if (not isProd) or recaptcha.verify():
             print(recaptcha.verify())
             username_found = coll.find_one({'username': request.form["username"]})
@@ -294,7 +295,7 @@ def login_user():
             error = "Invalid Username or Password. Please Try again"
             return {'success' : False, 'error' : error}
         
-        error = 'Please fill out the Captcha!'
+        error = 'Please fill out the Captcha!!!!'
         return {'success' : False, 'error' : error}
     
     except Exception as e:
