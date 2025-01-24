@@ -321,18 +321,18 @@ def login():
                         return redirect(url_for('dashboard'))
                     else:
                         error = "Invalid Username or Password. Please Try again"
-                        return render_template('login.html', error=error)
+                        return render_template('loginV2.html', error=error)
                 else:
                     error = "Invalid Username or Password. Please Try again"
-                    return render_template('login.html', error=error)
+                    return render_template('loginV2.html', error=error)
             else:
                 error = 'Please fill out the Captcha!'
-                return render_template('login.html', error=error)
+                return render_template('loginV2.html', error=error)
         else:
             return render_template('loginV2.html', error=error)
     except Exception as e:
         error = "An error occurred while processing your request, please try again."
-        return render_template('login.html', error=error)
+        return render_template('loginV2.html', error=error)
 
 
 # logout route, logs the user out and redirects to the login page.
