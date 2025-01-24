@@ -27,7 +27,8 @@ if isProd:
     app.config['RECAPTCHA_SITE_KEY'] = config.RECAPTCHA_SITE_KEY
     app.config['RECAPTCHA_SECRET_KEY'] = config.RECAPTCHA_SECRET_KEY
     # initialize reCAPTCHA
-    recaptcha = ReCaptcha(app=app)
+    recaptcha = ReCaptcha()
+    recaptcha.init_app(app)
 else:
     recaptcha = "Disabled for DEV"
 
