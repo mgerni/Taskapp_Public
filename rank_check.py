@@ -30,6 +30,7 @@ def check_collection_log(task_list: list[TaskData], log_data):
         logname = task.col_log_data.log_name
         include_list = task.col_log_data.include
         exclude_list = task.col_log_data.exclude
+        multi_category = task.col_log_data.multi_category
         multi_source = task.col_log_data.multi
         db_count = task.col_log_data.log_count  # Expected number of logs for a given task
         log_count = 0  # Current count of that log in collection log data
@@ -40,6 +41,41 @@ def check_collection_log(task_list: list[TaskData], log_data):
                 items = log_data['collectionLog']['tabs'][category][logname]['items']
             except KeyError:
                 print(task)
+
+        if multi_category:
+            used = set()
+            if include_list:
+                for category in multi_category:
+                    items = log_data['collectionLog']['tabs'][category['category']][category['logName']]['items']
+                    if db_count == log_count:
+                        break
+                    for item in items:
+                        if item['name'] in include_list and item['name'] not in used:
+                            if item['obtained']:
+                                log_count += 1
+                                used.add(item['name'])
+                            if db_count == log_count:
+                                break
+                if db_count != log_count:
+                    valid = False
+                    missing_tasks.append(taskname)
+
+            if exclude_list:
+                for category in multi_category:
+                    items = log_data['collectionLog']['tabs'][category['category']][category['logName']]['items']
+                    if db_count == log_count:
+                        break
+                    for item in items:
+                        if item['name'] not in exclude_list and item['name'] not in used:
+                            if item['obtained']:
+                                log_count += 1
+                                used.add(item['name'])
+                            if db_count == log_count:
+                                break
+                if db_count != log_count:
+                    valid = False
+                    missing_tasks.append(taskname)
+            continue
 
         if multi_source:
             used = set()

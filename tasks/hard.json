@@ -3011,15 +3011,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 6
+            "logCount": 11
         }
     },
     {
@@ -3034,15 +3030,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 7
+            "logCount": 12
         }
     },
     {
@@ -3057,15 +3049,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 8
+            "logCount": 13
         }
     },
     {
@@ -3226,6 +3214,225 @@
                 "Sunfire splinters"
             ],
             "logCount": 1
+        }
+    },
+    {
+        "_id": 197,
+        "name": "Get 1 unique from Tormented Demons",
+        "tip": "Can be obtained when killing Tormented Demons",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_demon",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Tormented_synapse#/media/File:Tormented_synapse_detail.png",
+        "assetImage": "tormented_synapse.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Tormented Demons",
+            "exclude": [
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 198,
+        "name": "Get 1 unique from Tormented Demons",
+        "tip": "Can be obtained when killing Tormented Demons",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_demon",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Tormented_synapse#/media/File:Tormented_synapse_detail.png",
+        "assetImage": "tormented_synapse.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Tormented Demons",
+            "exclude": [
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 199,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 200,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 201,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 3
+        }
+    },
+    {
+        "_id": 202,
+        "name": "Get a Wyrm/Brimhaven graceful recolor",
+        "tip": "Obtained through Brimhaven agility course or Wyrm agility course. Taskers have to replace their current gracecful for the 2nd task, so which set you like more should be grinded last.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Graceful_outfit",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Graceful_crafting_kit_detail.png?37b7e",
+        "assetImage": "Graceful_crafting_kit_detail.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Colossal Wyrm Agility"},
+                {"category" : "Minigames", "logName" : "Brimhaven Agility Arena"}
+            ],
+            "include": [
+                "Graceful hood",
+                "Graceful top",
+                "Graceful legs",
+                "Graceful gloves",
+                "Graceful boots",
+                "Graceful cape"
+            ],
+            "logCount": 6
+        }
+    },
+    {
+        "_id": 203,
+        "name": "Get the Prescription goggles",
+        "tip": "Obtained through Mastering Mixology Herblore Minigame",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Prescription_goggles_%28unfocused%29_detail.png?fa107",
+        "assetImage": "Prescription_goggles_detail.png",
+        "colLogData": {
+            "category": "Minigames",
+            "logName": "Mastering Mixology",
+            "include": [
+                "Prescription goggles"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 204,
+        "name": "Get the Alchemist's amulet",
+        "tip": "Obtained through Mastering Mixology Herblore Minigame",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Alchemist%27s_amulet_%28uncharged%29_detail.png?5c175",
+        "assetImage": "Alchemist's_amulet_detail.png",
+        "colLogData": {
+            "category": "Minigames",
+            "logName": "Mastering Mixology",
+            "include": [
+                "Alchemist's amulet"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 205,
+        "name": "Get 1 unique from the Hueycoatl",
+        "tip": "Obtained by killing The Hueycoatl",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
+        "assetImage": "Dragon_hunter_wand_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "exclude": [
+                "Huberte"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 206,
+        "name": "Get 1 unique from the Hueycoatl",
+        "tip": "Obtained by killing The Hueycoatl",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
+        "assetImage": "Dragon_hunter_wand_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "exclude": [
+                "Huberte"
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 207,
+        "name": "Get 1 unique from the Hueycoatl",
+        "tip": "Obtained by killing The Hueycoatl",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
+        "assetImage": "Dragon_hunter_wand_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "exclude": [
+                "Huberte"
+            ],
+            "logCount": 3
         }
     }
 ]

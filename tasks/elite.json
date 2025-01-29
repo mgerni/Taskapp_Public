@@ -3430,15 +3430,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 9
+            "logCount": 14
         }
     },
     {
@@ -3453,15 +3449,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 10
+            "logCount": 15
         }
     },
     {
@@ -3476,15 +3468,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 13
+            "logCount": 16
         }
     },
     {
@@ -3499,15 +3487,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 14
+            "logCount": 17
         }
     },
     {
@@ -3522,15 +3506,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 15
+            "logCount": 18
         }
     },
     {
@@ -3545,15 +3525,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 16
+            "logCount": 19
         }
     },
     {
@@ -3878,5 +3854,323 @@
             ],
             "logCount": 13
         }
+    },
+    {
+        "_id": 184,
+        "name": "Get a teleport anchoring scroll",
+        "tip": "Received as drop from Zombie Pirate Locker",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Teleport_anchoring_scroll",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Teleport_anchoring_scroll#/media/File:Teleport_anchoring_scroll_detail.png",
+        "assetImage": "teleport_anchoring_scroll.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Slayer",
+            "include": [
+                "Teleport anchoring scroll"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 185,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "tip": "Reward from Fortis Colosseum",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Sunfire_splinters#/media/File:Sunfire_splinters_1_detail.png",
+        "assetImage": "dizanas_quiver.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Fortis Colosseum",
+            "exclude": [
+                "Uncut oynx",
+                "Sunfire splinters",
+                "Smol heredit"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 186,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "tip": "Reward from Fortis Colosseum",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Sunfire_splinters#/media/File:Sunfire_splinters_1_detail.png",
+        "assetImage": "dizanas_quiver.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Fortis Colosseum",
+            "exclude": [
+                "Uncut oynx",
+                "Sunfire splinters",
+                "Smol heredit"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 187,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "tip": "Reward from Fortis Colosseum",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Sunfire_splinters#/media/File:Sunfire_splinters_1_detail.png",
+        "assetImage": "dizanas_quiver.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Fortis Colosseum",
+            "exclude": [
+                "Uncut oynx",
+                "Sunfire splinters",
+                "Smol heredit"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 188,
+        "name": "Get 1 unique from Tormented Demons",
+        "tip": "Can be obtained when killing Tormented Demons",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_demon",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Tormented_synapse#/media/File:Tormented_synapse_detail.png",
+        "assetImage": "tormented_synapse.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Tormented Demons",
+            "exclude": [
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 189,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 4
+        }
+    },
+    {
+        "_id": 190,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 5
+        }
+    },
+    {
+        "_id": 191,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 6
+        }
+    },
+    {
+        "_id": 192,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 7
+        }
+    },
+    {
+        "_id": 193,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 8
+        }
+    },
+    {
+        "_id": 194,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "mutli_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                "Araxyte venom sack",
+                "Spider cave teleport",
+                "Araxyte fang",
+                "Noxious point",
+                "Noxious blade",
+                "Noxious pommel",
+                "Araxyte head",
+                "Aranea boots"
+            ],
+            "logCount": 9
+        }
+    },
+    {
+        "_id": 195,
+        "name": "Get a Chugging barrel",
+        "tip": "Obtained through Mastering Mixology Herblore Minigame",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Chugging_barrel_%28disassembled%29_detail.png?fa107",
+        "assetImage": "Chugging_barrel.png",
+        "colLogData": {
+            "category": "Minigames",
+            "logName": "Mastering Mixology",
+            "include": [
+                "Chugging barrel (disassembled)"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 196,
+        "name": "Get a Reagent pouch",
+        "tip": "Obtained through Mastering Mixology Herblore Minigame",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reagent_pouch_detail.png?fa107",
+        "assetImage": "Reagent_pouch_detail.png",
+        "colLogData": {
+            "category": "Minigames",
+            "logName": "Mastering Mixology",
+            "include": [
+                "Reagent pouch"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 197,
+        "name": "Get 1 unique from the Hueycoatl",
+        "tip": "Obtained by killing The Hueycoatl",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
+        "assetImage": "Dragon_hunter_wand_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "exclude": [
+                "Huberte"
+            ],
+            "logCount": 4
+        }
+    },
+    {
+        "_id": 198,
+        "name": "Get 1 unique from the Hueycoatl",
+        "tip": "Obtained by killing The Hueycoatl",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
+        "assetImage": "Dragon_hunter_wand_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "exclude": [
+                "Huberte"
+            ],
+            "logCount": 5
+        }
     }
+
 ]

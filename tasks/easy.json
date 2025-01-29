@@ -2155,54 +2155,110 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
             "logCount": 1
         }
     },
     {
         "_id": 138,
-        "name": "Get the full Pheasant costume",
-        "tip": "Sturdy beehive parts is an item that can be obtained as a reward from the Beehive forestry event",
+        "name": "Get 1 unique from Forestry",
+        "tip": "Can be purchased as a reward from the Friendly Forester",
         "wikiLink": "https://oldschool.runescape.wiki/w/Forestry",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Pheasant_hat_detail.png/130px-Pheasant_hat_detail.png?c442a",
-        "assetImage": "Pheasant_hat.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Forestry_kit_detail.png/1024px-Forestry_kit_detail.png",
+        "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
             "logName": "Forestry",
-            "include": [
-                "Pheasant hat",
-                "Pheasant legs",
-                "Pheasant cape",
-                "Pheasant boots"
+            "exclude": [
+                "Lumberjack legs",
+                "Lumberjack hat",
+                "Lumberjack boots",
+                "Lumberjack top"
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 139,
+        "name": "Get 1 unique from Forestry",
+        "tip": "Can be purchased as a reward from the Friendly Forester",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Forestry",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Forestry_kit_detail.png/1024px-Forestry_kit_detail.png",
+        "assetImage": "forestry_kit.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Forestry",
+            "exclude": [
+                "Lumberjack legs",
+                "Lumberjack hat",
+                "Lumberjack boots",
+                "Lumberjack top"
+            ],
+            "logCount": 3
+        }
+    },
+    {
+        "_id": 140,
+        "name": "Get 1 unique from Forestry",
+        "tip": "Can be purchased as a reward from the Friendly Forester",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Forestry",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Forestry_kit_detail.png/1024px-Forestry_kit_detail.png",
+        "assetImage": "forestry_kit.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Forestry",
+            "exclude": [
+                "Lumberjack legs",
+                "Lumberjack hat",
+                "Lumberjack boots",
+                "Lumberjack top"
             ],
             "logCount": 4
         }
     },
     {
-        "_id": 139,
-        "name": "Get the Sturdy beehive parts",
-        "tip": "Can be obtained by using pheasant tail feathers from foresty!",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Pheasant_costume",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Sturdy_beehive_parts_detail.png/130px-Sturdy_beehive_parts_detail.png?f8400",
-        "assetImage": "Sturdy_beehive_parts_detail.png",
+        "_id": 141,
+        "name": "Get 1 unique from Forestry",
+        "tip": "Can be purchased as a reward from the Friendly Forester",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Forestry",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Forestry_kit_detail.png/1024px-Forestry_kit_detail.png",
+        "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
             "logName": "Forestry",
-            "include": [
-                "Sturdy beehive parts"
+            "exclude": [
+                "Lumberjack legs",
+                "Lumberjack hat",
+                "Lumberjack boots",
+                "Lumberjack top"
             ],
-            "logCount": 1
+            "logCount": 5
         }
     },
     {
-        "_id": 140,
+        "_id": 142,
+        "name": "Get 1 unique from Forestry",
+        "tip": "Can be purchased as a reward from the Friendly Forester",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Forestry",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Forestry_kit_detail.png/1024px-Forestry_kit_detail.png",
+        "assetImage": "forestry_kit.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Forestry",
+            "exclude": [
+                "Lumberjack legs",
+                "Lumberjack hat",
+                "Lumberjack boots",
+                "Lumberjack top"
+            ],
+            "logCount": 6
+        }
+    },
+    {
+        "_id": 143,
         "name": "Get a Warped sceptre",
         "tip": "Can be obtained by slaughtering Warped Terror Birds / Warped Tortoises",
         "wikiLink": "https://oldschool.runescape.wiki/w/Warped_sceptre",
@@ -2218,7 +2274,7 @@
         }
     },
     {
-        "_id": 141,
+        "_id": 144,
         "name": "Get 1 unique from the Hunter Guild",
         "tip": "Received as a drop when completing Hunters Rumours",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hunter_Guild#Other",
@@ -2234,7 +2290,7 @@
         }
     },
     {
-        "_id": 142,
+        "_id": 145,
         "name": "Get the Sulphur blades",
         "tip": "Received as a drop from sulphur Nagua",
         "wikiLink": "https://oldschool.runescape.wiki/w/Sulphur_Nagua",
@@ -2245,6 +2301,22 @@
             "logName": "Slayer",
             "include": [
                 "Sulphur blades"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 146,
+        "name": "Get a Colossal wyrm teleport scroll",
+        "tip": "Obtained by spending termites through Wyrm Agility Course",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Colossal_Wyrm_Agility_Course",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Colossal_wyrm_teleport_scroll_detail.png/320px-Colossal_wyrm_teleport_scroll_detail.png?a3e16",
+        "assetImage": "Colossal_wyrm_teleport_scroll_detail.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Colossal Wyrm Agility",
+            "include": [
+                "Colossal wyrm teleport scroll"
             ],
             "logCount": 1
         }

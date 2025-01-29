@@ -46,6 +46,14 @@
           "type": "string",
           "description": "Name of the task entry in the Collection Log"
         },
+        "multi" : {
+          "type" : "array",
+          "description": "Array of Category to which the task belongs in the Collection Log"
+        },
+        "multi_category" : {
+          "type" : "array",
+          "description": "Array of objects containing Category and logName to which the task belongs in the Collection Log"
+        },
         "include": {
           "type": "array",
           "items": {

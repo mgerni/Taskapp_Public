@@ -79,9 +79,9 @@
     },
     {
         "_id": 14,
-        "name": "Get 1 unique sigil from Corp",
-        "assetImage": "Arcane_sigil.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Corp"
+        "name": "Get a Jar of venom",
+        "assetImage": "Jar_of_venom_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Jar_of_venom"
     },
     {
         "_id": 15,
@@ -97,27 +97,27 @@
     },
     {
         "_id": 17,
+        "name": "Get 1 unique sigil from Corp",
+        "assetImage": "Arcane_sigil.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Corp"
+    },
+    {
+        "_id": 18,
         "name": "Get an Infernal cape",
         "assetImage": "Infernal_cape.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Inferno"
     },
     {
-        "_id": 18,
+        "_id": 19,
         "name": "Get a Skeletal visage",
         "assetImage": "Skeletal_visage.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_visage"
     },
     {
-        "_id": 19,
+        "_id": 20,
         "name": "Get a Wyvern visage",
         "assetImage": "Wyvern_visage.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Wyvern_visage"
-    },
-    {
-        "_id": 20,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
-        "assetImage": "Twisted_bow.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 21,
@@ -205,69 +205,69 @@
     },
     {
         "_id": 35,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "assetImage": "Twisted_bow.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
+    },
+    {
+        "_id": 36,
         "name": "Finish all shared clue rewards ",
         "assetImage": "Clue_scroll.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 36,
+        "_id": 37,
         "name": "Finish all easy clue uniques",
         "assetImage": "Clue_scroll_easy.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 37,
+        "_id": 38,
         "name": "Finish all medium clue uniques",
         "assetImage": "Clue_scroll_medium.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 38,
+        "_id": 39,
         "name": "Finish all hard clue uniques",
         "assetImage": "Clue_scroll_hard.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 39,
+        "_id": 40,
         "name": "Finish all elite clue uniques",
         "assetImage": "Clue_scroll_elite.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 40,
+        "_id": 41,
         "name": "Finish all master clue uniques",
         "assetImage": "Clue_scroll_master.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 41,
+        "_id": 42,
         "name": "Finish all hard clue rare uniques",
         "assetImage": "Clue_scroll_hard.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 42,
+        "_id": 43,
         "name": "Finish all elite clue rare uniques",
         "assetImage": "Clue_scroll_elite.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 43,
+        "_id": 44,
         "name": "Finish all master rare clue uniques",
         "assetImage": "Clue_scroll_master.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
     {
-        "_id": 44,
+        "_id": 45,
         "name": "Complete the Gold decorative set",
         "assetImage": "130px-Decorative_armour_gold_platebody_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Castle_Wars"
-    },
-    {
-        "_id": 45,
-        "name": "Get 1 unique from Revenants",
-        "assetImage": "Ancient_relic.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
     },
     {
         "_id": 46,
@@ -307,15 +307,15 @@
     },
     {
         "_id": 52,
-        "name": "Get an Amulet of eternal glory",
-        "assetImage": "150px-Amulet_of_eternal_glory_detail.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_eternal_glory"
+        "name": "Get 1 unique from Revenants",
+        "assetImage": "Ancient_relic.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Revenants"
     },
     {
         "_id": 53,
-        "name": "Get 1 unique Dragonstone armour piece",
-        "assetImage": "Dragonstone_full_helm.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Enhanced_crystal_chest"
+        "name": "Get an Amulet of eternal glory",
+        "assetImage": "150px-Amulet_of_eternal_glory_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_eternal_glory"
     },
     {
         "_id": 54,
@@ -343,27 +343,27 @@
     },
     {
         "_id": 58,
+        "name": "Get 1 unique Dragonstone armour piece",
+        "assetImage": "Dragonstone_full_helm.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Enhanced_crystal_chest"
+    },
+    {
+        "_id": 59,
         "name": "Get a full Dark totem drop from Skotizo",
         "assetImage": "Dark_totem.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Skotizo"
     },
     {
-        "_id": 59,
+        "_id": 60,
         "name": "Get 1 unique piece of the Dagon'hai robes",
         "assetImage": "130px-Dagonhai_robe_top_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_robes"
     },
     {
-        "_id": 60,
+        "_id": 61,
         "name": "Get 1 unique from the Zalcano",
         "assetImage": "Zalcano_shard.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano"
-    },
-    {
-        "_id": 61,
-        "name": "Get 1 unique from The Nightmare",
-        "assetImage": "Inquisitors_hauberk.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
     },
     {
         "_id": 62,
@@ -409,9 +409,9 @@
     },
     {
         "_id": 69,
-        "name": "Get 1 unique mutagen",
-        "assetImage": "Tanzanite_mutagen.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Zulrah"
+        "name": "Get 1 unique from The Nightmare",
+        "assetImage": "Inquisitors_hauberk.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nightmare"
     },
     {
         "_id": 70,
@@ -421,9 +421,9 @@
     },
     {
         "_id": 71,
-        "name": "Get an Imbued heart or Eternal gem",
-        "assetImage": "Imbued_heart.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Superior_slayer_monster"
+        "name": "Get 1 unique mutagen",
+        "assetImage": "Tanzanite_mutagen.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Zulrah"
     },
     {
         "_id": 72,
@@ -433,27 +433,27 @@
     },
     {
         "_id": 73,
+        "name": "Get an Imbued heart or Eternal gem",
+        "assetImage": "Imbued_heart.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Superior_slayer_monster"
+    },
+    {
+        "_id": 74,
         "name": "Get a Dragon full helm",
         "assetImage": "Dragon_full_helm.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_full_helm"
     },
     {
-        "_id": 74,
+        "_id": 75,
         "name": "Get a Dragon metal lump",
         "assetImage": "100px-Dragon_metal_lump_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_metal_lump"
     },
     {
-        "_id": 75,
+        "_id": 76,
         "name": "Get a Dragon metal slice",
         "assetImage": "150px-Dragon_metal_slice_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_metal_slice"
-    },
-    {
-        "_id": 76,
-        "name": "Get 1 unique piece of the Evil chicken outfit",
-        "assetImage": "Evil_chicken_head.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Evil_chicken_outfit"
     },
     {
         "_id": 77,
@@ -475,189 +475,189 @@
     },
     {
         "_id": 80,
+        "name": "Get 1 unique piece of the Evil chicken outfit",
+        "assetImage": "Evil_chicken_head.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Evil_chicken_outfit"
+    },
+    {
+        "_id": 81,
         "name": "Get 1 unique from the Gauntlet",
         "assetImage": "Blade_of_saeldor_inactive.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/The_Gauntlet"
     },
     {
-        "_id": 81,
+        "_id": 82,
         "name": "Get a Draconic visage",
         "assetImage": "Draconic_visage.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Draconic_visage"
     },
     {
-        "_id": 82,
+        "_id": 83,
         "name": "Get a Dragonbone necklace",
         "assetImage": "Dragonbone_necklace.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dragonbone_necklace"
     },
     {
-        "_id": 83,
+        "_id": 84,
         "name": "Get the Deadman's chest",
         "assetImage": "150px-Deadmans_chest_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 84,
+        "_id": 85,
         "name": "Get the Deadman's legs",
         "assetImage": "90px-Deadmans_legs_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 85,
+        "_id": 86,
         "name": "Get the Deadman's cape",
         "assetImage": "130px-Deadmans_cape_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 86,
+        "_id": 87,
         "name": "Get a Swift blade",
         "assetImage": "140px-Swift_blade_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 87,
+        "_id": 88,
         "name": "Get an Armadyl halo",
         "assetImage": "150px-Armadyl_halo_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 88,
+        "_id": 89,
         "name": "Get a Bandos halo",
         "assetImage": "150px-Bandos_halo_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 89,
+        "_id": 90,
         "name": "Get a Seren halo",
         "assetImage": "150px-Seren_halo_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 90,
+        "_id": 91,
         "name": "Get an Ancient halo",
         "assetImage": "150px-Ancient_halo_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 91,
+        "_id": 92,
         "name": "Get a Brassica halo",
         "assetImage": "130px-Brassica_halo_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 92,
+        "_id": 93,
         "name": "Get a Guthixian icon",
         "assetImage": "150px-Guthixian_icon_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing"
     },
     {
-        "_id": 93,
+        "_id": 94,
         "name": "Get a Slepey tablet",
         "assetImage": "100px-Slepey_tablet_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Slepey_tablet"
     },
     {
-        "_id": 94,
+        "_id": 95,
         "name": "Get the Metamorphic dust",
         "assetImage": "150px-Metamorphic_dust_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Metamorphic_dust"
     },
     {
-        "_id": 95,
+        "_id": 96,
         "name": "Get the Sanguine dust",
         "assetImage": "150px-Sanguine_dust_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Sanguine_dust"
     },
     {
-        "_id": 96,
+        "_id": 97,
         "name": "Get the Parasitic egg",
         "assetImage": "100px-Parasitic_egg_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Parasitic_egg"
     },
     {
-        "_id": 97,
+        "_id": 98,
         "name": "Get a Twisted ancestral colour kit",
         "assetImage": "170px-Twisted_ancestral_colour_kit_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric/Challenge_Mode"
     },
     {
-        "_id": 98,
+        "_id": 99,
         "name": "Get a Holy ornament kit",
         "assetImage": "150px-Holy_ornament_kit_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Theatre_of_Blood/Hard_Mode"
     },
     {
-        "_id": 99,
+        "_id": 100,
         "name": "Get a Sanguine ornament kit",
         "assetImage": "120px-Sanguine_ornament_kit_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Theatre_of_Blood/Hard_Mode"
     },
     {
-        "_id": 100,
+        "_id": 101,
         "name": "Get a Menaphite ornament kit",
         "assetImage": "Menaphite_ornament_kit_detail",
         "wikiLink": "https://oldschool.runescape.wiki/w/Menaphite_ornament_kit"
     },
     {
-        "_id": 101,
+        "_id": 102,
         "name": "Get a Cursed phalanx",
         "assetImage": "Cursed_phalanx_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Cursed_phalanx"
     },
     {
-        "_id": 102,
+        "_id": 103,
         "name": "Get a Masori crafting kit",
         "assetImage": "Masori_crafting_kit_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Masori_crafting_kit"
     },
     {
-        "_id": 103,
+        "_id": 104,
         "name": "Get a Remnant of akkha",
         "assetImage": "Remnant_of_akkha_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_akkha"
     },
     {
-        "_id": 104,
+        "_id": 105,
         "name": "Get a Remnant of ba-ba",
         "assetImage": "Remnant_of_ba-ba_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_ba-ba"
     },
     {
-        "_id": 105,
+        "_id": 106,
         "name": "Get a Remnant of kephri",
         "assetImage": "Remnant_of_kephri_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_kephri"
     },
     {
-        "_id": 106,
+        "_id": 107,
         "name": "Get a Remnant of zebak",
         "assetImage": "Remnant_of_zebak_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Remnant_of_zebak"
     },
     {
-        "_id": 107,
+        "_id": 108,
         "name": "Get an Ancient remnant",
         "assetImage": "Ancient_remnant_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_remnant"
     },
     {
-        "_id": 108,
+        "_id": 109,
         "name": "Get 1 unique from the Zalcano",
         "assetImage": "Zalcano_shard.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano"
     },
     {
-        "_id": 109,
+        "_id": 110,
         "name": "Get 1 unique from the Hallowed Sepulchre",
         "assetImage": "120px-Hallowed_mark_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hallowed_Sepulchre"
-    },
-    {
-        "_id": 110,
-        "name": "Get 1 unique drop from God Wars Dungeon",
-        "assetImage": "Armadyl_helmet.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
     },
     {
         "_id": 111,
@@ -679,15 +679,15 @@
     },
     {
         "_id": 114,
-        "name": "Get 1 unique from Guardians of the Rift",
-        "assetImage": "Hat_of_the_eye_detail.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Guardians_of_the_Rift"
+        "name": "Get 1 unique drop from God Wars Dungeon",
+        "assetImage": "Armadyl_helmet.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/God_Wars_Dungeon"
     },
     {
         "_id": 115,
-        "name": "Get 1 unique from the Wildy bosses",
-        "assetImage": "Skull_of_vetion_detail.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness#Bosses"
+        "name": "Get 1 unique from Guardians of the Rift",
+        "assetImage": "Hat_of_the_eye_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Guardians_of_the_Rift"
     },
     {
         "_id": 116,
@@ -709,42 +709,280 @@
     },
     {
         "_id": 119,
-        "name": "Get 1 unique from Fortis Colosseum",
-        "assetImage": "dizanas_quiver.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+        "name": "Get 1 unique from the Wildy bosses",
+        "assetImage": "Skull_of_vetion_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness#Bosses"
     },
     {
         "_id": 120,
-        "name": "Get 1 unique from Fortis Colosseum",
-        "assetImage": "dizanas_quiver.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 12
+        }
     },
     {
         "_id": 121,
-        "name": "Get 1 unique from Fortis Colosseum",
-        "assetImage": "dizanas_quiver.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 13
+        }
     },
     {
         "_id": 122,
-        "name": "Get 1 unique from Fortis Colosseum",
-        "assetImage": "dizanas_quiver.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 14
+        }
     },
     {
         "_id": 123,
-        "name": "Get 1 unique from Fortis Colosseum",
-        "assetImage": "dizanas_quiver.png",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 15
+        }
     },
     {
         "_id": 124,
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 16
+        }
+    },
+    {
+        "_id": 125,
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 17
+        }
+    },
+    {
+        "_id": 126,
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 18
+        }
+    },
+    {
+        "_id": 127,
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 19
+        }
+    },
+    {
+        "_id": 128,
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 20
+        }
+    },
+    {
+        "_id": 129,
+        "name": "Get 1 unique from the DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
+        "assetImage": "Soulreaper_axe_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": null,
+            "multi": [
+                "Duke Sucellus",
+                "The Whisperer",
+                "Vardorvis",
+                "The Leviathan"
+            ],
+            "exclude": [
+                "Lil'viathan",
+                "Wisp",
+                "Butch",
+                "Baron"
+            ],
+            "logCount": 21
+        }
+    },
+    {
+        "_id": 130,
         "name": "Get 1 unique from Fortis Colosseum",
         "assetImage": "dizanas_quiver.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
     },
     {
-        "_id": 125,
+        "_id": 131,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 132,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "assetImage": "dizanas_quiver.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"
+    },
+    {
+        "_id": 133,
         "name": "Get 1 unique from Fortis Colosseum",
         "assetImage": "dizanas_quiver.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum"

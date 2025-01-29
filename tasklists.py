@@ -8,6 +8,7 @@ def to_col_log_data(data: dict) -> ColLogData or None: # type: ignore
                       exclude=data.get('exclude'),
                       include=data.get('include'),
                       multi=data.get('multi'),
+                      multi_category=data.get('multi_category'),
                       log_count=data['logCount'],
                       count=data.get('count'))
 

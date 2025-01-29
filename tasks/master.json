@@ -186,6 +186,7 @@
         {
                 "_id": 24,
                 "name": "Get 2 LMS slots",
+                "isLMS": true, 
                 "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
                 "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
                 "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
@@ -194,6 +195,7 @@
         {
                 "_id": 25,
                 "name": "Get 2 LMS slots",
+                "isLMS": true,
                 "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
                 "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
                 "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
@@ -202,6 +204,7 @@
         {
                 "_id": 26,
                 "name": "Get 2 LMS slots",
+                "isLMS": true,
                 "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
                 "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
                 "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
@@ -210,6 +213,7 @@
         {
                 "_id": 27,
                 "name": "Get 2 LMS slots",
+                "isLMS": true,
                 "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
                 "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
                 "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
@@ -218,6 +222,7 @@
         {
                 "_id": 28,
                 "name": "Get 2 LMS slots",
+                "isLMS": true,
                 "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
                 "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
                 "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
@@ -226,6 +231,7 @@
         {
                 "_id": 29,
                 "name": "Get 2 LMS slots",
+                "isLMS": true,
                 "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
                 "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
                 "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
@@ -234,6 +240,7 @@
         {
                 "_id": 30,
                 "name": "Get 2 LMS slots",
+                "isLMS": true,
                 "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
                 "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
                 "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",

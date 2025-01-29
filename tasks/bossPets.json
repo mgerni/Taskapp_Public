@@ -25,192 +25,210 @@
     },
     {
         "_id": 5,
+        "name": "Huberte",
+        "assetImage": "Huberte_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Huberte"
+    },
+    {
+        "_id": 6,
         "name": "Ikkle hydra",
         "assetImage": "Ikkle_hydra.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Ikkle_hydra"
     },
     {
-        "_id": 6,
+        "_id": 7,
         "name": "Jal-nib-rek/Tzrek-zuk",
         "assetImage": "Jal-nib-rek.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Jal-nib-rek"
     },
     {
-        "_id": 7,
+        "_id": 8,
         "name": "Kalphite princess",
         "assetImage": "Kalphite_princess_2nd_form.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Kalphite_princess"
     },
     {
-        "_id": 8,
+        "_id": 9,
         "name": "Lil' zik",
         "assetImage": "Lil_zik.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Lil%27_zik"
     },
     {
-        "_id": 9,
+        "_id": 10,
         "name": "Little nightmare",
         "assetImage": "Little_nightmare.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Little_nightmare"
     },
     {
-        "_id": 10,
+        "_id": 11,
+        "name": "Moxi",
+        "assetImage": "Moxi.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Moxi"
+    },
+    {
+        "_id": 12,
         "name": "Muphin",
         "assetImage": "Muphin_detail.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Muphin"
     },
     {
-        "_id": 11,
+        "_id": 13,
         "name": "Nexling",
         "assetImage": "Nexling.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Nexling"
     },
     {
-        "_id": 12,
+        "_id": 14,
+        "name": "Nid",
+        "assetImage": "nid.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nid"
+    },
+    {
+        "_id": 15,
         "name": "Noon/Midnight",
         "assetImage": "Noon.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Noon"
     },
     {
-        "_id": 13,
+        "_id": 16,
         "name": "Olmlet",
         "assetImage": "Olmlet.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Olmlet"
     },
     {
-        "_id": 14,
+        "_id": 17,
         "name": "Pet chaos elemental",
         "assetImage": "Pet_chaos_elemental.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_chaos_elemental"
     },
     {
-        "_id": 15,
+        "_id": 18,
         "name": "Pet dagannoth prime",
         "assetImage": "Pet_dagannoth_prime.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_dagannoth_prime"
     },
     {
-        "_id": 16,
+        "_id": 19,
         "name": "Pet dagannoth rex",
         "assetImage": "Pet_dagannoth_rex.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_dagannoth_rex"
     },
     {
-        "_id": 17,
+        "_id": 20,
         "name": "Pet dagannoth supreme",
         "assetImage": "Pet_dagannoth_supreme.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_dagannoth_supreme"
     },
     {
-        "_id": 18,
+        "_id": 21,
         "name": "Pet dark core/corporeal critter",
         "assetImage": "Pet_dark_core.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_dark_core"
     },
     {
-        "_id": 19,
+        "_id": 22,
         "name": "Pet general graardor",
         "assetImage": "Pet_general_graardor.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_general_graardor"
     },
     {
-        "_id": 20,
+        "_id": 23,
         "name": "Pet k'ril tsutsaroth",
         "assetImage": "Pet_kril_tsutsaroth.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_k%27ril_tsutsaroth"
     },
     {
-        "_id": 21,
+        "_id": 24,
         "name": "Pet kraken",
         "assetImage": "Pet_kraken.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_kraken"
     },
     {
-        "_id": 22,
+        "_id": 25,
         "name": "Pet kree'arra",
         "assetImage": "Pet_kreearra.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_kree%27arra"
     },
     {
-        "_id": 23,
+        "_id": 26,
         "name": "Pet smoke devil",
         "assetImage": "Pet_smoke_devil.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_smoke_devil"
     },
     {
-        "_id": 24,
+        "_id": 27,
         "name": "Pet snakeling",
         "assetImage": "Pet_snakeling.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_snakeling"
     },
     {
-        "_id": 25,
+        "_id": 28,
         "name": "Pet zilyana",
         "assetImage": "Pet_zilyana.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Pet_zilyana"
     },
     {
-        "_id": 26,
+        "_id": 29,
         "name": "Prince black dragon",
         "assetImage": "Prince_black_dragon.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Prince_black_dragon"
     },
     {
-        "_id": 27,
+        "_id": 30,
         "name": "Scorpia's offspring",
         "assetImage": "Scorpias_offspring.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Scorpia offspring"
     },
     {
-        "_id": 28,
+        "_id": 31,
         "name": "Scurry",
         "assetImage": "Scurry.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Scurry"
     },
     {
-        "_id": 29,
+        "_id": 32,
         "name": "Skotos",
         "assetImage": "Skotos.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Skotos"
     },
     {
-        "_id": 30,
+        "_id": 33,
         "name": "Sraracha",
         "assetImage": "Sraracha.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Sraracha"
     },
     {
-        "_id": 31,
+        "_id": 34,
         "name": "Tzrek-jad",
         "assetImage": "Tzrek-jad.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Tzrek-jad"
     },
     {
-        "_id": 32,
+        "_id": 35,
         "name": "Tumeken's guardian",
         "assetImage": "Tumeken's_Guardian.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Tumeken%27s_guardian"
     },
     {
-        "_id": 33,
+        "_id": 36,
         "name": "Venenatis spiderling",
         "assetImage": "Venenatis_spiderling.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Venenatis_spiderling"
     },
     {
-        "_id": 34,
+        "_id": 37,
         "name": "Vet'ion jr",
         "assetImage": "Vetion_jr.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Vetion_junior"
     },
     {
-        "_id": 35,
+        "_id": 38,
         "name": "Vorki",
         "assetImage": "Vorki.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Vorki"
     },
     {
-        "_id": 36,
+        "_id": 39,
         "name": "Smol Heredit",
         "assetImage": "smol_heredit.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Smol_heredit"

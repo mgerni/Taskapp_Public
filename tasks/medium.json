@@ -2458,15 +2458,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 2
+            "logCount": 7
         }
     },
     {
@@ -2481,15 +2477,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 3
+            "logCount": 8
         }
     },
     {
@@ -2504,15 +2496,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 4
+            "logCount": 9
         }
     },
     {
@@ -2527,15 +2515,11 @@
             "logName": "Forestry",
             "exclude": [
                 "Lumberjack legs",
-                "Pheasant legs",
-                "Pheasant boots",
                 "Lumberjack hat",
                 "Lumberjack boots",
-                "Pheasant hat",
-                "Lumberjack top",
-                "Pheasant cape"
+                "Lumberjack top"
             ],
-            "logCount": 5
+            "logCount": 10
         }
     },
     {
@@ -2556,8 +2540,8 @@
     },
     {
         "_id": 165,
-        "name": "Get a Broken zombie axe",
-        "tip": "Received as a drop from killing armoured zombies",
+        "name": "Get 1 unique from Armoured Zombies",
+        "tip": "First unique is Defender of Varrock for Broken zombie axe, and 2nd unique is completing Curse of Arrav for the helmet",
         "wikiLink": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
         "wikiImage": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
         "assetImage": "Broken_zombie_axe.png",
@@ -2565,23 +2549,25 @@
             "category": "Other",
             "logName": "Miscellaneous",
             "include": [
-                "Broken zombie axe"
+                "Broken zombie axe",
+                "Broken zombie helmet"
             ],
             "logCount": 1
         }
     },
     {
         "_id": 166,
-        "name": "Get 1 unique from Moons of Peril",
-        "tip": "Received as a drop from Moons of Peril bosses",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Dual_macuahuitl#/media/File:Dual_macuahuitl_detail.png",
-        "assetImage": "dual_macuahuitl.png",
+        "name": "Get 1 unique from Armoured Zombies",
+        "tip": "First unique is Defender of Varrock for Broken zombie axe, and 2nd unique is completing Curse of Arrav for the helmet",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
+        "assetImage": "Broken_zombie_axe.png",
         "colLogData": {
-            "category": "Bosses",
-            "logName": "Moons of Peril",
-            "exclude": [
-                "N/A"
+            "category": "Other",
+            "logName": "Miscellaneous",
+            "include": [
+                "Broken zombie axe",
+                "Broken zombie helmet"
             ],
             "logCount": 1
         }
@@ -2599,7 +2585,7 @@
             "exclude": [
                 "N/A"
             ],
-            "logCount": 2
+            "logCount": 1
         }
     },
     {
@@ -2615,7 +2601,7 @@
             "exclude": [
                 "N/A"
             ],
-            "logCount": 3
+            "logCount": 2
         }
     },
     {
@@ -2631,11 +2617,27 @@
             "exclude": [
                 "N/A"
             ],
-            "logCount": 4
+            "logCount": 3
         }
     },
     {
         "_id": 170,
+        "name": "Get 1 unique from Moons of Peril",
+        "tip": "Received as a drop from Moons of Peril bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Dual_macuahuitl#/media/File:Dual_macuahuitl_detail.png",
+        "assetImage": "dual_macuahuitl.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Moons of Peril",
+            "exclude": [
+                "N/A"
+            ],
+            "logCount": 4
+        }
+    },
+    {
+        "_id": 171,
         "name": "Get 1 unique from the Hunter Guild",
         "tip": "Received as a drop when completing Hunters Rumours",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hunter_Guild#Other",
@@ -2648,6 +2650,124 @@
                 "Quetzin"
             ],
             "logCount": 2
+        }
+    },
+    {
+        "_id": 172,
+        "name": "Get a Calcified acorn",
+        "tip": "Obtained by spending termites through Wyrm Agility Course",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Colossal_Wyrm_Agility_Course",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Calcified_acorn_detail.png?a3e16",
+        "assetImage": "Calcified_acorn_detail.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Colossal Wyrm Agility",
+            "exclude": [
+                "Calcified acorn"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 173,
+        "name": "Get 1 Alchemist outfit piece",
+        "tip": "Obtained through Mastering Mixology Herblore Minigame",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Alchemist_labcoat#/media/File:Alchemist_labcoat_(apron_off)_detail.png",
+        "assetImage": "Alchemist_labcoat.png",
+        "colLogData": {
+            "category": "Minigames",
+            "logName": "Mastering Mixology",
+            "include": [
+                "Alchemist labcoat",
+                "Alchemist pants", 
+                "Alchemist gloves"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 174,
+        "name": "Get 1 Alchemist outfit piece",
+        "tip": "Obtained through Mastering Mixology Herblore Minigame",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Alchemist_labcoat#/media/File:Alchemist_labcoat_(apron_off)_detail.png",
+        "assetImage": "Alchemist_labcoat.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Mastering Mixology",
+            "include": [
+                "Alchemist labcoat",
+                "Alchemist pants", 
+                "Alchemist gloves"
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 175,
+        "name": "Get 1 Alchemist outfit piece",
+        "tip": "Obtained through Mastering Mixology Herblore Minigame",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Alchemist_labcoat#/media/File:Alchemist_labcoat_(apron_off)_detail.png",
+        "assetImage": "Alchemist_labcoat.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Mastering Mixology",
+            "include": [
+                "Alchemist labcoat",
+                "Alchemist pants", 
+                "Alchemist gloves"
+            ],
+            "logCount": 3
+        }
+    },
+    {
+        "_id": 176,
+        "name": "Get 1 unique from Amoxliatl",
+        "tip": "Obtained when killing Amoxliatl. Taskers may also kill Frost naguas as they drop the same uniques excluding the pet",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Amoxliatl",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Glacial_temotli#/media/File:Glacial_temotli_detail.png",
+        "assetImage": "Glacial_temotli_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Amoxliatl",
+            "exclude": [
+                "Moxi"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 177,
+        "name": "Get 1 unique from Amoxliatl",
+        "tip": "Obtained when killing Amoxliatl. Taskers may also kill Frost naguas as they drop the same uniques excluding the pet",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Amoxliatl",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Glacial_temotli#/media/File:Glacial_temotli_detail.png",
+        "assetImage": "Glacial_temotli_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Amoxliatl",
+            "exclude": [
+                "Moxi"
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 178,
+        "name": "Get 1 unique from Amoxliatl",
+        "tip": "Obtained when killing Amoxliatl. Taskers may also kill Frost naguas as they drop the same uniques excluding the pet",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Amoxliatl",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Glacial_temotli#/media/File:Glacial_temotli_detail.png",
+        "assetImage": "Glacial_temotli_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Amoxliatl",
+            "exclude": [
+                "Moxi"
+            ],
+            "logCount": 3
         }
     }
 ]
