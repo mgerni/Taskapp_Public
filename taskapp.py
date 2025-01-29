@@ -109,7 +109,7 @@ class BasePageInfo:
         progress = get_task_progress(username)
         self.progress = progress
         if self.official:
-            self.rank_icon = official_icon(progress[0], progress[1], progress[2], progress[3])
+            self.rank_icon = official_icon(progress['easy']['percent_complete'], progress['medium']['percent_complete'], progress['hard']['percent_complete'], progress['elite']['percent_complete'])
         else:
             self.rank_icon = unofficial_icon(username)
         email_verify = task_login.email_verify(username)
