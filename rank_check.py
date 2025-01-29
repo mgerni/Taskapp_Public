@@ -36,11 +36,8 @@ def check_collection_log(task_list: list[TaskData], log_data):
         log_count = 0  # Current count of that log in collection log data
 
         # print(log_data)
-        if not multi_source:
-            try:
-                items = log_data['collectionLog']['tabs'][category][logname]['items']
-            except KeyError:
-                print(task)
+        if not multi_source and not multi_category:
+            items = log_data['collectionLog']['tabs'][category][logname]['items']
 
         if multi_category:
             used = set()
@@ -143,8 +140,6 @@ def check_collection_log(task_list: list[TaskData], log_data):
             # print(f"[{i}]: Processed Task: [{taskname}:{item['name']}] in {logname}. Counts: [DB: {db_count}] [LOG: {log_count}]")
 
 
-    for tasks in missing_tasks:
-        print(tasks)
     return valid, missing_tasks
 
 if __name__ == '__main__':

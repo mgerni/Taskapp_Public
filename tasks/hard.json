@@ -3256,7 +3256,7 @@
         "colLogData": {
             "category": null,
             "logName": null,
-            "mutli_category" : [
+            "multi_category" : [
                 {"category" : "Other", "logName" : "Slayer"},
                 {"category" : "Bosses", "logName" : "Araxxor"}
             ],
@@ -3284,7 +3284,7 @@
         "colLogData": {
             "category": null,
             "logName": null,
-            "mutli_category" : [
+            "multi_category" : [
                 {"category" : "Other", "logName" : "Slayer"},
                 {"category" : "Bosses", "logName" : "Araxxor"}
             ],
@@ -3312,7 +3312,7 @@
         "colLogData": {
             "category": null,
             "logName": null,
-            "mutli_category" : [
+            "multi_category" : [
                 {"category" : "Other", "logName" : "Slayer"},
                 {"category" : "Bosses", "logName" : "Araxxor"}
             ],
@@ -3340,7 +3340,7 @@
         "colLogData": {
             "category": null,
             "logName": null,
-            "mutli_category" : [
+            "multi_category" : [
                 {"category" : "Other", "logName" : "Colossal Wyrm Agility"},
                 {"category" : "Minigames", "logName" : "Brimhaven Agility Arena"}
             ],
