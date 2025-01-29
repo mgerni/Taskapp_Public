@@ -184,18 +184,18 @@ def api_task_progress(user):
     progress = get_task_progress(user.username)
     return jsonify({'message':
     {
-        'easy_progress': progress[0],
-        'easy_complete': progress[4],
-        'easy_total': progress[5],
-        'medium_progress': progress[1],
-        'medium_complete': progress[6],
-        'medium_total': progress[7],
-        'hard_progress': progress[2],
-        'hard_complete': progress[8],
-        'hard_total': progress[9],
-        'elite_progress': progress[3],
-        'elite_complete': progress[10],
-        'elite_total': progress[11]
+        'easy_progress': progress["easy"]["percent_complete"],
+        'easy_complete': progress["easy"]["total_complete"],
+        'easy_total': progress["easy"]["total"],
+        'medium_progress': progress["medium"]["percent_complete"],
+        'medium_complete': progress["medium"]["total_complete"],
+        'medium_total': progress["medium"]["total"],
+        'hard_progress': progress["hard"]["percent_complete"],
+        'hard_complete': progress["hard"]["total"],
+        'hard_total': progress["hard"]["percent_complete"],
+        'elite_progress': progress["elite"]["percent_complete"],
+        'elite_complete': progress["elite"]["total_complete"],
+        'elite_total': progress["elite"]["total"]
     }})
 
 
@@ -379,14 +379,14 @@ def dashboard():
         'email_val': user_info.email_val,
         'official': user_info.official,
         'taskapp_email': taskapp_email,
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master' : progress[4],
-        'passive' : progress[5], 
-        'extra' : progress[6],
-        'allPets' : progress[7],
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
     if user_info.official:
         current_task = get_taskCurrent(username)
@@ -499,14 +499,14 @@ def complete_unofficial():
     current_task = get_taskCurrent_tier(username, tier)
     progress = get_task_progress(username)
     data = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master': progress[4],
-        'passive' : progress[5], 
-        'extra' : progress[6],
-        'allPets' : progress[7],
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
         }
     if current_task is not None:
         task_id = current_task[3]
@@ -560,14 +560,14 @@ def single_task_list(list_title, task_type):
     progress = get_task_progress(user_info.username)
     tasks = user_info.user.page_tasks(task_type)
     context = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master' : progress[4],
-        'passive': progress[5],
-        'extra': progress[6],
-        'allPets': progress[7]
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
     
 
@@ -629,14 +629,14 @@ def task_list_pets():
     items_otherpet = filter_lms(task[7])
 
     context = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master': progress[4],
-        'passive': progress[5],
-        'extra': progress[6],
-        'allPets': progress[7]
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
 
     return render_template(
@@ -704,14 +704,14 @@ def update():
     user_info = BasePageInfo()
     progress = get_task_progress(user_info.username)
     data = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master' : progress[4],
-        'passive': progress[5],
-        'extra': progress[6],
-        'allPets': progress[7]
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
     task_id = request.form['id']
     if request.form["tier"] == 'bossPets' or request.form["tier"] == 'skillPets' or request.form["tier"] == 'otherPets':
@@ -733,14 +733,14 @@ def revert():
     user_info = BasePageInfo()
     progress = get_task_progress(user_info.username)
     data = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master' : progress[4],
-        'passive': progress[5],
-        'extra': progress[6],
-        'allPets': progress[7]
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
     manual_revert_tasks(session['username'], tier, task_id)
 
@@ -757,14 +757,14 @@ def faq():
         return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master' : progress[4],
-        'passive': progress[5],
-        'extra': progress[6],
-        'allPets': progress[7]
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
 
     return render_template(
@@ -786,14 +786,14 @@ def wall_of_pain():
         return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master' : progress[4],
-        'passive': progress[5],
-        'extra': progress[6],
-        'allPets': progress[7]
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
     return render_template(
         'wall_of_pain.html',
@@ -815,14 +815,14 @@ def rank_check():
         return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master' : progress[4],
-        'passive': progress[5],
-        'extra': progress[6],
-        'allPets': progress[7]
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
     }
     return render_template(
         'rank-check.html',
@@ -977,14 +977,14 @@ def profile():
         return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
-        'easy': progress[0],
-        'medium': progress[1],
-        'hard': progress[2],
-        'elite': progress[3],
-        'master': progress[4],
-        'passive' : progress[5], 
-        'extra' : progress[6],
-        'allPets' : progress[7],
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
         }
 
     return render_template(

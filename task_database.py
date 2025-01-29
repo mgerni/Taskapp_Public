@@ -385,6 +385,17 @@ def get_task_progress(username: str):
     all_pets_total_complete = boss_pets.total_complete + skill_pets.total_complete + other_pets.total_complete
     all_pets_percent_complete = floor(all_pets_total_complete / all_pets_total * 100)
 
+    progress = {
+            'easy' : {'percent_complete' : easy.percent_complete, "total_complete" : easy.total_complete , "total" : easy.total},
+            'medium' : {'percent_complete' : medium.percent_complete, "total_complete" : medium.total_complete , "total" : medium.total},
+            'hard' : {'percent_complete' : hard.percent_complete, "total_complete" : hard.total_complete , "total" : hard.total},
+            'elite' : {'percent_complete' : elite.percent_complete, "total_complete" : elite.total_complete , "total" : elite.total},
+            'master' : {'percent_complete' : master.percent_complete, "total_complete" : master.total_complete , "total" : master.total},
+            'passive' : {'percent_complete' : passive.percent_complete},
+            'extra' : {'percent_complete' : extra.percent_complete},
+            'all_pets' : {'percent_complete' : all_pets_percent_complete}
+                }
+    return progress
     return easy.percent_complete, medium.percent_complete, hard.percent_complete, elite.percent_complete, master.percent_complete, \
             passive.percent_complete, extra.percent_complete, all_pets_percent_complete, \
             easy.total_complete, easy.total, medium.total_complete, medium.total, hard.total_complete, hard.total, \
