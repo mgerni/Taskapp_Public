@@ -412,7 +412,7 @@ def dashboard():
             })
             return render_template('dashboard_official.html', **context)
     else:
-        context['easy_progress'], context['medium_progress'], context['hard_progress'], context['elite_progress'], context['master_progress']= progress["easy"]['percent_complete'], progress['medium']['perecent_complete'], progress['hard']['percent_complete'], progress['elite']['percent_complete'],progress['master']['percent_complete']
+        context['easy_progress'], context['medium_progress'], context['hard_progress'], context['elite_progress'], context['master_progress']= progress["easy"]['percent_complete'], progress['medium']['percent_complete'], progress['hard']['percent_complete'], progress['elite']['percent_complete'],progress['master']['percent_complete']
         for tier, task_type in [('easy', 'easyTasks'), ('medium', 'mediumTasks'), ('hard', 'hardTasks'), ('elite', 'eliteTasks'), ('master', 'masterTasks')]:
             current_task = get_taskCurrent_tier(username, task_type)
             if current_task:
