@@ -247,8 +247,16 @@ def register():
                     error = 'Passwords did not match. Please try again.'
                     flash(error)
                     return render_template('registerV2.html')
-                official = bool(request.form["official"])
-                lms = bool(request.form["lms_status"])
+                
+                if request.form.get('official') == 'on':
+                    official = True
+                else:
+                    official = False
+                
+                if request.form.get('lms_status') == None:
+                    lms = False
+                else:
+                    lms = True
                 create_user = task_login.add_user(request.form["username"],
                                                 request.form["password"],
                                                 request.form["email"],
@@ -273,6 +281,7 @@ def register():
         
     except Exception as e:
         error = 'An error occurred while processing your request, please try again.'
+        print(e)
         return error
     
     
