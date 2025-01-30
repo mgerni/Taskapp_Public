@@ -31,11 +31,10 @@ html, body {
 
 .rsText {
     color: #ffff00 !important;
-    font-size: .85rem !important;
     font-family: rsText;
-    letter-spacing: .15rem;
-    font-weight: bold;
-}
+    letter-spacing: .05rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
 
 body {
     margin: 0;
