@@ -59,7 +59,6 @@ $(document).on('click', '#start', function(){
 });
 
 $(document).on('click', '#complete', function(){
-  $('form').submit(false);
   req = $.ajax({
     url : '/complete/',
     type : 'POST'
