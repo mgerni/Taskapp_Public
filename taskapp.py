@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request, redirect, flash, url_for, session, jsonify, make_response
-from flask_recaptcha import ReCaptcha
+from flask import Flask, render_template, request, redirect, flash, url_for, session, jsonify, make_response # type: ignore
+from flask_recaptcha import ReCaptcha # type: ignore
 import jwt
 import datetime
-import bcrypt
+import bcrypt # type: ignore
 import config
 from functools import wraps
 import task_login
@@ -300,6 +300,7 @@ def register_user():
                 return {'success' : False, 'error' : error}
             
             send_verification_email_inital(request.form['email'], request.form["username"])
+            flash('Verification email was sent to %s, please check your email (be sure to check your spam folder).' % request.form['email'])
             return {'success' : True, 'error' : None}
         
         error = 'Please fill out the captcha!'
