@@ -247,7 +247,6 @@ def register():
                     error = 'Passwords did not match. Please try again.'
                     flash(error)
                     return render_template('registerV2.html')
-                
                 official = bool(request.form["official"])
                 lms = bool(request.form["lms_status"])
                 create_user = task_login.add_user(request.form["username"],
@@ -273,9 +272,8 @@ def register():
             return render_template('registerV2.html')
         
     except Exception as e:
-        app.logger.error('Error', e)
         error = 'An error occurred while processing your request, please try again.'
-        return {'success' : False, 'error' : e}
+        return error
     
     
 
@@ -287,7 +285,7 @@ def register_user():
             if request.form["password"] != request.form["confirmPassword"]:
                 error = 'Passwords did not match. Please try again.'
                 return {'success' : False, 'error' : error}
-            
+            print(f"### {request.form['offical']} ###")
             official = bool(request.form["official"])
             lms = bool(request.form["lms_status"])
             create_user = task_login.add_user(request.form["username"],
@@ -306,9 +304,8 @@ def register_user():
         error = 'Please fill out the captcha!'
         return {'success' : False, 'error' : error}
     except Exception as e:
-        app.logger.error('Error', e)
         error = 'An error occurred while processing your request, please try again.'
-        return {'success' : False, 'error' : e}
+        return error
 
 
 # Login route, renders login.html on GET request.
