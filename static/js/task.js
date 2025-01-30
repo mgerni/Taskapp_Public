@@ -64,7 +64,9 @@ $(document).on('click', '#complete', function(){
     type : 'POST'
 
   });
-  location.reload();
+  req.done(function(data){
+    location.reload();
+  })
 });
 
 
