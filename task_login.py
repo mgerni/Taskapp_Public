@@ -181,7 +181,7 @@ Returns:
 def add_user(username, password, email, isOfficial, lmsEnabled):
     success = False
     error = None
-    reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!%$*#?&*()])[A-Za-z\d@!#%*?&()]{8,20}$"
+    reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$"
     pattern = re.compile(reg)
     match = re.search(pattern, password)
     if match:
