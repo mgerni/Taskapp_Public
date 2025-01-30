@@ -1092,12 +1092,12 @@ nav svg {
   }
 .button-green:hover {
     cursor: pointer;
-    border: 1px solid var(--complete-color);
+    box-shadow: 0 0 0 1px var(--complete-color);
 }
 
 .button-orange:hover {
     cursor: pointer;
-    border: 1px solid var(--incomplete-color);
+    box-shadow: 0 0 0 1px var(--incomplete-color);
 }
 
 
