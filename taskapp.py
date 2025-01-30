@@ -971,7 +971,7 @@ def reset_token(token):
                 flash('Password changed sucessfully, please login.')
                 return redirect(url_for('login'))
             else:
-                flash(change_pass[0])
+                flash(change_pass[1])
                 return render_template('password-reset.html')
 
 
