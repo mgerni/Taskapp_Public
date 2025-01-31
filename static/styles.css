@@ -354,7 +354,12 @@ body {
 .task-center-margin {
     margin-top: 10%;
 }
-
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
 .task-center {
     background-color: var(--main-accent-color);
     position: relative;
@@ -362,6 +367,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: max-content;
     padding: 2rem;
   }
 
@@ -1329,6 +1335,11 @@ input:checked + .slider:before {
     align-items: center;
     height: 100vh;
     width: 100vw;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+}
+.register-container::-webkit-scrollbar {
+    display: none;
 }
 
 .register-content {
