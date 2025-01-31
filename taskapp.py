@@ -191,8 +191,8 @@ def api_task_progress(user):
         'medium_complete': progress["medium"]["total_complete"],
         'medium_total': progress["medium"]["total"],
         'hard_progress': progress["hard"]["percent_complete"],
-        'hard_complete': progress["hard"]["total"],
-        'hard_total': progress["hard"]["percent_complete"],
+        'hard_complete': progress["hard"]["total_complete"],
+        'hard_total': progress["hard"]["total"],
         'elite_progress': progress["elite"]["percent_complete"],
         'elite_complete': progress["elite"]["total_complete"],
         'elite_total': progress["elite"]["total"]
