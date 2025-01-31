@@ -48,6 +48,8 @@ def list_for_tier(tier: str, include_lms: bool = True) -> list[TaskData]:
         'hardTasks': hard,
         'eliteTasks': elite,
         'masterTasks' : master,
+        'passiveTasks' : passive,
+        'extraTasks' : extra,
         'passive': passive,
         'extra': extra,
         'bossPets': boss_pet,
