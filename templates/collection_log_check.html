@@ -49,7 +49,7 @@
 
 
 <div class="rank-results-row">
-    <p>elite Tier:</p>
+    <p>Elite Tier:</p>
     {% if elite_check[0] == true %}
     <p class="complete">COMPLETE</p>
     {% else %}
@@ -62,107 +62,6 @@
     </ul>
     {% endif %}
 </div>
-
-
-
-<!-- <div class="rank-results-col">
-    <div class="rank-results-row">
-        <h3>Rank Up results for: {{rs_username}}</h3>
-    </div>
-    <div></div> -->
-    <!-- <div class="rank-results-row row-border">
-        <div class="rank-results-col">
-            <p>Easy Tier:</p>
-        </div>
-        <div class="rank-results-col">
-            {% if easy_check[0] == true %}
-            <p class="complete">COMPLETE</p>
-            {% else %}
-            <p class="incomplete">INCOMPLETE</p>
-        </div>
-        <div class="rank-results-col">
-            <button class="button-failed button-orange missing-easy">Missing Easy Tasks</button>
-        </div>
-        <div class="rank-results-col">
-            <ul>
-                {% for task in easy_check[1] %}
-                <li class="li-easy" style="display: none;">{{task}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-         {% endif %}
-    </div>
-    
-    <div class="rank-results-row row-border">
-        <div class="rank-results-col">
-            <p>Medium Tier:</p>
-        </div>
-        <div class="rank-results-col">
-            {% if medium_check[0] == true %}
-            <p class="complete">COMPLETE</p>
-            {% else %}
-            <p class="incomplete">INCOMPLETE</p>
-        </div>
-        <div class="rank-results-col">
-            <button class="button-failed button-orange missing-medium">Missing Medium Tasks</button>
-        </div>
-        <div class="rank-results-col">
-            <ul>
-                {% for task in medium_check[1] %}
-                <li class="li-medium" style="display: none;">{{task}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-         {% endif %}
-    </div>
-
-    <div class="rank-results-row row-border">
-        <div class="rank-results-col">
-            <p>Hard Tier:</p>
-        </div>
-        <div class="rank-results-col">
-            {% if hard_check[0] == true %}
-            <p class="complete">COMPLETE</p>
-            {% else %}
-            <p class="incomplete">INCOMPLETE</p>
-        </div>
-        <div class="rank-results-col">
-            <button class="button-failed button-orange missing-hard">Missing Hard Tasks</button>
-        </div>
-        <div class="rank-results-col">
-            <ul>
-                {% for task in hard_check[1] %}
-                <li class="li-hard" style="display: none;">{{task}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-         {% endif %}
-    </div>
-
-
-    <div class="rank-results-row row-border">
-        <div class="rank-results-col">
-            <p>Elite Tier:</p>
-        </div>
-        <div class="rank-results-col">
-            {% if elite_check[0] == true %}
-            <p class="complete">COMPLETE</p>
-            {% else %}
-            <p class="incomplete">INCOMPLETE</p>
-        </div>
-        <div class="rank-results-col">
-            <button class="button-failed button-orange missing-elite">Missing Elite Tasks</button>
-        </div>
-        <div class="rank-results-col">
-            <ul>
-                {% for task in elite_check[1] %}
-                <li class="li-elite" style="display: none;">{{task}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-         {% endif %}
-    </div> -->
-
     <div class="rank-results-row">
         <p class="complete">If you believe that you have completed a task this is showing failed, ensure that your <a href="https://collectionlog.net">Collection Log Data</a> is updated/sync'd. Refresh the page to try and check again.</p>
     </div>
