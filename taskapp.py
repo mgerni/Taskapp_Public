@@ -395,6 +395,8 @@ def dashboard():
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
+    if username == "ringo":
+        print(progress)
     if user_info.official:
         current_task = get_taskCurrent(username)
         if current_task:
