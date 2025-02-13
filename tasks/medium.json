@@ -2769,5 +2769,69 @@
             ],
             "logCount": 3
         }
+    },
+    {
+        "_id": 179,
+        "name": "Get 1 unique from Royal Titans",
+        "tip": "Obtained by killing the Royal Titans boss. First kill you musat choose Take Pages option as you can force this unique.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "assetImage": "Twinflame_staff_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Royal Titans",
+            "exclude": [
+                "Bran"
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 180,
+        "name": "Get 1 unique from Royal Titans",
+        "tip": "Obtained by killing the Royal Titans boss. First kill you musat choose Take Pages option as you can force this unique.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "assetImage": "Twinflame_staff_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Royal Titans",
+            "exclude": [
+                "Bran"
+            ],
+            "logCount": 2
+        }
+    },
+    {
+        "_id": 181,
+        "name": "Get 1 unique from Royal Titans",
+        "tip": "Obtained by killing the Royal Titans boss. First kill you musat choose Take Pages option as you can force this unique.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "assetImage": "Twinflame_staff_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Royal Titans",
+            "exclude": [
+                "Bran"
+            ],
+            "logCount": 3
+        }
+    },
+    {
+        "_id": 182,
+        "name": "Get 1 unique from Royal Titans",
+        "tip": "Obtained by killing the Royal Titans boss. First kill you musat choose Take Pages option as you can force this unique.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
+        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "assetImage": "Twinflame_staff_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Royal Titans",
+            "exclude": [
+                "Bran"
+            ],
+            "logCount": 4
+        }
     }
 ]
