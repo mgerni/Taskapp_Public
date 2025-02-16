@@ -7,11 +7,11 @@
 <div class="col">
     {% if image_easy != none %}
     <div class="col d-flex m-5  justify-content-center">
-        <img src="/static/assets/{{image_easy}}"width= "60" height="60" alt="task_image">
+        <img src="/static/assets/{{image_easy}}" width= "60" height="60" alt="task_image">
     </div>
     {% elif image_easy == none %}
     <div class="col d-flex m-5  justify-content-center">
-        <img src="/static/assets/blank.png"width= "60" height="60" alt="task_image" class="hide_img">
+        <img src="/static/assets/blank.png" width= "60" height="60" alt="task_image" class="hide_img">
         <!-- <p class="text-white">{{task}}</p> -->
     </div>
     {% endif %}
@@ -30,7 +30,7 @@
             <p>{{tip_easy}}</p>
             <p>Link to the wiki for this task: <a href="{{link_easy}}" target="_blank">Wiki Page</a></p>
             {% else %}
-            <p>You do not have a easy task currently. You can generate a task and then click me!</p>
+            <p>You do not have an easy task currently. You can generate a task and then click me!</p>
             {% endif %}
 
 
