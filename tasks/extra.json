@@ -121,97 +121,97 @@
     },
     {
         "_id": 21,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 22,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 23,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 24,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 25,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 26,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 27,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 28,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 29,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 30,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 31,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 32,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 33,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 34,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 35,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "name": "Get 1 unique from Raids (CoX, ToB or ToA)",
         "assetImage": "Twisted_bow.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids"
     },
     {
         "_id": 36,
-        "name": "Finish all shared clue rewards ",
+        "name": "Finish all shared clue rewards",
         "assetImage": "Clue_scroll.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trail"
     },
@@ -361,7 +361,7 @@
     },
     {
         "_id": 61,
-        "name": "Get 1 unique from the Zalcano",
+        "name": "Get 1 unique from Zalcano",
         "assetImage": "Zalcano_shard.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano"
     },
@@ -649,7 +649,7 @@
     },
     {
         "_id": 109,
-        "name": "Get 1 unique from the Zalcano",
+        "name": "Get 1 unique from Zalcano",
         "assetImage": "Zalcano_shard.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano"
     },
@@ -716,7 +716,7 @@
     {
         "_id": 120,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -741,7 +741,7 @@
     {
         "_id": 121,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -766,7 +766,7 @@
     {
         "_id": 122,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -791,7 +791,7 @@
     {
         "_id": 123,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -816,7 +816,7 @@
     {
         "_id": 124,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -841,7 +841,7 @@
     {
         "_id": 125,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -866,7 +866,7 @@
     {
         "_id": 126,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -891,7 +891,7 @@
     {
         "_id": 127,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -916,7 +916,7 @@
     {
         "_id": 128,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",
@@ -941,7 +941,7 @@
     {
         "_id": 129,
         "name": "Get 1 unique from the DT2 bosses",
-        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "tip": "Can be received as a drop from any of the four DT2 bosses.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/150px-Soulreaper_axe_detail.png",
         "assetImage": "Soulreaper_axe_detail.png",

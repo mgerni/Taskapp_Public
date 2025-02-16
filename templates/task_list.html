@@ -10,7 +10,7 @@
 			<div class="card-header bg-dark sticky-top ">
                 <div class="row">
                     <div class="col-9">
-                        <h3 class="card-title text-white justify-content-">Task List</h5>
+                        <h3 class="card-title text-white justify-content-">Task List</h3>
                     </div>
                     <div class="col-3 mt-2">
                         <a class="text-white topButton link_hover" aria-current="true">Back to Top</a>
@@ -70,7 +70,7 @@
                     {% for item in items_easy %}
                     {% if item[2] == 'Complete'%}
                     <div id="task{{item[3]}}_easy" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-easy">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="{{item[5]}}" link="{{item[6]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -81,7 +81,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-easy">
-                                <img  src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img  src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-easy">
                                 <form>
@@ -104,7 +104,7 @@
                             
                         </div>
                         <div class="col-2 ">
-                            <img data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                            <img data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                         </div>
                         <div>
                         </div>
@@ -123,7 +123,7 @@
                             <span class="text-white" >{{item[0]}}</span>
                         </div>
                         <div class="col-2 collapse show" id="incomplete-task-easy">
-                            <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                            <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                         </div>
                         <div>
 
@@ -169,7 +169,7 @@
 
 
                     <div id="task{{item[3]}}_medium" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-medium">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="{{item[5]}}" link="{{item[6]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -180,7 +180,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-medium">
-                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-medium">
                                 <form>
@@ -204,7 +204,7 @@
                             
                         </div>
                         <div class="col-2 ">
-                            <img data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                            <img data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                         </div>
                         <div>
 
@@ -227,7 +227,7 @@
                                 <span class="text-white mt-3" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-medium">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
@@ -271,7 +271,7 @@
                     {% if item[2] == 'Complete'%}
 
                     <div id="task{{item[3]}}_hard" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-hard">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="{{item[5]}}" link="{{item[6]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -282,7 +282,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-hard">
-                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-hard">
                                 <form>
@@ -308,7 +308,7 @@
                             
                         </div>
                         <div class="col-4 ">
-                            <img data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                            <img data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                         </div>
                         <div>
 
@@ -329,7 +329,7 @@
                                 <span class="text-white mt-3" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-hard">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
@@ -371,7 +371,7 @@
                     {% if item[2] == 'Complete'%}
 
                     <div id="task{{item[3]}}_elite" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-elite">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="{{item[5]}}" link="{{item[6]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -382,7 +382,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-elite">
-                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-elite">
                                 <form>
@@ -406,7 +406,7 @@
                             
                         </div>
                         <div class="col-4 ">
-                            <img data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                            <img data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                         </div>
                         <div>
 
@@ -428,7 +428,7 @@
                                 <span class="text-white mt-3" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-elite">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
@@ -474,7 +474,7 @@
 
 
                     <div id="task{{item[3]}}_bosspet" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-pets">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="None" link="{{item[5]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -485,7 +485,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-pets">
-                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-pets">
                                 <form>
@@ -511,7 +511,7 @@
                                 <span class="text-white" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-pets">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
@@ -539,7 +539,7 @@
                     {% if item[2] == 'Complete'%}
 
                     <div id="task{{item[3]}}_skillpet" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-pets">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="None" link="{{item[5]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -550,7 +550,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-pets">
-                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-pets">
                                 <form>
@@ -578,7 +578,7 @@
                                 <span class="text-white" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-pets">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
@@ -608,7 +608,7 @@
 
                     
                     <div id="task{{item[3]}}_otherpet" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-pets">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="None" link="{{item[5]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -619,7 +619,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-pets">
-                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-pets">
                                 <form>
@@ -646,7 +646,7 @@
                                 <span class="text-white" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-pets">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
@@ -692,7 +692,7 @@
 
 
                     <div id="task{{item[3]}}_passive" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-passive">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="None" link="{{item[5]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -703,7 +703,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-passive">
-                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png"  data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-passive">
                                 <form>
@@ -731,7 +731,7 @@
                                 <span class="text-white" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-passive">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
@@ -776,7 +776,7 @@
 
 
                     <div id="task{{item[3]}}_extra" >
-                        <div class="flex-row d-flex bg-success align-items-center "name="task">
+                        <div class="flex-row d-flex bg-success align-items-center " name="task">
                             <div class="col-2 justify-content-center collapse show" id="completed-task-extra">
                                 <button type="button" class="btn btn-lg taskHelpModal" tip="None" link="{{item[5]}}">
                                     <i class="bi bi-info-circle text-white fw-bold"></i>
@@ -787,7 +787,7 @@
                             </div>
                             
                             <div class="col-2 collapse show  " id="completed-task-extra">
-                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_complete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div class="col-2 collapse show " id="completed-task-extra">
                                 <form>
@@ -814,7 +814,7 @@
                                 <span class="text-white" >{{item[0]}}</span>
                             </div>
                             <div class="col-2 collapse show" id="incomplete-task-extra">
-                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}"width= "40" height="40" alt="task_image" class="lazyload">
+                                <img src="/static/assets/placeholder_incomplete.png" data-src="/static/assets/{{item[1]}}" width= "40" height="40" alt="task_image" class="lazyload">
                             </div>
                             <div>
     
