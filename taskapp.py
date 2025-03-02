@@ -458,7 +458,7 @@ def collection_log_check():
         elite_check = elite_check
         )
     else:
-        print(log_data[0], log_data[1]['error'])
+        print(log_data)
         return render_template('collection_log_check_error.html', rs_username=rs_username, error=log_data[1]['error'])
 
 # AJAX route for generating a task.
