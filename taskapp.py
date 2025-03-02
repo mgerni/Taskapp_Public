@@ -459,7 +459,7 @@ def collection_log_check():
         )
     else:
         print(log_data)
-        return render_template('collection_log_check_error.html', rs_username=rs_username, error=log_data[1]['error'])
+        return render_template('collection_log_check_error.html', rs_username=rs_username, error=log_data[1])
 
 # AJAX route for generating a task.
 @app.route('/generate/', methods=['POST'])
