@@ -371,8 +371,8 @@ def logout():
 @login_required
 def dashboard():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     # The "first" variables determine whether a user has just completed a task
     easy_first = bool(request.args.get('easy-first'))
     medium_first = bool(request.args.get('medium-first'))
@@ -540,8 +540,8 @@ def complete_unofficial():
 @login_required
 def task_list():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     task = get_task_lists(user_info.username)
 
     # TODO Refactor template to use the user page_tasks class
@@ -641,8 +641,8 @@ def task_list_master():
 @login_required
 def task_list_pets():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     task = get_task_lists(user_info.username)
     progress = get_task_progress(user_info.username)
     items_bosspet = filter_lms(task[5])
@@ -690,8 +690,8 @@ def task_list_passive():
 @login_required
 def highscores():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     return render_template(
         'highscores.html',
         username=user_info.username,
@@ -774,8 +774,8 @@ def revert():
 @login_required
 def faq():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
         'easy': progress['easy']['percent_complete'],
@@ -803,8 +803,8 @@ def faq():
 @login_required
 def wall_of_pain():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
         'easy': progress['easy']['percent_complete'],
@@ -832,8 +832,8 @@ def wall_of_pain():
 @login_required
 def rank_check():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
         'easy': progress['easy']['percent_complete'],
@@ -994,8 +994,8 @@ def reset_token(token):
 @login_required
 def profile():
     user_info = BasePageInfo()
-    if not user_info.email_bool:
-        return render_template('email-verify.html')
+    # if not user_info.email_bool:
+    #     return render_template('email-verify.html')
     progress = get_task_progress(user_info.username)
     context = {
         'easy': progress['easy']['percent_complete'],
