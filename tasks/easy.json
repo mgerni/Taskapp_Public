@@ -8,9 +8,9 @@
         "assetImage": "Bolt_rack_5.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Barrows Chests",
+            "logName": "barrows_chests",
             "include": [
-                "Bolt rack"
+                {"id": 4740, "name": "Bolt rack"}
             ],
             "logCount": 1
         }
@@ -24,10 +24,10 @@
         "assetImage": "Mole_claw.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Giant Mole",
+            "logName": "giant_mole",
             "include": [
-                "Mole skin",
-                "Mole claw"
+                {"id": 7416, "name": "Mole claw"},
+                {"id": 7418, "name": "Mole skin"}
             ],
             "logCount": 2
         }
@@ -41,10 +41,16 @@
         "assetImage": "Pyromancer_hood.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Wintertodt",
-            "exclude": [
-                "Phoenix",
-                "Dragon axe"
+            "logName": "wintertodt",
+            "include": [
+                {"id": 20704, "name": "Pyromancer garb"},
+                {"id": 20706, "name": "Pyromancer robe"},
+                {"id": 20708, "name": "Pyromancer hood"},
+                {"id": 20710, "name": "Pyromancer boots"},
+                {"id": 20712, "name": "Warm gloves"},
+                {"id": 20716, "name": "Tome of fire (empty)"},
+                {"id": 20718, "name": "Burnt page"},
+                {"id": 20720, "name": "Bruma torch"}
             ],
             "logCount": 1
         }
@@ -58,10 +64,16 @@
         "assetImage": "Pyromancer_hood.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Wintertodt",
-            "exclude": [
-                "Phoenix",
-                "Dragon axe"
+            "logName": "wintertodt",
+            "include": [
+                {"id": 20704, "name": "Pyromancer garb"},
+                {"id": 20706, "name": "Pyromancer robe"},
+                {"id": 20708, "name": "Pyromancer hood"},
+                {"id": 20710, "name": "Pyromancer boots"},
+                {"id": 20712, "name": "Warm gloves"},
+                {"id": 20716, "name": "Tome of fire (empty)"},
+                {"id": 20718, "name": "Burnt page"},
+                {"id": 20720, "name": "Bruma torch"}
             ],
             "logCount": 2
         }
@@ -75,10 +87,16 @@
         "assetImage": "Pyromancer_hood.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Wintertodt",
-            "exclude": [
-                "Phoenix",
-                "Dragon axe"
+            "logName": "wintertodt",
+            "include": [
+                {"id": 20704, "name": "Pyromancer garb"},
+                {"id": 20706, "name": "Pyromancer robe"},
+                {"id": 20708, "name": "Pyromancer hood"},
+                {"id": 20710, "name": "Pyromancer boots"},
+                {"id": 20712, "name": "Warm gloves"},
+                {"id": 20716, "name": "Tome of fire (empty)"},
+                {"id": 20718, "name": "Burnt page"},
+                {"id": 20720, "name": "Bruma torch"}
             ],
             "logCount": 3
         }
@@ -92,10 +110,16 @@
         "assetImage": "Pyromancer_hood.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Wintertodt",
-            "exclude": [
-                "Phoenix",
-                "Dragon axe"
+            "logName": "wintertodt",
+            "include": [
+                {"id": 20704, "name": "Pyromancer garb"},
+                {"id": 20706, "name": "Pyromancer robe"},
+                {"id": 20708, "name": "Pyromancer hood"},
+                {"id": 20710, "name": "Pyromancer boots"},
+                {"id": 20712, "name": "Warm gloves"},
+                {"id": 20716, "name": "Tome of fire (empty)"},
+                {"id": 20718, "name": "Burnt page"},
+                {"id": 20720, "name": "Bruma torch"}
             ],
             "logCount": 4
         }
@@ -109,10 +133,16 @@
         "assetImage": "Pyromancer_hood.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Wintertodt",
-            "exclude": [
-                "Phoenix",
-                "Dragon axe"
+            "logName": "wintertodt",
+            "include": [
+                {"id": 20704, "name": "Pyromancer garb"},
+                {"id": 20706, "name": "Pyromancer robe"},
+                {"id": 20708, "name": "Pyromancer hood"},
+                {"id": 20710, "name": "Pyromancer boots"},
+                {"id": 20712, "name": "Warm gloves"},
+                {"id": 20716, "name": "Tome of fire (empty)"},
+                {"id": 20718, "name": "Burnt page"},
+                {"id": 20720, "name": "Bruma torch"}
             ],
             "logCount": 5
         }
@@ -120,15 +150,29 @@
     {
         "_id": 8,
         "name": "Get 3 new uniques from beginner clues",
-        "tip": "Potential reward from beginner  clues. Typically you would want to kill Goblins or Minotaurs for the clues themselves. ",
+        "tip": "Potential reward from beginner clues. Typically you would want to kill Goblins or Minotaurs for the clues themselves. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(beginner)",
         "wikiImage": "https://oldschool.runescape.wiki/images/9/93/Clue_scroll_%28beginner%29.png?c3ba4",
         "assetImage": "Clue_scroll_beginner.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Beginner Treasure Trails",
-            "exclude": [
-                "Black pickaxe"
+            "logName": "beginner_treasure_trails",
+            "include": [
+                {"id": 23285, "name": "Mole slippers"},
+                {"id": 23288, "name": "Frog slippers"},
+                {"id": 23291, "name": "Bear feet"},
+                {"id": 23294, "name": "Demon feet"},
+                {"id": 23297, "name": "Jester cape"},
+                {"id": 23300, "name": "Shoulder parrot"},
+                {"id": 23303, "name": "Monk's robe top (t)"},
+                {"id": 23306, "name": "Monk's robe (t)"},
+                {"id": 23309, "name": "Amulet of defence (t)"},
+                {"id": 23312, "name": "Sandwich lady hat"},
+                {"id": 23315, "name": "Sandwich lady top"},
+                {"id": 23318, "name": "Sandwich lady bottom"},
+                {"id": 23321, "name": "Rune scimitar ornament kit (guthix)"},
+                {"id": 23324, "name": "Rune scimitar ornament kit (saradomin)"},
+                {"id": 23327, "name": "Rune scimitar ornament kit (zamorak)"}
             ],
             "logCount": 3
         }
@@ -142,9 +186,23 @@
         "assetImage": "Clue_scroll_beginner.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Beginner Treasure Trails",
-            "exclude": [
-                "Black pickaxe"
+            "logName": "beginner_treasure_trails",
+            "include": [
+                {"id": 23285, "name": "Mole slippers"},
+                {"id": 23288, "name": "Frog slippers"},
+                {"id": 23291, "name": "Bear feet"},
+                {"id": 23294, "name": "Demon feet"},
+                {"id": 23297, "name": "Jester cape"},
+                {"id": 23300, "name": "Shoulder parrot"},
+                {"id": 23303, "name": "Monk's robe top (t)"},
+                {"id": 23306, "name": "Monk's robe (t)"},
+                {"id": 23309, "name": "Amulet of defence (t)"},
+                {"id": 23312, "name": "Sandwich lady hat"},
+                {"id": 23315, "name": "Sandwich lady top"},
+                {"id": 23318, "name": "Sandwich lady bottom"},
+                {"id": 23321, "name": "Rune scimitar ornament kit (guthix)"},
+                {"id": 23324, "name": "Rune scimitar ornament kit (saradomin)"},
+                {"id": 23327, "name": "Rune scimitar ornament kit (zamorak)"}
             ],
             "logCount": 6
         }
@@ -158,9 +216,139 @@
         "assetImage": "Clue_scroll_easy.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Easy Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "easy_treasure_trails",
+            "include": [
+                {"id": 2583, "name": "Black platebody (t)"},
+                {"id": 2585, "name": "Black platelegs (t)"},
+                {"id": 2587, "name": "Black full helm (t)"},
+                {"id": 2589, "name": "Black kiteshield (t)"},
+                {"id": 2591, "name": "Black platebody (g)"},
+                {"id": 2593, "name": "Black platelegs (g)"},
+                {"id": 2595, "name": "Black full helm (g)"},
+                {"id": 2597, "name": "Black kiteshield (g)"},
+                {"id": 2631, "name": "Highwayman mask"},
+                {"id": 2633, "name": "Blue beret"},
+                {"id": 2635, "name": "Black beret"},
+                {"id": 2637, "name": "White beret"},
+                {"id": 3472, "name": "Black plateskirt (t)"},
+                {"id": 3473, "name": "Black plateskirt (g)"},
+                {"id": 7332, "name": "Black shield (h1)"},
+                {"id": 7338, "name": "Black shield (h2)"},
+                {"id": 7344, "name": "Black shield (h3)"},
+                {"id": 7350, "name": "Black shield (h4)"},
+                {"id": 7356, "name": "Black shield (h5)"},
+                {"id": 7362, "name": "Studded body (g)"},
+                {"id": 7364, "name": "Studded body (t)"},
+                {"id": 7366, "name": "Studded chaps (g)"},
+                {"id": 7368, "name": "Studded chaps (t)"},
+                {"id": 7386, "name": "Blue skirt (g)"},
+                {"id": 7388, "name": "Blue skirt (t)"},
+                {"id": 7390, "name": "Blue wizard robe (g)"},
+                {"id": 7392, "name": "Blue wizard robe (t)"},
+                {"id": 7394, "name": "Blue wizard hat (g)"},
+                {"id": 7396, "name": "Blue wizard hat (t)"},
+                {"id": 10280, "name": "Willow comp bow"},
+                {"id": 10306, "name": "Black helm (h1)"},
+                {"id": 10308, "name": "Black helm (h2)"},
+                {"id": 10310, "name": "Black helm (h3)"},
+                {"id": 10312, "name": "Black helm (h4)"},
+                {"id": 10314, "name": "Black helm (h5)"},
+                {"id": 10316, "name": "Bob's red shirt"},
+                {"id": 10318, "name": "Bob's blue shirt"},
+                {"id": 10320, "name": "Bob's green shirt"},
+                {"id": 10322, "name": "Bob's black shirt"},
+                {"id": 10324, "name": "Bob's purple shirt"},
+                {"id": 10366, "name": "Amulet of magic (t)"},
+                {"id": 10392, "name": "A powdered wig"},
+                {"id": 10394, "name": "Flared trousers"},
+                {"id": 10396, "name": "Pantaloons"},
+                {"id": 10398, "name": "Sleeping cap"},
+                {"id": 10404, "name": "Red elegant shirt"},
+                {"id": 10406, "name": "Red elegant legs"},
+                {"id": 10408, "name": "Blue elegant shirt"},
+                {"id": 10410, "name": "Blue elegant legs"},
+                {"id": 10412, "name": "Green elegant shirt"},
+                {"id": 10414, "name": "Green elegant legs"},
+                {"id": 10424, "name": "Red elegant blouse"},
+                {"id": 10426, "name": "Red elegant skirt"},
+                {"id": 10428, "name": "Blue elegant blouse"},
+                {"id": 10430, "name": "Blue elegant skirt"},
+                {"id": 10432, "name": "Green elegant blouse"},
+                {"id": 10434, "name": "Green elegant skirt"},
+                {"id": 10458, "name": "Saradomin robe top"},
+                {"id": 10460, "name": "Zamorak robe top"},
+                {"id": 10462, "name": "Guthix robe top"},
+                {"id": 10464, "name": "Saradomin robe legs"},
+                {"id": 10466, "name": "Guthix robe legs"},
+                {"id": 10468, "name": "Zamorak robe legs"},
+                {"id": 12193, "name": "Ancient robe top"},
+                {"id": 12195, "name": "Ancient robe legs"},
+                {"id": 12205, "name": "Bronze platebody (g)"},
+                {"id": 12207, "name": "Bronze platelegs (g)"},
+                {"id": 12209, "name": "Bronze plateskirt (g)"},
+                {"id": 12211, "name": "Bronze full helm (g)"},
+                {"id": 12213, "name": "Bronze kiteshield (g)"},
+                {"id": 12215, "name": "Bronze platebody (t)"},
+                {"id": 12217, "name": "Bronze platelegs (t)"},
+                {"id": 12219, "name": "Bronze plateskirt (t)"},
+                {"id": 12221, "name": "Bronze full helm (t)"},
+                {"id": 12223, "name": "Bronze kiteshield (t)"},
+                {"id": 12225, "name": "Iron platebody (t)"},
+                {"id": 12227, "name": "Iron platelegs (t)"},
+                {"id": 12229, "name": "Iron plateskirt (t)"},
+                {"id": 12231, "name": "Iron full helm (t)"},
+                {"id": 12233, "name": "Iron kiteshield (t)"},
+                {"id": 12235, "name": "Iron platebody (g)"},
+                {"id": 12237, "name": "Iron platelegs (g)"},
+                {"id": 12239, "name": "Iron plateskirt (g)"},
+                {"id": 12241, "name": "Iron full helm (g)"},
+                {"id": 12243, "name": "Iron kiteshield (g)"},
+                {"id": 12245, "name": "Beanie"},
+                {"id": 12247, "name": "Red beret"},
+                {"id": 12249, "name": "Imp mask"},
+                {"id": 12251, "name": "Goblin mask"},
+                {"id": 12253, "name": "Armadyl robe top"},
+                {"id": 12255, "name": "Armadyl robe legs"},
+                {"id": 12265, "name": "Bandos robe top"},
+                {"id": 12267, "name": "Bandos robe legs"},
+                {"id": 12297, "name": "Black pickaxe"},
+                {"id": 12375, "name": "Black cane"},
+                {"id": 12445, "name": "Black skirt (g)"},
+                {"id": 12447, "name": "Black skirt (t)"},
+                {"id": 12449, "name": "Black wizard robe (g)"},
+                {"id": 12451, "name": "Black wizard robe (t)"},
+                {"id": 12453, "name": "Black wizard hat (g)"},
+                {"id": 12455, "name": "Black wizard hat (t)"},
+                {"id": 20166, "name": "Wooden shield (g)"},
+                {"id": 20169, "name": "Steel platebody (g)"},
+                {"id": 20172, "name": "Steel platelegs (g)"},
+                {"id": 20175, "name": "Steel plateskirt (g)"},
+                {"id": 20178, "name": "Steel full helm (g)"},
+                {"id": 20181, "name": "Steel kiteshield (g)"},
+                {"id": 20184, "name": "Steel platebody (t)"},
+                {"id": 20187, "name": "Steel platelegs (t)"},
+                {"id": 20190, "name": "Steel plateskirt (t)"},
+                {"id": 20193, "name": "Steel full helm (t)"},
+                {"id": 20196, "name": "Steel kiteshield (t)"},
+                {"id": 20199, "name": "Monk's robe top (g)"},
+                {"id": 20202, "name": "Monk's robe (g)"},
+                {"id": 20205, "name": "Golden chef's hat"},
+                {"id": 20208, "name": "Golden apron"},
+                {"id": 20211, "name": "Team cape zero"},
+                {"id": 20214, "name": "Team cape x"},
+                {"id": 20217, "name": "Team cape i"},
+                {"id": 23351, "name": "Cape of skulls"},
+                {"id": 23354, "name": "Amulet of power (t)"},
+                {"id": 23357, "name": "Rain bow"},
+                {"id": 23360, "name": "Ham joint"},
+                {"id": 23363, "name": "Staff of bob the cat"},
+                {"id": 23366, "name": "Black platebody (h1)"},
+                {"id": 23369, "name": "Black platebody (h2)"},
+                {"id": 23372, "name": "Black platebody (h3)"},
+                {"id": 23375, "name": "Black platebody (h4)"},
+                {"id": 23378, "name": "Black platebody (h5)"},
+                {"id": 23381, "name": "Leather body (g)"},
+                {"id": 23384, "name": "Leather chaps (g)"}
             ],
             "logCount": 5
         }
@@ -174,9 +362,139 @@
         "assetImage": "Clue_scroll_easy.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Easy Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "easy_treasure_trails",
+            "include": [
+                {"id": 2583, "name": "Black platebody (t)"},
+                {"id": 2585, "name": "Black platelegs (t)"},
+                {"id": 2587, "name": "Black full helm (t)"},
+                {"id": 2589, "name": "Black kiteshield (t)"},
+                {"id": 2591, "name": "Black platebody (g)"},
+                {"id": 2593, "name": "Black platelegs (g)"},
+                {"id": 2595, "name": "Black full helm (g)"},
+                {"id": 2597, "name": "Black kiteshield (g)"},
+                {"id": 2631, "name": "Highwayman mask"},
+                {"id": 2633, "name": "Blue beret"},
+                {"id": 2635, "name": "Black beret"},
+                {"id": 2637, "name": "White beret"},
+                {"id": 3472, "name": "Black plateskirt (t)"},
+                {"id": 3473, "name": "Black plateskirt (g)"},
+                {"id": 7332, "name": "Black shield (h1)"},
+                {"id": 7338, "name": "Black shield (h2)"},
+                {"id": 7344, "name": "Black shield (h3)"},
+                {"id": 7350, "name": "Black shield (h4)"},
+                {"id": 7356, "name": "Black shield (h5)"},
+                {"id": 7362, "name": "Studded body (g)"},
+                {"id": 7364, "name": "Studded body (t)"},
+                {"id": 7366, "name": "Studded chaps (g)"},
+                {"id": 7368, "name": "Studded chaps (t)"},
+                {"id": 7386, "name": "Blue skirt (g)"},
+                {"id": 7388, "name": "Blue skirt (t)"},
+                {"id": 7390, "name": "Blue wizard robe (g)"},
+                {"id": 7392, "name": "Blue wizard robe (t)"},
+                {"id": 7394, "name": "Blue wizard hat (g)"},
+                {"id": 7396, "name": "Blue wizard hat (t)"},
+                {"id": 10280, "name": "Willow comp bow"},
+                {"id": 10306, "name": "Black helm (h1)"},
+                {"id": 10308, "name": "Black helm (h2)"},
+                {"id": 10310, "name": "Black helm (h3)"},
+                {"id": 10312, "name": "Black helm (h4)"},
+                {"id": 10314, "name": "Black helm (h5)"},
+                {"id": 10316, "name": "Bob's red shirt"},
+                {"id": 10318, "name": "Bob's blue shirt"},
+                {"id": 10320, "name": "Bob's green shirt"},
+                {"id": 10322, "name": "Bob's black shirt"},
+                {"id": 10324, "name": "Bob's purple shirt"},
+                {"id": 10366, "name": "Amulet of magic (t)"},
+                {"id": 10392, "name": "A powdered wig"},
+                {"id": 10394, "name": "Flared trousers"},
+                {"id": 10396, "name": "Pantaloons"},
+                {"id": 10398, "name": "Sleeping cap"},
+                {"id": 10404, "name": "Red elegant shirt"},
+                {"id": 10406, "name": "Red elegant legs"},
+                {"id": 10408, "name": "Blue elegant shirt"},
+                {"id": 10410, "name": "Blue elegant legs"},
+                {"id": 10412, "name": "Green elegant shirt"},
+                {"id": 10414, "name": "Green elegant legs"},
+                {"id": 10424, "name": "Red elegant blouse"},
+                {"id": 10426, "name": "Red elegant skirt"},
+                {"id": 10428, "name": "Blue elegant blouse"},
+                {"id": 10430, "name": "Blue elegant skirt"},
+                {"id": 10432, "name": "Green elegant blouse"},
+                {"id": 10434, "name": "Green elegant skirt"},
+                {"id": 10458, "name": "Saradomin robe top"},
+                {"id": 10460, "name": "Zamorak robe top"},
+                {"id": 10462, "name": "Guthix robe top"},
+                {"id": 10464, "name": "Saradomin robe legs"},
+                {"id": 10466, "name": "Guthix robe legs"},
+                {"id": 10468, "name": "Zamorak robe legs"},
+                {"id": 12193, "name": "Ancient robe top"},
+                {"id": 12195, "name": "Ancient robe legs"},
+                {"id": 12205, "name": "Bronze platebody (g)"},
+                {"id": 12207, "name": "Bronze platelegs (g)"},
+                {"id": 12209, "name": "Bronze plateskirt (g)"},
+                {"id": 12211, "name": "Bronze full helm (g)"},
+                {"id": 12213, "name": "Bronze kiteshield (g)"},
+                {"id": 12215, "name": "Bronze platebody (t)"},
+                {"id": 12217, "name": "Bronze platelegs (t)"},
+                {"id": 12219, "name": "Bronze plateskirt (t)"},
+                {"id": 12221, "name": "Bronze full helm (t)"},
+                {"id": 12223, "name": "Bronze kiteshield (t)"},
+                {"id": 12225, "name": "Iron platebody (t)"},
+                {"id": 12227, "name": "Iron platelegs (t)"},
+                {"id": 12229, "name": "Iron plateskirt (t)"},
+                {"id": 12231, "name": "Iron full helm (t)"},
+                {"id": 12233, "name": "Iron kiteshield (t)"},
+                {"id": 12235, "name": "Iron platebody (g)"},
+                {"id": 12237, "name": "Iron platelegs (g)"},
+                {"id": 12239, "name": "Iron plateskirt (g)"},
+                {"id": 12241, "name": "Iron full helm (g)"},
+                {"id": 12243, "name": "Iron kiteshield (g)"},
+                {"id": 12245, "name": "Beanie"},
+                {"id": 12247, "name": "Red beret"},
+                {"id": 12249, "name": "Imp mask"},
+                {"id": 12251, "name": "Goblin mask"},
+                {"id": 12253, "name": "Armadyl robe top"},
+                {"id": 12255, "name": "Armadyl robe legs"},
+                {"id": 12265, "name": "Bandos robe top"},
+                {"id": 12267, "name": "Bandos robe legs"},
+                {"id": 12297, "name": "Black pickaxe"},
+                {"id": 12375, "name": "Black cane"},
+                {"id": 12445, "name": "Black skirt (g)"},
+                {"id": 12447, "name": "Black skirt (t)"},
+                {"id": 12449, "name": "Black wizard robe (g)"},
+                {"id": 12451, "name": "Black wizard robe (t)"},
+                {"id": 12453, "name": "Black wizard hat (g)"},
+                {"id": 12455, "name": "Black wizard hat (t)"},
+                {"id": 20166, "name": "Wooden shield (g)"},
+                {"id": 20169, "name": "Steel platebody (g)"},
+                {"id": 20172, "name": "Steel platelegs (g)"},
+                {"id": 20175, "name": "Steel plateskirt (g)"},
+                {"id": 20178, "name": "Steel full helm (g)"},
+                {"id": 20181, "name": "Steel kiteshield (g)"},
+                {"id": 20184, "name": "Steel platebody (t)"},
+                {"id": 20187, "name": "Steel platelegs (t)"},
+                {"id": 20190, "name": "Steel plateskirt (t)"},
+                {"id": 20193, "name": "Steel full helm (t)"},
+                {"id": 20196, "name": "Steel kiteshield (t)"},
+                {"id": 20199, "name": "Monk's robe top (g)"},
+                {"id": 20202, "name": "Monk's robe (g)"},
+                {"id": 20205, "name": "Golden chef's hat"},
+                {"id": 20208, "name": "Golden apron"},
+                {"id": 20211, "name": "Team cape zero"},
+                {"id": 20214, "name": "Team cape x"},
+                {"id": 20217, "name": "Team cape i"},
+                {"id": 23351, "name": "Cape of skulls"},
+                {"id": 23354, "name": "Amulet of power (t)"},
+                {"id": 23357, "name": "Rain bow"},
+                {"id": 23360, "name": "Ham joint"},
+                {"id": 23363, "name": "Staff of bob the cat"},
+                {"id": 23366, "name": "Black platebody (h1)"},
+                {"id": 23369, "name": "Black platebody (h2)"},
+                {"id": 23372, "name": "Black platebody (h3)"},
+                {"id": 23375, "name": "Black platebody (h4)"},
+                {"id": 23378, "name": "Black platebody (h5)"},
+                {"id": 23381, "name": "Leather body (g)"},
+                {"id": 23384, "name": "Leather chaps (g)"}
             ],
             "logCount": 10
         }
@@ -190,9 +508,139 @@
         "assetImage": "Clue_scroll_easy.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Easy Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "easy_treasure_trails",
+            "include": [
+                {"id": 2583, "name": "Black platebody (t)"},
+                {"id": 2585, "name": "Black platelegs (t)"},
+                {"id": 2587, "name": "Black full helm (t)"},
+                {"id": 2589, "name": "Black kiteshield (t)"},
+                {"id": 2591, "name": "Black platebody (g)"},
+                {"id": 2593, "name": "Black platelegs (g)"},
+                {"id": 2595, "name": "Black full helm (g)"},
+                {"id": 2597, "name": "Black kiteshield (g)"},
+                {"id": 2631, "name": "Highwayman mask"},
+                {"id": 2633, "name": "Blue beret"},
+                {"id": 2635, "name": "Black beret"},
+                {"id": 2637, "name": "White beret"},
+                {"id": 3472, "name": "Black plateskirt (t)"},
+                {"id": 3473, "name": "Black plateskirt (g)"},
+                {"id": 7332, "name": "Black shield (h1)"},
+                {"id": 7338, "name": "Black shield (h2)"},
+                {"id": 7344, "name": "Black shield (h3)"},
+                {"id": 7350, "name": "Black shield (h4)"},
+                {"id": 7356, "name": "Black shield (h5)"},
+                {"id": 7362, "name": "Studded body (g)"},
+                {"id": 7364, "name": "Studded body (t)"},
+                {"id": 7366, "name": "Studded chaps (g)"},
+                {"id": 7368, "name": "Studded chaps (t)"},
+                {"id": 7386, "name": "Blue skirt (g)"},
+                {"id": 7388, "name": "Blue skirt (t)"},
+                {"id": 7390, "name": "Blue wizard robe (g)"},
+                {"id": 7392, "name": "Blue wizard robe (t)"},
+                {"id": 7394, "name": "Blue wizard hat (g)"},
+                {"id": 7396, "name": "Blue wizard hat (t)"},
+                {"id": 10280, "name": "Willow comp bow"},
+                {"id": 10306, "name": "Black helm (h1)"},
+                {"id": 10308, "name": "Black helm (h2)"},
+                {"id": 10310, "name": "Black helm (h3)"},
+                {"id": 10312, "name": "Black helm (h4)"},
+                {"id": 10314, "name": "Black helm (h5)"},
+                {"id": 10316, "name": "Bob's red shirt"},
+                {"id": 10318, "name": "Bob's blue shirt"},
+                {"id": 10320, "name": "Bob's green shirt"},
+                {"id": 10322, "name": "Bob's black shirt"},
+                {"id": 10324, "name": "Bob's purple shirt"},
+                {"id": 10366, "name": "Amulet of magic (t)"},
+                {"id": 10392, "name": "A powdered wig"},
+                {"id": 10394, "name": "Flared trousers"},
+                {"id": 10396, "name": "Pantaloons"},
+                {"id": 10398, "name": "Sleeping cap"},
+                {"id": 10404, "name": "Red elegant shirt"},
+                {"id": 10406, "name": "Red elegant legs"},
+                {"id": 10408, "name": "Blue elegant shirt"},
+                {"id": 10410, "name": "Blue elegant legs"},
+                {"id": 10412, "name": "Green elegant shirt"},
+                {"id": 10414, "name": "Green elegant legs"},
+                {"id": 10424, "name": "Red elegant blouse"},
+                {"id": 10426, "name": "Red elegant skirt"},
+                {"id": 10428, "name": "Blue elegant blouse"},
+                {"id": 10430, "name": "Blue elegant skirt"},
+                {"id": 10432, "name": "Green elegant blouse"},
+                {"id": 10434, "name": "Green elegant skirt"},
+                {"id": 10458, "name": "Saradomin robe top"},
+                {"id": 10460, "name": "Zamorak robe top"},
+                {"id": 10462, "name": "Guthix robe top"},
+                {"id": 10464, "name": "Saradomin robe legs"},
+                {"id": 10466, "name": "Guthix robe legs"},
+                {"id": 10468, "name": "Zamorak robe legs"},
+                {"id": 12193, "name": "Ancient robe top"},
+                {"id": 12195, "name": "Ancient robe legs"},
+                {"id": 12205, "name": "Bronze platebody (g)"},
+                {"id": 12207, "name": "Bronze platelegs (g)"},
+                {"id": 12209, "name": "Bronze plateskirt (g)"},
+                {"id": 12211, "name": "Bronze full helm (g)"},
+                {"id": 12213, "name": "Bronze kiteshield (g)"},
+                {"id": 12215, "name": "Bronze platebody (t)"},
+                {"id": 12217, "name": "Bronze platelegs (t)"},
+                {"id": 12219, "name": "Bronze plateskirt (t)"},
+                {"id": 12221, "name": "Bronze full helm (t)"},
+                {"id": 12223, "name": "Bronze kiteshield (t)"},
+                {"id": 12225, "name": "Iron platebody (t)"},
+                {"id": 12227, "name": "Iron platelegs (t)"},
+                {"id": 12229, "name": "Iron plateskirt (t)"},
+                {"id": 12231, "name": "Iron full helm (t)"},
+                {"id": 12233, "name": "Iron kiteshield (t)"},
+                {"id": 12235, "name": "Iron platebody (g)"},
+                {"id": 12237, "name": "Iron platelegs (g)"},
+                {"id": 12239, "name": "Iron plateskirt (g)"},
+                {"id": 12241, "name": "Iron full helm (g)"},
+                {"id": 12243, "name": "Iron kiteshield (g)"},
+                {"id": 12245, "name": "Beanie"},
+                {"id": 12247, "name": "Red beret"},
+                {"id": 12249, "name": "Imp mask"},
+                {"id": 12251, "name": "Goblin mask"},
+                {"id": 12253, "name": "Armadyl robe top"},
+                {"id": 12255, "name": "Armadyl robe legs"},
+                {"id": 12265, "name": "Bandos robe top"},
+                {"id": 12267, "name": "Bandos robe legs"},
+                {"id": 12297, "name": "Black pickaxe"},
+                {"id": 12375, "name": "Black cane"},
+                {"id": 12445, "name": "Black skirt (g)"},
+                {"id": 12447, "name": "Black skirt (t)"},
+                {"id": 12449, "name": "Black wizard robe (g)"},
+                {"id": 12451, "name": "Black wizard robe (t)"},
+                {"id": 12453, "name": "Black wizard hat (g)"},
+                {"id": 12455, "name": "Black wizard hat (t)"},
+                {"id": 20166, "name": "Wooden shield (g)"},
+                {"id": 20169, "name": "Steel platebody (g)"},
+                {"id": 20172, "name": "Steel platelegs (g)"},
+                {"id": 20175, "name": "Steel plateskirt (g)"},
+                {"id": 20178, "name": "Steel full helm (g)"},
+                {"id": 20181, "name": "Steel kiteshield (g)"},
+                {"id": 20184, "name": "Steel platebody (t)"},
+                {"id": 20187, "name": "Steel platelegs (t)"},
+                {"id": 20190, "name": "Steel plateskirt (t)"},
+                {"id": 20193, "name": "Steel full helm (t)"},
+                {"id": 20196, "name": "Steel kiteshield (t)"},
+                {"id": 20199, "name": "Monk's robe top (g)"},
+                {"id": 20202, "name": "Monk's robe (g)"},
+                {"id": 20205, "name": "Golden chef's hat"},
+                {"id": 20208, "name": "Golden apron"},
+                {"id": 20211, "name": "Team cape zero"},
+                {"id": 20214, "name": "Team cape x"},
+                {"id": 20217, "name": "Team cape i"},
+                {"id": 23351, "name": "Cape of skulls"},
+                {"id": 23354, "name": "Amulet of power (t)"},
+                {"id": 23357, "name": "Rain bow"},
+                {"id": 23360, "name": "Ham joint"},
+                {"id": 23363, "name": "Staff of bob the cat"},
+                {"id": 23366, "name": "Black platebody (h1)"},
+                {"id": 23369, "name": "Black platebody (h2)"},
+                {"id": 23372, "name": "Black platebody (h3)"},
+                {"id": 23375, "name": "Black platebody (h4)"},
+                {"id": 23378, "name": "Black platebody (h5)"},
+                {"id": 23381, "name": "Leather body (g)"},
+                {"id": 23384, "name": "Leather chaps (g)"}
             ],
             "logCount": 15
         }
@@ -206,9 +654,139 @@
         "assetImage": "Clue_scroll_easy.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Easy Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "easy_treasure_trails",
+            "include": [
+                {"id": 2583, "name": "Black platebody (t)"},
+                {"id": 2585, "name": "Black platelegs (t)"},
+                {"id": 2587, "name": "Black full helm (t)"},
+                {"id": 2589, "name": "Black kiteshield (t)"},
+                {"id": 2591, "name": "Black platebody (g)"},
+                {"id": 2593, "name": "Black platelegs (g)"},
+                {"id": 2595, "name": "Black full helm (g)"},
+                {"id": 2597, "name": "Black kiteshield (g)"},
+                {"id": 2631, "name": "Highwayman mask"},
+                {"id": 2633, "name": "Blue beret"},
+                {"id": 2635, "name": "Black beret"},
+                {"id": 2637, "name": "White beret"},
+                {"id": 3472, "name": "Black plateskirt (t)"},
+                {"id": 3473, "name": "Black plateskirt (g)"},
+                {"id": 7332, "name": "Black shield (h1)"},
+                {"id": 7338, "name": "Black shield (h2)"},
+                {"id": 7344, "name": "Black shield (h3)"},
+                {"id": 7350, "name": "Black shield (h4)"},
+                {"id": 7356, "name": "Black shield (h5)"},
+                {"id": 7362, "name": "Studded body (g)"},
+                {"id": 7364, "name": "Studded body (t)"},
+                {"id": 7366, "name": "Studded chaps (g)"},
+                {"id": 7368, "name": "Studded chaps (t)"},
+                {"id": 7386, "name": "Blue skirt (g)"},
+                {"id": 7388, "name": "Blue skirt (t)"},
+                {"id": 7390, "name": "Blue wizard robe (g)"},
+                {"id": 7392, "name": "Blue wizard robe (t)"},
+                {"id": 7394, "name": "Blue wizard hat (g)"},
+                {"id": 7396, "name": "Blue wizard hat (t)"},
+                {"id": 10280, "name": "Willow comp bow"},
+                {"id": 10306, "name": "Black helm (h1)"},
+                {"id": 10308, "name": "Black helm (h2)"},
+                {"id": 10310, "name": "Black helm (h3)"},
+                {"id": 10312, "name": "Black helm (h4)"},
+                {"id": 10314, "name": "Black helm (h5)"},
+                {"id": 10316, "name": "Bob's red shirt"},
+                {"id": 10318, "name": "Bob's blue shirt"},
+                {"id": 10320, "name": "Bob's green shirt"},
+                {"id": 10322, "name": "Bob's black shirt"},
+                {"id": 10324, "name": "Bob's purple shirt"},
+                {"id": 10366, "name": "Amulet of magic (t)"},
+                {"id": 10392, "name": "A powdered wig"},
+                {"id": 10394, "name": "Flared trousers"},
+                {"id": 10396, "name": "Pantaloons"},
+                {"id": 10398, "name": "Sleeping cap"},
+                {"id": 10404, "name": "Red elegant shirt"},
+                {"id": 10406, "name": "Red elegant legs"},
+                {"id": 10408, "name": "Blue elegant shirt"},
+                {"id": 10410, "name": "Blue elegant legs"},
+                {"id": 10412, "name": "Green elegant shirt"},
+                {"id": 10414, "name": "Green elegant legs"},
+                {"id": 10424, "name": "Red elegant blouse"},
+                {"id": 10426, "name": "Red elegant skirt"},
+                {"id": 10428, "name": "Blue elegant blouse"},
+                {"id": 10430, "name": "Blue elegant skirt"},
+                {"id": 10432, "name": "Green elegant blouse"},
+                {"id": 10434, "name": "Green elegant skirt"},
+                {"id": 10458, "name": "Saradomin robe top"},
+                {"id": 10460, "name": "Zamorak robe top"},
+                {"id": 10462, "name": "Guthix robe top"},
+                {"id": 10464, "name": "Saradomin robe legs"},
+                {"id": 10466, "name": "Guthix robe legs"},
+                {"id": 10468, "name": "Zamorak robe legs"},
+                {"id": 12193, "name": "Ancient robe top"},
+                {"id": 12195, "name": "Ancient robe legs"},
+                {"id": 12205, "name": "Bronze platebody (g)"},
+                {"id": 12207, "name": "Bronze platelegs (g)"},
+                {"id": 12209, "name": "Bronze plateskirt (g)"},
+                {"id": 12211, "name": "Bronze full helm (g)"},
+                {"id": 12213, "name": "Bronze kiteshield (g)"},
+                {"id": 12215, "name": "Bronze platebody (t)"},
+                {"id": 12217, "name": "Bronze platelegs (t)"},
+                {"id": 12219, "name": "Bronze plateskirt (t)"},
+                {"id": 12221, "name": "Bronze full helm (t)"},
+                {"id": 12223, "name": "Bronze kiteshield (t)"},
+                {"id": 12225, "name": "Iron platebody (t)"},
+                {"id": 12227, "name": "Iron platelegs (t)"},
+                {"id": 12229, "name": "Iron plateskirt (t)"},
+                {"id": 12231, "name": "Iron full helm (t)"},
+                {"id": 12233, "name": "Iron kiteshield (t)"},
+                {"id": 12235, "name": "Iron platebody (g)"},
+                {"id": 12237, "name": "Iron platelegs (g)"},
+                {"id": 12239, "name": "Iron plateskirt (g)"},
+                {"id": 12241, "name": "Iron full helm (g)"},
+                {"id": 12243, "name": "Iron kiteshield (g)"},
+                {"id": 12245, "name": "Beanie"},
+                {"id": 12247, "name": "Red beret"},
+                {"id": 12249, "name": "Imp mask"},
+                {"id": 12251, "name": "Goblin mask"},
+                {"id": 12253, "name": "Armadyl robe top"},
+                {"id": 12255, "name": "Armadyl robe legs"},
+                {"id": 12265, "name": "Bandos robe top"},
+                {"id": 12267, "name": "Bandos robe legs"},
+                {"id": 12297, "name": "Black pickaxe"},
+                {"id": 12375, "name": "Black cane"},
+                {"id": 12445, "name": "Black skirt (g)"},
+                {"id": 12447, "name": "Black skirt (t)"},
+                {"id": 12449, "name": "Black wizard robe (g)"},
+                {"id": 12451, "name": "Black wizard robe (t)"},
+                {"id": 12453, "name": "Black wizard hat (g)"},
+                {"id": 12455, "name": "Black wizard hat (t)"},
+                {"id": 20166, "name": "Wooden shield (g)"},
+                {"id": 20169, "name": "Steel platebody (g)"},
+                {"id": 20172, "name": "Steel platelegs (g)"},
+                {"id": 20175, "name": "Steel plateskirt (g)"},
+                {"id": 20178, "name": "Steel full helm (g)"},
+                {"id": 20181, "name": "Steel kiteshield (g)"},
+                {"id": 20184, "name": "Steel platebody (t)"},
+                {"id": 20187, "name": "Steel platelegs (t)"},
+                {"id": 20190, "name": "Steel plateskirt (t)"},
+                {"id": 20193, "name": "Steel full helm (t)"},
+                {"id": 20196, "name": "Steel kiteshield (t)"},
+                {"id": 20199, "name": "Monk's robe top (g)"},
+                {"id": 20202, "name": "Monk's robe (g)"},
+                {"id": 20205, "name": "Golden chef's hat"},
+                {"id": 20208, "name": "Golden apron"},
+                {"id": 20211, "name": "Team cape zero"},
+                {"id": 20214, "name": "Team cape x"},
+                {"id": 20217, "name": "Team cape i"},
+                {"id": 23351, "name": "Cape of skulls"},
+                {"id": 23354, "name": "Amulet of power (t)"},
+                {"id": 23357, "name": "Rain bow"},
+                {"id": 23360, "name": "Ham joint"},
+                {"id": 23363, "name": "Staff of bob the cat"},
+                {"id": 23366, "name": "Black platebody (h1)"},
+                {"id": 23369, "name": "Black platebody (h2)"},
+                {"id": 23372, "name": "Black platebody (h3)"},
+                {"id": 23375, "name": "Black platebody (h4)"},
+                {"id": 23378, "name": "Black platebody (h5)"},
+                {"id": 23381, "name": "Leather body (g)"},
+                {"id": 23384, "name": "Leather chaps (g)"}
             ],
             "logCount": 20
         }
@@ -222,9 +800,139 @@
         "assetImage": "Clue_scroll_easy.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Easy Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "easy_treasure_trails",
+            "include": [
+                {"id": 2583, "name": "Black platebody (t)"},
+                {"id": 2585, "name": "Black platelegs (t)"},
+                {"id": 2587, "name": "Black full helm (t)"},
+                {"id": 2589, "name": "Black kiteshield (t)"},
+                {"id": 2591, "name": "Black platebody (g)"},
+                {"id": 2593, "name": "Black platelegs (g)"},
+                {"id": 2595, "name": "Black full helm (g)"},
+                {"id": 2597, "name": "Black kiteshield (g)"},
+                {"id": 2631, "name": "Highwayman mask"},
+                {"id": 2633, "name": "Blue beret"},
+                {"id": 2635, "name": "Black beret"},
+                {"id": 2637, "name": "White beret"},
+                {"id": 3472, "name": "Black plateskirt (t)"},
+                {"id": 3473, "name": "Black plateskirt (g)"},
+                {"id": 7332, "name": "Black shield (h1)"},
+                {"id": 7338, "name": "Black shield (h2)"},
+                {"id": 7344, "name": "Black shield (h3)"},
+                {"id": 7350, "name": "Black shield (h4)"},
+                {"id": 7356, "name": "Black shield (h5)"},
+                {"id": 7362, "name": "Studded body (g)"},
+                {"id": 7364, "name": "Studded body (t)"},
+                {"id": 7366, "name": "Studded chaps (g)"},
+                {"id": 7368, "name": "Studded chaps (t)"},
+                {"id": 7386, "name": "Blue skirt (g)"},
+                {"id": 7388, "name": "Blue skirt (t)"},
+                {"id": 7390, "name": "Blue wizard robe (g)"},
+                {"id": 7392, "name": "Blue wizard robe (t)"},
+                {"id": 7394, "name": "Blue wizard hat (g)"},
+                {"id": 7396, "name": "Blue wizard hat (t)"},
+                {"id": 10280, "name": "Willow comp bow"},
+                {"id": 10306, "name": "Black helm (h1)"},
+                {"id": 10308, "name": "Black helm (h2)"},
+                {"id": 10310, "name": "Black helm (h3)"},
+                {"id": 10312, "name": "Black helm (h4)"},
+                {"id": 10314, "name": "Black helm (h5)"},
+                {"id": 10316, "name": "Bob's red shirt"},
+                {"id": 10318, "name": "Bob's blue shirt"},
+                {"id": 10320, "name": "Bob's green shirt"},
+                {"id": 10322, "name": "Bob's black shirt"},
+                {"id": 10324, "name": "Bob's purple shirt"},
+                {"id": 10366, "name": "Amulet of magic (t)"},
+                {"id": 10392, "name": "A powdered wig"},
+                {"id": 10394, "name": "Flared trousers"},
+                {"id": 10396, "name": "Pantaloons"},
+                {"id": 10398, "name": "Sleeping cap"},
+                {"id": 10404, "name": "Red elegant shirt"},
+                {"id": 10406, "name": "Red elegant legs"},
+                {"id": 10408, "name": "Blue elegant shirt"},
+                {"id": 10410, "name": "Blue elegant legs"},
+                {"id": 10412, "name": "Green elegant shirt"},
+                {"id": 10414, "name": "Green elegant legs"},
+                {"id": 10424, "name": "Red elegant blouse"},
+                {"id": 10426, "name": "Red elegant skirt"},
+                {"id": 10428, "name": "Blue elegant blouse"},
+                {"id": 10430, "name": "Blue elegant skirt"},
+                {"id": 10432, "name": "Green elegant blouse"},
+                {"id": 10434, "name": "Green elegant skirt"},
+                {"id": 10458, "name": "Saradomin robe top"},
+                {"id": 10460, "name": "Zamorak robe top"},
+                {"id": 10462, "name": "Guthix robe top"},
+                {"id": 10464, "name": "Saradomin robe legs"},
+                {"id": 10466, "name": "Guthix robe legs"},
+                {"id": 10468, "name": "Zamorak robe legs"},
+                {"id": 12193, "name": "Ancient robe top"},
+                {"id": 12195, "name": "Ancient robe legs"},
+                {"id": 12205, "name": "Bronze platebody (g)"},
+                {"id": 12207, "name": "Bronze platelegs (g)"},
+                {"id": 12209, "name": "Bronze plateskirt (g)"},
+                {"id": 12211, "name": "Bronze full helm (g)"},
+                {"id": 12213, "name": "Bronze kiteshield (g)"},
+                {"id": 12215, "name": "Bronze platebody (t)"},
+                {"id": 12217, "name": "Bronze platelegs (t)"},
+                {"id": 12219, "name": "Bronze plateskirt (t)"},
+                {"id": 12221, "name": "Bronze full helm (t)"},
+                {"id": 12223, "name": "Bronze kiteshield (t)"},
+                {"id": 12225, "name": "Iron platebody (t)"},
+                {"id": 12227, "name": "Iron platelegs (t)"},
+                {"id": 12229, "name": "Iron plateskirt (t)"},
+                {"id": 12231, "name": "Iron full helm (t)"},
+                {"id": 12233, "name": "Iron kiteshield (t)"},
+                {"id": 12235, "name": "Iron platebody (g)"},
+                {"id": 12237, "name": "Iron platelegs (g)"},
+                {"id": 12239, "name": "Iron plateskirt (g)"},
+                {"id": 12241, "name": "Iron full helm (g)"},
+                {"id": 12243, "name": "Iron kiteshield (g)"},
+                {"id": 12245, "name": "Beanie"},
+                {"id": 12247, "name": "Red beret"},
+                {"id": 12249, "name": "Imp mask"},
+                {"id": 12251, "name": "Goblin mask"},
+                {"id": 12253, "name": "Armadyl robe top"},
+                {"id": 12255, "name": "Armadyl robe legs"},
+                {"id": 12265, "name": "Bandos robe top"},
+                {"id": 12267, "name": "Bandos robe legs"},
+                {"id": 12297, "name": "Black pickaxe"},
+                {"id": 12375, "name": "Black cane"},
+                {"id": 12445, "name": "Black skirt (g)"},
+                {"id": 12447, "name": "Black skirt (t)"},
+                {"id": 12449, "name": "Black wizard robe (g)"},
+                {"id": 12451, "name": "Black wizard robe (t)"},
+                {"id": 12453, "name": "Black wizard hat (g)"},
+                {"id": 12455, "name": "Black wizard hat (t)"},
+                {"id": 20166, "name": "Wooden shield (g)"},
+                {"id": 20169, "name": "Steel platebody (g)"},
+                {"id": 20172, "name": "Steel platelegs (g)"},
+                {"id": 20175, "name": "Steel plateskirt (g)"},
+                {"id": 20178, "name": "Steel full helm (g)"},
+                {"id": 20181, "name": "Steel kiteshield (g)"},
+                {"id": 20184, "name": "Steel platebody (t)"},
+                {"id": 20187, "name": "Steel platelegs (t)"},
+                {"id": 20190, "name": "Steel plateskirt (t)"},
+                {"id": 20193, "name": "Steel full helm (t)"},
+                {"id": 20196, "name": "Steel kiteshield (t)"},
+                {"id": 20199, "name": "Monk's robe top (g)"},
+                {"id": 20202, "name": "Monk's robe (g)"},
+                {"id": 20205, "name": "Golden chef's hat"},
+                {"id": 20208, "name": "Golden apron"},
+                {"id": 20211, "name": "Team cape zero"},
+                {"id": 20214, "name": "Team cape x"},
+                {"id": 20217, "name": "Team cape i"},
+                {"id": 23351, "name": "Cape of skulls"},
+                {"id": 23354, "name": "Amulet of power (t)"},
+                {"id": 23357, "name": "Rain bow"},
+                {"id": 23360, "name": "Ham joint"},
+                {"id": 23363, "name": "Staff of bob the cat"},
+                {"id": 23366, "name": "Black platebody (h1)"},
+                {"id": 23369, "name": "Black platebody (h2)"},
+                {"id": 23372, "name": "Black platebody (h3)"},
+                {"id": 23375, "name": "Black platebody (h4)"},
+                {"id": 23378, "name": "Black platebody (h5)"},
+                {"id": 23381, "name": "Leather body (g)"},
+                {"id": 23384, "name": "Leather chaps (g)"}
             ],
             "logCount": 25
         }
@@ -238,9 +946,139 @@
         "assetImage": "Clue_scroll_easy.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Easy Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "easy_treasure_trails",
+            "include": [
+                {"id": 2583, "name": "Black platebody (t)"},
+                {"id": 2585, "name": "Black platelegs (t)"},
+                {"id": 2587, "name": "Black full helm (t)"},
+                {"id": 2589, "name": "Black kiteshield (t)"},
+                {"id": 2591, "name": "Black platebody (g)"},
+                {"id": 2593, "name": "Black platelegs (g)"},
+                {"id": 2595, "name": "Black full helm (g)"},
+                {"id": 2597, "name": "Black kiteshield (g)"},
+                {"id": 2631, "name": "Highwayman mask"},
+                {"id": 2633, "name": "Blue beret"},
+                {"id": 2635, "name": "Black beret"},
+                {"id": 2637, "name": "White beret"},
+                {"id": 3472, "name": "Black plateskirt (t)"},
+                {"id": 3473, "name": "Black plateskirt (g)"},
+                {"id": 7332, "name": "Black shield (h1)"},
+                {"id": 7338, "name": "Black shield (h2)"},
+                {"id": 7344, "name": "Black shield (h3)"},
+                {"id": 7350, "name": "Black shield (h4)"},
+                {"id": 7356, "name": "Black shield (h5)"},
+                {"id": 7362, "name": "Studded body (g)"},
+                {"id": 7364, "name": "Studded body (t)"},
+                {"id": 7366, "name": "Studded chaps (g)"},
+                {"id": 7368, "name": "Studded chaps (t)"},
+                {"id": 7386, "name": "Blue skirt (g)"},
+                {"id": 7388, "name": "Blue skirt (t)"},
+                {"id": 7390, "name": "Blue wizard robe (g)"},
+                {"id": 7392, "name": "Blue wizard robe (t)"},
+                {"id": 7394, "name": "Blue wizard hat (g)"},
+                {"id": 7396, "name": "Blue wizard hat (t)"},
+                {"id": 10280, "name": "Willow comp bow"},
+                {"id": 10306, "name": "Black helm (h1)"},
+                {"id": 10308, "name": "Black helm (h2)"},
+                {"id": 10310, "name": "Black helm (h3)"},
+                {"id": 10312, "name": "Black helm (h4)"},
+                {"id": 10314, "name": "Black helm (h5)"},
+                {"id": 10316, "name": "Bob's red shirt"},
+                {"id": 10318, "name": "Bob's blue shirt"},
+                {"id": 10320, "name": "Bob's green shirt"},
+                {"id": 10322, "name": "Bob's black shirt"},
+                {"id": 10324, "name": "Bob's purple shirt"},
+                {"id": 10366, "name": "Amulet of magic (t)"},
+                {"id": 10392, "name": "A powdered wig"},
+                {"id": 10394, "name": "Flared trousers"},
+                {"id": 10396, "name": "Pantaloons"},
+                {"id": 10398, "name": "Sleeping cap"},
+                {"id": 10404, "name": "Red elegant shirt"},
+                {"id": 10406, "name": "Red elegant legs"},
+                {"id": 10408, "name": "Blue elegant shirt"},
+                {"id": 10410, "name": "Blue elegant legs"},
+                {"id": 10412, "name": "Green elegant shirt"},
+                {"id": 10414, "name": "Green elegant legs"},
+                {"id": 10424, "name": "Red elegant blouse"},
+                {"id": 10426, "name": "Red elegant skirt"},
+                {"id": 10428, "name": "Blue elegant blouse"},
+                {"id": 10430, "name": "Blue elegant skirt"},
+                {"id": 10432, "name": "Green elegant blouse"},
+                {"id": 10434, "name": "Green elegant skirt"},
+                {"id": 10458, "name": "Saradomin robe top"},
+                {"id": 10460, "name": "Zamorak robe top"},
+                {"id": 10462, "name": "Guthix robe top"},
+                {"id": 10464, "name": "Saradomin robe legs"},
+                {"id": 10466, "name": "Guthix robe legs"},
+                {"id": 10468, "name": "Zamorak robe legs"},
+                {"id": 12193, "name": "Ancient robe top"},
+                {"id": 12195, "name": "Ancient robe legs"},
+                {"id": 12205, "name": "Bronze platebody (g)"},
+                {"id": 12207, "name": "Bronze platelegs (g)"},
+                {"id": 12209, "name": "Bronze plateskirt (g)"},
+                {"id": 12211, "name": "Bronze full helm (g)"},
+                {"id": 12213, "name": "Bronze kiteshield (g)"},
+                {"id": 12215, "name": "Bronze platebody (t)"},
+                {"id": 12217, "name": "Bronze platelegs (t)"},
+                {"id": 12219, "name": "Bronze plateskirt (t)"},
+                {"id": 12221, "name": "Bronze full helm (t)"},
+                {"id": 12223, "name": "Bronze kiteshield (t)"},
+                {"id": 12225, "name": "Iron platebody (t)"},
+                {"id": 12227, "name": "Iron platelegs (t)"},
+                {"id": 12229, "name": "Iron plateskirt (t)"},
+                {"id": 12231, "name": "Iron full helm (t)"},
+                {"id": 12233, "name": "Iron kiteshield (t)"},
+                {"id": 12235, "name": "Iron platebody (g)"},
+                {"id": 12237, "name": "Iron platelegs (g)"},
+                {"id": 12239, "name": "Iron plateskirt (g)"},
+                {"id": 12241, "name": "Iron full helm (g)"},
+                {"id": 12243, "name": "Iron kiteshield (g)"},
+                {"id": 12245, "name": "Beanie"},
+                {"id": 12247, "name": "Red beret"},
+                {"id": 12249, "name": "Imp mask"},
+                {"id": 12251, "name": "Goblin mask"},
+                {"id": 12253, "name": "Armadyl robe top"},
+                {"id": 12255, "name": "Armadyl robe legs"},
+                {"id": 12265, "name": "Bandos robe top"},
+                {"id": 12267, "name": "Bandos robe legs"},
+                {"id": 12297, "name": "Black pickaxe"},
+                {"id": 12375, "name": "Black cane"},
+                {"id": 12445, "name": "Black skirt (g)"},
+                {"id": 12447, "name": "Black skirt (t)"},
+                {"id": 12449, "name": "Black wizard robe (g)"},
+                {"id": 12451, "name": "Black wizard robe (t)"},
+                {"id": 12453, "name": "Black wizard hat (g)"},
+                {"id": 12455, "name": "Black wizard hat (t)"},
+                {"id": 20166, "name": "Wooden shield (g)"},
+                {"id": 20169, "name": "Steel platebody (g)"},
+                {"id": 20172, "name": "Steel platelegs (g)"},
+                {"id": 20175, "name": "Steel plateskirt (g)"},
+                {"id": 20178, "name": "Steel full helm (g)"},
+                {"id": 20181, "name": "Steel kiteshield (g)"},
+                {"id": 20184, "name": "Steel platebody (t)"},
+                {"id": 20187, "name": "Steel platelegs (t)"},
+                {"id": 20190, "name": "Steel plateskirt (t)"},
+                {"id": 20193, "name": "Steel full helm (t)"},
+                {"id": 20196, "name": "Steel kiteshield (t)"},
+                {"id": 20199, "name": "Monk's robe top (g)"},
+                {"id": 20202, "name": "Monk's robe (g)"},
+                {"id": 20205, "name": "Golden chef's hat"},
+                {"id": 20208, "name": "Golden apron"},
+                {"id": 20211, "name": "Team cape zero"},
+                {"id": 20214, "name": "Team cape x"},
+                {"id": 20217, "name": "Team cape i"},
+                {"id": 23351, "name": "Cape of skulls"},
+                {"id": 23354, "name": "Amulet of power (t)"},
+                {"id": 23357, "name": "Rain bow"},
+                {"id": 23360, "name": "Ham joint"},
+                {"id": 23363, "name": "Staff of bob the cat"},
+                {"id": 23366, "name": "Black platebody (h1)"},
+                {"id": 23369, "name": "Black platebody (h2)"},
+                {"id": 23372, "name": "Black platebody (h3)"},
+                {"id": 23375, "name": "Black platebody (h4)"},
+                {"id": 23378, "name": "Black platebody (h5)"},
+                {"id": 23381, "name": "Leather body (g)"},
+                {"id": 23384, "name": "Leather chaps (g)"}
             ],
             "logCount": 30
         }
@@ -254,9 +1092,123 @@
         "assetImage": "Clue_scroll_medium.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Medium Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "medium_treasure_trails",
+            "include": [
+                {"id": 2577, "name": "Ranger boots"},
+                {"id": 2579, "name": "Wizard boots"},
+                {"id": 2599, "name": "Adamant platebody (t)"},
+                {"id": 2601, "name": "Adamant platelegs (t)"},
+                {"id": 2603, "name": "Adamant kiteshield (t)"},
+                {"id": 2605, "name": "Adamant full helm (t)"},
+                {"id": 2607, "name": "Adamant platebody (g)"},
+                {"id": 2609, "name": "Adamant platelegs (g)"},
+                {"id": 2611, "name": "Adamant kiteshield (g)"},
+                {"id": 2613, "name": "Adamant full helm (g)"},
+                {"id": 2645, "name": "Red headband"},
+                {"id": 2647, "name": "Black headband"},
+                {"id": 2649, "name": "Brown headband"},
+                {"id": 3474, "name": "Adamant plateskirt (t)"},
+                {"id": 3475, "name": "Adamant plateskirt (g)"},
+                {"id": 7319, "name": "Red boater"},
+                {"id": 7321, "name": "Orange boater"},
+                {"id": 7323, "name": "Green boater"},
+                {"id": 7325, "name": "Blue boater"},
+                {"id": 7327, "name": "Black boater"},
+                {"id": 7334, "name": "Adamant shield (h1)"},
+                {"id": 7340, "name": "Adamant shield (h2)"},
+                {"id": 7346, "name": "Adamant shield (h3)"},
+                {"id": 7352, "name": "Adamant shield (h4)"},
+                {"id": 7358, "name": "Adamant shield (h5)"},
+                {"id": 7370, "name": "Green d'hide body (g)"},
+                {"id": 7372, "name": "Green d'hide body (t)"},
+                {"id": 7378, "name": "Green d'hide chaps (g)"},
+                {"id": 7380, "name": "Green d'hide chaps (t)"},
+                {"id": 10282, "name": "Yew comp bow"},
+                {"id": 10296, "name": "Adamant helm (h1)"},
+                {"id": 10298, "name": "Adamant helm (h2)"},
+                {"id": 10300, "name": "Adamant helm (h3)"},
+                {"id": 10302, "name": "Adamant helm (h4)"},
+                {"id": 10304, "name": "Adamant helm (h5)"},
+                {"id": 10364, "name": "Strength amulet (t)"},
+                {"id": 10400, "name": "Black elegant shirt"},
+                {"id": 10402, "name": "Black elegant legs"},
+                {"id": 10416, "name": "Purple elegant shirt"},
+                {"id": 10418, "name": "Purple elegant legs"},
+                {"id": 10420, "name": "White elegant blouse"},
+                {"id": 10422, "name": "White elegant skirt"},
+                {"id": 10436, "name": "Purple elegant blouse"},
+                {"id": 10438, "name": "Purple elegant skirt"},
+                {"id": 10446, "name": "Saradomin cloak"},
+                {"id": 10448, "name": "Guthix cloak"},
+                {"id": 10450, "name": "Zamorak cloak"},
+                {"id": 10452, "name": "Saradomin mitre"},
+                {"id": 10454, "name": "Guthix mitre"},
+                {"id": 10456, "name": "Zamorak mitre"},
+                {"id": 12197, "name": "Ancient cloak"},
+                {"id": 12199, "name": "Ancient crozier"},
+                {"id": 12201, "name": "Ancient stole"},
+                {"id": 12203, "name": "Ancient mitre"},
+                {"id": 12257, "name": "Armadyl stole"},
+                {"id": 12259, "name": "Armadyl mitre"},
+                {"id": 12261, "name": "Armadyl cloak"},
+                {"id": 12263, "name": "Armadyl crozier"},
+                {"id": 12269, "name": "Bandos stole"},
+                {"id": 12271, "name": "Bandos mitre"},
+                {"id": 12273, "name": "Bandos cloak"},
+                {"id": 12275, "name": "Bandos crozier"},
+                {"id": 12277, "name": "Mithril platebody (g)"},
+                {"id": 12279, "name": "Mithril platelegs (g)"},
+                {"id": 12281, "name": "Mithril kiteshield (g)"},
+                {"id": 12283, "name": "Mithril full helm (g)"},
+                {"id": 12285, "name": "Mithril plateskirt (g)"},
+                {"id": 12287, "name": "Mithril platebody (t)"},
+                {"id": 12289, "name": "Mithril platelegs (t)"},
+                {"id": 12291, "name": "Mithril kiteshield (t)"},
+                {"id": 12293, "name": "Mithril full helm (t)"},
+                {"id": 12295, "name": "Mithril plateskirt (t)"},
+                {"id": 12299, "name": "White headband"},
+                {"id": 12301, "name": "Blue headband"},
+                {"id": 12303, "name": "Gold headband"},
+                {"id": 12305, "name": "Pink headband"},
+                {"id": 12307, "name": "Green headband"},
+                {"id": 12309, "name": "Pink boater"},
+                {"id": 12311, "name": "Purple boater"},
+                {"id": 12313, "name": "White boater"},
+                {"id": 12315, "name": "Pink elegant shirt"},
+                {"id": 12317, "name": "Pink elegant legs"},
+                {"id": 12319, "name": "Crier hat"},
+                {"id": 12339, "name": "Pink elegant blouse"},
+                {"id": 12341, "name": "Pink elegant skirt"},
+                {"id": 12343, "name": "Gold elegant blouse"},
+                {"id": 12345, "name": "Gold elegant skirt"},
+                {"id": 12347, "name": "Gold elegant shirt"},
+                {"id": 12349, "name": "Gold elegant legs"},
+                {"id": 12359, "name": "Leprechaun hat"},
+                {"id": 12361, "name": "Cat mask"},
+                {"id": 12377, "name": "Adamant cane"},
+                {"id": 12428, "name": "Penguin mask"},
+                {"id": 12598, "name": "Holy sandals"},
+                {"id": 20240, "name": "Crier coat"},
+                {"id": 20243, "name": "Crier bell"},
+                {"id": 20246, "name": "Black leprechaun hat"},
+                {"id": 20251, "name": "Arceuus banner"},
+                {"id": 20254, "name": "Hosidius banner"},
+                {"id": 20257, "name": "Lovakengj banner"},
+                {"id": 20260, "name": "Piscarilius banner"},
+                {"id": 20263, "name": "Shayzien banner"},
+                {"id": 20266, "name": "Black unicorn mask"},
+                {"id": 20269, "name": "White unicorn mask"},
+                {"id": 20272, "name": "Cabbage round shield"},
+                {"id": 20275, "name": "Gnomish firelighter"},
+                {"id": 23389, "name": "Spiked manacles"},
+                {"id": 23392, "name": "Adamant platebody (h1)"},
+                {"id": 23395, "name": "Adamant platebody (h2)"},
+                {"id": 23398, "name": "Adamant platebody (h3)"},
+                {"id": 23401, "name": "Adamant platebody (h4)"},
+                {"id": 23404, "name": "Adamant platebody (h5)"},
+                {"id": 23407, "name": "Wolf mask"},
+                {"id": 23410, "name": "Wolf cloak"},
+                {"id": 23413, "name": "Climbing boots (g)"}
             ],
             "logCount": 5
         }
@@ -270,9 +1222,123 @@
         "assetImage": "Clue_scroll_medium.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Medium Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "medium_treasure_trails",
+            "include": [
+                {"id": 2577, "name": "Ranger boots"},
+                {"id": 2579, "name": "Wizard boots"},
+                {"id": 2599, "name": "Adamant platebody (t)"},
+                {"id": 2601, "name": "Adamant platelegs (t)"},
+                {"id": 2603, "name": "Adamant kiteshield (t)"},
+                {"id": 2605, "name": "Adamant full helm (t)"},
+                {"id": 2607, "name": "Adamant platebody (g)"},
+                {"id": 2609, "name": "Adamant platelegs (g)"},
+                {"id": 2611, "name": "Adamant kiteshield (g)"},
+                {"id": 2613, "name": "Adamant full helm (g)"},
+                {"id": 2645, "name": "Red headband"},
+                {"id": 2647, "name": "Black headband"},
+                {"id": 2649, "name": "Brown headband"},
+                {"id": 3474, "name": "Adamant plateskirt (t)"},
+                {"id": 3475, "name": "Adamant plateskirt (g)"},
+                {"id": 7319, "name": "Red boater"},
+                {"id": 7321, "name": "Orange boater"},
+                {"id": 7323, "name": "Green boater"},
+                {"id": 7325, "name": "Blue boater"},
+                {"id": 7327, "name": "Black boater"},
+                {"id": 7334, "name": "Adamant shield (h1)"},
+                {"id": 7340, "name": "Adamant shield (h2)"},
+                {"id": 7346, "name": "Adamant shield (h3)"},
+                {"id": 7352, "name": "Adamant shield (h4)"},
+                {"id": 7358, "name": "Adamant shield (h5)"},
+                {"id": 7370, "name": "Green d'hide body (g)"},
+                {"id": 7372, "name": "Green d'hide body (t)"},
+                {"id": 7378, "name": "Green d'hide chaps (g)"},
+                {"id": 7380, "name": "Green d'hide chaps (t)"},
+                {"id": 10282, "name": "Yew comp bow"},
+                {"id": 10296, "name": "Adamant helm (h1)"},
+                {"id": 10298, "name": "Adamant helm (h2)"},
+                {"id": 10300, "name": "Adamant helm (h3)"},
+                {"id": 10302, "name": "Adamant helm (h4)"},
+                {"id": 10304, "name": "Adamant helm (h5)"},
+                {"id": 10364, "name": "Strength amulet (t)"},
+                {"id": 10400, "name": "Black elegant shirt"},
+                {"id": 10402, "name": "Black elegant legs"},
+                {"id": 10416, "name": "Purple elegant shirt"},
+                {"id": 10418, "name": "Purple elegant legs"},
+                {"id": 10420, "name": "White elegant blouse"},
+                {"id": 10422, "name": "White elegant skirt"},
+                {"id": 10436, "name": "Purple elegant blouse"},
+                {"id": 10438, "name": "Purple elegant skirt"},
+                {"id": 10446, "name": "Saradomin cloak"},
+                {"id": 10448, "name": "Guthix cloak"},
+                {"id": 10450, "name": "Zamorak cloak"},
+                {"id": 10452, "name": "Saradomin mitre"},
+                {"id": 10454, "name": "Guthix mitre"},
+                {"id": 10456, "name": "Zamorak mitre"},
+                {"id": 12197, "name": "Ancient cloak"},
+                {"id": 12199, "name": "Ancient crozier"},
+                {"id": 12201, "name": "Ancient stole"},
+                {"id": 12203, "name": "Ancient mitre"},
+                {"id": 12257, "name": "Armadyl stole"},
+                {"id": 12259, "name": "Armadyl mitre"},
+                {"id": 12261, "name": "Armadyl cloak"},
+                {"id": 12263, "name": "Armadyl crozier"},
+                {"id": 12269, "name": "Bandos stole"},
+                {"id": 12271, "name": "Bandos mitre"},
+                {"id": 12273, "name": "Bandos cloak"},
+                {"id": 12275, "name": "Bandos crozier"},
+                {"id": 12277, "name": "Mithril platebody (g)"},
+                {"id": 12279, "name": "Mithril platelegs (g)"},
+                {"id": 12281, "name": "Mithril kiteshield (g)"},
+                {"id": 12283, "name": "Mithril full helm (g)"},
+                {"id": 12285, "name": "Mithril plateskirt (g)"},
+                {"id": 12287, "name": "Mithril platebody (t)"},
+                {"id": 12289, "name": "Mithril platelegs (t)"},
+                {"id": 12291, "name": "Mithril kiteshield (t)"},
+                {"id": 12293, "name": "Mithril full helm (t)"},
+                {"id": 12295, "name": "Mithril plateskirt (t)"},
+                {"id": 12299, "name": "White headband"},
+                {"id": 12301, "name": "Blue headband"},
+                {"id": 12303, "name": "Gold headband"},
+                {"id": 12305, "name": "Pink headband"},
+                {"id": 12307, "name": "Green headband"},
+                {"id": 12309, "name": "Pink boater"},
+                {"id": 12311, "name": "Purple boater"},
+                {"id": 12313, "name": "White boater"},
+                {"id": 12315, "name": "Pink elegant shirt"},
+                {"id": 12317, "name": "Pink elegant legs"},
+                {"id": 12319, "name": "Crier hat"},
+                {"id": 12339, "name": "Pink elegant blouse"},
+                {"id": 12341, "name": "Pink elegant skirt"},
+                {"id": 12343, "name": "Gold elegant blouse"},
+                {"id": 12345, "name": "Gold elegant skirt"},
+                {"id": 12347, "name": "Gold elegant shirt"},
+                {"id": 12349, "name": "Gold elegant legs"},
+                {"id": 12359, "name": "Leprechaun hat"},
+                {"id": 12361, "name": "Cat mask"},
+                {"id": 12377, "name": "Adamant cane"},
+                {"id": 12428, "name": "Penguin mask"},
+                {"id": 12598, "name": "Holy sandals"},
+                {"id": 20240, "name": "Crier coat"},
+                {"id": 20243, "name": "Crier bell"},
+                {"id": 20246, "name": "Black leprechaun hat"},
+                {"id": 20251, "name": "Arceuus banner"},
+                {"id": 20254, "name": "Hosidius banner"},
+                {"id": 20257, "name": "Lovakengj banner"},
+                {"id": 20260, "name": "Piscarilius banner"},
+                {"id": 20263, "name": "Shayzien banner"},
+                {"id": 20266, "name": "Black unicorn mask"},
+                {"id": 20269, "name": "White unicorn mask"},
+                {"id": 20272, "name": "Cabbage round shield"},
+                {"id": 20275, "name": "Gnomish firelighter"},
+                {"id": 23389, "name": "Spiked manacles"},
+                {"id": 23392, "name": "Adamant platebody (h1)"},
+                {"id": 23395, "name": "Adamant platebody (h2)"},
+                {"id": 23398, "name": "Adamant platebody (h3)"},
+                {"id": 23401, "name": "Adamant platebody (h4)"},
+                {"id": 23404, "name": "Adamant platebody (h5)"},
+                {"id": 23407, "name": "Wolf mask"},
+                {"id": 23410, "name": "Wolf cloak"},
+                {"id": 23413, "name": "Climbing boots (g)"}
             ],
             "logCount": 10
         }
@@ -286,9 +1352,123 @@
         "assetImage": "Clue_scroll_medium.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Medium Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "medium_treasure_trails",
+            "include": [
+                {"id": 2577, "name": "Ranger boots"},
+                {"id": 2579, "name": "Wizard boots"},
+                {"id": 2599, "name": "Adamant platebody (t)"},
+                {"id": 2601, "name": "Adamant platelegs (t)"},
+                {"id": 2603, "name": "Adamant kiteshield (t)"},
+                {"id": 2605, "name": "Adamant full helm (t)"},
+                {"id": 2607, "name": "Adamant platebody (g)"},
+                {"id": 2609, "name": "Adamant platelegs (g)"},
+                {"id": 2611, "name": "Adamant kiteshield (g)"},
+                {"id": 2613, "name": "Adamant full helm (g)"},
+                {"id": 2645, "name": "Red headband"},
+                {"id": 2647, "name": "Black headband"},
+                {"id": 2649, "name": "Brown headband"},
+                {"id": 3474, "name": "Adamant plateskirt (t)"},
+                {"id": 3475, "name": "Adamant plateskirt (g)"},
+                {"id": 7319, "name": "Red boater"},
+                {"id": 7321, "name": "Orange boater"},
+                {"id": 7323, "name": "Green boater"},
+                {"id": 7325, "name": "Blue boater"},
+                {"id": 7327, "name": "Black boater"},
+                {"id": 7334, "name": "Adamant shield (h1)"},
+                {"id": 7340, "name": "Adamant shield (h2)"},
+                {"id": 7346, "name": "Adamant shield (h3)"},
+                {"id": 7352, "name": "Adamant shield (h4)"},
+                {"id": 7358, "name": "Adamant shield (h5)"},
+                {"id": 7370, "name": "Green d'hide body (g)"},
+                {"id": 7372, "name": "Green d'hide body (t)"},
+                {"id": 7378, "name": "Green d'hide chaps (g)"},
+                {"id": 7380, "name": "Green d'hide chaps (t)"},
+                {"id": 10282, "name": "Yew comp bow"},
+                {"id": 10296, "name": "Adamant helm (h1)"},
+                {"id": 10298, "name": "Adamant helm (h2)"},
+                {"id": 10300, "name": "Adamant helm (h3)"},
+                {"id": 10302, "name": "Adamant helm (h4)"},
+                {"id": 10304, "name": "Adamant helm (h5)"},
+                {"id": 10364, "name": "Strength amulet (t)"},
+                {"id": 10400, "name": "Black elegant shirt"},
+                {"id": 10402, "name": "Black elegant legs"},
+                {"id": 10416, "name": "Purple elegant shirt"},
+                {"id": 10418, "name": "Purple elegant legs"},
+                {"id": 10420, "name": "White elegant blouse"},
+                {"id": 10422, "name": "White elegant skirt"},
+                {"id": 10436, "name": "Purple elegant blouse"},
+                {"id": 10438, "name": "Purple elegant skirt"},
+                {"id": 10446, "name": "Saradomin cloak"},
+                {"id": 10448, "name": "Guthix cloak"},
+                {"id": 10450, "name": "Zamorak cloak"},
+                {"id": 10452, "name": "Saradomin mitre"},
+                {"id": 10454, "name": "Guthix mitre"},
+                {"id": 10456, "name": "Zamorak mitre"},
+                {"id": 12197, "name": "Ancient cloak"},
+                {"id": 12199, "name": "Ancient crozier"},
+                {"id": 12201, "name": "Ancient stole"},
+                {"id": 12203, "name": "Ancient mitre"},
+                {"id": 12257, "name": "Armadyl stole"},
+                {"id": 12259, "name": "Armadyl mitre"},
+                {"id": 12261, "name": "Armadyl cloak"},
+                {"id": 12263, "name": "Armadyl crozier"},
+                {"id": 12269, "name": "Bandos stole"},
+                {"id": 12271, "name": "Bandos mitre"},
+                {"id": 12273, "name": "Bandos cloak"},
+                {"id": 12275, "name": "Bandos crozier"},
+                {"id": 12277, "name": "Mithril platebody (g)"},
+                {"id": 12279, "name": "Mithril platelegs (g)"},
+                {"id": 12281, "name": "Mithril kiteshield (g)"},
+                {"id": 12283, "name": "Mithril full helm (g)"},
+                {"id": 12285, "name": "Mithril plateskirt (g)"},
+                {"id": 12287, "name": "Mithril platebody (t)"},
+                {"id": 12289, "name": "Mithril platelegs (t)"},
+                {"id": 12291, "name": "Mithril kiteshield (t)"},
+                {"id": 12293, "name": "Mithril full helm (t)"},
+                {"id": 12295, "name": "Mithril plateskirt (t)"},
+                {"id": 12299, "name": "White headband"},
+                {"id": 12301, "name": "Blue headband"},
+                {"id": 12303, "name": "Gold headband"},
+                {"id": 12305, "name": "Pink headband"},
+                {"id": 12307, "name": "Green headband"},
+                {"id": 12309, "name": "Pink boater"},
+                {"id": 12311, "name": "Purple boater"},
+                {"id": 12313, "name": "White boater"},
+                {"id": 12315, "name": "Pink elegant shirt"},
+                {"id": 12317, "name": "Pink elegant legs"},
+                {"id": 12319, "name": "Crier hat"},
+                {"id": 12339, "name": "Pink elegant blouse"},
+                {"id": 12341, "name": "Pink elegant skirt"},
+                {"id": 12343, "name": "Gold elegant blouse"},
+                {"id": 12345, "name": "Gold elegant skirt"},
+                {"id": 12347, "name": "Gold elegant shirt"},
+                {"id": 12349, "name": "Gold elegant legs"},
+                {"id": 12359, "name": "Leprechaun hat"},
+                {"id": 12361, "name": "Cat mask"},
+                {"id": 12377, "name": "Adamant cane"},
+                {"id": 12428, "name": "Penguin mask"},
+                {"id": 12598, "name": "Holy sandals"},
+                {"id": 20240, "name": "Crier coat"},
+                {"id": 20243, "name": "Crier bell"},
+                {"id": 20246, "name": "Black leprechaun hat"},
+                {"id": 20251, "name": "Arceuus banner"},
+                {"id": 20254, "name": "Hosidius banner"},
+                {"id": 20257, "name": "Lovakengj banner"},
+                {"id": 20260, "name": "Piscarilius banner"},
+                {"id": 20263, "name": "Shayzien banner"},
+                {"id": 20266, "name": "Black unicorn mask"},
+                {"id": 20269, "name": "White unicorn mask"},
+                {"id": 20272, "name": "Cabbage round shield"},
+                {"id": 20275, "name": "Gnomish firelighter"},
+                {"id": 23389, "name": "Spiked manacles"},
+                {"id": 23392, "name": "Adamant platebody (h1)"},
+                {"id": 23395, "name": "Adamant platebody (h2)"},
+                {"id": 23398, "name": "Adamant platebody (h3)"},
+                {"id": 23401, "name": "Adamant platebody (h4)"},
+                {"id": 23404, "name": "Adamant platebody (h5)"},
+                {"id": 23407, "name": "Wolf mask"},
+                {"id": 23410, "name": "Wolf cloak"},
+                {"id": 23413, "name": "Climbing boots (g)"}
             ],
             "logCount": 15
         }
@@ -302,9 +1482,123 @@
         "assetImage": "Clue_scroll_medium.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Medium Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "medium_treasure_trails",
+            "include": [
+                {"id": 2577, "name": "Ranger boots"},
+                {"id": 2579, "name": "Wizard boots"},
+                {"id": 2599, "name": "Adamant platebody (t)"},
+                {"id": 2601, "name": "Adamant platelegs (t)"},
+                {"id": 2603, "name": "Adamant kiteshield (t)"},
+                {"id": 2605, "name": "Adamant full helm (t)"},
+                {"id": 2607, "name": "Adamant platebody (g)"},
+                {"id": 2609, "name": "Adamant platelegs (g)"},
+                {"id": 2611, "name": "Adamant kiteshield (g)"},
+                {"id": 2613, "name": "Adamant full helm (g)"},
+                {"id": 2645, "name": "Red headband"},
+                {"id": 2647, "name": "Black headband"},
+                {"id": 2649, "name": "Brown headband"},
+                {"id": 3474, "name": "Adamant plateskirt (t)"},
+                {"id": 3475, "name": "Adamant plateskirt (g)"},
+                {"id": 7319, "name": "Red boater"},
+                {"id": 7321, "name": "Orange boater"},
+                {"id": 7323, "name": "Green boater"},
+                {"id": 7325, "name": "Blue boater"},
+                {"id": 7327, "name": "Black boater"},
+                {"id": 7334, "name": "Adamant shield (h1)"},
+                {"id": 7340, "name": "Adamant shield (h2)"},
+                {"id": 7346, "name": "Adamant shield (h3)"},
+                {"id": 7352, "name": "Adamant shield (h4)"},
+                {"id": 7358, "name": "Adamant shield (h5)"},
+                {"id": 7370, "name": "Green d'hide body (g)"},
+                {"id": 7372, "name": "Green d'hide body (t)"},
+                {"id": 7378, "name": "Green d'hide chaps (g)"},
+                {"id": 7380, "name": "Green d'hide chaps (t)"},
+                {"id": 10282, "name": "Yew comp bow"},
+                {"id": 10296, "name": "Adamant helm (h1)"},
+                {"id": 10298, "name": "Adamant helm (h2)"},
+                {"id": 10300, "name": "Adamant helm (h3)"},
+                {"id": 10302, "name": "Adamant helm (h4)"},
+                {"id": 10304, "name": "Adamant helm (h5)"},
+                {"id": 10364, "name": "Strength amulet (t)"},
+                {"id": 10400, "name": "Black elegant shirt"},
+                {"id": 10402, "name": "Black elegant legs"},
+                {"id": 10416, "name": "Purple elegant shirt"},
+                {"id": 10418, "name": "Purple elegant legs"},
+                {"id": 10420, "name": "White elegant blouse"},
+                {"id": 10422, "name": "White elegant skirt"},
+                {"id": 10436, "name": "Purple elegant blouse"},
+                {"id": 10438, "name": "Purple elegant skirt"},
+                {"id": 10446, "name": "Saradomin cloak"},
+                {"id": 10448, "name": "Guthix cloak"},
+                {"id": 10450, "name": "Zamorak cloak"},
+                {"id": 10452, "name": "Saradomin mitre"},
+                {"id": 10454, "name": "Guthix mitre"},
+                {"id": 10456, "name": "Zamorak mitre"},
+                {"id": 12197, "name": "Ancient cloak"},
+                {"id": 12199, "name": "Ancient crozier"},
+                {"id": 12201, "name": "Ancient stole"},
+                {"id": 12203, "name": "Ancient mitre"},
+                {"id": 12257, "name": "Armadyl stole"},
+                {"id": 12259, "name": "Armadyl mitre"},
+                {"id": 12261, "name": "Armadyl cloak"},
+                {"id": 12263, "name": "Armadyl crozier"},
+                {"id": 12269, "name": "Bandos stole"},
+                {"id": 12271, "name": "Bandos mitre"},
+                {"id": 12273, "name": "Bandos cloak"},
+                {"id": 12275, "name": "Bandos crozier"},
+                {"id": 12277, "name": "Mithril platebody (g)"},
+                {"id": 12279, "name": "Mithril platelegs (g)"},
+                {"id": 12281, "name": "Mithril kiteshield (g)"},
+                {"id": 12283, "name": "Mithril full helm (g)"},
+                {"id": 12285, "name": "Mithril plateskirt (g)"},
+                {"id": 12287, "name": "Mithril platebody (t)"},
+                {"id": 12289, "name": "Mithril platelegs (t)"},
+                {"id": 12291, "name": "Mithril kiteshield (t)"},
+                {"id": 12293, "name": "Mithril full helm (t)"},
+                {"id": 12295, "name": "Mithril plateskirt (t)"},
+                {"id": 12299, "name": "White headband"},
+                {"id": 12301, "name": "Blue headband"},
+                {"id": 12303, "name": "Gold headband"},
+                {"id": 12305, "name": "Pink headband"},
+                {"id": 12307, "name": "Green headband"},
+                {"id": 12309, "name": "Pink boater"},
+                {"id": 12311, "name": "Purple boater"},
+                {"id": 12313, "name": "White boater"},
+                {"id": 12315, "name": "Pink elegant shirt"},
+                {"id": 12317, "name": "Pink elegant legs"},
+                {"id": 12319, "name": "Crier hat"},
+                {"id": 12339, "name": "Pink elegant blouse"},
+                {"id": 12341, "name": "Pink elegant skirt"},
+                {"id": 12343, "name": "Gold elegant blouse"},
+                {"id": 12345, "name": "Gold elegant skirt"},
+                {"id": 12347, "name": "Gold elegant shirt"},
+                {"id": 12349, "name": "Gold elegant legs"},
+                {"id": 12359, "name": "Leprechaun hat"},
+                {"id": 12361, "name": "Cat mask"},
+                {"id": 12377, "name": "Adamant cane"},
+                {"id": 12428, "name": "Penguin mask"},
+                {"id": 12598, "name": "Holy sandals"},
+                {"id": 20240, "name": "Crier coat"},
+                {"id": 20243, "name": "Crier bell"},
+                {"id": 20246, "name": "Black leprechaun hat"},
+                {"id": 20251, "name": "Arceuus banner"},
+                {"id": 20254, "name": "Hosidius banner"},
+                {"id": 20257, "name": "Lovakengj banner"},
+                {"id": 20260, "name": "Piscarilius banner"},
+                {"id": 20263, "name": "Shayzien banner"},
+                {"id": 20266, "name": "Black unicorn mask"},
+                {"id": 20269, "name": "White unicorn mask"},
+                {"id": 20272, "name": "Cabbage round shield"},
+                {"id": 20275, "name": "Gnomish firelighter"},
+                {"id": 23389, "name": "Spiked manacles"},
+                {"id": 23392, "name": "Adamant platebody (h1)"},
+                {"id": 23395, "name": "Adamant platebody (h2)"},
+                {"id": 23398, "name": "Adamant platebody (h3)"},
+                {"id": 23401, "name": "Adamant platebody (h4)"},
+                {"id": 23404, "name": "Adamant platebody (h5)"},
+                {"id": 23407, "name": "Wolf mask"},
+                {"id": 23410, "name": "Wolf cloak"},
+                {"id": 23413, "name": "Climbing boots (g)"}
             ],
             "logCount": 20
         }
@@ -318,9 +1612,141 @@
         "assetImage": "Clue_scroll_hard.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Hard Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "hard_treasure_trails",
+            "include": [
+                {"id": 2581, "name": "Robin hood hat"},
+                {"id": 2615, "name": "Rune platebody (g)"},
+                {"id": 2617, "name": "Rune platelegs (g)"},
+                {"id": 2619, "name": "Rune full helm (g)"},
+                {"id": 2621, "name": "Rune kiteshield (g)"},
+                {"id": 2623, "name": "Rune platebody (t)"},
+                {"id": 2625, "name": "Rune platelegs (t)"},
+                {"id": 2627, "name": "Rune full helm (t)"},
+                {"id": 2629, "name": "Rune kiteshield (t)"},
+                {"id": 2639, "name": "Tan cavalier"},
+                {"id": 2641, "name": "Dark cavalier"},
+                {"id": 2643, "name": "Black cavalier"},
+                {"id": 2651, "name": "Pirate's hat"},
+                {"id": 2653, "name": "Zamorak platebody"},
+                {"id": 2655, "name": "Zamorak platelegs"},
+                {"id": 2657, "name": "Zamorak full helm"},
+                {"id": 2659, "name": "Zamorak kiteshield"},
+                {"id": 2661, "name": "Saradomin platebody"},
+                {"id": 2663, "name": "Saradomin platelegs"},
+                {"id": 2665, "name": "Saradomin full helm"},
+                {"id": 2667, "name": "Saradomin kiteshield"},
+                {"id": 2669, "name": "Guthix platebody"},
+                {"id": 2671, "name": "Guthix platelegs"},
+                {"id": 2673, "name": "Guthix full helm"},
+                {"id": 2675, "name": "Guthix kiteshield"},
+                {"id": 3476, "name": "Rune plateskirt (g)"},
+                {"id": 3477, "name": "Rune plateskirt (t)"},
+                {"id": 3478, "name": "Zamorak plateskirt"},
+                {"id": 3479, "name": "Saradomin plateskirt"},
+                {"id": 3480, "name": "Guthix plateskirt"},
+                {"id": 7336, "name": "Rune shield (h1)"},
+                {"id": 7342, "name": "Rune shield (h2)"},
+                {"id": 7348, "name": "Rune shield (h3)"},
+                {"id": 7354, "name": "Rune shield (h4)"},
+                {"id": 7360, "name": "Rune shield (h5)"},
+                {"id": 7374, "name": "Blue d'hide body (g)"},
+                {"id": 7376, "name": "Blue d'hide body (t)"},
+                {"id": 7382, "name": "Blue d'hide chaps (g)"},
+                {"id": 7384, "name": "Blue d'hide chaps (t)"},
+                {"id": 7398, "name": "Enchanted robe"},
+                {"id": 7399, "name": "Enchanted top"},
+                {"id": 7400, "name": "Enchanted hat"},
+                {"id": 10284, "name": "Magic comp bow"},
+                {"id": 10286, "name": "Rune helm (h1)"},
+                {"id": 10288, "name": "Rune helm (h2)"},
+                {"id": 10290, "name": "Rune helm (h3)"},
+                {"id": 10292, "name": "Rune helm (h4)"},
+                {"id": 10294, "name": "Rune helm (h5)"},
+                {"id": 10354, "name": "Amulet of glory (t4)"},
+                {"id": 10368, "name": "Zamorak bracers"},
+                {"id": 10370, "name": "Zamorak d'hide body"},
+                {"id": 10372, "name": "Zamorak chaps"},
+                {"id": 10374, "name": "Zamorak coif"},
+                {"id": 10376, "name": "Guthix bracers"},
+                {"id": 10378, "name": "Guthix d'hide body"},
+                {"id": 10380, "name": "Guthix chaps"},
+                {"id": 10382, "name": "Guthix coif"},
+                {"id": 10384, "name": "Saradomin bracers"},
+                {"id": 10386, "name": "Saradomin d'hide body"},
+                {"id": 10388, "name": "Saradomin chaps"},
+                {"id": 10390, "name": "Saradomin coif"},
+                {"id": 10440, "name": "Saradomin crozier"},
+                {"id": 10442, "name": "Guthix crozier"},
+                {"id": 10444, "name": "Zamorak crozier"},
+                {"id": 10470, "name": "Saradomin stole"},
+                {"id": 10472, "name": "Guthix stole"},
+                {"id": 10474, "name": "Zamorak stole"},
+                {"id": 12321, "name": "White cavalier"},
+                {"id": 12323, "name": "Red cavalier"},
+                {"id": 12325, "name": "Navy cavalier"},
+                {"id": 12327, "name": "Red d'hide body (g)"},
+                {"id": 12329, "name": "Red d'hide chaps (g)"},
+                {"id": 12331, "name": "Red d'hide body (t)"},
+                {"id": 12333, "name": "Red d'hide chaps (t)"},
+                {"id": 12379, "name": "Rune cane"},
+                {"id": 12460, "name": "Ancient platebody"},
+                {"id": 12462, "name": "Ancient platelegs"},
+                {"id": 12464, "name": "Ancient plateskirt"},
+                {"id": 12466, "name": "Ancient full helm"},
+                {"id": 12468, "name": "Ancient kiteshield"},
+                {"id": 12470, "name": "Armadyl platebody"},
+                {"id": 12472, "name": "Armadyl platelegs"},
+                {"id": 12474, "name": "Armadyl plateskirt"},
+                {"id": 12476, "name": "Armadyl full helm"},
+                {"id": 12478, "name": "Armadyl kiteshield"},
+                {"id": 12480, "name": "Bandos platebody"},
+                {"id": 12482, "name": "Bandos platelegs"},
+                {"id": 12484, "name": "Bandos plateskirt"},
+                {"id": 12486, "name": "Bandos full helm"},
+                {"id": 12488, "name": "Bandos kiteshield"},
+                {"id": 12490, "name": "Ancient bracers"},
+                {"id": 12492, "name": "Ancient d'hide body"},
+                {"id": 12494, "name": "Ancient chaps"},
+                {"id": 12496, "name": "Ancient coif"},
+                {"id": 12498, "name": "Bandos bracers"},
+                {"id": 12500, "name": "Bandos d'hide body"},
+                {"id": 12502, "name": "Bandos chaps"},
+                {"id": 12504, "name": "Bandos coif"},
+                {"id": 12506, "name": "Armadyl bracers"},
+                {"id": 12508, "name": "Armadyl d'hide body"},
+                {"id": 12510, "name": "Armadyl chaps"},
+                {"id": 12512, "name": "Armadyl coif"},
+                {"id": 12514, "name": "Explorer backpack"},
+                {"id": 12516, "name": "Pith helmet"},
+                {"id": 12518, "name": "Green dragon mask"},
+                {"id": 12520, "name": "Blue dragon mask"},
+                {"id": 12522, "name": "Red dragon mask"},
+                {"id": 12524, "name": "Black dragon mask"},
+                {"id": 19915, "name": "Cyclops head"},
+                {"id": 19918, "name": "Nunchaku"},
+                {"id": 19921, "name": "Ancient d'hide boots"},
+                {"id": 19924, "name": "Bandos d'hide boots"},
+                {"id": 19927, "name": "Guthix d'hide boots"},
+                {"id": 19930, "name": "Armadyl d'hide boots"},
+                {"id": 19933, "name": "Saradomin d'hide boots"},
+                {"id": 19936, "name": "Zamorak d'hide boots"},
+                {"id": 22231, "name": "Dragon boots ornament kit"},
+                {"id": 23188, "name": "Guthix d'hide shield"},
+                {"id": 23191, "name": "Saradomin d'hide shield"},
+                {"id": 23194, "name": "Zamorak d'hide shield"},
+                {"id": 23197, "name": "Ancient d'hide shield"},
+                {"id": 23200, "name": "Armadyl d'hide shield"},
+                {"id": 23203, "name": "Bandos d'hide shield"},
+                {"id": 23206, "name": "Dual sai"},
+                {"id": 23209, "name": "Rune platebody (h1)"},
+                {"id": 23212, "name": "Rune platebody (h2)"},
+                {"id": 23215, "name": "Rune platebody (h3)"},
+                {"id": 23218, "name": "Rune platebody (h4)"},
+                {"id": 23221, "name": "Rune platebody (h5)"},
+                {"id": 23224, "name": "Thieving bag"},
+                {"id": 23227, "name": "Rune defender ornament kit"},
+                {"id": 23232, "name": "Tzhaar-ket-om ornament kit"},
+                {"id": 23237, "name": "Berserker necklace ornament kit"}
             ],
             "logCount": 5
         }
@@ -334,9 +1760,141 @@
         "assetImage": "Clue_scroll_hard.png",
         "colLogData": {
             "category": "Clues",
-            "logName": "Hard Treasure Trails",
-            "exclude": [
-                "N/A"
+            "logName": "hard_treasure_trails",
+            "include": [
+                {"id": 2581, "name": "Robin hood hat"},
+                {"id": 2615, "name": "Rune platebody (g)"},
+                {"id": 2617, "name": "Rune platelegs (g)"},
+                {"id": 2619, "name": "Rune full helm (g)"},
+                {"id": 2621, "name": "Rune kiteshield (g)"},
+                {"id": 2623, "name": "Rune platebody (t)"},
+                {"id": 2625, "name": "Rune platelegs (t)"},
+                {"id": 2627, "name": "Rune full helm (t)"},
+                {"id": 2629, "name": "Rune kiteshield (t)"},
+                {"id": 2639, "name": "Tan cavalier"},
+                {"id": 2641, "name": "Dark cavalier"},
+                {"id": 2643, "name": "Black cavalier"},
+                {"id": 2651, "name": "Pirate's hat"},
+                {"id": 2653, "name": "Zamorak platebody"},
+                {"id": 2655, "name": "Zamorak platelegs"},
+                {"id": 2657, "name": "Zamorak full helm"},
+                {"id": 2659, "name": "Zamorak kiteshield"},
+                {"id": 2661, "name": "Saradomin platebody"},
+                {"id": 2663, "name": "Saradomin platelegs"},
+                {"id": 2665, "name": "Saradomin full helm"},
+                {"id": 2667, "name": "Saradomin kiteshield"},
+                {"id": 2669, "name": "Guthix platebody"},
+                {"id": 2671, "name": "Guthix platelegs"},
+                {"id": 2673, "name": "Guthix full helm"},
+                {"id": 2675, "name": "Guthix kiteshield"},
+                {"id": 3476, "name": "Rune plateskirt (g)"},
+                {"id": 3477, "name": "Rune plateskirt (t)"},
+                {"id": 3478, "name": "Zamorak plateskirt"},
+                {"id": 3479, "name": "Saradomin plateskirt"},
+                {"id": 3480, "name": "Guthix plateskirt"},
+                {"id": 7336, "name": "Rune shield (h1)"},
+                {"id": 7342, "name": "Rune shield (h2)"},
+                {"id": 7348, "name": "Rune shield (h3)"},
+                {"id": 7354, "name": "Rune shield (h4)"},
+                {"id": 7360, "name": "Rune shield (h5)"},
+                {"id": 7374, "name": "Blue d'hide body (g)"},
+                {"id": 7376, "name": "Blue d'hide body (t)"},
+                {"id": 7382, "name": "Blue d'hide chaps (g)"},
+                {"id": 7384, "name": "Blue d'hide chaps (t)"},
+                {"id": 7398, "name": "Enchanted robe"},
+                {"id": 7399, "name": "Enchanted top"},
+                {"id": 7400, "name": "Enchanted hat"},
+                {"id": 10284, "name": "Magic comp bow"},
+                {"id": 10286, "name": "Rune helm (h1)"},
+                {"id": 10288, "name": "Rune helm (h2)"},
+                {"id": 10290, "name": "Rune helm (h3)"},
+                {"id": 10292, "name": "Rune helm (h4)"},
+                {"id": 10294, "name": "Rune helm (h5)"},
+                {"id": 10354, "name": "Amulet of glory (t4)"},
+                {"id": 10368, "name": "Zamorak bracers"},
+                {"id": 10370, "name": "Zamorak d'hide body"},
+                {"id": 10372, "name": "Zamorak chaps"},
+                {"id": 10374, "name": "Zamorak coif"},
+                {"id": 10376, "name": "Guthix bracers"},
+                {"id": 10378, "name": "Guthix d'hide body"},
+                {"id": 10380, "name": "Guthix chaps"},
+                {"id": 10382, "name": "Guthix coif"},
+                {"id": 10384, "name": "Saradomin bracers"},
+                {"id": 10386, "name": "Saradomin d'hide body"},
+                {"id": 10388, "name": "Saradomin chaps"},
+                {"id": 10390, "name": "Saradomin coif"},
+                {"id": 10440, "name": "Saradomin crozier"},
+                {"id": 10442, "name": "Guthix crozier"},
+                {"id": 10444, "name": "Zamorak crozier"},
+                {"id": 10470, "name": "Saradomin stole"},
+                {"id": 10472, "name": "Guthix stole"},
+                {"id": 10474, "name": "Zamorak stole"},
+                {"id": 12321, "name": "White cavalier"},
+                {"id": 12323, "name": "Red cavalier"},
+                {"id": 12325, "name": "Navy cavalier"},
+                {"id": 12327, "name": "Red d'hide body (g)"},
+                {"id": 12329, "name": "Red d'hide chaps (g)"},
+                {"id": 12331, "name": "Red d'hide body (t)"},
+                {"id": 12333, "name": "Red d'hide chaps (t)"},
+                {"id": 12379, "name": "Rune cane"},
+                {"id": 12460, "name": "Ancient platebody"},
+                {"id": 12462, "name": "Ancient platelegs"},
+                {"id": 12464, "name": "Ancient plateskirt"},
+                {"id": 12466, "name": "Ancient full helm"},
+                {"id": 12468, "name": "Ancient kiteshield"},
+                {"id": 12470, "name": "Armadyl platebody"},
+                {"id": 12472, "name": "Armadyl platelegs"},
+                {"id": 12474, "name": "Armadyl plateskirt"},
+                {"id": 12476, "name": "Armadyl full helm"},
+                {"id": 12478, "name": "Armadyl kiteshield"},
+                {"id": 12480, "name": "Bandos platebody"},
+                {"id": 12482, "name": "Bandos platelegs"},
+                {"id": 12484, "name": "Bandos plateskirt"},
+                {"id": 12486, "name": "Bandos full helm"},
+                {"id": 12488, "name": "Bandos kiteshield"},
+                {"id": 12490, "name": "Ancient bracers"},
+                {"id": 12492, "name": "Ancient d'hide body"},
+                {"id": 12494, "name": "Ancient chaps"},
+                {"id": 12496, "name": "Ancient coif"},
+                {"id": 12498, "name": "Bandos bracers"},
+                {"id": 12500, "name": "Bandos d'hide body"},
+                {"id": 12502, "name": "Bandos chaps"},
+                {"id": 12504, "name": "Bandos coif"},
+                {"id": 12506, "name": "Armadyl bracers"},
+                {"id": 12508, "name": "Armadyl d'hide body"},
+                {"id": 12510, "name": "Armadyl chaps"},
+                {"id": 12512, "name": "Armadyl coif"},
+                {"id": 12514, "name": "Explorer backpack"},
+                {"id": 12516, "name": "Pith helmet"},
+                {"id": 12518, "name": "Green dragon mask"},
+                {"id": 12520, "name": "Blue dragon mask"},
+                {"id": 12522, "name": "Red dragon mask"},
+                {"id": 12524, "name": "Black dragon mask"},
+                {"id": 19915, "name": "Cyclops head"},
+                {"id": 19918, "name": "Nunchaku"},
+                {"id": 19921, "name": "Ancient d'hide boots"},
+                {"id": 19924, "name": "Bandos d'hide boots"},
+                {"id": 19927, "name": "Guthix d'hide boots"},
+                {"id": 19930, "name": "Armadyl d'hide boots"},
+                {"id": 19933, "name": "Saradomin d'hide boots"},
+                {"id": 19936, "name": "Zamorak d'hide boots"},
+                {"id": 22231, "name": "Dragon boots ornament kit"},
+                {"id": 23188, "name": "Guthix d'hide shield"},
+                {"id": 23191, "name": "Saradomin d'hide shield"},
+                {"id": 23194, "name": "Zamorak d'hide shield"},
+                {"id": 23197, "name": "Ancient d'hide shield"},
+                {"id": 23200, "name": "Armadyl d'hide shield"},
+                {"id": 23203, "name": "Bandos d'hide shield"},
+                {"id": 23206, "name": "Dual sai"},
+                {"id": 23209, "name": "Rune platebody (h1)"},
+                {"id": 23212, "name": "Rune platebody (h2)"},
+                {"id": 23215, "name": "Rune platebody (h3)"},
+                {"id": 23218, "name": "Rune platebody (h4)"},
+                {"id": 23221, "name": "Rune platebody (h5)"},
+                {"id": 23224, "name": "Thieving bag"},
+                {"id": 23227, "name": "Rune defender ornament kit"},
+                {"id": 23232, "name": "Tzhaar-ket-om ornament kit"},
+                {"id": 23237, "name": "Berserker necklace ornament kit"}
             ],
             "logCount": 10
         }
@@ -350,9 +1908,9 @@
         "assetImage": "Runner_boots.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Barbarian Assault",
+            "logName": "barbarian_assault",
             "include": [
-                "Runner boots"
+                {"id": 10552, "name": "Runner boots"}
             ],
             "logCount": 1
         }
@@ -366,9 +1924,9 @@
         "assetImage": "Penance_gloves.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Barbarian Assault",
+            "logName": "barbarian_assault",
             "include": [
-                "Penance gloves"
+                {"id": 10553, "name": "Penance gloves"}
             ],
             "logCount": 1
         }
@@ -382,9 +1940,9 @@
         "assetImage": "Granite_body.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Barbarian Assault",
+            "logName": "barbarian_assault",
             "include": [
-                "Granite body"
+                {"id": 10564, "name": "Granite body"}
             ],
             "logCount": 1
         }
@@ -398,11 +1956,11 @@
         "assetImage": "Saradomin_halo.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Castle Wars",
+            "logName": "castle_wars",
             "include": [
-                "Guthix halo",
-                "Saradomin halo",
-                "Zamorak halo"
+                {"id": 12637, "name": "Saradomin halo"},
+                {"id": 12638, "name": "Zamorak halo"},
+                {"id": 12639, "name": "Guthix halo"}
             ],
             "logCount": 1
         }
@@ -416,14 +1974,16 @@
         "assetImage": "130px-Decorative_armour_red_platebody_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Castle Wars",
+            "logName": "castle_wars",
             "include": [
-                "Decorative shield",
-                "Decorative full helm",
-                "Decorative sword",
-                "Decorative boots",
-                "Decorative helm",
-                "Decorative armour"
+                {"id": 25163, "name": "Decorative boots (red)"},
+                {"id": 25165, "name": "Decorative full helm (red)"},
+                {"id": 4068, "name": "Decorative sword (red)"},
+                {"id": 4069, "name": "Decorative armour (red platebody)"},
+                {"id": 4070, "name": "Decorative armour (red platelegs)"},
+                {"id": 4071, "name": "Decorative helm (red)"},
+                {"id": 4072, "name": "Decorative shield (red)"},
+                {"id": 11893, "name": "Decorative armour (red plateskirt)"}
             ],
             "logCount": 8
         }
@@ -437,10 +1997,10 @@
         "assetImage": "Castlewars_hood_Zamorak.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Castle Wars",
+            "logName": "castle_wars",
             "include": [
-                "Castlewars hood",
-                "Castlewars cloak"
+                {"id": 4515, "name": "Castlewars hood (Zamorak)"},
+                {"id": 4516, "name": "Castlewars cloak (Zamorak)"}
             ],
             "logCount": 2
         }
@@ -454,12 +2014,12 @@
         "assetImage": "Castlewars_hood_Saradomin.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Castle Wars",
+            "logName": "castle_wars",
             "include": [
-                "Castlewars hood",
-                "Castlewars cloak"
+                {"id": 4513, "name": "Castlewars hood (Saradomin)"},
+                {"id": 4514, "name": "Castlewars cloak (Saradomin)"}
             ],
-            "logCount": 4
+            "logCount": 2
         }
     },
     {
@@ -471,9 +2031,12 @@
         "assetImage": "Angler_top.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Fishing Trawler",
-            "exclude": [
-                "N/A"
+            "logName": "fishing_trawler",
+            "include": [
+                {"id": 13258, "name": "Angler hat"},
+                {"id": 13259, "name": "Angler top"},
+                {"id": 13260, "name": "Angler waders"},
+                {"id": 13261, "name": "Angler boots"}
             ],
             "logCount": 1
         }
@@ -487,9 +2050,12 @@
         "assetImage": "Angler_top.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Fishing Trawler",
-            "exclude": [
-                "N/A"
+            "logName": "fishing_trawler",
+            "include": [
+                {"id": 13258, "name": "Angler hat"},
+                {"id": 13259, "name": "Angler top"},
+                {"id": 13260, "name": "Angler waders"},
+                {"id": 13261, "name": "Angler boots"}
             ],
             "logCount": 2
         }
@@ -503,9 +2069,12 @@
         "assetImage": "Angler_top.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Fishing Trawler",
-            "exclude": [
-                "N/A"
+            "logName": "fishing_trawler",
+            "include": [
+                {"id": 13258, "name": "Angler hat"},
+                {"id": 13259, "name": "Angler top"},
+                {"id": 13260, "name": "Angler waders"},
+                {"id": 13261, "name": "Angler boots"}
             ],
             "logCount": 3
         }
@@ -519,9 +2088,12 @@
         "assetImage": "Angler_top.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Fishing Trawler",
-            "exclude": [
-                "N/A"
+            "logName": "fishing_trawler",
+            "include": [
+                {"id": 13258, "name": "Angler hat"},
+                {"id": 13259, "name": "Angler top"},
+                {"id": 13260, "name": "Angler waders"},
+                {"id": 13261, "name": "Angler boots"}
             ],
             "logCount": 4
         }
@@ -535,9 +2107,12 @@
         "assetImage": "Gnome_scarf.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Gnome Restaurant",
-            "exclude": [
-                "N/A"
+            "logName": "gnome_restaurant",
+            "include": [
+                {"id": 9469, "name": "Grand seed pod"},
+                {"id": 9470, "name": "Gnome scarf"},
+                {"id": 9472, "name": "Gnome goggles"},
+                {"id": 9475, "name": "Mint cake"}
             ],
             "logCount": 1
         }
@@ -551,9 +2126,9 @@
         "assetImage": "Beginner_wand.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Magic Training Arena",
+            "logName": "magic_training_arena",
             "include": [
-                "Beginner wand"
+                {"id": 6908, "name": "Beginner wand"}
             ],
             "logCount": 1
         }
@@ -567,9 +2142,9 @@
         "assetImage": "Bones_to_Peaches.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Magic Training Arena",
+            "logName": "magic_training_arena",
             "include": [
-                "Bones to peaches"
+                {"id": 6926, "name": "Bones to Peaches"}
             ],
             "logCount": 1
         }
@@ -583,9 +2158,9 @@
         "assetImage": "Infinity_boots.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Magic Training Arena",
+            "logName": "magic_training_arena",
             "include": [
-                "Infinity boots"
+                {"id": 6920, "name": "Infinity boots"}
             ],
             "logCount": 1
         }
@@ -599,9 +2174,9 @@
         "assetImage": "Infinity_gloves.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Magic Training Arena",
+            "logName": "magic_training_arena",
             "include": [
-                "Infinity gloves"
+                {"id": 6922, "name": "Infinity gloves"}
             ],
             "logCount": 1
         }
@@ -615,9 +2190,9 @@
         "assetImage": "Void_seal.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Pest Control",
+            "logName": "pest_control",
             "include": [
-                "Void seal(8)"
+                {"id": 11666, "name": "Void seal"}
             ],
             "logCount": 1
         }
@@ -631,9 +2206,9 @@
         "assetImage": "Void_knight_gloves.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Pest Control",
+            "logName": "pest_control",
             "include": [
-                "Void knight gloves"
+                {"id": 8842, "name": "Void knight gloves"}
             ],
             "logCount": 1
         }
@@ -647,9 +2222,9 @@
         "assetImage": "Void_knight_mace.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Pest Control",
+            "logName": "pest_control",
             "include": [
-                "Void knight mace"
+                {"id": 8841, "name": "Void knight mace"}
             ],
             "logCount": 1
         }
@@ -663,9 +2238,13 @@
         "assetImage": "Rogue_top.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Rogues' Den",
-            "exclude": [
-                "N/A"
+            "logName": "rogues_den",
+            "include": [
+                {"id": 5553, "name": "Rogue top"},
+                {"id": 5554, "name": "Rogue mask"},
+                {"id": 5555, "name": "Rogue trousers"},
+                {"id": 5556, "name": "Rogue gloves"},
+                {"id": 5557, "name": "Rogue boots"}
             ],
             "logCount": 1
         }
@@ -679,9 +2258,13 @@
         "assetImage": "Rogue_top.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Rogues' Den",
-            "exclude": [
-                "N/A"
+            "logName": "rogues_den",
+            "include": [
+                {"id": 5553, "name": "Rogue top"},
+                {"id": 5554, "name": "Rogue mask"},
+                {"id": 5555, "name": "Rogue trousers"},
+                {"id": 5556, "name": "Rogue gloves"},
+                {"id": 5557, "name": "Rogue boots"}
             ],
             "logCount": 2
         }
@@ -695,9 +2278,22 @@
         "assetImage": "Fine_cloth.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Shades of Mort'ton",
-            "exclude": [
-                "N/A"
+            "logName": "shades_of_mortton",
+            "include": [
+                {"id": 12851, "name": "Amulet of the damned (full)"},
+                {"id": 25630, "name": "Flamtaer bag"},
+                {"id": 3470, "name": "Fine cloth"},
+                {"id": 25434, "name": "Zealot's robe top"},
+                {"id": 25436, "name": "Zealot's robe bottom"},
+                {"id": 25438, "name": "Zealot's helm"},
+                {"id": 25440, "name": "Zealot's boots"},
+                {"id": 25442, "name": "Bronze locks"},
+                {"id": 25445, "name": "Steel locks"},
+                {"id": 25448, "name": "Black locks"},
+                {"id": 25451, "name": "Silver locks"},
+                {"id": 25454, "name": "Gold locks"},
+                {"id": 25474, "name": "Tree wizards' journal"},
+                {"id": 25476, "name": "Bloody notes"}
             ],
             "logCount": 1
         }
@@ -711,9 +2307,22 @@
         "assetImage": "Fine_cloth.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Shades of Mort'ton",
-            "exclude": [
-                "N/A"
+            "logName": "shades_of_mortton",
+            "include": [
+                {"id": 12851, "name": "Amulet of the damned (full)"},
+                {"id": 25630, "name": "Flamtaer bag"},
+                {"id": 3470, "name": "Fine cloth"},
+                {"id": 25434, "name": "Zealot's robe top"},
+                {"id": 25436, "name": "Zealot's robe bottom"},
+                {"id": 25438, "name": "Zealot's helm"},
+                {"id": 25440, "name": "Zealot's boots"},
+                {"id": 25442, "name": "Bronze locks"},
+                {"id": 25445, "name": "Steel locks"},
+                {"id": 25448, "name": "Black locks"},
+                {"id": 25451, "name": "Silver locks"},
+                {"id": 25454, "name": "Gold locks"},
+                {"id": 25474, "name": "Tree wizards' journal"},
+                {"id": 25476, "name": "Bloody notes"}
             ],
             "logCount": 2
         }
@@ -727,9 +2336,12 @@
         "assetImage": "Lumberjack_top.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Temple Trekking",
-            "exclude": [
-                "N/A"
+            "logName": "temple_trekking",
+            "include": [
+                {"id": 10933, "name": "Lumberjack boots"},
+                {"id": 10939, "name": "Lumberjack top"},
+                {"id": 10940, "name": "Lumberjack legs"},
+                {"id": 10941, "name": "Lumberjack hat"}
             ],
             "logCount": 1
         }
@@ -743,9 +2355,9 @@
         "assetImage": "Gricollers_can.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Tithe Farm",
+            "logName": "tithe_farm",
             "include": [
-                "Gricoller's can"
+                {"id": 13353, "name": "Gricoller's can"}
             ],
             "logCount": 1
         }
@@ -759,11 +2371,12 @@
         "assetImage": "Farmers_jacket.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Tithe Farm",
-            "exclude": [
-                "Gricoller's can",
-                "Seed box",
-                "Herb sack"
+            "logName": "tithe_farm",
+            "include": [
+                {"id": 13640, "name": "Farmer's boro trousers"},
+                {"id": 13642, "name": "Farmer's jacket"},
+                {"id": 13644, "name": "Farmer's boots"},
+                {"id": 13646, "name": "Farmer's strawhat"}
             ],
             "logCount": 1
         }
@@ -777,9 +2390,9 @@
         "assetImage": "Rum_blue.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Trouble Brewing",
+            "logName": "trouble_brewing",
             "include": [
-                "Rum"
+                {"id": 8941, "name": "Rum (blue)"}
             ],
             "logCount": 1
         }
@@ -793,11 +2406,11 @@
         "assetImage": "Rum_red.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Trouble Brewing",
+            "logName": "trouble_brewing",
             "include": [
-                "Rum"
+                {"id": 8940, "name": "Rum (red)"}
             ],
-            "logCount": 2
+            "logCount": 1
         }
     },
     {
@@ -809,9 +2422,9 @@
         "assetImage": "The_stuff.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Trouble Brewing",
+            "logName": "trouble_brewing",
             "include": [
-                "The stuff"
+                {"id": 8988, "name": "The stuff"}
             ],
             "logCount": 1
         }
@@ -825,9 +2438,9 @@
         "assetImage": "Pearl_fishing_rod.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Aerial Fishing",
+            "logName": "aerial_fishing",
             "include": [
-                "Pearl fishing rod"
+                {"id": 22846, "name": "Pearl fishing rod"}
             ],
             "logCount": 1
         }
@@ -841,9 +2454,18 @@
         "assetImage": "Goblin_champion_scroll.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Champion's Challenge",
-            "exclude": [
-                "Champion's cape"
+            "logName": "champions_challenge",
+            "include": [
+                {"id": 6798, "name": "Earth warrior champion scroll"},
+                {"id": 6799, "name": "Ghoul champion scroll"},
+                {"id": 6800, "name": "Giant champion scroll"},
+                {"id": 6801, "name": "Goblin champion scroll"},
+                {"id": 6802, "name": "Hobgoblin champion scroll"},
+                {"id": 6803, "name": "Imp champion scroll"},
+                {"id": 6804, "name": "Jogre champion scroll"},
+                {"id": 6805, "name": "Lesser demon champion scroll"},
+                {"id": 6806, "name": "Skeleton champion scroll"},
+                {"id": 6807, "name": "Zombie champion scroll"}
             ],
             "logCount": 1
         }
@@ -857,11 +2479,11 @@
         "assetImage": "Chompy_bird_hat_marksman.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Chompy Bird Hunting",
-            "exclude": [
-                "Chompy chick"
+            "logName": "chompy_bird_hunting",
+            "include": [
+                {"id": 2983, "name": "Chompy bird hat (marksman)"}
             ],
-            "logCount": 6
+            "logCount": 1
         }
     },
     {
@@ -873,9 +2495,9 @@
         "assetImage": "Tea_flask.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Creature Creation",
+            "logName": "creature_creation",
             "include": [
-                "Tea flask"
+                {"id": 25617, "name": "Tea flask"}
             ],
             "logCount": 1
         }
@@ -889,9 +2511,9 @@
         "assetImage": "Rune_satchel.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Creature Creation",
+            "logName": "creature_creation",
             "include": [
-                "Rune satchel"
+                {"id": 25623, "name": "Rune satchel"}
             ],
             "logCount": 1
         }
@@ -905,9 +2527,9 @@
         "assetImage": "Green_satchel.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Creature Creation",
+            "logName": "creature_creation",
             "include": [
-                "Green satchel"
+                {"id": 25619, "name": "Green satchel"}
             ],
             "logCount": 1
         }
@@ -921,9 +2543,9 @@
         "assetImage": "Red_satchel.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Creature Creation",
+            "logName": "creature_creation",
             "include": [
-                "Red satchel"
+                {"id": 25620, "name": "Red satchel"}
             ],
             "logCount": 1
         }
@@ -937,9 +2559,9 @@
         "assetImage": "Black_satchel.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Creature Creation",
+            "logName": "creature_creation",
             "include": [
-                "Black satchel"
+                {"id": 25621, "name": "Black satchel"}
             ],
             "logCount": 1
         }
@@ -953,9 +2575,9 @@
         "assetImage": "Rune_defender.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Cyclopes",
+            "logName": "cyclopes",
             "include": [
-                "Rune defender"
+                {"id": 8850, "name": "Rune defender"}
             ],
             "logCount": 1
         }
@@ -969,9 +2591,18 @@
         "assetImage": "Scribbled_note.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Fossil Island Notes",
-            "exclude": [
-                "N/A"
+            "logName": "fossil_island_notes",
+            "include": [
+                {"id": 21664, "name": "Scribbled note"},
+                {"id": 21666, "name": "Partial note"},
+                {"id": 21668, "name": "Ancient note"},
+                {"id": 21670, "name": "Ancient writings"},
+                {"id": 21672, "name": "Experimental note"},
+                {"id": 21674, "name": "Paragraph of text"},
+                {"id": 21676, "name": "Musty smelling note"},
+                {"id": 21678, "name": "Hastily scrawled note"},
+                {"id": 21680, "name": "Old writing"},
+                {"id": 21682, "name": "Short note"}
             ],
             "logCount": 2
         }
@@ -985,9 +2616,18 @@
         "assetImage": "Scribbled_note.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Fossil Island Notes",
-            "exclude": [
-                "N/A"
+            "logName": "fossil_island_notes",
+            "include": [
+                {"id": 21664, "name": "Scribbled note"},
+                {"id": 21666, "name": "Partial note"},
+                {"id": 21668, "name": "Ancient note"},
+                {"id": 21670, "name": "Ancient writings"},
+                {"id": 21672, "name": "Experimental note"},
+                {"id": 21674, "name": "Paragraph of text"},
+                {"id": 21676, "name": "Musty smelling note"},
+                {"id": 21678, "name": "Hastily scrawled note"},
+                {"id": 21680, "name": "Old writing"},
+                {"id": 21682, "name": "Short note"}
             ],
             "logCount": 4
         }
@@ -1001,10 +2641,12 @@
         "assetImage": "Prospector_helmet.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Motherlode Mine",
-            "exclude": [
-                "Gem bag",
-                "Coal bag"
+            "logName": "mortherlode_mine",
+            "include": [
+                {"id": 12013, "name": "Prospector helmet"},
+                {"id": 12014, "name": "Prospector jacket"},
+                {"id": 12015, "name": "Prospector legs"},
+                {"id": 12016, "name": "Prospector boots"}
             ],
             "logCount": 1
         }
@@ -1018,10 +2660,12 @@
         "assetImage": "Prospector_helmet.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Motherlode Mine",
-            "exclude": [
-                "Gem bag",
-                "Coal bag"
+            "logName": "mortherlode_mine",
+            "include": [
+                {"id": 12013, "name": "Prospector helmet"},
+                {"id": 12014, "name": "Prospector jacket"},
+                {"id": 12015, "name": "Prospector legs"},
+                {"id": 12016, "name": "Prospector boots"}
             ],
             "logCount": 2
         }
@@ -1035,10 +2679,12 @@
         "assetImage": "Prospector_helmet.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Motherlode Mine",
-            "exclude": [
-                "Gem bag",
-                "Coal bag"
+            "logName": "mortherlode_mine",
+            "include": [
+                {"id": 12013, "name": "Prospector helmet"},
+                {"id": 12014, "name": "Prospector jacket"},
+                {"id": 12015, "name": "Prospector legs"},
+                {"id": 12016, "name": "Prospector boots"}
             ],
             "logCount": 3
         }
@@ -1052,10 +2698,12 @@
         "assetImage": "Prospector_helmet.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Motherlode Mine",
-            "exclude": [
-                "Gem bag",
-                "Coal bag"
+            "logName": "mortherlode_mine",
+            "include": [
+                {"id": 12013, "name": "Prospector helmet"},
+                {"id": 12014, "name": "Prospector jacket"},
+                {"id": 12015, "name": "Prospector legs"},
+                {"id": 12016, "name": "Prospector boots"}
             ],
             "logCount": 4
         }
@@ -1069,9 +2717,34 @@
         "assetImage": "Ancient_page.png",
         "colLogData": {
             "category": "Other",
-            "logName": "My Notes",
-            "exclude": [
-                "N/A"
+            "logName": "my_notes",
+            "include": [
+                {"id": 11341, "name": "Ancient page"},
+                {"id": 11342, "name": "Ancient page"},
+                {"id": 11343, "name": "Ancient page"},
+                {"id": 11344, "name": "Ancient page"},
+                {"id": 11345, "name": "Ancient page"},
+                {"id": 11346, "name": "Ancient page"},
+                {"id": 11347, "name": "Ancient page"},
+                {"id": 11348, "name": "Ancient page"},
+                {"id": 11349, "name": "Ancient page"},
+                {"id": 11350, "name": "Ancient page"},
+                {"id": 11351, "name": "Ancient page"},
+                {"id": 11352, "name": "Ancient page"},
+                {"id": 11353, "name": "Ancient page"},
+                {"id": 11354, "name": "Ancient page"},
+                {"id": 11355, "name": "Ancient page"},
+                {"id": 11356, "name": "Ancient page"},
+                {"id": 11357, "name": "Ancient page"},
+                {"id": 11358, "name": "Ancient page"},
+                {"id": 11359, "name": "Ancient page"},
+                {"id": 11360, "name": "Ancient page"},
+                {"id": 11361, "name": "Ancient page"},
+                {"id": 11362, "name": "Ancient page"},
+                {"id": 11363, "name": "Ancient page"},
+                {"id": 11364, "name": "Ancient page"},
+                {"id": 11365, "name": "Ancient page"},
+                {"id": 11366, "name": "Ancient page"}
             ],
             "logCount": 2
         }
@@ -1085,9 +2758,34 @@
         "assetImage": "Ancient_page.png",
         "colLogData": {
             "category": "Other",
-            "logName": "My Notes",
-            "exclude": [
-                "N/A"
+            "logName": "my_notes",
+            "include": [
+                {"id": 11341, "name": "Ancient page"},
+                {"id": 11342, "name": "Ancient page"},
+                {"id": 11343, "name": "Ancient page"},
+                {"id": 11344, "name": "Ancient page"},
+                {"id": 11345, "name": "Ancient page"},
+                {"id": 11346, "name": "Ancient page"},
+                {"id": 11347, "name": "Ancient page"},
+                {"id": 11348, "name": "Ancient page"},
+                {"id": 11349, "name": "Ancient page"},
+                {"id": 11350, "name": "Ancient page"},
+                {"id": 11351, "name": "Ancient page"},
+                {"id": 11352, "name": "Ancient page"},
+                {"id": 11353, "name": "Ancient page"},
+                {"id": 11354, "name": "Ancient page"},
+                {"id": 11355, "name": "Ancient page"},
+                {"id": 11356, "name": "Ancient page"},
+                {"id": 11357, "name": "Ancient page"},
+                {"id": 11358, "name": "Ancient page"},
+                {"id": 11359, "name": "Ancient page"},
+                {"id": 11360, "name": "Ancient page"},
+                {"id": 11361, "name": "Ancient page"},
+                {"id": 11362, "name": "Ancient page"},
+                {"id": 11363, "name": "Ancient page"},
+                {"id": 11364, "name": "Ancient page"},
+                {"id": 11365, "name": "Ancient page"},
+                {"id": 11366, "name": "Ancient page"}
             ],
             "logCount": 4
         }
@@ -1101,9 +2799,9 @@
         "assetImage": "Revenant_ether_5.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Revenants",
+            "logName": "revenants",
             "include": [
-                "Revenant ether"
+                {"id": 21820, "name": "Revenant ether"}
             ],
             "logCount": 1
         }
@@ -1117,9 +2815,14 @@
         "assetImage": "Graceful_top.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Rooftop Agility",
-            "exclude": [
-                "Mark of grace"
+            "logName": "rooftop_agility",
+            "include": [
+                {"id": 11850, "name": "Graceful hood"},
+                {"id": 11852, "name": "Graceful cape"},
+                {"id": 11854, "name": "Graceful top"},
+                {"id": 11856, "name": "Graceful legs"},
+                {"id": 11858, "name": "Graceful gloves"},
+                {"id": 11860, "name": "Graceful boots"}
             ],
             "logCount": 1
         }
@@ -1133,9 +2836,14 @@
         "assetImage": "Graceful_top.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Rooftop Agility",
-            "exclude": [
-                "Mark of grace"
+            "logName": "rooftop_agility",
+            "include": [
+                {"id": 11850, "name": "Graceful hood"},
+                {"id": 11852, "name": "Graceful cape"},
+                {"id": 11854, "name": "Graceful top"},
+                {"id": 11856, "name": "Graceful legs"},
+                {"id": 11858, "name": "Graceful gloves"},
+                {"id": 11860, "name": "Graceful boots"}
             ],
             "logCount": 2
         }
@@ -1149,9 +2857,14 @@
         "assetImage": "Graceful_top.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Rooftop Agility",
-            "exclude": [
-                "Mark of grace"
+            "logName": "rooftop_agility",
+            "include": [
+                {"id": 11850, "name": "Graceful hood"},
+                {"id": 11852, "name": "Graceful cape"},
+                {"id": 11854, "name": "Graceful top"},
+                {"id": 11856, "name": "Graceful legs"},
+                {"id": 11858, "name": "Graceful gloves"},
+                {"id": 11860, "name": "Graceful boots"}
             ],
             "logCount": 3
         }
@@ -1165,9 +2878,9 @@
         "assetImage": "140px-Crawling_hand_item_detail.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Crawling hand"
+                {"id": 7975, "name": "Crawling hand (item)"}
             ],
             "logCount": 1
         }
@@ -1181,9 +2894,9 @@
         "assetImage": "170px-Cockatrice_head_detail.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Cockatrice head"
+                {"id": 7976, "name": "Cockatrice head"}
             ],
             "logCount": 1
         }
@@ -1197,10 +2910,10 @@
         "assetImage": "Mudskipper_hat.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mudskipper hat",
-                "Flippers"
+                {"id": 6665, "name": "Mudskipper hat"},
+                {"id": 6666, "name": "Flippers"}
             ],
             "logCount": 1
         }
@@ -1214,10 +2927,10 @@
         "assetImage": "Mudskipper_hat.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mudskipper hat",
-                "Flippers"
+                {"id": 6665, "name": "Mudskipper hat"},
+                {"id": 6666, "name": "Flippers"}
             ],
             "logCount": 2
         }
@@ -1231,9 +2944,9 @@
         "assetImage": "Brine_sabre.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Brine sabre"
+                {"id": 11037, "name": "Brine sabre"}
             ],
             "logCount": 1
         }
@@ -1247,10 +2960,10 @@
         "assetImage": "Leaf-bladed_sword.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Leaf-bladed sword",
-                "Mystic robe bottom (light)"
+                {"id": 11902, "name": "Leaf-bladed sword"},
+                {"id": 4113, "name": "Mystic robe bottom (light)"}
             ],
             "logCount": 1
         }
@@ -1264,10 +2977,10 @@
         "assetImage": "Leaf-bladed_sword.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Leaf-bladed sword",
-                "Mystic robe bottom (light)"
+                {"id": 11902, "name": "Leaf-bladed sword"},
+                {"id": 4113, "name": "Mystic robe bottom (light)"}
             ],
             "logCount": 2
         }
@@ -1281,9 +2994,9 @@
         "assetImage": "Black_mask.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Black mask (10)"
+                {"id": 8901, "name": "Black mask (10)"}
             ],
             "logCount": 1
         }
@@ -1297,13 +3010,13 @@
         "assetImage": "Bronze_boots.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Black boots",
-                "Mithril boots",
-                "Bronze boots",
-                "Iron boots",
-                "Steel boots"
+                {"id": 4119, "name": "Bronze boots"},
+                {"id": 4121, "name": "Iron boots"},
+                {"id": 4123, "name": "Steel boots"},
+                {"id": 4125, "name": "Black boots"},
+                {"id": 4127, "name": "Mithril boots"}
             ],
             "logCount": 1
         }
@@ -1317,13 +3030,13 @@
         "assetImage": "Bronze_boots.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Black boots",
-                "Mithril boots",
-                "Bronze boots",
-                "Iron boots",
-                "Steel boots"
+                {"id": 4119, "name": "Bronze boots"},
+                {"id": 4121, "name": "Iron boots"},
+                {"id": 4123, "name": "Steel boots"},
+                {"id": 4125, "name": "Black boots"},
+                {"id": 4127, "name": "Mithril boots"}
             ],
             "logCount": 2
         }
@@ -1337,13 +3050,13 @@
         "assetImage": "Bronze_boots.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Black boots",
-                "Mithril boots",
-                "Bronze boots",
-                "Iron boots",
-                "Steel boots"
+                {"id": 4119, "name": "Bronze boots"},
+                {"id": 4121, "name": "Iron boots"},
+                {"id": 4123, "name": "Steel boots"},
+                {"id": 4125, "name": "Black boots"},
+                {"id": 4127, "name": "Mithril boots"}
             ],
             "logCount": 3
         }
@@ -1357,13 +3070,13 @@
         "assetImage": "Bronze_boots.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Black boots",
-                "Mithril boots",
-                "Bronze boots",
-                "Iron boots",
-                "Steel boots"
+                {"id": 4119, "name": "Bronze boots"},
+                {"id": 4121, "name": "Iron boots"},
+                {"id": 4123, "name": "Steel boots"},
+                {"id": 4125, "name": "Black boots"},
+                {"id": 4127, "name": "Mithril boots"}
             ],
             "logCount": 4
         }
@@ -1377,13 +3090,13 @@
         "assetImage": "Bronze_boots.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Black boots",
-                "Mithril boots",
-                "Bronze boots",
-                "Iron boots",
-                "Steel boots"
+                {"id": 4119, "name": "Bronze boots"},
+                {"id": 4121, "name": "Iron boots"},
+                {"id": 4123, "name": "Steel boots"},
+                {"id": 4125, "name": "Black boots"},
+                {"id": 4127, "name": "Mithril boots"}
             ],
             "logCount": 5
         }
@@ -1397,9 +3110,9 @@
         "assetImage": "Mystic_hat_light.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mystic hat (light)"
+                {"id": 4109, "name": "Mystic hat (light)"}
             ],
             "logCount": 1
         }
@@ -1413,9 +3126,9 @@
         "assetImage": "Mystic_gloves_light.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mystic gloves (light)"
+                {"id": 4115, "name": "Mystic gloves (light)"}
             ],
             "logCount": 1
         }
@@ -1429,9 +3142,9 @@
         "assetImage": "Mystic_boots_light.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mystic boots (light)"
+                {"id": 4117, "name": "Mystic boots (light)"}
             ],
             "logCount": 1
         }
@@ -1445,10 +3158,10 @@
         "assetImage": "Mystic_hat_dark.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mystic hat (dark)",
-                "Mystic boots (dark)"
+                {"id": 4099, "name": "Mystic hat (dark)"},
+                {"id": 4107, "name": "Mystic boots (dark)"}
             ],
             "logCount": 1
         }
@@ -1462,10 +3175,10 @@
         "assetImage": "Mystic_hat_dark.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mystic hat (dark)",
-                "Mystic boots (dark)"
+                {"id": 4099, "name": "Mystic hat (dark)"},
+                {"id": 4107, "name": "Mystic boots (dark)"}
             ],
             "logCount": 2
         }
@@ -1479,9 +3192,9 @@
         "assetImage": "Mystic_gloves_dark.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Mystic gloves (dark)"
+                {"id": 4105, "name": "Mystic gloves (dark)"}
             ],
             "logCount": 1
         }
@@ -1495,12 +3208,14 @@
         "assetImage": "Obsidian_cape.png",
         "colLogData": {
             "category": "Other",
-            "logName": "TzHaar",
-            "exclude": [
-                "Obsidian platelegs",
-                "Obsidian helmet",
-                "Obsidian platebody",
-                "Toktz-mej-tal"
+            "logName": "tzHaar",
+            "include": [
+                {"id": 6522, "name": "Toktz-xil-ul"},
+                {"id": 6523, "name": "Toktz-xil-ak"},
+                {"id": 6524, "name": "Toktz-ket-xil"},
+                {"id": 6525, "name": "Toktz-xil-ek"},
+                {"id": 6528, "name": "Tzhaar-ket-om"},
+                {"id": 6568, "name": "Obsidian cape"}
             ],
             "logCount": 1
         }
@@ -1514,12 +3229,14 @@
         "assetImage": "Obsidian_cape.png",
         "colLogData": {
             "category": "Other",
-            "logName": "TzHaar",
-            "exclude": [
-                "Obsidian platelegs",
-                "Obsidian helmet",
-                "Obsidian platebody",
-                "Toktz-mej-tal"
+            "logName": "tzHaar",
+            "include": [
+                {"id": 6522, "name": "Toktz-xil-ul"},
+                {"id": 6523, "name": "Toktz-xil-ak"},
+                {"id": 6524, "name": "Toktz-ket-xil"},
+                {"id": 6525, "name": "Toktz-xil-ek"},
+                {"id": 6528, "name": "Tzhaar-ket-om"},
+                {"id": 6568, "name": "Obsidian cape"}
             ],
             "logCount": 2
         }
@@ -1533,9 +3250,9 @@
         "assetImage": "Big_swordfish.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Big swordfish"
+                {"id": 7991, "name": "Big swordfish"}
             ],
             "logCount": 1
         }
@@ -1549,9 +3266,9 @@
         "assetImage": "Big_bass.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Big bass"
+                {"id": 7989, "name": "Big bass"}
             ],
             "logCount": 1
         }
@@ -1565,9 +3282,9 @@
         "assetImage": "Long_bone.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Long bone"
+                {"id": 10976, "name": "Long bone"}
             ],
             "logCount": 1
         }
@@ -1581,9 +3298,9 @@
         "assetImage": "Ecumenical_key.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Ecumenical key"
+                {"id": 11942, "name": "Ecumenical key"}
             ],
             "logCount": 1
         }
@@ -1597,11 +3314,12 @@
         "assetImage": "Dark_totem_base.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Dark totem base",
-                "Dark totem middle",
-                "Dark totem top"
+                {"id": 19679, "name": "Dark totem base"},
+                {"id": 19681, "name": "Dark totem middle"},
+                {"id": 19683, "name": "Dark totem top"},
+                {"id": 19677, "name": "Ancient shard"}
             ],
             "logCount": 1
         }
@@ -1615,11 +3333,12 @@
         "assetImage": "Dark_totem_base.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Dark totem base",
-                "Dark totem middle",
-                "Dark totem top"
+                {"id": 19679, "name": "Dark totem base"},
+                {"id": 19681, "name": "Dark totem middle"},
+                {"id": 19683, "name": "Dark totem top"},
+                {"id": 19677, "name": "Ancient shard"}
             ],
             "logCount": 2
         }
@@ -1633,11 +3352,12 @@
         "assetImage": "Dark_totem_base.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Dark totem base",
-                "Dark totem middle",
-                "Dark totem top"
+                {"id": 19679, "name": "Dark totem base"},
+                {"id": 19681, "name": "Dark totem middle"},
+                {"id": 19683, "name": "Dark totem top"},
+                {"id": 19677, "name": "Ancient shard"}
             ],
             "logCount": 3
         }
@@ -1651,11 +3371,14 @@
         "assetImage": "Dark_totem_base.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Skotizo",
+            "logName": "skotizo",
             "include": [
-                "Ancient shard"
+                {"id": 19679, "name": "Dark totem base"},
+                {"id": 19681, "name": "Dark totem middle"},
+                {"id": 19683, "name": "Dark totem top"},
+                {"id": 19677, "name": "Ancient shard"}
             ],
-            "logCount": 1
+            "logCount": 4
         }
     },
     {
@@ -1667,9 +3390,9 @@
         "assetImage": "Mining_gloves.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Mining gloves"
+                {"id": 21343, "name": "Mining gloves"}
             ],
             "logCount": 1
         }
@@ -1683,9 +3406,9 @@
         "assetImage": "Right_skull_half.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Right skull half"
+                {"id": 9007, "name": "Right skull half"}
             ],
             "logCount": 1
         }
@@ -1699,9 +3422,9 @@
         "assetImage": "Left_skull_half.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Left skull half"
+                {"id": 9008, "name": "Left skull half"}
             ],
             "logCount": 1
         }
@@ -1715,9 +3438,9 @@
         "assetImage": "Top_of_sceptre.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Top of sceptre"
+                {"id": 9010, "name": "Top of sceptre"}
             ],
             "logCount": 1
         }
@@ -1731,9 +3454,9 @@
         "assetImage": "Bottom_of_sceptre.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Bottom of sceptre"
+                {"id": 9011, "name": "Bottom of sceptre"}
             ],
             "logCount": 1
         }
@@ -1747,9 +3470,9 @@
         "assetImage": "Mossy_key.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Mossy key"
+                {"id": 22374, "name": "Mossy key"}
             ],
             "logCount": 1
         }
@@ -1763,9 +3486,9 @@
         "assetImage": "Giant_key.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Giant key"
+                {"id": 20754, "name": "Giant key"}
             ],
             "logCount": 1
         }
@@ -1779,10 +3502,10 @@
         "assetImage": "Fresh_crab_claw.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Fresh crab claw",
-                "Fresh crab shell"
+                {"id": 7536, "name": "Fresh crab claw"},
+                {"id": 7538, "name": "Fresh crab shell"}
             ],
             "logCount": 2
         }
@@ -1796,9 +3519,9 @@
         "assetImage": "Xerics_talisman_inert.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Miscellaneous",
+            "logName": "miscellaneous",
             "include": [
-                "Xeric's talisman (inert)"
+                {"id": 13392, "name": "Xeric's talisman (inert)"}
             ],
             "logCount": 1
         }
@@ -1908,9 +3631,9 @@
         "assetImage": "1024px-Supply_crate_Mahogany_Homes_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Mahogany Homes",
+            "logName": "mahogany_homes",
             "include": [
-                "Supply crate"
+                {"id": 24884, "name": "Supply crate (Mahogany Homes)"}
             ],
             "logCount": 1
         }
@@ -1924,10 +3647,18 @@
         "assetImage": "160px-Tome_of_water_empty_detail.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Tempoross",
-            "exclude": [
-                "Dragon harpoon",
-                "Tiny tempor"
+            "logName": "tempoross",
+            "include": [
+                {"id": 25559, "name": "Big harpoonfish"},
+                {"id": 25592, "name": "Spirit angler headband"},
+                {"id": 25594, "name": "Spirit angler top"},
+                {"id": 25596, "name": "Spirit angler waders"},
+                {"id": 25598, "name": "Spirit angler boots"},
+                {"id": 25576, "name": "Tome of water (empty)"},
+                {"id": 25578, "name": "Soaked page"},
+                {"id": 25580, "name": "Tackle box"},
+                {"id": 25582, "name": "Fish barrel"},
+                {"id": 25588, "name": "Spirit flakes"}
             ],
             "logCount": 1
         }
@@ -1941,10 +3672,18 @@
         "assetImage": "160px-Tome_of_water_empty_detail.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Tempoross",
-            "exclude": [
-                "Dragon harpoon",
-                "Tiny tempor"
+            "logName": "tempoross",
+            "include": [
+                {"id": 25559, "name": "Big harpoonfish"},
+                {"id": 25592, "name": "Spirit angler headband"},
+                {"id": 25594, "name": "Spirit angler top"},
+                {"id": 25596, "name": "Spirit angler waders"},
+                {"id": 25598, "name": "Spirit angler boots"},
+                {"id": 25576, "name": "Tome of water (empty)"},
+                {"id": 25578, "name": "Soaked page"},
+                {"id": 25580, "name": "Tackle box"},
+                {"id": 25582, "name": "Fish barrel"},
+                {"id": 25588, "name": "Spirit flakes"}
             ],
             "logCount": 2
         }
@@ -1958,10 +3697,18 @@
         "assetImage": "160px-Tome_of_water_empty_detail.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Tempoross",
-            "exclude": [
-                "Dragon harpoon",
-                "Tiny tempor"
+            "logName": "tempoross",
+            "include": [
+                {"id": 25559, "name": "Big harpoonfish"},
+                {"id": 25592, "name": "Spirit angler headband"},
+                {"id": 25594, "name": "Spirit angler top"},
+                {"id": 25596, "name": "Spirit angler waders"},
+                {"id": 25598, "name": "Spirit angler boots"},
+                {"id": 25576, "name": "Tome of water (empty)"},
+                {"id": 25578, "name": "Soaked page"},
+                {"id": 25580, "name": "Tackle box"},
+                {"id": 25582, "name": "Fish barrel"},
+                {"id": 25588, "name": "Spirit flakes"}
             ],
             "logCount": 3
         }
@@ -1975,10 +3722,18 @@
         "assetImage": "160px-Tome_of_water_empty_detail.png",
         "colLogData": {
             "category": "Bosses",
-            "logName": "Tempoross",
-            "exclude": [
-                "Dragon harpoon",
-                "Tiny tempor"
+            "logName": "tempoross",
+            "include": [
+                {"id": 25559, "name": "Big harpoonfish"},
+                {"id": 25592, "name": "Spirit angler headband"},
+                {"id": 25594, "name": "Spirit angler top"},
+                {"id": 25596, "name": "Spirit angler waders"},
+                {"id": 25598, "name": "Spirit angler boots"},
+                {"id": 25576, "name": "Tome of water (empty)"},
+                {"id": 25578, "name": "Soaked page"},
+                {"id": 25580, "name": "Tackle box"},
+                {"id": 25582, "name": "Fish barrel"},
+                {"id": 25588, "name": "Spirit flakes"}
             ],
             "logCount": 4
         }
@@ -1992,9 +3747,18 @@
         "assetImage": "130px-Barronite_mace_detail.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Camdozaal",
-            "exclude": [
-                "N/A"
+            "logName": "camdozaal",
+            "include": [
+                {"id": 25635, "name": "Barronite head"},
+                {"id": 25637, "name": "Barronite handle"},
+                {"id": 25639, "name": "Barronite guard"},
+                {"id": 25641, "name": "Barronite mace"},
+                {"id": 25644, "name": "Imcando hammer"},
+                {"id": 25686, "name": "Ancient globe"},
+                {"id": 25688, "name": "Ancient ledger"},
+                {"id": 25690, "name": "Ancient astroscope"},
+                {"id": 25692, "name": "Ancient treatise"},
+                {"id": 25694, "name": "Ancient carcanet"}
             ],
             "logCount": 5
         }
@@ -2008,9 +3772,18 @@
         "assetImage": "130px-Barronite_mace_detail.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Camdozaal",
-            "exclude": [
-                "N/A"
+            "logName": "camdozaal",
+            "include": [
+                {"id": 25635, "name": "Barronite head"},
+                {"id": 25637, "name": "Barronite handle"},
+                {"id": 25639, "name": "Barronite guard"},
+                {"id": 25641, "name": "Barronite mace"},
+                {"id": 25644, "name": "Imcando hammer"},
+                {"id": 25686, "name": "Ancient globe"},
+                {"id": 25688, "name": "Ancient ledger"},
+                {"id": 25690, "name": "Ancient astroscope"},
+                {"id": 25692, "name": "Ancient treatise"},
+                {"id": 25694, "name": "Ancient carcanet"}
             ],
             "logCount": 10
         }
@@ -2024,9 +3797,24 @@
         "assetImage": "Hat_of_the_eye_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Guardians of the Rift",
-            "exclude": [
-                "Abyssal protector"
+            "logName": "guardians_of_the_rift",
+            "include": [
+                {"id": 26792, "name": "Abyssal pearls"},
+                {"id": 26798, "name": "Catalytic talisman"},
+                {"id": 26807, "name": "Abyssal green dye"},
+                {"id": 26809, "name": "Abyssal blue dye"},
+                {"id": 26811, "name": "Abyssal red dye"},
+                {"id": 26813, "name": "Abyssal needle"},
+                {"id": 26815, "name": "Ring of the elements"},
+                {"id": 26820, "name": "Guardian's eye"},
+                {"id": 26822, "name": "Abyssal lantern"},
+                {"id": 26850, "name": "Hat of the eye"},
+                {"id": 26852, "name": "Robe top of the eye"},
+                {"id": 26854, "name": "Robe bottoms of the eye"},
+                {"id": 26856, "name": "Boots of the eye"},
+                {"id": 26908, "name": "Intricate pouch"},
+                {"id": 26910, "name": "Tarnished locket"},
+                {"id": 26912, "name": "Lost bag"}
             ],
             "logCount": 1
         }
@@ -2040,9 +3828,24 @@
         "assetImage": "Hat_of_the_eye_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Guardians of the Rift",
-            "exclude": [
-                "Abyssal protector"
+            "logName": "guardians_of_the_rift",
+            "include": [
+                {"id": 26792, "name": "Abyssal pearls"},
+                {"id": 26798, "name": "Catalytic talisman"},
+                {"id": 26807, "name": "Abyssal green dye"},
+                {"id": 26809, "name": "Abyssal blue dye"},
+                {"id": 26811, "name": "Abyssal red dye"},
+                {"id": 26813, "name": "Abyssal needle"},
+                {"id": 26815, "name": "Ring of the elements"},
+                {"id": 26820, "name": "Guardian's eye"},
+                {"id": 26822, "name": "Abyssal lantern"},
+                {"id": 26850, "name": "Hat of the eye"},
+                {"id": 26852, "name": "Robe top of the eye"},
+                {"id": 26854, "name": "Robe bottoms of the eye"},
+                {"id": 26856, "name": "Boots of the eye"},
+                {"id": 26908, "name": "Intricate pouch"},
+                {"id": 26910, "name": "Tarnished locket"},
+                {"id": 26912, "name": "Lost bag"}
             ],
             "logCount": 2
         }
@@ -2056,9 +3859,24 @@
         "assetImage": "Hat_of_the_eye_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Guardians of the Rift",
-            "exclude": [
-                "Abyssal protector"
+            "logName": "guardians_of_the_rift",
+            "include": [
+                {"id": 26792, "name": "Abyssal pearls"},
+                {"id": 26798, "name": "Catalytic talisman"},
+                {"id": 26807, "name": "Abyssal green dye"},
+                {"id": 26809, "name": "Abyssal blue dye"},
+                {"id": 26811, "name": "Abyssal red dye"},
+                {"id": 26813, "name": "Abyssal needle"},
+                {"id": 26815, "name": "Ring of the elements"},
+                {"id": 26820, "name": "Guardian's eye"},
+                {"id": 26822, "name": "Abyssal lantern"},
+                {"id": 26850, "name": "Hat of the eye"},
+                {"id": 26852, "name": "Robe top of the eye"},
+                {"id": 26854, "name": "Robe bottoms of the eye"},
+                {"id": 26856, "name": "Boots of the eye"},
+                {"id": 26908, "name": "Intricate pouch"},
+                {"id": 26910, "name": "Tarnished locket"},
+                {"id": 26912, "name": "Lost bag"}
             ],
             "logCount": 3
         }
@@ -2072,9 +3890,24 @@
         "assetImage": "Hat_of_the_eye_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Guardians of the Rift",
-            "exclude": [
-                "Abyssal protector"
+            "logName": "guardians_of_the_rift",
+            "include": [
+                {"id": 26792, "name": "Abyssal pearls"},
+                {"id": 26798, "name": "Catalytic talisman"},
+                {"id": 26807, "name": "Abyssal green dye"},
+                {"id": 26809, "name": "Abyssal blue dye"},
+                {"id": 26811, "name": "Abyssal red dye"},
+                {"id": 26813, "name": "Abyssal needle"},
+                {"id": 26815, "name": "Ring of the elements"},
+                {"id": 26820, "name": "Guardian's eye"},
+                {"id": 26822, "name": "Abyssal lantern"},
+                {"id": 26850, "name": "Hat of the eye"},
+                {"id": 26852, "name": "Robe top of the eye"},
+                {"id": 26854, "name": "Robe bottoms of the eye"},
+                {"id": 26856, "name": "Boots of the eye"},
+                {"id": 26908, "name": "Intricate pouch"},
+                {"id": 26910, "name": "Tarnished locket"},
+                {"id": 26912, "name": "Lost bag"}
             ],
             "logCount": 4
         }
@@ -2088,9 +3921,16 @@
         "assetImage": "Kovac's_grog_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Giants' Foundry",
-            "exclude": [
-                "Colossal blade"
+            "logName": "giants_foundry",
+            "include": [
+                {"id": 27012, "name": "Double ammo mould"},
+                {"id": 27014, "name": "Kovac's grog"},
+                {"id": 27017, "name": "Smithing catalyst"},
+                {"id": 27019, "name": "Ore pack (Giants' Foundry)"},
+                {"id": 27023, "name": "Smiths tunic"},
+                {"id": 27025, "name": "Smiths trousers"},
+                {"id": 27027, "name": "Smiths boots"},
+                {"id": 27029, "name": "Smiths gloves"}
             ],
             "logCount": 1
         }
@@ -2104,9 +3944,16 @@
         "assetImage": "Kovac's_grog_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Giants' Foundry",
-            "exclude": [
-                "Colossal blade"
+            "logName": "giants_foundry",
+            "include": [
+                {"id": 27012, "name": "Double ammo mould"},
+                {"id": 27014, "name": "Kovac's grog"},
+                {"id": 27017, "name": "Smithing catalyst"},
+                {"id": 27019, "name": "Ore pack (Giants' Foundry)"},
+                {"id": 27023, "name": "Smiths tunic"},
+                {"id": 27025, "name": "Smiths trousers"},
+                {"id": 27027, "name": "Smiths boots"},
+                {"id": 27029, "name": "Smiths gloves"}
             ],
             "logCount": 2
         }
@@ -2120,9 +3967,16 @@
         "assetImage": "Kovac's_grog_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Giants' Foundry",
-            "exclude": [
-                "Colossal blade"
+            "logName": "giants_foundry",
+            "include": [
+                {"id": 27012, "name": "Double ammo mould"},
+                {"id": 27014, "name": "Kovac's grog"},
+                {"id": 27017, "name": "Smithing catalyst"},
+                {"id": 27019, "name": "Ore pack (Giants' Foundry)"},
+                {"id": 27023, "name": "Smiths tunic"},
+                {"id": 27025, "name": "Smiths trousers"},
+                {"id": 27027, "name": "Smiths boots"},
+                {"id": 27029, "name": "Smiths gloves"}
             ],
             "logCount": 3
         }
@@ -2136,9 +3990,16 @@
         "assetImage": "Kovac's_grog_detail.png",
         "colLogData": {
             "category": "Minigames",
-            "logName": "Giants' Foundry",
-            "exclude": [
-                "Colossal blade"
+            "logName": "giants_foundry",
+            "include": [
+                {"id": 27012, "name": "Double ammo mould"},
+                {"id": 27014, "name": "Kovac's grog"},
+                {"id": 27017, "name": "Smithing catalyst"},
+                {"id": 27019, "name": "Ore pack (Giants' Foundry)"},
+                {"id": 27023, "name": "Smiths tunic"},
+                {"id": 27025, "name": "Smiths trousers"},
+                {"id": 27027, "name": "Smiths boots"},
+                {"id": 27029, "name": "Smiths gloves"}
             ],
             "logCount": 4
         }
@@ -2152,12 +4013,27 @@
         "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Forestry",
-            "exclude": [
-                "Lumberjack legs",
-                "Lumberjack hat",
-                "Lumberjack boots",
-                "Lumberjack top"
+            "logName": "forestry",
+            "include": [
+                {"id": 28626, "name": "Fox whistle"},
+                {"id": 28663, "name": "Golden pheasant egg"},
+                {"id": 28169, "name": "Forestry top"},
+                {"id": 28171, "name": "Forestry legs"},
+                {"id": 28173, "name": "Forestry hat"},
+                {"id": 28175, "name": "Forestry boots"},
+                {"id": 28630, "name": "Twitcher's gloves"},
+                {"id": 28138, "name": "Funky shaped log"},
+                {"id": 28140, "name": "Log basket"},
+                {"id": 28146, "name": "Log brace"},
+                {"id": 28166, "name": "Clothes pouch blueprint"},
+                {"id": 28613, "name": "Cape pouch"},
+                {"id": 28177, "name": "Felling axe handle"},
+                {"id": 28655, "name": "Petal garland"},
+                {"id": 28674, "name": "Sturdy beehive parts"},
+                {"id": 28616, "name": "Pheasant cape"},
+                {"id": 28618, "name": "Pheasant boots"},
+                {"id": 28620, "name": "Pheasant hat"},
+                {"id": 28622, "name": "Pheasant legs"}
             ],
             "logCount": 1
         }
@@ -2171,12 +4047,27 @@
         "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Forestry",
-            "exclude": [
-                "Lumberjack legs",
-                "Lumberjack hat",
-                "Lumberjack boots",
-                "Lumberjack top"
+            "logName": "forestry",
+            "include": [
+                {"id": 28626, "name": "Fox whistle"},
+                {"id": 28663, "name": "Golden pheasant egg"},
+                {"id": 28169, "name": "Forestry top"},
+                {"id": 28171, "name": "Forestry legs"},
+                {"id": 28173, "name": "Forestry hat"},
+                {"id": 28175, "name": "Forestry boots"},
+                {"id": 28630, "name": "Twitcher's gloves"},
+                {"id": 28138, "name": "Funky shaped log"},
+                {"id": 28140, "name": "Log basket"},
+                {"id": 28146, "name": "Log brace"},
+                {"id": 28166, "name": "Clothes pouch blueprint"},
+                {"id": 28613, "name": "Cape pouch"},
+                {"id": 28177, "name": "Felling axe handle"},
+                {"id": 28655, "name": "Petal garland"},
+                {"id": 28674, "name": "Sturdy beehive parts"},
+                {"id": 28616, "name": "Pheasant cape"},
+                {"id": 28618, "name": "Pheasant boots"},
+                {"id": 28620, "name": "Pheasant hat"},
+                {"id": 28622, "name": "Pheasant legs"}
             ],
             "logCount": 2
         }
@@ -2190,12 +4081,27 @@
         "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Forestry",
-            "exclude": [
-                "Lumberjack legs",
-                "Lumberjack hat",
-                "Lumberjack boots",
-                "Lumberjack top"
+            "logName": "forestry",
+            "include": [
+                {"id": 28626, "name": "Fox whistle"},
+                {"id": 28663, "name": "Golden pheasant egg"},
+                {"id": 28169, "name": "Forestry top"},
+                {"id": 28171, "name": "Forestry legs"},
+                {"id": 28173, "name": "Forestry hat"},
+                {"id": 28175, "name": "Forestry boots"},
+                {"id": 28630, "name": "Twitcher's gloves"},
+                {"id": 28138, "name": "Funky shaped log"},
+                {"id": 28140, "name": "Log basket"},
+                {"id": 28146, "name": "Log brace"},
+                {"id": 28166, "name": "Clothes pouch blueprint"},
+                {"id": 28613, "name": "Cape pouch"},
+                {"id": 28177, "name": "Felling axe handle"},
+                {"id": 28655, "name": "Petal garland"},
+                {"id": 28674, "name": "Sturdy beehive parts"},
+                {"id": 28616, "name": "Pheasant cape"},
+                {"id": 28618, "name": "Pheasant boots"},
+                {"id": 28620, "name": "Pheasant hat"},
+                {"id": 28622, "name": "Pheasant legs"}
             ],
             "logCount": 3
         }
@@ -2209,12 +4115,27 @@
         "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Forestry",
-            "exclude": [
-                "Lumberjack legs",
-                "Lumberjack hat",
-                "Lumberjack boots",
-                "Lumberjack top"
+            "logName": "forestry",
+            "include": [
+                {"id": 28626, "name": "Fox whistle"},
+                {"id": 28663, "name": "Golden pheasant egg"},
+                {"id": 28169, "name": "Forestry top"},
+                {"id": 28171, "name": "Forestry legs"},
+                {"id": 28173, "name": "Forestry hat"},
+                {"id": 28175, "name": "Forestry boots"},
+                {"id": 28630, "name": "Twitcher's gloves"},
+                {"id": 28138, "name": "Funky shaped log"},
+                {"id": 28140, "name": "Log basket"},
+                {"id": 28146, "name": "Log brace"},
+                {"id": 28166, "name": "Clothes pouch blueprint"},
+                {"id": 28613, "name": "Cape pouch"},
+                {"id": 28177, "name": "Felling axe handle"},
+                {"id": 28655, "name": "Petal garland"},
+                {"id": 28674, "name": "Sturdy beehive parts"},
+                {"id": 28616, "name": "Pheasant cape"},
+                {"id": 28618, "name": "Pheasant boots"},
+                {"id": 28620, "name": "Pheasant hat"},
+                {"id": 28622, "name": "Pheasant legs"}
             ],
             "logCount": 4
         }
@@ -2228,12 +4149,27 @@
         "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Forestry",
-            "exclude": [
-                "Lumberjack legs",
-                "Lumberjack hat",
-                "Lumberjack boots",
-                "Lumberjack top"
+            "logName": "forestry",
+            "include": [
+                {"id": 28626, "name": "Fox whistle"},
+                {"id": 28663, "name": "Golden pheasant egg"},
+                {"id": 28169, "name": "Forestry top"},
+                {"id": 28171, "name": "Forestry legs"},
+                {"id": 28173, "name": "Forestry hat"},
+                {"id": 28175, "name": "Forestry boots"},
+                {"id": 28630, "name": "Twitcher's gloves"},
+                {"id": 28138, "name": "Funky shaped log"},
+                {"id": 28140, "name": "Log basket"},
+                {"id": 28146, "name": "Log brace"},
+                {"id": 28166, "name": "Clothes pouch blueprint"},
+                {"id": 28613, "name": "Cape pouch"},
+                {"id": 28177, "name": "Felling axe handle"},
+                {"id": 28655, "name": "Petal garland"},
+                {"id": 28674, "name": "Sturdy beehive parts"},
+                {"id": 28616, "name": "Pheasant cape"},
+                {"id": 28618, "name": "Pheasant boots"},
+                {"id": 28620, "name": "Pheasant hat"},
+                {"id": 28622, "name": "Pheasant legs"}
             ],
             "logCount": 5
         }
@@ -2247,12 +4183,27 @@
         "assetImage": "forestry_kit.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Forestry",
-            "exclude": [
-                "Lumberjack legs",
-                "Lumberjack hat",
-                "Lumberjack boots",
-                "Lumberjack top"
+            "logName": "forestry",
+            "include": [
+                {"id": 28626, "name": "Fox whistle"},
+                {"id": 28663, "name": "Golden pheasant egg"},
+                {"id": 28169, "name": "Forestry top"},
+                {"id": 28171, "name": "Forestry legs"},
+                {"id": 28173, "name": "Forestry hat"},
+                {"id": 28175, "name": "Forestry boots"},
+                {"id": 28630, "name": "Twitcher's gloves"},
+                {"id": 28138, "name": "Funky shaped log"},
+                {"id": 28140, "name": "Log basket"},
+                {"id": 28146, "name": "Log brace"},
+                {"id": 28166, "name": "Clothes pouch blueprint"},
+                {"id": 28613, "name": "Cape pouch"},
+                {"id": 28177, "name": "Felling axe handle"},
+                {"id": 28655, "name": "Petal garland"},
+                {"id": 28674, "name": "Sturdy beehive parts"},
+                {"id": 28616, "name": "Pheasant cape"},
+                {"id": 28618, "name": "Pheasant boots"},
+                {"id": 28620, "name": "Pheasant hat"},
+                {"id": 28622, "name": "Pheasant legs"}
             ],
             "logCount": 6
         }
@@ -2266,9 +4217,9 @@
         "assetImage": "warped_sceptre.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Warped sceptre (uncharged)"
+                {"id": 28583, "name": "Warped sceptre (uncharged)"}
             ],
             "logCount": 1
         }
@@ -2282,9 +4233,13 @@
         "assetImage": "huntsman_kit.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Hunter Guild",
-            "exclude": [
-                "Quetzin"
+            "logName": "hunter_guild",
+            "include": [
+                {"id": 29309, "name": "Huntsman's kit"},
+                {"id": 29263, "name": "Guild hunter headwear"},
+                {"id": 29265, "name": "Guild hunter top"},
+                {"id": 29267, "name": "Guild hunter legs"},
+                {"id": 29269, "name": "Guild hunter boots"}
             ],
             "logCount": 1
         }
@@ -2298,9 +4253,9 @@
         "assetImage": "sulphur_blades.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Slayer",
+            "logName": "slayer",
             "include": [
-                "Sulphur blades"
+                {"id": 29084, "name": "Sulphur blades"}
             ],
             "logCount": 1
         }
@@ -2314,9 +4269,9 @@
         "assetImage": "Colossal_wyrm_teleport_scroll_detail.png",
         "colLogData": {
             "category": "Other",
-            "logName": "Colossal Wyrm Agility",
+            "logName": "colossal_wyrm_agility",
             "include": [
-                "Colossal wyrm teleport scroll"
+                {"id": 30040, "name": "Colossal wyrm teleport scroll"}
             ],
             "logCount": 1
         }

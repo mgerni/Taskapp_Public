@@ -14,6 +14,7 @@ from task_database import (get_taskCurrent, generate_task, complete_task, get_ta
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
+from templesync import check_logs
 
 app = Flask(__name__)
 
@@ -443,6 +444,17 @@ def dashboard():
 def collection_log_check():
     form_data = request.form
     rs_username = form_data['username']
+    easy_check = check_logs(rs_username, 'tasks/easy.json')
+    medium_check = check_logs(rs_username, 'tasks/medium.json')
+    hard_check = check_logs(rs_username, 'tasks/hard.json')
+    elite_check = check_logs(rs_username, 'tasks/elite.json')
+
+    return render_template('collection_log_check.html',
+                           rs_username = rs_username,
+                           easy_check = easy_check,
+                           medium_check = medium_check,
+                           hard_check = hard_check,
+                           elite_check= elite_check)
     log_data = get_collection_log(rs_username)
     if log_data[0] == 200:
         easy_check = check_collection_log(tasklists.easy, log_data[1])
