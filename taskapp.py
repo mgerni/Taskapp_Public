@@ -520,20 +520,33 @@ def complete_unofficial():
     current_task = get_taskCurrent_tier(username, tier)
     progress = get_task_progress(username)
     data = {
-        'easy': progress['easy']['percent_complete'],
-        'medium': progress['medium']['percent_complete'],
-        'hard': progress['hard']['percent_complete'],
-        'elite': progress['elite']['percent_complete'],
-        'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
-        'extra' : progress['extra']['percent_complete'],
-        'allPets' : progress['all_pets']['percent_complete'],
-        }
+            'easy': progress['easy']['percent_complete'],
+            'medium': progress['medium']['percent_complete'],
+            'hard': progress['hard']['percent_complete'],
+            'elite': progress['elite']['percent_complete'],
+            'master' : progress['master']['percent_complete'],
+            'passive' : progress['passive']['percent_complete'], 
+            'extra' : progress['extra']['percent_complete'],
+            'allPets' : progress['all_pets']['percent_complete'],
+            }
     if current_task is not None:
         task_id = current_task[3]
         query_params = complete_task_unofficial_tier(username, task_id, tier)
+        progress = get_task_progress(username)
+        data = {
+            'easy': progress['easy']['percent_complete'],
+            'medium': progress['medium']['percent_complete'],
+            'hard': progress['hard']['percent_complete'],
+            'elite': progress['elite']['percent_complete'],
+            'master' : progress['master']['percent_complete'],
+            'passive' : progress['passive']['percent_complete'], 
+            'extra' : progress['extra']['percent_complete'],
+            'allPets' : progress['all_pets']['percent_complete'],
+            }
+
         return data
     return data
+    
 
 # route for task-list page, this page lists all tasks easy, medium, hard, elite, extra, passive and pets.
 @app.route('/task-list/', methods=['GET'])
