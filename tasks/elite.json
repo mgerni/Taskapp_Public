@@ -8600,35 +8600,6 @@
         }
     },
     {
-        "_id": 194,
-        "name": "Get 1 unique from Araxxytes/Araxxor",
-        "tip": "Can be obtained when killing Araxxytes/Araxxor",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Araxyte_fang#/media/File:Araxyte_fang_detail.png",
-        "assetImage": "araxxor_fang.png",
-        "colLogData": {
-            "category": null,
-            "logName": null,
-            "multi_category" : [
-                {"category" : "Other", "logName" : "Slayer"},
-                {"category" : "Bosses", "logName" : "Araxxor"}
-            ],
-
-            "include": [
-                {"id": 29782, "name": "Spider cave teleport"},
-                {"id": 29784, "name": "Araxyte venom sack"},
-                {"id": 29790, "name": "Noxious point"},
-                {"id": 29792, "name": "Noxious blade"},
-                {"id": 29794, "name": "Noxious pommel"},
-                {"id": 29799, "name": "Araxyte fang"},
-                {"id": 29788, "name": "Araxyte head"},
-                {"id": 29806, "name": "Aranea boots"},
-                {"id": 29781, "name": "Coagulated venom"}
-            ],
-            "logCount": 9
-        }
-    },
-    {
         "_id": 195,
         "name": "Get a Chugging barrel",
         "tip": "Obtained through Mastering Mixology Herblore Minigame",

@@ -262,5 +262,34 @@
         "name": "Get a Dark claw",
         "assetImage": "Dark_claw.png",
         "wikiLink": "https://oldschool.runescape.wiki/w/Dark_claw"
+    },
+    {
+        "_id": 45,
+        "name": "Get coagulated venom",
+        "tip": "Obtained by killing Araxxor within time constraint",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Coagulated_venom",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Coagulated_venom_detail.png?fa0de",
+        "assetImage": "Coagulated_venom.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "multi_category" : [
+                {"category" : "Other", "logName" : "Slayer"},
+                {"category" : "Bosses", "logName" : "Araxxor"}
+            ],
+
+            "include": [
+                {"id": 29782, "name": "Spider cave teleport"},
+                {"id": 29784, "name": "Araxyte venom sack"},
+                {"id": 29790, "name": "Noxious point"},
+                {"id": 29792, "name": "Noxious blade"},
+                {"id": 29794, "name": "Noxious pommel"},
+                {"id": 29799, "name": "Araxyte fang"},
+                {"id": 29788, "name": "Araxyte head"},
+                {"id": 29806, "name": "Aranea boots"},
+                {"id": 29781, "name": "Coagulated venom"}
+            ],
+            "logCount": 9
+        }
     }
 ]
