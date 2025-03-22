@@ -736,6 +736,12 @@ tier_to_type = {
 @login_required
 def update():
     user_info = BasePageInfo()
+    task_id = request.form['id']
+    if request.form["tier"] == 'bossPets' or request.form["tier"] == 'skillPets' or request.form["tier"] == 'otherPets':
+        tier = request.form["tier"]
+    else:
+        tier = request.form['tier'] + 'Tasks'
+    manual_complete_tasks(session['username'], tier, task_id)
     progress = get_task_progress(user_info.username)
     data = {
         'easy': progress['easy']['percent_complete'],
@@ -747,13 +753,6 @@ def update():
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
-    task_id = request.form['id']
-    if request.form["tier"] == 'bossPets' or request.form["tier"] == 'skillPets' or request.form["tier"] == 'otherPets':
-        tier = request.form["tier"]
-    else:
-        tier = request.form['tier'] + 'Tasks'
-    manual_complete_tasks(session['username'], tier, task_id)
-
     return data
 
 # AJAX route for uncompleting/reverting tasks manually on task-list page(s).
@@ -765,6 +764,7 @@ def revert():
     task_id = request.form['id']
     tier = request.form['tier'] + 'Tasks'
     user_info = BasePageInfo()
+    manual_revert_tasks(session['username'], tier, task_id)
     progress = get_task_progress(user_info.username)
     data = {
         'easy': progress['easy']['percent_complete'],
@@ -776,8 +776,6 @@ def revert():
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
-    manual_revert_tasks(session['username'], tier, task_id)
-
     return data
 
 
