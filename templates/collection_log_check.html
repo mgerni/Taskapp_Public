@@ -1,5 +1,5 @@
 <div>
-    <h3>Rank Up Results for: {{rs_username}}</h3>
+    <h3>Rank Up Results For: {{rs_username}}</h3>
 </div>
 <div class="rank-results-row">
     <p>Easy Tier:</p>
@@ -19,8 +19,7 @@
 <div class="rank-results-row">
     <p>Medium Tier:</p>
     {% if medium_check %}
-    <p class="incomplete
-    ">INCOMPLETE</p>
+    <p class="incomplete">INCOMPLETE</p>
     <button class="button-failed button-orange missing-medium">Missing Tasks</button>
     <ul>
         {% for task in medium_check %}
@@ -52,7 +51,7 @@
     <p>Elite Tier:</p>
     {% if elite_check %}
     <p class="incomplete">INCOMPLETE</p>
-    <button class="button-failed button-orange missing-impossible">Missing Tasks</button>
+    <button class="button-failed button-orange missing-elite">Missing Tasks</button>
     <ul>
         {% for task in elite_check %}
         <li class="li-elite" style="display: none;">{{task}}</li>
