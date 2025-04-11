@@ -2006,7 +2006,8 @@
                 {"id": 23224, "name": "Thieving bag"},
                 {"id": 23227, "name": "Rune defender ornament kit"},
                 {"id": 23232, "name": "Tzhaar-ket-om ornament kit"},
-                {"id": 23237, "name": "Berserker necklace ornament kit"}
+                {"id": 23237, "name": "Berserker necklace ornament kit"},
+                {"id": 19912, "name" : "Zombie head (Treasure Trails)"}
             ],
             "logCount": 15
         }
@@ -2154,7 +2155,8 @@
                 {"id": 23224, "name": "Thieving bag"},
                 {"id": 23227, "name": "Rune defender ornament kit"},
                 {"id": 23232, "name": "Tzhaar-ket-om ornament kit"},
-                {"id": 23237, "name": "Berserker necklace ornament kit"}
+                {"id": 23237, "name": "Berserker necklace ornament kit"},
+                {"id": 19912, "name" : "Zombie head (Treasure Trails)"}
             ],
             "logCount": 20
         }
@@ -2302,7 +2304,8 @@
                 {"id": 23224, "name": "Thieving bag"},
                 {"id": 23227, "name": "Rune defender ornament kit"},
                 {"id": 23232, "name": "Tzhaar-ket-om ornament kit"},
-                {"id": 23237, "name": "Berserker necklace ornament kit"}
+                {"id": 23237, "name": "Berserker necklace ornament kit"},
+                {"id": 19912, "name" : "Zombie head (Treasure Trails)"}
             ],
             "logCount": 25
         }
@@ -2450,7 +2453,8 @@
                 {"id": 23224, "name": "Thieving bag"},
                 {"id": 23227, "name": "Rune defender ornament kit"},
                 {"id": 23232, "name": "Tzhaar-ket-om ornament kit"},
-                {"id": 23237, "name": "Berserker necklace ornament kit"}
+                {"id": 23237, "name": "Berserker necklace ornament kit"},
+                {"id": 19912, "name" : "Zombie head (Treasure Trails)"}
             ],
             "logCount": 30
         }
