@@ -5070,7 +5070,7 @@
         "name": "Get a Scurrius' spine",
         "tip": "Received as a drop when killing Scurrius",
         "wikiLink": "https://oldschool.runescape.wiki/w/Scurrius",
-        "wikiImage": "https://oldschool.runescape.wiki/w/File:Scurrius%27_spine.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Scurrius%27_spine.png/200px-Scurrius%27_spine.png",
         "assetImage": "Scurrius'_spine.png",
         "colLogData": {
             "category": "Bosses",
@@ -5085,8 +5085,8 @@
         "_id": 165,
         "name": "Get 1 unique from Armoured Zombies",
         "tip": "First unique is Defender of Varrock for Broken zombie axe, and 2nd unique is completing Curse of Arrav for the helmet",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Armoured_zombie_(Zemouregal%27s_Fort)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Broken_zombie_axe_detail.png/200px-Broken_zombie_axe_detail.png",
         "assetImage": "Broken_zombie_axe.png",
         "colLogData": {
             "category": "Other",
@@ -5102,8 +5102,8 @@
         "_id": 166,
         "name": "Get 1 unique from Armoured Zombies",
         "tip": "First unique is Defender of Varrock for Broken zombie axe, and 2nd unique is completing Curse of Arrav for the helmet",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Broken_zombie_axe#/media/File:Broken_zombie_axe_detail.png",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Armoured_zombie_(Zemouregal%27s_Fort)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Broken_zombie_axe_detail.png/200px-Broken_zombie_axe_detail.png",
         "assetImage": "Broken_zombie_axe.png",
         "colLogData": {
             "category": "Other",
@@ -5120,7 +5120,7 @@
         "name": "Get 1 unique from Moons of Peril",
         "tip": "Received as a drop from Moons of Peril bosses",
         "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Dual_macuahuitl#/media/File:Dual_macuahuitl_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dual_macuahuitl_detail.png/200px-Dual_macuahuitl_detail.png",
         "assetImage": "dual_macuahuitl.png",
         "colLogData": {
             "category": "Bosses",
@@ -5148,7 +5148,7 @@
         "name": "Get 1 unique from Moons of Peril",
         "tip": "Received as a drop from Moons of Peril bosses",
         "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Dual_macuahuitl#/media/File:Dual_macuahuitl_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dual_macuahuitl_detail.png/200px-Dual_macuahuitl_detail.png",
         "assetImage": "dual_macuahuitl.png",
         "colLogData": {
             "category": "Bosses",
@@ -5176,7 +5176,7 @@
         "name": "Get 1 unique from Moons of Peril",
         "tip": "Received as a drop from Moons of Peril bosses",
         "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Dual_macuahuitl#/media/File:Dual_macuahuitl_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dual_macuahuitl_detail.png/200px-Dual_macuahuitl_detail.png",
         "assetImage": "dual_macuahuitl.png",
         "colLogData": {
             "category": "Bosses",
@@ -5204,7 +5204,7 @@
         "name": "Get 1 unique from Moons of Peril",
         "tip": "Received as a drop from Moons of Peril bosses",
         "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Dual_macuahuitl#/media/File:Dual_macuahuitl_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dual_macuahuitl_detail.png/200px-Dual_macuahuitl_detail.png",
         "assetImage": "dual_macuahuitl.png",
         "colLogData": {
             "category": "Bosses",
@@ -5232,7 +5232,7 @@
         "name": "Get 1 unique from the Hunter Guild",
         "tip": "Received as a drop when completing Hunters Rumours",
         "wikiLink": "https://oldschool.runescape.wiki/w/Hunter_Guild#Other",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Guild_hunter_top#/media/File:Guild_hunter_top_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Guild_hunter_top_detail.png/200px-Guild_hunter_top_detail.png",
         "assetImage": "guild_hunter_top.png",
         "colLogData": {
             "category": "Other",
@@ -5268,7 +5268,7 @@
         "name": "Get 1 Alchemist outfit piece",
         "tip": "Obtained through Mastering Mixology Herblore Minigame",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Alchemist_labcoat#/media/File:Alchemist_labcoat_(apron_off)_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Alchemist_labcoat_(apron_off)_detail.png/200px-Alchemist_labcoat_(apron_off)_detail.png",
         "assetImage": "Alchemist_labcoat.png",
         "colLogData": {
             "category": "Minigames",
@@ -5286,7 +5286,7 @@
         "name": "Get 1 Alchemist outfit piece",
         "tip": "Obtained through Mastering Mixology Herblore Minigame",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Alchemist_labcoat#/media/File:Alchemist_labcoat_(apron_off)_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Alchemist_labcoat_(apron_off)_detail.png/200px-Alchemist_labcoat_(apron_off)_detail.png",
         "assetImage": "Alchemist_labcoat.png",
         "colLogData": {
             "category": "Minigames",
@@ -5304,7 +5304,7 @@
         "name": "Get 1 Alchemist outfit piece",
         "tip": "Obtained through Mastering Mixology Herblore Minigame",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Alchemist_labcoat#/media/File:Alchemist_labcoat_(apron_off)_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Alchemist_labcoat_(apron_off)_detail.png/200px-Alchemist_labcoat_(apron_off)_detail.png",
         "assetImage": "Alchemist_labcoat.png",
         "colLogData": {
             "category": "Minigames",
@@ -5322,7 +5322,7 @@
         "name": "Get 1 unique from Amoxliatl",
         "tip": "Obtained when killing Amoxliatl. Taskers may also kill Frost naguas as they drop the same uniques excluding the pet",
         "wikiLink": "https://oldschool.runescape.wiki/w/Amoxliatl",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Glacial_temotli#/media/File:Glacial_temotli_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Glacial_temotli_detail.png/200px-Glacial_temotli_detail.png",
         "assetImage": "Glacial_temotli_detail.png",
         "colLogData": {
             "category": "Bosses",
@@ -5340,7 +5340,7 @@
         "name": "Get 1 unique from Amoxliatl",
         "tip": "Obtained when killing Amoxliatl. Taskers may also kill Frost naguas as they drop the same uniques excluding the pet",
         "wikiLink": "https://oldschool.runescape.wiki/w/Amoxliatl",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Glacial_temotli#/media/File:Glacial_temotli_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Glacial_temotli_detail.png/200px-Glacial_temotli_detail.png",
         "assetImage": "Glacial_temotli_detail.png",
         "colLogData": {
             "category": "Bosses",
@@ -5358,7 +5358,7 @@
         "name": "Get 1 unique from Amoxliatl",
         "tip": "Obtained when killing Amoxliatl. Taskers may also kill Frost naguas as they drop the same uniques excluding the pet",
         "wikiLink": "https://oldschool.runescape.wiki/w/Amoxliatl",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Glacial_temotli#/media/File:Glacial_temotli_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Glacial_temotli_detail.png/200px-Glacial_temotli_detail.png",
         "assetImage": "Glacial_temotli_detail.png",
         "colLogData": {
             "category": "Bosses",
@@ -5376,7 +5376,7 @@
         "name": "Get 1 unique from Royal Titans",
         "tip": "Obtained by killing the Royal Titans boss. First kill you must choose Take Pages option as you can force this unique.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Twinflame_staff_detail.png/200px-Twinflame_staff_detail.png",
         "assetImage": "Twinflame_staff_detail.png",
         "colLogData": {
             "category": "Bosses",
@@ -5397,7 +5397,7 @@
         "name": "Get 1 unique from Royal Titans",
         "tip": "Obtained by killing the Royal Titans boss. First kill you must choose Take Pages option as you can force this unique.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Twinflame_staff_detail.png/200px-Twinflame_staff_detail.png",
         "assetImage": "Twinflame_staff_detail.png",
         "colLogData": {
             "category": "Bosses",
@@ -5418,7 +5418,7 @@
         "name": "Get 1 unique from Royal Titans",
         "tip": "Obtained by killing the Royal Titans boss. First kill you must choose Take Pages option as you can force this unique.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Twinflame_staff_detail.png/200px-Twinflame_staff_detail.png",
         "assetImage": "Twinflame_staff_detail.png",
         "colLogData": {
             "category": "Bosses",
@@ -5439,7 +5439,7 @@
         "name": "Get 1 unique from Royal Titans",
         "tip": "Obtained by killing the Royal Titans boss. First kill you must choose Take Pages option as you can force this unique.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
-        "wikiImage": "https://oldschool.runescape.wiki/w/Twinflame_staff#/media/File:Twinflame_staff_detail.png",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Twinflame_staff_detail.png/200px-Twinflame_staff_detail.png",
         "assetImage": "Twinflame_staff_detail.png",
         "colLogData": {
             "category": "Bosses",
