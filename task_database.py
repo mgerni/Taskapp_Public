@@ -26,17 +26,17 @@ Returns:
 '''
 
 
-def get_user(username) -> UserDatabaseObject:
-    coll = mydb['taskAccounts']
-    users = list(coll.find({'username': username}))
-    if len(users) == 0:
-        raise Exception("No user found with username " + username)
-    old_user_data = users[0]
-    return convert_database_user(migrate_database_user_to_new_format(old_user_data))
+# def get_user_2(username) -> UserDatabaseObject:
+#     coll = mydb['taskAccounts']
+#     users = list(coll.find({'username': username}))
+#     if len(users) == 0:
+#         raise Exception("No user found with username " + username)
+#     old_user_data = users[0]
+#     return convert_database_user(migrate_database_user_to_new_format(old_user_data))
 
 
 # For new taskList data format - Replaces above after migration
-def get_user_2(username) -> UserDatabaseObject:
+def get_user(username) -> UserDatabaseObject:
     coll = mydb['taskLists']
     users = list(coll.find({'username': username}))
     if len(users) == 0:
@@ -45,89 +45,156 @@ def get_user_2(username) -> UserDatabaseObject:
     return convert_database_user(user_data)
 
 
+# '''
+# add_task_account:
+
+# The add_task_account function create document for the user in the taskAccounts collection.
+# The document is a dictionary with some of the keys being lists of dictionaries.
+# The document is structured as follows:
+# {
+#     _id : randomly generated id,
+#     username : username,
+#     isOfficial : True/False,
+#     lmsEnabled : True/False,
+#     easyTasks: [
+#         {
+#             _id : #,
+#             taskname : {
+#                 name of the task : image matching the task, # would have done this differently since it horrible
+#                 LMS : True/False
+#             },
+#             status: Incomplete/Complete,
+#             taskCurrent : True/False,
+#             taskTip : tip for the task,
+#             wikiLink : link to the wiki page for the task
+#         }
+#     ],
+#     mediumTasks: [ same as easyTasks ],
+#     hardTasks: [ same as easyTasks ],
+#     eliteTasks: [ same as easyTasks ]
+#     bossPetTasks: [ same as easyTasks except does not include taskTip ],
+#     otherPetTasks: [ same as easyTasks except does not include taskTip ],
+#     skillingPetTasks: [ same as easyTasks except does not include taskTip ],
+#     extraTasks: [ same as easyTasks except does not include taskTip ],
+#     passiveTasks: [ same as easyTasks except does not include taskTip ]
+# }
+
+# Args:
+#     str: username - username of the user.
+#     list: completions - list of tasks
+#     bool: isofficial - True/False
+#     bool: lmsenabled - True/False
+
+# Returns:
+#     None
+
+# '''
+
+
+# def add_task_account(username, isOfficial, lmsEnabled):
+#     coll = mydb['taskAccounts']
+
+#     def combine_tasks(tasks: list[TaskData]):
+#         new_tasks = []
+#         for task in tasks:
+#             new_tasks.append(
+#                 {
+#                     "_id": task.id,
+#                     "taskname": {task.name: task.asset_image, 'LMS': task.is_lms},
+#                     "status": 'Incomplete',
+#                     "taskCurrent": False,
+#                     "taskTip": task.tip,
+#                     "wikiLink": task.wiki_link,
+#                     "taskImage": task.wiki_image
+#                 }
+#             )
+#         return new_tasks
+
+#     taskAccount = {
+#         "username": str(username),
+#         "isOfficial": bool(isOfficial),
+#         "lmsEnabled": bool(lmsEnabled),
+#         "easyTasks": combine_tasks(tasklists.easy),
+#         "mediumTasks": combine_tasks(tasklists.medium),
+#         "hardTasks": combine_tasks(tasklists.hard),
+#         "eliteTasks": combine_tasks(tasklists.elite),
+#         "masterTasks": combine_tasks(tasklists.master),
+#         "bossPetTasks": combine_tasks(tasklists.boss_pet),
+#         "skillPetTasks": combine_tasks(tasklists.skill_pet),
+#         "otherPetTasks": combine_tasks(tasklists.other_pet),
+#         "extraTasks": combine_tasks(tasklists.extra),
+#         "passiveTasks": combine_tasks(tasklists.passive)
+#     }
+
+#     coll.insert_one(taskAccount)
+
+
+
+
 '''
 add_task_account:
 
-The add_task_account function create document for the user in the taskAccounts collection.
-The document is a dictionary with some of the keys being lists of dictionaries.
+The add_task_account function creates the document for the user in the taskLists collection.
 The document is structured as follows:
 {
-    _id : randomly generated id,
-    username : username,
-    isOfficial : True/False,
-    lmsEnabled : True/False,
-    easyTasks: [
-        {
-            _id : #,
-            taskname : {
-                name of the task : image matching the task, # would have done this differently since it horrible
-                LMS : True/False
+    _id : randomly generated id user id,
+    username: '',
+    isOfficial: true/false,
+    lmsEnabled: false/false,
+    tiers: {
+        easyTier: {
+            currentTask: {
+                "taskId": Matches the ids in task JSONs,
+                "assignedDate": "some date/time format"
             },
-            status: Incomplete/Complete,
-            taskCurrent : True/False,
-            taskTip : tip for the task,
-            wikiLink : link to the wiki page for the task
+            completedTasks: [ # only stores completed tasks
+                {
+                    "taskId": "Maybe a new id field here that matches new field in task list jsons?",
+                    "completionDate": "some date/time format", # both dates are nullable
+                    "assignedDate": "some date/time format from above assignedDate field"
+                },...
+            ],
         }
-    ],
-    mediumTasks: [ same as easyTasks ],
-    hardTasks: [ same as easyTasks ],
-    eliteTasks: [ same as easyTasks ]
-    bossPetTasks: [ same as easyTasks except does not include taskTip ],
-    otherPetTasks: [ same as easyTasks except does not include taskTip ],
-    skillingPetTasks: [ same as easyTasks except does not include taskTip ],
-    extraTasks: [ same as easyTasks except does not include taskTip ],
-    passiveTasks: [ same as easyTasks except does not include taskTip ]
+        medium: {same as easyTier},
+        hard: {same as easyTier},
+        elite: {same as easyTier},
+        master: {same as easyTier},
+        passive: {same as easyTier},
+        extra: {same as easyTier},
+        bossPets: {same as easyTier},
+        skillPets: {same as easyTier},
+        otherPets: {same as easyTier}
+    }
 }
 
 Args:
     str: username - username of the user.
-    list: completions - list of tasks
-    bool: isofficial - True/False
-    bool: lmsenabled - True/False
+    bool: is_official - True/False
+    bool: lms_enabled - True/False
 
 Returns:
     None
 
 '''
-
-
-def add_task_account(username, isOfficial, lmsEnabled):
-    coll = mydb['taskAccounts']
-
-    def combine_tasks(tasks: list[TaskData]):
-        new_tasks = []
-        for task in tasks:
-            new_tasks.append(
-                {
-                    "_id": task.id,
-                    "taskname": {task.name: task.asset_image, 'LMS': task.is_lms},
-                    "status": 'Incomplete',
-                    "taskCurrent": False,
-                    "taskTip": task.tip,
-                    "wikiLink": task.wiki_link,
-                    "taskImage": task.wiki_image
-                }
-            )
-        return new_tasks
-
-    taskAccount = {
+def add_task_account(username, is_official, lms_enabled):
+    coll = mydb['taskLists']
+    coll.insert_one({
         "username": str(username),
-        "isOfficial": bool(isOfficial),
-        "lmsEnabled": bool(lmsEnabled),
-        "easyTasks": combine_tasks(tasklists.easy),
-        "mediumTasks": combine_tasks(tasklists.medium),
-        "hardTasks": combine_tasks(tasklists.hard),
-        "eliteTasks": combine_tasks(tasklists.elite),
-        "masterTasks": combine_tasks(tasklists.master),
-        "bossPetTasks": combine_tasks(tasklists.boss_pet),
-        "skillPetTasks": combine_tasks(tasklists.skill_pet),
-        "otherPetTasks": combine_tasks(tasklists.other_pet),
-        "extraTasks": combine_tasks(tasklists.extra),
-        "passiveTasks": combine_tasks(tasklists.passive)
-    }
-
-    coll.insert_one(taskAccount)
-
+        "isOfficial": bool(is_official),
+        "lmsEnabled": bool(lms_enabled),
+        'tiers': {
+            'easy': [],
+            'medium': [],
+            'hard': [],
+            'elite': [],
+            'master' : [],
+            'passive': [],
+            'extra': [],
+            'bossPets': [],
+            'skillPets': [],
+            'otherPets': []
+        }
+    })
 
 '''
 get_taskCurrent
@@ -1146,3 +1213,4 @@ def get_leaderboard() -> list[LeaderboardEntry]:
 
 if __name__ == "__main__":
     pass
+
