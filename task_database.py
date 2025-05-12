@@ -10,7 +10,7 @@ from task_types import TaskData, LeaderboardEntry, TaskData
 
 mydb = config.MONGO_CLIENT["TaskApp"]
 
-# For old taskList data format
+# For old taskList data format.
 '''
 get_user
 

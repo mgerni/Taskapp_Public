@@ -8,8 +8,7 @@ from functools import wraps
 import task_login
 import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
-                           get_task_lists, manual_complete_tasks, manual_revert_tasks,
-                           import_spreadsheet, uncomplete_all_tasks, lms_status_change,
+                           get_task_lists, manual_complete_tasks, manual_revert_tasks, uncomplete_all_tasks, lms_status_change,
                            official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
