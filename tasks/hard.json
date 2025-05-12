@@ -9155,8 +9155,9 @@
                     "id": 23237,
                     "name": "Berserker necklace ornament kit"
                 },
-                {   "id": 19912,
-                    "name" : "Zombie head (Treasure Trails)"
+                {
+                    "id": 19912,
+                    "name": "Zombie head (Treasure Trails)"
                 }
             ],
             "logCount": 35
@@ -9705,8 +9706,9 @@
                     "id": 23237,
                     "name": "Berserker necklace ornament kit"
                 },
-                {   "id": 19912,
-                    "name" : "Zombie head (Treasure Trails)"
+                {
+                    "id": 19912,
+                    "name": "Zombie head (Treasure Trails)"
                 }
             ],
             "logCount": 40
@@ -10255,8 +10257,9 @@
                     "id": 23237,
                     "name": "Berserker necklace ornament kit"
                 },
-                {   "id": 19912,
-                    "name" : "Zombie head (Treasure Trails)"
+                {
+                    "id": 19912,
+                    "name": "Zombie head (Treasure Trails)"
                 }
             ],
             "logCount": 45
@@ -10805,8 +10808,9 @@
                     "id": 23237,
                     "name": "Berserker necklace ornament kit"
                 },
-                {   "id": 19912,
-                    "name" : "Zombie head (Treasure Trails)"
+                {
+                    "id": 19912,
+                    "name": "Zombie head (Treasure Trails)"
                 }
             ],
             "logCount": 50
@@ -11355,8 +11359,9 @@
                     "id": 23237,
                     "name": "Berserker necklace ornament kit"
                 },
-                {   "id": 19912,
-                    "name" : "Zombie head (Treasure Trails)"
+                {
+                    "id": 19912,
+                    "name": "Zombie head (Treasure Trails)"
                 }
             ],
             "logCount": 55
@@ -11905,8 +11910,9 @@
                     "id": 23237,
                     "name": "Berserker necklace ornament kit"
                 },
-                {   "id": 19912,
-                    "name" : "Zombie head (Treasure Trails)"
+                {
+                    "id": 19912,
+                    "name": "Zombie head (Treasure Trails)"
                 }
             ],
             "logCount": 60
@@ -12455,8 +12461,9 @@
                     "id": 23237,
                     "name": "Berserker necklace ornament kit"
                 },
-                {   "id": 19912,
-                    "name" : "Zombie head (Treasure Trails)"
+                {
+                    "id": 19912,
+                    "name": "Zombie head (Treasure Trails)"
                 }
             ],
             "logCount": 65
@@ -18270,7 +18277,7 @@
                     "name": "Guild hunter boots"
                 }
             ],
-            "logCount": 3
+            "logCount": 4
         }
     },
     {
@@ -18305,46 +18312,11 @@
                     "name": "Guild hunter boots"
                 }
             ],
-            "logCount": 4
-        }
-    },
-    {
-        "_id": 195,
-        "name": "Get 1 unique from the Hunter Guild",
-        "tip": "Received as a drop when completing Hunters Rumours",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Hunter_Guild#Other",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Guild_hunter_top_detail.png/200px-Guild_hunter_top_detail.png",
-        "assetImage": "guild_hunter_top.png",
-        "colLogData": {
-            "category": "Other",
-            "logName": "hunter_guild",
-            "include": [
-                {
-                    "id": 29309,
-                    "name": "Huntsman's kit"
-                },
-                {
-                    "id": 29263,
-                    "name": "Guild hunter headwear"
-                },
-                {
-                    "id": 29265,
-                    "name": "Guild hunter top"
-                },
-                {
-                    "id": 29267,
-                    "name": "Guild hunter legs"
-                },
-                {
-                    "id": 29269,
-                    "name": "Guild hunter boots"
-                }
-            ],
             "logCount": 5
         }
     },
     {
-        "_id": 196,
+        "_id": 195,
         "name": "Obtain Sunfire splinters",
         "tip": "Reward from Fortis Colosseum or from hunting Sunfire Antelope",
         "wikiLink": "https://oldschool.runescape.wiki/w/Sunfire_splinters",
@@ -18357,6 +18329,33 @@
                 {
                     "id": 28924,
                     "name": "Sunfire splinters"
+                }
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 196,
+        "name": "Get 1 unique from Tormented Demons",
+        "tip": "Can be obtained when killing Tormented Demons",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_demon",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Tormented_synapse_detail.png/200px-Tormented_synapse_detail.png",
+        "assetImage": "tormented_synapse.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "tormented_demons",
+            "include": [
+                {
+                    "id": 29574,
+                    "name": "Burning claw"
+                },
+                {
+                    "id": 29580,
+                    "name": "Tormented synapse"
+                },
+                {
+                    "id": 29684,
+                    "name": "Guthixian temple teleport"
                 }
             ],
             "logCount": 1
@@ -18386,38 +18385,11 @@
                     "name": "Guthixian temple teleport"
                 }
             ],
-            "logCount": 1
-        }
-    },
-    {
-        "_id": 198,
-        "name": "Get 1 unique from Tormented Demons",
-        "tip": "Can be obtained when killing Tormented Demons",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_demon",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Tormented_synapse_detail.png/200px-Tormented_synapse_detail.png",
-        "assetImage": "tormented_synapse.png",
-        "colLogData": {
-            "category": "Other",
-            "logName": "tormented_demons",
-            "include": [
-                {
-                    "id": 29574,
-                    "name": "Burning claw"
-                },
-                {
-                    "id": 29580,
-                    "name": "Tormented synapse"
-                },
-                {
-                    "id": 29684,
-                    "name": "Guthixian temple teleport"
-                }
-            ],
             "logCount": 2
         }
     },
     {
-        "_id": 199,
+        "_id": 198,
         "name": "Get 1 unique from Araxxytes/Araxxor",
         "tip": "Can be obtained when killing Araxxytes/Araxxor",
         "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
@@ -18466,6 +18438,67 @@
                 }
             ],
             "logCount": 1
+        }
+    },
+    {
+        "_id": 199,
+        "name": "Get 1 unique from Araxxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Araxyte_fang_detail.png/200px-Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "multi_category": [
+                {
+                    "category": "Other",
+                    "logName": "Slayer"
+                },
+                {
+                    "category": "Bosses",
+                    "logName": "Araxxor"
+                }
+            ],
+            "include": [
+                {
+                    "id": 29782,
+                    "name": "Spider cave teleport"
+                },
+                {
+                    "id": 29784,
+                    "name": "Araxyte venom sack"
+                },
+                {
+                    "id": 29790,
+                    "name": "Noxious point"
+                },
+                {
+                    "id": 29792,
+                    "name": "Noxious blade"
+                },
+                {
+                    "id": 29794,
+                    "name": "Noxious pommel"
+                },
+                {
+                    "id": 29799,
+                    "name": "Araxyte fang"
+                },
+                {
+                    "id": 29788,
+                    "name": "Araxyte head"
+                },
+                {
+                    "id": 29806,
+                    "name": "Aranea boots"
+                },
+                {
+                    "id": 29781,
+                    "name": "Coagulated venom"
+                }
+            ],
+            "logCount": 2
         }
     },
     {
@@ -18526,72 +18559,11 @@
                     "name": "Coagulated venom"
                 }
             ],
-            "logCount": 2
-        }
-    },
-    {
-        "_id": 201,
-        "name": "Get 1 unique from Araxxytes/Araxxor",
-        "tip": "Can be obtained when killing Araxxytes/Araxxor",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Araxyte_fang_detail.png/200px-Araxyte_fang_detail.png",
-        "assetImage": "araxxor_fang.png",
-        "colLogData": {
-            "category": null,
-            "logName": null,
-            "multi_category": [
-                {
-                    "category": "Other",
-                    "logName": "Slayer"
-                },
-                {
-                    "category": "Bosses",
-                    "logName": "Araxxor"
-                }
-            ],
-            "include": [
-                {
-                    "id": 29782,
-                    "name": "Spider cave teleport"
-                },
-                {
-                    "id": 29784,
-                    "name": "Araxyte venom sack"
-                },
-                {
-                    "id": 29790,
-                    "name": "Noxious point"
-                },
-                {
-                    "id": 29792,
-                    "name": "Noxious blade"
-                },
-                {
-                    "id": 29794,
-                    "name": "Noxious pommel"
-                },
-                {
-                    "id": 29799,
-                    "name": "Araxyte fang"
-                },
-                {
-                    "id": 29788,
-                    "name": "Araxyte head"
-                },
-                {
-                    "id": 29806,
-                    "name": "Aranea boots"
-                },
-                {
-                    "id": 29781,
-                    "name": "Coagulated venom"
-                }
-            ],
             "logCount": 3
         }
     },
     {
-        "_id": 202,
+        "_id": 201,
         "name": "Get a Wyrm/Brimhaven graceful recolor",
         "tip": "Obtained through Brimhaven agility course or Wyrm agility course. Taskers have to replace their current gracecful for the 2nd task, so which set you like more should be grinded last.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Graceful_outfit",
@@ -18664,7 +18636,7 @@
         }
     },
     {
-        "_id": 203,
+        "_id": 202,
         "name": "Get the Prescription goggles",
         "tip": "Obtained through Mastering Mixology Herblore Minigame",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
@@ -18683,7 +18655,7 @@
         }
     },
     {
-        "_id": 204,
+        "_id": 203,
         "name": "Get the Alchemist's amulet",
         "tip": "Obtained through Mastering Mixology Herblore Minigame",
         "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology",
@@ -18696,6 +18668,41 @@
                 {
                     "id": 29992,
                     "name": "Alchemist's amulet"
+                }
+            ],
+            "logCount": 1
+        }
+    },
+    {
+        "_id": 204,
+        "name": "Get 1 unique from the Hueycoatl",
+        "tip": "Obtained by killing The Hueycoatl",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
+        "assetImage": "Dragon_hunter_wand_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "include": [
+                {
+                    "id": 30066,
+                    "name": "Tome of earth (empty)"
+                },
+                {
+                    "id": 30068,
+                    "name": "Soiled page"
+                },
+                {
+                    "id": 30070,
+                    "name": "Dragon hunter wand"
+                },
+                {
+                    "id": 30085,
+                    "name": "Hueycoatl hide"
+                },
+                {
+                    "id": 30088,
+                    "name": "Huasca seed"
                 }
             ],
             "logCount": 1
@@ -18733,7 +18740,7 @@
                     "name": "Huasca seed"
                 }
             ],
-            "logCount": 1
+            "logCount": 2
         }
     },
     {
@@ -18768,46 +18775,11 @@
                     "name": "Huasca seed"
                 }
             ],
-            "logCount": 2
-        }
-    },
-    {
-        "_id": 207,
-        "name": "Get 1 unique from the Hueycoatl",
-        "tip": "Obtained by killing The Hueycoatl",
-        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
-        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
-        "assetImage": "Dragon_hunter_wand_detail.png",
-        "colLogData": {
-            "category": "Bosses",
-            "logName": "The Hueycoatl",
-            "include": [
-                {
-                    "id": 30066,
-                    "name": "Tome of earth (empty)"
-                },
-                {
-                    "id": 30068,
-                    "name": "Soiled page"
-                },
-                {
-                    "id": 30070,
-                    "name": "Dragon hunter wand"
-                },
-                {
-                    "id": 30085,
-                    "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
-                }
-            ],
             "logCount": 3
         }
     },
     {
-        "_id": 208,
+        "_id": 207,
         "name": "Get 1 unique from Royal Titans",
         "tip": "Obtained by killing the Royal Titans boss. First kill you musat choose Take Pages option as you can force this unique.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
@@ -18846,7 +18818,7 @@
         }
     },
     {
-        "_id": 209,
+        "_id": 208,
         "name": "Get 1 unique from Royal Titans",
         "tip": "Obtained by killing the Royal Titans boss. First kill you musat choose Take Pages option as you can force this unique.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans",
