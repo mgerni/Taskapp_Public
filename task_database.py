@@ -25,16 +25,16 @@ Returns:
 
 '''
 
-def get_user(username) -> UserDatabaseObject:
-    coll = mydb['taskAccounts']
-    users = list(coll.find({'username': username}))
-    if len(users) == 0:
-        raise Exception("No user found with username " + username)
-    old_user_data = users[0]
-    return convert_database_user(migrate_database_user_to_new_format(old_user_data))
+# def get_user(username) -> UserDatabaseObject:
+#     coll = mydb['taskAccounts']
+#     users = list(coll.find({'username': username}))
+#     if len(users) == 0:
+#         raise Exception("No user found with username " + username)
+#     old_user_data = users[0]
+#     return convert_database_user(migrate_database_user_to_new_format(old_user_data))
 
 # to replace above function after migration
-def get_user_2(username) -> UserDatabaseObject:
+def get_user(username) -> UserDatabaseObject:
     coll = mydb['taskLists']
     users = list(coll.find({'username': username}))
     if len(users) == 0:
@@ -46,85 +46,152 @@ def get_user_2(username) -> UserDatabaseObject:
 '''
 add_task_account:
 
-The add_task_account function create document for the user in the taskAccounts collection.
-The document is a dictionary with some of the keys being lists of dictionaries.
+The add_task_account function creates the document for the user in the taskLists collection.
 The document is structured as follows:
 {
-    _id : randomly generated id,
-    username : username,
-    isOfficial : True/False,
-    lmsEnabled : True/False,
-    easyTasks: [
-        {
-            _id : #,
-            taskname : {
-                name of the task : image matching the task, # would have done this differently since it horrible
-                LMS : True/False
+    _id : randomly generated id user id,
+    username: '',
+    isOfficial: true/false,
+    lmsEnabled: false/false,
+    tiers: {
+        easyTier: {
+            currentTask: {
+                "taskId": Matches the ids in task JSONs,
+                "assignedDate": "some date/time format"
             },
-            status: Incomplete/Complete,
-            taskCurrent : True/False,
-            taskTip : tip for the task,
-            wikiLink : link to the wiki page for the task
+            completedTasks: [ # only stores completed tasks
+                {
+                    "taskId": "Maybe a new id field here that matches new field in task list jsons?",
+                    "completionDate": "some date/time format", # both dates are nullable
+                    "assignedDate": "some date/time format from above assignedDate field"
+                },...
+            ],
         }
-    ],
-    mediumTasks: [ same as easyTasks ],
-    hardTasks: [ same as easyTasks ],
-    eliteTasks: [ same as easyTasks ]
-    bossPetTasks: [ same as easyTasks except does not include taskTip ],
-    otherPetTasks: [ same as easyTasks except does not include taskTip ],
-    skillingPetTasks: [ same as easyTasks except does not include taskTip ],
-    extraTasks: [ same as easyTasks except does not include taskTip ],
-    passiveTasks: [ same as easyTasks except does not include taskTip ]
+        medium: {same as easyTier},
+        hard: {same as easyTier},
+        elite: {same as easyTier},
+        master: {same as easyTier},
+        passive: {same as easyTier},
+        extra: {same as easyTier},
+        bossPets: {same as easyTier},
+        skillPets: {same as easyTier},
+        otherPets: {same as easyTier}
+    }
 }
 
 Args:
     str: username - username of the user.
-    list: completions - list of tasks
-    bool: isofficial - True/False
-    bool: lmsenabled - True/False
+    bool: is_official - True/False
+    bool: lms_enabled - True/False
 
 Returns:
     None
 
 '''
-
-
-def add_task_account(username, isOfficial, lmsEnabled):
-    coll = mydb['taskAccounts']
-
-    def combine_tasks(tasks: list[TaskData]):
-        new_tasks = []
-        for task in tasks:
-            new_tasks.append(
-                {
-                    "_id": task.id,
-                    "taskname": {task.name: task.asset_image, 'LMS': task.is_lms},
-                    "status": 'Incomplete',
-                    "taskCurrent": False,
-                    "taskTip": task.tip,
-                    "wikiLink": task.wiki_link,
-                    "taskImage": task.wiki_image
-                }
-            )
-        return new_tasks
-
-    taskAccount = {
+def add_task_account(username, is_official, lms_enabled):
+    coll = mydb['taskLists']
+    coll.insert_one({
         "username": str(username),
-        "isOfficial": bool(isOfficial),
-        "lmsEnabled": bool(lmsEnabled),
-        "easyTasks": combine_tasks(tasklists.easy),
-        "mediumTasks": combine_tasks(tasklists.medium),
-        "hardTasks": combine_tasks(tasklists.hard),
-        "eliteTasks": combine_tasks(tasklists.elite),
-        "masterTasks": combine_tasks(tasklists.master),
-        "bossPetTasks": combine_tasks(tasklists.boss_pet),
-        "skillPetTasks": combine_tasks(tasklists.skill_pet),
-        "otherPetTasks": combine_tasks(tasklists.other_pet),
-        "extraTasks": combine_tasks(tasklists.extra),
-        "passiveTasks": combine_tasks(tasklists.passive)
-    }
+        "isOfficial": bool(is_official),
+        "lmsEnabled": bool(lms_enabled),
+        'tiers': {
+            'easy': [],
+            'medium': [],
+            'hard': [],
+            'elite': [],
+            'master' : [],
+            'passive': [],
+            'extra': [],
+            'bossPets': [],
+            'skillPets': [],
+            'otherPets': []
+        }
+    })
 
-    coll.insert_one(taskAccount)
+
+
+# '''
+# add_task_account:
+
+# The add_task_account function create document for the user in the taskAccounts collection.
+# The document is a dictionary with some of the keys being lists of dictionaries.
+# The document is structured as follows:
+# {
+#     _id : randomly generated id,
+#     username : username,
+#     isOfficial : True/False,
+#     lmsEnabled : True/False,
+#     easyTasks: [
+#         {
+#             _id : #,
+#             taskname : {
+#                 name of the task : image matching the task, # would have done this differently since it horrible
+#                 LMS : True/False
+#             },
+#             status: Incomplete/Complete,
+#             taskCurrent : True/False,
+#             taskTip : tip for the task,
+#             wikiLink : link to the wiki page for the task
+#         }
+#     ],
+#     mediumTasks: [ same as easyTasks ],
+#     hardTasks: [ same as easyTasks ],
+#     eliteTasks: [ same as easyTasks ]
+#     bossPetTasks: [ same as easyTasks except does not include taskTip ],
+#     otherPetTasks: [ same as easyTasks except does not include taskTip ],
+#     skillingPetTasks: [ same as easyTasks except does not include taskTip ],
+#     extraTasks: [ same as easyTasks except does not include taskTip ],
+#     passiveTasks: [ same as easyTasks except does not include taskTip ]
+# }
+
+# Args:
+#     str: username - username of the user.
+#     list: completions - list of tasks
+#     bool: isofficial - True/False
+#     bool: lmsenabled - True/False
+
+# Returns:
+#     None
+
+# '''
+
+
+# def add_task_account(username, isOfficial, lmsEnabled):
+#     coll = mydb['taskAccounts']
+
+#     def combine_tasks(tasks: list[TaskData]):
+#         new_tasks = []
+#         for task in tasks:
+#             new_tasks.append(
+#                 {
+#                     "_id": task.id,
+#                     "taskname": {task.name: task.asset_image, 'LMS': task.is_lms},
+#                     "status": 'Incomplete',
+#                     "taskCurrent": False,
+#                     "taskTip": task.tip,
+#                     "wikiLink": task.wiki_link,
+#                     "taskImage": task.wiki_image
+#                 }
+#             )
+#         return new_tasks
+
+#     taskAccount = {
+#         "username": str(username),
+#         "isOfficial": bool(isOfficial),
+#         "lmsEnabled": bool(lmsEnabled),
+#         "easyTasks": combine_tasks(tasklists.easy),
+#         "mediumTasks": combine_tasks(tasklists.medium),
+#         "hardTasks": combine_tasks(tasklists.hard),
+#         "eliteTasks": combine_tasks(tasklists.elite),
+#         "masterTasks": combine_tasks(tasklists.master),
+#         "bossPetTasks": combine_tasks(tasklists.boss_pet),
+#         "skillPetTasks": combine_tasks(tasklists.skill_pet),
+#         "otherPetTasks": combine_tasks(tasklists.other_pet),
+#         "extraTasks": combine_tasks(tasklists.extra),
+#         "passiveTasks": combine_tasks(tasklists.passive)
+#     }
+
+#     coll.insert_one(taskAccount)
 
 
 '''
@@ -167,16 +234,57 @@ def get_taskCurrent_tier(username, tier):
 
 
 def __set_current_task(username: str, tier: str, task_id: str, current: bool):
-    coll = mydb['taskAccounts']
-    coll.update_one({'username': username, '%s._id' % tier: task_id}, {'$set': {'%s.$.taskCurrent' % tier: current}})
+    # coll = mydb["taskAccounts"]
+    # coll.update_one(
+    #     {"username": username, "%s._id" % tier: task_id},
+    #     {"$set": {"%s.$.taskCurrent" % tier: current}},
+    # )
+    task_coll = mydb["taskLists"]
+    cleaned_tier = tier.replace("Tasks", "")
+    if not current:
+        task_coll.update_one(
+            {"username": username},
+            {"$unset": {f"tiers.{cleaned_tier}.currentTask": ""}},
+        )
+    else:
+        task_coll.update_one(
+            {"username": username},
+            {"$set": {f"tiers.{cleaned_tier}.currentTask": {"taskId": task_id}}},
+        )
+
 
 
 def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
-    coll = mydb['taskAccounts']
-    coll.update_one({'username': username, '%s._id' % tier: task_id},
-                    {'$set': {'%s.$.status' % tier: 'Complete' if complete else 'Incomplete',
-                              '%s.$.taskCurrent' % tier: False}})
-
+    # coll = mydb['taskAccounts']
+    # coll.update_one({'username': username, '%s._id' % tier: task_id},
+    #                 {'$set': {'%s.$.status' % tier: 'Complete' if complete else 'Incomplete',
+    #                           '%s.$.taskCurrent' % tier: False}})
+    task_coll = mydb['taskLists']
+    cleaned_tier = tier.replace("Tasks", "")
+    # task_coll.update_one({'username': username}, {"$push" : {f"tiers.{cleaned_tier}.completedTasks": {}}})
+    result = task_coll.update_one(
+        {"username": username},
+        {
+            "$push": {
+                f"tiers.{cleaned_tier}.completedTasks": {"taskId": task_id}
+            },
+            "$unset": {
+                f"tiers.{cleaned_tier}.currentTask": ""
+        }
+        }
+    )
+    if not complete:
+        print('removing from completed list')
+        remove_completed = task_coll.update_one(
+            {
+                "username" : username
+            },
+            {
+                "$pull" : {
+                    f"tiers.{cleaned_tier}.completedTasks" : {"taskId" : task_id}
+                }
+            })
+    
 
 '''
 generate_task_unofficial_tier:
@@ -341,7 +449,6 @@ Returns:
 def complete_task(username: str) -> dict:
     user = get_user(username)
     task_check = user.current_task()
-    print(task_check)
     if task_check is None:
         return {}
 
@@ -514,123 +621,123 @@ Returns:
     list: each element is a str: of the tier import status. 
 
 '''
-def import_spreadsheet(username, url):
-    def update_current_task_from_sheet(username, tier, task_id):
-        coll = mydb['taskAccounts']
-        task_check = coll.find_one({'username': username, '%s._id' % tier: task_id},
-                                   {'_id': 0, '%s.status' % tier: 1, '%s._id' % tier: 1})
-        task_updated = False
-        if task_check[tier][task_id - 1]['status'] == 'Incomplete':
-            task_updated = True
-            coll.update_one({'username': username, '%s._id' % tier: task_id},
-                            {'$set': {'%s.$.taskCurrent' % tier: True}})
-        return task_updated
+# def import_spreadsheet(username, url):
+#     def update_current_task_from_sheet(username, tier, task_id):
+#         coll = mydb['taskAccounts']
+#         task_check = coll.find_one({'username': username, '%s._id' % tier: task_id},
+#                                    {'_id': 0, '%s.status' % tier: 1, '%s._id' % tier: 1})
+#         task_updated = False
+#         if task_check[tier][task_id - 1]['status'] == 'Incomplete':
+#             task_updated = True
+#             coll.update_one({'username': username, '%s._id' % tier: task_id},
+#                             {'$set': {'%s.$.taskCurrent' % tier: True}})
+#         return task_updated
 
-    try:
-        error = None
-        task_import_logs = []
-        task_current_logs = []
-        speadsheet_key = re.search('\/d\/(.*?)(\/|$)', url)
-        if speadsheet_key:
-            service = gspread.service_account(filename="service_account.json")
-            google_sheet = service.open_by_key(speadsheet_key.group(1))
-            info_sheet = google_sheet.worksheet("Info")
+#     try:
+#         error = None
+#         task_import_logs = []
+#         task_current_logs = []
+#         speadsheet_key = re.search('\/d\/(.*?)(\/|$)', url)
+#         if speadsheet_key:
+#             service = gspread.service_account(filename="service_account.json")
+#             google_sheet = service.open_by_key(speadsheet_key.group(1))
+#             info_sheet = google_sheet.worksheet("Info")
 
-            current_sheet_tier = info_sheet.get('B13:B14')
+#             current_sheet_tier = info_sheet.get('B13:B14')
 
-            tier, cell = current_sheet_tier[0][0], current_sheet_tier[1][0].replace('C', "")
-            cell = int(cell) - 1
-            sheet_tasks = []
-            sheet_list = [
-                'Easy',
-                'Medium',
-                'Hard',
-                'Elite',
-                'Pets',
-                'Pets',
-                'Pets',
-                'Extra',
-                'Passive'
-            ]
+#             tier, cell = current_sheet_tier[0][0], current_sheet_tier[1][0].replace('C', "")
+#             cell = int(cell) - 1
+#             sheet_tasks = []
+#             sheet_list = [
+#                 'Easy',
+#                 'Medium',
+#                 'Hard',
+#                 'Elite',
+#                 'Pets',
+#                 'Pets',
+#                 'Pets',
+#                 'Extra',
+#                 'Passive'
+#             ]
 
-            cell_range = [
-                'A2:C137',  # Easy
-                'A2:C160',  # Medium
-                'A2:C184',  # Hard
-                'A2:C165',  # Elite
-                'A2:C35',  # Pets - Boss
-                'A37:C44',  # Pets - Skill
-                'A46:C55',  # Pets - Other
-                'A2:C119',  # Extra
-                'A2:C44'  # Passive
-            ]
+#             cell_range = [
+#                 'A2:C137',  # Easy
+#                 'A2:C160',  # Medium
+#                 'A2:C184',  # Hard
+#                 'A2:C165',  # Elite
+#                 'A2:C35',  # Pets - Boss
+#                 'A37:C44',  # Pets - Skill
+#                 'A46:C55',  # Pets - Other
+#                 'A2:C119',  # Extra
+#                 'A2:C44'  # Passive
+#             ]
 
-            task_list = [
-                tasklists.easy,
-                tasklists.medium,
-                tasklists.hard,
-                tasklists.elite,
-                tasklists.boss_pet,
-                tasklists.skill_pet,
-                tasklists.other_pet,
-                tasklists.extra,
-                tasklists.passive
-            ]
+#             task_list = [
+#                 tasklists.easy,
+#                 tasklists.medium,
+#                 tasklists.hard,
+#                 tasklists.elite,
+#                 tasklists.boss_pet,
+#                 tasklists.skill_pet,
+#                 tasklists.other_pet,
+#                 tasklists.extra,
+#                 tasklists.passive
+#             ]
 
-            taskdb_names = [
-                'easyTasks',
-                'mediumTasks',
-                'hardTasks',
-                'eliteTasks',
-                'bossPetTasks',
-                'skillPetTasks',
-                'otherPetTasks',
-                'extraTasks',
-                'passiveTasks'
-            ]
+#             taskdb_names = [
+#                 'easyTasks',
+#                 'mediumTasks',
+#                 'hardTasks',
+#                 'eliteTasks',
+#                 'bossPetTasks',
+#                 'skillPetTasks',
+#                 'otherPetTasks',
+#                 'extraTasks',
+#                 'passiveTasks'
+#             ]
 
-            for sheet_name, cells in zip(sheet_list, cell_range):
-                ws = google_sheet.worksheet(sheet_name)
-                tasks = ws.get(cells)
-                sheet_tasks.append(tasks)
-                if sheet_name == tier:
-                    current_list = []
-                    current_list.append(tasks)
+#             for sheet_name, cells in zip(sheet_list, cell_range):
+#                 ws = google_sheet.worksheet(sheet_name)
+#                 tasks = ws.get(cells)
+#                 sheet_tasks.append(tasks)
+#                 if sheet_name == tier:
+#                     current_list = []
+#                     current_list.append(tasks)
 
-            coll = mydb['taskAccounts']
-            user_tasks = coll.find_one({'username': username})
+#             coll = mydb['taskAccounts']
+#             user_tasks = coll.find_one({'username': username})
 
-            for sheet_task_list, tasks_lists, doc_list_names in zip(sheet_tasks, task_list, taskdb_names):
-                if len(sheet_task_list) == len(tasks_lists):
-                    for i, (task_sheet, task_db) in enumerate(zip(sheet_task_list, tasks_lists), 1):
-                        if 'x' in task_sheet:
-                            user_tasks[doc_list_names][i - 1]['status'] = "Complete"
-                    coll.update_one({'username': username}, {'$set': {doc_list_names: user_tasks[doc_list_names]}})
-                    task_import_logs.append('Tasks for %s were updated!' % doc_list_names)
-                else:
-                    task_import_logs.append(
-                        'Unable to update %s! Spreadsheet data differs from database!' % doc_list_names)
+#             for sheet_task_list, tasks_lists, doc_list_names in zip(sheet_tasks, task_list, taskdb_names):
+#                 if len(sheet_task_list) == len(tasks_lists):
+#                     for i, (task_sheet, task_db) in enumerate(zip(sheet_task_list, tasks_lists), 1):
+#                         if 'x' in task_sheet:
+#                             user_tasks[doc_list_names][i - 1]['status'] = "Complete"
+#                     coll.update_one({'username': username}, {'$set': {doc_list_names: user_tasks[doc_list_names]}})
+#                     task_import_logs.append('Tasks for %s were updated!' % doc_list_names)
+#                 else:
+#                     task_import_logs.append(
+#                         'Unable to update %s! Spreadsheet data differs from database!' % doc_list_names)
 
-            if get_taskCurrent(username) is None:
-                for i, (task) in enumerate(current_list[0], 1):
-                    if i == cell:
-                        sheets_db_dict = {}
-                        for i2, (key, value) in enumerate(zip(sheet_list, taskdb_names)):
-                            sheets_db_dict[key] = value
-                            if i2 == 3:
-                                update_current = update_current_task_from_sheet(username, sheets_db_dict[tier], i)
-                                if update_current is True:
-                                    task_current_logs.append('Updated current task!')
-                                    break
-            else:
-                task_current_logs.append('Current task already found!')
-        else:
-            error = "Spreadsheet URL is not valid!"
-        return task_import_logs, task_current_logs, error
-    except Exception as e:
-        print(str(e))
-        error = "There was a problem prcoessing the request. Contact Gerni Task on Discord."
-        return task_import_logs, task_current_logs, error
+#             if get_taskCurrent(username) is None:
+#                 for i, (task) in enumerate(current_list[0], 1):
+#                     if i == cell:
+#                         sheets_db_dict = {}
+#                         for i2, (key, value) in enumerate(zip(sheet_list, taskdb_names)):
+#                             sheets_db_dict[key] = value
+#                             if i2 == 3:
+#                                 update_current = update_current_task_from_sheet(username, sheets_db_dict[tier], i)
+#                                 if update_current is True:
+#                                     task_current_logs.append('Updated current task!')
+#                                     break
+#             else:
+#                 task_current_logs.append('Current task already found!')
+#         else:
+#             error = "Spreadsheet URL is not valid!"
+#         return task_import_logs, task_current_logs, error
+#     except Exception as e:
+#         print(str(e))
+#         error = "There was a problem prcoessing the request. Contact Gerni Task on Discord."
+#         return task_import_logs, task_current_logs, error
 
 
 # NOT USED only for testing purposes.
