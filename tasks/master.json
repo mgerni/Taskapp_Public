@@ -1,1377 +1,1377 @@
 [
-        {
-                "_id": 1,
-                "name": "Get a Infernal Cape",
-                "tip": "Acquired by completing The Inferno",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Infernal_cape",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Infernal_cape_detail.png?03de7",
-                "assetImage": "Infernal_cape_detail.png"
-        },
-        {
-                "_id": 2,
-                "name": "Get 3 uniques from easy clues",
-                "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
-                "assetImage": "Reward_casket_easy_detail.png"
-        },
-        {
-                "_id": 3,
-                "name": "Get 3 uniques from easy clues",
-                "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
-                "assetImage": "Reward_casket_easy_detail.png"
-        },
-        {
-                "_id": 4,
-                "name": "Get 3 uniques from easy clues",
-                "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
-                "assetImage": "Reward_casket_easy_detail.png"
-        },
-        {
-                "_id": 5,
-                "name": "Get 3 uniques from easy clues",
-                "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
-                "assetImage": "Reward_casket_easy_detail.png"
-        },
-        {
-                "_id": 6,
-                "name": "Get 3 uniques from easy clues",
-                "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
-                "assetImage": "Reward_casket_easy_detail.png"
-        },
-        {
-                "_id": 7,
-                "name": "Get 3 uniques from medium clues",
-                "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
-                "assetImage": "Reward_casket_medium_detail.png"
-        },
-        {
-                "_id": 8,
-                "name": "Get 3 uniques from medium clues",
-                "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
-                "assetImage": "Reward_casket_medium_detail.png"
-        },
-        {
-                "_id": 9,
-                "name": "Get 3 uniques from medium clues",
-                "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
-                "assetImage": "Reward_casket_medium_detail.png"
-        },
-        {
-                "_id": 10,
-                "name": "Get 3 uniques from medium clues",
-                "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
-                "assetImage": "Reward_casket_medium_detail.png"
-        },
-        {
-                "_id": 11,
-                "name": "Get 3 uniques from medium clues",
-                "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
-                "assetImage": "Reward_casket_medium_detail.png"
-        },
-        {
-                "_id": 12,
-                "name": "Get 3 uniques from medium clues",
-                "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
-                "assetImage": "Reward_casket_medium_detail.png"
-        },
-        {
-                "_id": 13,
-                "name": "Get 3 uniques from hard clues",
-                "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
-                "assetImage": "Reward_casket_hard_detail.png"
-        },
-        {
-                "_id": 14,
-                "name": "Get 3 uniques from hard clues",
-                "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
-                "assetImage": "Reward_casket_hard_detail.png"
-        },
-        {
-                "_id": 15,
-                "name": "Get 3 uniques from hard clues",
-                "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
-                "assetImage": "Reward_casket_hard_detail.png"
-        },
-        {
-                "_id": 16,
-                "name": "Get 3 uniques from hard clues",
-                "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
-                "assetImage": "Reward_casket_hard_detail.png"
-        },
-        {
-                "_id": 17,
-                "name": "Get 3 uniques from hard clues",
-                "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
-                "assetImage": "Reward_casket_hard_detail.png"
-        },
-        {
-                "_id": 18,
-                "name": "Get 3 uniques from hard clues",
-                "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
-                "assetImage": "Reward_casket_hard_detail.png"
-        },
-        {
-                "_id": 19,
-                "name": "Get 1 minigame slot",
-                "tip": "Pick a minigame, any minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
-                "assetImage": "minigames.png"
-        },
-        {
-                "_id": 20,
-                "name": "Get 1 minigame slot",
-                "tip": "Pick a minigame, any minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
-                "assetImage": "minigames.png"
-        },
-        {
-                "_id": 21,
-                "name": "Get 1 minigame slot",
-                "tip": "Pick a minigame, any minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
-                "assetImage": "minigames.png"
-        },
-        {
-                "_id": 22,
-                "name": "Get 1 minigame slot",
-                "tip": "Pick a minigame, any minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
-                "assetImage": "minigames.png"
-        },
-        {
-                "_id": 23,
-                "name": "Get 1 minigame slot",
-                "tip": "Pick a minigame, any minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
-                "assetImage": "minigames.png"
-        },
-        {
-                "_id": 24,
-                "name": "Get 2 LMS slots",
-                "isLMS": true, 
-                "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
-                "assetImage": "victors_cape_detail.png"
-        },
-        {
-                "_id": 25,
-                "name": "Get 2 LMS slots",
-                "isLMS": true,
-                "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
-                "assetImage": "victors_cape_detail.png"
-        },
-        {
-                "_id": 26,
-                "name": "Get 2 LMS slots",
-                "isLMS": true,
-                "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
-                "assetImage": "victors_cape_detail.png"
-        },
-        {
-                "_id": 27,
-                "name": "Get 2 LMS slots",
-                "isLMS": true,
-                "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
-                "assetImage": "victors_cape_detail.png"
-        },
-        {
-                "_id": 28,
-                "name": "Get 2 LMS slots",
-                "isLMS": true,
-                "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
-                "assetImage": "victors_cape_detail.png"
-        },
-        {
-                "_id": 29,
-                "name": "Get 2 LMS slots",
-                "isLMS": true,
-                "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
-                "assetImage": "victors_cape_detail.png"
-        },
-        {
-                "_id": 30,
-                "name": "Get 2 LMS slots",
-                "isLMS": true,
-                "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
-                "assetImage": "victors_cape_detail.png"
-        },
-        {
-                "_id": 31,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 32,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 33,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 34,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 35,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 36,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 37,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 38,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 39,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 40,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 41,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 42,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 43,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 44,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 45,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 46,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 47,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 48,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 49,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 50,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 51,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 52,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 53,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 54,
-                "name": "Get 1 unique from raids",
-                "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-                "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-                "assetImage": "Twisted_bow.png"
-        },
-        {
-                "_id": 55,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 56,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 57,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 58,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 59,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 60,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 61,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 62,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 63,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 64,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 65,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 66,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 67,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 68,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 69,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 70,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 71,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 72,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 73,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 74,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 75,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 76,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 77,
-                "name": "Get 1 unique boss pet or jar",
-                "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
-                "assetImage": "Abyssal_orphan.png"
-        },
-        {
-                "_id": 78,
-                "name": "Get 1 unique skilling pet",
-                "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
-                "assetImage": "Rocky.png"
-        },
-        {
-                "_id": 79,
-                "name": "Get 1 unique skilling pet",
-                "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
-                "assetImage": "Rocky.png"
-        },
-        {
-                "_id": 80,
-                "name": "Get 1 unique skilling pet",
-                "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
-                "assetImage": "Rocky.png"
-        },
-        {
-                "_id": 81,
-                "name": "Get 1 unique skilling pet",
-                "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
-                "assetImage": "Rocky.png"
-        },
-        {
-                "_id": 82,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 83,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 84,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 85,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 86,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 87,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 88,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 89,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 90,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 91,
-                "name": "Get 1 wildy unique",
-                "tip": "Share I tb'ed",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
-                "assetImage": "craws_bow_detail.png"
-        },
-        {
-                "_id": 92,
-                "name": "Get 1 slayer log slot",
-                "tip": "Good Luck on Imbued Heart!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
-                "assetImage": "Imbued_heart_detail.png"
-        },
-        {
-                "_id": 93,
-                "name": "Get 1 slayer log slot",
-                "tip": "Good Luck on Imbued Heart!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
-                "assetImage": "Imbued_heart_detail.png"
-        },
-        {
-                "_id": 94,
-                "name": "Get 1 slayer log slot",
-                "tip": "Good Luck on Imbued Heart!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
-                "assetImage": "Imbued_heart_detail.png"
-        },
-        {
-                "_id": 95,
-                "name": "Get 1 slayer log slot",
-                "tip": "Good Luck on Imbued Heart!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
-                "assetImage": "Imbued_heart_detail.png"
-        },
-        {
-                "_id": 96,
-                "name": "Get 1 slayer log slot",
-                "tip": "Good Luck on Imbued Heart!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
-                "assetImage": "Imbued_heart_detail.png"
-        },
-        {
-                "_id": 97,
-                "name": "Get 1 slayer log slot",
-                "tip": "Good Luck on Imbued Heart!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
-                "assetImage": "Imbued_heart_detail.png"
-        },
-        {
-                "_id": 98,
-                "name": "Get 1 miscellaneous log slot",
-                "tip": "May the bird gods bless you with evil chicken pieces",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
-                "assetImage": "dragon_full_helm_detail.png"
-        },
-        {
-                "_id": 99,
-                "name": "Get 1 miscellaneous log slot",
-                "tip": "May the bird gods bless you with evil chicken pieces",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
-                "assetImage": "dragon_full_helm_detail.png"
-        },
-        {
-                "_id": 100,
-                "name": "Get 1 miscellaneous log slot",
-                "tip": "May the bird gods bless you with evil chicken pieces",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
-                "assetImage": "dragon_full_helm_detail.png"
-        },
-        {
-                "_id": 101,
-                "name": "Get 1 miscellaneous log slot",
-                "tip": "May the bird gods bless you with evil chicken pieces",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
-                "assetImage": "dragon_full_helm_detail.png"
-        },
-        {
-                "_id": 102,
-                "name": "Get 1 miscellaneous log slot",
-                "tip": "May the bird gods bless you with evil chicken pieces",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
-                "assetImage": "dragon_full_helm_detail.png"
-        },
-        {
-                "_id": 103,
-                "name": "Get 1 sigil from corp",
-                "tip": "It's a giant chicken!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Corporeal_Beast",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Elysian_sigil_detail.png/211px-Elysian_sigil_detail.png?2fe74",
-                "assetImage": "elysian_sigil_detail.png"
-        },
-        {
-                "_id": 104,
-                "name": "Get 1 mutagen from zulrah",
-                "tip": "Why'd it have to be snakes.",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Zulrah",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Magma_mutagen_detail.png/126px-Magma_mutagen_detail.png?0551e",
-                "assetImage": "Magma_mutagen_detail.png"
-        },
-        {
-                "_id": 105,
-                "name": "Get 1 zalcano unqiue",
-                "tip": "Boss or Minigame?",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Zalcano_shard_detail.png/221px-Zalcano_shard_detail.png?f52af",
-                "assetImage": "Zalcano_shard_detail.png"
-        },
-        {
-                "_id": 106,
-                "name": "Get 1 vorkath unique",
-                "tip": "Money Dragon",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Vorkath",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragonbone_necklace_detail.png/147px-Dragonbone_necklace_detail.png?132ed",
-                "assetImage": "Dragonbone_necklace_detail.png"
-        },
-        {
-                "_id": 107,
-                "name": "Get 1 nightmare unique",
-                "tip": "Ironman retirement home",
-                "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
-                "assetImage": "Inquisitors_mace_detail.png"
-        },
-        {
-                "_id": 108,
-                "name": "Get 1 nightmare unique",
-                "tip": "Ironman retirement home",
-                "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
-                "assetImage": "Inquisitors_mace_detail.png"
-        },
-        {
-                "_id": 109,
-                "name": "Get 1 nightmare unique",
-                "tip": "Ironman retirement home",
-                "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
-                "assetImage": "Inquisitors_mace_detail.png"
-        },
-        {
-                "_id": 110,
-                "name": "Get 1 nightmare unique",
-                "tip": "Ironman retirement home",
-                "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
-                "assetImage": "Inquisitors_mace_detail.png"
-        },
-        {
-                "_id": 111,
-                "name": "Get 1 nightmare unique",
-                "tip": "Ironman retirement home",
-                "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
-                "assetImage": "Inquisitors_mace_detail.png"
-        },
-        {
-                "_id": 112,
-                "name": "Get 1 nex unique",
-                "tip": "The ice prison",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Nex",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Nihil_horn_detail.png?f672b",
-                "assetImage": "Nihil_horn_detail.png"
-        },
-        {
-                "_id": 113,
-                "name": "Get 1 nex unique",
-                "tip": "The ice prison",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Nex",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Nihil_horn_detail.png?f672b",
-                "assetImage": "Nihil_horn_detail.png"
-        },
-        {
-                "_id": 114,
-                "name": "Get 1 nex unique",
-                "tip": "The ice prison",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Nex",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Nihil_horn_detail.png?f672b",
-                "assetImage": "Nihil_horn_detail.png"
-        },
-        {
-                "_id": 115,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 116,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 117,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 118,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 119,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 120,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 121,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 122,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 123,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 124,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 125,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 126,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 127,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 128,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 129,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 130,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 131,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 132,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 133,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 134,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 135,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 136,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 137,
-                "name": "Get a level 99",
-                "tip": "Ok it's grind time!",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
-                "assetImage": "Max_cape_detail.png"
-        },
-        {
-                "_id": 138,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 139,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 140,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 141,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 142,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 143,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 144,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 145,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 146,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 147,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 148,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 149,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 150,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 151,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 152,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 153,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 154,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 155,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 156,
-                "name": "Complete easy/medium/hard/elite/+50 points",
-                "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
-                "assetImage": "Combat_achievements_detail.png"
-        },
-        {
-                "_id": 157,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 158,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 159,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 160,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 161,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 162,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 163,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 164,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 165,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 166,
-                "name": "Get 1 unique from DT2 bosses",
-                "tip": "Can be received as drop from any of the four DT2 bosses",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
-                "assetImage": "Soulreaper_axe_detail.png"
-        },
-        {
-                "_id": 167,
-                "name": "Get 1 unique from Fortis Colosseum",
-                "tip": "Reward from Fortis Colosseum",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Blessed_dizana%27s_quiver_detail.png?b4e51",
-                "assetImage": "Blessed_dizanas_quiver_detail.png"
-        },
-        {
-                "_id": 168,
-                "name": "Get 1 unique from Fortis Colosseum",
-                "tip": "Reward from Fortis Colosseum",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Blessed_dizana%27s_quiver_detail.png?b4e51",
-                "assetImage": "Blessed_dizanas_quiver_detail.png"
-        },
-        {
-                "_id": 169,
-                "name": "Get 1 unique from Fortis Colosseum",
-                "tip": "Reward from Fortis Colosseum",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
-                "wikiImage": "https://oldschool.runescape.wiki/images/Blessed_dizana%27s_quiver_detail.png?b4e51",
-                "assetImage": "Blessed_dizanas_quiver_detail.png"
-        },
-        {
-                "_id": 170,
-                "name": "Get Quetzin",
-                "tip": "Reward from hunters loot sacks",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Quetzin",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Quetzin_%28follower%29.png/320px-Quetzin_%28follower%29.png?ca338",
-                "assetImage": "quetzin_follower.png"
-        },
-        {
-                "_id": 171,
-                "name": "Get 1 unqiue from The Gauntlet",
-                "tip": "Reward from The Gauntlet",
-                "wikiLink": "https://oldschool.runescape.wiki/w/Gauntlet",
-                "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Enhanced_crystal_weapon_seed_detail.png/309px-Enhanced_crystal_weapon_seed_detail.png?48996",
-                "assetImage": "Enhanced_crystal_weapon_seed_detail.png"
-        }
+    {
+        "_id": 1,
+        "name": "Get a Infernal Cape",
+        "tip": "Acquired by completing The Inferno",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Infernal_cape",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Infernal_cape_detail.png?03de7",
+        "assetImage": "Infernal_cape_detail.png"
+    },
+    {
+        "_id": 2,
+        "name": "Get 3 uniques from easy clues",
+        "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
+        "assetImage": "Reward_casket_easy_detail.png"
+    },
+    {
+        "_id": 3,
+        "name": "Get 3 uniques from easy clues",
+        "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
+        "assetImage": "Reward_casket_easy_detail.png"
+    },
+    {
+        "_id": 4,
+        "name": "Get 3 uniques from easy clues",
+        "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
+        "assetImage": "Reward_casket_easy_detail.png"
+    },
+    {
+        "_id": 5,
+        "name": "Get 3 uniques from easy clues",
+        "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
+        "assetImage": "Reward_casket_easy_detail.png"
+    },
+    {
+        "_id": 6,
+        "name": "Get 3 uniques from easy clues",
+        "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
+        "assetImage": "Reward_casket_easy_detail.png"
+    },
+    {
+        "_id": 7,
+        "name": "Get 3 uniques from medium clues",
+        "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
+        "assetImage": "Reward_casket_medium_detail.png"
+    },
+    {
+        "_id": 8,
+        "name": "Get 3 uniques from medium clues",
+        "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
+        "assetImage": "Reward_casket_medium_detail.png"
+    },
+    {
+        "_id": 9,
+        "name": "Get 3 uniques from medium clues",
+        "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
+        "assetImage": "Reward_casket_medium_detail.png"
+    },
+    {
+        "_id": 10,
+        "name": "Get 3 uniques from medium clues",
+        "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
+        "assetImage": "Reward_casket_medium_detail.png"
+    },
+    {
+        "_id": 11,
+        "name": "Get 3 uniques from medium clues",
+        "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
+        "assetImage": "Reward_casket_medium_detail.png"
+    },
+    {
+        "_id": 12,
+        "name": "Get 3 uniques from medium clues",
+        "tip": "Potential reward from medium clues. Killing guards is a decent way of getting the clues, later on Ecletic impings are are fantasic source for them.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28medium%29_detail.png?2271d",
+        "assetImage": "Reward_casket_medium_detail.png"
+    },
+    {
+        "_id": 13,
+        "name": "Get 3 uniques from hard clues",
+        "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
+        "assetImage": "Reward_casket_hard_detail.png"
+    },
+    {
+        "_id": 14,
+        "name": "Get 3 uniques from hard clues",
+        "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
+        "assetImage": "Reward_casket_hard_detail.png"
+    },
+    {
+        "_id": 15,
+        "name": "Get 3 uniques from hard clues",
+        "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
+        "assetImage": "Reward_casket_hard_detail.png"
+    },
+    {
+        "_id": 16,
+        "name": "Get 3 uniques from hard clues",
+        "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
+        "assetImage": "Reward_casket_hard_detail.png"
+    },
+    {
+        "_id": 17,
+        "name": "Get 3 uniques from hard clues",
+        "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
+        "assetImage": "Reward_casket_hard_detail.png"
+    },
+    {
+        "_id": 18,
+        "name": "Get 3 uniques from hard clues",
+        "tip": "Potential reward from hard clues. Killing hellhounds is a decent way of getting the clues",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(hard)",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28hard%29_detail.png/267px-Reward_casket_%28hard%29_detail.png?1a29e",
+        "assetImage": "Reward_casket_hard_detail.png"
+    },
+    {
+        "_id": 19,
+        "name": "Get 1 minigame slot",
+        "tip": "Pick a minigame, any minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
+        "assetImage": "minigames.png"
+    },
+    {
+        "_id": 20,
+        "name": "Get 1 minigame slot",
+        "tip": "Pick a minigame, any minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
+        "assetImage": "minigames.png"
+    },
+    {
+        "_id": 21,
+        "name": "Get 1 minigame slot",
+        "tip": "Pick a minigame, any minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
+        "assetImage": "minigames.png"
+    },
+    {
+        "_id": 22,
+        "name": "Get 1 minigame slot",
+        "tip": "Pick a minigame, any minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
+        "assetImage": "minigames.png"
+    },
+    {
+        "_id": 23,
+        "name": "Get 1 minigame slot",
+        "tip": "Pick a minigame, any minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
+        "assetImage": "minigames.png"
+    },
+    {
+        "_id": 24,
+        "name": "Get 2 LMS slots",
+        "isLMS": true,
+        "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
+        "assetImage": "victors_cape_detail.png"
+    },
+    {
+        "_id": 25,
+        "name": "Get 2 LMS slots",
+        "isLMS": true,
+        "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
+        "assetImage": "victors_cape_detail.png"
+    },
+    {
+        "_id": 26,
+        "name": "Get 2 LMS slots",
+        "isLMS": true,
+        "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
+        "assetImage": "victors_cape_detail.png"
+    },
+    {
+        "_id": 27,
+        "name": "Get 2 LMS slots",
+        "isLMS": true,
+        "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
+        "assetImage": "victors_cape_detail.png"
+    },
+    {
+        "_id": 28,
+        "name": "Get 2 LMS slots",
+        "isLMS": true,
+        "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
+        "assetImage": "victors_cape_detail.png"
+    },
+    {
+        "_id": 29,
+        "name": "Get 2 LMS slots",
+        "isLMS": true,
+        "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
+        "assetImage": "victors_cape_detail.png"
+    },
+    {
+        "_id": 30,
+        "name": "Get 2 LMS slots",
+        "isLMS": true,
+        "tip": "Can be purchased as a reward from the Last Man Standing PVP Minigame.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Victor%27s_cape_%28500%29_detail.png/208px-Victor%27s_cape_%28500%29_detail.png?667e2",
+        "assetImage": "victors_cape_detail.png"
+    },
+    {
+        "_id": 31,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 32,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 33,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 34,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 35,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 36,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 37,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 38,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 39,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 40,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 41,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 42,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 43,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 44,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 45,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 46,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 47,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 48,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 49,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 50,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 51,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 52,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 53,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 54,
+        "name": "Get 1 unique from raids",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png"
+    },
+    {
+        "_id": 55,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 56,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 57,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 58,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 59,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 60,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 61,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 62,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 63,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 64,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 65,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 66,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 67,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 68,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 69,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 70,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 71,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 72,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 73,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 74,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 75,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 76,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 77,
+        "name": "Get 1 unique boss pet or jar",
+        "tip": "Step 1: Pick a boss Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Boss",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_%28follower%29.png/232px-Abyssal_orphan_%28follower%29.png?f674f",
+        "assetImage": "Abyssal_orphan.png"
+    },
+    {
+        "_id": 78,
+        "name": "Get 1 unique skilling pet",
+        "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
+        "assetImage": "Rocky.png"
+    },
+    {
+        "_id": 79,
+        "name": "Get 1 unique skilling pet",
+        "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
+        "assetImage": "Rocky.png"
+    },
+    {
+        "_id": 80,
+        "name": "Get 1 unique skilling pet",
+        "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
+        "assetImage": "Rocky.png"
+    },
+    {
+        "_id": 81,
+        "name": "Get 1 unique skilling pet",
+        "tip": "Step1: Pick a Skill Step2: ??? Step3: Profit",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Pet#Skilling_pets",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Rocky_%28follower%29.png?5bf2f",
+        "assetImage": "Rocky.png"
+    },
+    {
+        "_id": 82,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 83,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 84,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 85,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 86,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 87,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 88,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 89,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 90,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 91,
+        "name": "Get 1 wildy unique",
+        "tip": "Share I tb'ed",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Craw%27s_bow_%28u%29_detail.png/242px-Craw%27s_bow_%28u%29_detail.png?bf1fd",
+        "assetImage": "craws_bow_detail.png"
+    },
+    {
+        "_id": 92,
+        "name": "Get 1 slayer log slot",
+        "tip": "Good Luck on Imbued Heart!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
+        "assetImage": "Imbued_heart_detail.png"
+    },
+    {
+        "_id": 93,
+        "name": "Get 1 slayer log slot",
+        "tip": "Good Luck on Imbued Heart!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
+        "assetImage": "Imbued_heart_detail.png"
+    },
+    {
+        "_id": 94,
+        "name": "Get 1 slayer log slot",
+        "tip": "Good Luck on Imbued Heart!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
+        "assetImage": "Imbued_heart_detail.png"
+    },
+    {
+        "_id": 95,
+        "name": "Get 1 slayer log slot",
+        "tip": "Good Luck on Imbued Heart!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
+        "assetImage": "Imbued_heart_detail.png"
+    },
+    {
+        "_id": 96,
+        "name": "Get 1 slayer log slot",
+        "tip": "Good Luck on Imbued Heart!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
+        "assetImage": "Imbued_heart_detail.png"
+    },
+    {
+        "_id": 97,
+        "name": "Get 1 slayer log slot",
+        "tip": "Good Luck on Imbued Heart!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Slayer",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Imbued_heart_detail.png/320px-Imbued_heart_detail.png?be01a",
+        "assetImage": "Imbued_heart_detail.png"
+    },
+    {
+        "_id": 98,
+        "name": "Get 1 miscellaneous log slot",
+        "tip": "May the bird gods bless you with evil chicken pieces",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
+        "assetImage": "dragon_full_helm_detail.png"
+    },
+    {
+        "_id": 99,
+        "name": "Get 1 miscellaneous log slot",
+        "tip": "May the bird gods bless you with evil chicken pieces",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
+        "assetImage": "dragon_full_helm_detail.png"
+    },
+    {
+        "_id": 100,
+        "name": "Get 1 miscellaneous log slot",
+        "tip": "May the bird gods bless you with evil chicken pieces",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
+        "assetImage": "dragon_full_helm_detail.png"
+    },
+    {
+        "_id": 101,
+        "name": "Get 1 miscellaneous log slot",
+        "tip": "May the bird gods bless you with evil chicken pieces",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
+        "assetImage": "dragon_full_helm_detail.png"
+    },
+    {
+        "_id": 102,
+        "name": "Get 1 miscellaneous log slot",
+        "tip": "May the bird gods bless you with evil chicken pieces",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Collection_log#Miscellaneous",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/277px-Dragon_full_helm_detail.png?6edab",
+        "assetImage": "dragon_full_helm_detail.png"
+    },
+    {
+        "_id": 103,
+        "name": "Get 1 sigil from corp",
+        "tip": "It's a giant chicken!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Corporeal_Beast",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Elysian_sigil_detail.png/211px-Elysian_sigil_detail.png?2fe74",
+        "assetImage": "elysian_sigil_detail.png"
+    },
+    {
+        "_id": 104,
+        "name": "Get 1 mutagen from zulrah",
+        "tip": "Why'd it have to be snakes.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Zulrah",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Magma_mutagen_detail.png/126px-Magma_mutagen_detail.png?0551e",
+        "assetImage": "Magma_mutagen_detail.png"
+    },
+    {
+        "_id": 105,
+        "name": "Get 1 zalcano unqiue",
+        "tip": "Boss or Minigame?",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Zalcano_shard_detail.png/221px-Zalcano_shard_detail.png?f52af",
+        "assetImage": "Zalcano_shard_detail.png"
+    },
+    {
+        "_id": 106,
+        "name": "Get 1 vorkath unique",
+        "tip": "Money Dragon",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Vorkath",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Dragonbone_necklace_detail.png/147px-Dragonbone_necklace_detail.png?132ed",
+        "assetImage": "Dragonbone_necklace_detail.png"
+    },
+    {
+        "_id": 107,
+        "name": "Get 1 nightmare unique",
+        "tip": "Ironman retirement home",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
+        "assetImage": "Inquisitors_mace_detail.png"
+    },
+    {
+        "_id": 108,
+        "name": "Get 1 nightmare unique",
+        "tip": "Ironman retirement home",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
+        "assetImage": "Inquisitors_mace_detail.png"
+    },
+    {
+        "_id": 109,
+        "name": "Get 1 nightmare unique",
+        "tip": "Ironman retirement home",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
+        "assetImage": "Inquisitors_mace_detail.png"
+    },
+    {
+        "_id": 110,
+        "name": "Get 1 nightmare unique",
+        "tip": "Ironman retirement home",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
+        "assetImage": "Inquisitors_mace_detail.png"
+    },
+    {
+        "_id": 111,
+        "name": "Get 1 nightmare unique",
+        "tip": "Ironman retirement home",
+        "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Inquisitor%27s_mace_detail.png/234px-Inquisitor%27s_mace_detail.png?37397",
+        "assetImage": "Inquisitors_mace_detail.png"
+    },
+    {
+        "_id": 112,
+        "name": "Get 1 nex unique",
+        "tip": "The ice prison",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nex",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Nihil_horn_detail.png?f672b",
+        "assetImage": "Nihil_horn_detail.png"
+    },
+    {
+        "_id": 113,
+        "name": "Get 1 nex unique",
+        "tip": "The ice prison",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nex",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Nihil_horn_detail.png?f672b",
+        "assetImage": "Nihil_horn_detail.png"
+    },
+    {
+        "_id": 114,
+        "name": "Get 1 nex unique",
+        "tip": "The ice prison",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Nex",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Nihil_horn_detail.png?f672b",
+        "assetImage": "Nihil_horn_detail.png"
+    },
+    {
+        "_id": 115,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 116,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 117,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 118,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 119,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 120,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 121,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 122,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 123,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 124,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 125,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 126,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 127,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 128,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 129,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 130,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 131,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 132,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 133,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 134,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 135,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 136,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 137,
+        "name": "Get a level 99",
+        "tip": "Ok it's grind time!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Skills",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Max_cape_detail.png/124px-Max_cape_detail.png?4f67e",
+        "assetImage": "Max_cape_detail.png"
+    },
+    {
+        "_id": 138,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 139,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 140,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 141,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 142,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 143,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 144,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 145,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 146,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 147,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 148,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 149,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 150,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 151,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 152,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 153,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 154,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 155,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 156,
+        "name": "Complete easy/medium/hard/elite/+50 points",
+        "tip": "Complete in order Easy through elite, subsequent tasks are +50 CA points",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Achievements",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Combat_achievements_detail.png?d8b9a",
+        "assetImage": "Combat_achievements_detail.png"
+    },
+    {
+        "_id": 157,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 158,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 159,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 160,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 161,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 162,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 163,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 164,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 165,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 166,
+        "name": "Get 1 unique from DT2 bosses",
+        "tip": "Can be received as drop from any of the four DT2 bosses",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Treasure_II_-_The_Fallen_Empire",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Soulreaper_axe_detail.png/232px-Soulreaper_axe_detail.png?27b3b",
+        "assetImage": "Soulreaper_axe_detail.png"
+    },
+    {
+        "_id": 167,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "tip": "Reward from Fortis Colosseum",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Blessed_dizana%27s_quiver_detail.png?b4e51",
+        "assetImage": "Blessed_dizanas_quiver_detail.png"
+    },
+    {
+        "_id": 168,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "tip": "Reward from Fortis Colosseum",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Blessed_dizana%27s_quiver_detail.png?b4e51",
+        "assetImage": "Blessed_dizanas_quiver_detail.png"
+    },
+    {
+        "_id": 169,
+        "name": "Get 1 unique from Fortis Colosseum",
+        "tip": "Reward from Fortis Colosseum",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Blessed_dizana%27s_quiver_detail.png?b4e51",
+        "assetImage": "Blessed_dizanas_quiver_detail.png"
+    },
+    {
+        "_id": 170,
+        "name": "Get Quetzin",
+        "tip": "Reward from hunters loot sacks",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Quetzin",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Quetzin_%28follower%29.png/320px-Quetzin_%28follower%29.png?ca338",
+        "assetImage": "quetzin_follower.png"
+    },
+    {
+        "_id": 171,
+        "name": "Get 1 unqiue from The Gauntlet",
+        "tip": "Reward from The Gauntlet",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Gauntlet",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Enhanced_crystal_weapon_seed_detail.png/309px-Enhanced_crystal_weapon_seed_detail.png?48996",
+        "assetImage": "Enhanced_crystal_weapon_seed_detail.png"
+    }
 ]
