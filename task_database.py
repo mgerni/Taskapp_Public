@@ -1,5 +1,5 @@
 import random
-import gspread
+# import gspread
 import re
 from math import floor
 import tasklists
@@ -25,7 +25,6 @@ Returns:
 
 '''
 
-
 def get_user(username) -> UserDatabaseObject:
     coll = mydb['taskAccounts']
     users = list(coll.find({'username': username}))
@@ -34,8 +33,7 @@ def get_user(username) -> UserDatabaseObject:
     old_user_data = users[0]
     return convert_database_user(migrate_database_user_to_new_format(old_user_data))
 
-
-# For new taskList data format - Replaces above after migration
+# to replace above function after migration
 def get_user_2(username) -> UserDatabaseObject:
     coll = mydb['taskLists']
     users = list(coll.find({'username': username}))
@@ -343,7 +341,7 @@ Returns:
 def complete_task(username: str) -> dict:
     user = get_user(username)
     task_check = user.current_task()
-
+    print(task_check)
     if task_check is None:
         return {}
 
@@ -1145,4 +1143,5 @@ def get_leaderboard() -> list[LeaderboardEntry]:
 
 
 if __name__ == "__main__":
+    
     pass

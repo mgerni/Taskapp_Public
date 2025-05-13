@@ -3,6 +3,10 @@ import pymongo
 import base64
 
 def create_pem_from_base64(base64_string, filename):
+    # if certificate already exists, return
+    if os.path.exists(filename):
+        return
+    
     decoded_data = base64.b64decode(base64_string)
 
     # save to file
@@ -23,4 +27,9 @@ if IS_PROD:
                                        tls=True,
                                        tlsCertificateKeyFile="certificate.pem")
 else:
-    MONGO_CLIENT = pymongo.MongoClient(MONGO_URL)
+    if os.path.exists("certificate.pem"):
+        MONGO_CLIENT = pymongo.MongoClient(MONGO_URL,
+                                       tls=True,
+                                       tlsCertificateKeyFile="certificate.pem")
+    else:
+        MONGO_CLIENT = pymongo.MongoClient(MONGO_URL)
