@@ -49,9 +49,10 @@ def migrate_db():
     new_coll = mydb['taskLists']  # Can't seem to find a way to easily rewrite to existing collection
     new_coll.drop()
     users = coll.find({}, {})
-
-    for user in users:
+    users_length = coll.count_documents({})
+    for i, user in enumerate(users, 1):
         new_coll.insert_one(migrate_database_user_to_new_format(user))
+        print(f"User {i}/{users_length} migrated")
 
 
 # Below to replace task_database.py add user
@@ -119,3 +120,10 @@ def add_task_account(username, is_official, lms_enabled):
             'otherPets': []
         }
     })
+
+if __name__ == "__main__":
+    # Uncomment the line below to migrate the database
+    migrate_db()
+    # Example usage of add_task_account
+    # add_task_account("test_user", True, False)
+    pass
