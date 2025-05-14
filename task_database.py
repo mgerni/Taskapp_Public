@@ -95,16 +95,16 @@ def add_task_account(username, is_official, lms_enabled):
         "isOfficial": bool(is_official),
         "lmsEnabled": bool(lms_enabled),
         'tiers': {
-            'easy': [],
-            'medium': [],
-            'hard': [],
-            'elite': [],
-            'master' : [],
-            'passive': [],
-            'extra': [],
-            'bossPets': [],
-            'skillPets': [],
-            'otherPets': []
+            'easy': {"completedTasks" : []},
+            'medium': {"completedTasks" : []},
+            'hard': {"completedTasks" : []},
+            'elite': {"completedTasks" : []},
+            'master' : {"completedTasks" : []},
+            'passive': {"completedTasks" : []},
+            'extra': {"completedTasks" : []},
+            'bossPets': {"completedTasks" : []},
+            'skillPets': {"completedTasks" : []},
+            'otherPets': {"completedTasks" : []}
         }
     })
 
@@ -1248,7 +1248,51 @@ def get_leaderboard() -> list[LeaderboardEntry]:
     coll = mydb['taskAccounts']
     return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
 
-
-if __name__ == "__main__":
+def test():
+    task_coll = mydb["taskLists"]
+    # results = task_coll.find_one({"username": "Gerni Task"}, {'tiers': 1, 'username': 1})
+    results = task_coll.find({}, {'tiers': 1, 'username': 1})
+    valid = True
     
+    for result in results:
+        easy = result['tiers']['easy']
+        medium = result['tiers']['medium']
+        hard = result['tiers']['hard']
+        elite = result['tiers']['elite']
+        master = result['tiers']['master']
+        passive = result['tiers']['passive']
+        extra = result['tiers']['extra']
+        bossPets = result['tiers']['bossPets']
+        skillPets = result['tiers']['skillPets']
+        otherPets = result['tiers']['otherPets']
+        if not isinstance(easy, dict):
+            valid = False
+        if not isinstance(medium, dict):
+            valid = False
+        if not isinstance(hard, dict):
+            valid = False
+        if not isinstance(elite, dict):
+            valid = False
+        if not isinstance(master, dict):
+            valid = False
+        if not isinstance(passive, dict):
+            valid = False
+        if not isinstance(extra, dict):
+            valid = False
+        if not isinstance(bossPets, dict):
+            valid = False
+        if not isinstance(skillPets, dict):
+            valid = False
+        if not isinstance(otherPets, dict):
+            valid = False
+
+        # if not valid:
+        #     task_coll.update_one({"username" : result['username']}, {"$set":})
+
+def fix_gerni():
+    task_coll = mydb["taskLists"]
+    task_coll.update_one({"username": "GerniFix"})
+    results = task_coll.find({}, {'tiers': 1, 'username': 1})
+if __name__ == "__main__":
+    test()
     pass
