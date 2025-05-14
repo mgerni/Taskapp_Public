@@ -112,12 +112,14 @@ def convert_database_user(user_data: dict) -> UserDatabaseObject:
 
     def convert_database_tier(tier: str) -> UserTaskList:
         data = tiers[tier]
-        completed_tasks = list(map(lambda x: UserCompletedTask(task_id=x['taskId']), data['completedTasks']))
-        # Filter tasks that have been removed from tasklist
-        all_current_tier_ids = list(map(lambda x: x.id, tasklists.list_for_tier(tier)))
-        completed_tasks = list(filter(lambda x: x.task_id in all_current_tier_ids, completed_tasks))
+        if data:
+            completed_tasks = list(map(lambda x: UserCompletedTask(task_id=x['taskId']), data['completedTasks']))
+            # Filter tasks that have been removed from tasklist
+            all_current_tier_ids = list(map(lambda x: x.id, tasklists.list_for_tier(tier)))
+            completed_tasks = list(filter(lambda x: x.task_id in all_current_tier_ids, completed_tasks))
 
-        current = data.get('currentTask')
+        current = data.get('currentTask', None)
+        print(current)
         if current:
             current = UserCurrentTask(task_id=current['taskId'])
         return UserTaskList(current_task=current,
