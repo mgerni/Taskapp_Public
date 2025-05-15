@@ -313,7 +313,7 @@ $(document).ready(function(){
     }
     else {
       var tier = $('#tier').data('tier');
-      const updatePercent = document.getElementById(tier + "Percent")
+      var updatePercent = document.getElementById(tier + "Percent")
     }
     var elementTarget = this;
     var parent = elementTarget.parentElement;
@@ -335,6 +335,7 @@ $(document).ready(function(){
         updatePercent.innerHTML = data["allPets"] + '%';
       }
       else {
+        console.log(tier)
         updatePercent.innerHTML = data[tier] + '%';
       }
       
