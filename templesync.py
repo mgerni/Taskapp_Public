@@ -5,6 +5,13 @@ import json
 def temple_player_data(username: str):
     username = username.replace(' ', '+')
     player_data = requests.get(f'https://templeosrs.com/api/collection-log/player_collection_log.php?player={username}&categories=all&itemsonly&includenames=1&onlyitems=1').json()
+    used_id = set()
+    cleaned_player_data = list()
+    for item in player_data['data']['items']:
+        if item['id'] not in used_id:
+            used_id.add(item['id'])
+            cleaned_player_data.append(item)
+
     return player_data
 
 
