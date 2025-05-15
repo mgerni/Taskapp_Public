@@ -262,7 +262,6 @@ def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
     task_coll = mydb['taskLists']
     cleaned_tier = tier.replace("Tasks", "")
     if complete:
-        print(f"tiers.{cleaned_tier}.completedTasks", task_id)
         result = task_coll.update_one(
             {"username": username},
             {
@@ -540,7 +539,6 @@ def get_task_lists(username):
         if completed_bossPet_ids:
             for id in completed_bossPet_ids:
                 if boss_pet_task.id == id['taskId']:
-                    print(boss_pet_task)
                     boss_pet_task.isCompleted = True
 
         bossPets.append(boss_pet_task)
@@ -645,6 +643,51 @@ def manual_revert_tasks(username, tier, task_id):
     task.isCompleted = False
     return task.name, task.asset_image, task.tip, task.wiki_link
 
+
+def update_imported_tasks(username: str, all_tasks: list, username2: str):
+    coll = mydb['taskLists']
+    include = {'easy', 'medium', 'hard', 'elite'}
+    tasks_to_check = []
+    for tier in include:
+        current_task = get_taskCurrent_tier(username, tier)
+        if current_task is not None:
+            tasks_to_check.append(current_task[3])
+
+    all_task_ids = {task["taskId"] for group in all_tasks for task in group}
+    found = [value for value in tasks_to_check if value in all_task_ids]
+    exists_all = all(value in all_task_ids for value in tasks_to_check)
+    if exists_all:
+        # coll.update_one({'username': username}, {})
+        for task in found:
+            print(task)
+            __set_current_task(username, 'easy', int(task), False)
+
+    coll.update_one({'username': username},
+                    {'$set': {'tiers.easy.completedTasks': [],
+                              'tiers.medium.completedTasks': [],
+                              'tiers.hard.completedTasks': [],
+                              'tiers.elite.completedTasks': [],
+                            #   'tiers.master.completedTasks': [],
+                            #   'tiers.passive.completedTasks': [],
+                            #   'tiers.extra.completedTasks': [],
+                            #   'tiers.bossPets.completedTasks': [],
+                            #   'tiers.skillPets.completedTasks': [],
+                            #   'tiers.otherPets.completedTasks': []
+                            }
+                    })
+    coll.update_one({'username': username},
+                    {'$set': {'tiers.easy.completedTasks': all_tasks[0],
+                              'tiers.medium.completedTasks': all_tasks[1],
+                              'tiers.hard.completedTasks': all_tasks[2],
+                              'tiers.elite.completedTasks': all_tasks[3],
+                            #   'tiers.master.completedTasks': [],
+                            #   'tiers.passive.completedTasks': [],
+                            #   'tiers.extra.completedTasks': [],
+                            #   'tiers.bossPets.completedTasks': [],
+                            #   'tiers.skillPets.completedTasks': [],
+                            #   'tiers.otherPets.completedTasks': []
+                              }})
+    coll.update_one({'username' : username}, {'$set' : {'ign': username2}})
 
 '''
 import_spreadsheet:

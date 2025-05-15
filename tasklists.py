@@ -3,8 +3,8 @@ from task_types import TaskData, ColLogData
 def to_col_log_data(data: dict) -> ColLogData or None: # type: ignore
     if data is None:
         return None
-    return ColLogData(category=data['category'],
-                      log_name=data['logName'],
+    return ColLogData(category=data.get('category'),
+                      log_name=data.get('logName'),
                       exclude=data.get('exclude'),
                       include=data.get('include'),
                       multi=data.get('multi'),

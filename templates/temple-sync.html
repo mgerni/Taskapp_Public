@@ -1,0 +1,51 @@
+{% extends "base_updated.html" %}
+{% block title %}
+- Temple Sync
+{% endblock %}
+{% block head %}
+{% endblock %}
+{% block context %}
+
+<div class="container" style="margin-top: 5%;">
+    <div class="main-content-rank-check">
+        <div class="rect-large-register rsText">
+            <div class="triangle-top-left">
+                <div class="decoration-top-left shadow"></div>
+            </div>
+            <div class="triangle-top-right">
+                <div class="decoration-top-right shadow"></div>   
+            </div>
+            <div class="triangle-bottom-left">
+                <div class="decoration-bottom-left shadow"></div>
+            </div>
+            <div class="triangle-bottom-right">
+                <div class="decoration-bottom-right shadow"></div>
+            </div>
+
+            <div id="importContent">
+                <div class="rank-results-col center">
+                    <h3>Import from TempleOSRS</h3>
+                    <br>
+                    <p class="incomplete">Currently syncing Easy, Medium, Hard, and, Elite Tasks is supported.</p>
+                    <p class="incomplete">Using this feature will mark all tasks in a supported tier as incomplete.</p>
+                    <p class="incomplete">Only tasks imported from TempleOSRS will be completed.</p>
+                    <p class="complete">You must "link" your account to <a href="https://templeosrs.com">templeosrs.com</a></p>
+                    <br>
+
+                     <p class="complete">If you have not linked your account, you can follow the steps below to do so:</p>
+                     <ol>
+                        <a  target="_blank" href="https://templeosrs.com/faq.php#CATEGORY_06">Temple OSRS FAQ</a>
+                     </ol>
+        
+                     <p  class="complete">Once you have ensured your TempleOSRS data is updated/sync'd, enter your Runescape Username and click Import.</p>
+                     <div class="import-input-section">
+                        <input class="rc-input" type="text" name="inputText" id="importInput" placeholder="RSN">
+                        <button id="importButton" class="rsText button-complete button-green">Import</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

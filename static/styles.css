@@ -916,6 +916,16 @@ nav .rank-check::before {
     font-weight: 900;
     color: var(--complete-color);
 }
+
+nav .temple-sync::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f021";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    color: var(--complete-color);
+}
 nav svg {
     fill: var(--current-task-color)
 }
@@ -1457,4 +1467,11 @@ input:checked + .slider:before {
 .recaptcha {
     display: flex;
     justify-content: center;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
