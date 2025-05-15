@@ -463,10 +463,10 @@ def collection_log_check():
 def collection_log_import():
     form_data = request.form
     rs_username = form_data['username']
-    easy_import = check_logs('Gerni Task', read_json_file('tasks/easy.json'), 'import')
-    medium_import = check_logs('Gerni Task', read_json_file('tasks/medium.json'), 'import')
-    hard_import = check_logs('Gerni Task', read_json_file('tasks/hard.json'), 'import')
-    elite_import = check_logs('Gerni Task', read_json_file('tasks/elite.json'), 'import')
+    easy_import = check_logs(rs_username, read_json_file('tasks/easy.json'), 'import')
+    medium_import = check_logs(rs_username, read_json_file('tasks/medium.json'), 'import')
+    hard_import = check_logs(rs_username, read_json_file('tasks/hard.json'), 'import')
+    elite_import = check_logs(rs_username, read_json_file('tasks/elite.json'), 'import')
     all_tasks = [easy_import, medium_import, hard_import, elite_import]
     update = update_imported_tasks(session['username'], all_tasks, form_data['username'])
 
