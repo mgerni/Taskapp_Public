@@ -27,9 +27,9 @@
                     <!-- Completed tasks -->
                      <h2 class="pet-label rsText">Boss Pets</h2>
                     {% for item in items_bosspet %}
-                    {% if item[2] == 'Complete' %}
+                    {% if item.isCompleted %}
                     <tr>
-                        <div class="rect complete-hover space-under" data-tooltip="Mark Incomplete" name="{{item[0]}}">
+                        <div class="rect complete-hover space-under" data-tooltip="Mark Incomplete" name="{{item.name}}">
                             <div class="triangle-top-left">
                                 <div class="decoration-top-left shadow"></div>
                             </div>
@@ -42,11 +42,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                                <div id="{{item[3]}}" class="content-container rsText revertButton" data-type="bossPet">
+                                <div id="{{item.id}}" class="content-container rsText revertButton" data-type="bossPets">
                                         <div class="square cut-corners square-complete">
-                                            <a href="{{item[5]}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item[1]}}" alt="" width="50px" height="50px" name="No tip!"></a>
+                                            <a href="{{item.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item.asset_image}}" alt="" width="50px" height="50px" name="No tip!"></a>
                                         </div>
-                                    <p class="complete">{{item[0]}}</p>
+                                    <p class="complete">{{item.name}}</p>
                                     <p class="complete">--/--/---- --:--</p>
                                 </div>
                         </div>
@@ -67,11 +67,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                                <div id="{{item[3]}}" class="content-container rsText updateButton" data-type="bossPet">
+                                <div id="{{item.id}}" class="content-container rsText updateButton" data-type="bossPets">
                                         <div class="square cut-corners square-incomplete">
-                                            <a href="{{item[5]}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item[1]}}" alt="" width="50px" height="50px" name="No tip!"></a>
+                                            <a href="{{item.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item.asset_image}}" alt="" width="50px" height="50px" name="No tip!"></a>
                                         </div>
-                                    <p class="incomplete">{{item[0]}}</p>
+                                    <p class="incomplete">{{item.name}}</p>
                                     <p class="incomplete">--/--/---- --:--</p>
                                 </div>
                         </div>
@@ -82,7 +82,7 @@
                     <h3 class="rsText">Skilling Pets</h3>
 
                     {% for item in items_skillpet %}
-                    {% if item[2] == 'Complete' %}
+                    {% if item.isCompleted %}
                     <tr>
                         <div class="rect complete-hover space-under" data-tooltip="Mark Incomplete" name="{{item[0]}}">
                             <div class="triangle-top-left">
@@ -97,11 +97,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                                <div id="{{item[3]}}" class="content-container rsText revertButton" data-type="skillPet">
+                                <div id="{{item.id}}" class="content-container rsText revertButton" data-type="skillPets">
                                         <div class="square cut-corners square-complete">
-                                            <a href="{{item[5]}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item[1]}}" alt="" width="50px" height="50px" name="No tip!"></a>
+                                            <a href="{{item.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item.asset_image}}" alt="" width="50px" height="50px" name="No tip!"></a>
                                         </div>
-                                    <p class="complete">{{item[0]}}</p>
+                                    <p class="complete">{{item.name}}</p>
                                     <p class="complete">--/--/---- --:--</p>
                                 </div>
                         </div>
@@ -122,11 +122,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                                <div id="{{item[3]}}" class="content-container rsText updateButton" data-type="skillPet">
+                                <div id="{{item.id}}" class="content-container rsText updateButton" data-type="skillPets">
                                         <div class="square cut-corners square-incomplete">
-                                            <a href="{{item[5]}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item[1]}}" alt="" width="50px" height="50px" name="No tip!"></a>
+                                            <a href="{{item.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item.asset_image}}" alt="" width="50px" height="50px" name="No tip!"></a>
                                         </div>
-                                    <p class="incomplete">{{item[0]}}</p>
+                                    <p class="incomplete">{{item.name}}</p>
                                     <p class="incomplete">--/--/---- --:--</p>
                                 </div>
                         </div>
@@ -138,7 +138,7 @@
                     <h3 class="rsText">Other Pets</h3>
 
                     {% for item in items_otherpet %}
-                    {% if item[2] == 'Complete' %}
+                    {% if item.isCompleted %}
                     <tr>
                         <div class="rect complete-hover space-under" data-tooltip="Mark Incomplete" name="{{item[0]}}">
                             <div class="triangle-top-left">
@@ -153,11 +153,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                                <div id="{{item[3]}}" class="content-container rsText revertButton" data-type="otherPet">
+                                <div id="{{item.id}}" class="content-container rsText revertButton" data-type="otherPets">
                                         <div class="square cut-corners square-complete">
-                                            <a href="{{item[5]}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item[1]}}" alt="" width="50px" height="50px" name="No tip!"></a>
+                                            <a href="{{item.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item.asset_image}}" alt="" width="50px" height="50px" name="No tip!"></a>
                                         </div>
-                                    <p class="complete">{{item[0]}}</p>
+                                    <p class="complete">{{item.name}}</p>
                                     <p class="complete">--/--/---- --:--</p>
                                 </div>
                         </div>
@@ -178,11 +178,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                                <div id="{{item[3]}}" class="content-container rsText updateButton" data-type="otherPet">
+                                <div id="{{item.id}}" class="content-container rsText updateButton" data-type="otherPets">
                                         <div class="square cut-corners square-incomplete">
-                                            <a href="{{item[5]}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item[1]}}" alt="" width="50px" height="50px" name="No tip!"></a>
+                                            <a href="{{item.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{item.asset_image}}" alt="" width="50px" height="50px" name="No tip!"></a>
                                         </div>
-                                    <p class="incomplete">{{item[0]}}</p>
+                                    <p class="incomplete">{{item.name}}</p>
                                     <p class="incomplete">--/--/---- --:--</p>
                                 </div>
                         </div>

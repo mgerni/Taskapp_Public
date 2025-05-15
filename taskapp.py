@@ -656,13 +656,15 @@ def task_list_master():
 @login_required
 def task_list_pets():
     user_info = BasePageInfo()
+
     # if not user_info.email_bool:
     #     return render_template('email-verify.html')
     task = get_task_lists(user_info.username)
     progress = get_task_progress(user_info.username)
-    items_bosspet = filter_lms(task[5])
-    items_skillpet = filter_lms(task[6])
-    items_otherpet = filter_lms(task[7])
+    items_bosspet = task[0]
+    items_skillpet = task[1]
+    items_otherpet = task[2]
+
 
     context = {
         'easy': progress['easy']['percent_complete'],
@@ -739,10 +741,7 @@ tier_to_type = {
 def update():
     user_info = BasePageInfo()
     task_id = request.form['id']
-    if request.form["tier"] == 'bossPets' or request.form["tier"] == 'skillPets' or request.form["tier"] == 'otherPets':
-        tier = request.form["tier"]
-    else:
-        tier = request.form['tier'] + 'Tasks'
+    tier = request.form['tier']
     manual_complete_tasks(session['username'], tier, task_id)
     progress = get_task_progress(user_info.username)
     data = {
@@ -764,7 +763,7 @@ def update():
 @login_required
 def revert():
     task_id = request.form['id']
-    tier = request.form['tier'] + 'Tasks'
+    tier = request.form['tier']
     user_info = BasePageInfo()
     manual_revert_tasks(session['username'], tier, task_id)
     progress = get_task_progress(user_info.username)
@@ -873,8 +872,6 @@ def rank_check():
 # Function to send email using send_grid API.
 def send_reset_email(email, username):
     token = task_login.get_reset_token(username)
-    print(token)
-    print(url_for('reset_token', token=token, _external=True))
     email_message = send_grid_email.send_message(
     email,
     'Password Reset Request For Task App',

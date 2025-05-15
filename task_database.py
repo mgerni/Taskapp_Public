@@ -261,20 +261,20 @@ def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
     #                           '%s.$.taskCurrent' % tier: False}})
     task_coll = mydb['taskLists']
     cleaned_tier = tier.replace("Tasks", "")
-    # task_coll.update_one({'username': username}, {"$push" : {f"tiers.{cleaned_tier}.completedTasks": {}}})
-    result = task_coll.update_one(
-        {"username": username},
-        {
-            "$push": {
-                f"tiers.{cleaned_tier}.completedTasks": {"taskId": task_id}
-            },
-            "$unset": {
-                f"tiers.{cleaned_tier}.currentTask": ""
-        }
-        }
-    )
+    if complete:
+        print(f"tiers.{cleaned_tier}.completedTasks", task_id)
+        result = task_coll.update_one(
+            {"username": username},
+            {
+                "$push": {
+                    f"tiers.{cleaned_tier}.completedTasks": {"taskId": task_id}
+                },
+                "$unset": {
+                    f"tiers.{cleaned_tier}.currentTask": ""
+            }
+            }
+        )
     if not complete:
-        print('removing from completed list')
         remove_completed = task_coll.update_one(
             {
                 "username" : username
@@ -525,30 +525,74 @@ Returns:
 
 
 def get_task_lists(username):
-    coll = mydb['taskAccounts']
-    task_query_easy = coll.find({'username': username}, {'easyTasks': 1})
-    task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
-    task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
-    task_query_elite = coll.find({'username': username}, {'eliteTasks': 1})
-    task_query_master = coll.find({'username': username}, {'masterTasks' : 1})
-    task_query_bosspet = coll.find({'username': username}, {'bossPetTasks': 1})
-    task_query_skillpet = coll.find({'username': username}, {'skillPetTasks': 1})
-    task_query_otherpet = coll.find({'username': username}, {'otherPetTasks': 1})
-    task_query_extra = coll.find({'username': username}, {'extraTasks': 1})
-    task_query_passive = coll.find({'username': username}, {'passiveTasks': 1})
+    coll = mydb['taskLists']
+    task_list_query = coll.find_one({"username" : username}, {"_id" : 0 , "username" : 1, "tiers": 1})
+    bossPets = []
+    skillPets = []
+    otherPets = []
+    completed_bossPet_ids = task_list_query['tiers']['bossPets']['completedTasks']
+    completed_skillPet_ids = task_list_query['tiers']['skillPets']['completedTasks']
+    completed_otherPet_ids = task_list_query['tiers']['otherPets']['completedTasks']
 
-    easy_list = task_query_easy[0]['easyTasks']
-    medium_list = task_query_medium[0]['mediumTasks']
-    hard_list = task_query_hard[0]['hardTasks']
-    elite_list = task_query_elite[0]['eliteTasks']
-    master_list = task_query_master[0]['masterTasks']
-    bosspet_list = task_query_bosspet[0]['bossPetTasks']
-    skillpet_list = task_query_skillpet[0]['skillPetTasks']
-    otherpet_list = task_query_otherpet[0]['otherPetTasks']
-    extra_list = task_query_extra[0]['extraTasks']
-    passive_list = task_query_passive[0]['passiveTasks']
+    
 
-    return easy_list, medium_list, hard_list, elite_list, master_list, bosspet_list, skillpet_list, otherpet_list, extra_list, passive_list
+    for boss_pet_task in tasklists.boss_pet:
+        if completed_bossPet_ids:
+            for id in completed_bossPet_ids:
+                if boss_pet_task.id == id['taskId']:
+                    print(boss_pet_task)
+                    boss_pet_task.isCompleted = True
+
+        bossPets.append(boss_pet_task)
+
+    for skill_pet_task in tasklists.skill_pet:
+        if completed_skillPet_ids:
+            for id in completed_skillPet_ids:
+                if skill_pet_task.id == id['taskId']:
+                    skill_pet_task.isCompleted = True
+
+
+        skillPets.append(skill_pet_task)
+
+    for other_pet_task in tasklists.other_pet:
+        if completed_otherPet_ids:
+            for id in completed_otherPet_ids:
+                if other_pet_task.id == id['taskId']:
+                    other_pet_task.isCompleted = True
+                else:
+                    other_pet_task.isCompleted = False
+
+        otherPets.append(other_pet_task)
+
+    return bossPets, tasklists.skill_pet, tasklists.other_pet
+    bossPets = list()
+    for task in tasklists.boss_pet:
+        task_data = TaskData()
+    # bossPets = list(map(lambda x: x['taskId'], task_list_query['tiers']['bossPets']['completedTasks']))
+    print(bossPets)
+    # task_query_easy = coll.find({'username': username}, {'easyTasks': 1})
+    # task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
+    # task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
+    # task_query_elite = coll.find({'username': username}, {'eliteTasks': 1})
+    # task_query_master = coll.find({'username': username}, {'masterTasks' : 1})
+    # task_query_bosspet = coll.find({'username': username}, {'bossPetTasks': 1})
+    # task_query_skillpet = coll.find({'username': username}, {'skillPetTasks': 1})
+    # task_query_otherpet = coll.find({'username': username}, {'otherPetTasks': 1})
+    # task_query_extra = coll.find({'username': username}, {'extraTasks': 1})
+    # task_query_passive = coll.find({'username': username}, {'passiveTasks': 1})
+
+    # easy_list = task_query_easy[0]['easyTasks']
+    # medium_list = task_query_medium[0]['mediumTasks']
+    # hard_list = task_query_hard[0]['hardTasks']
+    # elite_list = task_query_elite[0]['eliteTasks']
+    # master_list = task_query_master[0]['masterTasks']
+    # bosspet_list = task_query_bosspet[0]['bossPetTasks']
+    # skillpet_list = task_query_skillpet[0]['skillPetTasks']
+    # otherpet_list = task_query_otherpet[0]['otherPetTasks']
+    # extra_list = task_query_extra[0]['extraTasks']
+    # passive_list = task_query_passive[0]['passiveTasks']
+
+    # return easy_list, medium_list, hard_list, elite_list, master_list, bosspet_list, skillpet_list, otherpet_list, extra_list, passive_list
 
 
 '''
@@ -571,7 +615,7 @@ def manual_complete_tasks(username, tier, task_id):
     __set_task_complete(username, tier, task_id, True)
     exclude_list = ['bossPetTasks', 'skillPetTasks', 'otherPetTasks']
     if tier in exclude_list:
-        tier = tier.replace('Tasks', 's')
+        tier = tier.replace('Tasks', '')
     task = user_dao.task_info_for_id(tasklists.list_for_tier(tier), task_id)
     return task.name, task.asset_image, task.tip, task.wiki_link
 
@@ -596,8 +640,9 @@ def manual_revert_tasks(username, tier, task_id):
     __set_task_complete(username, tier, task_id, False)
     exclude_list = ['bossPetTasks', 'skillPetTasks', 'otherPetTasks']
     if tier in exclude_list:
-        tier = tier.replace('Tasks', 's')
+        tier = tier.replace('Tasks', '')
     task = user_dao.task_info_for_id(tasklists.list_for_tier(tier), task_id)
+    task.isCompleted = False
     return task.name, task.asset_image, task.tip, task.wiki_link
 
 
@@ -1286,13 +1331,29 @@ def test():
         if not isinstance(otherPets, dict):
             valid = False
 
-        # if not valid:
-        #     task_coll.update_one({"username" : result['username']}, {"$set":})
+        if not valid:
+            print("Invalid data type for user: ", result['username'])
+            task_coll.update_one(
+                {"username" : result['username']},
+                  {"$set": {
+                      "tiers.easy": {"completedTasks" : []},
+                        "tiers.medium": {"completedTasks" : []},
+                        "tiers.hard": {"completedTasks" : []},
+                        "tiers.elite": {"completedTasks" : []},
+                        "tiers.master": {"completedTasks" : []},
+                        "tiers.passive": {"completedTasks" : []},
+                        "tiers.extra": {"completedTasks" : []},
+                        "tiers.bossPets": {"completedTasks" : []},
+                        "tiers.skillPets": {"completedTasks" : []},
+                        "tiers.otherPets": {"completedTasks" : []}
+                        }
+                  })
 
 def fix_gerni():
     task_coll = mydb["taskLists"]
     task_coll.update_one({"username": "GerniFix"})
     results = task_coll.find({}, {'tiers': 1, 'username': 1})
 if __name__ == "__main__":
-    test()
+    # test()
+    get_task_lists('GerniSleep')
     pass
