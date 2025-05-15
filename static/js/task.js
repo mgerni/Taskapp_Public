@@ -374,6 +374,24 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+  $(document).on('click', '#importButton', function(){
+    var input = document.getElementById('importInput');
+    var username = input.value;
+    var importConent = document.getElementById('importContent');
+
+    req = $.ajax({
+      url : '/collectionlog_import/',
+      type : 'POST',
+      data : {username : username}
+    });
+
+    req.done(function(data) {
+      $(importConent).html(data)
+    });
+  });
+});
+
+$(document).ready(function(){
 $('.task-image').mouseenter(function(){
   const tip = this.name;
   const targetElement = this.parentElement.parentElement.parentElement.parentElement;

@@ -119,7 +119,6 @@ def convert_database_user(user_data: dict) -> UserDatabaseObject:
             completed_tasks = list(filter(lambda x: x.task_id in all_current_tier_ids, completed_tasks))
 
         current = data.get('currentTask', None)
-        print(current)
         if current:
             current = UserCurrentTask(task_id=current['taskId'])
         return UserTaskList(current_task=current,

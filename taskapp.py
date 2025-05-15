@@ -9,12 +9,12 @@ import task_login
 import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
                            get_task_lists, manual_complete_tasks, manual_revert_tasks,
-                            uncomplete_all_tasks, lms_status_change,
+                           uncomplete_all_tasks, lms_status_change, update_imported_tasks,
                            official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
-from templesync import check_logs, read_json_file
+from templesync import check_logs, read_json_file, import_logs
 
 app = Flask(__name__)
 
@@ -446,10 +446,10 @@ def dashboard():
 def collection_log_check():
     form_data = request.form
     rs_username = form_data['username']
-    easy_check = check_logs(rs_username, read_json_file('tasks/easy.json'))
-    medium_check = check_logs(rs_username, read_json_file('tasks/medium.json'))
-    hard_check = check_logs(rs_username, read_json_file('tasks/hard.json'))
-    elite_check = check_logs(rs_username, read_json_file('tasks/elite.json'))
+    easy_check = check_logs(rs_username, read_json_file('tasks/easy.json'), 'check')
+    medium_check = check_logs(rs_username, read_json_file('tasks/medium.json'), 'check')
+    hard_check = check_logs(rs_username, read_json_file('tasks/hard.json'), 'check')
+    elite_check = check_logs(rs_username, read_json_file('tasks/elite.json'),'check')
 
     return render_template('collection_log_check.html',
                            rs_username = rs_username,
@@ -457,23 +457,28 @@ def collection_log_check():
                            medium_check = medium_check,
                            hard_check = hard_check,
                            elite_check= elite_check)
-    log_data = get_collection_log(rs_username)
-    if log_data[0] == 200:
-        easy_check = check_collection_log(tasklists.easy, log_data[1])
-        medium_check = check_collection_log(tasklists.medium, log_data[1])
-        hard_check = check_collection_log(tasklists.hard, log_data[1])
-        elite_check = check_collection_log(tasklists.elite, log_data[1])
-        
-        return render_template('collection_log_check.html',
-        rs_username = rs_username,
-        easy_check= easy_check,
-        medium_check= medium_check,
-        hard_check = hard_check,
-        elite_check = elite_check
-        )
-    else:
-        print(log_data)
-        return render_template('collection_log_check_error.html', rs_username=rs_username, error=log_data[1])
+
+@app.route('/collectionlog_import/', methods = ['POST'])
+@login_required
+def collection_log_import():
+    form_data = request.form
+    rs_username = form_data['username']
+    easy_import = check_logs('Gerni Task', read_json_file('tasks/easy.json'), 'import')
+    medium_import = check_logs('Gerni Task', read_json_file('tasks/medium.json'), 'import')
+    hard_import = check_logs('Gerni Task', read_json_file('tasks/hard.json'), 'import')
+    elite_import = check_logs('Gerni Task', read_json_file('tasks/elite.json'), 'import')
+    all_tasks = [easy_import, medium_import, hard_import, elite_import]
+    update = update_imported_tasks(session['username'], all_tasks, form_data['username'])
+
+    return render_template('collection_log_import.html',
+                            rs_username = rs_username,
+                            easy = len(easy_import),
+                            medium = len(medium_import),
+                            hard = len(hard_import),
+                            elite = len(elite_import))
+    
+
+    return {'message': easy_import}
 
 # AJAX route for generating a task.
 @app.route('/generate/', methods=['POST'])
@@ -838,7 +843,30 @@ def wall_of_pain():
         **context
     )
 
-
+@app.route('/sync-collection-logs/', methods=['GET'])
+@login_required
+def sync_collection_logs():
+    user_info = BasePageInfo()
+    progress = get_task_progress(user_info.username)
+    context = {
+        'easy': progress['easy']['percent_complete'],
+        'medium': progress['medium']['percent_complete'],
+        'hard': progress['hard']['percent_complete'],
+        'elite': progress['elite']['percent_complete'],
+        'master' : progress['master']['percent_complete'],
+        'passive' : progress['passive']['percent_complete'], 
+        'extra' : progress['extra']['percent_complete'],
+        'allPets' : progress['all_pets']['percent_complete'],
+    }
+    return render_template(
+        'temple-sync.html',
+        username=user_info.username,
+        email_verify=user_info.email_bool,
+        email_val=user_info.email_val,
+        rank_icon=user_info.rank_icon,
+        taskapp_email=taskapp_email,
+        **context
+    )
 #route for Rank Check Page
 @app.route('/rank-check/', methods=['GET'])
 @login_required
