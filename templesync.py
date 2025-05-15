@@ -40,6 +40,8 @@ def import_logs(player_name: str, site_tasks: list):
 
 
 def check_logs(username: str, site_tasks: list, action: str):
+    def find_by_id(items, target_id):
+        return [item for item in items if item['id'] == target_id]
     def format_completed_tasks(completed_tasks: set):
         # iterate over the completed tasks and create a list of dictionaries
         formatted_tasks = []
@@ -49,7 +51,7 @@ def check_logs(username: str, site_tasks: list, action: str):
             })
         return formatted_tasks
 
-    player_data = temple_player_data(username)
+    cleaned_player_data = temple_player_data(username)
     missing_tasks = list()
     completed_tasks = set()
     for task in site_tasks:
@@ -57,18 +59,25 @@ def check_logs(username: str, site_tasks: list, action: str):
         if task_data:
             log_count = 0
             for item in task_data['include']:
-                for log_slot in player_data['data']['items']:
-                    if item['id'] == log_slot['id']:
-                        log_count += 1
+                print(f"Checking item: {item['name']} with ID: {item['id']}")
+                find_item = find_by_id(cleaned_player_data, item['id'])
+                if find_item:
+                    log_count += 1
+                    print(f"Found item: {find_item[0]['name']} with ID: {find_item[0]['id']}")
+                    print(f"Log count: {log_count}, Required: {task_data['logCount']}")
                     if log_count == task_data['logCount']:
                         completed_tasks.add(int(task['_id']))
+                        print(f"Completed task: {task['name']} with ID: {task['_id']}")
                         break
-                if log_count != task_data['logCount']:
-                    missing_tasks.append(task['name'])
-
-
+            if log_count != task_data['logCount']:
+                missing_tasks.append(task['name'])
+                print(f"Missing task: {task['name']} with ID: {task['_id']}")
+                    
     if action == 'check':
+        print("Missing tasks:")
+        for task in missing_tasks:
+            print(task)
         return missing_tasks
     else:
-        
+        print(completed_tasks)
         return format_completed_tasks(completed_tasks)
