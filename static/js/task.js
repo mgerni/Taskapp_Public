@@ -257,15 +257,17 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $(document).on('click', '.updateButton', function(){
-    if ($(this).data('type') === 'bossPet' || $(this).data('type') === 'skillPet' || $(this).data('type') === 'otherPet'){
+    if ($(this).data('type') === 'bossPets' || $(this).data('type') === 'skillPets' || $(this).data('type') === 'otherPets'){
       var tier = $(this).data('type');
+      var updatePercent = document.getElementById("allPetsPercent")
     }
     else {
       var tier = $('#tier').data('tier');
+      var updatePercent = document.getElementById(tier + "Percent")
     }
     var elementTarget = this;
     var parent = elementTarget.parentElement;
-    const updatePercent = document.getElementById(tier + "Percent")
+    
     
     
     $('form').submit(false);
@@ -280,7 +282,12 @@ $(document).ready(function(){
       $(elementTarget).removeClass('updateButton').addClass('revertButton');
       $(parent).removeClass('incomplete-hover').addClass('complete-hover');
       parent.setAttribute('data-tooltip', 'Mark Incomplete');
-      updatePercent.innerHTML = data[tier] + '%'
+      if (tier === 'bossPets' || tier === 'skillPets' || tier === 'otherPets'){
+        updatePercent.innerHTML = data["allPets"] + '%';
+      }
+      else {
+        updatePercent.innerHTML = data[tier] + '%';
+      }
       
       for (const child of elementTarget.children) {
         if (child.tagName === 'DIV') {
@@ -300,15 +307,17 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $(document).on('click', '.revertButton', function(){
-    if ($(this).data('type') === 'bossPet' || $(this).data('type') === 'skillPet' || $(this).data('type') === 'otherPet'){
+    if ($(this).data('type') === 'bossPets' || $(this).data('type') === 'skillPets' || $(this).data('type') === 'otherPets'){
       var tier = $(this).data('type');
+      var updatePercent = document.getElementById("allPetsPercent")
     }
     else {
       var tier = $('#tier').data('tier');
+      const updatePercent = document.getElementById(tier + "Percent")
     }
     var elementTarget = this;
     var parent = elementTarget.parentElement;
-    const updatePercent = document.getElementById(tier + "Percent")
+    
 
     $('form').submit(false);
     req = $.ajax({
@@ -322,7 +331,12 @@ $(document).ready(function(){
       $(elementTarget).removeClass('revertButton').addClass('updateButton');
       $(parent).removeClass('complete-hover').addClass('incomplete-hover');
       parent.setAttribute('data-tooltip', 'Mark Complete');
-      updatePercent.innerHTML = data[tier] + '%'
+      if (tier === 'bossPets' || tier === 'skillPets' || tier === 'otherPets'){
+        updatePercent.innerHTML = data["allPets"] + '%';
+      }
+      else {
+        updatePercent.innerHTML = data[tier] + '%';
+      }
       
       for (const child of elementTarget.children) {
         if (child.tagName === 'DIV') {
