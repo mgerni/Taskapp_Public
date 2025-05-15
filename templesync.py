@@ -12,7 +12,7 @@ def temple_player_data(username: str):
             used_id.add(item['id'])
             cleaned_player_data.append(item)
 
-    return player_data
+    return cleaned_player_data
 
 
 def read_json_file(file_path):
@@ -41,7 +41,9 @@ def import_logs(player_name: str, site_tasks: list):
 
 def check_logs(username: str, site_tasks: list, action: str):
     def find_by_id(items, target_id):
-        return [item for item in items if item['id'] == target_id]
+        print(type(target_id))
+        
+        return [item for item in items if int(item['id']) == target_id]
     def format_completed_tasks(completed_tasks: set):
         # iterate over the completed tasks and create a list of dictionaries
         formatted_tasks = []
@@ -52,6 +54,7 @@ def check_logs(username: str, site_tasks: list, action: str):
         return formatted_tasks
 
     cleaned_player_data = temple_player_data(username)
+    print(type(cleaned_player_data))
     missing_tasks = list()
     completed_tasks = set()
     for task in site_tasks:
@@ -79,5 +82,6 @@ def check_logs(username: str, site_tasks: list, action: str):
             print(task)
         return missing_tasks
     else:
-        print(completed_tasks)
-        return format_completed_tasks(completed_tasks)
+        sorted_completed_tasks = sorted(completed_tasks)
+        print(sorted_completed_tasks)
+        return format_completed_tasks(sorted_completed_tasks)
