@@ -442,6 +442,7 @@ def complete_task(username: str) -> dict:
     tier = task_check[2]
     task_id = task_check[3]
     __set_task_complete(username, tier, task_id, True)
+    __set_current_task(username, tier, task_id, False)
 
     return __get_firework_variables(username, tier)
 
