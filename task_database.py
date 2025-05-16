@@ -234,11 +234,6 @@ def get_taskCurrent_tier(username, tier):
 
 
 def __set_current_task(username: str, tier: str, task_id: str, current: bool):
-    # coll = mydb["taskAccounts"]
-    # coll.update_one(
-    #     {"username": username, "%s._id" % tier: task_id},
-    #     {"$set": {"%s.$.taskCurrent" % tier: current}},
-    # )
     task_coll = mydb["taskLists"]
     cleaned_tier = tier.replace("Tasks", "")
     if not current:
@@ -255,10 +250,6 @@ def __set_current_task(username: str, tier: str, task_id: str, current: bool):
 
 
 def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
-    # coll = mydb['taskAccounts']
-    # coll.update_one({'username': username, '%s._id' % tier: task_id},
-    #                 {'$set': {'%s.$.status' % tier: 'Complete' if complete else 'Incomplete',
-    #                           '%s.$.taskCurrent' % tier: False}})
     task_coll = mydb['taskLists']
     cleaned_tier = tier.replace("Tasks", "")
     if complete:
@@ -267,10 +258,7 @@ def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
             {
                 "$push": {
                     f"tiers.{cleaned_tier}.completedTasks": {"taskId": task_id}
-                },
-                "$unset": {
-                    f"tiers.{cleaned_tier}.currentTask": ""
-            }
+                }
             }
         )
     if not complete:
