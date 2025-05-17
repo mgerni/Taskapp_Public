@@ -855,7 +855,7 @@ Returns:
 
 
 def lms_status_change(username, lms_status):
-    coll = mydb['taskAccounts']
+    coll = mydb['taskLists']
     coll.update_one({'username': username}, {'$set': {'lmsEnabled': lms_status}})
 
 
@@ -875,7 +875,7 @@ Returns:
 
 
 def official_status_change(username):
-    coll = mydb['taskAccounts']
+    coll = mydb['taskLists']
     coll.update_one({'username': username}, {'$set': {'isOfficial': False}})
 
 
@@ -897,7 +897,7 @@ Returns:
 
 
 def username_change(username, username_value):
-    coll = mydb['taskAccounts']
+    coll = mydb['taskLists']
     doc_count_new_username = coll.count_documents({'username': username_value})
     if doc_count_new_username != 0:
         error = 'Username already exists'
