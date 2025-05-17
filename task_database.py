@@ -289,7 +289,7 @@ Returns:
     None
 
 '''
-def generate_task_for_tier(username, tier) ->TaskData or None: # type: ignore
+def generate_task_for_tier(username, tier) -> TaskData or None: # type: ignore
     user = get_user(username)
     uncompleted_tasks = []
 
@@ -297,13 +297,11 @@ def generate_task_for_tier(username, tier) ->TaskData or None: # type: ignore
         all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
         completed_task_ids = list(map(lambda x: x.task_id, user.get_task_list(tier).completed_tasks))
         uncompleted_tasks = list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
-
     if len(uncompleted_tasks) != 0:
         if tier == "masterTasks" and uncompleted_tasks[0].id == 1:
             generated_task = uncompleted_tasks[0]
             __set_current_task(username, tier, generated_task.id, True)
             return generated_task
-        
         generated_task = random.choice(uncompleted_tasks)
         __set_current_task(username, tier, generated_task.id, True)
         return generated_task
@@ -410,6 +408,7 @@ Returns:
 
 def complete_task_unofficial_tier(username: str, task_id: int, tier: str) -> dict:
     __set_task_complete(username, tier, task_id, True)
+    __set_current_task(username, tier, task_id, False)
     return __get_firework_variables(username, tier)
 
 
