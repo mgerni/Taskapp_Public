@@ -9,7 +9,7 @@ import task_login
 import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
                            get_task_lists, manual_complete_tasks, manual_revert_tasks,
-                           uncomplete_all_tasks, lms_status_change, update_imported_tasks,
+                           get_lms_status, lms_status_change, update_imported_tasks,
                            official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
@@ -446,10 +446,11 @@ def dashboard():
 def collection_log_check():
     form_data = request.form
     rs_username = form_data['username']
-    easy_check = check_logs(rs_username, read_json_file('tasks/easy.json'), 'check')
-    medium_check = check_logs(rs_username, read_json_file('tasks/medium.json'), 'check')
-    hard_check = check_logs(rs_username, read_json_file('tasks/hard.json'), 'check')
-    elite_check = check_logs(rs_username, read_json_file('tasks/elite.json'),'check')
+    lms_enabled = get_lms_status(session['username'])
+    easy_check = check_logs(rs_username, read_json_file('tasks/easy.json'), 'check', lms_enabled=lms_enabled)
+    medium_check = check_logs(rs_username, read_json_file('tasks/medium.json'), 'check', lms_enabled=lms_enabled)
+    hard_check = check_logs(rs_username, read_json_file('tasks/hard.json'), 'check', lms_enabled=lms_enabled)
+    elite_check = check_logs(rs_username, read_json_file('tasks/elite.json'),'check', lms_enabled=lms_enabled)
 
     return render_template('collection_log_check.html',
                            rs_username = rs_username,
@@ -476,9 +477,6 @@ def collection_log_import():
                             medium = len(medium_import),
                             hard = len(hard_import),
                             elite = len(elite_import))
-    
-
-    return {'message': easy_import}
 
 # AJAX route for generating a task.
 @app.route('/generate/', methods=['POST'])
