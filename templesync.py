@@ -1,5 +1,8 @@
 import requests
 import json
+import tasklists
+import datetime
+import time
 
 
 def temple_player_data(username: str):
@@ -25,6 +28,11 @@ def test():
     for item in data['data']['items']:
         print(item['name'])
 
+def get_unix_time(timestamp: str):
+    datetime_format = "%Y-%m-%d %H:%M:%S"
+    datetime_object = datetime.datetime.strptime(timestamp, datetime_format)
+    return time.mktime(datetime_object.timetuple())
+
 def import_logs(player_name: str, site_tasks: list):
     player_data = temple_player_data(player_name)
     completed_tasks = list()
@@ -39,26 +47,26 @@ def import_logs(player_name: str, site_tasks: list):
     return completed_tasks
 
 
-def check_logs(username: str, site_tasks: list, action: str):
+def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
     def find_by_id(items, target_id):
-        print(type(target_id))
-        
         return [item for item in items if int(item['id']) == target_id]
     def format_completed_tasks(completed_tasks: set):
-        # iterate over the completed tasks and create a list of dictionaries
         formatted_tasks = []
         for task_id in completed_tasks:
             formatted_tasks.append({
                 'taskId': task_id,
             })
+        print(formatted_tasks)
         return formatted_tasks
 
     cleaned_player_data = temple_player_data(username)
-    print(type(cleaned_player_data))
     missing_tasks = list()
     completed_tasks = set()
     for task in site_tasks:
+        print('******************************************************************************')
         task_data = task.get('colLogData', None)
+        if task.get('isLMS') and action == 'check' and not lms_enabled:
+            continue
         if task_data:
             log_count = 0
             for item in task_data['include']:
@@ -71,6 +79,10 @@ def check_logs(username: str, site_tasks: list, action: str):
                     if log_count == task_data['logCount']:
                         completed_tasks.add(int(task['_id']))
                         print(f"Completed task: {task['name']} with ID: {task['_id']}")
+
+                        if action == "import" and find_item[0].get('date', None):
+                            unix_time = get_unix_time(find_item[0]['date'])
+                            print(find_item[0]['date'], unix_time)
                         break
             if log_count != task_data['logCount']:
                 missing_tasks.append(task['name'])
@@ -85,3 +97,7 @@ def check_logs(username: str, site_tasks: list, action: str):
         sorted_completed_tasks = sorted(completed_tasks)
         print(sorted_completed_tasks)
         return format_completed_tasks(sorted_completed_tasks)
+    
+
+if __name__ == "__main__":
+    check_logs('Gerni Task', read_json_file('tasks\easy.json'), 'import')

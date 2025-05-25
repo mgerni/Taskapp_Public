@@ -836,6 +836,10 @@ def uncomplete_all_tasks(username):
         coll.update_one({'username': username, '%s._id' % tier: task_id},
                         {'$set': {'%s.$.taskCurrent' % tier: False, '%s.$.status' % tier: 'Incomplete'}})
 
+def get_lms_status(username):
+    coll = mydb["taskLists"]
+    lms_enabled = coll.find_one({"username": username}, {'lmsEnabled' : 1, '_id': 0})
+    return lms_enabled["lmsEnabled"]
 
 '''
 lms_status_change:
@@ -1382,9 +1386,42 @@ def test():
 
 def fix_gerni():
     task_coll = mydb["taskLists"]
-    task_coll.update_one({"username": "GerniFix"})
-    results = task_coll.find({}, {'tiers': 1, 'username': 1})
+    # task_coll.update_one({"username": "EscFromTaskov"})
+    results = task_coll.find({}, {'tiers': 1, '_id' : 0, 'username': 1})
+    tiers = ['easy', 'medium', 'hard', 'elite', 'master', 'passive', 'extra', 'bossPets', 'skillPets', 'otherPets']
+    for result in results:
+        for tier in tiers:
+            tasks = result["tiers"][tier]['completedTasks']
+            data = set()
+            to_remove = set()
+            for i, completed_task in enumerate(tasks):
+                task_id = completed_task["taskId"]
+                if task_id not in data:
+                    data.add(task_id)
+                else:
+                    to_remove.add(task_id)
+                    print(result['username'], tier, i, task_id)
+            if to_remove:
+                print(to_remove)
+                # for _id in to_remove:
+                    # task_coll.update_one(
+                    # {
+                    #     "username" : result['username']
+                    # },
+                    # {
+                    #     "$pull" : {
+                    #         f"tiers.{tier}.completedTasks" : {"taskId" : _id}
+                    #     }
+                    # })
+                    # task_coll.update_one(
+                    #             {"username": result['username']},
+                    #             {
+                    #                 "$push": {
+                    #                     f"tiers.{tier}.completedTasks": {"taskId": _id}
+                    #                 }
+                    #             }
+                    #         )
 if __name__ == "__main__":
-    # test()
-    get_task_lists('GerniSleep')
+    fix_gerni()
+    # get_task_lists('GerniSleep')
     pass
