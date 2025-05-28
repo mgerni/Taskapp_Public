@@ -25293,5 +25293,362 @@
             ],
             "logCount": 5
         }
+    },
+    {
+        "_id": 198,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Yama",
+            "include": [
+                {
+                    "id": 30775,
+                    "name": "Chasm teleport scroll"
+                },
+                {
+                    "id": 30750,
+                    "name": "Oathplate helm"
+                },
+                {
+                    "id": 30753,
+                    "name": "Oathplate chest"
+                },
+                {
+                    "id": 30756,
+                    "name": "Oathplate legs"
+                },
+                {
+                    "id": 30759,
+                    "name": "Soulflame horn"
+                },
+                {
+                    "id": 30806,
+                    "name": "Rite of vile transference"
+                },
+                {
+                    "id": 30763,
+                    "name": "Forgotten lockbox"
+                },
+                {
+                    "id": 30803,
+                    "name": "Dossier"
+                },
+                {
+                    "id": 30795,
+                    "name": "Barrel of demonic tallow (full)"
+                }
+            ],
+            "logCount": 1
+        }
+    },
+        {
+        "_id": 199,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Yama",
+            "include": [
+                {
+                    "id": 30775,
+                    "name": "Chasm teleport scroll"
+                },
+                {
+                    "id": 30750,
+                    "name": "Oathplate helm"
+                },
+                {
+                    "id": 30753,
+                    "name": "Oathplate chest"
+                },
+                {
+                    "id": 30756,
+                    "name": "Oathplate legs"
+                },
+                {
+                    "id": 30759,
+                    "name": "Soulflame horn"
+                },
+                {
+                    "id": 30806,
+                    "name": "Rite of vile transference"
+                },
+                {
+                    "id": 30763,
+                    "name": "Forgotten lockbox"
+                },
+                {
+                    "id": 30803,
+                    "name": "Dossier"
+                },
+                {
+                    "id": 30795,
+                    "name": "Barrel of demonic tallow (full)"
+                }
+            ],
+            "logCount": 2
+        }
+    },
+        {
+        "_id": 200,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Yama",
+            "include": [
+                {
+                    "id": 30775,
+                    "name": "Chasm teleport scroll"
+                },
+                {
+                    "id": 30750,
+                    "name": "Oathplate helm"
+                },
+                {
+                    "id": 30753,
+                    "name": "Oathplate chest"
+                },
+                {
+                    "id": 30756,
+                    "name": "Oathplate legs"
+                },
+                {
+                    "id": 30759,
+                    "name": "Soulflame horn"
+                },
+                {
+                    "id": 30806,
+                    "name": "Rite of vile transference"
+                },
+                {
+                    "id": 30763,
+                    "name": "Forgotten lockbox"
+                },
+                {
+                    "id": 30803,
+                    "name": "Dossier"
+                },
+                {
+                    "id": 30795,
+                    "name": "Barrel of demonic tallow (full)"
+                }
+            ],
+            "logCount": 3
+        }
+    },
+    {
+        "_id": 201,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Yama",
+            "include": [
+                {
+                    "id": 30775,
+                    "name": "Chasm teleport scroll"
+                },
+                {
+                    "id": 30750,
+                    "name": "Oathplate helm"
+                },
+                {
+                    "id": 30753,
+                    "name": "Oathplate chest"
+                },
+                {
+                    "id": 30756,
+                    "name": "Oathplate legs"
+                },
+                {
+                    "id": 30759,
+                    "name": "Soulflame horn"
+                },
+                {
+                    "id": 30806,
+                    "name": "Rite of vile transference"
+                },
+                {
+                    "id": 30763,
+                    "name": "Forgotten lockbox"
+                },
+                {
+                    "id": 30803,
+                    "name": "Dossier"
+                },
+                {
+                    "id": 30795,
+                    "name": "Barrel of demonic tallow (full)"
+                }
+            ],
+            "logCount": 4
+        }
+    },
+    {
+        "_id": 202,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Yama",
+            "include": [
+                {
+                    "id": 30775,
+                    "name": "Chasm teleport scroll"
+                },
+                {
+                    "id": 30750,
+                    "name": "Oathplate helm"
+                },
+                {
+                    "id": 30753,
+                    "name": "Oathplate chest"
+                },
+                {
+                    "id": 30756,
+                    "name": "Oathplate legs"
+                },
+                {
+                    "id": 30759,
+                    "name": "Soulflame horn"
+                },
+                {
+                    "id": 30806,
+                    "name": "Rite of vile transference"
+                },
+                {
+                    "id": 30763,
+                    "name": "Forgotten lockbox"
+                },
+                {
+                    "id": 30803,
+                    "name": "Dossier"
+                },
+                {
+                    "id": 30795,
+                    "name": "Barrel of demonic tallow (full)"
+                }
+            ],
+            "logCount": 5
+        }
+    },
+    {
+        "_id": 203,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Yama",
+            "include": [
+                {
+                    "id": 30775,
+                    "name": "Chasm teleport scroll"
+                },
+                {
+                    "id": 30750,
+                    "name": "Oathplate helm"
+                },
+                {
+                    "id": 30753,
+                    "name": "Oathplate chest"
+                },
+                {
+                    "id": 30756,
+                    "name": "Oathplate legs"
+                },
+                {
+                    "id": 30759,
+                    "name": "Soulflame horn"
+                },
+                {
+                    "id": 30806,
+                    "name": "Rite of vile transference"
+                },
+                {
+                    "id": 30763,
+                    "name": "Forgotten lockbox"
+                },
+                {
+                    "id": 30803,
+                    "name": "Dossier"
+                },
+                {
+                    "id": 30795,
+                    "name": "Barrel of demonic tallow (full)"
+                }
+            ],
+            "logCount": 6
+        }
+    },
+    {
+        "_id": 204,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Yama",
+            "include": [
+                {
+                    "id": 30775,
+                    "name": "Chasm teleport scroll"
+                },
+                {
+                    "id": 30750,
+                    "name": "Oathplate helm"
+                },
+                {
+                    "id": 30753,
+                    "name": "Oathplate chest"
+                },
+                {
+                    "id": 30756,
+                    "name": "Oathplate legs"
+                },
+                {
+                    "id": 30759,
+                    "name": "Soulflame horn"
+                },
+                {
+                    "id": 30806,
+                    "name": "Rite of vile transference"
+                },
+                {
+                    "id": 30763,
+                    "name": "Forgotten lockbox"
+                },
+                {
+                    "id": 30803,
+                    "name": "Dossier"
+                },
+                {
+                    "id": 30795,
+                    "name": "Barrel of demonic tallow (full)"
+                }
+            ],
+            "logCount": 7
+        }
     }
 ]

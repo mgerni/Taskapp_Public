@@ -5,7 +5,17 @@
         "tip": "Acquired by completing The Inferno",
         "wikiLink": "https://oldschool.runescape.wiki/w/Infernal_cape",
         "wikiImage": "https://oldschool.runescape.wiki/images/Infernal_cape_detail.png?03de7",
-        "assetImage": "Infernal_cape_detail.png"
+        "assetImage": "Infernal_cape_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "include" : [
+                {
+                    "id" : 21295,
+                    "name" : "Infernal cape"
+                }
+            ],
+            "logCount" : 1
+        }
     },
     {
         "_id": 2,
@@ -13,7 +23,16 @@
         "tip": "Potential reward from easy clues. Pick pocketing H.A.M members are a great way of getting the clues.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(easy)",
         "wikiImage": "https://oldschool.runescape.wiki/images/Reward_casket_%28easy%29_detail.png?48840",
-        "assetImage": "Reward_casket_easy_detail.png"
+        "assetImage": "Reward_casket_easy_detail.png",
+        "colLogData": {
+            "include" : [
+                {
+                    "id" : 21295,
+                    "name" : "Infernal cape"
+                }
+            ],
+            "logCount" : 1
+        }
     },
     {
         "_id": 3,
@@ -149,7 +168,16 @@
         "tip": "Pick a minigame, any minigame.",
         "wikiLink": "https://oldschool.runescape.wiki/w/Minigames",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Minigames.png/246px-Minigames.png?d639f",
-        "assetImage": "minigames.png"
+        "assetImage": "minigames.png",
+        "colLogData": {
+            "include" : [
+                {
+                    "id" : 21295,
+                    "name" : "Infernal cape"
+                }
+            ],
+            "logCount" : 10
+        }
     },
     {
         "_id": 20,
@@ -1373,5 +1401,29 @@
         "wikiLink": "https://oldschool.runescape.wiki/w/Gauntlet",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Enhanced_crystal_weapon_seed_detail.png/309px-Enhanced_crystal_weapon_seed_detail.png?48996",
         "assetImage": "Enhanced_crystal_weapon_seed_detail.png"
+    },
+    {
+        "_id": 172,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png"
+    },
+    {
+        "_id": 173,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png"
+    },
+    {
+        "_id": 174,
+        "name": "Get 1 unique from Yama",
+        "tip": "Obtained by killing the solo/duo boss Yama",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Yama",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
+        "assetImage": "Oathplate_chest_detail.png"
     }
 ]
