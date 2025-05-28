@@ -524,32 +524,27 @@ def get_task_lists(username):
     
 
     for boss_pet_task in tasklists.boss_pet:
-        if completed_bossPet_ids:
-            for id in completed_bossPet_ids:
-                if boss_pet_task.id == id['taskId']:
-                    boss_pet_task.isCompleted = True
-
+        if any(x.get("taskId") == boss_pet_task.id for x in completed_bossPet_ids):
+            boss_pet_task.isCompleted = True
+        else:
+            boss_pet_task.isCompleted = False
         bossPets.append(boss_pet_task)
 
     for skill_pet_task in tasklists.skill_pet:
-        if completed_skillPet_ids:
-            for id in completed_skillPet_ids:
-                if skill_pet_task.id == id['taskId']:
-                    skill_pet_task.isCompleted = True
-
-
+        if any(x.get("taskId") == skill_pet_task.id for x in completed_skillPet_ids):
+            skill_pet_task.isCompleted = True
+        else:
+            skill_pet_task.isCompleted = False
         skillPets.append(skill_pet_task)
 
     for other_pet_task in tasklists.other_pet:
-        if completed_otherPet_ids:
-            for id in completed_otherPet_ids:
-                if other_pet_task.id == id['taskId']:
-                    other_pet_task.isCompleted = True
-
-
+        if any(x.get("taskId") == other_pet_task.id for x in completed_otherPet_ids):
+            other_pet_task.isCompleted = True
+        else:
+            other_pet_task.isCompleted = False
         otherPets.append(other_pet_task)
 
-    return bossPets, tasklists.skill_pet, tasklists.other_pet
+    return bossPets, skillPets, otherPets
     # task_query_easy = coll.find({'username': username}, {'easyTasks': 1})
     # task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
     # task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
