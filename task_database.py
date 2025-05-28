@@ -545,17 +545,11 @@ def get_task_lists(username):
             for id in completed_otherPet_ids:
                 if other_pet_task.id == id['taskId']:
                     other_pet_task.isCompleted = True
-                else:
-                    other_pet_task.isCompleted = False
+
 
         otherPets.append(other_pet_task)
 
     return bossPets, tasklists.skill_pet, tasklists.other_pet
-    bossPets = list()
-    for task in tasklists.boss_pet:
-        task_data = TaskData()
-    # bossPets = list(map(lambda x: x['taskId'], task_list_query['tiers']['bossPets']['completedTasks']))
-    print(bossPets)
     # task_query_easy = coll.find({'username': username}, {'easyTasks': 1})
     # task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
     # task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
@@ -1422,6 +1416,7 @@ def fix_gerni():
                     #             }
                     #         )
 if __name__ == "__main__":
-    fix_gerni()
+    get_task_lists('GerniSleep')
+    # fix_gerni()
     # get_task_lists('GerniSleep')
     pass
