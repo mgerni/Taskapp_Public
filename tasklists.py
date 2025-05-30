@@ -20,7 +20,8 @@ def to_task_class(data: dict) -> TaskData:
                     wiki_link=data['wikiLink'],
                     wiki_image=data.get('wikiImage'),
                     asset_image=data['assetImage'],
-                    col_log_data=to_col_log_data(data.get('colLogData'))
+                    col_log_data=to_col_log_data(data.get('colLogData')),
+                    uuid=data['uuid']
                     )
 
 def read_tasks(filename: str) -> list[TaskData]:

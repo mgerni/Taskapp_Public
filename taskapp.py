@@ -15,6 +15,7 @@ from task_database import (get_taskCurrent, generate_task, complete_task, get_ta
 import send_grid_email
 from rank_check import get_collection_log, check_collection_log
 from templesync import check_logs, read_json_file, import_logs
+import time
 
 app = Flask(__name__)
 
@@ -109,10 +110,6 @@ class BasePageInfo:
         self.official = user.is_official
         progress = get_task_progress(username)
         self.progress = progress
-        if self.official:
-            self.rank_icon = official_icon(progress['easy']['percent_complete'], progress['medium']['percent_complete'], progress['hard']['percent_complete'], progress['elite']['percent_complete'])
-        else:
-            self.rank_icon = unofficial_icon(username)
         email_verify = task_login.email_verify(username)
         self.email_bool = email_verify[0]
         self.email_val = email_verify[1]
@@ -295,7 +292,6 @@ def register_user():
             if request.form["password"] != request.form["confirmPassword"]:
                 error = 'Passwords did not match. Please try again.'
                 return {'success' : False, 'error' : error}
-            print(f"### {request.form['offical']} ###")
             official = bool(request.form["official"])
             lms = bool(request.form["lms_status"])
             create_user = task_login.add_user(request.form["username"],
@@ -384,7 +380,6 @@ def dashboard():
     progress = get_task_progress(username)
     context = {
         'username': username,
-        'rank_icon': user_info.rank_icon,
         'email_verify': user_info.email_bool,
         'email_val': user_info.email_val,
         'official': user_info.official,
@@ -398,8 +393,6 @@ def dashboard():
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
-    if username == "ringo":
-        print(progress)
     if user_info.official:
         current_task = get_taskCurrent(username)
         if current_task:
@@ -578,7 +571,6 @@ def task_list():
         'task_list.html',
         username=user_info.username,
         email_verify=user_info.email_bool,
-        rank_icon=user_info.rank_icon,
         email_val=user_info.email_val,
         items_easy=items_easy,
         items_medium=items_medium,
@@ -617,7 +609,6 @@ def single_task_list(list_title, task_type):
         task_type=task_type,  # Needed as it is ingrained in JS for updating tasks
         username=user_info.username,
         email_verify=user_info.email_bool,
-        rank_icon=user_info.rank_icon,
         email_val=user_info.email_val,
         official=user_info.official,
         **context
@@ -684,7 +675,6 @@ def task_list_pets():
         'task-list-pets.html',
         username=user_info.username,
         email_verify=user_info.email_bool,
-        rank_icon=user_info.rank_icon,
         email_val=user_info.email_val,
         items_bosspet=items_bosspet,
         items_skillpet=items_skillpet,
@@ -716,7 +706,6 @@ def highscores():
         'highscores.html',
         username=user_info.username,
         email_verify=user_info.email_bool,
-        rank_icon=user_info.rank_icon,
         email_val=user_info.email_val,
         taskapp_email=taskapp_email,
         official=user_info.official,
@@ -808,7 +797,6 @@ def faq():
         username=user_info.username,
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,
-        rank_icon=user_info.rank_icon,
         taskapp_email=taskapp_email,
         **context
         )
@@ -836,7 +824,6 @@ def wall_of_pain():
         username=user_info.username,
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,
-        rank_icon=user_info.rank_icon,
         taskapp_email=taskapp_email,
         **context
     )
@@ -861,7 +848,6 @@ def sync_collection_logs():
         username=user_info.username,
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,
-        rank_icon=user_info.rank_icon,
         taskapp_email=taskapp_email,
         **context
     )
@@ -888,7 +874,6 @@ def rank_check():
         username=user_info.username,
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,
-        rank_icon=user_info.rank_icon,
         taskapp_email=taskapp_email,
         **context
     )
@@ -1050,7 +1035,6 @@ def profile():
         email_verify=user_info.email_bool,
         email_val=user_info.email_val,
         official=user_info.official,
-        rank_icon=user_info.rank_icon,
         lms_status=user_info.user.lms_enabled,
         **context)
 

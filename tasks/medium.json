@@ -108,7 +108,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "d4f8608e-9aaf-4377-9423-5ce5b3d62c63"
     },
     {
         "_id": 2,
@@ -219,7 +220,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "58d0b8bf-4612-4116-b8e1-105e40dbb320"
     },
     {
         "_id": 3,
@@ -330,7 +332,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "9cf26cc0-b32e-4be8-a525-741b620f5c59"
     },
     {
         "_id": 4,
@@ -441,7 +444,8 @@
                 }
             ],
             "logCount": 4
-        }
+        },
+        "uuid": "a874e0bb-e1a4-445e-a79a-ac936c9cf009"
     },
     {
         "_id": 5,
@@ -552,7 +556,8 @@
                 }
             ],
             "logCount": 5
-        }
+        },
+        "uuid": "9e4697fd-95e5-4bf8-b774-178eab348baf"
     },
     {
         "_id": 6,
@@ -579,7 +584,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "f6ebc061-69a7-45c0-b89e-ef4c7ead5e82"
     },
     {
         "_id": 7,
@@ -606,7 +612,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "4ed977a4-6eeb-48c8-bbe6-93a87657a851"
     },
     {
         "_id": 8,
@@ -633,7 +640,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "1504af39-da26-4ac0-a414-3ea6a32428d5"
     },
     {
         "_id": 9,
@@ -652,7 +660,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "f69634c9-337c-4944-aea9-a16e74e62658"
     },
     {
         "_id": 10,
@@ -671,7 +680,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "72996bdf-4a9b-48be-b378-a5f11636a68a"
     },
     {
         "_id": 11,
@@ -690,7 +700,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "84ec6b48-384d-4d7a-aaac-07fb527b2115"
     },
     {
         "_id": 12,
@@ -737,7 +748,8 @@
                 }
             ],
             "logCount": 6
-        }
+        },
+        "uuid": "5b11a9ff-04a0-46cd-96a3-77ecf7385fc4"
     },
     {
         "_id": 13,
@@ -784,7 +796,8 @@
                 }
             ],
             "logCount": 7
-        }
+        },
+        "uuid": "d72f4139-8c21-4713-b5e8-93d77c7364f8"
     },
     {
         "_id": 14,
@@ -831,7 +844,8 @@
                 }
             ],
             "logCount": 8
-        }
+        },
+        "uuid": "adaf9f51-50cf-4417-9427-55d5509d4830"
     },
     {
         "_id": 15,
@@ -870,7 +884,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "5a3dbd57-feed-4eed-b4a3-2ca5ec384efd"
     },
     {
         "_id": 16,
@@ -909,7 +924,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "0d253493-fe93-46c6-8129-fa59854d9f91"
     },
     {
         "_id": 17,
@@ -984,7 +1000,8 @@
                 }
             ],
             "logCount": 9
-        }
+        },
+        "uuid": "2c776bba-128f-412d-881e-84b3766d45fe"
     },
     {
         "_id": 18,
@@ -1059,7 +1076,8 @@
                 }
             ],
             "logCount": 12
-        }
+        },
+        "uuid": "ad14a103-dca8-4d46-8e47-f4aedba4aa0d"
     },
     {
         "_id": 19,
@@ -1598,7 +1616,8 @@
                 }
             ],
             "logCount": 35
-        }
+        },
+        "uuid": "04e3eff8-438b-4ec6-bbc9-1208ef4496af"
     },
     {
         "_id": 20,
@@ -2137,7 +2156,8 @@
                 }
             ],
             "logCount": 40
-        }
+        },
+        "uuid": "70ffb268-3a47-4939-a337-bfeecd8e5866"
     },
     {
         "_id": 21,
@@ -2676,7 +2696,8 @@
                 }
             ],
             "logCount": 45
-        }
+        },
+        "uuid": "8115881a-8fd6-463b-bc9b-268abed67117"
     },
     {
         "_id": 22,
@@ -3215,7 +3236,8 @@
                 }
             ],
             "logCount": 50
-        }
+        },
+        "uuid": "188a4058-587c-4334-be08-02a95e0d2e65"
     },
     {
         "_id": 23,
@@ -3754,7 +3776,8 @@
                 }
             ],
             "logCount": 55
-        }
+        },
+        "uuid": "aa417377-137f-4bab-888b-5d0b9e023c5c"
     },
     {
         "_id": 24,
@@ -4293,7 +4316,8 @@
                 }
             ],
             "logCount": 60
-        }
+        },
+        "uuid": "298997bb-0bc7-4cf8-b8de-4fac5b1c8611"
     },
     {
         "_id": 25,
@@ -4768,7 +4792,8 @@
                 }
             ],
             "logCount": 25
-        }
+        },
+        "uuid": "2ac5cbfe-8474-4aa0-a547-2d8915f60af1"
     },
     {
         "_id": 26,
@@ -5243,7 +5268,8 @@
                 }
             ],
             "logCount": 30
-        }
+        },
+        "uuid": "de2f8de0-0cab-4a9f-8dba-083cef22252c"
     },
     {
         "_id": 27,
@@ -5718,7 +5744,8 @@
                 }
             ],
             "logCount": 35
-        }
+        },
+        "uuid": "b905c78a-4e0d-4cff-b3de-6249f2339473"
     },
     {
         "_id": 28,
@@ -6193,7 +6220,8 @@
                 }
             ],
             "logCount": 40
-        }
+        },
+        "uuid": "6e75c57e-6c3b-4506-8759-7dd99d05bb75"
     },
     {
         "_id": 29,
@@ -6744,7 +6772,8 @@
                 }
             ],
             "logCount": 15
-        }
+        },
+        "uuid": "5660d42b-c321-40d0-94b0-1b6d6471fba0"
     },
     {
         "_id": 30,
@@ -7295,7 +7324,8 @@
                 }
             ],
             "logCount": 20
-        }
+        },
+        "uuid": "145e7222-4c94-48a1-a532-65a456bc4eb3"
     },
     {
         "_id": 31,
@@ -7846,7 +7876,8 @@
                 }
             ],
             "logCount": 25
-        }
+        },
+        "uuid": "2e2e9fbd-d925-4a36-9feb-c8b7c8edc32e"
     },
     {
         "_id": 32,
@@ -8397,7 +8428,8 @@
                 }
             ],
             "logCount": 30
-        }
+        },
+        "uuid": "a7663831-509f-42ea-b77c-2930f5e2daa2"
     },
     {
         "_id": 33,
@@ -8416,7 +8448,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "27db2b6c-53b8-4576-934d-1ca1f9e76cb3"
     },
     {
         "_id": 34,
@@ -8435,7 +8468,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "779ed673-25f8-43ee-82c7-21bbead6a547"
     },
     {
         "_id": 35,
@@ -8454,7 +8488,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "24e6382c-def7-4b49-bc7b-07532a4750b6"
     },
     {
         "_id": 36,
@@ -8473,7 +8508,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "261ef0a3-b11f-4046-9141-0d7fa712b0c6"
     },
     {
         "_id": 37,
@@ -8492,7 +8528,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "ea52cffd-de51-4782-8699-73201489b773"
     },
     {
         "_id": 38,
@@ -8511,7 +8548,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "d2972b5d-68c5-4252-9d85-019f8d439d9e"
     },
     {
         "_id": 39,
@@ -8538,7 +8576,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "65975b37-16a2-483a-9f4e-50e4d60489b5"
     },
     {
         "_id": 40,
@@ -8565,7 +8604,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "37c040ab-368b-4ea2-bba9-3459843e1d23"
     },
     {
         "_id": 41,
@@ -8592,7 +8632,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "e5d1acb8-4d5c-4959-abea-bce48a16a11a"
     },
     {
         "_id": 42,
@@ -8623,7 +8664,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "db8008cb-8f1a-4055-9fd7-eda6c1565c8f"
     },
     {
         "_id": 43,
@@ -8654,7 +8696,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "063c952d-e4bc-401b-85a3-b3f12d9d88e0"
     },
     {
         "_id": 44,
@@ -8673,7 +8716,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "7ca0b188-0f4a-4ecb-b5ab-fd725402ffff"
     },
     {
         "_id": 45,
@@ -8692,7 +8736,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "9e3b3b7c-0a03-4540-b8b1-3d1a82dfb379"
     },
     {
         "_id": 46,
@@ -8711,7 +8756,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "6f607b31-94b0-4943-b5ed-6576ba7f2fe5"
     },
     {
         "_id": 47,
@@ -8730,7 +8776,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "4750f7c2-6b3a-4593-93c3-b7e2151d5667"
     },
     {
         "_id": 48,
@@ -8749,7 +8796,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "aa212946-0b6a-41e0-8948-5402d8350cdc"
     },
     {
         "_id": 49,
@@ -8768,7 +8816,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "7ca04d19-09ea-46c9-93af-c33595866b57"
     },
     {
         "_id": 50,
@@ -8787,7 +8836,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "57b39500-aff4-44d4-a572-836e1b4ddea3"
     },
     {
         "_id": 51,
@@ -8806,7 +8856,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "25542b19-5b78-4438-83bd-cf50958993a2"
     },
     {
         "_id": 52,
@@ -8825,7 +8876,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "a76a5212-3243-4424-8ffc-f4614c732d30"
     },
     {
         "_id": 53,
@@ -8896,7 +8948,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "496debc0-4205-4c99-b7f4-ea6afd190a4b"
     },
     {
         "_id": 54,
@@ -8967,7 +9020,8 @@
                 }
             ],
             "logCount": 4
-        }
+        },
+        "uuid": "c0eda747-e29d-4e8b-92d3-7e937222f192"
     },
     {
         "_id": 55,
@@ -9038,7 +9092,8 @@
                 }
             ],
             "logCount": 5
-        }
+        },
+        "uuid": "39706395-26d2-4918-99df-4cfbde3c6ebe"
     },
     {
         "_id": 56,
@@ -9069,7 +9124,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "343c206c-fda8-43c2-beec-ef0e9912ae37"
     },
     {
         "_id": 57,
@@ -9100,7 +9156,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "5c2f235b-bc8f-4f8a-9083-6eac59f94ee3"
     },
     {
         "_id": 58,
@@ -9119,7 +9176,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "f1fc7abb-de32-43c9-ae0c-8d7c7747d6d9"
     },
     {
         "_id": 59,
@@ -9218,7 +9276,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "bbfe8e47-1254-4a8f-af67-7d4de09bbd87"
     },
     {
         "_id": 60,
@@ -9317,7 +9376,8 @@
                 }
             ],
             "logCount": 6
-        }
+        },
+        "uuid": "d23d5039-34b4-48d4-8884-51f241baf3ca"
     },
     {
         "_id": 61,
@@ -9336,7 +9396,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "4f9d493f-0565-412b-b502-962c855b5b3f"
     },
     {
         "_id": 62,
@@ -9355,7 +9416,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "f96b8bd6-dcdf-4aab-b34a-0f9cb49904de"
     },
     {
         "_id": 63,
@@ -9374,7 +9436,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "05fa9c9a-6732-46d1-9be7-675bd0b68a35"
     },
     {
         "_id": 64,
@@ -9393,7 +9456,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "5021cc26-01ad-4b08-913e-7adfac1f743f"
     },
     {
         "_id": 65,
@@ -9448,7 +9512,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "20bde945-cdb3-4f1f-bff3-7d2d467876c7"
     },
     {
         "_id": 66,
@@ -9503,7 +9568,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "bcab2bd0-1e7c-40e8-8b5d-01e6f695b59b"
     },
     {
         "_id": 67,
@@ -9530,7 +9596,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "ad31734e-3f17-4ef8-9733-1630a4e75143"
     },
     {
         "_id": 68,
@@ -9557,7 +9624,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "c68d2b75-fe55-4a4e-9471-ecb9300104b0"
     },
     {
         "_id": 69,
@@ -9576,7 +9644,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "a2c03154-445f-41d2-8cfc-db106262a64e"
     },
     {
         "_id": 70,
@@ -9595,7 +9664,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "1fe296c8-aae7-4338-9035-93a2592e1d74"
     },
     {
         "_id": 71,
@@ -9650,7 +9720,8 @@
                 }
             ],
             "logCount": 6
-        }
+        },
+        "uuid": "b96a0526-f981-48d9-832c-bd213ebd7e6e"
     },
     {
         "_id": 72,
@@ -9705,7 +9776,8 @@
                 }
             ],
             "logCount": 8
-        }
+        },
+        "uuid": "3ba2da67-a5c9-4b90-b5d2-9e021e9915f6"
     },
     {
         "_id": 73,
@@ -9760,7 +9832,8 @@
                 }
             ],
             "logCount": 10
-        }
+        },
+        "uuid": "09602393-49ab-4f76-aef5-144800602831"
     },
     {
         "_id": 74,
@@ -9779,7 +9852,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "a50736af-fa52-4274-b1f1-192fd13f8dbf"
     },
     {
         "_id": 75,
@@ -9798,7 +9872,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "f27bb1a4-27b7-4b94-ac37-a2425c580717"
     },
     {
         "_id": 76,
@@ -9917,7 +9992,8 @@
                 }
             ],
             "logCount": 10
-        }
+        },
+        "uuid": "e06e3d24-2d18-4470-965a-b843ef3082ba"
     },
     {
         "_id": 77,
@@ -10036,7 +10112,8 @@
                 }
             ],
             "logCount": 12
-        }
+        },
+        "uuid": "965e6d66-7849-4e2b-b85e-ab80005c2737"
     },
     {
         "_id": 78,
@@ -10155,7 +10232,8 @@
                 }
             ],
             "logCount": 14
-        }
+        },
+        "uuid": "85c31300-0e11-4f32-af93-f624b036db69"
     },
     {
         "_id": 79,
@@ -10274,7 +10352,8 @@
                 }
             ],
             "logCount": 16
-        }
+        },
+        "uuid": "f98f811d-2640-49b4-9e78-cf29a24e4e38"
     },
     {
         "_id": 80,
@@ -10389,7 +10468,8 @@
                 }
             ],
             "logCount": 25
-        }
+        },
+        "uuid": "119ba83c-0fb2-4098-ba26-f32d183ff190"
     },
     {
         "_id": 81,
@@ -10408,7 +10488,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "a12a62ca-f1bb-41c5-a0b8-6a0fc844969b"
     },
     {
         "_id": 82,
@@ -10431,7 +10512,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "7f7f804b-85e4-4da4-8da2-393861b7286b"
     },
     {
         "_id": 83,
@@ -10454,7 +10536,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "8d0830b2-ba6f-46c0-83b4-af767f1239fe"
     },
     {
         "_id": 84,
@@ -10477,7 +10560,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "6c2479db-4679-4391-9f15-10e8dfd10b7b"
     },
     {
         "_id": 85,
@@ -10500,7 +10584,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "3b9922ab-f5f6-46e4-af22-c3525109474f"
     },
     {
         "_id": 86,
@@ -10519,7 +10604,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "739f3185-a572-4c09-9a47-8c4a1e63e321"
     },
     {
         "_id": 87,
@@ -10538,7 +10624,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "e261f744-c713-4a45-90c0-2f866aa9024a"
     },
     {
         "_id": 88,
@@ -10561,7 +10648,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "e2f3d47a-708a-4838-b07b-ed03cb09ccca"
     },
     {
         "_id": 89,
@@ -10584,7 +10672,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "76f50ee9-9463-492f-8520-ab512bf3f1cb"
     },
     {
         "_id": 90,
@@ -10603,7 +10692,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "0d3e7359-0726-49d1-b910-9d6c70d17fff"
     },
     {
         "_id": 91,
@@ -10642,7 +10732,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "4deb0c38-c550-4feb-a5f1-c36db8a7dee5"
     },
     {
         "_id": 92,
@@ -10681,7 +10772,8 @@
                 }
             ],
             "logCount": 4
-        }
+        },
+        "uuid": "eb99cfe7-654b-4d31-9da8-5498e12f84f9"
     },
     {
         "_id": 93,
@@ -10720,7 +10812,8 @@
                 }
             ],
             "logCount": 5
-        }
+        },
+        "uuid": "3aea76a3-97c6-4ae0-9bff-c5cbac1da875"
     },
     {
         "_id": 94,
@@ -10759,7 +10852,8 @@
                 }
             ],
             "logCount": 6
-        }
+        },
+        "uuid": "c73c910b-7713-428b-ad7d-dae5f99e5801"
     },
     {
         "_id": 95,
@@ -10778,7 +10872,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "95e2066e-e01d-445b-98cf-c09b43d42ba7"
     },
     {
         "_id": 96,
@@ -10797,7 +10892,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "8554414b-ae73-4c6e-99ac-0c6630c90904"
     },
     {
         "_id": 97,
@@ -10816,7 +10912,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "bc5da9fd-beaa-41b0-b7b2-51b0cd30addb"
     },
     {
         "_id": 98,
@@ -10835,7 +10932,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "7701b754-3d83-4ada-a888-0e1f8b638268"
     },
     {
         "_id": 99,
@@ -10858,7 +10956,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "3cbf6265-80fa-4246-ba54-2be267fbc171"
     },
     {
         "_id": 100,
@@ -10881,7 +10980,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "c3f3d61b-31a5-4455-ae8e-f192c03d9c56"
     },
     {
         "_id": 101,
@@ -10889,7 +10989,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Ardougne_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "040f49c9-93e9-431d-8a4c-d1b8b8a7edf6"
     },
     {
         "_id": 102,
@@ -10897,7 +10998,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Desert_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "5d2d9461-00bc-431b-b943-0693bb8b0fb6"
     },
     {
         "_id": 103,
@@ -10905,7 +11007,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Falador_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "a455bbf7-a570-494f-9753-643aeb83aca9"
     },
     {
         "_id": 104,
@@ -10913,7 +11016,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Fremennik_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "958d1774-5ddb-4cb3-abdf-2772de4d024f"
     },
     {
         "_id": 105,
@@ -10921,7 +11025,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Kandarin_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "f638ebcb-aebf-4c53-bd07-c0e683bc1072"
     },
     {
         "_id": 106,
@@ -10929,7 +11034,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Karamja_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "306c11a3-241a-49b8-8083-ea05124d72e9"
     },
     {
         "_id": 107,
@@ -10937,7 +11043,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Kourend_%26_Kebos_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "19708dd7-fb75-4ebc-ad65-60697a0d6401"
     },
     {
         "_id": 108,
@@ -10945,7 +11052,8 @@
         "tip": "Complete all the diary tasks. FINALLY AVA'S DEVICE!",
         "wikiLink": "https://oldschool.runescape.wiki/w/Lumbridge_%26_Draynor_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "57b5ba2a-b2b0-4442-b767-1a8b35e3be0d"
     },
     {
         "_id": 109,
@@ -10953,7 +11061,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Morytania_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "31e5ccaa-dd74-42d7-8749-2efdaaf01e4e"
     },
     {
         "_id": 110,
@@ -10961,7 +11070,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Varrock_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "f59758a3-122e-4d8a-b2ed-5b908fc60a8c"
     },
     {
         "_id": 111,
@@ -10969,7 +11079,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Western_Provinces_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "993eb6f8-e30a-4f0a-977d-148b45e0f7f7"
     },
     {
         "_id": 112,
@@ -10977,7 +11088,8 @@
         "tip": "Complete all the diary tasks. Don't really have much else to tell you. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness_Diary",
         "wikiImage": "https://oldschool.runescape.wiki/images/1/1b/Achievement_Diaries_icon.png?b4e0c",
-        "assetImage": "Achievement_Diaries_icon.png"
+        "assetImage": "Achievement_Diaries_icon.png",
+        "uuid": "59e36673-6808-4371-ba70-fd8d8003e5ef"
     },
     {
         "_id": 113,
@@ -10996,7 +11108,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "5052c1dc-d89e-4309-b978-8dbc79fa28b6"
     },
     {
         "_id": 114,
@@ -11015,7 +11128,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "77c2f0db-7e25-4396-a0e0-19d3c49b2ea6"
     },
     {
         "_id": 115,
@@ -11034,7 +11148,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "0b05a33a-38d1-499b-9d54-57259e47ac02"
     },
     {
         "_id": 116,
@@ -11053,7 +11168,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "aec0718a-0c65-4d74-b384-aa63263e4b14"
     },
     {
         "_id": 117,
@@ -11084,7 +11200,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "d5bafcab-1276-432d-b6ce-543fe02e364c"
     },
     {
         "_id": 118,
@@ -11115,7 +11232,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "b6377ad1-783d-4735-b623-28495c8e6775"
     },
     {
         "_id": 119,
@@ -11134,7 +11252,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "1ddbb64c-d379-4001-8e30-6564e911c276"
     },
     {
         "_id": 120,
@@ -11153,7 +11272,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "f6153377-d3b8-4ae3-9cd1-55bf85a10cc4"
     },
     {
         "_id": 121,
@@ -11173,7 +11293,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "df3f714e-eb7e-4b86-8b73-f25d6ebc3020"
     },
     {
         "_id": 122,
@@ -11193,7 +11314,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "bf07a401-9a81-4520-9dd8-1c5af2bc5986"
     },
     {
         "_id": 123,
@@ -11213,7 +11335,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "69b50b44-33f2-485e-a4e0-195e8f8fa044"
     },
     {
         "_id": 124,
@@ -11233,7 +11356,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "60cbbdb2-b233-48a0-8413-8867217ce53a"
     },
     {
         "_id": 125,
@@ -11253,7 +11377,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "4ba185cd-ee9b-45ce-b2c9-10462a8ee843"
     },
     {
         "_id": 126,
@@ -11273,7 +11398,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "0e7ab87d-cde1-4224-b731-0f4b16308e59"
     },
     {
         "_id": 127,
@@ -11293,7 +11419,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "2cff2acd-a0c8-446b-a83b-9ac734b308ad"
     },
     {
         "_id": 128,
@@ -11313,7 +11440,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "bc76ea57-5ef9-4ab0-bdcb-37c410c2183a"
     },
     {
         "_id": 129,
@@ -11332,7 +11460,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "1718dd85-443c-41ad-8b49-96e3e405a7e6"
     },
     {
         "_id": 130,
@@ -11351,7 +11480,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "787255e5-07ab-4edf-b7f0-c9dcc9370c81"
     },
     {
         "_id": 131,
@@ -11406,7 +11536,8 @@
                 }
             ],
             "logCount": 5
-        }
+        },
+        "uuid": "c404956f-3a2e-4fb5-ae4e-ec98b5e3e43f"
     },
     {
         "_id": 132,
@@ -11461,7 +11592,8 @@
                 }
             ],
             "logCount": 6
-        }
+        },
+        "uuid": "f08638bc-473c-4a82-9a8d-f2b01d01ccff"
     },
     {
         "_id": 133,
@@ -11516,7 +11648,8 @@
                 }
             ],
             "logCount": 7
-        }
+        },
+        "uuid": "dbb78cbf-e377-4328-8a03-0eda7b054a54"
     },
     {
         "_id": 134,
@@ -11535,7 +11668,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "a71b918b-8984-44f8-baca-079611e7d98b"
     },
     {
         "_id": 135,
@@ -11590,7 +11724,8 @@
                 }
             ],
             "logCount": 8
-        }
+        },
+        "uuid": "a0c90c46-d292-4be4-9bec-16a7cd7e5dea"
     },
     {
         "_id": 136,
@@ -11645,7 +11780,8 @@
                 }
             ],
             "logCount": 9
-        }
+        },
+        "uuid": "c91e541a-d8e8-4f1f-920b-56084c28ac12"
     },
     {
         "_id": 137,
@@ -11724,7 +11860,8 @@
                 }
             ],
             "logCount": 5
-        }
+        },
+        "uuid": "4f16ed93-aee4-49ab-a347-2e73a8f22975"
     },
     {
         "_id": 138,
@@ -11803,7 +11940,8 @@
                 }
             ],
             "logCount": 6
-        }
+        },
+        "uuid": "0ae36fe6-5058-468a-8440-5badf514a3bf"
     },
     {
         "_id": 139,
@@ -11882,7 +12020,8 @@
                 }
             ],
             "logCount": 7
-        }
+        },
+        "uuid": "b43e3c57-fc51-4995-a5ee-59abfb768b43"
     },
     {
         "_id": 140,
@@ -11961,7 +12100,8 @@
                 }
             ],
             "logCount": 8
-        }
+        },
+        "uuid": "d709fae6-2888-4426-a295-d00b7c2a7fe4"
     },
     {
         "_id": 141,
@@ -12008,7 +12148,8 @@
                 }
             ],
             "logCount": 5
-        }
+        },
+        "uuid": "7d11faf4-4163-4f25-ab6f-eca14bb763c8"
     },
     {
         "_id": 142,
@@ -12055,7 +12196,8 @@
                 }
             ],
             "logCount": 6
-        }
+        },
+        "uuid": "c08d106b-6d93-4e21-8a38-825a27a9d7cb"
     },
     {
         "_id": 143,
@@ -12102,7 +12244,8 @@
                 }
             ],
             "logCount": 7
-        }
+        },
+        "uuid": "42416ed7-f18e-40cc-a1de-bcc362fafb2c"
     },
     {
         "_id": 144,
@@ -12149,7 +12292,8 @@
                 }
             ],
             "logCount": 8
-        }
+        },
+        "uuid": "28f69759-1aac-4bdb-92c7-e8c9350d6fbf"
     },
     {
         "_id": 145,
@@ -12240,7 +12384,8 @@
                 }
             ],
             "logCount": 7
-        }
+        },
+        "uuid": "6dc649ca-8c10-46d9-b58f-aec88a153851"
     },
     {
         "_id": 146,
@@ -12331,7 +12476,8 @@
                 }
             ],
             "logCount": 8
-        }
+        },
+        "uuid": "95c07eb4-a721-4fb5-9f3f-b9f86ae0c233"
     },
     {
         "_id": 147,
@@ -12422,7 +12568,8 @@
                 }
             ],
             "logCount": 9
-        }
+        },
+        "uuid": "96ed343d-46d7-4d8f-a4b3-53e3474ebc94"
     },
     {
         "_id": 148,
@@ -12513,7 +12660,8 @@
                 }
             ],
             "logCount": 10
-        }
+        },
+        "uuid": "1ce73ff0-62aa-44a5-bfb2-8754334ba2eb"
     },
     {
         "_id": 149,
@@ -12532,7 +12680,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "6f58f3f9-b4cd-4475-bef3-643067a59dde"
     },
     {
         "_id": 150,
@@ -12555,7 +12704,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "d0b17b24-75d7-4af1-baa9-a54d6db77fdf"
     },
     {
         "_id": 151,
@@ -12578,7 +12728,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "d78be838-299b-4d72-80e8-0d68c8839ba7"
     },
     {
         "_id": 152,
@@ -12645,7 +12796,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "5b0cf9a0-61df-4169-a5af-317d6f689e49"
     },
     {
         "_id": 153,
@@ -12712,7 +12864,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "3e78d51a-37af-4532-97e2-40b070a4f6cc"
     },
     {
         "_id": 154,
@@ -12779,7 +12932,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "f3f5af44-2295-4085-b095-98da680a29e0"
     },
     {
         "_id": 155,
@@ -12846,7 +13000,8 @@
                 }
             ],
             "logCount": 4
-        }
+        },
+        "uuid": "2c4c6dfc-bbf9-4d72-9424-b248d9b7b4ce"
     },
     {
         "_id": 156,
@@ -12881,7 +13036,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "800ad058-37f5-4862-a5ef-1a6424e979ed"
     },
     {
         "_id": 157,
@@ -12916,7 +13072,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "d64fae3a-efbd-4809-ac27-240536b8ebf3"
     },
     {
         "_id": 158,
@@ -12935,7 +13092,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "45872d53-37e0-419f-893f-9f4b0eebe670"
     },
     {
         "_id": 159,
@@ -12962,7 +13120,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "fcc52f83-75ce-42fd-b62f-6d56c3879f5c"
     },
     {
         "_id": 160,
@@ -12989,7 +13148,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "7d3dd049-c48d-45ed-ba0a-cf1329976628"
     },
     {
         "_id": 161,
@@ -13016,7 +13176,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "9523af1d-5bba-4fe8-8199-9c60329f2278"
     },
     {
         "_id": 162,
@@ -13043,7 +13204,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "a200ae0a-f32b-4228-a938-c7d447d6380d"
     },
     {
         "_id": 163,
@@ -13070,7 +13232,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "2bb7cf32-6577-487f-a4a7-5322fd534b09"
     },
     {
         "_id": 164,
@@ -13097,7 +13260,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "b9a0d5bb-2909-44c7-a53f-78da2e98061c"
     },
     {
         "_id": 165,
@@ -13136,7 +13300,8 @@
                 }
             ],
             "logCount": 1
-        }
+        },
+        "uuid": "2523e88d-901b-40a1-80bb-294d8ca9f519"
     },
     {
         "_id": 166,
@@ -13175,7 +13340,8 @@
                 }
             ],
             "logCount": 2
-        }
+        },
+        "uuid": "2a19d6d9-8f64-417f-969a-a441d3d6faa4"
     },
     {
         "_id": 167,
@@ -13214,7 +13380,8 @@
                 }
             ],
             "logCount": 3
-        }
+        },
+        "uuid": "eda5f8c7-3e6a-4ef8-8982-ab2ea8291574"
     },
     {
         "_id": 168,
@@ -13253,6 +13420,7 @@
                 }
             ],
             "logCount": 4
-        }
+        },
+        "uuid": "f4800d10-9e58-413e-b4fe-7291dc162d1a"
     }
 ]
