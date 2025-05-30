@@ -22,15 +22,18 @@ class TaskData:
     wiki_image: str
     asset_image: str
     col_log_data: ColLogData
+    uuid: str
 
 @dataclass
 class UserCurrentTask:
-    task_id: int
+    uuid: str
+    task_id: int = None
     assigned_date: datetime = None
 
 @dataclass
 class UserCompletedTask:
-    task_id: int
+    uuid: str
+    task_id: int = None
     assigned_date: datetime = None
     completed_date: datetime = None
 
@@ -54,6 +57,7 @@ class PageTask:
         self.is_current = is_current
         self.wiki_link = task_data.wiki_link
         self.tip = task_data.tip
+        self.uuid = task_data.uuid
 
 @dataclass
 class LeaderboardEntry:

@@ -244,7 +244,7 @@ def __set_current_task(username: str, tier: str, task_id: str, current: bool):
     else:
         task_coll.update_one(
             {"username": username},
-            {"$set": {f"tiers.{cleaned_tier}.currentTask": {"taskId": task_id}}},
+            {"$set": {f"tiers.{cleaned_tier}.currentTask": {"uuid": task_id}}},
         )
 
 
@@ -257,7 +257,7 @@ def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
             {"username": username},
             {
                 "$push": {
-                    f"tiers.{cleaned_tier}.completedTasks": {"taskId": task_id}
+                    f"tiers.{cleaned_tier}.completedTasks": {"uuid": task_id}
                 }
             }
         )
@@ -268,7 +268,7 @@ def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
             },
             {
                 "$pull" : {
-                    f"tiers.{cleaned_tier}.completedTasks" : {"taskId" : task_id}
+                    f"tiers.{cleaned_tier}.completedTasks" : {"uuid" : task_id}
                 }
             })
     
@@ -295,15 +295,15 @@ def generate_task_for_tier(username, tier) -> TaskData or None: # type: ignore
 
     if user.current_task_for_tier(tier) is None:
         all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
-        completed_task_ids = list(map(lambda x: x.task_id, user.get_task_list(tier).completed_tasks))
-        uncompleted_tasks = list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
+        completed_task_ids = list(map(lambda x: x.uuid, user.get_task_list(tier).completed_tasks))
+        uncompleted_tasks = list(filter(lambda x: x.uuid not in completed_task_ids, all_tasks))
     if len(uncompleted_tasks) != 0:
-        if tier == "masterTasks" and uncompleted_tasks[0].id == 1:
+        if tier == "masterTasks" and uncompleted_tasks[0].uuid == "6b09384d-c06b-44ac-8a07-b7038cd30710":
             generated_task = uncompleted_tasks[0]
-            __set_current_task(username, tier, generated_task.id, True)
+            __set_current_task(username, tier, generated_task.uuid, True)
             return generated_task
         generated_task = random.choice(uncompleted_tasks)
-        __set_current_task(username, tier, generated_task.id, True)
+        __set_current_task(username, tier, generated_task.uuid, True)
         return generated_task
 
     else:
@@ -338,8 +338,8 @@ def generate_task(username: str) -> TaskData or None: # type: ignore
 
     def get_incomplete_tasks(tier: str) -> list[TaskData]:
         all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
-        completed_task_ids = list(map(lambda x: x.task_id, user.get_task_list(tier).completed_tasks))
-        return list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
+        completed_task_ids = list(map(lambda x: x.uuid, user.get_task_list(tier).completed_tasks))
+        return list(filter(lambda x: x.uuid not in completed_task_ids, all_tasks))
 
     tasks_easy = get_incomplete_tasks('easy')
     tasks_medium = get_incomplete_tasks('medium')
@@ -349,26 +349,26 @@ def generate_task(username: str) -> TaskData or None: # type: ignore
 
     if len(tasks_easy) != 0:
         generated_task = random.choice(tasks_easy)
-        __set_current_task(username, 'easyTasks', generated_task.id, True)
+        __set_current_task(username, 'easyTasks', generated_task.uuid, True)
         return generated_task
     elif len(tasks_medium) != 0:
         generated_task = random.choice(tasks_medium)
-        __set_current_task(username, 'mediumTasks', generated_task.id, True)
+        __set_current_task(username, 'mediumTasks', generated_task.uuid, True)
         return generated_task
     elif len(tasks_hard) != 0:
         generated_task = random.choice(tasks_hard)
-        __set_current_task(username, 'hardTasks', generated_task.id, True)
+        __set_current_task(username, 'hardTasks', generated_task.uuid, True)
         return generated_task
     elif len(tasks_elite) != 0:
         generated_task = random.choice(tasks_elite)
-        __set_current_task(username, 'eliteTasks', generated_task.id, True)
+        __set_current_task(username, 'eliteTasks', generated_task.uuid, True)
         return generated_task
     elif len(tasks_master) != 0:
-        if tasks_master[0].id == 1:
+        if tasks_master[0].uuid == "6b09384d-c06b-44ac-8a07-b7038cd30710":
             generated_task = tasks_master[0]
         else:
             generated_task = random.choice(tasks_master)
-        __set_current_task(username, 'masterTasks', generated_task.id, True)
+        __set_current_task(username, 'masterTasks', generated_task.uuid, True)
         return generated_task
     return None
 
@@ -524,21 +524,21 @@ def get_task_lists(username):
     
 
     for boss_pet_task in tasklists.boss_pet:
-        if any(x.get("taskId") == boss_pet_task.id for x in completed_bossPet_ids):
+        if any(x.get("uuid") == boss_pet_task.uuid for x in completed_bossPet_ids):
             boss_pet_task.isCompleted = True
         else:
             boss_pet_task.isCompleted = False
         bossPets.append(boss_pet_task)
 
     for skill_pet_task in tasklists.skill_pet:
-        if any(x.get("taskId") == skill_pet_task.id for x in completed_skillPet_ids):
+        if any(x.get("uuid") == skill_pet_task.uuid for x in completed_skillPet_ids):
             skill_pet_task.isCompleted = True
         else:
             skill_pet_task.isCompleted = False
         skillPets.append(skill_pet_task)
 
     for other_pet_task in tasklists.other_pet:
-        if any(x.get("taskId") == other_pet_task.id for x in completed_otherPet_ids):
+        if any(x.get("uuid") == other_pet_task.uuid for x in completed_otherPet_ids):
             other_pet_task.isCompleted = True
         else:
             other_pet_task.isCompleted = False
@@ -586,7 +586,6 @@ Returns:
 
 
 def manual_complete_tasks(username, tier, task_id):
-    task_id = int(task_id)
     __set_task_complete(username, tier, task_id, True)
     exclude_list = ['bossPetTasks', 'skillPetTasks', 'otherPetTasks']
     if tier in exclude_list:
@@ -611,7 +610,6 @@ Returns:
 
 
 def manual_revert_tasks(username, tier, task_id):
-    task_id = int(task_id)
     __set_task_complete(username, tier, task_id, False)
     exclude_list = ['bossPetTasks', 'skillPetTasks', 'otherPetTasks']
     if tier in exclude_list:
@@ -625,19 +623,20 @@ def update_imported_tasks(username: str, all_tasks: list, username2: str):
     coll = mydb['taskLists']
     include = {'easy', 'medium', 'hard', 'elite'}
     tasks_to_check = []
+    print('all tasks')
+    print(all_tasks)
     for tier in include:
         current_task = get_taskCurrent_tier(username, tier)
         if current_task is not None:
             tasks_to_check.append(current_task[3])
 
-    all_task_ids = {task["taskId"] for group in all_tasks for task in group}
+    all_task_ids = {task["uuid"] for group in all_tasks for task in group}
     found = [value for value in tasks_to_check if value in all_task_ids]
     exists_all = all(value in all_task_ids for value in tasks_to_check)
     if exists_all:
         # coll.update_one({'username': username}, {})
         for task in found:
-            print(task)
-            __set_current_task(username, 'easy', int(task), False)
+            __set_current_task(username, 'easy', task, False)
 
     coll.update_one({'username': username},
                     {'$set': {'tiers.easy.completedTasks': [],
@@ -1410,8 +1409,13 @@ def fix_gerni():
                     #                 }
                     #             }
                     #         )
+
+def add_uuids():
+    task_coll = mydb["taskLists"]
+    for task in tasklists.easy:
+        print(task['uuid'], task['_id'], task['name'])
 if __name__ == "__main__":
-    get_task_lists('GerniSleep')
+    add_uuids()
     # fix_gerni()
     # get_task_lists('GerniSleep')
     pass

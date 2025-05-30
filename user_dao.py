@@ -46,9 +46,9 @@ class UserDatabaseObject:
         user_task_list = self.get_task_list(tier)
         if user_task_list.current_task is None:
             return None
-        task = task_info_for_id(tasklists.list_for_tier(tier), user_task_list.current_task.task_id)
+        task = task_info_for_id(tasklists.list_for_tier(tier), user_task_list.current_task.uuid)
         # TODO Fix this format
-        return task.name, task.asset_image, tier, task.id, task.tip, task.wiki_link, task.wiki_image
+        return task.name, task.asset_image, tier, task.uuid, task.tip, task.wiki_link, task.wiki_image
 
     def current_task(self) -> tuple or None: # type: ignore
         if self.easy.current_task is not None:
@@ -77,17 +77,17 @@ class UserDatabaseObject:
             current_task_id = current_task[3] if current_task is not None else None
         else:
             current_task_id = None
-        completed_task_ids = list(map(lambda x: x.task_id, self.get_task_list(tier).completed_tasks))
+        completed_task_ids = list(map(lambda x: x.uuid, self.get_task_list(tier).completed_tasks))
 
         def page_task(task: TaskData):
-            return PageTask(is_current=task.id is current_task_id, is_completed=task.id in completed_task_ids,
+            return PageTask(is_current=task.uuid is current_task_id, is_completed=task.uuid in completed_task_ids,
                             task_data=task)
 
         return list(map(page_task, tasklists.list_for_tier(tier, self.lms_enabled)))
 
 
-def task_info_for_id(task_list: list[TaskData], task_id: int) -> tasklists.TaskData:
-    filtered = list(filter(lambda x: x.id == task_id, task_list))
+def task_info_for_id(task_list: list[TaskData], task_id: str) -> tasklists.TaskData:
+    filtered = list(filter(lambda x: x.uuid == task_id, task_list))
     if len(filtered) == 0:
         raise Exception("No id found in list " + task_id)
     return filtered[0]
@@ -113,14 +113,14 @@ def convert_database_user(user_data: dict) -> UserDatabaseObject:
     def convert_database_tier(tier: str) -> UserTaskList:
         data = tiers[tier]
         if data:
-            completed_tasks = list(map(lambda x: UserCompletedTask(task_id=x['taskId']), data['completedTasks']))
+            completed_tasks = list(map(lambda x: UserCompletedTask(uuid=x['uuid']), data['completedTasks']))
             # Filter tasks that have been removed from tasklist
-            all_current_tier_ids = list(map(lambda x: x.id, tasklists.list_for_tier(tier)))
-            completed_tasks = list(filter(lambda x: x.task_id in all_current_tier_ids, completed_tasks))
-
+            all_current_tier_ids = list(map(lambda x: x.uuid, tasklists.list_for_tier(tier)))
+            completed_tasks = list(filter(lambda x: x.uuid in all_current_tier_ids, completed_tasks))
+            # print(completed_tasks)
         current = data.get('currentTask', None)
         if current:
-            current = UserCurrentTask(task_id=current['taskId'])
+            current = UserCurrentTask(uuid=current['uuid'])
         return UserTaskList(current_task=current,
                             completed_tasks=completed_tasks)
 

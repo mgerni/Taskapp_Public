@@ -52,10 +52,13 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
         return [item for item in items if int(item['id']) == target_id]
     def format_completed_tasks(completed_tasks: set):
         formatted_tasks = []
+        print("completed tasks")
+        print(completed_tasks)
         for task_id in completed_tasks:
             formatted_tasks.append({
-                'taskId': task_id,
+                'uuid' : task_id
             })
+        print('FORMATTED TASKS')
         print(formatted_tasks)
         return formatted_tasks
 
@@ -63,39 +66,39 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
     missing_tasks = list()
     completed_tasks = set()
     for task in site_tasks:
-        print('******************************************************************************')
+        # print('******************************************************************************')
         task_data = task.get('colLogData', None)
         if task.get('isLMS') and action == 'check' and not lms_enabled:
             continue
         if task_data:
             log_count = 0
             for item in task_data['include']:
-                print(f"Checking item: {item['name']} with ID: {item['id']}")
+                # print(f"Checking item: {item['name']} with ID: {item['id']}")
                 find_item = find_by_id(cleaned_player_data, item['id'])
                 if find_item:
                     log_count += 1
-                    print(f"Found item: {find_item[0]['name']} with ID: {find_item[0]['id']}")
-                    print(f"Log count: {log_count}, Required: {task_data['logCount']}")
+                    # print(f"Found item: {find_item[0]['name']} with ID: {find_item[0]['id']}")
+                    # print(f"Log count: {log_count}, Required: {task_data['logCount']}")
                     if log_count == task_data['logCount']:
-                        completed_tasks.add(int(task['_id']))
-                        print(f"Completed task: {task['name']} with ID: {task['_id']}")
+                        completed_tasks.add(task['uuid'])
+                        # print(f"Completed task: {task['name']} with ID: {task['uuid']}")
 
                         if action == "import" and find_item[0].get('date', None):
                             unix_time = get_unix_time(find_item[0]['date'])
-                            print(find_item[0]['date'], unix_time)
+                            # print(find_item[0]['date'], unix_time)
                         break
             if log_count != task_data['logCount']:
                 missing_tasks.append(task['name'])
-                print(f"Missing task: {task['name']} with ID: {task['_id']}")
+                # print(f"Missing task: {task['name']} with ID: {task['uuid']}")
                     
     if action == 'check':
-        print("Missing tasks:")
-        for task in missing_tasks:
-            print(task)
+        # print("Missing tasks:")
+        # for task in missing_tasks:
+        #     print(task)
         return missing_tasks
     else:
         sorted_completed_tasks = sorted(completed_tasks)
-        print(sorted_completed_tasks)
+        # print(sorted_completed_tasks)
         return format_completed_tasks(sorted_completed_tasks)
     
 
