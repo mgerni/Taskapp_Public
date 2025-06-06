@@ -52,14 +52,10 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
         return [item for item in items if int(item['id']) == target_id]
     def format_completed_tasks(completed_tasks: set):
         formatted_tasks = []
-        print("completed tasks")
-        print(completed_tasks)
         for task_id in completed_tasks:
             formatted_tasks.append({
                 'uuid' : task_id
             })
-        print('FORMATTED TASKS')
-        print(formatted_tasks)
         return formatted_tasks
 
     cleaned_player_data = temple_player_data(username)

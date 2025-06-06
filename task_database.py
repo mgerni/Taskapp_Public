@@ -623,47 +623,122 @@ def update_imported_tasks(username: str, all_tasks: list, username2: str):
     coll = mydb['taskLists']
     include = {'easy', 'medium', 'hard', 'elite'}
     tasks_to_check = []
-    print('all tasks')
-    print(all_tasks)
+
     for tier in include:
         current_task = get_taskCurrent_tier(username, tier)
         if current_task is not None:
-            tasks_to_check.append(current_task[3])
+            tasks_to_check.append(current_task)  # store the whole object
 
     all_task_ids = {task["uuid"] for group in all_tasks for task in group}
-    found = [value for value in tasks_to_check if value in all_task_ids]
-    exists_all = all(value in all_task_ids for value in tasks_to_check)
-    if exists_all:
-        # coll.update_one({'username': username}, {})
-        for task in found:
-            __set_current_task(username, 'easy', task, False)
 
-    coll.update_one({'username': username},
-                    {'$set': {'tiers.easy.completedTasks': [],
-                              'tiers.medium.completedTasks': [],
-                              'tiers.hard.completedTasks': [],
-                              'tiers.elite.completedTasks': [],
-                            #   'tiers.master.completedTasks': [],
-                            #   'tiers.passive.completedTasks': [],
-                            #   'tiers.extra.completedTasks': [],
-                            #   'tiers.bossPets.completedTasks': [],
-                            #   'tiers.skillPets.completedTasks': [],
-                            #   'tiers.otherPets.completedTasks': []
-                            }
-                    })
-    coll.update_one({'username': username},
-                    {'$set': {'tiers.easy.completedTasks': all_tasks[0],
-                              'tiers.medium.completedTasks': all_tasks[1],
-                              'tiers.hard.completedTasks': all_tasks[2],
-                              'tiers.elite.completedTasks': all_tasks[3],
-                            #   'tiers.master.completedTasks': [],
-                            #   'tiers.passive.completedTasks': [],
-                            #   'tiers.extra.completedTasks': [],
-                            #   'tiers.bossPets.completedTasks': [],
-                            #   'tiers.skillPets.completedTasks': [],
-                            #   'tiers.otherPets.completedTasks': []
-                              }})
-    coll.update_one({'username' : username}, {'$set' : {'ign': username2}})
+    for current_task in tasks_to_check:
+        uuid = current_task[3]  # the task uuid
+        tier = current_task[2]  # the tier name
+        if uuid in all_task_ids:
+            __set_current_task(username, tier, uuid, False)  # ✅ dynamically uses tier
+
+    # Rest of your function remains unchanged
+    easy_diaries = {
+        "c366a4e5-3463-46e5-a9d1-da706a86d051",
+        "1c486d16-4538-424d-986a-efb457de0a8a",
+        "c82332c7-d026-4d53-a8cc-50ed31e2b182",
+        "82f153a8-37e7-40df-bb02-03a520ec3439",
+        "740deabc-99c8-42ff-8d15-e6442796368d",
+        "fb3e6897-aa5e-4ea4-a6e0-1e6e6dc4347c",
+        "753aa85c-d122-4551-b9ab-a34fbe403526",
+        "43847c48-e6e2-4c36-b2d4-d883b9f332a1",
+        "309d3dbb-6b68-4697-8562-c72e6c48e8e5",
+        "cf8660d4-cf64-4448-a4fd-e9b622293e53",
+        "3f4958dd-c0f7-4315-90c6-710ee0db254a",
+        "e4efcd63-f488-4a91-9307-c6662e9f612f"
+    }
+    medium_diaries = {
+        "040f49c9-93e9-431d-8a4c-d1b8b8a7edf6",
+        "5d2d9461-00bc-431b-b943-0693bb8b0fb6",
+        "a455bbf7-a570-494f-9753-643aeb83aca9",
+        "958d1774-5ddb-4cb3-abdf-2772de4d024f",
+        "f638ebcb-aebf-4c53-bd07-c0e683bc1072",
+        "306c11a3-241a-49b8-8083-ea05124d72e9",
+        "19708dd7-fb75-4ebc-ad65-60697a0d6401",
+        "57b5ba2a-b2b0-4442-b767-1a8b35e3be0d",
+        "31e5ccaa-dd74-42d7-8749-2efdaaf01e4e",
+        "f59758a3-122e-4d8a-b2ed-5b908fc60a8c",
+        "993eb6f8-e30a-4f0a-977d-148b45e0f7f7",
+        "59e36673-6808-4371-ba70-fd8d8003e5ef",
+    }
+    hard_diaries = {
+        "0adb8c5f-1f25-469f-a5ca-caeb72926555",
+        "6d862500-e957-438a-91d7-73afd64cbc94",
+        "ac81b972-e058-4f1c-9a6d-6b584152018e",
+        "ecf10542-a7dc-46a5-a104-1c2565775a0a",
+        "8eadf6a7-db23-4837-af73-353b46e7f154",
+        "efb50bb9-4fca-4c74-b17a-2411f462c798",
+        "cf47e5f2-f8b7-4e8f-94c9-578c405ad7ba",
+        "cf59d267-cfeb-4e20-91ce-083876b1393e",
+        "ab6d1763-824a-42b5-b4f5-41b0e30f618a",
+        "376f87f1-88c5-4180-abca-505cdaa542e4",
+        "6cad11a7-d40c-4a5e-962d-0387c9eb256b",
+        "4a1632cf-a847-43d9-884a-a43e135fdb76",
+    }
+    elite_diaries = {
+        "8c0cb3d6-e137-4a4a-b567-cab75ed2077f",
+        "7ec18760-279b-403f-a871-8f0bb99d3387",
+        "ab7fc232-2f2d-4497-8ea8-c7073d02539b",
+        "3d193ab7-67da-409b-8c21-fa79761e9693",
+        "1cb67d59-85dc-4377-a348-30b87d54bbfe",
+        "26fe2217-b7f0-496e-a081-5ab11d8fe7b1",
+        "308e1019-6b20-45ce-9725-13df969c6f49",
+        "b9e0a625-a86f-43ed-9e51-49e2b562ffa8",
+        "d2ac7997-c8f8-420a-80c2-ab8e0a686e48",
+        "63efc541-8946-45e1-b633-c9a56796c655",
+        "0709860d-771d-4173-8160-fdbeccfa54e0",
+        "2b10f0dd-ed73-48e9-8ee7-1bb8744f2005",
+    }
+
+    diaries = coll.find_one({'username': username}, {
+        '_id': 0,
+        'tiers.easy.completedTasks': 1,
+        'tiers.medium.completedTasks': 1,
+        'tiers.hard.completedTasks': 1,
+        'tiers.elite.completedTasks': 1
+    })
+
+    coll.update_one({'username': username}, {
+        '$set': {
+            'tiers.easy.completedTasks': [],
+            'tiers.medium.completedTasks': [],
+            'tiers.hard.completedTasks': [],
+            'tiers.elite.completedTasks': [],
+        }
+    })
+
+    coll.update_one({'username': username}, {
+        '$set': {
+            'tiers.easy.completedTasks': all_tasks[0],
+            'tiers.medium.completedTasks': all_tasks[1],
+            'tiers.hard.completedTasks': all_tasks[2],
+            'tiers.elite.completedTasks': all_tasks[3],
+        }
+    })
+
+    coll.update_one({'username': username}, {'$set': {'ign': username2}})
+
+    for diary in diaries['tiers']['easy']['completedTasks']:
+        if diary['uuid'] in easy_diaries:
+            __set_task_complete(username, 'easyTasks', diary['uuid'], True)
+
+    for diary in diaries['tiers']['medium']['completedTasks']:
+        if diary['uuid'] in medium_diaries:
+            __set_task_complete(username, 'mediumTasks', diary['uuid'], True)
+
+    for diary in diaries['tiers']['hard']['completedTasks']:
+        if diary['uuid'] in hard_diaries:
+            __set_task_complete(username, 'hardTasks', diary['uuid'], True)
+
+    for diary in diaries['tiers']['elite']['completedTasks']:
+        if diary['uuid'] in elite_diaries:
+            __set_task_complete(username, 'eliteTasks', diary['uuid'], True)
+
 
 '''
 import_spreadsheet:
@@ -1410,12 +1485,37 @@ def fix_gerni():
                     #             }
                     #         )
 
-def add_uuids():
-    task_coll = mydb["taskLists"]
-    for task in tasklists.easy:
-        print(task['uuid'], task['_id'], task['name'])
+def copy_tier_tasks(source_username: str, target_username: str, tiers: list[str]):
+    collection = mydb["taskLists"]
+
+    source_doc = collection.find_one({"username": source_username})
+    if not source_doc:
+        print(f"Source user '{source_username}' not found.")
+        return
+
+    updates = {}
+    for tier in tiers:
+        tier_data = source_doc.get("tiers", {}).get(tier, {})
+        
+        # Copy completedTasks if it exists
+        if "completedTasks" in tier_data:
+            updates[f"tiers.{tier}.completedTasks"] = tier_data["completedTasks"]
+
+        # Copy currentTask if it exists
+        if "currentTask" in tier_data:
+            updates[f"tiers.{tier}.currentTask"] = tier_data["currentTask"]
+
+    if updates:
+        result = collection.update_one(
+            {"username": target_username},
+            {"$set": updates}
+        )
+        print(f"Updated {result.modified_count} document(s).")
+    else:
+        print("No tasks to copy from source document.")
+
 if __name__ == "__main__":
-    add_uuids()
+    copy_tier_tasks("AreYaTasking", 'Gerni Task2', tiers=["easy", "medium", "hard", "elite", "master"])
     # fix_gerni()
     # get_task_lists('GerniSleep')
     pass
