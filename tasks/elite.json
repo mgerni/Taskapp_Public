@@ -483,38 +483,40 @@
         },
         "uuid": "e5cda43a-6499-4217-b338-9df09310c56d"
     },
-    {
+     {
         "_id": 6,
         "name": "Get a unique from Unsired",
         "tip": "Can be received as a drop from the Abyssal Sire Boss. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_Sire",
         "wikiImage": "https://oldschool.runescape.wiki/images/e/e8/Unsired.png?a6ba9",
         "assetImage": "Unsired.png",
-        "category": "Bosses",
-        "logName": "Abyssal Sire",
-        "include": [
-            {
-                "id": 7979,
-                "name": "Abyssal head"
-            },
-            {
-                "id": 13265,
-                "name": "Abyssal dagger"
-            },
-            {
-                "id": 13274,
-                "name": "Bludgeon spine"
-            },
-            {
-                "id": 13275,
-                "name": "Bludgeon claw"
-            },
-            {
-                "id": 13276,
-                "name": "Bludgeon axon"
-            }
-        ],
-        "logCount": 5,
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "Abyssal Sire",
+            "include": [
+                {
+                    "id": 7979,
+                    "name": "Abyssal head"
+                },
+                {
+                    "id": 13265,
+                    "name": "Abyssal dagger"
+                },
+                {
+                    "id": 13274,
+                    "name": "Bludgeon spine"
+                },
+                {
+                    "id": 13275,
+                    "name": "Bludgeon claw"
+                },
+                {
+                    "id": 13276,
+                    "name": "Bludgeon axon"
+                }
+            ],
+            "logCount": 5
+        },
         "uuid": "8f5d712e-edd6-4cdc-acb4-6e0527cd3797"
     },
     {
@@ -20659,7 +20661,7 @@
                     "name": "Chompy chick"
                 }
             ],
-            "logCount": 13
+            "logCount": 1
         },
         "uuid": "34d3a0de-1d7a-4642-8892-e0f44e6dea0e"
     },
@@ -20923,7 +20925,7 @@
                     "name": "Chompy bird hat (expert dragon archer)"
                 }
             ],
-            "logCount": 18
+            "logCount": 1
         },
         "uuid": "031c79be-210b-4f64-9775-3fefd33561b9"
     },
@@ -25065,7 +25067,7 @@
                     "name": "Guthixian temple teleport"
                 }
             ],
-            "logCount": 4
+            "logCount": 3
         },
         "uuid": "1b5ff8e4-3cef-4d3a-8476-2091a0aac5b6"
     },
@@ -25537,6 +25539,10 @@
                 {
                     "id": 30795,
                     "name": "Barrel of demonic tallow (full)"
+                },
+                {
+                    "id": 30765,
+                    "name": "Oathplate shards"
                 }
             ],
             "logCount": 1
@@ -25589,6 +25595,10 @@
                 {
                     "id": 30795,
                     "name": "Barrel of demonic tallow (full)"
+                },
+                {
+                    "id": 30765,
+                    "name": "Oathplate shards"
                 }
             ],
             "logCount": 2
@@ -25641,6 +25651,10 @@
                 {
                     "id": 30795,
                     "name": "Barrel of demonic tallow (full)"
+                },
+                {
+                    "id": 30765,
+                    "name": "Oathplate shards"
                 }
             ],
             "logCount": 3
@@ -25693,6 +25707,10 @@
                 {
                     "id": 30795,
                     "name": "Barrel of demonic tallow (full)"
+                },
+                {
+                    "id": 30765,
+                    "name": "Oathplate shards"
                 }
             ],
             "logCount": 4
@@ -25745,6 +25763,10 @@
                 {
                     "id": 30795,
                     "name": "Barrel of demonic tallow (full)"
+                },
+                {
+                    "id": 30765,
+                    "name": "Oathplate shards"
                 }
             ],
             "logCount": 5
@@ -25797,6 +25819,10 @@
                 {
                     "id": 30795,
                     "name": "Barrel of demonic tallow (full)"
+                },
+                {
+                    "id": 30765,
+                    "name": "Oathplate shards"
                 }
             ],
             "logCount": 6
@@ -25843,12 +25869,16 @@
                     "name": "Forgotten lockbox"
                 },
                 {
-                    "id": 30803,
+                    "id": 30805,
                     "name": "Dossier"
                 },
                 {
                     "id": 30795,
                     "name": "Barrel of demonic tallow (full)"
+                },
+                {
+                    "id": 30765,
+                    "name": "Oathplate shards"
                 }
             ],
             "logCount": 7
