@@ -1070,12 +1070,9 @@ def change_username():
 def change_password():
     username = session['username']
     new_password = request.form['new_password']
-    confirm_password = request.form['confirm_password']
 
-    if new_password != '':
+    if new_password == '':
         return {'success': False, 'error' : 'Password cannot be empty.'}
-    if new_password != confirm_password:
-        return {'success' : False, 'error' : 'Passwords do not match!'}
     change_password = task_login.change_password(username, new_password)
     if change_password[0]:
         return {'success' : True}
