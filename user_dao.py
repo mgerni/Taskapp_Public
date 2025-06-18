@@ -65,10 +65,17 @@ class UserDatabaseObject:
             return None
 
     def get_tier_progress(self, tier: str) -> TierProgress:
-        completed = len(self.get_task_list(tier).completed_tasks)
+        # remove instance of duplicate uuid in completed tasks
+        def clean_tasklists(tier: str):
+            tasklist = self.get_task_list(tier)
+            tasklist.completed_tasks = list({task.uuid: task for task in tasklist.completed_tasks}.values())
+            return tasklist
+        completed = len(clean_tasklists(tier).completed_tasks)
+        # completed = len(self.get_task_list(tier).completed_tasks)
         total_tasks = tasklists.list_for_tier(tier, self.lms_enabled)
         total = len(total_tasks)
         percent = floor(completed / total * 100)
+        print(f"Tier: {tier}, Completed: {completed}, Total: {total}, Percent: {percent}%")
         return TierProgress(percent, total, completed)
 
     def page_tasks(self, tier: str) -> list[PageTask]:
