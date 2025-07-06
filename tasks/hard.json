@@ -18902,10 +18902,6 @@
                 {
                     "id": 30085,
                     "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
                 }
             ],
             "logCount": 1
@@ -18938,51 +18934,11 @@
                 {
                     "id": 30085,
                     "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
                 }
             ],
             "logCount": 2
         },
         "uuid": "a5c685b6-c385-4797-ae6f-fc11a7c2098a"
-    },
-    {
-        "_id": 206,
-        "name": "Get 1 unique from the Hueycoatl",
-        "tip": "Obtained by killing The Hueycoatl",
-        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
-        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
-        "assetImage": "Dragon_hunter_wand_detail.png",
-        "colLogData": {
-            "category": "Bosses",
-            "logName": "The Hueycoatl",
-            "include": [
-                {
-                    "id": 30066,
-                    "name": "Tome of earth (empty)"
-                },
-                {
-                    "id": 30068,
-                    "name": "Soiled page"
-                },
-                {
-                    "id": 30070,
-                    "name": "Dragon hunter wand"
-                },
-                {
-                    "id": 30085,
-                    "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
-                }
-            ],
-            "logCount": 3
-        },
-        "uuid": "a759cf93-205b-489c-8bba-9fb1956d939c"
     },
     {
         "_id": 207,

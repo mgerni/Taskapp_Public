@@ -13442,5 +13442,25 @@
             "logCount": 1
         },
         "uuid": "a381086f-a4be-46ec-89d1-088f1a67afcf"
+    },
+    {
+        "_id": 170,
+        "name": "Get a Huasca seed",
+        "tip": "Can be received as a drop from the Amoxliatl.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Huasca_seed",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Huasca_seed_detail.png/200px-Huasca_seed_detail.png",
+        "assetImage": "Huasca_seed_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "include": [
+                {
+                    "id": 30088,
+                    "name": "Huasca seed"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "8faa724f-442a-48f2-9576-33d6ef1cd4a0"
     }
 ]
