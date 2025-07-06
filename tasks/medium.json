@@ -13422,5 +13422,25 @@
             "logCount": 4
         },
         "uuid": "f4800d10-9e58-413e-b4fe-7291dc162d1a"
+    },
+    {
+        "_id": 169,
+        "name": "Get a Steel ring",
+        "tip": "Can be received as a drop from the Deranged Archaeologist.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Steel_ring",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Steel_ring_detail.png/200px-Steel_ring_detail.png",
+        "assetImage": "Steel_ring_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "deranged_archaeologist",
+            "include": [
+                {
+                    "id": 30895,
+                    "name": "Steel ring"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "a381086f-a4be-46ec-89d1-088f1a67afcf"
     }
 ]
