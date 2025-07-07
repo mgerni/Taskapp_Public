@@ -13422,5 +13422,109 @@
             "logCount": 4
         },
         "uuid": "f4800d10-9e58-413e-b4fe-7291dc162d1a"
+    },
+    {
+        "_id": 169,
+        "name": "Get a Steel ring",
+        "tip": "Can be received as a drop from the Deranged Archaeologist.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Steel_ring",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Steel_ring_detail.png/200px-Steel_ring_detail.png",
+        "assetImage": "Steel_ring_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "deranged_archaeologist",
+            "include": [
+                {
+                    "id": 30895,
+                    "name": "Steel ring"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "a381086f-a4be-46ec-89d1-088f1a67afcf"
+    },
+    {
+        "_id": 170,
+        "name": "Get a Huasca seed",
+        "tip": "Can be received as a drop from the Amoxliatl.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Huasca_seed",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Huasca_seed_detail.png/200px-Huasca_seed_detail.png",
+        "assetImage": "Huasca_seed_detail.png",
+        "colLogData": {
+            "category": "Bosses",
+            "logName": "The Hueycoatl",
+            "include": [
+                {
+                    "id": 30088,
+                    "name": "Huasca seed"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "8faa724f-442a-48f2-9576-33d6ef1cd4a0"
+    },
+    {
+        "_id": 171,
+        "name": "Get a Wyrm/Brimhaven graceful recolor",
+        "tip": "You must recolor your existing graceful, whichever graceful you want to keep do that color last.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Graceful_outfit",
+        "wikiImage": "https://oldschool.runescape.wiki/images/Graceful_crafting_kit_detail.png?37b7e",
+        "assetImage": "Graceful_crafting_kit_detail.png",
+        "colLogData": {
+            "category": "Minigames",
+            "logName": "brimhaven_agility_arena",
+            "include": [
+                {
+                    "id": 21061,
+                    "name": "Graceful hood (Agility Arena)"
+                },
+                {
+                    "id": 21064,
+                    "name": "Graceful cape (Agility Arena)"
+                },
+                {
+                    "id": 21067,
+                    "name": "Graceful top (Agility Arena)"
+                },
+                {
+                    "id": 21070,
+                    "name": "Graceful legs (Agility Arena)"
+                },
+                {
+                    "id": 21073,
+                    "name": "Graceful gloves (Agility Arena)"
+                },
+                {
+                    "id": 21076,
+                    "name": "Graceful boots (Agility Arena)"
+                },
+                {
+                    "id": 30045,
+                    "name": "Graceful hood (Varlamore)"
+                },
+                {
+                    "id": 30048,
+                    "name": "Graceful cape (Varlamore)"
+                },
+                {
+                    "id": 30051,
+                    "name": "Graceful top (Varlamore)"
+                },
+                {
+                    "id": 30054,
+                    "name": "Graceful legs (Varlamore)"
+                },
+                {
+                    "id": 30057,
+                    "name": "Graceful gloves (Varlamore)"
+                },
+                {
+                    "id": 30060,
+                    "name": "Graceful boots (Varlamore)"
+                }
+            ],
+            "logCount": 6
+        },
+        "uuid": "4e1c007c-8d85-4ddf-b2f8-fc8f80b7f22f"
     }
 ]

@@ -16734,70 +16734,6 @@
         "uuid": "2a5428a2-a6a5-44fd-ad89-d8bb4d1cf516"
     },
     {
-        "_id": 161,
-        "name": "Get a Wyrm/Brimhaven graceful recolor",
-        "tip": "You must recolor your exisiting graceful, whichever graceful you want to keep do that color last.",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Graceful_outfit",
-        "wikiImage": "https://oldschool.runescape.wiki/images/Graceful_crafting_kit_detail.png?37b7e",
-        "assetImage": "Graceful_crafting_kit_detail.png",
-        "colLogData": {
-            "category": "Minigames",
-            "logName": "brimhaven_agility_arena",
-            "include": [
-                {
-                    "id": 21061,
-                    "name": "Graceful hood (Agility Arena)"
-                },
-                {
-                    "id": 21064,
-                    "name": "Graceful cape (Agility Arena)"
-                },
-                {
-                    "id": 21067,
-                    "name": "Graceful top (Agility Arena)"
-                },
-                {
-                    "id": 21070,
-                    "name": "Graceful legs (Agility Arena)"
-                },
-                {
-                    "id": 21073,
-                    "name": "Graceful gloves (Agility Arena)"
-                },
-                {
-                    "id": 21076,
-                    "name": "Graceful boots (Agility Arena)"
-                },
-                {
-                    "id": 30045,
-                    "name": "Graceful hood (Varlamore)"
-                },
-                {
-                    "id": 30048,
-                    "name": "Graceful cape (Varlamore)"
-                },
-                {
-                    "id": 30051,
-                    "name": "Graceful top (Varlamore)"
-                },
-                {
-                    "id": 30054,
-                    "name": "Graceful legs (Varlamore)"
-                },
-                {
-                    "id": 30057,
-                    "name": "Graceful gloves (Varlamore)"
-                },
-                {
-                    "id": 30060,
-                    "name": "Graceful boots (Varlamore)"
-                }
-            ],
-            "logCount": 6
-        },
-        "uuid": "4e1c007c-8d85-4ddf-b2f8-fc8f80b7f22f"
-    },
-    {
         "_id": 162,
         "name": "Get a Volcanic mine teleport",
         "tip": "Can be purchased as a reward from the Volcanic Mine Minigame. ",
@@ -17617,6 +17553,10 @@
                     "name": "Jewel of the sun"
                 },
                 {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
+                },
+                {
                     "id": 27293,
                     "name": "Cache of runes"
                 }
@@ -17679,6 +17619,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -18902,10 +18846,6 @@
                 {
                     "id": 30085,
                     "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
                 }
             ],
             "logCount": 1
@@ -18938,51 +18878,11 @@
                 {
                     "id": 30085,
                     "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
                 }
             ],
             "logCount": 2
         },
         "uuid": "a5c685b6-c385-4797-ae6f-fc11a7c2098a"
-    },
-    {
-        "_id": 206,
-        "name": "Get 1 unique from the Hueycoatl",
-        "tip": "Obtained by killing The Hueycoatl",
-        "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
-        "wikiImage": "https://oldschool.runescape.wiki/images/Dragon_hunter_wand_detail.png?a3e16",
-        "assetImage": "Dragon_hunter_wand_detail.png",
-        "colLogData": {
-            "category": "Bosses",
-            "logName": "The Hueycoatl",
-            "include": [
-                {
-                    "id": 30066,
-                    "name": "Tome of earth (empty)"
-                },
-                {
-                    "id": 30068,
-                    "name": "Soiled page"
-                },
-                {
-                    "id": 30070,
-                    "name": "Dragon hunter wand"
-                },
-                {
-                    "id": 30085,
-                    "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
-                }
-            ],
-            "logCount": 3
-        },
-        "uuid": "a759cf93-205b-489c-8bba-9fb1956d939c"
     },
     {
         "_id": 207,
@@ -19063,5 +18963,73 @@
             "logCount": 6
         },
         "uuid": "82a8379b-8a72-4206-8465-ee67d64c640c"
+    },
+    {
+        "_id": 209,
+        "name": "Get 1 unique from Tombs of Amascut",
+        "tip": "Can be received as a reqard from the Tombs of Amascut Raid",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tombs_of_Amascut",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Thread_of_elidinis_detail.png/120px-Thread_of_elidinis_detail.png?41e87",
+        "assetImage": "Thread_of_elidinis.png",
+        "colLogData": {
+            "category": "Raids",
+            "logName": "tombs_of_amascut",
+            "include": [
+                {
+                    "id": 27277,
+                    "name": "Tumeken's shadow (uncharged)"
+                },
+                {
+                    "id": 25985,
+                    "name": "Elidinis' ward"
+                },
+                {
+                    "id": 27226,
+                    "name": "Masori mask"
+                },
+                {
+                    "id": 27229,
+                    "name": "Masori body"
+                },
+                {
+                    "id": 27232,
+                    "name": "Masori chaps"
+                },
+                {
+                    "id": 25975,
+                    "name": "Lightbearer"
+                },
+                {
+                    "id": 26219,
+                    "name": "Osmumten's fang"
+                },
+                {
+                    "id": 27279,
+                    "name": "Thread of elidinis"
+                },
+                {
+                    "id": 27283,
+                    "name": "Breach of the scarab"
+                },
+                {
+                    "id": 27285,
+                    "name": "Eye of the corruptor"
+                },
+                {
+                    "id": 27289,
+                    "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
+                },
+                {
+                    "id": 27293,
+                    "name": "Cache of runes"
+                }
+            ],
+            "logCount": 3
+        },
+        "uuid": "64e35755-e178-494a-890d-a31e236bcbe2"
     }
 ]

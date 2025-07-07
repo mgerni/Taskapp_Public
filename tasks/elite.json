@@ -3892,149 +3892,8 @@
                     "name": "Jewel of the sun"
                 },
                 {
-                    "id": 27293,
-                    "name": "Cache of runes"
-                },
-                {
-                    "id": 22477,
-                    "name": "Avernic defender hilt"
-                },
-                {
-                    "id": 22481,
-                    "name": "Sanguinesti staff (uncharged)"
-                },
-                {
-                    "id": 22486,
-                    "name": "Scythe of vitur (uncharged)"
-                },
-                {
-                    "id": 22324,
-                    "name": "Ghrazi rapier"
-                },
-                {
-                    "id": 22326,
-                    "name": "Justiciar faceguard"
-                },
-                {
-                    "id": 22327,
-                    "name": "Justiciar chestguard"
-                },
-                {
-                    "id": 22328,
-                    "name": "Justiciar legguards"
-                },
-                {
-                    "id": 20997,
-                    "name": "Twisted bow"
-                },
-                {
-                    "id": 21003,
-                    "name": "Elder maul"
-                },
-                {
-                    "id": 21043,
-                    "name": "Kodai insignia"
-                },
-                {
-                    "id": 13652,
-                    "name": "Dragon claws"
-                },
-                {
-                    "id": 21018,
-                    "name": "Ancestral hat"
-                },
-                {
-                    "id": 21021,
-                    "name": "Ancestral robe top"
-                },
-                {
-                    "id": 21024,
-                    "name": "Ancestral robe bottom"
-                },
-                {
-                    "id": 21015,
-                    "name": "Dinh's bulwark"
-                },
-                {
-                    "id": 21034,
-                    "name": "Dexterous prayer scroll"
-                },
-                {
-                    "id": 21079,
-                    "name": "Arcane prayer scroll"
-                },
-                {
-                    "id": 21012,
-                    "name": "Dragon hunter crossbow"
-                },
-                {
-                    "id": 21000,
-                    "name": "Twisted buckler"
-                }
-            ],
-            "logCount": 3
-        },
-        "uuid": "cfe62202-fcff-4c48-a7ce-759ab7abf4fc"
-    },
-    {
-        "_id": 45,
-        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
-        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
-        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
-        "assetImage": "Twisted_bow.png",
-        "colLogData": {
-            "category": "Raids",
-            "logName": null,
-            "multi": [
-                "Chambers of Xeric",
-                "Theatre of Blood",
-                "Tombs of Amascut"
-            ],
-            "include": [
-                {
-                    "id": 27277,
-                    "name": "Tumeken's shadow (uncharged)"
-                },
-                {
-                    "id": 25985,
-                    "name": "Elidinis' ward"
-                },
-                {
-                    "id": 27226,
-                    "name": "Masori mask"
-                },
-                {
-                    "id": 27229,
-                    "name": "Masori body"
-                },
-                {
-                    "id": 27232,
-                    "name": "Masori chaps"
-                },
-                {
-                    "id": 25975,
-                    "name": "Lightbearer"
-                },
-                {
-                    "id": 26219,
-                    "name": "Osmumten's fang"
-                },
-                {
-                    "id": 27279,
-                    "name": "Thread of elidinis"
-                },
-                {
-                    "id": 27283,
-                    "name": "Breach of the scarab"
-                },
-                {
-                    "id": 27285,
-                    "name": "Eye of the corruptor"
-                },
-                {
-                    "id": 27289,
-                    "name": "Jewel of the sun"
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -4119,10 +3978,10 @@
             ],
             "logCount": 4
         },
-        "uuid": "23d240d5-ff59-4dfc-a36c-2c04aaea5f98"
+        "uuid": "cfe62202-fcff-4c48-a7ce-759ab7abf4fc"
     },
     {
-        "_id": 46,
+        "_id": 45,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -4180,6 +4039,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -4264,10 +4127,10 @@
             ],
             "logCount": 5
         },
-        "uuid": "81bfa29c-7aa1-4c83-9b66-886b8cc7efb0"
+        "uuid": "23d240d5-ff59-4dfc-a36c-2c04aaea5f98"
     },
     {
-        "_id": 47,
+        "_id": 46,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -4325,6 +4188,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -4409,10 +4276,10 @@
             ],
             "logCount": 6
         },
-        "uuid": "e242e0f3-f427-4a81-b2b4-35b129d3d77c"
+        "uuid": "81bfa29c-7aa1-4c83-9b66-886b8cc7efb0"
     },
     {
-        "_id": 48,
+        "_id": 47,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -4470,6 +4337,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -4554,10 +4425,10 @@
             ],
             "logCount": 7
         },
-        "uuid": "00c55616-541b-495f-bb70-8d47b4006f81"
+        "uuid": "e242e0f3-f427-4a81-b2b4-35b129d3d77c"
     },
     {
-        "_id": 49,
+        "_id": 48,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -4615,6 +4486,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -4699,10 +4574,10 @@
             ],
             "logCount": 8
         },
-        "uuid": "3f100c5c-fca5-498f-8100-f244e7e93cf0"
+        "uuid": "00c55616-541b-495f-bb70-8d47b4006f81"
     },
     {
-        "_id": 50,
+        "_id": 49,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -4760,6 +4635,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -4844,10 +4723,10 @@
             ],
             "logCount": 9
         },
-        "uuid": "b95f9d6f-e329-45e2-a27d-df3e72b499e4"
+        "uuid": "3f100c5c-fca5-498f-8100-f244e7e93cf0"
     },
     {
-        "_id": 51,
+        "_id": 50,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -4905,6 +4784,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -4989,10 +4872,10 @@
             ],
             "logCount": 10
         },
-        "uuid": "412a88cc-0176-4dd7-beef-f415f336fdf5"
+        "uuid": "b95f9d6f-e329-45e2-a27d-df3e72b499e4"
     },
     {
-        "_id": 52,
+        "_id": 51,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -5050,6 +4933,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -5134,10 +5021,10 @@
             ],
             "logCount": 11
         },
-        "uuid": "899c8e83-2a94-46dc-9d0e-4264ade1fe6b"
+        "uuid": "412a88cc-0176-4dd7-beef-f415f336fdf5"
     },
     {
-        "_id": 53,
+        "_id": 52,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -5195,6 +5082,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -5279,10 +5170,10 @@
             ],
             "logCount": 12
         },
-        "uuid": "5089451e-af11-4e7a-939b-69e7264f6567"
+        "uuid": "899c8e83-2a94-46dc-9d0e-4264ade1fe6b"
     },
     {
-        "_id": 54,
+        "_id": 53,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -5340,6 +5231,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -5424,10 +5319,10 @@
             ],
             "logCount": 13
         },
-        "uuid": "80d36a85-f35e-4357-b753-3af16d2712db"
+        "uuid": "5089451e-af11-4e7a-939b-69e7264f6567"
     },
     {
-        "_id": 55,
+        "_id": 54,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -5485,6 +5380,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -5569,10 +5468,10 @@
             ],
             "logCount": 14
         },
-        "uuid": "16c3398a-195b-49ad-b3e0-36e1c2998c02"
+        "uuid": "80d36a85-f35e-4357-b753-3af16d2712db"
     },
     {
-        "_id": 56,
+        "_id": 55,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -5630,6 +5529,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -5714,10 +5617,10 @@
             ],
             "logCount": 15
         },
-        "uuid": "2d2f9afe-cda9-40aa-b3f0-ee4223e3cc00"
+        "uuid": "16c3398a-195b-49ad-b3e0-36e1c2998c02"
     },
     {
-        "_id": 57,
+        "_id": 56,
         "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
         "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
         "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
@@ -5775,6 +5678,10 @@
                 {
                     "id": 27289,
                     "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
                 },
                 {
                     "id": 27293,
@@ -5858,6 +5765,155 @@
                 }
             ],
             "logCount": 16
+        },
+        "uuid": "2d2f9afe-cda9-40aa-b3f0-ee4223e3cc00"
+    },
+    {
+        "_id": 57,
+        "name": "Get 1 unique from Raids (CoX or ToB or ToA)",
+        "tip": "Can be received as a drop from Raids. Chambers of Xerics or Theatre of Blood or Tombs of Amascut. ",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Raids",
+        "wikiImage": "https://oldschool.runescape.wiki/images/4/4f/Twisted_bow.png?029ba",
+        "assetImage": "Twisted_bow.png",
+        "colLogData": {
+            "category": "Raids",
+            "logName": null,
+            "multi": [
+                "Chambers of Xeric",
+                "Theatre of Blood",
+                "Tombs of Amascut"
+            ],
+            "include": [
+                {
+                    "id": 27277,
+                    "name": "Tumeken's shadow (uncharged)"
+                },
+                {
+                    "id": 25985,
+                    "name": "Elidinis' ward"
+                },
+                {
+                    "id": 27226,
+                    "name": "Masori mask"
+                },
+                {
+                    "id": 27229,
+                    "name": "Masori body"
+                },
+                {
+                    "id": 27232,
+                    "name": "Masori chaps"
+                },
+                {
+                    "id": 25975,
+                    "name": "Lightbearer"
+                },
+                {
+                    "id": 26219,
+                    "name": "Osmumten's fang"
+                },
+                {
+                    "id": 27279,
+                    "name": "Thread of elidinis"
+                },
+                {
+                    "id": 27283,
+                    "name": "Breach of the scarab"
+                },
+                {
+                    "id": 27285,
+                    "name": "Eye of the corruptor"
+                },
+                {
+                    "id": 27289,
+                    "name": "Jewel of the sun"
+                },
+                {
+                    "id": 30893,
+                    "name": "Jewel of Amascut"
+                },
+                {
+                    "id": 27293,
+                    "name": "Cache of runes"
+                },
+                {
+                    "id": 22477,
+                    "name": "Avernic defender hilt"
+                },
+                {
+                    "id": 22481,
+                    "name": "Sanguinesti staff (uncharged)"
+                },
+                {
+                    "id": 22486,
+                    "name": "Scythe of vitur (uncharged)"
+                },
+                {
+                    "id": 22324,
+                    "name": "Ghrazi rapier"
+                },
+                {
+                    "id": 22326,
+                    "name": "Justiciar faceguard"
+                },
+                {
+                    "id": 22327,
+                    "name": "Justiciar chestguard"
+                },
+                {
+                    "id": 22328,
+                    "name": "Justiciar legguards"
+                },
+                {
+                    "id": 20997,
+                    "name": "Twisted bow"
+                },
+                {
+                    "id": 21003,
+                    "name": "Elder maul"
+                },
+                {
+                    "id": 21043,
+                    "name": "Kodai insignia"
+                },
+                {
+                    "id": 13652,
+                    "name": "Dragon claws"
+                },
+                {
+                    "id": 21018,
+                    "name": "Ancestral hat"
+                },
+                {
+                    "id": 21021,
+                    "name": "Ancestral robe top"
+                },
+                {
+                    "id": 21024,
+                    "name": "Ancestral robe bottom"
+                },
+                {
+                    "id": 21015,
+                    "name": "Dinh's bulwark"
+                },
+                {
+                    "id": 21034,
+                    "name": "Dexterous prayer scroll"
+                },
+                {
+                    "id": 21079,
+                    "name": "Arcane prayer scroll"
+                },
+                {
+                    "id": 21012,
+                    "name": "Dragon hunter crossbow"
+                },
+                {
+                    "id": 21000,
+                    "name": "Twisted buckler"
+                }
+            ],
+            "logCount": 17
         },
         "uuid": "b7602f4e-a3bb-4885-ba21-d424501783a6"
     },
@@ -25447,13 +25503,9 @@
                 {
                     "id": 30085,
                     "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
                 }
             ],
-            "logCount": 4
+            "logCount": 3
         },
         "uuid": "a86e6140-2f24-4388-ac5c-f1ddc959d9cf"
     },
@@ -25483,13 +25535,9 @@
                 {
                     "id": 30085,
                     "name": "Hueycoatl hide"
-                },
-                {
-                    "id": 30088,
-                    "name": "Huasca seed"
                 }
             ],
-            "logCount": 5
+            "logCount": 4
         },
         "uuid": "73b5e8f6-f2f2-4342-bead-f0e29a250ed3"
     },
