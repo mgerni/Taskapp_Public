@@ -856,6 +856,8 @@ nav .home-link {
     padding-left: 20px;
 }
 
+
+
 nav .home-link:before {
     font-family: "Font Awesome 5 Free";
     content: "\f015";
@@ -866,7 +868,15 @@ nav .home-link:before {
     color: var(--complete-color);
 }
 
-
+/* nav .discord-link {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    background-image: url('https://fonts.google.com/icons?selected=Material+Symbols+Outlined:home:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=+%23ffff00');
+    background-position: left-center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+} */
 
 nav .profile:before {
     font-family: "Font Awesome 5 Free";
