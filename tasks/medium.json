@@ -13526,5 +13526,173 @@
             "logCount": 6
         },
         "uuid": "4e1c007c-8d85-4ddf-b2f8-fc8f80b7f22f"
+    },
+    {
+        "_id": 172,
+        "name": "Get 1 unique from Vale Totems",
+        "tip": "This fletching minigame takes place in Auburn Valley. You can chop you own logs",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Vale_Totems",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Vale_offerings_detail.png/320px-Vale_offerings_detail.png",
+        "assetImage": "Colossal_wyrm_teleport_scroll_detail.png",
+        "colLogData": {
+            "category": "N/A",
+            "logName": "N/A",
+            "include": [
+                {
+                    "id": 31032,
+                    "name": "Ent Branch"
+                },
+                {
+                    "id": 31043,
+                    "name": "Fletching knife"
+                },
+                {
+                    "id": 31052,
+                    "name": "Bow string spool"
+                },
+                {
+                    "id": 31034,
+                    "name": "Greenman mask"
+                }
+            ],
+            "logCount": 3
+        },
+        "uuid": "f3a0cc76-6f55-426e-8440-5a47e6920a84"
+    },
+    {
+        "_id": 173,
+        "name": "Get 1 unique from Vale Totems",
+        "tip": "This fletching minigame takes place in Auburn Valley. You can chop you own logs",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Vale_Totems",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Vale_offerings_detail.png/320px-Vale_offerings_detail.png",
+        "assetImage": "Vale_offerings_detail.png",
+        "colLogData": {
+            "category": "N/A",
+            "logName": "N/A",
+            "include": [
+                {
+                    "id": 31032,
+                    "name": "Ent Branch"
+                },
+                {
+                    "id": 31043,
+                    "name": "Fletching knife"
+                },
+                {
+                    "id": 31052,
+                    "name": "Bow string spool"
+                },
+                {
+                    "id": 31034,
+                    "name": "Greenman mask"
+                }
+            ],
+            "logCount": 4
+        },
+        "uuid": "c47d1afa-63ba-4235-be79-425d345375b7"
+    },
+    {
+        "_id": 174,
+        "name": "Get 1 unique from Custodian stalkers",
+        "tip": "Three different variants can be found inside the Stalker Den in Varlamare, after completion of the Shadows of Custodia quest.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Custodian_stalker",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Antler_guard_detail.png/320px-Antler_guard_detail.png",
+        "assetImage": "Antler_guard_detail.png",
+        "colLogData" : {
+            "category": "N/A",
+            "logName": "N/A",
+            "include" : [
+                {
+                    "id": 31081,
+                    "name": "Antler guard"
+                },
+                {
+                    "id": 31086,
+                    "name": "Broken antler"
+                },
+                {
+                    "id": 31084,
+                    "name": "Alchemist's signet"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "b8d6aac5-2580-4ca1-8129-a1f71d4c4ebf"
+    },
+    {
+        "_id": 175,
+        "name": "Get 1 unique from Custodian stalkers",
+        "tip": "Three different variants can be found inside the Stalker Den in Varlamare, after completion of the Shadows of Custodia quest.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Custodian_stalker",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Antler_guard_detail.png/320px-Antler_guard_detail.png",
+        "assetImage": "Antler_guard_detail.png",
+        "colLogData" : {
+            "category": "N/A",
+            "logName": "N/A",
+            "include" : [
+                {
+                    "id": 31081,
+                    "name": "Antler guard"
+                },
+                {
+                    "id": 31086,
+                    "name": "Broken antler"
+                },
+                {
+                    "id": 31084,
+                    "name": "Alchemist's signet"
+                }
+            ],
+            "logCount": 2
+        },
+        "uuid": "9ebbb378-a2c2-438e-9481-784d7ed7a8cf"
+    },
+    {
+        "_id": 176,
+        "name": "Get 1 unique from Custodian stalkers",
+        "tip": "Three different variants can be found inside the Stalker Den in Varlamare, after completion of the Shadows of Custodia quest.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Custodian_stalker",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Antler_guard_detail.png/320px-Antler_guard_detail.png",
+        "assetImage": "Antler_guard_detail.png",
+        "colLogData" : {
+            "category": "N/A",
+            "logName": "N/A",
+            "include" : [
+                {
+                    "id": 31081,
+                    "name": "Antler guard"
+                },
+                {
+                    "id": 31086,
+                    "name": "Broken antler"
+                },
+                {
+                    "id": 31084,
+                    "name": "Alchemist's signet"
+                }
+            ],
+            "logCount": 3
+        },
+        "uuid": "5e135307-dc58-4873-b89d-b6c68484aa07"
+    },
+    {
+        "_id": 177,
+        "name": "Get the Earthbound tecpatl",
+        "tip": "Dropped from Earthen naguas in the Tonali Cavern, after progression in The Final Dawn quest.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Earthbound_tecpatl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Earthbound_tecpatl_detail.png/225px-Earthbound_tecpatl_detail.png",
+        "assetImage": "Earthbound_tecpatl_detail.png",
+        "colLogData" : {
+            "category": "N/A",
+            "logName": "N/A",
+            "include" : [
+                {
+                    "id": 30957,
+                    "name": "Earthbound tecpatl"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "ab8b387e-c395-4fc0-8b8a-33991887eb63"
     }
 ]

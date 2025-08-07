@@ -11598,5 +11598,69 @@
             "logCount": 1
         },
         "uuid": "f000fd28-3515-4667-a1fc-65ef5c6333aa"
+    },
+    {
+        "_id": 162,
+        "name": "Get 1 unique from Vale Totems",
+        "tip": "This fletching minigame takes place in Auburn Valley. You can chop you own logs",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Vale_Totems",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Vale_offerings_detail.png/320px-Vale_offerings_detail.png",
+        "assetImage": "Vale_offerings_detail.png",
+        "colLogData": {
+            "category": "N/A",
+            "logName": "N/A",
+            "include": [
+                {
+                    "id": 31032,
+                    "name": "Ent Branch"
+                },
+                {
+                    "id": 31043,
+                    "name": "Fletching knife"
+                },
+                {
+                    "id": 31052,
+                    "name": "Bow string spool"
+                },
+                {
+                    "id": 31034,
+                    "name": "Greenman mask"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "583f9e90-f977-40f9-adba-111f8064f289"
+    },
+    {
+        "_id": 163,
+        "name": "Get 1 unique from Vale Totems",
+        "tip": "This fletching minigame takes place in Auburn Valley. You can chop you own logs",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Vale_Totems",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Vale_offerings_detail.png/320px-Vale_offerings_detail.png",
+        "assetImage": "Vale_offerings_detail.png",
+        "colLogData": {
+            "category": "N/A",
+            "logName": "N/A",
+            "include": [
+                {
+                    "id": 31032,
+                    "name": "Ent Branch"
+                },
+                {
+                    "id": 31043,
+                    "name": "Fletching knife"
+                },
+                {
+                    "id": 31052,
+                    "name": "Bow string spool"
+                },
+                {
+                    "id": 31034,
+                    "name": "Greenman mask"
+                }
+            ],
+            "logCount": 2
+        },
+        "uuid": "50bf552f-5f5a-48b1-aeff-28a2e81d240c"
     }
 ]
