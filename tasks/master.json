@@ -1599,5 +1599,14 @@
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Oathplate_chest_detail.png/277px-Oathplate_chest_detail.png?0b1a0",
         "assetImage": "Oathplate_chest_detail.png",
         "uuid": "45632dcd-dc82-4e63-b2ed-bfd0bc1c99be"
+    },
+    {
+        "_id": 175,
+        "name": "Get 1 unique from Doom of Mokhaiotl",
+        "tip": "Giant, insect-like, demonic boss found in the Tonali Cavern after completion of The Final Dawn quest.",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Doom_of_Mokhaiotl",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Eye_of_ayak_detail.png/320px-Eye_of_ayak_detail.png",
+        "assetImage": "Eye_of_ayak_detail.png",
+        "uuid": "5434205b-b02b-4a54-a1ad-84ad865be450"
     }
 ]
