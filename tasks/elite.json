@@ -25112,34 +25112,6 @@
         "uuid": "8fab9de0-fa25-4fab-8f58-18c136c83a44"
     },
     {
-        "_id": 188,
-        "name": "Get 1 unique from Tormented Demons",
-        "tip": "Can be obtained when killing Tormented Demons",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_demon",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Tormented_synapse_detail.png/200px-Tormented_synapse_detail.png",
-        "assetImage": "tormented_synapse.png",
-        "colLogData": {
-            "category": "Other",
-            "logName": "Tormented Demons",
-            "include": [
-                {
-                    "id": 29574,
-                    "name": "Burning claw"
-                },
-                {
-                    "id": 29580,
-                    "name": "Tormented synapse"
-                },
-                {
-                    "id": 29684,
-                    "name": "Guthixian temple teleport"
-                }
-            ],
-            "logCount": 3
-        },
-        "uuid": "1b5ff8e4-3cef-4d3a-8476-2091a0aac5b6"
-    },
-    {
         "_id": 189,
         "name": "Get 1 unique from Araxxytes/Araxxor",
         "tip": "Can be obtained when killing Araxxytes/Araxxor",

@@ -18602,12 +18602,40 @@
         "uuid": "d1380a3b-5963-4ddf-94a0-b040b93c7765"
     },
     {
+        "_id": 999,
+        "name": "Get 1 unique from Tormented Demons",
+        "tip": "Can be obtained when killing Tormented Demons",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_demon",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Tormented_synapse_detail.png/200px-Tormented_synapse_detail.png",
+        "assetImage": "tormented_synapse.png",
+        "colLogData": {
+            "category": "Other",
+            "logName": "Tormented Demons",
+            "include": [
+                {
+                    "id": 29574,
+                    "name": "Burning claw"
+                },
+                {
+                    "id": 29580,
+                    "name": "Tormented synapse"
+                },
+                {
+                    "id": 29684,
+                    "name": "Guthixian temple teleport"
+                }
+            ],
+            "logCount": 3
+        },
+        "uuid": "1b5ff8e4-3cef-4d3a-8476-2091a0aac5b6"
+    },
+    {
         "_id": 198,
-        "name": "Get 1 unique from Araxxytes/Araxxor",
-        "tip": "Can be obtained when killing Araxxytes/Araxxor",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Araxyte_fang_detail.png/200px-Araxyte_fang_detail.png",
-        "assetImage": "araxxor_fang.png",
+        "name": "Get the Aranea Boots",
+        "tip": "Can be obtained when killing Araxytes, with 2.5x drop chance when on task!",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Aranea_boots",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Aranea_boots_detail.png/200px-Aranea_boots_detail.png",
+        "assetImage": "aranea_boots_detail.png",
         "colLogData": {
             "category": null,
             "logName": null,
