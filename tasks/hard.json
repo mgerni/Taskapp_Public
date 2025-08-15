@@ -18642,40 +18642,8 @@
             "multi_category": [],
             "include": [
                 {
-                    "id": 29782,
-                    "name": "Spider cave teleport"
-                },
-                {
-                    "id": 29784,
-                    "name": "Araxyte venom sack"
-                },
-                {
-                    "id": 29790,
-                    "name": "Noxious point"
-                },
-                {
-                    "id": 29792,
-                    "name": "Noxious blade"
-                },
-                {
-                    "id": 29794,
-                    "name": "Noxious pommel"
-                },
-                {
-                    "id": 29799,
-                    "name": "Araxyte fang"
-                },
-                {
-                    "id": 29788,
-                    "name": "Araxyte head"
-                },
-                {
                     "id": 29806,
                     "name": "Aranea boots"
-                },
-                {
-                    "id": 29781,
-                    "name": "Coagulated venom"
                 }
             ],
             "logCount": 1
@@ -18730,10 +18698,6 @@
                 {
                     "id": 29788,
                     "name": "Araxyte head"
-                },
-                {
-                    "id": 29806,
-                    "name": "Aranea boots"
                 },
                 {
                     "id": 29781,
@@ -18792,10 +18756,6 @@
                 {
                     "id": 29788,
                     "name": "Araxyte head"
-                },
-                {
-                    "id": 29806,
-                    "name": "Aranea boots"
                 },
                 {
                     "id": 29781,
