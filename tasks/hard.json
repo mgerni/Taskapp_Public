@@ -18652,8 +18652,66 @@
     },
     {
         "_id": 199,
-        "name": "Get 1 unique from Araxxytes/Araxxor",
-        "tip": "Can be obtained when killing Araxxytes/Araxxor",
+        "name": "Get 1 unique from Araxytes/Araxxor",
+        "tip": "Can be obtained when Araxytes/Araxxor",
+        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
+        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Araxyte_fang_detail.png/200px-Araxyte_fang_detail.png",
+        "assetImage": "araxxor_fang.png",
+        "colLogData": {
+            "category": null,
+            "logName": null,
+            "multi_category": [
+                {
+                    "category": "Other",
+                    "logName": "Slayer"
+                },
+                {
+                    "category": "Bosses",
+                    "logName": "Araxxor"
+                }
+            ],
+            "include": [
+                {
+                    "id": 29782,
+                    "name": "Spider cave teleport"
+                },
+                {
+                    "id": 29784,
+                    "name": "Araxyte venom sack"
+                },
+                {
+                    "id": 29790,
+                    "name": "Noxious point"
+                },
+                {
+                    "id": 29792,
+                    "name": "Noxious blade"
+                },
+                {
+                    "id": 29794,
+                    "name": "Noxious pommel"
+                },
+                {
+                    "id": 29799,
+                    "name": "Araxyte fang"
+                },
+                {
+                    "id": 29788,
+                    "name": "Araxyte head"
+                },
+                {
+                    "id": 29781,
+                    "name": "Coagulated venom"
+                }
+            ],
+            "logCount": 1
+        },
+        "uuid": "f18930cd-ae0d-4a50-8ed2-85eba8818d4c"
+    },
+    {
+        "_id": 200,
+        "name": "Get 1 unique from Araxytes/Araxxor",
+        "tip": "Can be obtained when killing Araxytes/Araxxor",
         "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
         "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Araxyte_fang_detail.png/200px-Araxyte_fang_detail.png",
         "assetImage": "araxxor_fang.png",
@@ -18705,64 +18763,6 @@
                 }
             ],
             "logCount": 2
-        },
-        "uuid": "f18930cd-ae0d-4a50-8ed2-85eba8818d4c"
-    },
-    {
-        "_id": 200,
-        "name": "Get 1 unique from Araxxytes/Araxxor",
-        "tip": "Can be obtained when killing Araxxytes/Araxxor",
-        "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor",
-        "wikiImage": "https://oldschool.runescape.wiki/images/thumb/Araxyte_fang_detail.png/200px-Araxyte_fang_detail.png",
-        "assetImage": "araxxor_fang.png",
-        "colLogData": {
-            "category": null,
-            "logName": null,
-            "multi_category": [
-                {
-                    "category": "Other",
-                    "logName": "Slayer"
-                },
-                {
-                    "category": "Bosses",
-                    "logName": "Araxxor"
-                }
-            ],
-            "include": [
-                {
-                    "id": 29782,
-                    "name": "Spider cave teleport"
-                },
-                {
-                    "id": 29784,
-                    "name": "Araxyte venom sack"
-                },
-                {
-                    "id": 29790,
-                    "name": "Noxious point"
-                },
-                {
-                    "id": 29792,
-                    "name": "Noxious blade"
-                },
-                {
-                    "id": 29794,
-                    "name": "Noxious pommel"
-                },
-                {
-                    "id": 29799,
-                    "name": "Araxyte fang"
-                },
-                {
-                    "id": 29788,
-                    "name": "Araxyte head"
-                },
-                {
-                    "id": 29781,
-                    "name": "Coagulated venom"
-                }
-            ],
-            "logCount": 3
         },
         "uuid": "47401a36-f294-4a8a-8efe-29864a93c7f1"
     },
