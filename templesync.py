@@ -56,14 +56,12 @@ def check_logs(username: str, site_tasks: list["TaskData"], action: str):
     for task in site_tasks:
         verification_data = task.verification
         if not isinstance(verification_data, CollectionLogVerificationData):
-            print("Skipping")
             continue
 
         log_count = 0
-        for itemId in verification_data.item_ids:
+        for item_id in verification_data.item_ids:
             # print(f"Checking item: {item['name']} with ID: {item['id']}")
-            find_item = find_by_id(cleaned_player_data, itemId)
-            if find_item:
+            if find_by_id(cleaned_player_data, item_id):
                 log_count += 1
 
         if log_count >= verification_data.count:
