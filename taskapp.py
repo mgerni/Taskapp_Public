@@ -13,8 +13,7 @@ from task_database import (get_taskCurrent, generate_task, complete_task, get_ta
                            official_status_change, username_change, get_taskCurrent_tier, generate_task_for_tier,
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
-from templesync import check_logs, read_json_file
-import time
+from templesync import check_logs
 
 app = Flask(__name__)
 
@@ -439,10 +438,10 @@ def collection_log_check():
     form_data = request.form
     rs_username = form_data['username']
     lms_enabled = get_lms_status(session['username'])
-    easy_check = check_logs(rs_username, read_json_file('task-list/tiers/easy.json').get('tasks'), 'check', lms_enabled=lms_enabled)
-    medium_check = check_logs(rs_username, read_json_file('task-list/tiers/medium.json').get('tasks'), 'check', lms_enabled=lms_enabled)
-    hard_check = check_logs(rs_username, read_json_file('task-list/tiers/hard.json').get('tasks'), 'check', lms_enabled=lms_enabled)
-    elite_check = check_logs(rs_username, read_json_file('task-list/tiers/elite.json').get('tasks'), 'check', lms_enabled=lms_enabled)
+    easy_check = check_logs(rs_username, tasklists.list_for_tier('easy', lms_enabled), 'check')
+    medium_check = check_logs(rs_username, tasklists.list_for_tier('medium', lms_enabled), 'check')
+    hard_check = check_logs(rs_username, tasklists.list_for_tier('hard', lms_enabled), 'check')
+    elite_check = check_logs(rs_username, tasklists.list_for_tier('elite', lms_enabled), 'check')
 
     return render_template('collection_log_check.html',
                            rs_username = rs_username,
@@ -456,10 +455,10 @@ def collection_log_check():
 def collection_log_import():
     form_data = request.form
     rs_username = form_data['username']
-    easy_import = check_logs(rs_username, read_json_file('task-list/tiers/easy.json').get('tasks'), 'import')
-    medium_import = check_logs(rs_username, read_json_file('task-list/tiers/medium.json').get('tasks'), 'import')
-    hard_import = check_logs(rs_username, read_json_file('task-list/tiers/hard.json').get('tasks'), 'import')
-    elite_import = check_logs(rs_username, read_json_file('task-list/tiers/elite.json').get('tasks'), 'import')
+    easy_import = check_logs(rs_username, tasklists.list_for_tier('easy'), 'import')
+    medium_import = check_logs(rs_username, tasklists.list_for_tier('medium'), 'import')
+    hard_import = check_logs(rs_username, tasklists.list_for_tier('hard'), 'import')
+    elite_import = check_logs(rs_username, tasklists.list_for_tier('elite'), 'import')
     all_tasks = [easy_import, medium_import, hard_import, elite_import]
     update = update_imported_tasks(session['username'], all_tasks, form_data['username'])
 
