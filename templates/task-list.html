@@ -21,21 +21,21 @@
                      <button class="button-incomplete button-orange rsText" onclick="hideIncomplete()">Toggle Incomplete</button>
                 </div>
             </div>
-            
+
             <table id="tableDetails">
                 <tbody>
 
                     <!-- Completed tasks -->
                     {% for task in tasks %}
                     {% if task.is_completed %}
-                    
+
                     <tr>
                             <div class="rect complete-hover space-under" data-tooltip="Mark Incomplete" name="{{task.name}}">
                                 <div class="triangle-top-left">
                                     <div class="decoration-top-left shadow"></div>
                                 </div>
                                 <div class="triangle-top-right">
-                                    <div class="decoration-top-right shadow"></div>   
+                                    <div class="decoration-top-right shadow"></div>
                                 </div>
                                 <div class="triangle-bottom-left">
                                     <div class="decoration-bottom-left shadow"></div>
@@ -43,9 +43,11 @@
                                 <div class="triangle-bottom-right">
                                     <div class="decoration-bottom-right shadow"></div>
                                 </div>
-                                    <div id="{{task.uuid}}" class="content-container rsText revertButton">
+                                    <div id="{{task.id}}" class="content-container rsText revertButton">
                                             <div class="square cut-corners square-complete">
-                                                <a href="{{task.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{task.asset_image}}" alt="" width="50px" height="50px" name="{{task.tip}}"></a>
+                                                <a href="{{task.wiki_link}}" target="_blank">
+                                                    <img class="lazyload task-image" src="{{task.image_link}}" alt="" width="50px" height="50px" name="{{task.tip}}">
+                                                </a>
                                             </div>
                                         <p class="complete">{{task.name}}</p>
                                         <p class="complete">--/--/---- --:--</p>
@@ -61,7 +63,7 @@
                                 <div class="decoration-top-left shadow"></div>
                             </div>
                             <div class="triangle-top-right">
-                                <div class="decoration-top-right shadow"></div>   
+                                <div class="decoration-top-right shadow"></div>
                             </div>
                             <div class="triangle-bottom-left">
                                 <div class="decoration-bottom-left shadow"></div>
@@ -69,9 +71,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                            <div id="{{task.uuid}}" class="content-container rsText">
+                            <div id="{{task.id}}" class="content-container rsText">
                                 <div class="square cut-corners square-current-task">
-                                    <a href="{{task.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{task.asset_image}}" alt="" width="50px" height="50px" name="{{task.tip}}"></a>
+                                    <a href="{{task.wiki_link}}" target="_blank">
+                                        <img class="lazyload task-image" src="{{task.image_link}}" alt="" width="50px" height="50px" name="{{task.tip}}">
+                                    </a>
                                 </div>
                                 <p class="current-task">{{task.name}}</p>
                                 <p class="current-task">--/--/---- --:--</p>
@@ -87,7 +91,7 @@
                                 <div class="decoration-top-left shadow"></div>
                             </div>
                             <div class="triangle-top-right">
-                                <div class="decoration-top-right shadow"></div>   
+                                <div class="decoration-top-right shadow"></div>
                             </div>
                             <div class="triangle-bottom-left">
                                 <div class="decoration-bottom-left shadow"></div>
@@ -95,9 +99,11 @@
                             <div class="triangle-bottom-right">
                                 <div class="decoration-bottom-right shadow"></div>
                             </div>
-                            <div id="{{task.uuid}}" class="content-container rsText updateButton">
+                            <div id="{{task.id}}" class="content-container rsText updateButton">
                                 <div class="square cut-corners square-incomplete ">
-                                    <a href="{{task.wiki_link}}" target="_blank"><img class="lazyload task-image" src="/static/assets/{{task.asset_image}}" alt="" width="50px" height="50px" name="{{task.tip}}"></a>
+                                    <a href="{{task.wiki_link}}" target="_blank">
+                                        <img class="lazyload task-image" src="{{task.image_link}}" alt="" width="50px" height="50px" name="{{task.tip}}">
+                                    </a>
                                 </div>
                                 <p class="incomplete">{{task.name}}</p>
                                 <p class="incomplete">--/--/---- --:--</p>
@@ -147,10 +153,3 @@ function hideIncomplete() {
 </script>
 
 {% endblock %}
-
-
-
-
-
-
-

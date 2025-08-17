@@ -18,9 +18,7 @@ class UserDatabaseObject:
     master: UserTaskList
     passive: UserTaskList
     extra: UserTaskList
-    boss_pets: UserTaskList
-    skill_pets: UserTaskList
-    other_pets: UserTaskList
+    pets: UserTaskList
 
     def get_task_list(self, tier: str) -> UserTaskList:
         return {
@@ -36,19 +34,17 @@ class UserDatabaseObject:
             'master': self.master,
             'passive': self.passive,
             'extra': self.extra,
-            'bossPets': self.boss_pets,
-            'skillPets': self.skill_pets,
-            'otherPets': self.other_pets,
+            'pets': self.pets,
         }[tier]
-    
+
 
     def current_task_for_tier(self, tier: str) -> tuple or None: # type: ignore
         user_task_list = self.get_task_list(tier)
         if user_task_list.current_task is None:
             return None
-        task = task_info_for_id(tasklists.list_for_tier(tier), user_task_list.current_task.uuid)
+        task = task_info_for_id(tasklists.list_for_tier(tier), user_task_list.current_task.id)
         # TODO Fix this format
-        return task.name, task.asset_image, tier, task.uuid, task.tip, task.wiki_link, task.wiki_image
+        return task.name, task.image_link, tier, task.id, task.tip, task.wiki_link, task.image_link
 
     def current_task(self) -> tuple or None: # type: ignore
         if self.easy.current_task is not None:
@@ -68,9 +64,9 @@ class UserDatabaseObject:
         # remove instance of duplicate uuid in completed tasks
         def clean_tasklists(tier: str):
             tasklist = self.get_task_list(tier)
-            tasklist.completed_tasks = list({task.uuid: task for task in tasklist.completed_tasks}.values())
+            tasklist.completed_tasks = list({task.id: task for task in tasklist.completed_tasks}.values())
             if not self.lms_enabled:
-                lms_uuids = {
+                lms_ids = {
                             "df3f714e-eb7e-4b86-8b73-f25d6ebc3020",
                             "bf07a401-9a81-4520-9dd8-1c5af2bc5986",
                             "69b50b44-33f2-485e-a4e0-195e8f8fa044",
@@ -95,17 +91,17 @@ class UserDatabaseObject:
                             "5cbcc790-10d1-4c17-8b39-cad7b48dadf8",
                             "4a387bb0-dfc3-4374-aa35-9bacfc2fc92d"
                             }
-                lms_uuid_set = {UUID(u) for u in lms_uuids}
+                lms_uuid_set = {UUID(u) for u in lms_ids}
                 tasklist.completed_tasks = [
                     task for task in tasklist.completed_tasks
-                    if UUID(task.uuid) not in lms_uuid_set
+                    if UUID(task.id) not in lms_uuid_set
                 ]
             print("-"*100)
             print(tasklist)
             print("-"*100)
             return tasklist
         completed = len(clean_tasklists(tier).completed_tasks)
-        
+
         # completed = len(self.get_task_list(tier).completed_tasks)
         total_tasks = tasklists.list_for_tier(tier, self.lms_enabled)
         total = len(total_tasks)
@@ -119,17 +115,17 @@ class UserDatabaseObject:
             current_task_id = current_task[3] if current_task is not None else None
         else:
             current_task_id = None
-        completed_task_ids = list(map(lambda x: x.uuid, self.get_task_list(tier).completed_tasks))
+        completed_task_ids = list(map(lambda x: x.id, self.get_task_list(tier).completed_tasks))
 
         def page_task(task: TaskData):
-            return PageTask(is_current=task.uuid is current_task_id, is_completed=task.uuid in completed_task_ids,
+            return PageTask(is_current=task.id is current_task_id, is_completed=task.id in completed_task_ids,
                             task_data=task)
 
         return list(map(page_task, tasklists.list_for_tier(tier, self.lms_enabled)))
 
 
 def task_info_for_id(task_list: list[TaskData], task_id: str) -> tasklists.TaskData:
-    filtered = list(filter(lambda x: x.uuid == task_id, task_list))
+    filtered = list(filter(lambda x: x.id == task_id, task_list))
     if len(filtered) == 0:
         raise Exception("No id found in list " + task_id)
     return filtered[0]
@@ -155,14 +151,14 @@ def convert_database_user(user_data: dict) -> UserDatabaseObject:
     def convert_database_tier(tier: str) -> UserTaskList:
         data = tiers[tier]
         if data:
-            completed_tasks = list(map(lambda x: UserCompletedTask(uuid=x['uuid']), data['completedTasks']))
+            completed_tasks = list(map(lambda x: UserCompletedTask(id=x['id']), data['completedTasks']))
             # Filter tasks that have been removed from tasklist
-            all_current_tier_ids = list(map(lambda x: x.uuid, tasklists.list_for_tier(tier)))
-            completed_tasks = list(filter(lambda x: x.uuid in all_current_tier_ids, completed_tasks))
+            all_current_tier_ids = list(map(lambda x: x.id, tasklists.list_for_tier(tier)))
+            completed_tasks = list(filter(lambda x: x.id in all_current_tier_ids, completed_tasks))
             # print(completed_tasks)
         current = data.get('currentTask', None)
         if current:
-            current = UserCurrentTask(uuid=current['uuid'])
+            current = UserCurrentTask(id=current['id'])
         return UserTaskList(current_task=current,
                             completed_tasks=completed_tasks)
 
@@ -178,7 +174,5 @@ def convert_database_user(user_data: dict) -> UserDatabaseObject:
         master=convert_database_tier('master'),
         passive=convert_database_tier('passive'),
         extra=convert_database_tier('extra'),
-        boss_pets=convert_database_tier('bossPets'),
-        skill_pets=convert_database_tier('skillPets'),
-        other_pets=convert_database_tier('otherPets')
+        pets=convert_database_tier('pets')
     )

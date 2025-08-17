@@ -3,6 +3,7 @@ import json
 import tasklists
 import datetime
 import time
+from task_types import TaskTag
 
 
 def temple_player_data(username: str):
@@ -54,7 +55,7 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
         formatted_tasks = []
         for task_id in completed_tasks:
             formatted_tasks.append({
-                'uuid' : task_id
+                'id' : task_id
             })
         return formatted_tasks
 
@@ -64,7 +65,7 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
     for task in site_tasks:
         # print('******************************************************************************')
         task_data = task.get('colLogData', None)
-        if task.get('isLMS') and action == 'check' and not lms_enabled:
+        if TaskTag.LMS in task.get('tags', []) and action == 'check' and not lms_enabled:
             continue
         if task_data:
             log_count = 0
@@ -76,7 +77,7 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
                     # print(f"Found item: {find_item[0]['name']} with ID: {find_item[0]['id']}")
                     # print(f"Log count: {log_count}, Required: {task_data['logCount']}")
                     if log_count == task_data['logCount']:
-                        completed_tasks.add(task['uuid'])
+                        completed_tasks.add(task['id'])
                         # print(f"Completed task: {task['name']} with ID: {task['uuid']}")
 
                         if action == "import" and find_item[0].get('date', None):
@@ -86,7 +87,7 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
             if log_count != task_data['logCount']:
                 missing_tasks.append(task['name'])
                 # print(f"Missing task: {task['name']} with ID: {task['uuid']}")
-                    
+
     if action == 'check':
         # print("Missing tasks:")
         # for task in missing_tasks:
@@ -96,7 +97,7 @@ def check_logs(username: str, site_tasks: list, action: str, lms_enabled=True):
         sorted_completed_tasks = sorted(completed_tasks)
         # print(sorted_completed_tasks)
         return format_completed_tasks(sorted_completed_tasks)
-    
+
 
 if __name__ == "__main__":
     check_logs('Gerni Task', read_json_file('tasks\easy.json'), 'import')
