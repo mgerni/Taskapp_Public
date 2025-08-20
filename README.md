@@ -6,6 +6,9 @@ See live version - https://www.osrstaskapp.com/
 
 ## Initial Setup ###
 
+### Initialie Submodules
+`git submodule update --init`
+
 ### Install latest Python 3 version ###
 `https://www.python.org/downloads/`
 
