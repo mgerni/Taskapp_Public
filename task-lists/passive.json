@@ -1,0 +1,365 @@
+{
+	"name": "passive",
+	"tasks": [
+		{
+			"id": "d9bbb0ff-3552-437b-827f-fd611a56c0b7",
+			"name": "Get all random event outfits",
+			"tip": "Events spawn randomly every 1 to 2 hours.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Random_events",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Mime_mask_detail.png/200px-Mime_mask_detail.png",
+			"displayItemId": 3057
+		},
+		{
+			"id": "a61b7987-5b75-4316-b8f9-92b08042123b",
+			"name": "Get the Stale baguette",
+			"tip": "Can be obtained from the sandwich lady random event.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Stale_baguette",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Stale_baguette_detail.png/200px-Stale_baguette_detail.png",
+			"displayItemId": 20590
+		},
+		{
+			"id": "26f3b25f-9241-4f7a-bb20-f1a6ef7d52d6",
+			"name": "Get a Hespori seed",
+			"tip": "Trees and Belladonna have the best chances for a Hespori seed.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Hespori_seed",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Hespori_seed_detail.png/200px-Hespori_seed_detail.png",
+			"displayItemId": 22875
+		},
+		{
+			"id": "2b04b9de-3453-479f-b4d4-259c7b62a9b8",
+			"name": "Get an Iasor seed",
+			"tip": "Can be obtained by killing Hespori.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Iasor_seed",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Iasor_seed_detail.png/200px-Iasor_seed_detail.png",
+			"displayItemId": 22883
+		},
+		{
+			"id": "0699bc0c-eb2e-4bc5-b025-1342e177b25f",
+			"name": "Get a Kronos seed",
+			"tip": "Can be obtained by killing Hespori.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Kronos_seed",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Kronos_seed_detail.png/200px-Kronos_seed_detail.png",
+			"displayItemId": 22885
+		},
+		{
+			"id": "ae28548d-8cc3-4732-9361-3a3178731dda",
+			"name": "Get an Attas seed",
+			"tip": "Can be obtained by killing Hespori.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Attas_seed",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Attas_seed_detail.png/200px-Attas_seed_detail.png",
+			"displayItemId": 22881
+		},
+		{
+			"id": "0cbccceb-6021-4e75-bece-ed9337dd15ca",
+			"name": "Get the Bottomless compost bucket",
+			"tip": "Can be obtained by killing Hespori.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Bottomless_compost_bucket",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Bottomless_compost_bucket_detail.png/200px-Bottomless_compost_bucket_detail.png",
+			"displayItemId": 22994
+		},
+		{
+			"id": "d4daebe8-75b6-4e47-90da-170666f716a5",
+			"name": "Get the Golden tench",
+			"tip": "Can be obtained by aerial fishing at Lake Molch.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Golden_tench",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Golden_tench_detail.png/200px-Golden_tench_detail.png",
+			"displayItemId": 22840
+		},
+		{
+			"id": "4a2b22e5-09ec-41da-946f-55add14f33af",
+			"name": "Get a Broken dragon hasta",
+			"tip": "Can be obtained by doing Konar slayer and opening Brimstone chests.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Broken_dragon_hasta",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Broken_dragon_hasta_detail.png/200px-Broken_dragon_hasta_detail.png",
+			"displayItemId": 22963
+		},
+		{
+			"id": "e5a1072e-fcf2-4027-8c9e-4fa2f7bbad0b",
+			"name": "Get a Mystic hat (dusk)",
+			"tip": "Can be obtained by doing Konar slayer and opening Brimstone chests.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Mystic_hat_(dusk)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Mystic_hat_(dusk)_detail.png/200px-Mystic_hat_(dusk)_detail.png",
+			"displayItemId": 23047
+		},
+		{
+			"id": "53cb421f-bd1a-436b-902d-c28ff860161e",
+			"name": "Get a Mystic robe top (dusk)",
+			"tip": "Can be obtained by doing Konar slayer and opening Brimstone chests.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_top_(dusk)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Mystic_robe_top_(dusk)_detail.png/200px-Mystic_robe_top_(dusk)_detail.png",
+			"displayItemId": 23050
+		},
+		{
+			"id": "63ee8276-44d1-42d2-bf07-212ac073b262",
+			"name": "Get a Mystic robe bottom (dusk)",
+			"tip": "Can be obtained by doing Konar slayer and opening Brimstone chests.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_bottom_(dusk)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Mystic_robe_bottom_(dusk)_detail.png/200px-Mystic_robe_bottom_(dusk)_detail.png",
+			"displayItemId": 23053
+		},
+		{
+			"id": "be70f64b-4685-4613-b9a2-5e2ed3543e8e",
+			"name": "Get Mystic gloves (dusk)",
+			"tip": "Can be obtained by doing Konar slayer and opening Brimstone chests.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Mystic_gloves_(dusk)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Mystic_gloves_(dusk)_detail.png/200px-Mystic_gloves_(dusk)_detail.png",
+			"displayItemId": 23056
+		},
+		{
+			"id": "e8e7f5cd-a97f-4df8-b4a2-ff35cfc7a5c4",
+			"name": "Get Mystic boots (dusk)",
+			"tip": "Can be obtained by doing Konar slayer and opening Brimstone chests.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Mystic_boots_(dusk)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Mystic_boots_(dusk)_detail.png/200px-Mystic_boots_(dusk)_detail.png",
+			"displayItemId": 23059
+		},
+		{
+			"id": "570f2e82-f361-4555-8ea6-575725400013",
+			"name": "Get a Godsword shard 1",
+			"tip": "Can be obtained by killing any boss or sub-boss in the God Wars Dungeon.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Godsword_shard_1",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Godsword_shard_1_detail.png/200px-Godsword_shard_1_detail.png",
+			"displayItemId": 11818
+		},
+		{
+			"id": "b3d932c4-ca95-472a-9a96-e4c2165e9e34",
+			"name": "Get a Godsword shard 2",
+			"tip": "Can be obtained by killing any boss or sub-boss in the God Wars Dungeon.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Godsword_shard_2",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Godsword_shard_2_detail.png/200px-Godsword_shard_2_detail.png",
+			"displayItemId": 11820
+		},
+		{
+			"id": "c40c079b-ebc2-42f9-9718-0211b814d906",
+			"name": "Get a Godsword shard 3",
+			"tip": "Can be obtained by killing any boss or sub-boss in the God Wars Dungeon.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Godsword_shard_3",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Godsword_shard_3_detail.png/200px-Godsword_shard_3_detail.png",
+			"displayItemId": 11822
+		},
+		{
+			"id": "34b647e7-15dc-4c80-85d9-20b01090fa96",
+			"name": "Get the Gauntlet cape",
+			"tip": "Obtained by defeating Corrupted Hunllef in the Gauntlet once.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Gauntlet_cape",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Gauntlet_cape_detail.png/200px-Gauntlet_cape_detail.png",
+			"displayItemId": 23859
+		},
+		{
+			"id": "0377b2d8-9f37-41fb-b1ff-39e3b035f8dd",
+			"name": "Get a Dark relic",
+			"tip": "Can be obtained by completing the Chambers of Xeric.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Dark_relic",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dark_relic_detail.png/200px-Dark_relic_detail.png",
+			"displayItemId": 21027
+		},
+		{
+			"id": "32c51d2d-9c12-4c22-a520-12f0e068cd31",
+			"name": "Get a Torn prayer scroll",
+			"tip": "Can be obtained by completing the Chambers of Xeric.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Torn_prayer_scroll",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Torn_prayer_scroll_detail.png/200px-Torn_prayer_scroll_detail.png",
+			"displayItemId": 21047
+		},
+		{
+			"id": "66ee8f7a-9ecd-4550-80bf-6858be56b685",
+			"name": "Get the Xeric's guard",
+			"tip": "Can be obtained by completing the Chambers of Xeric in Challenge Mode 100 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Xeric's_guard",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Xeric's_guard_detail.png/200px-Xeric's_guard_detail.png",
+			"displayItemId": 22388
+		},
+		{
+			"id": "bf1746ac-616d-4d36-a0d9-ff80efc8815a",
+			"name": "Get the Xeric's warrior",
+			"tip": "Can be obtained by completing the Chambers of Xeric in Challenge Mode 500 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Xeric's_warrior",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Xeric's_warrior_detail.png/200px-Xeric's_warrior_detail.png",
+			"displayItemId": 22390
+		},
+		{
+			"id": "28828d55-937a-48ce-9e6f-3eebd9787ca2",
+			"name": "Get the Xeric's sentinel",
+			"tip": "Can be obtained by completing the Chambers of Xeric in Challenge Mode 1000 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Xeric's_sentinel",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Xeric's_sentinel_detail.png/200px-Xeric's_sentinel_detail.png",
+			"displayItemId": 22392
+		},
+		{
+			"id": "c62186de-8faf-48e2-b002-e194a3ba1f81",
+			"name": "Get the Xeric's general",
+			"tip": "Can be obtained by completing the Chambers of Xeric in Challenge Mode 1500 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Xeric's_general",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Xeric's_general_detail.png/200px-Xeric's_general_detail.png",
+			"displayItemId": 22394
+		},
+		{
+			"id": "48bd67af-af5b-4c35-9977-8520bd55d6df",
+			"name": "Get the Xeric's champion",
+			"tip": "Can be obtained by completing the Chambers of Xeric in Challenge Mode 2000 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Xeric's_champion",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Xeric's_champion_detail.png/200px-Xeric's_champion_detail.png",
+			"displayItemId": 22396
+		},
+		{
+			"id": "1ae0a2ab-491a-4784-bb3a-a162f3c8c475",
+			"name": "Get the Sinhaza shroud tier 1",
+			"tip": "Can be obtained by completing the Theatre of Blood 100 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Sinhaza_shroud_tier_1",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sinhaza_shroud_tier_1_detail.png/200px-Sinhaza_shroud_tier_1_detail.png",
+			"displayItemId": 22494
+		},
+		{
+			"id": "af8f252b-0921-42d4-b9db-549e19ae12cd",
+			"name": "Get the Sinhaza shroud tier 2",
+			"tip": "Can be obtained by completing the Theatre of Blood 500 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Sinhaza_shroud_tier_2",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sinhaza_shroud_tier_2_detail.png/200px-Sinhaza_shroud_tier_2_detail.png",
+			"displayItemId": 22496
+		},
+		{
+			"id": "3f8ee52b-6d6b-4a05-aa21-054b1cd8d10a",
+			"name": "Get the Sinhaza shroud tier 3",
+			"tip": "Can be obtained by completing the Theatre of Blood 1000 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Sinhaza_shroud_tier_3",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sinhaza_shroud_tier_3_detail.png/200px-Sinhaza_shroud_tier_3_detail.png",
+			"displayItemId": 22498
+		},
+		{
+			"id": "6e5b0b9c-a234-4a0c-acce-4eb6c60d26ee",
+			"name": "Get the Sinhaza shroud tier 4",
+			"tip": "Can be obtained by completing the Theatre of Blood 1500 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Sinhaza_shroud_tier_4",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sinhaza_shroud_tier_4_detail.png/200px-Sinhaza_shroud_tier_4_detail.png",
+			"displayItemId": 22500
+		},
+		{
+			"id": "474b989a-ff3d-4677-9544-4d3211605c2b",
+			"name": "Get the Sinhaza shroud tier 5",
+			"tip": "Can be obtained by completing the Theatre of Blood 2000 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Sinhaza_shroud_tier_5",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sinhaza_shroud_tier_5_detail.png/200px-Sinhaza_shroud_tier_5_detail.png",
+			"displayItemId": 22502
+		},
+		{
+			"id": "e40775f7-de74-46b5-9bd2-1cae32bdbe17",
+			"name": "Get a cut Onyx from Tekton",
+			"tip": "Can be obtained by killing Tekton in the Chambers of Xeric.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Tekton",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Onyx_detail.png/200px-Onyx_detail.png",
+			"displayItemId": 6573
+		},
+		{
+			"id": "fe497eab-34f5-445d-af25-fd552c6c6986",
+			"name": "Get the Icthlarin's shroud (tier 1)",
+			"tip": "Can be obtained by completing the Tombs of Amascut 100 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin's_shroud_(tier_1)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Icthlarin's_shroud_(tier_1)_detail.png/200px-Icthlarin's_shroud_(tier_1)_detail.png",
+			"displayItemId": 27257
+		},
+		{
+			"id": "81045ae6-8810-45b2-af43-aea520c3a863",
+			"name": "Get the Icthlarin's shroud (tier 2)",
+			"tip": "Can be obtained by completing the Tombs of Amascut 500 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin's_shroud_(tier_2)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Icthlarin's_shroud_(tier_2)_detail.png/200px-Icthlarin's_shroud_(tier_2)_detail.png",
+			"displayItemId": 27259
+		},
+		{
+			"id": "6dddaf9a-eedc-4dc9-a15f-d81681e08646",
+			"name": "Get the Icthlarin's shroud (tier 3)",
+			"tip": "Can be obtained by completing the Tombs of Amascut 1000 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin's_shroud_(tier_3)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Icthlarin's_shroud_(tier_3)_detail.png/200px-Icthlarin's_shroud_(tier_3)_detail.png",
+			"displayItemId": 27261
+		},
+		{
+			"id": "20b92e02-da94-41ce-b4b0-eddfa488e8a4",
+			"name": "Get the Icthlarin's shroud (tier 4)",
+			"tip": "Can be obtained by completing the Tombs of Amascut 1500 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin's_shroud_(tier_4)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Icthlarin's_shroud_(tier_4)_detail.png/200px-Icthlarin's_shroud_(tier_4)_detail.png",
+			"displayItemId": 27263
+		},
+		{
+			"id": "ad5347ac-d2d9-4112-9a15-854fa88440e1",
+			"name": "Get the Icthlarin's shroud (tier 5)",
+			"tip": "Can be obtained by completing the Tombs of Amascut 2000 times.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Icthlarin's_shroud_(tier_5)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Icthlarin's_shroud_(tier_5)_detail.png/200px-Icthlarin's_shroud_(tier_5)_detail.png",
+			"displayItemId": 27265
+		},
+		{
+			"id": "14516f41-887a-4d5a-ab2e-8be6a5b7e9b8",
+			"name": "Get the Victor's cape (1)",
+			"tip": "Can be obtained by getting 1 wins in non-casual Last Man Standing matches.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Victor's_cape_(1)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Victor's_cape_(1)_detail.png/200px-Victor's_cape_(1)_detail.png",
+			"displayItemId": 24207
+		},
+		{
+			"id": "56aa7ad2-5050-4ab3-bc99-75c31341aec0",
+			"name": "Get the Victor's cape (10)",
+			"tip": "Can be obtained by getting 10 wins in non-casual Last Man Standing matches.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Victor's_cape_(10)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Victor's_cape_(10)_detail.png/200px-Victor's_cape_(10)_detail.png",
+			"displayItemId": 24209
+		},
+		{
+			"id": "3c6d4dca-48b0-43b9-b195-a57754970db0",
+			"name": "Get the Victor's cape (50)",
+			"tip": "Can be obtained by getting 50 wins in non-casual Last Man Standing matches.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Victor's_cape_(50)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Victor's_cape_(50)_detail.png/200px-Victor's_cape_(50)_detail.png",
+			"displayItemId": 24211
+		},
+		{
+			"id": "5c91e05a-699d-4acc-b672-ee94fda8cb8b",
+			"name": "Get the Victor's cape (100)",
+			"tip": "Can be obtained by getting 100 wins in non-casual Last Man Standing matches.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Victor's_cape_(100)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Victor's_cape_(100)_detail.png/200px-Victor's_cape_(100)_detail.png",
+			"displayItemId": 24213
+		},
+		{
+			"id": "ddb1e4e9-5b72-4d6b-b738-83cfd33ab2e0",
+			"name": "Get the Victor's cape (500)",
+			"tip": "Can be obtained by getting 500 wins in non-casual Last Man Standing matches.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Victor's_cape_(500)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Victor's_cape_(500)_detail.png/200px-Victor's_cape_(500)_detail.png",
+			"displayItemId": 24215
+		},
+		{
+			"id": "cc072fa0-a9d5-488d-9876-91a61f86fc2b",
+			"name": "Get the Victor's cape (1000)",
+			"tip": "Can be obtained by getting 1000 wins in non-casual Last Man Standing matches.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Victor's_cape_(1000)",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Victor's_cape_(1000)_detail.png/200px-Victor's_cape_(1000)_detail.png",
+			"displayItemId": 24217
+		},
+		{
+			"id": "a6b6b0d0-cd18-4012-bb78-3cfc7be0e465",
+			"name": "Get the Charged ice",
+			"tip": "Obtained by defeating the Phantom Muspah in less than 3 minutes.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Charged_ice",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Charged_ice_detail.png/200px-Charged_ice_detail.png",
+			"displayItemId": 27643
+		},
+		{
+			"id": "dd3aa6a9-286d-42b9-9618-0af5db7d2113",
+			"name": "Get a Dark claw",
+			"tip": "Can be obtained by defeating Skotizo.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Dark_claw",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dark_claw_detail.png/200px-Dark_claw_detail.png",
+			"displayItemId": 21275
+		},
+		{
+			"name": "Get coagulated venom",
+			"tip": "Obtained by defeating Araxxor in less than 1 minute and 15 seconds.",
+			"id": "8b33c81b-3b4e-4f0d-94c2-c57a63a43cdb",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Coagulated_venom",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Coagulated_venom_detail.png/200px-Coagulated_venom_detail.png",
+			"displayItemId": 29781
+		}
+	]
+}

@@ -23,7 +23,7 @@ def to_task_class(data: dict) -> TaskData:
                     verification=to_verification_data(data.get('verification')))
 
 def read_tasks(filename: str) -> list[TaskData]:
-    with open('task-list/tiers/' + filename + '.json') as f:
+    with open('task-lists/' + filename + '.json') as f:
         json_list = json.load(f)
         return list(map(to_task_class, json_list.get('tasks')))
 

@@ -1,0 +1,798 @@
+{
+	"name": "pets",
+	"tasks": [
+		{
+			"id": "4bfcfce0-d632-43a5-9716-3394afb894ac",
+			"name": "Baby chinchompa",
+			"tip": "Can be obtained by catching any kind of chinchompa.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Baby_chinchompa",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Baby_Chinchompa_(red).png/200px-Baby_Chinchompa_(red).png",
+			"displayItemId": 13323,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13324 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "018297cb-360a-490c-aae5-f7cf5e2ef3a5",
+			"name": "Beaver",
+			"tip": "Can be obtained by training Woodcutting.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Beaver",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Beaver_(follower).png/200px-Beaver_(follower).png",
+			"displayItemId": 13322,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13322 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "7892a92a-3ab3-413e-821e-cef29098b440",
+			"name": "Giant squirrel",
+			"tip": "Can be obtained after completion of an agility course, as well as from ticket dispensers in Brimhaven Agility Arena.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Giant_squirrel",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Giant_squirrel_(follower).png/200px-Giant_squirrel_(follower).png",
+			"displayItemId": 20659,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 20659 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "8fcacbbe-9c8b-439e-ab80-4eb81c105d2d",
+			"name": "Heron",
+			"tip": "Can be obtained by training Fishing.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Heron",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Heron_(follower).png/200px-Heron_(follower).png",
+			"displayItemId": 13320,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13320 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "eb9c8a6e-10b7-4d2d-9bf5-c10364c1ed44",
+			"name": "Rift guardian",
+			"tip": "Can be obtained by training Runecraft.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Rift_guardian",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Rift_guardian_(follower,_fire).png/200px-Rift_guardian_(follower,_fire).png",
+			"displayItemId": 20665,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 20665 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "025c6f48-8570-41be-9899-fc37cc522001",
+			"name": "Rock golem",
+			"tip": "Can be obtained by training Mining.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Rock_golem",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Rock_golem_(follower).png/200px-Rock_golem_(follower).png",
+			"displayItemId": 13321,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13321 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "649df6a7-3b6c-46a8-9e4a-8dd59b921aed",
+			"name": "Rocky",
+			"tip": "Can be obtained by training Thieving.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Rocky",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Rocky_(follower).png/200px-Rocky_(follower).png",
+			"displayItemId": 20663,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 20663 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "c19d7b26-fdb4-4f42-8603-143eb26edadf",
+			"name": "Tangleroot",
+			"tip": "Can be obtained when checking the health, or when harvesting the final crop of a farming patch.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Tangleroot",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Tangleroot_(follower).png/200px-Tangleroot_(follower).png",
+			"displayItemId": 20661,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 20661 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "de76ab77-751b-465d-a8cc-9e6c50260233",
+			"name": "Quetzin",
+			"tip": "Can be obtained from completing Hunters' Rumours in the Hunter Guild by opening hunters' loot sacks.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Quetzin",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Quetzin_(follower).png/200px-Quetzin_(follower).png",
+			"displayItemId": 28962,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 28962 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "73e30a9b-5200-4f96-b6fb-a75f625b47d1",
+			"name": "Abyssal orphan",
+			"tip": "Can be obtained by defeating the Abyssal Sire.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_orphan",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Abyssal_orphan_(follower).png/200px-Abyssal_orphan_(follower).png",
+			"displayItemId": 13262,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13262 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "3afb6939-aacb-4509-8bf0-417082f87a67",
+			"name": "Baby mole",
+			"tip": "Can be obtained by defeating the Giant Mole.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Baby_mole",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Baby_Mole_(follower).png/200px-Baby_Mole_(follower).png",
+			"displayItemId": 12646,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12646 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "2cf9303e-1477-4261-8ef7-6d0228236cfd",
+			"name": "Bran",
+			"tip": "Can be obtained by defeating the Royal Titans.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Bran",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Bran_(follower).png/200px-Bran_(follower).png",
+			"displayItemId": 30622,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 30622 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "601856e9-e047-40c5-8181-951569fa1863",
+			"name": "Callisto cub",
+			"tip": "Can be obtained by defeating Callisto or Artio.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Callisto_cub",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Callisto_cub_(follower).png/200px-Callisto_cub_(follower).png",
+			"displayItemId": 13178,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13178 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "7ad4c073-35e5-4da1-94e1-5f22b15938f5",
+			"name": "Dom",
+			"tip": "Can be obtained by defeating the Doom of Mokhaiotl.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Dom",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dom_(follower).png/200px-Dom_(follower).png",
+			"displayItemId": 31130,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 31130 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "8e5f0ca4-268e-468a-8940-8b773fed2202",
+			"name": "Hellpuppy",
+			"tip": "Can be obtained by defeating Cerberus.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Hellpuppy",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Hellpuppy_(follower).png/200px-Hellpuppy_(follower).png",
+			"displayItemId": 13247,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13247 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "45d661bf-9fec-4260-af34-7c5325d7ac36",
+			"name": "Huberte",
+			"tip": "Can be obtained by defeating the Hueycoatl.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Huberte",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Huberte_(follower).png/200px-Huberte_(follower).png",
+			"displayItemId": 30152,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 30152 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "4663bc6a-a704-48e8-9369-69c226f53ca9",
+			"name": "Ikkle hydra",
+			"tip": "Can be obtained by defeating the Alchemical Hydra.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Ikkle_hydra",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Ikkle_Hydra_(serpentine).png/200px-Ikkle_Hydra_(serpentine).png",
+			"displayItemId": 22746,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 22746 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "afde6030-8cba-4e6f-8be6-b54dd5883a40",
+			"name": "Jal-nib-rek/Tzrek-zuk",
+			"tip": "Can be obtained by defeating TzKal-Zuk, upon completion of the Inferno.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Jal-nib-rek",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Jal-nib-rek.png/200px-Jal-nib-rek.png",
+			"displayItemId": 21291,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 21291 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "43ed2a3b-b36c-4ff4-a229-9639dcc7a429",
+			"name": "Kalphite princess",
+			"tip": "Can be obtained by defeating the Kalphite Queen.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Kalphite_princess",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Kalphite_Princess.png/200px-Kalphite_Princess.png",
+			"displayItemId": 12647,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12647 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "4f26629c-5429-4a90-a4fa-79434c38770f",
+			"name": "Lil' zik",
+			"tip": "Can be obtained by completing the Theatre of Blood.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Lil'_zik",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Lil'_Zik.png/200px-Lil'_Zik.png",
+			"displayItemId": 22473,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 22473 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "db2932e6-f8b4-48bc-92a2-502705655b17",
+			"name": "Little nightmare",
+			"tip": "Can be obtained by defeating The Nightmare or Phosani's Nightmare.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Little_nightmare",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Little_nightmare_(follower).png/200px-Little_nightmare_(follower).png",
+			"displayItemId": 24491,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 24491 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "771a2df5-06ea-4380-b439-369c455368a2",
+			"name": "Moxi",
+			"tip": "Can be obtained by defeating Amoxliatl.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Moxi",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Moxi_(follower).png/200px-Moxi_(follower).png",
+			"displayItemId": 30154,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 30154 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "1931d9d2-ec87-4359-8872-1ab639a30ba5",
+			"name": "Muphin",
+			"tip": "Can be obtained by defeating the Phantom Muspah.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Muphin",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Muphin_(follower,_ranged).png/200px-Muphin_(follower,_ranged).png",
+			"displayItemId": 27590,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 27590 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "b808dd19-a954-45d4-b762-7073f23ff1d2",
+			"name": "Nexling",
+			"tip": "Can be obtained by defeating Nex.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Nexling",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Nexling_(follower).png/200px-Nexling_(follower).png",
+			"displayItemId": 26348,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 26348 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "4982f7b4-7ebf-4180-bb13-ef46db459cc5",
+			"name": "Nid",
+			"tip": "Can be obtained by defeating Araxxor.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Nid",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Nid_(follower).png/200px-Nid_(follower).png",
+			"displayItemId": 29836,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 29836 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "ba76bd78-d812-44be-9f32-ec103c7a691a",
+			"name": "Noon & Midnight",
+			"tip": "Can be obtained by defeating .",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Noon",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Noon_(follower).png/200px-Noon_(follower).png",
+			"displayItemId": 21748,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 21748 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "b9d43521-5207-4c9c-b1e8-138e73652c59",
+			"name": "Olmlet",
+			"tip": "Can be obtained by completing the Chambers of Xeric.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Olmlet",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Olmlet_(follower).png/200px-Olmlet_(follower).png",
+			"displayItemId": 20851,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 20851 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "2c998e4b-6632-4f04-9357-076e06f35309",
+			"name": "Chaos elemental jr.",
+			"tip": "Can be obtained by defeating the Chaos Elemental or the Chaos Fanatic.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_chaos_elemental",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Chaos_Elemental_Jr..png/200px-Chaos_Elemental_Jr..png",
+			"displayItemId": 11995,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 11995 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "ae72d0c5-2131-4ac5-88ba-2673493be3bd",
+			"name": "Dagannoth prime jr.",
+			"tip": "Can be obtained by defeating Dagannoth Prime.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_dagannoth_prime",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dagannoth_Prime_Jr..png/200px-Dagannoth_Prime_Jr..png",
+			"displayItemId": 12644,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12644 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "b6d9eebb-2cc9-4e0d-8bc2-9aae715488ac",
+			"name": "Dagannoth rex jr.",
+			"tip": "Can be obtained by defeating Dagannoth Rex.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_dagannoth_rex",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dagannoth_Rex_Jr..png/200px-Dagannoth_Rex_Jr..png",
+			"displayItemId": 12645,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12645 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "9cd3429d-1b46-4ef7-9948-78a9813227ca",
+			"name": "Dagannoth supreme jr.",
+			"tip": "Can be obtained by defeating Dagannoth Supreme.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_dagannoth_supreme",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dagannoth_Supreme_Jr..png/200px-Dagannoth_Supreme_Jr..png",
+			"displayItemId": 12643,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12643 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "836487ea-37f7-4850-bb23-7f1d6275de9e",
+			"name": "Dark core & Corporeal critter",
+			"tip": "Can be obtained by defeating the Corporeal Beast.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_dark_core",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dark_core.png/200px-Dark_core.png",
+			"displayItemId": 12816,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12816 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "28c5fef8-e1ab-42ea-90a1-dfcfdd602401",
+			"name": "General graardor jr.",
+			"tip": "Can be obtained by defeating General Graardor.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_general_graardor",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/General_Graardor_Jr..png/200px-General_Graardor_Jr..png",
+			"displayItemId": 12650,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12650 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "7e690297-f53a-4a54-88b8-e5fbb40f0296",
+			"name": "K'ril tsutsaroth jr.",
+			"tip": "Can be obtained by defeating K'ril Tsutsaroth.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_k'ril_tsutsaroth",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/K'ril_Tsutsaroth_Jr..png/200px-K'ril_Tsutsaroth_Jr..png",
+			"displayItemId": 12652,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12652 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "57762bb9-1c7e-4325-846c-6ce541e48aa4",
+			"name": "Pet kraken",
+			"tip": "Can be obtained by defeating the Kraken.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_kraken",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Kraken_(follower).png/200px-Kraken_(follower).png",
+			"displayItemId": 12655,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12655 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "31ef9651-6bb0-468c-92c7-fd272a4cf9b1",
+			"name": "Kree'arra jr.",
+			"tip": "Can be obtained by defeating Kree'arra.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_kree'arra",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Kree'arra_Jr..png/200px-Kree'arra_Jr..png",
+			"displayItemId": 12649,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12649 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "b82d1edf-a609-4757-aa7a-dabadbe441cc",
+			"name": "Pet smoke devil",
+			"tip": "Can be obtained by defeating the Thermonuclear Smoke Devil.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_smoke_devil",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Smoke_Devil_(follower).png/200px-Smoke_Devil_(follower).png",
+			"displayItemId": 12648,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12648 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "871c2274-585c-40b2-ab9d-fc1b78ae18d5",
+			"name": "Snakeling",
+			"tip": "Can be obtained by defeating Zulrah.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_snakeling",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Snakeling.png/200px-Snakeling.png",
+			"displayItemId": 12921,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12921 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "6a001a9b-b3f2-421c-a62a-faafc5e1dae0",
+			"name": "Zilyana jr.",
+			"tip": "Can be obtained by defeating Zilyana.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_zilyana",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Zilyana_Jr..png/200px-Zilyana_Jr..png",
+			"displayItemId": 12651,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12651 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "d7d850c8-53a6-4758-8873-bb3752566d10",
+			"name": "Prince black dragon",
+			"tip": "Can be obtained by defeating the King Black Dragon.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Prince_black_dragon",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Prince_Black_Dragon.png/200px-Prince_Black_Dragon.png",
+			"displayItemId": 12653,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12653 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "0e2558cf-ec25-4974-907a-1b12df022394",
+			"name": "Scorpia's offspring",
+			"tip": "Can be obtained by defeating Scorpia.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Scorpia's_offspring",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Scorpia's_offspring_(follower).png/200px-Scorpia's_offspring_(follower).png",
+			"displayItemId": 13181,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13181 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "94a57c56-aa5d-4220-ba2f-f17aeb10446e",
+			"name": "Scurry",
+			"tip": "Can be obtained by defeating Scurrius.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Scurry",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Scurry_(follower).png/200px-Scurry_(follower).png",
+			"displayItemId": 28801,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 28801 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "ed9d9451-7b8f-4b4e-90bc-804a95a8e55b",
+			"name": "Skotos",
+			"tip": "Can be obtained by defeating Skotizo.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Skotos",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Skotos_(follower).png/200px-Skotos_(follower).png",
+			"displayItemId": 21273,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 21273 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "7c752184-9bc7-4af2-8479-0ceb6437d15d",
+			"name": "Sraracha",
+			"tip": "Can be obtained by defeating Sarachnis.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Sraracha",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sraracha_(follower).png/200px-Sraracha_(follower).png",
+			"displayItemId": 23495,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 23495 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "9ddc93bc-0df1-468f-b836-cf8e8b0a4e56",
+			"name": "Tzrek-jad",
+			"tip": "Can be obtained by defeating TzTok-Jad in the TzHaar Fight Cave.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Tzrek-jad",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/TzRek-Jad.png/200px-TzRek-Jad.png",
+			"displayItemId": 13225,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13225 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "166e46d1-86cf-4ecf-bd5c-23b9a3243dff",
+			"name": "Tumeken's guardian",
+			"tip": "Can be obtained by completing the Tombs of Amascut.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Tumeken's_guardian",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Tumeken's_Guardian_(follower).png/200px-Tumeken's_Guardian_(follower).png",
+			"displayItemId": 27352,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 27352 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "6da482f4-54e5-4001-9853-60e2ca9844e0",
+			"name": "Venenatis spiderling",
+			"tip": "Can be obtained by defeating Venenatis or Spindel.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Venenatis_spiderling",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Venenatis_spiderling_(follower).png/200px-Venenatis_spiderling_(follower).png",
+			"displayItemId": 13177,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13177 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "9f8c0e97-5b85-4777-9077-29adf17473f9",
+			"name": "Vet'ion jr",
+			"tip": "Can be obtained by defeating Vet'ion or Calvar'ion.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Vet'ion_jr.",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Vet'ion_Jr..png/200px-Vet'ion_Jr..png",
+			"displayItemId": 13179,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13179 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "3723a146-1332-4974-8d3e-79bc2b637117",
+			"name": "Vorki",
+			"tip": "Can be obtained by defeating Vorkath.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Vorki",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Vorki_(follower).png/200px-Vorki_(follower).png",
+			"displayItemId": 21992,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 21992 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "9383ce8b-2674-48cb-a84d-f6adad1aa403",
+			"name": "Smol Heredit",
+			"tip": "Can be obtained by defeating Sol Heredit in the Fortis Colosseum.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Smol_heredit",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Smol_Heredit.png/200px-Smol_Heredit.png",
+			"displayItemId": 28960,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 28960 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "bd567454-c7fa-4294-8323-a8f208a3db56",
+			"name": "Yami",
+			"tip": "Can be obtained by defeating Yama.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Yami",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Yami_(follower).png/200px-Yami_(follower).png",
+			"displayItemId": 30888,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 30888 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "74bd4b05-2383-4f90-8050-ce2f78600037",
+			"name": "Bloodhound",
+			"tip": "Can be obtained by opening reward caskets from master treasure trails.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Bloodhound",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Bloodhound_(follower).png/200px-Bloodhound_(follower).png",
+			"displayItemId": 19730,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 19730 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "46d6bd1a-69f7-4acf-87f7-fba80a976cf0",
+			"name": "Chompy chick",
+			"tip": "Can be obtained by hunting Chompy birds.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Chompy_chick",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Chompy_chick_(follower).png/200px-Chompy_chick_(follower).png",
+			"displayItemId": 13071,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 13071 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "5385f96d-62ff-47db-9665-8f3bf823bf68",
+			"name": "Herbi",
+			"tip": "Can be obtained by hunting Herbiboars in Fossil Island.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Herbi",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Herbi_(follower).png/200px-Herbi_(follower).png",
+			"displayItemId": 21509,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 21509 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "a44db8e6-f1f8-44d6-a8f7-1cd0890b8e24",
+			"name": "Penance pet",
+			"tip": "Can be obtained from high level gambles in the Barbarian Assault minigame.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Pet_penance_queen",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Penance_Pet.png/200px-Penance_Pet.png",
+			"displayItemId": 12703,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 12703 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "8747e4e5-6ff7-4e02-8921-5dc88079cd1b",
+			"name": "Phoenix",
+			"tip": "Can be obtained from subduing the Wintertodt.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Phoenix",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Phoenix_(follower).png/200px-Phoenix_(follower).png",
+			"displayItemId": 20693,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 20693 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "7f00f99e-37ea-4b36-bcfe-f8db110191ae",
+			"name": "Youngllef",
+			"tip": "Can be obtained by defeating Hunllef in the Gauntlet.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Youngllef",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Youngllef_(follower).png/200px-Youngllef_(follower).png",
+			"displayItemId": 23757,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 23757 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "a90d8b37-ca59-477f-a3a4-a1e4ac9e33a7",
+			"name": "Smolcano",
+			"tip": "Can be obtained by defeating Zalcano.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Smolcano",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Smolcano_(follower).png/200px-Smolcano_(follower).png",
+			"displayItemId": 23760,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 23760 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "32dd92eb-f64b-46ac-84bc-dca9c75942e2",
+			"name": "Tiny Tempor",
+			"tip": "Can be obtained by subduing Tempoross.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Tiny_tempor",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Tiny_Tempor.png/200px-Tiny_Tempor.png",
+			"displayItemId": 25602,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 25602 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "cea25d15-7d27-403a-b6cf-43cb8278616d",
+			"name": "Lil' creator",
+			"tip": "Can be obtained by opening spoils of war from the Soul Wars minigame.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Lil'_creator",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Lil'_Creator.png/200px-Lil'_Creator.png",
+			"displayItemId": 25348,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 25348 ],
+				"count": 1
+			}
+		},
+		{
+			"id": "c2521cab-8fb8-42f7-93ca-71e53ef992f0",
+			"name": "Abyssal protector",
+			"tip": "Can be obtained by pulling for rewards in the Guardians of the Rift minigame.",
+			"wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_protector",
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Abyssal_protector_(follower).png/200px-Abyssal_protector_(follower).png",
+			"displayItemId": 26901,
+			"verification": {
+				"method": "collection-log",
+				"itemIds": [ 26901 ],
+				"count": 1
+			}
+		}
+	]
+}
