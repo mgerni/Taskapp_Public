@@ -6,7 +6,6 @@ import tasklists
 import config
 import user_dao
 from user_dao import UserDatabaseObject, convert_database_user
-from user_migrate import migrate_database_user_to_new_format
 from task_types import TaskData, LeaderboardEntry, TaskData
 
 mydb = config.MONGO_CLIENT["TaskApp"]
@@ -1298,14 +1297,15 @@ def unofficial_icon(username):
     return rank_icon
 
 def get_leaderboard() -> list[LeaderboardEntry]:
-    def to_user(data):
-        user = convert_database_user(migrate_database_user_to_new_format(data))
-        return LeaderboardEntry(user.username, user.lms_enabled, user.get_tier_progress('easy'),
-                                user.get_tier_progress('medium'), user.get_tier_progress('hard'),
-                                user.get_tier_progress('elite'), user.get_tier_progress('master'))
+    # def to_user(data):
+    #     user = convert_database_user(migrate_database_user_to_new_format(data))
+    #     return LeaderboardEntry(user.username, user.lms_enabled, user.get_tier_progress('easy'),
+    #                             user.get_tier_progress('medium'), user.get_tier_progress('hard'),
+    #                             user.get_tier_progress('elite'), user.get_tier_progress('master'))
 
-    coll = mydb['taskAccounts']
-    return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
+    # coll = mydb['taskAccounts']
+    # return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
+    return []
 
 def test():
     task_coll = mydb["taskLists"]
