@@ -1,4 +1,4 @@
-$(window).on('load', function(){   
+$(window).on('load', function(){
     var frameSpeed = 1000,
         frameContainer = $('#frame-container'),
         frames = $('.frame',frameContainer ),
@@ -11,10 +11,10 @@ $(window).on('load', function(){
         showFrame = function (n){
         		if (n != frameCount){
             	return frames.hide().eq(n).show() && messages.hide().eq(n).show();
-                
+
             }
             return frames.eq(frameCount).show() && messages.eq(messageCount).show();
-            
+
         },
         nextFrame = function(){
         		if (index == frameCount){
@@ -51,7 +51,7 @@ $(document).on('click', '#start', function(){
         imageLink.href = data.link;
         imageLink.setAttribute('data-tip', data.tip);
         message.innerHTML = data.name;
-        image.src = "/static/assets/" + data.image;
+        image.src = data.image;
         document.getElementById("start").disabled = true;
         document.getElementById("complete").disabled = false;
     }, 6000);
@@ -163,7 +163,7 @@ $(document).on('click', '#easy_complete', function(){
     task.innerHTML = "You have no easy task!";
     image.src = "/static/assets/Cake_of_guidance_detail.png";
     imagePreview.src = "/static/assets/Cake_of_guidance_detail.png";
-    
+
 
   });
 });
@@ -246,7 +246,7 @@ $(document).on('click', '#master_complete', function(){
     type : 'POST'
 
   });
-  
+
 });
 
 $(document).ready(function(){
@@ -267,9 +267,9 @@ $(document).ready(function(){
     }
     var elementTarget = this;
     var parent = elementTarget.parentElement;
-    
-    
-    
+
+
+
     $('form').submit(false);
     req = $.ajax({
       url :  '/update_completed/',
@@ -288,7 +288,7 @@ $(document).ready(function(){
       else {
         updatePercent.innerHTML = data[tier] + '%';
       }
-      
+
       for (const child of elementTarget.children) {
         if (child.tagName === 'DIV') {
           $(child).addClass('square-complete');
@@ -317,7 +317,7 @@ $(document).ready(function(){
     }
     var elementTarget = this;
     var parent = elementTarget.parentElement;
-    
+
 
     $('form').submit(false);
     req = $.ajax({
@@ -338,7 +338,7 @@ $(document).ready(function(){
         console.log(tier)
         updatePercent.innerHTML = data[tier] + '%';
       }
-      
+
       for (const child of elementTarget.children) {
         if (child.tagName === 'DIV') {
           $(child).addClass('square-incomplete');
@@ -487,7 +487,7 @@ $(document).on('click', '.missing-easy', function(){
     else {
       tasks[i].style.display = 'none';
     }
-    
+
   }
 });
 
@@ -503,7 +503,7 @@ $(document).on('click', '.missing-medium', function(){
     else {
       tasks[i].style.display = 'none';
     }
-    
+
   }
 });
 
@@ -520,7 +520,7 @@ $(document).on('click', '.missing-hard', function(){
     else {
       tasks[i].style.display = 'none';
     }
-    
+
   }
 });
 
@@ -535,7 +535,6 @@ $(document).on('click', '.missing-elite', function(){
     else {
       tasks[i].style.display = 'none';
     }
-    
+
   }
 });
-

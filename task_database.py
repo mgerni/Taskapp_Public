@@ -6,7 +6,6 @@ import tasklists
 import config
 import user_dao
 from user_dao import UserDatabaseObject, convert_database_user
-from user_migrate import migrate_database_user_to_new_format
 from task_types import TaskData, LeaderboardEntry, TaskData
 
 mydb = config.MONGO_CLIENT["TaskApp"]
@@ -102,9 +101,7 @@ def add_task_account(username, is_official, lms_enabled):
             'master' : {"completedTasks" : []},
             'passive': {"completedTasks" : []},
             'extra': {"completedTasks" : []},
-            'bossPets': {"completedTasks" : []},
-            'skillPets': {"completedTasks" : []},
-            'otherPets': {"completedTasks" : []}
+            'pets': {"completedTasks" : []},
         }
     })
 
@@ -244,7 +241,7 @@ def __set_current_task(username: str, tier: str, task_id: str, current: bool):
     else:
         task_coll.update_one(
             {"username": username},
-            {"$set": {f"tiers.{cleaned_tier}.currentTask": {"uuid": task_id}}},
+            {"$set": {f"tiers.{cleaned_tier}.currentTask": {"id": task_id}}},
         )
 
 
@@ -253,31 +250,31 @@ def __set_task_complete(username: str, tier: str, task_id: int, complete: bool):
     task_coll = mydb['taskLists']
     cleaned_tier = tier.replace("Tasks", "")
     if complete:
-        result = task_coll.update_one(
+        task_coll.update_one(
             {"username": username},
             {
                 "$push": {
-                    f"tiers.{cleaned_tier}.completedTasks": {"uuid": task_id}
+                    f"tiers.{cleaned_tier}.completedTasks": {"id": task_id}
                 }
             }
         )
     if not complete:
-        remove_completed = task_coll.update_one(
+        task_coll.update_one(
             {
                 "username" : username
             },
             {
                 "$pull" : {
-                    f"tiers.{cleaned_tier}.completedTasks" : {"uuid" : task_id}
+                    f"tiers.{cleaned_tier}.completedTasks" : {"id" : task_id}
                 }
             })
-    
+
 
 '''
 generate_task_unofficial_tier:
 
 The generate_task_unofficial_tier function, randomly generates a task for a unofficial user.
-taskCurrent is set to True for the choosen task. 
+taskCurrent is set to True for the choosen task.
 Unofficial accounts are allowed to re-roll tasks. If they already have a task, the taskCurrent is set to False.
 
 
@@ -295,15 +292,15 @@ def generate_task_for_tier(username, tier) -> TaskData or None: # type: ignore
 
     if user.current_task_for_tier(tier) is None:
         all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
-        completed_task_ids = list(map(lambda x: x.uuid, user.get_task_list(tier).completed_tasks))
-        uncompleted_tasks = list(filter(lambda x: x.uuid not in completed_task_ids, all_tasks))
+        completed_task_ids = list(map(lambda x: x.id, user.get_task_list(tier).completed_tasks))
+        uncompleted_tasks = list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
     if len(uncompleted_tasks) != 0:
-        if tier == "masterTasks" and uncompleted_tasks[0].uuid == "6b09384d-c06b-44ac-8a07-b7038cd30710":
+        if tier == "masterTasks" and uncompleted_tasks[0].id == "6b09384d-c06b-44ac-8a07-b7038cd30710":
             generated_task = uncompleted_tasks[0]
-            __set_current_task(username, tier, generated_task.uuid, True)
+            __set_current_task(username, tier, generated_task.id, True)
             return generated_task
         generated_task = random.choice(uncompleted_tasks)
-        __set_current_task(username, tier, generated_task.uuid, True)
+        __set_current_task(username, tier, generated_task.id, True)
         return generated_task
 
     else:
@@ -317,10 +314,10 @@ def generate_task_for_tier(username, tier) -> TaskData or None: # type: ignore
 generate_task:
 
 The generate_task function, randomly generates a task for a official user.
-lists of tasks are gathered for each tier. 
+lists of tasks are gathered for each tier.
 A task is choosen from the first tier that has tasks.
-This allows for new tasks to be added in a lower tier due to game updates. 
-taskCurrent is set to True for the choosen task. 
+This allows for new tasks to be added in a lower tier due to game updates.
+taskCurrent is set to True for the choosen task.
 
 Args:
     str: username - username of the user.
@@ -338,8 +335,8 @@ def generate_task(username: str) -> TaskData or None: # type: ignore
 
     def get_incomplete_tasks(tier: str) -> list[TaskData]:
         all_tasks = tasklists.list_for_tier(tier, user.lms_enabled)
-        completed_task_ids = list(map(lambda x: x.uuid, user.get_task_list(tier).completed_tasks))
-        return list(filter(lambda x: x.uuid not in completed_task_ids, all_tasks))
+        completed_task_ids = list(map(lambda x: x.id, user.get_task_list(tier).completed_tasks))
+        return list(filter(lambda x: x.id not in completed_task_ids, all_tasks))
 
     tasks_easy = get_incomplete_tasks('easy')
     tasks_medium = get_incomplete_tasks('medium')
@@ -349,26 +346,26 @@ def generate_task(username: str) -> TaskData or None: # type: ignore
 
     if len(tasks_easy) != 0:
         generated_task = random.choice(tasks_easy)
-        __set_current_task(username, 'easyTasks', generated_task.uuid, True)
+        __set_current_task(username, 'easyTasks', generated_task.id, True)
         return generated_task
     elif len(tasks_medium) != 0:
         generated_task = random.choice(tasks_medium)
-        __set_current_task(username, 'mediumTasks', generated_task.uuid, True)
+        __set_current_task(username, 'mediumTasks', generated_task.id, True)
         return generated_task
     elif len(tasks_hard) != 0:
         generated_task = random.choice(tasks_hard)
-        __set_current_task(username, 'hardTasks', generated_task.uuid, True)
+        __set_current_task(username, 'hardTasks', generated_task.id, True)
         return generated_task
     elif len(tasks_elite) != 0:
         generated_task = random.choice(tasks_elite)
-        __set_current_task(username, 'eliteTasks', generated_task.uuid, True)
+        __set_current_task(username, 'eliteTasks', generated_task.id, True)
         return generated_task
     elif len(tasks_master) != 0:
-        if tasks_master[0].uuid == "6b09384d-c06b-44ac-8a07-b7038cd30710":
+        if tasks_master[0].id == "6b09384d-c06b-44ac-8a07-b7038cd30710":
             generated_task = tasks_master[0]
         else:
             generated_task = random.choice(tasks_master)
-        __set_current_task(username, 'masterTasks', generated_task.uuid, True)
+        __set_current_task(username, 'masterTasks', generated_task.id, True)
         return generated_task
     return None
 
@@ -449,7 +446,7 @@ def complete_task(username: str) -> dict:
 '''
 get_task_progress:
 
-The get_task_progress function, determines the percentage of progress for each tier. Rounded down. 
+The get_task_progress function, determines the percentage of progress for each tier. Rounded down.
 
 Args:
     str: username - username of the user.
@@ -470,11 +467,9 @@ def get_task_progress(username: str):
     master = user.get_tier_progress('master')
     passive = user.get_tier_progress('passive')
     extra = user.get_tier_progress('extra')
-    boss_pets = user.get_tier_progress('bossPets')
-    skill_pets = user.get_tier_progress('skillPets')
-    other_pets = user.get_tier_progress('otherPets')
-    all_pets_total = boss_pets.total + skill_pets.total + other_pets.total
-    all_pets_total_complete = boss_pets.total_complete + skill_pets.total_complete + other_pets.total_complete
+    pets = user.get_tier_progress('pets')
+    all_pets_total = pets.total
+    all_pets_total_complete = pets.total_complete
     all_pets_percent_complete = floor(all_pets_total_complete / all_pets_total * 100)
 
     progress = {
@@ -488,86 +483,6 @@ def get_task_progress(username: str):
             'all_pets' : {'percent_complete' : all_pets_percent_complete}
                 }
     return progress
-    return easy.percent_complete, medium.percent_complete, hard.percent_complete, elite.percent_complete, master.percent_complete, \
-            passive.percent_complete, extra.percent_complete, all_pets_percent_complete, \
-            easy.total_complete, easy.total, medium.total_complete, medium.total, hard.total_complete, hard.total, \
-            elite.total_complete, elite.total, master.total_complete, master.total
-
-
-'''
-get_task_lists:
-
-The get_task_lists function, generates the list of tasks for each tier.
-
-# Can be optimized by doing a single query to the DB. 
-
-Args:
-    str: username - username of the user.
-
-
-Returns:
-    tuple: easy_list, medium_list, hard_list, elite_list bosspet_list, skillpet_list, otherpet_list, extra_list, passive_list - list of tasks for each tier.
-
-'''
-
-
-def get_task_lists(username):
-    coll = mydb['taskLists']
-    task_list_query = coll.find_one({"username" : username}, {"_id" : 0 , "username" : 1, "tiers": 1})
-    bossPets = []
-    skillPets = []
-    otherPets = []
-    completed_bossPet_ids = task_list_query['tiers']['bossPets']['completedTasks']
-    completed_skillPet_ids = task_list_query['tiers']['skillPets']['completedTasks']
-    completed_otherPet_ids = task_list_query['tiers']['otherPets']['completedTasks']
-
-    
-
-    for boss_pet_task in tasklists.boss_pet:
-        if any(x.get("uuid") == boss_pet_task.uuid for x in completed_bossPet_ids):
-            boss_pet_task.isCompleted = True
-        else:
-            boss_pet_task.isCompleted = False
-        bossPets.append(boss_pet_task)
-
-    for skill_pet_task in tasklists.skill_pet:
-        if any(x.get("uuid") == skill_pet_task.uuid for x in completed_skillPet_ids):
-            skill_pet_task.isCompleted = True
-        else:
-            skill_pet_task.isCompleted = False
-        skillPets.append(skill_pet_task)
-
-    for other_pet_task in tasklists.other_pet:
-        if any(x.get("uuid") == other_pet_task.uuid for x in completed_otherPet_ids):
-            other_pet_task.isCompleted = True
-        else:
-            other_pet_task.isCompleted = False
-        otherPets.append(other_pet_task)
-
-    return bossPets, skillPets, otherPets
-    # task_query_easy = coll.find({'username': username}, {'easyTasks': 1})
-    # task_query_medium = coll.find({'username': username}, {'mediumTasks': 1})
-    # task_query_hard = coll.find({'username': username}, {'hardTasks': 1})
-    # task_query_elite = coll.find({'username': username}, {'eliteTasks': 1})
-    # task_query_master = coll.find({'username': username}, {'masterTasks' : 1})
-    # task_query_bosspet = coll.find({'username': username}, {'bossPetTasks': 1})
-    # task_query_skillpet = coll.find({'username': username}, {'skillPetTasks': 1})
-    # task_query_otherpet = coll.find({'username': username}, {'otherPetTasks': 1})
-    # task_query_extra = coll.find({'username': username}, {'extraTasks': 1})
-    # task_query_passive = coll.find({'username': username}, {'passiveTasks': 1})
-
-    # easy_list = task_query_easy[0]['easyTasks']
-    # medium_list = task_query_medium[0]['mediumTasks']
-    # hard_list = task_query_hard[0]['hardTasks']
-    # elite_list = task_query_elite[0]['eliteTasks']
-    # master_list = task_query_master[0]['masterTasks']
-    # bosspet_list = task_query_bosspet[0]['bossPetTasks']
-    # skillpet_list = task_query_skillpet[0]['skillPetTasks']
-    # otherpet_list = task_query_otherpet[0]['otherPetTasks']
-    # extra_list = task_query_extra[0]['extraTasks']
-    # passive_list = task_query_passive[0]['passiveTasks']
-
-    # return easy_list, medium_list, hard_list, elite_list, master_list, bosspet_list, skillpet_list, otherpet_list, extra_list, passive_list
 
 
 '''
@@ -591,7 +506,7 @@ def manual_complete_tasks(username, tier, task_id):
     if tier in exclude_list:
         tier = tier.replace('Tasks', '')
     task = user_dao.task_info_for_id(tasklists.list_for_tier(tier), task_id)
-    return task.name, task.asset_image, task.tip, task.wiki_link
+    return task.name, task.image_link, task.tip, task.wiki_link
 
 
 '''
@@ -616,7 +531,7 @@ def manual_revert_tasks(username, tier, task_id):
         tier = tier.replace('Tasks', '')
     task = user_dao.task_info_for_id(tasklists.list_for_tier(tier), task_id)
     task.isCompleted = False
-    return task.name, task.asset_image, task.tip, task.wiki_link
+    return task.name, task.image_link, task.tip, task.wiki_link
 
 
 def update_imported_tasks(username: str, all_tasks: list, username2: str):
@@ -629,13 +544,13 @@ def update_imported_tasks(username: str, all_tasks: list, username2: str):
         if current_task is not None:
             tasks_to_check.append(current_task)  # store the whole object
 
-    all_task_ids = {task["uuid"] for group in all_tasks for task in group}
+    all_task_ids = {task["id"] for group in all_tasks for task in group}
 
     for current_task in tasks_to_check:
-        uuid = current_task[3]  # the task uuid
+        task_id = current_task[3]
         tier = current_task[2]  # the tier name
-        if uuid in all_task_ids:
-            __set_current_task(username, tier, uuid, False)  # ✅ dynamically uses tier
+        if task_id in all_task_ids:
+            __set_current_task(username, tier, task_id, False)  # ✅ dynamically uses tier
 
     # Rest of your function remains unchanged
     easy_diaries = {
@@ -724,20 +639,20 @@ def update_imported_tasks(username: str, all_tasks: list, username2: str):
     coll.update_one({'username': username}, {'$set': {'ign': username2}})
 
     for diary in diaries['tiers']['easy']['completedTasks']:
-        if diary['uuid'] in easy_diaries:
-            __set_task_complete(username, 'easyTasks', diary['uuid'], True)
+        if diary['id'] in easy_diaries:
+            __set_task_complete(username, 'easyTasks', diary['id'], True)
 
     for diary in diaries['tiers']['medium']['completedTasks']:
-        if diary['uuid'] in medium_diaries:
-            __set_task_complete(username, 'mediumTasks', diary['uuid'], True)
+        if diary['id'] in medium_diaries:
+            __set_task_complete(username, 'mediumTasks', diary['id'], True)
 
     for diary in diaries['tiers']['hard']['completedTasks']:
-        if diary['uuid'] in hard_diaries:
-            __set_task_complete(username, 'hardTasks', diary['uuid'], True)
+        if diary['id'] in hard_diaries:
+            __set_task_complete(username, 'hardTasks', diary['id'], True)
 
     for diary in diaries['tiers']['elite']['completedTasks']:
-        if diary['uuid'] in elite_diaries:
-            __set_task_complete(username, 'eliteTasks', diary['uuid'], True)
+        if diary['id'] in elite_diaries:
+            __set_task_complete(username, 'eliteTasks', diary['id'], True)
 
 
 '''
@@ -745,19 +660,19 @@ import_spreadsheet:
 
 The import_spreadsheet function, Imports a spreadsheet into the database.
 Reads google sheets and imports it into the database.
-A tier is only imported if the spreadsheet tasks length matches our task length. 
-So that tasks are not updated with the wrong ID's. 
+A tier is only imported if the spreadsheet tasks length matches our task length.
+So that tasks are not updated with the wrong ID's.
 
 Args:
     str: username - username of the user.
     str: url - url of the spreadsheet.
 
 
-# very annoying to maintain since it is a google sheet, order of their rows is important. 
+# very annoying to maintain since it is a google sheet, order of their rows is important.
 
 Returns:
     str: error - error message if there is an error.
-    list: each element is a str: of the tier import status. 
+    list: each element is a str: of the tier import status.
 
 '''
 # def import_spreadsheet(username, url):
@@ -933,7 +848,7 @@ The official_status_change function, sets officialEnabled to true or false for a
 
 Args:
     str: username - The username of the user to change the lms status for.
-    
+
 Returns:
         None
 
@@ -954,7 +869,7 @@ The username_change function, changes the username of a user.
 Args:
     str: username - The username of the user.
     str: username_value - The new username of the user.
-    
+
 Returns:
         str: error - The error message if there is one.
         bool: success - Whether the username change was successful or not.
@@ -1024,11 +939,11 @@ unoffical_log_count:
 
 The unoffical_log_count function, gives a rough collection log count for an unofficial user.
 
-# Since tasks are not 1:1 to collection log slots, many tasks have increases to their log count. 
+# Since tasks are not 1:1 to collection log slots, many tasks have increases to their log count.
 
 Args:
     str: username - The username of the user.
-    
+
 Returns:
        str: total_count - The total log count for the user.
 
@@ -1353,13 +1268,13 @@ def unoffical_log_count(username):
 '''
 unofficial_icon:
 
-The unofficial_icon function, determines the rank_icon to be displayed for unofficial users. 
+The unofficial_icon function, determines the rank_icon to be displayed for unofficial users.
 
 # TODO: add recently added rank_icon
 
 Args:
     str: username - The username of the user.
-    
+
 Returns:
        str: rank_icon - The rank_icon to be displayed.
 
@@ -1382,21 +1297,22 @@ def unofficial_icon(username):
     return rank_icon
 
 def get_leaderboard() -> list[LeaderboardEntry]:
-    def to_user(data):
-        user = convert_database_user(migrate_database_user_to_new_format(data))
-        return LeaderboardEntry(user.username, user.lms_enabled, user.get_tier_progress('easy'),
-                                user.get_tier_progress('medium'), user.get_tier_progress('hard'),
-                                user.get_tier_progress('elite'), user.get_tier_progress('master'))
+    # def to_user(data):
+    #     user = convert_database_user(migrate_database_user_to_new_format(data))
+    #     return LeaderboardEntry(user.username, user.lms_enabled, user.get_tier_progress('easy'),
+    #                             user.get_tier_progress('medium'), user.get_tier_progress('hard'),
+    #                             user.get_tier_progress('elite'), user.get_tier_progress('master'))
 
-    coll = mydb['taskAccounts']
-    return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
+    # coll = mydb['taskAccounts']
+    # return list(sorted(map(to_user, coll.find({'isOfficial': True})), key=lambda x: x.points(), reverse=True))
+    return []
 
 def test():
     task_coll = mydb["taskLists"]
     # results = task_coll.find_one({"username": "Gerni Task"}, {'tiers': 1, 'username': 1})
     results = task_coll.find({}, {'tiers': 1, 'username': 1})
     valid = True
-    
+
     for result in results:
         easy = result['tiers']['easy']
         medium = result['tiers']['medium']
@@ -1496,7 +1412,7 @@ def copy_tier_tasks(source_username: str, target_username: str, tiers: list[str]
     updates = {}
     for tier in tiers:
         tier_data = source_doc.get("tiers", {}).get(tier, {})
-        
+
         # Copy completedTasks if it exists
         if "completedTasks" in tier_data:
             updates[f"tiers.{tier}.completedTasks"] = tier_data["completedTasks"]

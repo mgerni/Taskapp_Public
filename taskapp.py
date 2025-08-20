@@ -8,14 +8,12 @@ from functools import wraps
 import task_login
 import tasklists
 from task_database import (get_taskCurrent, generate_task, complete_task, get_task_progress,
-                           get_task_lists, manual_complete_tasks, manual_revert_tasks,
+                           manual_complete_tasks, manual_revert_tasks,
                            get_lms_status, lms_status_change, update_imported_tasks,
-                           official_status_change, username_change, official_icon, unofficial_icon, get_taskCurrent_tier, generate_task_for_tier,
+                           official_status_change, username_change, get_taskCurrent_tier, generate_task_for_tier,
                            complete_task_unofficial_tier, get_user, get_leaderboard)
 import send_grid_email
-from rank_check import get_collection_log, check_collection_log
-from templesync import check_logs, read_json_file, import_logs
-import time
+from templesync import check_logs
 
 app = Flask(__name__)
 
@@ -44,7 +42,7 @@ db = config.MONGO_CLIENT["TaskAppLoginDB"]
 '''
 before_request function:
 
-The before_request function is run before every request to force HTTPS protocol. 
+The before_request function is run before every request to force HTTPS protocol.
 
 Args:
     None
@@ -78,7 +76,7 @@ The login_requried function is used to ensure that only logged in users can acce
 Args:
     Wrap(*args, **kwargs):
 Returns:
-    redirect request: to login page if the user is not logged in. 
+    redirect request: to login page if the user is not logged in.
 
 
 '''
@@ -118,18 +116,18 @@ class BasePageInfo:
 # Converts dict from users task data to a list of user data represented as another list.
 # Also filters out LMS fields
 # Going forward, convert pages to use the class above instead
-def filter_lms(t_list):
-    items = []
-    for item in t_list:
-        for x in item['taskname'].items():
-            if 'LMS' not in x:
-                tip = item.get('taskTip')
-                newItemAsList = [x[0], x[1], item['status'], item['_id'],item['taskCurrent'],]
-                if tip is not None:
-                    newItemAsList.append(tip)
-                newItemAsList.append(item['wikiLink'])
-                items.append(newItemAsList)
-    return items
+# def filter_lms(t_list):
+#     items = []
+#     for item in t_list:
+#         for x in item['taskname'].items():
+#             if 'LMS' not in x:
+#                 tip = item.get('taskTip')
+#                 newItemAsList = [x[0], x[1], item['status'], item['_id'],item['taskCurrent'],]
+#                 if tip is not None:
+#                     newItemAsList.append(tip)
+#                 newItemAsList.append(item['wikiLink'])
+#                 items.append(newItemAsList)
+#     return items
 
 
 def token_required(f):
@@ -223,7 +221,7 @@ def api_complete_task(user):
 All @app.route functions:
 
 The @app.route functions are used to route the user to the correct page.
-@app.route functions render an HTML template and pass in variables to the template. 
+@app.route functions render an HTML template and pass in variables to the template.
 Many @app.route functions call functions from task_login.py and/or task_database.py
 Functions will be explained in more detail in the functions themselves.
 '''
@@ -245,12 +243,12 @@ def register():
                     error = 'Passwords did not match. Please try again.'
                     flash(error)
                     return render_template('registerV2.html')
-                
+
                 if request.form.get('official') == 'on':
                     official = True
                 else:
                     official = False
-                
+
                 if request.form.get('lms_status') == None:
                     lms = False
                 else:
@@ -264,25 +262,25 @@ def register():
                     error = create_user[1]
                     flash(error)
                     return render_template('registerV2.html')
-                
+
                 send_verification_email_inital(request.form['email'], request.form["username"])
                 flash(f'Account {request.form['username']} Created Successfully!')
                 flash(f'Verfication email was sent to {request.form['email']}, please check your email. (be sure to check your spam folder)')
                 return redirect('/login/')
-            
+
             error = 'Please fill out the captcha!'
             flash(error)
             return render_template('registerV2.html')
-        
+
         else:
             return render_template('registerV2.html')
-        
+
     except Exception as e:
         error = 'An error occurred while processing your request, please try again.'
         print(e)
         return error
-    
-    
+
+
 
 # AJAX route for user registration.
 @app.route('/register/user/', methods=['POST'])
@@ -302,11 +300,11 @@ def register_user():
             if not create_user[0]:
                 error = create_user[1]
                 return {'success' : False, 'error' : error}
-            
+
             send_verification_email_inital(request.form['email'], request.form["username"])
             flash('Verification email was sent to %s, please check your email (be sure to check your spam folder).' % request.form['email'])
             return {'success' : True, 'error' : None}
-        
+
         error = 'Please fill out the captcha!'
         return {'success' : False, 'error' : error}
     except Exception as e:
@@ -347,7 +345,7 @@ def login():
                 return render_template('loginV2.html')
         else:
             return render_template('loginV2.html')
-        
+
     except Exception as e:
         error = "An error occurred while processing your request, please try again."
         print(e)
@@ -389,7 +387,7 @@ def dashboard():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
@@ -440,10 +438,10 @@ def collection_log_check():
     form_data = request.form
     rs_username = form_data['username']
     lms_enabled = get_lms_status(session['username'])
-    easy_check = check_logs(rs_username, read_json_file('tasks/easy.json'), 'check', lms_enabled=lms_enabled)
-    medium_check = check_logs(rs_username, read_json_file('tasks/medium.json'), 'check', lms_enabled=lms_enabled)
-    hard_check = check_logs(rs_username, read_json_file('tasks/hard.json'), 'check', lms_enabled=lms_enabled)
-    elite_check = check_logs(rs_username, read_json_file('tasks/elite.json'),'check', lms_enabled=lms_enabled)
+    easy_check = check_logs(rs_username, tasklists.list_for_tier('easy', lms_enabled), 'check')
+    medium_check = check_logs(rs_username, tasklists.list_for_tier('medium', lms_enabled), 'check')
+    hard_check = check_logs(rs_username, tasklists.list_for_tier('hard', lms_enabled), 'check')
+    elite_check = check_logs(rs_username, tasklists.list_for_tier('elite', lms_enabled), 'check')
 
     return render_template('collection_log_check.html',
                            rs_username = rs_username,
@@ -457,10 +455,10 @@ def collection_log_check():
 def collection_log_import():
     form_data = request.form
     rs_username = form_data['username']
-    easy_import = check_logs(rs_username, read_json_file('tasks/easy.json'), 'import')
-    medium_import = check_logs(rs_username, read_json_file('tasks/medium.json'), 'import')
-    hard_import = check_logs(rs_username, read_json_file('tasks/hard.json'), 'import')
-    elite_import = check_logs(rs_username, read_json_file('tasks/elite.json'), 'import')
+    easy_import = check_logs(rs_username, tasklists.list_for_tier('easy'), 'import')
+    medium_import = check_logs(rs_username, tasklists.list_for_tier('medium'), 'import')
+    hard_import = check_logs(rs_username, tasklists.list_for_tier('hard'), 'import')
+    elite_import = check_logs(rs_username, tasklists.list_for_tier('elite'), 'import')
     all_tasks = [easy_import, medium_import, hard_import, elite_import]
     update = update_imported_tasks(session['username'], all_tasks, form_data['username'])
 
@@ -477,7 +475,7 @@ def collection_log_import():
 def generate_button():
     username = session['username']
     task = generate_task(username)
-    data = {"name" : task.name, "image" : task.asset_image, "tip" : task.tip, "link" : task.wiki_link}
+    data = {"name" : task.name, "image" : task.image_link, "tip" : task.tip, "link" : task.wiki_link}
     return data
 
 @app.route('/complete/', methods =['POST'])
@@ -498,10 +496,10 @@ def generate_unofficial():
     tier = request.form["tier"]
     task = generate_task_for_tier(username, tier)
     if task:
-        data = {"name" : task.name, "image" : task.asset_image, "tip" : task.tip, "link" : task.wiki_link}
+        data = {"name" : task.name, "image" : task.image_link, "tip" : task.tip, "link" : task.wiki_link}
         return data
     tier = tier.replace('Tasks', '')
-    data = {"name" : f"You have no {tier} task!", 
+    data = {"name" : f"You have no {tier} task!",
             "image" : "Cake_of_guidance_detail.png",
             "tip" : "Generate a Task!",
             "link" : "#"
@@ -523,7 +521,7 @@ def complete_unofficial():
             'hard': progress['hard']['percent_complete'],
             'elite': progress['elite']['percent_complete'],
             'master' : progress['master']['percent_complete'],
-            'passive' : progress['passive']['percent_complete'], 
+            'passive' : progress['passive']['percent_complete'],
             'extra' : progress['extra']['percent_complete'],
             'allPets' : progress['all_pets']['percent_complete'],
             }
@@ -537,54 +535,53 @@ def complete_unofficial():
             'hard': progress['hard']['percent_complete'],
             'elite': progress['elite']['percent_complete'],
             'master' : progress['master']['percent_complete'],
-            'passive' : progress['passive']['percent_complete'], 
+            'passive' : progress['passive']['percent_complete'],
             'extra' : progress['extra']['percent_complete'],
             'allPets' : progress['all_pets']['percent_complete'],
             }
 
         return data
     return data
-    
 
-# route for task-list page, this page lists all tasks easy, medium, hard, elite, extra, passive and pets.
-@app.route('/task-list/', methods=['GET'])
-@login_required
-def task_list():
-    user_info = BasePageInfo()
-    # if not user_info.email_bool:
-    #     return render_template('email-verify.html')
-    task = get_task_lists(user_info.username)
+# # route for task-list page, this page lists all tasks easy, medium, hard, elite, extra, passive and pets.
+# @app.route('/task-list/', methods=['GET'])
+# @login_required
+# def task_list():
+#     user_info = BasePageInfo()
+#     # if not user_info.email_bool:
+#     #     return render_template('email-verify.html')
+#     task = get_task_lists(user_info.username)
 
-    # TODO Refactor template to use the user page_tasks class
-    items_easy = filter_lms(task[0])
-    items_medium = filter_lms(task[1])
-    items_hard = filter_lms(task[2])
-    items_elite = filter_lms(task[3])
-    items_master = filter_lms(task[4])
-    items_bosspet = filter_lms(task[5])
-    items_skillpet = filter_lms(task[6])
-    items_otherpet = filter_lms(task[7])
-    items_extra = filter_lms(task[8])
-    items_passive = filter_lms(task[9])
+#     # TODO Refactor template to use the user page_tasks class
+#     items_easy = filter_lms(task[0])
+#     items_medium = filter_lms(task[1])
+#     items_hard = filter_lms(task[2])
+#     items_elite = filter_lms(task[3])
+#     items_master = filter_lms(task[4])
+#     items_bosspet = filter_lms(task[5])
+#     items_skillpet = filter_lms(task[6])
+#     items_otherpet = filter_lms(task[7])
+#     items_extra = filter_lms(task[8])
+#     items_passive = filter_lms(task[9])
 
-    return render_template(
-        'task_list.html',
-        username=user_info.username,
-        email_verify=user_info.email_bool,
-        email_val=user_info.email_val,
-        items_easy=items_easy,
-        items_medium=items_medium,
-        items_hard=items_hard,
-        items_elite=items_elite,
-        items_master=items_master,
-        items_bosspet=items_bosspet,
-        items_skillpet=items_skillpet,
-        items_otherpet=items_otherpet,
-        items_extra=items_extra,
-        items_passive=items_passive,
-        taskapp_email=taskapp_email,
-        official=user_info.official
-        )
+#     return render_template(
+#         'task_list.html',
+#         username=user_info.username,
+#         email_verify=user_info.email_bool,
+#         email_val=user_info.email_val,
+#         items_easy=items_easy,
+#         items_medium=items_medium,
+#         items_hard=items_hard,
+#         items_elite=items_elite,
+#         items_master=items_master,
+#         items_bosspet=items_bosspet,
+#         items_skillpet=items_skillpet,
+#         items_otherpet=items_otherpet,
+#         items_extra=items_extra,
+#         items_passive=items_passive,
+#         taskapp_email=taskapp_email,
+#         official=user_info.official
+#         )
 
 def single_task_list(list_title, task_type):
     user_info = BasePageInfo()
@@ -596,11 +593,11 @@ def single_task_list(list_title, task_type):
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
-    
+
 
     return render_template(
         'task-list.html',
@@ -649,40 +646,7 @@ def task_list_master():
 @app.route('/task-list-pets/', methods=['GET'])
 @login_required
 def task_list_pets():
-    user_info = BasePageInfo()
-
-    # if not user_info.email_bool:
-    #     return render_template('email-verify.html')
-    task = get_task_lists(user_info.username)
-    progress = get_task_progress(user_info.username)
-    items_bosspet = task[0]
-    items_skillpet = task[1]
-    items_otherpet = task[2]
-
-
-    context = {
-        'easy': progress['easy']['percent_complete'],
-        'medium': progress['medium']['percent_complete'],
-        'hard': progress['hard']['percent_complete'],
-        'elite': progress['elite']['percent_complete'],
-        'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
-        'extra' : progress['extra']['percent_complete'],
-        'allPets' : progress['all_pets']['percent_complete'],
-    }
-
-    return render_template(
-        'task-list-pets.html',
-        username=user_info.username,
-        email_verify=user_info.email_bool,
-        email_val=user_info.email_val,
-        items_bosspet=items_bosspet,
-        items_skillpet=items_skillpet,
-        items_otherpet=items_otherpet,
-        taskapp_email=taskapp_email,
-        official=user_info.official,
-        **context
-        )
+    return single_task_list(list_title='Pets Task List', task_type='pets')
 
 # route for extra task list, only shows extra tasks.
 @app.route('/task-list-extra/', methods=['GET'])
@@ -742,7 +706,7 @@ def update():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
@@ -765,7 +729,7 @@ def revert():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
@@ -787,7 +751,7 @@ def faq():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
@@ -815,7 +779,7 @@ def wall_of_pain():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
@@ -839,7 +803,7 @@ def sync_collection_logs():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
@@ -865,7 +829,7 @@ def rank_check():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
     }
@@ -891,7 +855,7 @@ def send_reset_email(email, username):
 
     Thank you for using Task App
 
-    If you did not make this request simply ignore this email. 
+    If you did not make this request simply ignore this email.
     '''
     )
 
@@ -958,7 +922,7 @@ def reset_request():
     try:
         if session.get('username'):
             return redirect(url_for('dashboard'))
-        return render_template('password-request.html')    
+        return render_template('password-request.html')
     except Exception as e:
         print(str(e))
 
@@ -971,7 +935,7 @@ def reset_password_request():
             error = 'Email Address not found'
             flash(error)
             return render_template('password-request.html')
-        
+
         send_reset_email(request.form['email'], email_query['username'])
         flash(f'Email was sent to {request.form['email']}. Be sure to check your spam folder.')
         return render_template('password-request.html')
@@ -991,7 +955,7 @@ def reset_token(token):
             return redirect(url_for('reset_request'))
 
         return render_template('password-reset.html')
-    
+
     if request.method == 'POST':
         user = task_login.verify_reset_token(token)
         form_data = request.form
@@ -999,7 +963,7 @@ def reset_token(token):
         repeat_password = form_data['confirmPassword']
         if password != repeat_password:
             flash("Passwords did not match. Please Try again.")
-            return render_template('passwork-reset.html')
+            return render_template('password-reset.html')
         else:
             change_pass = task_login.change_password(user, password)
             if change_pass[0] == True:
@@ -1024,7 +988,7 @@ def profile():
         'hard': progress['hard']['percent_complete'],
         'elite': progress['elite']['percent_complete'],
         'master' : progress['master']['percent_complete'],
-        'passive' : progress['passive']['percent_complete'], 
+        'passive' : progress['passive']['percent_complete'],
         'extra' : progress['extra']['percent_complete'],
         'allPets' : progress['all_pets']['percent_complete'],
         }
@@ -1062,7 +1026,7 @@ def change_username():
     if change_username_result == True and change_username_result_task_account == True:
         session['username'] = new_username
         return {'success' : True}
-    
+
     return {'success': False, 'error': change_username_result}
 
 @app.route("/profile/change-password/", methods=['POST'])
@@ -1078,7 +1042,7 @@ def change_password():
         return {'success' : True}
     if not change_password[0]:
         return {'success' : False, 'error' : change_password[1]}
-    
+
     return {'success' : False, 'error' : 'An error occurred!'}
 
 

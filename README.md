@@ -6,14 +6,20 @@ See live version - https://www.osrstaskapp.com/
 
 ## Initial Setup ###
 
+### Initialie Submodules
+`git submodule update --init`
+
 ### Install latest Python 3 version ###
 `https://www.python.org/downloads/`
 
 ### Create a virtualenv ###
 `python3 -m venv /path/`
 
-### Activate virtualenv ###
+### Activate virtualenv (Linux) ###
 `source /path/bin/activate`
+
+### Activate virtualenv (Windows) ###
+`/path/Scripts/Activate.ps1`
 
 ### Create a sendgrind API account for free ###
 https://sendgrid.com/en-us
@@ -27,9 +33,6 @@ export SENDGRID_API_KEY=192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d5472
 export SECRET_KEY=192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf
 ```
 
-### Clone dev branch ###
-The dev branch has changes suitable for development, which includes using a local database. 
-
 ### Install dependencies ###
 `pip install -r requirements.txt`
 
@@ -41,7 +44,7 @@ Alternatively, if you use Docker, you can run a Mongo DB instance using `docker 
 In mongoDB Compass or CLI, connect to `mongodb://localhost:27017/`
 
 
-### Release version will use a MongoDB Atlas Cluster. 
+### Release version will use a MongoDB Atlas Cluster.
 
 
 ### Test it ###
@@ -51,4 +54,3 @@ Run `python taskapp.py`
 or `source dev.sh && python taskapp.py`
 
 Open `http://127.0.0.1:5000/` on a browser to open the app
-
