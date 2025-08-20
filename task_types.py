@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 
 @dataclass
 class VerificationData:
@@ -23,7 +23,7 @@ class TaskData:
     tags: list["TaskTag"]
     verification: VerificationData
 
-class TaskTag(Enum):
+class TaskTag(StrEnum):
     LMS = "lms"
 
 
