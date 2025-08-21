@@ -207,7 +207,7 @@ def api_task_progress(user):
 def api_generate_task(user):
     current_task = get_taskCurrent(user.username)
     if current_task:
-        return jsonify({'message': 'User already has a task'})
+        return jsonify({'message': 'User already has a task'}), 400
 
     generate_task(user.username)
     current_task = get_taskCurrent(user.username)
@@ -220,7 +220,7 @@ def api_generate_task(user):
             }
         })
 
-    return jsonify({'message': 'No available tasks to generate!'})
+    return jsonify({'message': 'No available tasks to generate!'}), 400
 
 @app.route('/api/v1/resource/complete_task')
 @token_required
@@ -1082,4 +1082,4 @@ if __name__ == "__main__":
     if (isProd):
         app.run(host='0.0.0.0')
     else:
-        app.run(host="0.0.0.0", port=5000)
+        app.run(host="0.0.0.0", port=5001)
