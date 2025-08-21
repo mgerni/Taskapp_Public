@@ -171,7 +171,14 @@ def api_login():
 def api_current_task(user):
     current_task = get_taskCurrent(user.username)
     if current_task:
-        return jsonify({'message': {'taskName': current_task[0], 'taskImage': current_task[6]}})
+        return jsonify({
+            'message': {
+                'taskId': current_task[3],
+                'taskName': current_task[0],
+                'taskImage': current_task[6]
+            }
+        })
+
     return jsonify({'message': None})
 
 @app.route('/api/v1/resource/task_progress')
@@ -205,7 +212,14 @@ def api_generate_task(user):
     generate_task(user.username)
     current_task = get_taskCurrent(user.username)
     if current_task:
-        return jsonify({'message': {'taskName': current_task[0], 'taskImage' : current_task[6]}})
+        return jsonify({
+            'message': {
+                'taskId': current_task[3],
+                'taskName': current_task[0],
+                'taskImage': current_task[6]
+            }
+        })
+
     return jsonify({'message': 'No available tasks to generate!'})
 
 @app.route('/api/v1/resource/complete_task')
