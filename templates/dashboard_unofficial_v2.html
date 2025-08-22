@@ -9,7 +9,7 @@
                     <div class="decoration-top-left shadow"></div>
                 </div>
                 <div class="triangle-top-right">
-                    <div class="decoration-top-right shadow"></div>   
+                    <div class="decoration-top-right shadow"></div>
                 </div>
                 <div class="triangle-bottom-left">
                     <div class="decoration-bottom-left shadow"></div>
@@ -34,45 +34,45 @@
                         {% if image_easy == None %}
                         <img id="easy_image_preview" src="/static/assets/Cake_of_guidance_detail.png" alt="" width="25px" height="25px">
                         {% else %}
-                            <img class="image-preview" id="easy_image_preview" src="/static/assets/{{image_easy}}" alt="" name="{{task_easy}}" width="25px" height="25px">
+                            <img class="image-preview" id="easy_image_preview" src="{{image_easy}}" alt="" name="{{task_easy}}" width="25px" height="25px">
                         {% endif %}
                     </div>
                     <div class="square cut-corners bg-override">
                         {% if image_medium == None %}
                         <img id="medium_image_preview" src="/static/assets/Cake_of_guidance_detail.png" alt="" width="25px" height="25px">
                         {% else %}
-                        <img id="medium_image_preview" src="/static/assets/{{image_medium}}" name="{{task_medium}}" alt="" width="25px" height="25px">
+                        <img id="medium_image_preview" src="{{image_medium}}" name="{{task_medium}}" alt="" width="25px" height="25px">
                         {% endif %}
                     </div>
                     <div class="square cut-corners bg-override">
                         {% if image_hard == None %}
                         <img  id="hard_image_preview" src="/static/assets/Cake_of_guidance_detail.png" alt="" width="25px" height="25px">
                         {% else %}
-                        <img  id="hard_image_preview" src="/static/assets/{{image_hard}}" name="{{task_hard}}" alt="" width="25px" height="25px">
+                        <img  id="hard_image_preview" src="{{image_hard}}" name="{{task_hard}}" alt="" width="25px" height="25px">
                         {% endif %}
                     </div>
                     <div class="square cut-corners bg-override">
                         {% if image_elite == None %}
                         <img id="elite_image_preview" src="/static/assets/Cake_of_guidance_detail.png" alt="" width="25px" height="25px">
                         {% else %}
-                        <img id="elite_image_preview" src="/static/assets/{{image_elite}}" name="{{task_elite}}" alt="" width="25px" height="25px">
+                        <img id="elite_image_preview" src="{{image_elite}}" name="{{task_elite}}" alt="" width="25px" height="25px">
                         {% endif %}
                     </div>
                     <div class="square cut-corners bg-override">
                         {% if image_master == None %}
                         <img id="master_image_preview" src="/static/assets/Cake_of_guidance_detail.png" alt="" width="25px" height="25px">
                         {% else %}
-                        <img id="master_image_preview" src="/static/assets/{{image_master}}" name="{{task_master}}" alt="" width="25px" height="25px">
+                        <img id="master_image_preview" src="{{image_master}}" name="{{task_master}}" alt="" width="25px" height="25px">
                         {% endif %}
                     </div>
-                    
+
                 </div>
 
                 <p id="b" class="rsText active-task-tooltip">placeholder text</p>
 
                 <br>
-                <br>                                                                
-    
+                <br>
+
                 <div id="Easy" class="tier">
                     <hr>
                     <div class="task-content rsText">
@@ -80,8 +80,8 @@
                             {% if image_easy == None %}
                             <a id="easy_placeholder" href="#" class="imageTask" data-tip="Generate a Task!"><img id="easy_image" class="frame item-image imageTask" data-tip="Generate a Task!" src="/static/assets/Cake_of_guidance_detail.png"/></a>
                             {% else %}
-                            <a id="easy_imageTask" class="imageTask" href="{{link_easy}}" target="_blank" data-tip="{{tip_easy}}"><img id="easy_image"class="frame item-image" src="/static/assets/{{image_easy}}"/></a>
-                            
+                            <a id="easy_imageTask" class="imageTask" href="{{link_easy}}" target="_blank" data-tip="{{tip_easy}}"><img id="easy_image"class="frame item-image" src="{{image_easy}}"/></a>
+
                             {% endif %}
                         </div>
                         <div id="message-container">
@@ -98,9 +98,9 @@
                         <button id="complete_unofficial" class="button-style" name="easy"><img class="responsive-image" src="/static/complete_task_button.png" name="easy" alt=""></button>
                     </div>
                 </div>
-            
-    
-    
+
+
+
                 <div id="Medium" class="tier" style="display: none;">
                     <hr>
                     <div class="task-content rsText">
@@ -108,7 +108,7 @@
                             {% if image_medium == None %}
                             <a id="medium_placeholder" href="#" class="imageTask" data-tip="Generate a Task!"><img id="medium_image" class="frame item-image imageTask" data-tip="Generate a Task!" src="/static/assets/Cake_of_guidance_detail.png"/></a>
                             {% else %}
-                            <a id="medium_imageTask" href="{{link_medium}}" target="_blank" data-tip="{{tip_medium}}"><img id="medium_image"class="frame item-image imageTask" src="/static/assets/{{image_medium}}"/></a>
+                            <a id="medium_imageTask" href="{{link_medium}}" target="_blank" data-tip="{{tip_medium}}"><img id="medium_image"class="frame item-image imageTask" src="{{image_medium}}"/></a>
                             {% endif %}
                         </div>
                         <div id="message-container">
@@ -125,7 +125,7 @@
                         <button id="complete_unofficial" class="button-style" name="medium"><img class="responsive-image" src="/static/complete_task_button.png" alt=""></button>
                     </div>
                 </div>
-    
+
                 <div id="Hard" class="tier" style="display: none;">
                     <hr>
                     <div class="task-content rsText">
@@ -133,8 +133,8 @@
                             {% if image_hard == None %}
                             <a id="hard_placeholder" href="#" class="imageTask" data-tip="Generate a Task!"><img id="hard_image" class="frame item-image imageTask" data-tip="Generate a Task!" src="/static/assets/Cake_of_guidance_detail.png"/></a>
                             {% else %}
-                            <a id="hard_imageTask" class="imageTask" href="{{link_hard}}" target="_blank" data-tip="{{tip_hard}}"><img id="hard_image"class="frame item-image imageTask" src="/static/assets/{{image_hard}}"/></a>
-                            
+                            <a id="hard_imageTask" class="imageTask" href="{{link_hard}}" target="_blank" data-tip="{{tip_hard}}"><img id="hard_image"class="frame item-image imageTask" src="{{image_hard}}"/></a>
+
                             {% endif %}
                         </div>
                         <div id="message-container">
@@ -151,7 +151,7 @@
                         <button id="complete_unofficial" class="button-style" name="hard"><img class="responsive-image" src="/static/complete_task_button.png" alt=""></button>
                     </div>
                 </div>
-    
+
                 <div id="Elite" class="tier" style="display: none;">
                     <hr>
                     <div class="task-content rsText">
@@ -159,8 +159,8 @@
                             {% if image_elite == None %}
                             <a id="elite_placeholder" href="#" class="imageTask" data-tip="Generate a Task!"><img id="elite_image" class="frame item-image imageTask" data-tip="Generate a Task!" src="/static/assets/Cake_of_guidance_detail.png"/></a>
                             {% else %}
-                            <a id="elite_imageTask" class="imageTask" href="{{link_elite}}" target="_blank" data-tip="{{tip_elite}}"><img id="elite_image"class="frame item-image imageTask" src="/static/assets/{{image_elite}}"/></a>
-                            
+                            <a id="elite_imageTask" class="imageTask" href="{{link_elite}}" target="_blank" data-tip="{{tip_elite}}"><img id="elite_image"class="frame item-image imageTask" src="{{image_elite}}"/></a>
+
                             {% endif %}
                         </div>
                         <div id="message-container">
@@ -177,7 +177,7 @@
                         <button id="complete_unofficial" class="button-style" name="elite"><img class="responsive-image" src="/static/complete_task_button.png" alt=""></button>
                     </div>
                 </div>
-    
+
                 <div id="Master" class="tier" style="display: none;">
                     <hr>
                     <div class="task-content rsText">
@@ -185,7 +185,7 @@
                             {% if image_master == None %}
                             <a id="master_placeholder" href="#" class="imageTask" data-tip="Generate a Task!"><img id="master_image" class="frame item-image imageTask" data-tip="Generate a Task!" src="/static/assets/Cake_of_guidance_detail.png"/></a>
                             {% else %}
-                            <a id="master_imageTask" class="imageTask" href="{{link_master}}" target="_blank" data-tip="{{tip_master}}"><img id="master_image"class="frame item-image imageTasks" src="/static/assets/{{image_master}}"/></a>
+                            <a id="master_imageTask" class="imageTask" href="{{link_master}}" target="_blank" data-tip="{{tip_master}}"><img id="master_image"class="frame item-image imageTasks" src="{{image_master}}"/></a>
                             {% endif %}
                         </div>
                         <div id="message-container">
@@ -202,7 +202,7 @@
                         <button id="complete_unofficial" class="button-style" name="master"><img class="responsive-image" src="/static/complete_task_button.png" alt=""></button>
                     </div>
                 </div>
-    
+
             </div>
         </div>
      </div>
@@ -224,4 +224,3 @@
 </script>
 
 {% endblock %}
-
