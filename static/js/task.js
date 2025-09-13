@@ -115,8 +115,8 @@ $(document).on('click', '#generate_unofficial', function(){
     imagePlaceholder.href = data.link
     imagePreview.name = data.name;
     task.innerHTML = data.name;
-    image.src = "/static/assets/" + data.image;
-    imagePreview.src = "/static/assets/" + data.image;
+    image.src = data.image;
+    imagePreview.src = data.image;
   });
 });
 
