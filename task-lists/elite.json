@@ -1041,7 +1041,7 @@
 		{
 			"id": "b2a676cf-90ed-4611-b91d-098b2d52e3db",
 			"name": "Get 5 new uniques from medium clues",
-			"tip": "Potential reward from medium clues. Ecletic impings are are fantasic source for them.",
+			"tip": "Killing guards is a decent way of getting the clues. Once you have 50 hunter, Eclectic implings are also a fantastic source.",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
 			"imageLink": "https://oldschool.runescape.wiki/images/c/c8/Clue_scroll_(medium).png",
 			"displayItemId": 2801,
@@ -1066,7 +1066,7 @@
 		{
 			"id": "98c3eb0c-fa47-44e4-ac8a-d823af8fea3a",
 			"name": "Get 5 new uniques from medium clues",
-			"tip": "Potential reward from medium clues. Ecletic impings are are fantasic source for them.",
+			"tip": "Killing guards is a decent way of getting the clues. Once you have 50 hunter, Eclectic implings are also a fantastic source.",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
 			"imageLink": "https://oldschool.runescape.wiki/images/c/c8/Clue_scroll_(medium).png",
 			"displayItemId": 2801,
@@ -1091,7 +1091,7 @@
 		{
 			"id": "455cfd61-97d7-4c6b-bca0-0caaeb8c42f6",
 			"name": "Get 5 new uniques from medium clues",
-			"tip": "Potential reward from medium clues. Ecletic impings are are fantasic source for them.",
+			"tip": "Killing guards is a decent way of getting the clues. Once you have 50 hunter, Eclectic implings are also a fantastic source.",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
 			"imageLink": "https://oldschool.runescape.wiki/images/c/c8/Clue_scroll_(medium).png",
 			"displayItemId": 2801,
@@ -1116,7 +1116,7 @@
 		{
 			"id": "a1ca4974-b1db-4a25-bd47-e9522c0e4c54",
 			"name": "Get 5 new uniques from medium clues",
-			"tip": "Potential reward from medium clues. Ecletic impings are are fantasic source for them.",
+			"tip": "Killing guards is a decent way of getting the clues. Once you have 50 hunter, Eclectic implings are also a fantastic source.",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
 			"imageLink": "https://oldschool.runescape.wiki/images/c/c8/Clue_scroll_(medium).png",
 			"displayItemId": 2801,
@@ -1141,7 +1141,7 @@
 		{
 			"id": "7bcf95bd-b5d6-453c-a96f-37c1970f06a1",
 			"name": "Get 5 new uniques from medium clues",
-			"tip": "Potential reward from medium clues. Ecletic impings are are fantasic source for them.",
+			"tip": "Killing guards is a decent way of getting the clues. Once you have 50 hunter, Eclectic implings are also a fantastic source.",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Clue_scroll_(medium)",
 			"imageLink": "https://oldschool.runescape.wiki/images/c/c8/Clue_scroll_(medium).png",
 			"displayItemId": 2801,
@@ -3074,8 +3074,8 @@
 			"name": "Get 1 unique from Fortis Colosseum",
 			"tip": "Reward from Fortis Colosseum",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
-			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sunfire_splinters_1_detail.png/200px-Sunfire_splinters_1_detail.png",
-			"displayItemId": 28947,
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dizana's_quiver_detail.png/320px-Dizana's_quiver_detail.png",
+			"displayItemId": 28951,
 			"verification": {
 				"method": "collection-log",
 				"itemIds": [ 28919, 28933, 28936, 28939, 28942, 28947 ],
@@ -3087,8 +3087,8 @@
 			"name": "Get 1 unique from Fortis Colosseum",
 			"tip": "Reward from Fortis Colosseum",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
-			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sunfire_splinters_1_detail.png/200px-Sunfire_splinters_1_detail.png",
-			"displayItemId": 28947,
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dizana's_quiver_detail.png/320px-Dizana's_quiver_detail.png",
+			"displayItemId": 28951,
 			"verification": {
 				"method": "collection-log",
 				"itemIds": [ 28919, 28933, 28936, 28939, 28942, 28947 ],
@@ -3100,8 +3100,8 @@
 			"name": "Get 1 unique from Fortis Colosseum",
 			"tip": "Reward from Fortis Colosseum",
 			"wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum",
-			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Sunfire_splinters_1_detail.png/200px-Sunfire_splinters_1_detail.png",
-			"displayItemId": 28947,
+			"imageLink": "https://oldschool.runescape.wiki/images/thumb/Dizana's_quiver_detail.png/320px-Dizana's_quiver_detail.png",
+			"displayItemId": 28951,
 			"verification": {
 				"method": "collection-log",
 				"itemIds": [ 28919, 28933, 28936, 28939, 28942, 28947 ],
